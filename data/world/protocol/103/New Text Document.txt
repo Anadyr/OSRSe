@@ -1,0 +1,1459 @@
+"A:\Program Files\Java\jdk1.7.0\bin\java" -Didea.launcher.port=7538 "-Didea.launcher.bin.path=A:\Program Files (x86)\JetBrains\IntelliJ IDEA 13.0.1\bin" -Dfile.encoding=UTF-8 -classpath "A:\Program Files\Java\jdk1.7.0\jre\lib\charsets.jar;A:\Program Files\Java\jdk1.7.0\jre\lib\deploy.jar;A:\Program Files\Java\jdk1.7.0\jre\lib\javaws.jar;A:\Program Files\Java\jdk1.7.0\jre\lib\jce.jar;A:\Program Files\Java\jdk1.7.0\jre\lib\jsse.jar;A:\Program Files\Java\jdk1.7.0\jre\lib\management-agent.jar;A:\Program Files\Java\jdk1.7.0\jre\lib\plugin.jar;A:\Program Files\Java\jdk1.7.0\jre\lib\resources.jar;A:\Program Files\Java\jdk1.7.0\jre\lib\rt.jar;A:\Program Files\Java\jdk1.7.0\jre\lib\ext\dnsns.jar;A:\Program Files\Java\jdk1.7.0\jre\lib\ext\localedata.jar;A:\Program Files\Java\jdk1.7.0\jre\lib\ext\sunec.jar;A:\Program Files\Java\jdk1.7.0\jre\lib\ext\sunjce_provider.jar;A:\Program Files\Java\jdk1.7.0\jre\lib\ext\sunmscapi.jar;A:\Program Files\Java\jdk1.7.0\jre\lib\ext\zipfs.jar;A:\Personal\Programming\IdeaProjects\RTP\out\production\x103;A:\Program Files (x86)\JetBrains\IntelliJ IDEA 13.0.1\lib\idea_rt.jar" com.intellij.rt.execution.application.AppMain com.applet.Launcher
+IDX=0, XCALC=0, DATA=[-1205119668]
+IDX=0, XCALC=1, DATA=[-718810521]
+IDX=0, XCALC=2, DATA=[695794159]
+IDX=0, XCALC=3, DATA=[834395617]
+IDX=1, XCALC=0, DATA=[0]
+IDX=1, XCALC=1, DATA=[0]
+IDX=1, XCALC=2, DATA=[0]
+IDX=1, XCALC=3, DATA=[0]
+IDX=2, XCALC=0, DATA=[948012384]
+IDX=2, XCALC=1, DATA=[1064486765]
+IDX=2, XCALC=2, DATA=[-536435505]
+IDX=2, XCALC=3, DATA=[-1260460939]
+IDX=3, XCALC=0, DATA=[1188457126]
+IDX=3, XCALC=1, DATA=[-1729374406]
+IDX=3, XCALC=2, DATA=[-799893645]
+IDX=3, XCALC=3, DATA=[1217674507]
+IDX=4, XCALC=0, DATA=[-1892727590]
+IDX=4, XCALC=1, DATA=[270855962]
+IDX=4, XCALC=2, DATA=[1609680466]
+IDX=4, XCALC=3, DATA=[-1515726702]
+IDX=5, XCALC=0, DATA=[-1248030575]
+IDX=5, XCALC=1, DATA=[1422712072]
+IDX=5, XCALC=2, DATA=[-1898499207]
+IDX=5, XCALC=3, DATA=[-1021336220]
+Region: 10297keys: [I@5ed4dbe8
+Region: 10298keys: [I@68b18cfb
+Region: 10553keys: [I@609ee86f
+Region: 10554keys: [I@60ae00f7
+Region: 10809keys: [I@3fc189b7
+Region: 10810keys: [I@3b386e14
+Root: 548, Interface: 162, Child: 20, clickThrough: true
+Root: 548, Interface: 163, Child: 16, clickThrough: true
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+Root: 548, Interface: 160, Child: 9, clickThrough: true
+Root: 548, Interface: 320, Child: 63, clickThrough: true
+Root: 548, Interface: 274, Child: 64, clickThrough: true
+Root: 548, Interface: 149, Child: 65, clickThrough: true
+Root: 548, Interface: 387, Child: 66, clickThrough: true
+Root: 548, Interface: 271, Child: 67, clickThrough: true
+Root: 548, Interface: 218, Child: 68, clickThrough: true
+Root: 548, Interface: 429, Child: 70, clickThrough: true
+Root: 548, Interface: 432, Child: 71, clickThrough: true
+Root: 548, Interface: 182, Child: 72, clickThrough: true
+Root: 548, Interface: 261, Child: 73, clickThrough: true
+Root: 548, Interface: 216, Child: 74, clickThrough: true
+Root: 548, Interface: 239, Child: 75, clickThrough: true
+Root: 548, Interface: 589, Child: 69, clickThrough: true
+Root: 548, Interface: 593, Child: 62, clickThrough: true
+Root: 548, Interface: 224, Child: 18, clickThrough: false
+Region: 23055488keys: null
+Root: 548, Interface: 593, Child: 62, clickThrough: true
+Root: 548, Interface: 320, Child: 63, clickThrough: true
+Root: 548, Interface: 274, Child: 64, clickThrough: true
+Root: 548, Interface: 149, Child: 65, clickThrough: true
+Root: 548, Interface: 387, Child: 66, clickThrough: true
+Root: 548, Interface: 271, Child: 67, clickThrough: true
+Root: 548, Interface: 218, Child: 68, clickThrough: true
+Root: 548, Interface: 182, Child: 72, clickThrough: true
+Root: 548, Interface: 261, Child: 73, clickThrough: true
+Root: 548, Interface: 216, Child: 74, clickThrough: true
+Root: 548, Interface: 239, Child: 75, clickThrough: true
+IDX=0, XCALC=0, DATA=[0]
+IDX=0, XCALC=1, DATA=[0]
+IDX=0, XCALC=2, DATA=[0]
+IDX=0, XCALC=3, DATA=[0]
+IDX=1, XCALC=0, DATA=[208231215]
+IDX=1, XCALC=1, DATA=[1272236067]
+IDX=1, XCALC=2, DATA=[1471497122]
+IDX=1, XCALC=3, DATA=[-1266641877]
+IDX=2, XCALC=0, DATA=[0]
+IDX=2, XCALC=1, DATA=[0]
+IDX=2, XCALC=2, DATA=[0]
+IDX=2, XCALC=3, DATA=[0]
+IDX=3, XCALC=0, DATA=[0]
+IDX=3, XCALC=1, DATA=[0]
+IDX=3, XCALC=2, DATA=[0]
+IDX=3, XCALC=3, DATA=[0]
+Region: 9530keys: [I@1c00ee0c
+Region: 9531keys: [I@10c6431
+Region: 9786keys: [I@5485cd80
+Region: 9787keys: [I@1c76b9da
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+Root: 548, Interface: 69, Child: 72, clickThrough: true
+Root: 162, Interface: 228, Child: 546, clickThrough: false
+Root: 162, Interface: 228, Child: 546, clickThrough: false
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+IDX=0, XCALC=0, DATA=[0]
+IDX=0, XCALC=1, DATA=[0]
+IDX=0, XCALC=2, DATA=[0]
+IDX=0, XCALC=3, DATA=[0]
+IDX=1, XCALC=0, DATA=[600751196]
+IDX=1, XCALC=1, DATA=[2047101363]
+IDX=1, XCALC=2, DATA=[194553650]
+IDX=1, XCALC=3, DATA=[-1856484126]
+IDX=2, XCALC=0, DATA=[376794062]
+IDX=2, XCALC=1, DATA=[-234120676]
+IDX=2, XCALC=2, DATA=[1509008660]
+IDX=2, XCALC=3, DATA=[1784716874]
+IDX=3, XCALC=0, DATA=[0]
+IDX=3, XCALC=1, DATA=[0]
+IDX=3, XCALC=2, DATA=[0]
+IDX=3, XCALC=3, DATA=[0]
+IDX=4, XCALC=0, DATA=[208231215]
+IDX=4, XCALC=1, DATA=[1272236067]
+IDX=4, XCALC=2, DATA=[1471497122]
+IDX=4, XCALC=3, DATA=[-1266641877]
+IDX=5, XCALC=0, DATA=[-833055699]
+IDX=5, XCALC=1, DATA=[-1151898924]
+IDX=5, XCALC=2, DATA=[1553275819]
+IDX=5, XCALC=3, DATA=[1385329359]
+IDX=6, XCALC=0, DATA=[0]
+IDX=6, XCALC=1, DATA=[0]
+IDX=6, XCALC=2, DATA=[0]
+IDX=6, XCALC=3, DATA=[0]
+IDX=7, XCALC=0, DATA=[0]
+IDX=7, XCALC=1, DATA=[0]
+IDX=7, XCALC=2, DATA=[0]
+IDX=7, XCALC=3, DATA=[0]
+IDX=8, XCALC=0, DATA=[432135203]
+IDX=8, XCALC=1, DATA=[92254316]
+IDX=8, XCALC=2, DATA=[-1619550296]
+IDX=8, XCALC=3, DATA=[76065412]
+Region: 9274keys: [I@8408396
+Region: 9275keys: [I@437ef115
+Region: 9276keys: [I@4305bc51
+Region: 9530keys: [I@2d8e8c37
+Region: 9531keys: [I@6997863e
+Region: 9532keys: [I@5aee869a
+Region: 9786keys: [I@61c71719
+Region: 9787keys: [I@55bd9c75
+Region: 9788keys: [I@136af14d
+Root: 548, Interface: 162, Child: 20, clickThrough: true
+Root: 548, Interface: 163, Child: 16, clickThrough: true
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+Root: 548, Interface: 160, Child: 9, clickThrough: true
+Root: 548, Interface: 320, Child: 63, clickThrough: true
+Root: 548, Interface: 274, Child: 64, clickThrough: true
+Root: 548, Interface: 149, Child: 65, clickThrough: true
+Root: 548, Interface: 387, Child: 66, clickThrough: true
+Root: 548, Interface: 271, Child: 67, clickThrough: true
+Root: 548, Interface: 218, Child: 68, clickThrough: true
+Root: 548, Interface: 429, Child: 70, clickThrough: true
+Root: 548, Interface: 432, Child: 71, clickThrough: true
+Root: 548, Interface: 182, Child: 72, clickThrough: true
+Root: 548, Interface: 261, Child: 73, clickThrough: true
+Root: 548, Interface: 216, Child: 74, clickThrough: true
+Root: 548, Interface: 239, Child: 75, clickThrough: true
+Root: 548, Interface: 589, Child: 69, clickThrough: true
+Root: 548, Interface: 593, Child: 62, clickThrough: true
+Root: 548, Interface: 69, Child: 72, clickThrough: true
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+Root: 162, Interface: 229, Child: 546, clickThrough: false
+Root: 162, Interface: 219, Child: 546, clickThrough: false
+IDX=0, XCALC=0, DATA=[0]
+IDX=0, XCALC=1, DATA=[0]
+IDX=0, XCALC=2, DATA=[0]
+IDX=0, XCALC=3, DATA=[0]
+IDX=1, XCALC=0, DATA=[0]
+IDX=1, XCALC=1, DATA=[0]
+IDX=1, XCALC=2, DATA=[0]
+IDX=1, XCALC=3, DATA=[0]
+IDX=2, XCALC=0, DATA=[0]
+IDX=2, XCALC=1, DATA=[0]
+IDX=2, XCALC=2, DATA=[0]
+IDX=2, XCALC=3, DATA=[0]
+IDX=3, XCALC=0, DATA=[1720442576]
+IDX=3, XCALC=1, DATA=[998054937]
+IDX=3, XCALC=2, DATA=[1875184039]
+IDX=3, XCALC=3, DATA=[-1320967455]
+IDX=4, XCALC=0, DATA=[-1621103539]
+IDX=4, XCALC=1, DATA=[1580907615]
+IDX=4, XCALC=2, DATA=[-2010887870]
+IDX=4, XCALC=3, DATA=[683082929]
+IDX=5, XCALC=0, DATA=[0]
+IDX=5, XCALC=1, DATA=[0]
+IDX=5, XCALC=2, DATA=[0]
+IDX=5, XCALC=3, DATA=[0]
+Region: 9374keys: [I@6a46661e
+Region: 9375keys: [I@33da7214
+Region: 9630keys: [I@4a7799a4
+Region: 9631keys: [I@7208042d
+Region: 9886keys: [I@6c4a60d7
+Region: 9887keys: [I@71bfacc
+IDX=0, XCALC=0, DATA=[0]
+IDX=0, XCALC=1, DATA=[0]
+IDX=0, XCALC=2, DATA=[0]
+IDX=0, XCALC=3, DATA=[0]
+IDX=1, XCALC=0, DATA=[600751196]
+IDX=1, XCALC=1, DATA=[2047101363]
+IDX=1, XCALC=2, DATA=[194553650]
+IDX=1, XCALC=3, DATA=[-1856484126]
+IDX=2, XCALC=0, DATA=[376794062]
+IDX=2, XCALC=1, DATA=[-234120676]
+IDX=2, XCALC=2, DATA=[1509008660]
+IDX=2, XCALC=3, DATA=[1784716874]
+IDX=3, XCALC=0, DATA=[0]
+IDX=3, XCALC=1, DATA=[0]
+IDX=3, XCALC=2, DATA=[0]
+IDX=3, XCALC=3, DATA=[0]
+IDX=4, XCALC=0, DATA=[208231215]
+IDX=4, XCALC=1, DATA=[1272236067]
+IDX=4, XCALC=2, DATA=[1471497122]
+IDX=4, XCALC=3, DATA=[-1266641877]
+IDX=5, XCALC=0, DATA=[-833055699]
+IDX=5, XCALC=1, DATA=[-1151898924]
+IDX=5, XCALC=2, DATA=[1553275819]
+IDX=5, XCALC=3, DATA=[1385329359]
+IDX=6, XCALC=0, DATA=[0]
+IDX=6, XCALC=1, DATA=[0]
+IDX=6, XCALC=2, DATA=[0]
+IDX=6, XCALC=3, DATA=[0]
+IDX=7, XCALC=0, DATA=[0]
+IDX=7, XCALC=1, DATA=[0]
+IDX=7, XCALC=2, DATA=[0]
+IDX=7, XCALC=3, DATA=[0]
+IDX=8, XCALC=0, DATA=[432135203]
+IDX=8, XCALC=1, DATA=[92254316]
+IDX=8, XCALC=2, DATA=[-1619550296]
+IDX=8, XCALC=3, DATA=[76065412]
+Region: 9274keys: [I@3e014cc6
+Region: 9275keys: [I@47577af7
+Region: 9276keys: [I@404a12b8
+Region: 9530keys: [I@3f130f01
+Region: 9531keys: [I@7c3e2b00
+Region: 9532keys: [I@55794cb9
+Region: 9786keys: [I@e9c3186
+Region: 9787keys: [I@30775be8
+Region: 9788keys: [I@6c32f533
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+IDX=0, XCALC=0, DATA=[208231215]
+IDX=0, XCALC=1, DATA=[1272236067]
+IDX=0, XCALC=2, DATA=[1471497122]
+IDX=0, XCALC=3, DATA=[-1266641877]
+IDX=1, XCALC=0, DATA=[-833055699]
+IDX=1, XCALC=1, DATA=[-1151898924]
+IDX=1, XCALC=2, DATA=[1553275819]
+IDX=1, XCALC=3, DATA=[1385329359]
+IDX=2, XCALC=0, DATA=[0]
+IDX=2, XCALC=1, DATA=[0]
+IDX=2, XCALC=2, DATA=[0]
+IDX=2, XCALC=3, DATA=[0]
+IDX=3, XCALC=0, DATA=[432135203]
+IDX=3, XCALC=1, DATA=[92254316]
+IDX=3, XCALC=2, DATA=[-1619550296]
+IDX=3, XCALC=3, DATA=[76065412]
+Region: 9531keys: [I@743a67ad
+Region: 9532keys: [I@266cca78
+Region: 9787keys: [I@30609ffd
+Region: 9788keys: [I@17a7b3db
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+IDX=0, XCALC=0, DATA=[0]
+IDX=0, XCALC=1, DATA=[0]
+IDX=0, XCALC=2, DATA=[0]
+IDX=0, XCALC=3, DATA=[0]
+IDX=1, XCALC=0, DATA=[600751196]
+IDX=1, XCALC=1, DATA=[2047101363]
+IDX=1, XCALC=2, DATA=[194553650]
+IDX=1, XCALC=3, DATA=[-1856484126]
+IDX=2, XCALC=0, DATA=[376794062]
+IDX=2, XCALC=1, DATA=[-234120676]
+IDX=2, XCALC=2, DATA=[1509008660]
+IDX=2, XCALC=3, DATA=[1784716874]
+IDX=3, XCALC=0, DATA=[0]
+IDX=3, XCALC=1, DATA=[0]
+IDX=3, XCALC=2, DATA=[0]
+IDX=3, XCALC=3, DATA=[0]
+IDX=4, XCALC=0, DATA=[208231215]
+IDX=4, XCALC=1, DATA=[1272236067]
+IDX=4, XCALC=2, DATA=[1471497122]
+IDX=4, XCALC=3, DATA=[-1266641877]
+IDX=5, XCALC=0, DATA=[-833055699]
+IDX=5, XCALC=1, DATA=[-1151898924]
+IDX=5, XCALC=2, DATA=[1553275819]
+IDX=5, XCALC=3, DATA=[1385329359]
+IDX=6, XCALC=0, DATA=[0]
+IDX=6, XCALC=1, DATA=[0]
+IDX=6, XCALC=2, DATA=[0]
+IDX=6, XCALC=3, DATA=[0]
+IDX=7, XCALC=0, DATA=[0]
+IDX=7, XCALC=1, DATA=[0]
+IDX=7, XCALC=2, DATA=[0]
+IDX=7, XCALC=3, DATA=[0]
+IDX=8, XCALC=0, DATA=[432135203]
+IDX=8, XCALC=1, DATA=[92254316]
+IDX=8, XCALC=2, DATA=[-1619550296]
+IDX=8, XCALC=3, DATA=[76065412]
+Region: 9274keys: [I@4478de9f
+Region: 9275keys: [I@5b5fbbd7
+Region: 9276keys: [I@6a254f1e
+Region: 9530keys: [I@376d7103
+Region: 9531keys: [I@72169862
+Region: 9532keys: [I@296e8472
+Region: 9786keys: [I@16b96d9e
+Region: 9787keys: [I@67cbabb9
+Region: 9788keys: [I@6c7733eb
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+Root: 548, Interface: 224, Child: 18, clickThrough: false
+Region: 23055488keys: null
+Root: 548, Interface: 593, Child: 62, clickThrough: true
+Root: 548, Interface: 320, Child: 63, clickThrough: true
+Root: 548, Interface: 274, Child: 64, clickThrough: true
+Root: 548, Interface: 149, Child: 65, clickThrough: true
+Root: 548, Interface: 387, Child: 66, clickThrough: true
+Root: 548, Interface: 271, Child: 67, clickThrough: true
+Root: 548, Interface: 218, Child: 68, clickThrough: true
+Root: 548, Interface: 182, Child: 72, clickThrough: true
+Root: 548, Interface: 261, Child: 73, clickThrough: true
+Root: 548, Interface: 216, Child: 74, clickThrough: true
+Root: 548, Interface: 239, Child: 75, clickThrough: true
+IDX=0, XCALC=0, DATA=[-1205119668]
+IDX=0, XCALC=1, DATA=[-718810521]
+IDX=0, XCALC=2, DATA=[695794159]
+IDX=0, XCALC=3, DATA=[834395617]
+IDX=1, XCALC=0, DATA=[0]
+IDX=1, XCALC=1, DATA=[0]
+IDX=1, XCALC=2, DATA=[0]
+IDX=1, XCALC=3, DATA=[0]
+IDX=2, XCALC=0, DATA=[948012384]
+IDX=2, XCALC=1, DATA=[1064486765]
+IDX=2, XCALC=2, DATA=[-536435505]
+IDX=2, XCALC=3, DATA=[-1260460939]
+IDX=3, XCALC=0, DATA=[1188457126]
+IDX=3, XCALC=1, DATA=[-1729374406]
+IDX=3, XCALC=2, DATA=[-799893645]
+IDX=3, XCALC=3, DATA=[1217674507]
+IDX=4, XCALC=0, DATA=[-1892727590]
+IDX=4, XCALC=1, DATA=[270855962]
+IDX=4, XCALC=2, DATA=[1609680466]
+IDX=4, XCALC=3, DATA=[-1515726702]
+IDX=5, XCALC=0, DATA=[-1248030575]
+IDX=5, XCALC=1, DATA=[1422712072]
+IDX=5, XCALC=2, DATA=[-1898499207]
+IDX=5, XCALC=3, DATA=[-1021336220]
+Region: 10297keys: [I@bbb058f
+Region: 10298keys: [I@2369f54d
+Region: 10553keys: [I@167a465
+Region: 10554keys: [I@3b59e39b
+Region: 10809keys: [I@a6df38e
+Region: 10810keys: [I@3890f4fb
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+IDX=0, XCALC=0, DATA=[948012384]
+IDX=0, XCALC=1, DATA=[1064486765]
+IDX=0, XCALC=2, DATA=[-536435505]
+IDX=0, XCALC=3, DATA=[-1260460939]
+IDX=1, XCALC=0, DATA=[1188457126]
+IDX=1, XCALC=1, DATA=[-1729374406]
+IDX=1, XCALC=2, DATA=[-799893645]
+IDX=1, XCALC=3, DATA=[1217674507]
+IDX=2, XCALC=0, DATA=[-1892727590]
+IDX=2, XCALC=1, DATA=[270855962]
+IDX=2, XCALC=2, DATA=[1609680466]
+IDX=2, XCALC=3, DATA=[-1515726702]
+IDX=3, XCALC=0, DATA=[-1248030575]
+IDX=3, XCALC=1, DATA=[1422712072]
+IDX=3, XCALC=2, DATA=[-1898499207]
+IDX=3, XCALC=3, DATA=[-1021336220]
+Region: 10553keys: [I@3ecacaf6
+Region: 10554keys: [I@73d2fcae
+Region: 10809keys: [I@20cb3eea
+Region: 10810keys: [I@7f8f8577
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+IDX=0, XCALC=0, DATA=[1420311343]
+IDX=0, XCALC=1, DATA=[321724544]
+IDX=0, XCALC=2, DATA=[-733184290]
+IDX=0, XCALC=3, DATA=[-1039741548]
+IDX=1, XCALC=0, DATA=[-1205119668]
+IDX=1, XCALC=1, DATA=[-718810521]
+IDX=1, XCALC=2, DATA=[695794159]
+IDX=1, XCALC=3, DATA=[834395617]
+IDX=2, XCALC=0, DATA=[0]
+IDX=2, XCALC=1, DATA=[0]
+IDX=2, XCALC=2, DATA=[0]
+IDX=2, XCALC=3, DATA=[0]
+IDX=3, XCALC=0, DATA=[-2088288771]
+IDX=3, XCALC=1, DATA=[-1992299670]
+IDX=3, XCALC=2, DATA=[-1820985527]
+IDX=3, XCALC=3, DATA=[219500542]
+IDX=4, XCALC=0, DATA=[948012384]
+IDX=4, XCALC=1, DATA=[1064486765]
+IDX=4, XCALC=2, DATA=[-536435505]
+IDX=4, XCALC=3, DATA=[-1260460939]
+IDX=5, XCALC=0, DATA=[1188457126]
+IDX=5, XCALC=1, DATA=[-1729374406]
+IDX=5, XCALC=2, DATA=[-799893645]
+IDX=5, XCALC=3, DATA=[1217674507]
+IDX=6, XCALC=0, DATA=[385866047]
+IDX=6, XCALC=1, DATA=[-553044868]
+IDX=6, XCALC=2, DATA=[130232710]
+IDX=6, XCALC=3, DATA=[401377614]
+IDX=7, XCALC=0, DATA=[-1892727590]
+IDX=7, XCALC=1, DATA=[270855962]
+IDX=7, XCALC=2, DATA=[1609680466]
+IDX=7, XCALC=3, DATA=[-1515726702]
+IDX=8, XCALC=0, DATA=[-1248030575]
+IDX=8, XCALC=1, DATA=[1422712072]
+IDX=8, XCALC=2, DATA=[-1898499207]
+IDX=8, XCALC=3, DATA=[-1021336220]
+Region: 10296keys: [I@5827ef63
+Region: 10297keys: [I@25d579cc
+Region: 10298keys: [I@622f537b
+Region: 10552keys: [I@1111e299
+Region: 10553keys: [I@2d33b390
+Region: 10554keys: [I@1d51ca1f
+Region: 10808keys: [I@64acc842
+Region: 10809keys: [I@b8f98b1
+Region: 10810keys: [I@719265
+IDX=0, XCALC=0, DATA=[1420311343]
+IDX=0, XCALC=1, DATA=[321724544]
+IDX=0, XCALC=2, DATA=[-733184290]
+IDX=0, XCALC=3, DATA=[-1039741548]
+IDX=1, XCALC=0, DATA=[-1205119668]
+IDX=1, XCALC=1, DATA=[-718810521]
+IDX=1, XCALC=2, DATA=[695794159]
+IDX=1, XCALC=3, DATA=[834395617]
+IDX=2, XCALC=0, DATA=[-2088288771]
+IDX=2, XCALC=1, DATA=[-1992299670]
+IDX=2, XCALC=2, DATA=[-1820985527]
+IDX=2, XCALC=3, DATA=[219500542]
+IDX=3, XCALC=0, DATA=[948012384]
+IDX=3, XCALC=1, DATA=[1064486765]
+IDX=3, XCALC=2, DATA=[-536435505]
+IDX=3, XCALC=3, DATA=[-1260460939]
+Region: 10296keys: [I@4d3b30cb
+Region: 10297keys: [I@69008709
+Region: 10552keys: [I@21a195ba
+Region: 10553keys: [I@776cf795
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+Root: 548, Interface: 69, Child: 72, clickThrough: true
+Root: 162, Interface: 228, Child: 546, clickThrough: false
+Root: 162, Interface: 228, Child: 546, clickThrough: false
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+IDX=0, XCALC=0, DATA=[1420311343]
+IDX=0, XCALC=1, DATA=[321724544]
+IDX=0, XCALC=2, DATA=[-733184290]
+IDX=0, XCALC=3, DATA=[-1039741548]
+IDX=1, XCALC=0, DATA=[-1205119668]
+IDX=1, XCALC=1, DATA=[-718810521]
+IDX=1, XCALC=2, DATA=[695794159]
+IDX=1, XCALC=3, DATA=[834395617]
+IDX=2, XCALC=0, DATA=[0]
+IDX=2, XCALC=1, DATA=[0]
+IDX=2, XCALC=2, DATA=[0]
+IDX=2, XCALC=3, DATA=[0]
+IDX=3, XCALC=0, DATA=[-2088288771]
+IDX=3, XCALC=1, DATA=[-1992299670]
+IDX=3, XCALC=2, DATA=[-1820985527]
+IDX=3, XCALC=3, DATA=[219500542]
+IDX=4, XCALC=0, DATA=[948012384]
+IDX=4, XCALC=1, DATA=[1064486765]
+IDX=4, XCALC=2, DATA=[-536435505]
+IDX=4, XCALC=3, DATA=[-1260460939]
+IDX=5, XCALC=0, DATA=[1188457126]
+IDX=5, XCALC=1, DATA=[-1729374406]
+IDX=5, XCALC=2, DATA=[-799893645]
+IDX=5, XCALC=3, DATA=[1217674507]
+Region: 10296keys: [I@11f9e0df
+Region: 10297keys: [I@2c1a59b1
+Region: 10298keys: [I@75f68a15
+Region: 10552keys: [I@ce3a534
+Region: 10553keys: [I@3572ff88
+Region: 10554keys: [I@10e65522
+Root: 548, Interface: 162, Child: 20, clickThrough: true
+Root: 548, Interface: 163, Child: 16, clickThrough: true
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+Root: 548, Interface: 160, Child: 9, clickThrough: true
+Root: 548, Interface: 320, Child: 63, clickThrough: true
+Root: 548, Interface: 274, Child: 64, clickThrough: true
+Root: 548, Interface: 149, Child: 65, clickThrough: true
+Root: 548, Interface: 387, Child: 66, clickThrough: true
+Root: 548, Interface: 271, Child: 67, clickThrough: true
+Root: 548, Interface: 218, Child: 68, clickThrough: true
+Root: 548, Interface: 429, Child: 70, clickThrough: true
+Root: 548, Interface: 432, Child: 71, clickThrough: true
+Root: 548, Interface: 182, Child: 72, clickThrough: true
+Root: 548, Interface: 261, Child: 73, clickThrough: true
+Root: 548, Interface: 216, Child: 74, clickThrough: true
+Root: 548, Interface: 239, Child: 75, clickThrough: true
+Root: 548, Interface: 589, Child: 69, clickThrough: true
+Root: 548, Interface: 593, Child: 62, clickThrough: true
+Root: 548, Interface: 69, Child: 72, clickThrough: true
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+Root: 162, Interface: 231, Child: 546, clickThrough: false
+Root: 162, Interface: 231, Child: 546, clickThrough: false
+Root: 162, Interface: 219, Child: 546, clickThrough: false
+Root: 162, Interface: 217, Child: 546, clickThrough: false
+Root: 162, Interface: 231, Child: 546, clickThrough: false
+Root: 162, Interface: 219, Child: 546, clickThrough: false
+Root: 162, Interface: 217, Child: 546, clickThrough: false
+Root: 162, Interface: 231, Child: 546, clickThrough: false
+Root: 162, Interface: 219, Child: 546, clickThrough: false
+Root: 548, Interface: 224, Child: 18, clickThrough: false
+Region: 23055488keys: null
+Root: 548, Interface: 593, Child: 62, clickThrough: true
+Root: 548, Interface: 320, Child: 63, clickThrough: true
+Root: 548, Interface: 274, Child: 64, clickThrough: true
+Root: 548, Interface: 149, Child: 65, clickThrough: true
+Root: 548, Interface: 387, Child: 66, clickThrough: true
+Root: 548, Interface: 271, Child: 67, clickThrough: true
+Root: 548, Interface: 218, Child: 68, clickThrough: true
+Root: 548, Interface: 182, Child: 72, clickThrough: true
+Root: 548, Interface: 261, Child: 73, clickThrough: true
+Root: 548, Interface: 216, Child: 74, clickThrough: true
+Root: 548, Interface: 239, Child: 75, clickThrough: true
+Root: 162, Interface: 229, Child: 546, clickThrough: false
+IDX=0, XCALC=0, DATA=[736722071]
+IDX=0, XCALC=1, DATA=[75967325]
+IDX=0, XCALC=2, DATA=[-775764394]
+IDX=0, XCALC=3, DATA=[106769937]
+IDX=1, XCALC=0, DATA=[1912880022]
+IDX=1, XCALC=1, DATA=[-1723964516]
+IDX=1, XCALC=2, DATA=[2062562401]
+IDX=1, XCALC=3, DATA=[-1162129761]
+IDX=2, XCALC=0, DATA=[0]
+IDX=2, XCALC=1, DATA=[0]
+IDX=2, XCALC=2, DATA=[0]
+IDX=2, XCALC=3, DATA=[0]
+IDX=3, XCALC=0, DATA=[0]
+IDX=3, XCALC=1, DATA=[0]
+IDX=3, XCALC=2, DATA=[0]
+IDX=3, XCALC=3, DATA=[0]
+Region: 10042keys: [I@3ad67cbb
+Region: 10043keys: [I@5796f72a
+Region: 10298keys: [I@783d1352
+Region: 10299keys: [I@71bfaa29
+Root: 162, Interface: 231, Child: 546, clickThrough: false
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+Root: 548, Interface: 167, Child: 12, clickThrough: true
+Root: 548, Interface: 167, Child: 12, clickThrough: true
+Root: 548, Interface: 167, Child: 12, clickThrough: true
+IDX=0, XCALC=0, DATA=[-65486938]
+IDX=0, XCALC=1, DATA=[-1485596203]
+IDX=0, XCALC=2, DATA=[-1327236566]
+IDX=0, XCALC=3, DATA=[408455718]
+IDX=1, XCALC=0, DATA=[0]
+IDX=1, XCALC=1, DATA=[0]
+IDX=1, XCALC=2, DATA=[0]
+IDX=1, XCALC=3, DATA=[0]
+IDX=2, XCALC=0, DATA=[1187862613]
+IDX=2, XCALC=1, DATA=[-117754960]
+IDX=2, XCALC=2, DATA=[130411769]
+IDX=2, XCALC=3, DATA=[-1192628982]
+IDX=3, XCALC=0, DATA=[736722071]
+IDX=3, XCALC=1, DATA=[75967325]
+IDX=3, XCALC=2, DATA=[-775764394]
+IDX=3, XCALC=3, DATA=[106769937]
+IDX=4, XCALC=0, DATA=[-1205119668]
+IDX=4, XCALC=1, DATA=[-718810521]
+IDX=4, XCALC=2, DATA=[695794159]
+IDX=4, XCALC=3, DATA=[834395617]
+IDX=5, XCALC=0, DATA=[0]
+IDX=5, XCALC=1, DATA=[0]
+IDX=5, XCALC=2, DATA=[0]
+IDX=5, XCALC=3, DATA=[0]
+Region: 9785keys: [I@392ae0e2
+Region: 9786keys: [I@2e1232c0
+Region: 10041keys: [I@2cc1f2e1
+Region: 10042keys: [I@7130a8bb
+Region: 10297keys: [I@3195c70b
+Region: 10298keys: [I@603ebc9b
+IDX=0, XCALC=0, DATA=[0]
+IDX=0, XCALC=1, DATA=[0]
+IDX=0, XCALC=2, DATA=[0]
+IDX=0, XCALC=3, DATA=[0]
+IDX=1, XCALC=0, DATA=[0]
+IDX=1, XCALC=1, DATA=[0]
+IDX=1, XCALC=2, DATA=[0]
+IDX=1, XCALC=3, DATA=[0]
+IDX=2, XCALC=0, DATA=[736722071]
+IDX=2, XCALC=1, DATA=[75967325]
+IDX=2, XCALC=2, DATA=[-775764394]
+IDX=2, XCALC=3, DATA=[106769937]
+IDX=3, XCALC=0, DATA=[1912880022]
+IDX=3, XCALC=1, DATA=[-1723964516]
+IDX=3, XCALC=2, DATA=[2062562401]
+IDX=3, XCALC=3, DATA=[-1162129761]
+Region: 9786keys: [I@174f6c64
+Region: 9787keys: [I@5f552530
+Region: 10042keys: [I@4efca335
+Region: 10043keys: [I@2c3f1516
+IDX=0, XCALC=0, DATA=[736722071]
+IDX=0, XCALC=1, DATA=[75967325]
+IDX=0, XCALC=2, DATA=[-775764394]
+IDX=0, XCALC=3, DATA=[106769937]
+IDX=1, XCALC=0, DATA=[1912880022]
+IDX=1, XCALC=1, DATA=[-1723964516]
+IDX=1, XCALC=2, DATA=[2062562401]
+IDX=1, XCALC=3, DATA=[-1162129761]
+IDX=2, XCALC=0, DATA=[0]
+IDX=2, XCALC=1, DATA=[0]
+IDX=2, XCALC=2, DATA=[0]
+IDX=2, XCALC=3, DATA=[0]
+IDX=3, XCALC=0, DATA=[0]
+IDX=3, XCALC=1, DATA=[0]
+IDX=3, XCALC=2, DATA=[0]
+IDX=3, XCALC=3, DATA=[0]
+Region: 10042keys: [I@2f520105
+Region: 10043keys: [I@30c10788
+Region: 10298keys: [I@50d58ab9
+Region: 10299keys: [I@7386a124
+Root: 548, Interface: 69, Child: 72, clickThrough: true
+Root: 162, Interface: 228, Child: 546, clickThrough: false
+Root: 162, Interface: 228, Child: 546, clickThrough: false
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+IDX=0, XCALC=0, DATA=[736722071]
+IDX=0, XCALC=1, DATA=[75967325]
+IDX=0, XCALC=2, DATA=[-775764394]
+IDX=0, XCALC=3, DATA=[106769937]
+IDX=1, XCALC=0, DATA=[1912880022]
+IDX=1, XCALC=1, DATA=[-1723964516]
+IDX=1, XCALC=2, DATA=[2062562401]
+IDX=1, XCALC=3, DATA=[-1162129761]
+IDX=2, XCALC=0, DATA=[0]
+IDX=2, XCALC=1, DATA=[0]
+IDX=2, XCALC=2, DATA=[0]
+IDX=2, XCALC=3, DATA=[0]
+IDX=3, XCALC=0, DATA=[0]
+IDX=3, XCALC=1, DATA=[0]
+IDX=3, XCALC=2, DATA=[0]
+IDX=3, XCALC=3, DATA=[0]
+Region: 10042keys: [I@1ef448a1
+Region: 10043keys: [I@37cc51e7
+Region: 10298keys: [I@4715314f
+Region: 10299keys: [I@40585dfe
+Root: 548, Interface: 162, Child: 20, clickThrough: true
+Root: 548, Interface: 163, Child: 16, clickThrough: true
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+Root: 548, Interface: 160, Child: 9, clickThrough: true
+Root: 548, Interface: 320, Child: 63, clickThrough: true
+Root: 548, Interface: 274, Child: 64, clickThrough: true
+Root: 548, Interface: 149, Child: 65, clickThrough: true
+Root: 548, Interface: 387, Child: 66, clickThrough: true
+Root: 548, Interface: 271, Child: 67, clickThrough: true
+Root: 548, Interface: 218, Child: 68, clickThrough: true
+Root: 548, Interface: 429, Child: 70, clickThrough: true
+Root: 548, Interface: 432, Child: 71, clickThrough: true
+Root: 548, Interface: 182, Child: 72, clickThrough: true
+Root: 548, Interface: 261, Child: 73, clickThrough: true
+Root: 548, Interface: 216, Child: 74, clickThrough: true
+Root: 548, Interface: 239, Child: 75, clickThrough: true
+Root: 548, Interface: 589, Child: 69, clickThrough: true
+Root: 548, Interface: 593, Child: 62, clickThrough: true
+Root: 548, Interface: 69, Child: 72, clickThrough: true
+Root: 548, Interface: 167, Child: 12, clickThrough: true
+Root: 162, Interface: 219, Child: 546, clickThrough: false
+Root: 548, Interface: 224, Child: 18, clickThrough: false
+Region: 23055488keys: null
+Root: 548, Interface: 593, Child: 62, clickThrough: true
+Root: 548, Interface: 320, Child: 63, clickThrough: true
+Root: 548, Interface: 274, Child: 64, clickThrough: true
+Root: 548, Interface: 149, Child: 65, clickThrough: true
+Root: 548, Interface: 387, Child: 66, clickThrough: true
+Root: 548, Interface: 271, Child: 67, clickThrough: true
+Root: 548, Interface: 218, Child: 68, clickThrough: true
+Root: 548, Interface: 182, Child: 72, clickThrough: true
+Root: 548, Interface: 261, Child: 73, clickThrough: true
+Root: 548, Interface: 216, Child: 74, clickThrough: true
+Root: 548, Interface: 239, Child: 75, clickThrough: true
+Root: 162, Interface: 229, Child: 546, clickThrough: false
+IDX=0, XCALC=0, DATA=[1420311343]
+IDX=0, XCALC=1, DATA=[321724544]
+IDX=0, XCALC=2, DATA=[-733184290]
+IDX=0, XCALC=3, DATA=[-1039741548]
+IDX=1, XCALC=0, DATA=[-1205119668]
+IDX=1, XCALC=1, DATA=[-718810521]
+IDX=1, XCALC=2, DATA=[695794159]
+IDX=1, XCALC=3, DATA=[834395617]
+IDX=2, XCALC=0, DATA=[0]
+IDX=2, XCALC=1, DATA=[0]
+IDX=2, XCALC=2, DATA=[0]
+IDX=2, XCALC=3, DATA=[0]
+IDX=3, XCALC=0, DATA=[-2088288771]
+IDX=3, XCALC=1, DATA=[-1992299670]
+IDX=3, XCALC=2, DATA=[-1820985527]
+IDX=3, XCALC=3, DATA=[219500542]
+IDX=4, XCALC=0, DATA=[948012384]
+IDX=4, XCALC=1, DATA=[1064486765]
+IDX=4, XCALC=2, DATA=[-536435505]
+IDX=4, XCALC=3, DATA=[-1260460939]
+IDX=5, XCALC=0, DATA=[1188457126]
+IDX=5, XCALC=1, DATA=[-1729374406]
+IDX=5, XCALC=2, DATA=[-799893645]
+IDX=5, XCALC=3, DATA=[1217674507]
+Region: 10296keys: [I@40904a77
+Region: 10297keys: [I@4108ebbe
+Region: 10298keys: [I@30ad284d
+Region: 10552keys: [I@3830f032
+Region: 10553keys: [I@14e97f70
+Region: 10554keys: [I@6dad9cc9
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+Root: 162, Interface: 217, Child: 546, clickThrough: false
+Root: 162, Interface: 231, Child: 546, clickThrough: false
+Root: 162, Interface: 217, Child: 546, clickThrough: false
+Root: 162, Interface: 231, Child: 546, clickThrough: false
+Root: 162, Interface: 217, Child: 546, clickThrough: false
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+Root: 548, Interface: 69, Child: 72, clickThrough: true
+java.io.IOException
+	at com.jagex.Class32.method593(Class32.java:75)
+	at com.jagex.Class35.method643(Class35.java:127)
+	at com.jagex.Class63.method934(Class63.java:3672)
+	at com.jagex.Class110_Sub1.method1840(Class110_Sub1.java:242)
+	at com.jagex.client.processFrames(client.java:4429)
+	at com.jagex.Applet_Sub1.method3572(Applet_Sub1.java:262)
+	at com.jagex.Applet_Sub1.run(Applet_Sub1.java:235)
+	at java.lang.Thread.run(Thread.java:722)
+Root: 162, Interface: 228, Child: 546, clickThrough: false
+Root: 162, Interface: 228, Child: 546, clickThrough: false
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+IDX=0, XCALC=0, DATA=[1420311343]
+IDX=0, XCALC=1, DATA=[321724544]
+IDX=0, XCALC=2, DATA=[-733184290]
+IDX=0, XCALC=3, DATA=[-1039741548]
+IDX=1, XCALC=0, DATA=[-1205119668]
+IDX=1, XCALC=1, DATA=[-718810521]
+IDX=1, XCALC=2, DATA=[695794159]
+IDX=1, XCALC=3, DATA=[834395617]
+IDX=2, XCALC=0, DATA=[0]
+IDX=2, XCALC=1, DATA=[0]
+IDX=2, XCALC=2, DATA=[0]
+IDX=2, XCALC=3, DATA=[0]
+IDX=3, XCALC=0, DATA=[-2088288771]
+IDX=3, XCALC=1, DATA=[-1992299670]
+IDX=3, XCALC=2, DATA=[-1820985527]
+IDX=3, XCALC=3, DATA=[219500542]
+IDX=4, XCALC=0, DATA=[948012384]
+IDX=4, XCALC=1, DATA=[1064486765]
+IDX=4, XCALC=2, DATA=[-536435505]
+IDX=4, XCALC=3, DATA=[-1260460939]
+IDX=5, XCALC=0, DATA=[1188457126]
+IDX=5, XCALC=1, DATA=[-1729374406]
+IDX=5, XCALC=2, DATA=[-799893645]
+IDX=5, XCALC=3, DATA=[1217674507]
+Region: 10296keys: [I@f887607
+Region: 10297keys: [I@47fccd88
+Region: 10298keys: [I@2619c0a4
+Region: 10552keys: [I@64b66286
+Region: 10553keys: [I@1fe7f12
+Region: 10554keys: [I@6b4877c3
+Root: 548, Interface: 162, Child: 20, clickThrough: true
+Root: 548, Interface: 163, Child: 16, clickThrough: true
+Root: 548, Interface: 90, Child: 13, clickThrough: true
+Root: 548, Interface: 160, Child: 9, clickThrough: true
+Root: 548, Interface: 320, Child: 63, clickThrough: true
+Root: 548, Interface: 274, Child: 64, clickThrough: true
+Root: 548, Interface: 149, Child: 65, clickThrough: true
+Root: 548, Interface: 387, Child: 66, clickThrough: true
+Root: 548, Interface: 271, Child: 67, clickThrough: true
+Root: 548, Interface: 218, Child: 68, clickThrough: true
+Root: 548, Interface: 429, Child: 70, clickThrough: true
+Root: 548, Interface: 432, Child: 71, clickThrough: true
+Root: 548, Interface: 182, Child: 72, clickThrough: true
+Root: 548, Interface: 261, Child: 73, clickThrough: true
+Root: 548, Interface: 216, Child: 74, clickThrough: true
+Root: 548, Interface: 239, Child: 75, clickThrough: true
+Root: 548, Interface: 589, Child: 69, clickThrough: true
+Root: 548, Interface: 593, Child: 62, clickThrough: true
+Root: 548, Interface: 69, Child: 72, clickThrough: true
+Root: 162, Interface: 217, Child: 546, clickThrough: false
+Root: 162, Interface: 231, Child: 546, clickThrough: false
+Root: 162, Interface: 219, Child: 546, clickThrough: false
+Root: 162, Interface: 217, Child: 546, clickThrough: false
+Root: 548, Interface: 224, Child: 18, clickThrough: false
+Region: 23055488keys: null
+Root: 548, Interface: 593, Child: 62, clickThrough: true
+Root: 548, Interface: 320, Child: 63, clickThrough: true
+Root: 548, Interface: 274, Child: 64, clickThrough: true
+Root: 548, Interface: 149, Child: 65, clickThrough: true
+Root: 548, Interface: 387, Child: 66, clickThrough: true
+Root: 548, Interface: 271, Child: 67, clickThrough: true
+Root: 548, Interface: 218, Child: 68, clickThrough: true
+Root: 548, Interface: 182, Child: 72, clickThrough: true
+Root: 548, Interface: 261, Child: 73, clickThrough: true
+Root: 548, Interface: 216, Child: 74, clickThrough: true
+Root: 548, Interface: 239, Child: 75, clickThrough: true
+Root: 162, Interface: 229, Child: 546, clickThrough: false
+IDX=0, XCALC=0, DATA=[1912880022]
+IDX=0, XCALC=1, DATA=[-1723964516]
+IDX=0, XCALC=2, DATA=[2062562401]
+IDX=0, XCALC=3, DATA=[-1162129761]
+IDX=1, XCALC=0, DATA=[133920571]
+IDX=1, XCALC=1, DATA=[-1751184341]
+IDX=1, XCALC=2, DATA=[-496135747]
+IDX=1, XCALC=3, DATA=[1322789021]
+IDX=2, XCALC=0, DATA=[0]
+IDX=2, XCALC=1, DATA=[0]
+IDX=2, XCALC=2, DATA=[0]
+IDX=2, XCALC=3, DATA=[0]
+IDX=3, XCALC=0, DATA=[-615808329]
+IDX=3, XCALC=1, DATA=[-635901760]
+IDX=3, XCALC=2, DATA=[981697328]
+IDX=3, XCALC=3, DATA=[-1782624914]
+IDX=4, XCALC=0, DATA=[0]
+IDX=4, XCALC=1, DATA=[0]
+IDX=4, XCALC=2, DATA=[0]
+IDX=4, XCALC=3, DATA=[0]
+IDX=5, XCALC=0, DATA=[0]
+IDX=5, XCALC=1, DATA=[0]
+IDX=5, XCALC=2, DATA=[0]
+IDX=5, XCALC=3, DATA=[0]
+Region: 10043keys: [I@70170c10
+Region: 10044keys: [I@791927ed
+Region: 10299keys: [I@628c76b7
+Region: 10300keys: [I@73c61aec
+Region: 10555keys: [I@5311b755
+Region: 10556keys: [I@301b580e
+Root: 161, Interface: 60, Child: 11, clickThrough: false
+IDX=0, XCALC=0, DATA=[0]
+IDX=0, XCALC=1, DATA=[0]
+IDX=0, XCALC=2, DATA=[0]
+IDX=0, XCALC=3, DATA=[0]
+IDX=1, XCALC=0, DATA=[432135203]
+IDX=1, XCALC=1, DATA=[92254316]
+IDX=1, XCALC=2, DATA=[-1619550296]
+IDX=1, XCALC=3, DATA=[76065412]
+IDX=2, XCALC=0, DATA=[0]
+IDX=2, XCALC=1, DATA=[0]
+IDX=2, XCALC=2, DATA=[0]
+IDX=2, XCALC=3, DATA=[0]
+IDX=3, XCALC=0, DATA=[1912880022]
+IDX=3, XCALC=1, DATA=[-1723964516]
+IDX=3, XCALC=2, DATA=[2062562401]
+IDX=3, XCALC=3, DATA=[-1162129761]
+IDX=4, XCALC=0, DATA=[133920571]
+IDX=4, XCALC=1, DATA=[-1751184341]
+IDX=4, XCALC=2, DATA=[-496135747]
+IDX=4, XCALC=3, DATA=[1322789021]
+IDX=5, XCALC=0, DATA=[0]
+IDX=5, XCALC=1, DATA=[0]
+IDX=5, XCALC=2, DATA=[0]
+IDX=5, XCALC=3, DATA=[0]
+IDX=6, XCALC=0, DATA=[0]
+IDX=6, XCALC=1, DATA=[0]
+IDX=6, XCALC=2, DATA=[0]
+IDX=6, XCALC=3, DATA=[0]
+IDX=7, XCALC=0, DATA=[-615808329]
+IDX=7, XCALC=1, DATA=[-635901760]
+IDX=7, XCALC=2, DATA=[981697328]
+IDX=7, XCALC=3, DATA=[-1782624914]
+IDX=8, XCALC=0, DATA=[-158146381]
+IDX=8, XCALC=1, DATA=[1698585677]
+IDX=8, XCALC=2, DATA=[-910760378]
+IDX=8, XCALC=3, DATA=[815929788]
+Region: 9787keys: [I@314c4dc8
+Region: 9788keys: [I@8869ec1
+Region: 9789keys: [I@3e209546
+Region: 10043keys: [I@4d284687
+Region: 10044keys: [I@f2e70a4
+Region: 10045keys: [I@31e526c5
+Region: 10299keys: [I@3b54691a
+Region: 10300keys: [I@22c04864
+Region: 10301keys: [I@7dd0af0e
+Root: 161, Interface: 69, Child: 70, clickThrough: true
+Root: 162, Interface: 228, Child: 546, clickThrough: false
+Root: 161, Interface: 90, Child: 4, clickThrough: true
+IDX=0, XCALC=0, DATA=[0]
+IDX=0, XCALC=1, DATA=[0]
+IDX=0, XCALC=2, DATA=[0]
+IDX=0, XCALC=3, DATA=[0]
+IDX=1, XCALC=0, DATA=[432135203]
+IDX=1, XCALC=1, DATA=[92254316]
+IDX=1, XCALC=2, DATA=[-1619550296]
+IDX=1, XCALC=3, DATA=[76065412]
+IDX=2, XCALC=0, DATA=[0]
+IDX=2, XCALC=1, DATA=[0]
+IDX=2, XCALC=2, DATA=[0]
+IDX=2, XCALC=3, DATA=[0]
+IDX=3, XCALC=0, DATA=[1912880022]
+IDX=3, XCALC=1, DATA=[-1723964516]
+IDX=3, XCALC=2, DATA=[2062562401]
+IDX=3, XCALC=3, DATA=[-1162129761]
+IDX=4, XCALC=0, DATA=[133920571]
+IDX=4, XCALC=1, DATA=[-1751184341]
+IDX=4, XCALC=2, DATA=[-496135747]
+IDX=4, XCALC=3, DATA=[1322789021]
+IDX=5, XCALC=0, DATA=[0]
+IDX=5, XCALC=1, DATA=[0]
+IDX=5, XCALC=2, DATA=[0]
+IDX=5, XCALC=3, DATA=[0]
+Region: 9787keys: [I@588ab728
+Region: 9788keys: [I@7afed081
+Region: 9789keys: [I@6f2b043c
+Region: 10043keys: [I@71233828
+Region: 10044keys: [I@3f3c041f
+Region: 10045keys: [I@7d32afa7
+Root: 161, Interface: 162, Child: 21, clickThrough: true
+Root: 161, Interface: 163, Child: 8, clickThrough: true
+Root: 161, Interface: 90, Child: 4, clickThrough: true
+Root: 161, Interface: 160, Child: 20, clickThrough: true
+Root: 161, Interface: 320, Child: 61, clickThrough: true
+Root: 161, Interface: 274, Child: 62, clickThrough: true
+Root: 161, Interface: 149, Child: 63, clickThrough: true
+Root: 161, Interface: 387, Child: 64, clickThrough: true
+Root: 161, Interface: 271, Child: 65, clickThrough: true
+Root: 161, Interface: 218, Child: 66, clickThrough: true
+Root: 161, Interface: 429, Child: 68, clickThrough: true
+Root: 161, Interface: 432, Child: 69, clickThrough: true
+Root: 161, Interface: 182, Child: 70, clickThrough: true
+Root: 161, Interface: 261, Child: 71, clickThrough: true
+Root: 161, Interface: 216, Child: 72, clickThrough: true
+Root: 161, Interface: 239, Child: 73, clickThrough: true
+Root: 161, Interface: 589, Child: 67, clickThrough: true
+Root: 161, Interface: 593, Child: 60, clickThrough: true
+Root: 161, Interface: 69, Child: 70, clickThrough: true
+IDX=0, XCALC=0, DATA=[1912880022]
+IDX=0, XCALC=1, DATA=[-1723964516]
+IDX=0, XCALC=2, DATA=[2062562401]
+IDX=0, XCALC=3, DATA=[-1162129761]
+IDX=1, XCALC=0, DATA=[133920571]
+IDX=1, XCALC=1, DATA=[-1751184341]
+IDX=1, XCALC=2, DATA=[-496135747]
+IDX=1, XCALC=3, DATA=[1322789021]
+IDX=2, XCALC=0, DATA=[0]
+IDX=2, XCALC=1, DATA=[0]
+IDX=2, XCALC=2, DATA=[0]
+IDX=2, XCALC=3, DATA=[0]
+IDX=3, XCALC=0, DATA=[0]
+IDX=3, XCALC=1, DATA=[0]
+IDX=3, XCALC=2, DATA=[0]
+IDX=3, XCALC=3, DATA=[0]
+IDX=4, XCALC=0, DATA=[-615808329]
+IDX=4, XCALC=1, DATA=[-635901760]
+IDX=4, XCALC=2, DATA=[981697328]
+IDX=4, XCALC=3, DATA=[-1782624914]
+IDX=5, XCALC=0, DATA=[-158146381]
+IDX=5, XCALC=1, DATA=[1698585677]
+IDX=5, XCALC=2, DATA=[-910760378]
+IDX=5, XCALC=3, DATA=[815929788]
+Region: 10043keys: [I@18487288
+Region: 10044keys: [I@3c574b2c
+Region: 10045keys: [I@70854a7
+Region: 10299keys: [I@33eda38c
+Region: 10300keys: [I@368c56f6
+Region: 10301keys: [I@37a14c74
+IDX=0, XCALC=0, DATA=[1912880022]
+IDX=0, XCALC=1, DATA=[-1723964516]
+IDX=0, XCALC=2, DATA=[2062562401]
+IDX=0, XCALC=3, DATA=[-1162129761]
+IDX=1, XCALC=0, DATA=[133920571]
+IDX=1, XCALC=1, DATA=[-1751184341]
+IDX=1, XCALC=2, DATA=[-496135747]
+IDX=1, XCALC=3, DATA=[1322789021]
+IDX=2, XCALC=0, DATA=[0]
+IDX=2, XCALC=1, DATA=[0]
+IDX=2, XCALC=2, DATA=[0]
+IDX=2, XCALC=3, DATA=[0]
+IDX=3, XCALC=0, DATA=[0]
+IDX=3, XCALC=1, DATA=[0]
+IDX=3, XCALC=2, DATA=[0]
+IDX=3, XCALC=3, DATA=[0]
+IDX=4, XCALC=0, DATA=[-615808329]
+IDX=4, XCALC=1, DATA=[-635901760]
+IDX=4, XCALC=2, DATA=[981697328]
+IDX=4, XCALC=3, DATA=[-1782624914]
+IDX=5, XCALC=0, DATA=[-158146381]
+IDX=5, XCALC=1, DATA=[1698585677]
+IDX=5, XCALC=2, DATA=[-910760378]
+IDX=5, XCALC=3, DATA=[815929788]
+IDX=6, XCALC=0, DATA=[0]
+IDX=6, XCALC=1, DATA=[0]
+IDX=6, XCALC=2, DATA=[0]
+IDX=6, XCALC=3, DATA=[0]
+IDX=7, XCALC=0, DATA=[0]
+IDX=7, XCALC=1, DATA=[0]
+IDX=7, XCALC=2, DATA=[0]
+IDX=7, XCALC=3, DATA=[0]
+IDX=8, XCALC=0, DATA=[-807815903]
+IDX=8, XCALC=1, DATA=[958215082]
+IDX=8, XCALC=2, DATA=[-647601710]
+IDX=8, XCALC=3, DATA=[1350072419]
+Region: 10043keys: [I@51f885
+Region: 10044keys: [I@592e3ed
+Region: 10045keys: [I@6eb1df76
+Region: 10299keys: [I@5fc5f4c0
+Region: 10300keys: [I@3d479a5f
+Region: 10301keys: [I@27e7f267
+Region: 10555keys: [I@6cdb5ca8
+Region: 10556keys: [I@35a0516d
+Region: 10557keys: [I@3041e69c
+Root: 161, Interface: 224, Child: 11, clickThrough: false
+Region: 23055488keys: null
+Root: 161, Interface: 593, Child: 60, clickThrough: true
+Root: 161, Interface: 320, Child: 61, clickThrough: true
+Root: 161, Interface: 274, Child: 62, clickThrough: true
+Root: 161, Interface: 149, Child: 63, clickThrough: true
+Root: 161, Interface: 387, Child: 64, clickThrough: true
+Root: 161, Interface: 271, Child: 65, clickThrough: true
+Root: 161, Interface: 218, Child: 66, clickThrough: true
+Root: 161, Interface: 182, Child: 70, clickThrough: true
+Root: 161, Interface: 261, Child: 71, clickThrough: true
+Root: 161, Interface: 216, Child: 72, clickThrough: true
+Root: 161, Interface: 239, Child: 73, clickThrough: true
+Root: 162, Interface: 229, Child: 546, clickThrough: false
+IDX=0, XCALC=0, DATA=[1420311343]
+IDX=0, XCALC=1, DATA=[321724544]
+IDX=0, XCALC=2, DATA=[-733184290]
+IDX=0, XCALC=3, DATA=[-1039741548]
+IDX=1, XCALC=0, DATA=[-1205119668]
+IDX=1, XCALC=1, DATA=[-718810521]
+IDX=1, XCALC=2, DATA=[695794159]
+IDX=1, XCALC=3, DATA=[834395617]
+IDX=2, XCALC=0, DATA=[0]
+IDX=2, XCALC=1, DATA=[0]
+IDX=2, XCALC=2, DATA=[0]
+IDX=2, XCALC=3, DATA=[0]
+IDX=3, XCALC=0, DATA=[-2088288771]
+IDX=3, XCALC=1, DATA=[-1992299670]
+IDX=3, XCALC=2, DATA=[-1820985527]
+IDX=3, XCALC=3, DATA=[219500542]
+IDX=4, XCALC=0, DATA=[948012384]
+IDX=4, XCALC=1, DATA=[1064486765]
+IDX=4, XCALC=2, DATA=[-536435505]
+IDX=4, XCALC=3, DATA=[-1260460939]
+IDX=5, XCALC=0, DATA=[1188457126]
+IDX=5, XCALC=1, DATA=[-1729374406]
+IDX=5, XCALC=2, DATA=[-799893645]
+IDX=5, XCALC=3, DATA=[1217674507]
+Region: 10296keys: [I@3b1dc36
+Region: 10297keys: [I@11f05f1f
+Region: 10298keys: [I@3bf4f56c
+Region: 10552keys: [I@4f1ca434
+Region: 10553keys: [I@61607a7f
+Region: 10554keys: [I@50a59cb
+Root: 161, Interface: 90, Child: 4, clickThrough: true
+IDX=0, XCALC=0, DATA=[1420311343]
+IDX=0, XCALC=1, DATA=[321724544]
+IDX=0, XCALC=2, DATA=[-733184290]
+IDX=0, XCALC=3, DATA=[-1039741548]
+IDX=1, XCALC=0, DATA=[-1205119668]
+IDX=1, XCALC=1, DATA=[-718810521]
+IDX=1, XCALC=2, DATA=[695794159]
+IDX=1, XCALC=3, DATA=[834395617]
+IDX=2, XCALC=0, DATA=[-2088288771]
+IDX=2, XCALC=1, DATA=[-1992299670]
+IDX=2, XCALC=2, DATA=[-1820985527]
+IDX=2, XCALC=3, DATA=[219500542]
+IDX=3, XCALC=0, DATA=[948012384]
+IDX=3, XCALC=1, DATA=[1064486765]
+IDX=3, XCALC=2, DATA=[-536435505]
+IDX=3, XCALC=3, DATA=[-1260460939]
+IDX=4, XCALC=0, DATA=[385866047]
+IDX=4, XCALC=1, DATA=[-553044868]
+IDX=4, XCALC=2, DATA=[130232710]
+IDX=4, XCALC=3, DATA=[401377614]
+IDX=5, XCALC=0, DATA=[-1892727590]
+IDX=5, XCALC=1, DATA=[270855962]
+IDX=5, XCALC=2, DATA=[1609680466]
+IDX=5, XCALC=3, DATA=[-1515726702]
+Region: 10296keys: [I@4ad90dc
+Region: 10297keys: [I@1f015dea
+Region: 10552keys: [I@12bcbd8d
+Region: 10553keys: [I@25407d97
+Region: 10808keys: [I@2cf5579c
+Region: 10809keys: [I@1f4ad9d3
+Root: 161, Interface: 90, Child: 4, clickThrough: true
+IDX=0, XCALC=0, DATA=[-2088288771]
+IDX=0, XCALC=1, DATA=[-1992299670]
+IDX=0, XCALC=2, DATA=[-1820985527]
+IDX=0, XCALC=3, DATA=[219500542]
+IDX=1, XCALC=0, DATA=[948012384]
+IDX=1, XCALC=1, DATA=[1064486765]
+IDX=1, XCALC=2, DATA=[-536435505]
+IDX=1, XCALC=3, DATA=[-1260460939]
+IDX=2, XCALC=0, DATA=[385866047]
+IDX=2, XCALC=1, DATA=[-553044868]
+IDX=2, XCALC=2, DATA=[130232710]
+IDX=2, XCALC=3, DATA=[401377614]
+IDX=3, XCALC=0, DATA=[-1892727590]
+IDX=3, XCALC=1, DATA=[270855962]
+IDX=3, XCALC=2, DATA=[1609680466]
+IDX=3, XCALC=3, DATA=[-1515726702]
+Region: 10552keys: [I@7a1917ed
+Region: 10553keys: [I@572073b
+Region: 10808keys: [I@138b548
+Region: 10809keys: [I@32058a98
+IDX=0, XCALC=0, DATA=[-841014118]
+IDX=0, XCALC=1, DATA=[-887539436]
+IDX=0, XCALC=2, DATA=[-361296781]
+IDX=0, XCALC=3, DATA=[-131626754]
+IDX=1, XCALC=0, DATA=[-2088288771]
+IDX=1, XCALC=1, DATA=[-1992299670]
+IDX=1, XCALC=2, DATA=[-1820985527]
+IDX=1, XCALC=3, DATA=[219500542]
+IDX=2, XCALC=0, DATA=[948012384]
+IDX=2, XCALC=1, DATA=[1064486765]
+IDX=2, XCALC=2, DATA=[-536435505]
+IDX=2, XCALC=3, DATA=[-1260460939]
+IDX=3, XCALC=0, DATA=[75982537]
+IDX=3, XCALC=1, DATA=[-720362702]
+IDX=3, XCALC=2, DATA=[-1198847610]
+IDX=3, XCALC=3, DATA=[1616337264]
+IDX=4, XCALC=0, DATA=[385866047]
+IDX=4, XCALC=1, DATA=[-553044868]
+IDX=4, XCALC=2, DATA=[130232710]
+IDX=4, XCALC=3, DATA=[401377614]
+IDX=5, XCALC=0, DATA=[-1892727590]
+IDX=5, XCALC=1, DATA=[270855962]
+IDX=5, XCALC=2, DATA=[1609680466]
+IDX=5, XCALC=3, DATA=[-1515726702]
+IDX=6, XCALC=0, DATA=[-799637122]
+IDX=6, XCALC=1, DATA=[634680858]
+IDX=6, XCALC=2, DATA=[-1779456523]
+IDX=6, XCALC=3, DATA=[-2034716476]
+IDX=7, XCALC=0, DATA=[-2104461903]
+IDX=7, XCALC=1, DATA=[2010136022]
+IDX=7, XCALC=2, DATA=[1877631504]
+IDX=7, XCALC=3, DATA=[-702223329]
+IDX=8, XCALC=0, DATA=[-1487802839]
+IDX=8, XCALC=1, DATA=[856470179]
+IDX=8, XCALC=2, DATA=[1889283583]
+IDX=8, XCALC=3, DATA=[1157865105]
+Region: 10551keys: [I@53ee0ce0
+Region: 10552keys: [I@318f712c
+Region: 10553keys: [I@404f191f
+Region: 10807keys: [I@8fa6335
+Region: 10808keys: [I@6e87312d
+Region: 10809keys: [I@6dadba0b
+Region: 11063keys: [I@2891606e
+Region: 11064keys: [I@6051ea90
+Region: 11065keys: [I@21fec557
+IDX=0, XCALC=0, DATA=[385866047]
+IDX=0, XCALC=1, DATA=[-553044868]
+IDX=0, XCALC=2, DATA=[130232710]
+IDX=0, XCALC=3, DATA=[401377614]
+IDX=1, XCALC=0, DATA=[-1892727590]
+IDX=1, XCALC=1, DATA=[270855962]
+IDX=1, XCALC=2, DATA=[1609680466]
+IDX=1, XCALC=3, DATA=[-1515726702]
+IDX=2, XCALC=0, DATA=[-2104461903]
+IDX=2, XCALC=1, DATA=[2010136022]
+IDX=2, XCALC=2, DATA=[1877631504]
+IDX=2, XCALC=3, DATA=[-702223329]
+IDX=3, XCALC=0, DATA=[-1487802839]
+IDX=3, XCALC=1, DATA=[856470179]
+IDX=3, XCALC=2, DATA=[1889283583]
+IDX=3, XCALC=3, DATA=[1157865105]
+IDX=4, XCALC=0, DATA=[-1608050593]
+IDX=4, XCALC=1, DATA=[-413428259]
+IDX=4, XCALC=2, DATA=[2059848881]
+IDX=4, XCALC=3, DATA=[-2038252682]
+IDX=5, XCALC=0, DATA=[-121186753]
+IDX=5, XCALC=1, DATA=[-2050899182]
+IDX=5, XCALC=2, DATA=[-1212767079]
+IDX=5, XCALC=3, DATA=[-1018145454]
+Region: 10808keys: [I@c418b1e
+Region: 10809keys: [I@231464db
+Region: 11064keys: [I@fe977db
+Region: 11065keys: [I@28bbd306
+Region: 11320keys: [I@431b43ce
+Region: 11321keys: [I@3300abcd
+Root: 161, Interface: 69, Child: 70, clickThrough: true
+Root: 162, Interface: 228, Child: 546, clickThrough: false
+Root: 162, Interface: 228, Child: 546, clickThrough: false
+Root: 161, Interface: 90, Child: 4, clickThrough: true
+IDX=0, XCALC=0, DATA=[75982537]
+IDX=0, XCALC=1, DATA=[-720362702]
+IDX=0, XCALC=2, DATA=[-1198847610]
+IDX=0, XCALC=3, DATA=[1616337264]
+IDX=1, XCALC=0, DATA=[385866047]
+IDX=1, XCALC=1, DATA=[-553044868]
+IDX=1, XCALC=2, DATA=[130232710]
+IDX=1, XCALC=3, DATA=[401377614]
+IDX=2, XCALC=0, DATA=[-1892727590]
+IDX=2, XCALC=1, DATA=[270855962]
+IDX=2, XCALC=2, DATA=[1609680466]
+IDX=2, XCALC=3, DATA=[-1515726702]
+IDX=3, XCALC=0, DATA=[-799637122]
+IDX=3, XCALC=1, DATA=[634680858]
+IDX=3, XCALC=2, DATA=[-1779456523]
+IDX=3, XCALC=3, DATA=[-2034716476]
+IDX=4, XCALC=0, DATA=[-2104461903]
+IDX=4, XCALC=1, DATA=[2010136022]
+IDX=4, XCALC=2, DATA=[1877631504]
+IDX=4, XCALC=3, DATA=[-702223329]
+IDX=5, XCALC=0, DATA=[-1487802839]
+IDX=5, XCALC=1, DATA=[856470179]
+IDX=5, XCALC=2, DATA=[1889283583]
+IDX=5, XCALC=3, DATA=[1157865105]
+IDX=6, XCALC=0, DATA=[960237862]
+IDX=6, XCALC=1, DATA=[2060025465]
+IDX=6, XCALC=2, DATA=[2125950137]
+IDX=6, XCALC=3, DATA=[-1547545297]
+IDX=7, XCALC=0, DATA=[-1608050593]
+IDX=7, XCALC=1, DATA=[-413428259]
+IDX=7, XCALC=2, DATA=[2059848881]
+IDX=7, XCALC=3, DATA=[-2038252682]
+IDX=8, XCALC=0, DATA=[-121186753]
+IDX=8, XCALC=1, DATA=[-2050899182]
+IDX=8, XCALC=2, DATA=[-1212767079]
+IDX=8, XCALC=3, DATA=[-1018145454]
+Region: 10807keys: [I@15d7f05c
+Region: 10808keys: [I@13e53338
+Region: 10809keys: [I@2c85abbc
+Region: 11063keys: [I@7bcdda79
+Region: 11064keys: [I@7c27d6f
+Region: 11065keys: [I@71b90663
+Region: 11319keys: [I@2a5287e9
+Region: 11320keys: [I@1058e7b4
+Region: 11321keys: [I@3cd3e2ce
+Root: 161, Interface: 162, Child: 21, clickThrough: true
+Root: 161, Interface: 163, Child: 8, clickThrough: true
+Root: 161, Interface: 90, Child: 4, clickThrough: true
+Root: 161, Interface: 160, Child: 20, clickThrough: true
+Root: 161, Interface: 320, Child: 61, clickThrough: true
+Root: 161, Interface: 274, Child: 62, clickThrough: true
+Root: 161, Interface: 149, Child: 63, clickThrough: true
+Root: 161, Interface: 387, Child: 64, clickThrough: true
+Root: 161, Interface: 271, Child: 65, clickThrough: true
+Root: 161, Interface: 218, Child: 66, clickThrough: true
+Root: 161, Interface: 429, Child: 68, clickThrough: true
+Root: 161, Interface: 432, Child: 69, clickThrough: true
+Root: 161, Interface: 182, Child: 70, clickThrough: true
+Root: 161, Interface: 261, Child: 71, clickThrough: true
+Root: 161, Interface: 216, Child: 72, clickThrough: true
+Root: 161, Interface: 239, Child: 73, clickThrough: true
+Root: 161, Interface: 589, Child: 67, clickThrough: true
+Root: 161, Interface: 593, Child: 60, clickThrough: true
+Root: 161, Interface: 69, Child: 70, clickThrough: true
+IDX=0, XCALC=0, DATA=[0]
+IDX=0, XCALC=1, DATA=[0]
+IDX=0, XCALC=2, DATA=[0]
+IDX=0, XCALC=3, DATA=[0]
+IDX=1, XCALC=0, DATA=[1237183727]
+IDX=1, XCALC=1, DATA=[1713975364]
+IDX=1, XCALC=2, DATA=[-1748755761]
+IDX=1, XCALC=3, DATA=[-1239611557]
+IDX=2, XCALC=0, DATA=[-1333420503]
+IDX=2, XCALC=1, DATA=[149104013]
+IDX=2, XCALC=2, DATA=[-878784817]
+IDX=2, XCALC=3, DATA=[-1185309247]
+IDX=3, XCALC=0, DATA=[1065977435]
+IDX=3, XCALC=1, DATA=[-509224535]
+IDX=3, XCALC=2, DATA=[40576513]
+IDX=3, XCALC=3, DATA=[418190]
+IDX=4, XCALC=0, DATA=[0]
+IDX=4, XCALC=1, DATA=[0]
+IDX=4, XCALC=2, DATA=[0]
+IDX=4, XCALC=3, DATA=[0]
+IDX=5, XCALC=0, DATA=[1608713237]
+IDX=5, XCALC=1, DATA=[-1364613120]
+IDX=5, XCALC=2, DATA=[739493095]
+IDX=5, XCALC=3, DATA=[1209782580]
+Region: 11163keys: [I@2cef6981
+Region: 11164keys: [I@19f7ab33
+Region: 11165keys: [I@5308ae96
+Region: 11419keys: [I@5efe2470
+Region: 11420keys: [I@7f0a65c8
+Region: 11421keys: [I@3a06ea1
+IDX=0, XCALC=0, DATA=[1550571288]
+IDX=0, XCALC=1, DATA=[-26475264]
+IDX=0, XCALC=2, DATA=[1005406329]
+IDX=0, XCALC=3, DATA=[-1715071384]
+IDX=1, XCALC=0, DATA=[0]
+IDX=1, XCALC=1, DATA=[0]
+IDX=1, XCALC=2, DATA=[0]
+IDX=1, XCALC=3, DATA=[0]
+IDX=2, XCALC=0, DATA=[1237183727]
+IDX=2, XCALC=1, DATA=[1713975364]
+IDX=2, XCALC=2, DATA=[-1748755761]
+IDX=2, XCALC=3, DATA=[-1239611557]
+IDX=3, XCALC=0, DATA=[-1333420503]
+IDX=3, XCALC=1, DATA=[149104013]
+IDX=3, XCALC=2, DATA=[-878784817]
+IDX=3, XCALC=3, DATA=[-1185309247]
+IDX=4, XCALC=0, DATA=[0]
+IDX=4, XCALC=1, DATA=[0]
+IDX=4, XCALC=2, DATA=[0]
+IDX=4, XCALC=3, DATA=[0]
+IDX=5, XCALC=0, DATA=[1608713237]
+IDX=5, XCALC=1, DATA=[-1364613120]
+IDX=5, XCALC=2, DATA=[739493095]
+IDX=5, XCALC=3, DATA=[1209782580]
+Region: 10908keys: [I@5d2637bf
+Region: 10909keys: [I@78160c5f
+Region: 11164keys: [I@6f866e90
+Region: 11165keys: [I@62c4e923
+Region: 11420keys: [I@6da62b7d
+Region: 11421keys: [I@387153c8
+IDX=0, XCALC=0, DATA=[1703225431]
+IDX=0, XCALC=1, DATA=[-1175749730]
+IDX=0, XCALC=2, DATA=[1842579622]
+IDX=0, XCALC=3, DATA=[-1861290070]
+IDX=1, XCALC=0, DATA=[1550571288]
+IDX=1, XCALC=1, DATA=[-26475264]
+IDX=1, XCALC=2, DATA=[1005406329]
+IDX=1, XCALC=3, DATA=[-1715071384]
+IDX=2, XCALC=0, DATA=[0]
+IDX=2, XCALC=1, DATA=[0]
+IDX=2, XCALC=2, DATA=[0]
+IDX=2, XCALC=3, DATA=[0]
+IDX=3, XCALC=0, DATA=[1237183727]
+IDX=3, XCALC=1, DATA=[1713975364]
+IDX=3, XCALC=2, DATA=[-1748755761]
+IDX=3, XCALC=3, DATA=[-1239611557]
+Region: 10907keys: [I@70a4a297
+Region: 10908keys: [I@48aea147
+Region: 11163keys: [I@40de6198
+Region: 11164keys: [I@47d9636d
+IDX=0, XCALC=0, DATA=[1550571288]
+IDX=0, XCALC=1, DATA=[-26475264]
+IDX=0, XCALC=2, DATA=[1005406329]
+IDX=0, XCALC=3, DATA=[-1715071384]
+IDX=1, XCALC=0, DATA=[0]
+IDX=1, XCALC=1, DATA=[0]
+IDX=1, XCALC=2, DATA=[0]
+IDX=1, XCALC=3, DATA=[0]
+IDX=2, XCALC=0, DATA=[1237183727]
+IDX=2, XCALC=1, DATA=[1713975364]
+IDX=2, XCALC=2, DATA=[-1748755761]
+IDX=2, XCALC=3, DATA=[-1239611557]
+IDX=3, XCALC=0, DATA=[-1333420503]
+IDX=3, XCALC=1, DATA=[149104013]
+IDX=3, XCALC=2, DATA=[-878784817]
+IDX=3, XCALC=3, DATA=[-1185309247]
+Region: 10908keys: [I@23f2294e
+Region: 10909keys: [I@6f75d251
+Region: 11164keys: [I@2042fd02
+Region: 11165keys: [I@df09eda
+IDX=0, XCALC=0, DATA=[0]
+IDX=0, XCALC=1, DATA=[0]
+IDX=0, XCALC=2, DATA=[0]
+IDX=0, XCALC=3, DATA=[0]
+IDX=1, XCALC=0, DATA=[1474564218]
+IDX=1, XCALC=1, DATA=[-826457951]
+IDX=1, XCALC=2, DATA=[312870395]
+IDX=1, XCALC=3, DATA=[1584424449]
+IDX=2, XCALC=0, DATA=[1703225431]
+IDX=2, XCALC=1, DATA=[-1175749730]
+IDX=2, XCALC=2, DATA=[1842579622]
+IDX=2, XCALC=3, DATA=[-1861290070]
+IDX=3, XCALC=0, DATA=[1550571288]
+IDX=3, XCALC=1, DATA=[-26475264]
+IDX=3, XCALC=2, DATA=[1005406329]
+IDX=3, XCALC=3, DATA=[-1715071384]
+IDX=4, XCALC=0, DATA=[0]
+IDX=4, XCALC=1, DATA=[0]
+IDX=4, XCALC=2, DATA=[0]
+IDX=4, XCALC=3, DATA=[0]
+IDX=5, XCALC=0, DATA=[1237183727]
+IDX=5, XCALC=1, DATA=[1713975364]
+IDX=5, XCALC=2, DATA=[-1748755761]
+IDX=5, XCALC=3, DATA=[-1239611557]
+Region: 10651keys: [I@335bd832
+Region: 10652keys: [I@52ced4f5
+Region: 10907keys: [I@8ff4b4c
+Region: 10908keys: [I@30a86f31
+Region: 11163keys: [I@21c12ec
+Region: 11164keys: [I@11e4509
+Root: 161, Interface: 90, Child: 4, clickThrough: true
+Root: 161, Interface: 320, Child: 61, clickThrough: true
+Root: 161, Interface: 274, Child: 62, clickThrough: true
+Root: 161, Interface: 149, Child: 63, clickThrough: true
+Root: 161, Interface: 387, Child: 64, clickThrough: true
+Root: 161, Interface: 271, Child: 65, clickThrough: true
+Root: 161, Interface: 218, Child: 66, clickThrough: true
+Root: 161, Interface: 429, Child: 68, clickThrough: true
+Root: 161, Interface: 432, Child: 69, clickThrough: true
+Root: 161, Interface: 182, Child: 70, clickThrough: true
+Root: 161, Interface: 261, Child: 71, clickThrough: true
+Root: 161, Interface: 216, Child: 72, clickThrough: true
+Root: 161, Interface: 239, Child: 73, clickThrough: true
+Root: 161, Interface: 90, Child: 4, clickThrough: true
+Root: 161, Interface: 90, Child: 4, clickThrough: true
+Root: 161, Interface: 90, Child: 4, clickThrough: true
+IDX=0, XCALC=0, DATA=[158304985]
+IDX=0, XCALC=1, DATA=[-608638423]
+IDX=0, XCALC=2, DATA=[51729196]
+IDX=0, XCALC=3, DATA=[-841269992]
+IDX=1, XCALC=0, DATA=[786361279]
+IDX=1, XCALC=1, DATA=[1268499968]
+IDX=1, XCALC=2, DATA=[-1067262193]
+IDX=1, XCALC=3, DATA=[1879887393]
+IDX=2, XCALC=0, DATA=[290613390]
+IDX=2, XCALC=1, DATA=[1096898118]
+IDX=2, XCALC=2, DATA=[386705955]
+IDX=2, XCALC=3, DATA=[-1876318368]
+IDX=3, XCALC=0, DATA=[1338246802]
+IDX=3, XCALC=1, DATA=[725567520]
+IDX=3, XCALC=2, DATA=[-85102353]
+IDX=3, XCALC=3, DATA=[893729815]
+IDX=4, XCALC=0, DATA=[1125611959]
+IDX=4, XCALC=1, DATA=[-2047842641]
+IDX=4, XCALC=2, DATA=[640574923]
+IDX=4, XCALC=3, DATA=[-482389016]
+IDX=5, XCALC=0, DATA=[1406680311]
+IDX=5, XCALC=1, DATA=[-507373480]
+IDX=5, XCALC=2, DATA=[1090203651]
+IDX=5, XCALC=3, DATA=[1150436709]
+IDX=6, XCALC=0, DATA=[1915041857]
+IDX=6, XCALC=1, DATA=[-715557992]
+IDX=6, XCALC=2, DATA=[-1251032257]
+IDX=6, XCALC=3, DATA=[-950393411]
+IDX=7, XCALC=0, DATA=[853711784]
+IDX=7, XCALC=1, DATA=[241148978]
+IDX=7, XCALC=2, DATA=[378704137]
+IDX=7, XCALC=3, DATA=[781770156]
+IDX=8, XCALC=0, DATA=[-1235220076]
+IDX=8, XCALC=1, DATA=[-1734863631]
+IDX=8, XCALC=2, DATA=[1661386917]
+IDX=8, XCALC=3, DATA=[-967682427]
+Region: 12593keys: [I@59b014d9
+Region: 12594keys: [I@3728e08f
+Region: 12595keys: [I@5caee893
+Region: 12849keys: [I@5f273a6e
+Region: 12850keys: [I@86d3c90
+Region: 12851keys: [I@3ba31642
+Region: 13105keys: [I@500a65a4
+Region: 13106keys: [I@5a971b09
+Region: 13107keys: [I@76701a55
+Root: 162, Interface: 228, Child: 546, clickThrough: false
+Root: 161, Interface: 90, Child: 4, clickThrough: true
+
+Process finished with exit code 0
+
+wilderness ditch
+
+ORCE MOVEMENT: 0, -3,0,0,33,60, 1024
+FORCE MOVEMENT: 0, 3,0,0,33,60, 0
+
+FORCE MOVEMENT: 0, -3,0,0,33,60, 1024 into wild
+FORCE MOVEMENT: 0, 3,0,0,33,60, 0 out wild
+
+
+grand exchange 
+FORCE MOVEMENT: 1, 0,0,0,0,50, 512
+FORCE MOVEMENT: 3, -3,0,0,0,100, 512
+FORCE MOVEMENT: 1, 0,0,0,15,33, 512
+FORCE MOVEMENT: -1, 0,0,0,0,50, 1536
+FORCE MOVEMENT: -3, 3,0,0,0,100, 1536
+FORCE MOVEMENT: -1, 0,0,0,15,33, 1536
+FORCE MOVEMENT: 1, 0,0,0,0,50, 512
+FORCE MOVEMENT: 3, -3,0,0,0,100, 512
+FORCE MOVEMENT: 1, 0,0,0,15,33, 512
+ORCE MOVEMENT: 1, 0,0,0,0,50, 512
+FORCE MOVEMENT: 3, -3,0,0,0,100, 512
+FORCE MOVEMENT: 1, 0,0,0,15,33, 512
+
+
+
+
+
+
+
+
+
+
+FORCE MOVEMENT: 1, 0,0,0,0,50, 512
+FORCE MOVEMENT: 3, -3,0,0,0,100, 512
+FORCE MOVEMENT: 1, 0,0,0,15,33, 512
+
+FORCE MOVEMENT: -1, 0,0,0,0,50, 1536
+FORCE MOVEMENT: -3, 3,0,0,0,100, 1536
+FORCE MOVEMENT: -1, 0,0,0,15,33, 1536

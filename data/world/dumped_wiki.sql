@@ -1,0 +1,7 @@
+('7453', 'Gloves', '9', 'false', 'false', 'false', 'false', '60', '0', 'A pair of gloves.', 'false', '0.2', '2', '2', '1', '2', '0', '2', '2', '1', '2', '0', '0', '0', '0'),
+('7456', 'Gloves', '9', 'false', 'true', 'false', 'false', '3', '2', 'These will keep my hands warm!', 'false', '0.2', '0', '0', '0', '0', '0', '2', '0', '0', '0', '0', '0', '0', '0'),
+('7457', 'Gloves', '9', 'false', 'false', 'false', 'false', '600', '400', 'A pair of black-coloured gloves.', 'true', '0.2', '5', '5', '3', '5', '0', '5', '5', '3', '5', '0', '0', '0', '0'),
+('7458', 'Gloves', '9', 'false', 'false', 'false', 'false', '900', '600', 'A pair of gloves.', 'false', '0.2', '6', '6', '6', '3', '6', '6', '6', '6', '3', '6', '0', '0', '0'),
+('7460', 'Gloves', '9', 'false', 'false', 'false', 'false', '3000', '2000', 'A pair of rune-coloured gloves.', 'true', '0.0', '8', '8', '4', '8', '0', '8', '8', '4', '8', '0', '0', '0', '0'),
+('7461', 'Gloves', '9', 'false', 'false', 'false', 'false', '60000', '30000', 'A very nice pair of gloves.', 'false', '0.0', '9', '9', '5', '9', '0', '9', '9', '5', '9', '0', '0', '0', '0'),
+('7462', 'Gloves', '9', 'false', 'false', 'false', 'false', '60000', '40000', 'A pair of very nice gloves.', 'false', '0.2', '12', '12', '6', '12', '0', '12', '12', '6', '12', '0', '0', '0', '0'),

@@ -1,0 +1,6 @@
+# List of packet handlers
+
+ARRAY revisions[2] 
+
+revisions[0]=83
+revisions[1]=93
