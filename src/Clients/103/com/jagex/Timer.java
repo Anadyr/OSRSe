@@ -110,7 +110,7 @@ public abstract class Timer {
                   }
 
                   byte[] var15 = new byte[var14];
-                  var13.position += client.aClass52_1621.method786(var13.payload, 314639891 * var13.position, var15, 0, var14, (byte)16) * -184175589;
+                  var13.position += client.aClass52_1621.getBytes(var13.payload, 314639891 * var13.position, var15, 0, var14, (byte)16) * -184175589;
                   String var16 = Tile.method1987(var15, 0, var14, (byte) 79);
                   var17 = var16;
                } catch (Exception var19) {

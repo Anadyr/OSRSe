@@ -59,7 +59,6 @@ public class PlayerCommunication implements Serviceable {
         }
         if(WorldModule.isCommercial()) {
             WorldModule.getLogic().getLoginSession().requestDefinedFS(false, 0, player.getStaticIndex(), -1, username);
-            //WorldModule.getLogic().getLoginSession().requestPlayer(false, player.getStaticIndex(), username); //updates that player if online to know he is added
         }
     }
 
@@ -113,21 +112,23 @@ public class PlayerCommunication implements Serviceable {
     }
 
     public void sendClanMessage(String text) {
-        text = text.substring(1);
-        byte[] huffmanBuffer = new byte[256];
-        int huffmanLength = TextUtilities.huffmanCompress(text, huffmanBuffer, 0);
+        byte[] chatBuffer = new byte[256];
+        chatBuffer[0] = (byte) text.length();
+        int offset = 1 + TextUtilities.huffmanCompress(text, chatBuffer, 1);
+
         boolean updateLs = false;
-        for(Communicable c : basic().getClanChat().getInChat().values()) {
+        for(Communicable c : WorldModule.getLogic().getClanData().get(clanIdentifier).getClanChat().getInChat().values()) {
             if(c != null && (c.getStatus() == 0 || c.getStatus() == 1 && c.hasFriend(player.getStaticIndex()))) {
                 if(c.getWorldId() == WorldModule.getLogic().getId()) {
-                    //((Player)c).getProtocol().sendClanChatMsg(player.getUsername(), basic().currentClan(), player.getPrivilege().getClientReference(), huffmanLength, huffmanBuffer);
+                    System.out.println(text);
+                    ((Player)c).getProtocol().sendClanChatMsg(player.getUsername(), basic().currentChat, player.getPrivilege().getClientReference(), offset, chatBuffer);
                 } else if(!updateLs) {
                     updateLs = true;
                 }
             }
         }
         if(updateLs) {
-         //  WorldModule.getLogic().getLoginSession().sendClanMessage(basic().currentOwnerIndex(), basic().currentClan(), player.getUsername(), player.getPrivilege().getClientReference(), huffmanLength, huffmanBuffer);
+           WorldModule.getLogic().getLoginSession().sendClanMessage(clanIdentifier, basic().currentChat, player.getUsername(), player.getPrivilege().getClientReference(), offset, chatBuffer);
         }
     }
 
@@ -168,19 +169,18 @@ public class PlayerCommunication implements Serviceable {
         appendInteraction(player);
     }
 
-    public void finishRequest(int type, int userId, String usernameCCName) {
-        System.out.println("FinishRequest =" +type+", "+userId+", "+usernameCCName);
-        if(userId == -1 && type < 2) {
+    public void finishRequest(int type, int ccOwnerUID, String usernameCCName) {
+        if(ccOwnerUID == -1 && type < 2) {
             player.getProtocol().sendMessage("Could not find player - "+usernameCCName);
         } else {
             if(type == 0) {
-                appendFriend(userId, usernameCCName, Communications.ClanRank.FRIEND.ordinal()); //for saving
-                sendFriend(userId, usernameCCName);
+                appendFriend(ccOwnerUID, usernameCCName, Communications.ClanRank.FRIEND.ordinal()); //for saving
+                sendFriend(ccOwnerUID, usernameCCName);
             } else if(type == 1) {
                     //appendignore
                     //sendignore
             } else if(type == 2) {
-                Communications com = WorldModule.getLogic().getClanData().get(userId); //coming null
+                Communications com = WorldModule.getLogic().getClanData().get(ccOwnerUID); //coming null
                 int valud = com == null ? -5 : com.joinResponse(player, true);
                 if(com != null && valud == 0) {
                     for(Map.Entry<String, Communicable> comm : com.getClanChat().getInChat().entrySet()) {
@@ -195,8 +195,8 @@ public class PlayerCommunication implements Serviceable {
                             }
                         }
                     }
-                    //player.getProtocol().sendClanChat(com);
-                    player.getProtocol().sendMessage("Now talking in clan channel " + NameUtilities.capitalizeFormat(com.getClanChat().getChatName()));//TODO FIX THIS
+                    basic().currentChat = com.getClanChat().getChatName(); //easier to access
+                    player.getProtocol().sendMessage("Now talking in clan channel " + NameUtilities.capitalizeFormat(com.getClanChat().getChatName()));
                     player.getProtocol().sendMessage("To talk, start each line of chat with the / symbol.");
                 } else {
                     player.sendMessage("System busy - please try again later. -"+valud); //hm
@@ -209,6 +209,26 @@ public class PlayerCommunication implements Serviceable {
                 player.getProtocol().sendMessage(msg);
             }
         }
+    }
+
+    public void leaveCC(Communications com) {
+        for(Map.Entry<String, Communicable> comm : com.getClanChat().getInChat().entrySet()) {
+            if(comm.getValue().getWorldId() == WorldModule.getLogic().getId()) {
+                //later check if they are still in cc otherwise update shit
+                Player p1 = WorldModule.getLogic().getPlayerFromStaticIndex(comm.getValue().getStaticIndex());
+                if(comm.getValue().getStaticIndex() == player.getStaticIndex()) {
+                    p1.getCommunication().setClanIdentifier(0);
+                    p1.getProtocol().sendClanChat(null);
+                    p1.getCommunication().basic().currentChat = "";
+                    player.sendMessage("You have left the channel.");
+                } else {
+                    if(p1 != null && p1.isOnline()) {//if double logout will have problems?
+                        p1.getProtocol().editCCMember(player.getUsername(), WorldModule.getLogic().getId(), com.getRank(player.getStaticIndex()).getId(), true);
+                    }
+                }
+            }
+        }
+
     }
 
 

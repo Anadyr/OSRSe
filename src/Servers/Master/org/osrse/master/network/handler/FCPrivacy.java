@@ -13,6 +13,7 @@ public class FCPrivacy extends PacketHandler<World> {
 	public void handle(World world, Packet packet) {
 		int pDynamicWorldID = packet.getShort();
 		int privacyDetails = packet.get();
+		System.out.println("Privacy edit="+pDynamicWorldID+", det="+privacyDetails);
 		MasterModule.getLogic().editPlayer(world, world.searchComponent(pDynamicWorldID), privacyDetails);
 	}
 }

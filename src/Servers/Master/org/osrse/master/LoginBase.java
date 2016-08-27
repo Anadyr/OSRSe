@@ -203,7 +203,6 @@ public final class LoginBase extends ModuleStore {
             for (World w : worlds.toList()) {
                 GlobalPlayer player = w.retrieve(staticIndex);
                 if (player != null) {
-                    System.out.println("found player"+player.getUsername());
                     return player;
                 }
             }
@@ -245,10 +244,6 @@ public final class LoginBase extends ModuleStore {
     }
 
 
-    public void updateClan(Queue<Communicable> inChat) {
-
-    }
-
     //we have to find out 1st if this world has the entire clan
     //second we have to update the world with everyone or this player/ and every world with this extra player entering if they have the cc
     //and make a mark of what worlds have this cc fully syncd, and what worlds are in need of a 1 man sync
@@ -275,7 +270,6 @@ public final class LoginBase extends ModuleStore {
                 }
             } else {
                 if(!clanToJoin.getClanChat().hostedIn(world.getStaticIndex())) { //if world is synced with this clan
-                    System.out.println("WTF="+(world.retrieve(clanToJoin.uid) == null));
                     world.registerClan(clanToJoin, (world.retrieve(clanToJoin.uid) == null));
                 }
                 //check if world has clan

@@ -17,7 +17,7 @@ public class Clan extends PacketHandler<Player> {
     @Override
     public void handle(Player player, Packet packet) {
         if(packet.getLength() == 0) {
-            //leave cc
+            ClanContainer.handleLeave(player); //leave cc
         } else {
             String cc = packet.readGJString2(0, packet.getLength()-1);
             ClanContainer.handleJoin(player, cc);

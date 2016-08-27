@@ -90,7 +90,7 @@ public class HuffManEncryption {
 
    }
 
-   public int method786(byte[] var1, int var2, byte[] var3, int var4, int var5, byte var6) {
+   public int getBytes(byte[] var1, int var2, byte[] var3, int var4, int var5, byte var6) {
       if(0 == var5) {
          return 0;
       } else {

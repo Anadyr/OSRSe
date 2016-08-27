@@ -267,6 +267,14 @@ public class GameBase extends ModuleStore {
         if(WorldModule.isCommercial()) {
             loginSession.sendPlayerUpdate(player, 3);
         }
+        if(player.getCommunication().isInClanChat()) {
+            Communications c = getClanData().get(player.getCommunication().getClanChat());
+            if(c != null) {
+                player.getCommunication().leaveCC(c);
+            } else {
+                System.err.println("Player CC coming null!");
+            }
+        }
         worldPlayers.remove(player);
         loginSession.getIndexToName().remove(player.getStaticIndex());
         players.remove(player.getUsername());

@@ -8,6 +8,7 @@ import java.util.concurrent.LinkedBlockingQueue;
  * Created by Jonathan on 12/30/15.
  */
 public class Communications {
+
 	public enum Request {SERVE, FIND, FIND_CLAN, JOIN_CLAN, ADD, DEL, EDIT_CLAN}
     public enum ClanRank { NONE(-1), FRIEND(0), RECRUIT(1), CORPORAL(2), SERGEANT(3),  LIEUTENANT(4), CAPTAIN(5), GENERAL(6), OWNER(7), ADMIN(127);
         private int id;
@@ -33,6 +34,7 @@ public class Communications {
 
     public final int uid;
     private String username;
+    public String currentChat = "Lolololol";
 
     private final GroupChat clanChat;
     private static final Object lock = new Object();
@@ -185,7 +187,7 @@ public class Communications {
                 System.err.println("Synchronization error?");
                 return 5;
             }
-            if(!getClanChat().isOpen() && com.getStaticIndex() != uid) {
+            if(!clanChat.isValid() && clanChat.isOpen() || !getClanChat().isOpen() && com.getStaticIndex() != uid) {
                 System.err.println("inchat is null wtf");
                 return 4;
             }
@@ -199,7 +201,7 @@ public class Communications {
             }
 
             System.out.println(join+"/"+ clanChat.isValid() +"/"+ !clanChat.isOpen());
-            boolean success = (clanChat.getInChat().size() < 99 || com.getStaticIndex() == uid);
+            boolean success = (clanChat.isValid() && (clanChat.getInChat().size() < 99 || com.getStaticIndex() == uid));
             if (join && success) {
                 clanChat.add(com);
             }

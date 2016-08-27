@@ -52,38 +52,16 @@ public class ClanContainer {
                  */
                 //check for player file
                 //load clan if needed, otherwise tell them to get fukd
+                player.sendMessage("Sorry server is commercial settings only.");
             }
         } else {
             player.sendMessage(msg);
             System.out.println("clan container - failed="+failed);
         }
+    }
 
+    public static void handleLeave(Player player) {
+        player.getCommunication().leaveCC(WorldModule.getLogic().getClanData().get(player.getCommunication().getClanChat()));
 
-/*
-
-        if(c != null) {
-            Communications c1 = WorldModule.getLogic().getClanData().get(c.getStaticIndex());
-            int join = c1 == null ? 4 : c1.join(player); //add this like loginserver request otherwise overflow WILL be possible
-
-            player.sendMessage("Attempting to join channel...");
-            if(join == 1) {
-                player.getCommunication().setClanIdentifier(c.getStaticIndex());
-                player.getCommunication().basic().join(c);
-                player.getProtocol().sendMessage("Now talking in clan channel " + c1.clanName());
-                player.getProtocol().sendMessage("To talk, start each line of chat with the / symbol.");
-                //player.getProtocol().sendRunScript(452, new Object[] {c1.owner}, "s");
-                //Packet 80 s, [452, OverDose cc
-                player.getProtocol().sendClanChat();
-
-                if(WorldModule.isCommercial()) {
-                    //tell ls
-                }
-            } else {
-
-                player.sendMessage(msg);
-            }
-        }
-        System.out.println("joining cc - "+cc+", c="+ (c == null ? "cannotfind" : c.getUsername()));
-        */
     }
 }

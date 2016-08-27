@@ -359,12 +359,14 @@ public class Proto103 extends AbstractProtocol {
     public void sendClanChatMsg(String playerName, String clanName, int icon, int length, byte[] huffmanMsg) {
         PacketBuilder pb = new PacketBuilder(214, Packet.Type.VAR_BYTE);
         pb.putString(playerName);
+        System.out.println("clan="+clanName+", msg="+length+"/"+NameUtilities.stringToLong(NameUtilities.capitalizeFormat(clanName))+"/"+icon);
         pb.putLong(NameUtilities.stringToLong(NameUtilities.capitalizeFormat(clanName)));
         pb.putShort(new Random().nextInt());
         pb.putTriByte(new Random().nextInt());
         pb.putByte(icon);
-        pb.putShort(length);
+        //pb.putSmart(length);
         pb.put(huffmanMsg, 0, length);
+
         player.write(pb.toPacket());
     }
 

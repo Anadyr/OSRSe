@@ -32,7 +32,7 @@ public class CCDefinition extends PacketHandler<LoginSession> {
             String username = packet.getString();
             String ccname = packet.getString();
             person.setUsername(username);
-            WorldModule.getLogic().getLoginSession().appendFake(person);
+           // WorldModule.getLogic().getLoginSession().appendFake(person);
             WorldModule.getLogic().getLoginSession().getIndexToName().put(ccOwner, NameUtilities.capitalizeFormat(username));
             if(com == null) {
                 com = new Communications(ccOwner, username, ccname, joinreq, kickreq);

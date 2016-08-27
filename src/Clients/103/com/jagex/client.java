@@ -1745,7 +1745,7 @@ public final class client extends Applet_Sub1 {
 											}
 
 											byte[] var166 = new byte[var18];
-											var162.position += client.aClass52_1621.method786(var162.payload,
+											var162.position += client.aClass52_1621.getBytes(var162.payload,
 													314639891 * var162.position, var166, 0, var18, (byte) 16)
 													* -184175589;
 											String var164 = Tile.method1987(var166, 0, var18, (byte) 89);
@@ -1982,48 +1982,48 @@ public final class client extends Applet_Sub1 {
 									break readBuffer;
 								}
 
-								long var56;
-								if (currentOpcode  == 214) {
+								long uid;
+								if (currentOpcode  == 214) { //cc msg
 									var94 = packetBuffer.readString(61376769);
 									key = packetBuffer.readLong((byte) -17);
 									var52 = (long) packetBuffer.readUnsignedShort(647124529);
 									var48 = (long) packetBuffer.readMedium((byte) 15);
-									Speach[] var118 = new Speach[] { Speach.OFFLINE, Speach.PLAYER,
+									Speach[] iconArray = new Speach[] { Speach.OFFLINE, Speach.PLAYER,
 											Speach.MOD, Speach.ADMIN, Speach.ULT_IRONMAN};
-									Speach var137 = (Speach) Class35.method646(var118,
-											packetBuffer.readSignedByte(1708176767), (byte) -86);
-									var56 = (var52 << 32) + var48;
+									Speach chatIcon = (Speach) Class35.method646(iconArray, packetBuffer.readSignedByte(1708176767), (byte) -86);
+									uid = (var52 << 32) + var48;
 									boolean draw = false;
 
 									for (var17 = 0; var17 < 100; ++var17) {
-										if (msgUid[var17] == var56) {
+										if (msgUid[var17] == uid) {
 											draw = true;
 											break;
 										}
 									}
 
-									if (var137.aBool982 && World.method568(var94, -1959669550)) {
+									if (chatIcon.aBool982 && World.method568(var94, -1959669550)) {
 										draw = true;
 									}
 
 									if (!draw && 198136383 * anInt3151 == 0) {
-										msgUid[1926465309 * anInt3155] = var56;
+										msgUid[1926465309 * anInt3155] = uid;
 										anInt3155 = -1205898443 * ((1 + anInt3155 * 1926465309) % 100);
 										PacketBuilder buff = packetBuffer;
 
 										String var158;
 										try {
-											var145 = buff.readShort(0);//buff.readSmartC(-1841595977);
+											var145 = buff.readSmartC(-1841595977);
                                             System.out.println(var145);
 											if (var145 > 32767) {
 												var145 = 32767;
 											}
 
 											byte[] var165 = new byte[var145];
-											buff.position += client.aClass52_1621.method786(buff.payload,
-													314639891 * buff.position, var165, 0, var145, (byte) 16)
-													* -184175589;
+											int ok = client.aClass52_1621.getBytes(buff.payload,
+													314639891 * buff.position, var165, 0, var145, (byte) 16);
+											buff.position += ok * -184175589;
 											String var168 = Tile.method1987(var165, 0, var145, (byte) 122);
+											System.out.println("clan msg ="+var168+", len="+var145+", ok="+ok+", "+var94+", "+key+","+chatIcon.iconId+"/"+Arrays.toString(var165));
 											var158 = var168;
 										} catch (Exception var73) {
                                             var73.printStackTrace();
@@ -2032,9 +2032,9 @@ public final class client extends Applet_Sub1 {
 
 										var158 = TextDrawingArea
 												.method3459(Class59.method892(var158, -1433905521));
-										if (var137.iconId * -2127218069 != -1) {
+										if (chatIcon.iconId * -2127218069 != -1) {
 											Class116_Sub23_Sub1.appendChat(9,
-                                                    Class51.method780(-2127218069 * var137.iconId, (short) -12678)
+                                                    Class51.method780(-2127218069 * chatIcon.iconId, (short) -12678)
                                                             + var94,
                                                     var158, Class116_Sub23_Sub12.method2655(key), -2040945609);
 										} else {
@@ -2315,9 +2315,9 @@ public final class client extends Applet_Sub1 {
 												StringBuilder var132 = new StringBuilder(col);
 
 												while (0L != var52) {
-													var56 = var52;
+													uid = var52;
 													var52 /= 37L;
-													var132.append(Class103.lowercase[(int) (var56 - 37L * var52)]);
+													var132.append(Class103.lowercase[(int) (uid - 37L * var52)]);
 												}
 
 												name = var132.reverse().toString();
@@ -2458,7 +2458,7 @@ public final class client extends Applet_Sub1 {
 										}
 
 										byte[] var116 = new byte[var9];
-										buffer.position += client.aClass52_1621.method786(buffer.payload,
+										buffer.position += client.aClass52_1621.getBytes(buffer.payload,
 										buffer.position * 314639891, var116, 0, var9, (byte) 16) * -184175589;
 										String var119 = Tile.method1987(var116, 0, var9, (byte) 63);
 										lastUser = var119;
@@ -3187,9 +3187,9 @@ public final class client extends Applet_Sub1 {
 										var48 = Class43.aGarbageCollectorMXBean578.getCollectionTime();
 										if (-1L != 229038749475924873L * aLong3212) {
 											var54 = var48 - 229038749475924873L * aLong3212;
-											var56 = var62 - aLong3086 * 6918662072055282017L;
-											if (var56 != 0L) {
-												var9 = (int) (100L * var54 / var56);
+											uid = var62 - aLong3086 * 6918662072055282017L;
+											if (uid != 0L) {
+												var9 = (int) (100L * var54 / uid);
 											}
 										}
 
