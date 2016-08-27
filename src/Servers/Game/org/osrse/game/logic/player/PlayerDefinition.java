@@ -116,7 +116,7 @@ public class PlayerDefinition implements Serializable {
         } else {
             p.setLocation(Tile.locate(coordX, coordY, coordZ));
         }
-        System.out.println(p.getLocation());
+        System.out.println("Location="+p.getLocation() +"/"+coordZ+", "+coordY+", "+coordX);
 
         p.setUsername(username);
         p.setPassword(password.replaceAll("", "*"));

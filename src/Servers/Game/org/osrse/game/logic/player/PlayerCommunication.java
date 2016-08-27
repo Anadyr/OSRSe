@@ -28,7 +28,7 @@ public class PlayerCommunication implements Serviceable {
         communications = WorldModule.getLogic().getClanData().get(player.getStaticIndex());
         if(communications == null) {
             communications = new Communications(player.getStaticIndex(), player.getUsername(), chatName, joinReq, kickReq);
-            WorldModule.getLogic().getClanData().put(player.getStaticIndex(), communications); 
+            WorldModule.getLogic().getClanData().put(player.getStaticIndex(), communications);
         }
     }
 
@@ -169,6 +169,7 @@ public class PlayerCommunication implements Serviceable {
     }
 
     public void finishRequest(int type, int userId, String usernameCCName) {
+        System.out.println("FinishRequest =" +type+", "+userId+", "+usernameCCName);
         if(userId == -1 && type < 2) {
             player.getProtocol().sendMessage("Could not find player - "+usernameCCName);
         } else {

@@ -253,6 +253,10 @@ public class LoginSession implements Serviceable {
         }
     }
 
+    public void appendFake(ReferencedPerson o) {
+        players.put(o.getStaticIndex(), o);
+    }
+
     public ReferencedPerson getPlayer(int id) {
         synchronized (players) {
             return players.get(id);

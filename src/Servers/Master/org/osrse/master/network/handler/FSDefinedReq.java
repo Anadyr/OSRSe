@@ -33,14 +33,14 @@ public class FSDefinedReq extends PacketHandler<World> {
 		request.setName(name);
 		request.setIgnore(ignoreList);
 		request.setRemove(remove);
-		System.out.println("hasindex="+hasTheirIndex+", index="+index+", name="+name+", req="+clanRequest);
-
+		request.setClanRequest(clanRequest);
+		//System.out.println("hasindex="+hasTheirIndex+", index="+index+", name="+name+", req="+clanRequest);
 		if(clanRequest) {
 			//if remove leave cc
 			Communications clanToJoin = hasTheirIndex ? MasterModule.getLogic().getCommunications(index) : MasterModule.getLogic().forName(name);
 			if(clanToJoin != null && clanToJoin.isLoaded()) {
 				request.setValid(false);
-				System.out.println("Found Comm! "+clanToJoin.username());
+				//System.out.println("Found Comm! "+clanToJoin.username());
 				MasterModule.getLogic().setInChat(request.getIndex(), clanToJoin);
 				GlobalPlayer playerJoining = MasterModule.getLogic().getPlayer(request.getStaticIndex());
 				if(clanToJoin.getClanChat().isValid() && !clanToJoin.getClanChat().isOpen()) {
@@ -57,7 +57,7 @@ public class FSDefinedReq extends PacketHandler<World> {
 				return;
 			} else {
 				//check this, maybe wrong when they have no friends, ignores or clan setup...
-				System.out.println("FIND CLAN");
+				//System.out.println("FIND CLAN");
 				request.setType(Communications.Request.FIND_CLAN);
 			}
 		}

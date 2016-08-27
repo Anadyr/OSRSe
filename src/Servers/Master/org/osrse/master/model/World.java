@@ -223,10 +223,10 @@ public class World extends WorldComponent implements Serviceable {
     }
 
     public void sendRequest(GameRequest request) {
-        System.out.println("writing request" +request.name+", "+request.join_clan+", "+request.getIndex());
+        System.out.println("writing request" +request.name+", clan="+request.join_clan+", index="+request.getIndex()+", type="+(request.join_clan ? (request.clanname.isEmpty() ? 3 : 2) : request.ignore ? 1 : 0));
         PacketBuilder pb = new PacketBuilder(CommercialPackets.MasterResponse.COM_RESP, Packet.Type.VAR_BYTE);
         pb.putShort(request.getStaticIndex());
-        pb.putByte(request.join_clan ? (request.clanname.isEmpty() ? 3 : 2) : request.ignore ? 1 : 0);
+        pb.putByte((request.join_clan ? (request.clanname.isEmpty() ? 3 : 2) : (request.ignore ? 1 : 0)));
         pb.putString(request.name);
         pb.putShort(request.getIndex());
         session.write(pb.toPacket());

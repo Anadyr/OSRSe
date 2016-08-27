@@ -209,6 +209,7 @@ public class RelationWorker implements Runnable, ComQuery {
                 set.close();
                 World w = MasterModule.getLogic().getWorldContaining(request.getStaticIndex());
                 if (w != null) {
+                    System.err.println("FUCKING YAHOODI!?!");
                     w.sendRequest(request);
                 }
                 request.setValid(false);

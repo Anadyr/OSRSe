@@ -13,6 +13,7 @@ public class ClanContainer {
 
 
     public static void handleJoin(Player player, String cc) {
+
         Communicable c = WorldModule.getLogic().getCommunicable(NameUtilities.capitalizeFormat(cc));
 
         player.sendMessage("Attempting to join channel...");

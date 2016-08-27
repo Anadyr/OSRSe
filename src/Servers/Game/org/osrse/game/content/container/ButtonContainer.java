@@ -68,7 +68,7 @@ public class ButtonContainer {
                 player.getMagic().buttonCast(button, itemIndex);
                 break;
             default:
-                System.out.println("unhandled button: widget="+widgetid+", interface="+interfaceId+", button="+button+", itemIndex="+itemIndex);
+               // System.out.println("unhandled button: widget="+widgetid+", interface="+interfaceId+", button="+button+", itemIndex="+itemIndex);
                 break;
         }
  
