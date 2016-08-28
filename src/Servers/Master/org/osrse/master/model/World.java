@@ -223,9 +223,11 @@ public class World extends WorldComponent implements Serviceable {
     }
 
     public void sendRequest(GameRequest request) {
+        int requestVal = (request.join_clan ? (request.clanname.isEmpty() && !request.ignore ? 3 : !request.ignore ? 2 : request.clanRank) : (request.ignore ? 1 : 0));
+        System.out.println("Request Value="+requestVal+", rank="+request.clanRank);
         PacketBuilder pb = new PacketBuilder(CommercialPackets.MasterResponse.COM_RESP, Packet.Type.VAR_BYTE);
         pb.putShort(request.getStaticIndex());
-        pb.putByte((request.join_clan ? (request.clanname.isEmpty() ? 3 : request.clanRank >= 0 ? 2 : request.clanRank) : (request.ignore ? 1 : 0)));
+        pb.putByte(requestVal);
         pb.putString(request.name);
         pb.putShort(request.getIndex());
         session.write(pb.toPacket());
@@ -291,15 +293,6 @@ public class World extends WorldComponent implements Serviceable {
         return has;
     }
 
-    /*
-
-    public void sendClanResponse(int requestedToJoin, int clanJoiningId, int clanResponse) {
-        PacketBuilder pb = new PacketBuilder(CommercialPackets.MasterResponse.CC_RESP); //useless
-        pb.putInt(requestedToJoin).putInt(clanJoiningId).putByte(clanResponse); //pretty much we dont even need to get technical
-        session.write(pb.toPacket());
-    }*/
-
-
     public void editCCPlayer(Communications clanToJoin, GlobalPlayer playerJoining, boolean remove) {
         PacketBuilder pb = new PacketBuilder(CommercialPackets.MasterResponse.CC_EDIT);
         pb.putByte(remove ? 1 : 0)
@@ -314,14 +307,14 @@ public class World extends WorldComponent implements Serviceable {
         System.out.println("Registering Clan -"+clanToJoin.username()+", "+clanToJoin.getClanChat().getChatName());
         PacketBuilder pb = new PacketBuilder(CommercialPackets.MasterResponse.CC_DEFINE, Packet.Type.VAR_BYTE);
         pb.putInt(clanToJoin.uid).putByte(clanToJoin.getClanChat().getInChat().size()).putByte(define ? 1 : 0);
-        if(define) { //might need a tweek if clan is cached, but the Master server is restarted etc..
+       // if(define) { //might need a tweek if clan is cached, but the Master server is restarted etc..
             pb.putByte(clanToJoin.getClanChat().getJoinReq().getId())
             .putByte(clanToJoin.getClanChat().getKickReq().getId())
             .putString(clanToJoin.username())
             .putString(clanToJoin.getClanChat().getChatName());
-        } else {
-            System.err.println("no point in sending entire clan definition to a world its owner is in.");
-        }
+       // } else {
+       //     System.err.println("no point in sending entire clan definition to a world its owner is in.");
+       // }
         for (Map.Entry<String, Communicable> alphaUsers : clanToJoin.getClanChat().getInChat().entrySet()) {
             pb.putInt(alphaUsers.getValue().getStaticIndex())
                     //.putShort(alphaUsers.getValue().getWorldId())

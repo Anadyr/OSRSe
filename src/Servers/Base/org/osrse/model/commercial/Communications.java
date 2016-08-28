@@ -145,6 +145,12 @@ public class Communications {
         }
     }
 
+    public void putRelation(Communicable cc, int rank) {
+        synchronized (lock) {
+            relationData.put(cc.getStaticIndex(), new Alias(cc.getUsername(), ClanRank.forId(rank)));
+        }
+    }
+
     public boolean hasFriend(int staticIndex) {
         return (staticIndex == this.uid) || hasFriends() &&  relationData.get(staticIndex) != null;
     }
@@ -194,12 +200,13 @@ public class Communications {
             if(ignoreList != null && ignoreList.containsKey(com.getStaticIndex())) {
                 return 3;
             }
+            /*
             if(clanChat.joinReq != ClanRank.NONE) { //change this when you add FC and CC type rs versions
+                System.out.println("RANKS="+getRank(com.getStaticIndex()).getId() +"/"+ clanChat.joinReq.getId()+"/"+(getRank(com.getStaticIndex()).getId() < clanChat.joinReq.getId()));
                 if(getRank(com.getStaticIndex()).getId() < clanChat.joinReq.getId()) {
                     return 1;
                 }
-            }
-
+            }*/
             System.out.println(join+"/"+ clanChat.isValid() +"/"+ !clanChat.isOpen());
             boolean success = (clanChat.isValid() && (clanChat.getInChat().size() < 99 || com.getStaticIndex() == uid));
             if (join && success) {

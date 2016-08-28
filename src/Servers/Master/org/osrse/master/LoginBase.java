@@ -264,14 +264,16 @@ public final class LoginBase extends ModuleStore {
     public void addPlayerToCC(World sourceWorld, Communications clanToJoin, GlobalPlayer playerJoining, boolean remove) {
         for(World world : worlds) {
             if(world != sourceWorld) {
-                if(clanToJoin.getClanChat().hostedIn(world.getStaticIndex())) { //if has use for clan updates
+               // if(clanToJoin.getClanChat().hostedIn(world.getStaticIndex())) { //if has use for clan updates
+                if(world.isOnline())
                     world.editCCPlayer(clanToJoin, playerJoining, remove); //edit
                     //check if empty of players, if so tick true for gc
-                }
+               // }
             } else {
-                if(!clanToJoin.getClanChat().hostedIn(world.getStaticIndex())) { //if world is synced with this clan
+                //if(!clanToJoin.getClanChat().hostedIn(world.getStaticIndex())) { //if world is synced with this clan
+                if(world.isOnline())
                     world.registerClan(clanToJoin, (world.retrieve(clanToJoin.uid) == null));
-                }
+               // }
                 //check if world has clan
                 //otherwise send entire chat members over, and let the background push the request to join
             }

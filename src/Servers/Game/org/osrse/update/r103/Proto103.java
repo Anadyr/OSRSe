@@ -395,6 +395,7 @@ public class Proto103 extends AbstractProtocol {
 
             //find out if we need to send this packet to add people to chat
             for(Map.Entry<String, Communicable> l : com.getClanChat().getInChat().entrySet()) {
+                System.out.println("cc member="+l.getValue().getUsername());
                 pb.putString(l.getValue().getUsername());
                 pb.putShort(l.getValue().getWorldId());
                 pb.putByte(com.getRank(l.getValue().getStaticIndex()).getId());

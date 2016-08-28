@@ -10,7 +10,7 @@ public class GroupChat {
 	public TreeMap<String, Communicable> inChat;
 	public TreeMap<Integer, Boolean> worldsHosted;
 
-	private String ccname = "";
+	private String ccname = "FUCK";
 	protected Communications.ClanRank joinReq, kickReq;
 
 	public GroupChat(String chatName, int joinReq, int kickReq) {

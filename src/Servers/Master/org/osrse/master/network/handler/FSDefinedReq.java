@@ -12,6 +12,7 @@ import org.osrse.network.PacketHandler;
  * Created by Jonathan on 8/25/2016.
  */
 public class FSDefinedReq extends PacketHandler<World> {
+
 	@Override
 	public void handle(World world, Packet packet) {
 		int from = packet.getShort();
@@ -35,29 +36,27 @@ public class FSDefinedReq extends PacketHandler<World> {
 		request.setRemove(remove);
 		request.setClanRequest(clanRequest);
 		if(clanRequest) {
-			//if remove leave cc
+			request.setType(Communications.Request.FIND_CLAN);
 			Communications clanToJoin = hasTheirIndex ? MasterModule.getLogic().getCommunications(index) : MasterModule.getLogic().forName(name);
 			if(clanToJoin != null && clanToJoin.isLoaded()) {
-				request.setValid(false);
-				System.out.println("Found Comm! "+clanToJoin.username());
-				MasterModule.getLogic().setInChat(request.getIndex(), clanToJoin);
 				GlobalPlayer playerJoining = MasterModule.getLogic().getPlayer(request.getStaticIndex());
+				MasterModule.getLogic().setInChat(request.getIndex(), clanToJoin);
 				if(clanToJoin.getClanChat().isValid() && !clanToJoin.getClanChat().isOpen()) {
 					clanToJoin.getClanChat().open();
 				}
 				int response = clanToJoin.joinResponse(playerJoining, true);
+				System.out.println("Response join="+response);
+				request.setIndex(clanToJoin.uid);
 				if(response == 0) {
+					request.clanname = clanToJoin.getClanChat().getChatName();
 					MasterModule.getLogic().addPlayerToCC(world, clanToJoin, playerJoining, remove);
 				} else {
+					request.ignore = true;
 					request.clanRank = -response;
 				}
-				request.clanname = clanToJoin.getClanChat().getChatName();
-				world.sendRequest(request);
+				if(!remove)
+					world.sendRequest(request);
 				return;
-			} else {
-				//check this, maybe wrong when they have no friends, ignores or clan setup...
-				System.out.println("FIND CLAN");
-				request.setType(Communications.Request.FIND_CLAN);
 			}
 		}
 		if(index != -1 && !clanRequest) {

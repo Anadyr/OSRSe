@@ -22,7 +22,6 @@ public class Combat {
 
     public Combat(GameBase.CombatActivity combatActivity) {
         this.world = combatActivity == GameBase.CombatActivity.Deadman ? new Deadman() : combatActivity == GameBase.CombatActivity.Economy ? new Regular() : new PVP();
-
     }
 
     String notInWilderness = "You can't attack players when you're not in the Wilderness.";

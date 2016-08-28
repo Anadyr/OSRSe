@@ -19,8 +19,11 @@ public class FCResponse extends PacketHandler<LoginSession> {
         String name = packet.getString();
         int ownerIndex = packet.getShort();
         Player player = WorldModule.getLogic().getPlayerFromStaticIndex(playerStaticIndex);
+
         if (player != null) {
             player.getCommunication().finishRequest(type, ownerIndex, name);
+        } else {
+        	System.err.println("could not find player index="+playerStaticIndex);
         }
 	}
 }

@@ -126,11 +126,13 @@ public class Bank {
         return index;
     }
 
+
     public static void openBank(Player player) {
-        player.getProtocol().sendInterface(0, 548, 12, 77);
+        player.getProtocol().sendInterface(0, 548, 12, 13);
         //player.getProtocol().sendInterfaceInventory(15);
         //refresh(player);
     }
+
 
     public static void refresh(Player player) {
         final int free = player.getBank().size() - getFreeSlots(player);
@@ -141,6 +143,18 @@ public class Bank {
 
         player.getProtocol().sendAccessMask(12, 6, 2046, 0, 424);
         player.getProtocol().sendAccessMask(15, 0, 2046, 0, 28);
+        /*
+        [7:28:20 PM] Greco: player.getActionSender().sendAccessMask(0, 799, 1311998, 12 << 16 | 12);
+                              player.getActionSender().sendAccessMask(809, 817, 2, 12 << 16 | 12);
+                              player.getActionSender().sendAccessMask(818, 827, 1048576, 12 << 16 | 12);
+                              player.getActionSender().sendAccessMask(10, 10, 1048578, 12 << 16 | 10);
+                              player.getActionSender().sendAccessMask(11, 19, 1179714, 12 << 16 | 10);
+                              player.getActionSender().sendAccessMask(0, 27, 1181438, 15 << 16 | 3);
+                              player.getActionSender().sendAccessMask(0, 27, 1054, 15 << 16 | 12);
+                              player.getActionSender().sendAccessMask(0, 3, 2, 12 << 16 | 32);
+                              player.getActionSender().sendAccessMask(1054, 15, 10, 0, 27);
+                            [7:29:43 PM] Greco: int set, int interfaceId, int child, int offset, int lengt
+         */
 
     }
 

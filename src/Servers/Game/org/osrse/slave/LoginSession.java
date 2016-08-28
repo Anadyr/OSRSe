@@ -317,13 +317,13 @@ public class LoginSession implements Serviceable {
             int status = player.getStatus();
             boolean hashChat = player.getCommunication().basic().getClanChat().isValid();
             pb.recalculateBitPosition();
-                pb.putBits(3, player.getCommunication().basic().getClanChat().getKickReq().getId())
-                  .putBits(3, player.getCommunication().basic().getClanChat().getJoinReq().getId())
+            System.out.println(player.getCommunication().basic().getClanChat().getKickReq().getId()+"/"+ player.getCommunication().basic().getClanChat().getJoinReq().getId()+"/"+ player.getCommunication().basic().getClanChat().getJoinReq().toString()+"/"+player.getCommunication().basic().getClanChat().getJoinReq().toString());
+                pb.putBits(3, player.getCommunication().basic().getClanChat().getKickReq().ordinal())
+                  .putBits(3, player.getCommunication().basic().getClanChat().getJoinReq().ordinal())
                   .putBits(2, status);
             pb.putByte(hashChat ? 1 : 0);
             if(hashChat) {
-                pb.putSmart(TextUtilities.calculateGJString2Length(player.getCommunication().basic().getClanChat().getChatName()))
-                  .putGJString2(player.getCommunication().basic().getClanChat().getChatName());
+                pb.putString(player.getCommunication().basic().getClanChat().getChatName());
             }
         }
          session.write(pb.toPacket());

@@ -25,15 +25,12 @@ public class CCDefinition extends PacketHandler<LoginSession> {
         boolean defineBlock = packet.getBoolean();
         Communications com = WorldModule.getLogic().getClanData().get(ccOwner);
         System.out.println("CCDEF ="+ccOwner+","+size+", "+defineBlock+"/"+(com == null));
-        ReferencedPerson person = new ReferencedPerson(0, ccOwner, 3);
         if(defineBlock) {
             int joinreq = packet.get();
             int kickreq = packet.get();
             String username = packet.getString();
             String ccname = packet.getString();
-            person.setUsername(username);
-           // WorldModule.getLogic().getLoginSession().appendFake(person);
-            WorldModule.getLogic().getLoginSession().getIndexToName().put(ccOwner, NameUtilities.capitalizeFormat(username));
+            session.getIndexToName().put(ccOwner, NameUtilities.capitalizeFormat(username));
             if(com == null) {
                 com = new Communications(ccOwner, username, ccname, joinreq, kickreq);
                 com.getClanChat().open();
@@ -45,14 +42,17 @@ public class CCDefinition extends PacketHandler<LoginSession> {
             }
         }
         if(packet.remaining() >= size * 5) { //min
+            com.setFriendsList(packet.remaining() / 5);
             for (int i = 0; i < size; i++) {
                 int id = packet.getInt();
                 //int worldId = packet.getShort();
                 int rank = packet.get();
                 Communicable ccc = WorldModule.getLogic().getCommunicableNode(id);
-                System.out.println("DEFINING" +(ccc == null) +"/"+ccc.getUsername()+"/"+rank+"/"+(com == null)+"/"+id);
+                System.out.println("DEFINING" +(ccc == null) +"/"+ccc.getUsername()+"/"+rank+"/"+id);
                 //com.putFriend(ccc.getUsername(), id, rank);
-
+                if(rank > -1) {
+                    com.putRelation(ccc, rank);
+                }
                 com.getClanChat().getInChat().put(ccc.getUsername(), ccc);
             }
         } else {

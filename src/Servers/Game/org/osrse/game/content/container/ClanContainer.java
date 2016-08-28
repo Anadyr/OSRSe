@@ -21,7 +21,7 @@ public class ClanContainer {
         String msg = "The channel you tried to join does not exist.";
         /**
          * First phase check what has been listed
-         */
+         *
         if(c != null) {
             //change this and worldsided coms so loaded shit
             // can just cache ccs online w/ owner offline this is horrible
@@ -36,7 +36,7 @@ public class ClanContainer {
                 failed = join != 0;
                 System.out.println("Join ="+join);
             }
-        }
+        }*/
         if(!failed) {
             if(WorldModule.isCommercial()) {
                 /**

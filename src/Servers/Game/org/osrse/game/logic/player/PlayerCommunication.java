@@ -170,6 +170,7 @@ public class PlayerCommunication implements Serviceable {
     }
 
     public void finishRequest(int type, int ccOwnerUID, String usernameCCName) {
+        System.out.println("Finishing req type="+type+", ownerId="+ccOwnerUID);
         if(ccOwnerUID == -1 && type < 2) {
             player.getProtocol().sendMessage("Could not find player - "+usernameCCName);
         } else {
@@ -181,8 +182,11 @@ public class PlayerCommunication implements Serviceable {
                     //sendignore
             } else if(type == 2) {
                 Communications com = WorldModule.getLogic().getClanData().get(ccOwnerUID); //coming null
+                System.out.println("Request com="+(com == null)+", "+(WorldModule.getLogic().getCommunicableNode(ccOwnerUID) == null));
                 int valud = com == null ? -5 : com.joinResponse(player, true);
                 if(com != null && valud == 0) {
+                    com.getClanChat().getInChat().put(player.getUsername(), player);
+                    basic().currentChat = com.getClanChat().getChatName(); //easier to access
                     for(Map.Entry<String, Communicable> comm : com.getClanChat().getInChat().entrySet()) {
                         if(comm.getValue().getWorldId() == WorldModule.getLogic().getId()) {
                             //later check if they are still in cc otherwise update shit
@@ -195,7 +199,6 @@ public class PlayerCommunication implements Serviceable {
                             }
                         }
                     }
-                    basic().currentChat = com.getClanChat().getChatName(); //easier to access
                     player.getProtocol().sendMessage("Now talking in clan channel " + NameUtilities.capitalizeFormat(com.getClanChat().getChatName()));
                     player.getProtocol().sendMessage("To talk, start each line of chat with the / symbol.");
                 } else {
@@ -228,7 +231,8 @@ public class PlayerCommunication implements Serviceable {
                 }
             }
         }
-
+        WorldModule.getLogic().getLoginSession().requestDefinedFS(true, 2, com.uid, player.getStaticIndex(), com.username());
+        com.getClanChat().remove(player.getUsername());
     }
 
 

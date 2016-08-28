@@ -90,9 +90,8 @@ public class GlobalPlayer extends Node implements Communicable {
             int status = packet.getBits(2);
             boolean hasClan = packet.get() == 1;
             String clan = "";
-            if (hasClan) {
-                int gjstringLen = packet.getSmart();
-                clan = packet.readGJString2(0, gjstringLen);
+            if(hasClan) {
+                clan = packet.getString();
             }
             communications = new Communications(getStaticIndex(), getUsername(), clan, joinReq, kickReq);
             setStatus(status);

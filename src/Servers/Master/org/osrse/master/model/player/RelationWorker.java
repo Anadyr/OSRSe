@@ -140,9 +140,11 @@ public class RelationWorker implements Runnable, ComQuery {
                     com.getClanChat().open();
                     int i = com.joinResponse(p, true);
                     if(i == 0) {
-                        request.clanRank = com.getRank(p.getStaticIndex()).getId();
-                        MasterModule.getLogic().addPlayerToCC(MasterModule.getLogic().getWorldContaining(request.getStaticIndex()), com, p, false);
+                        System.out.println(com.currentChat+"/"+com.username()+"/"+com.getClanChat().getChatName());
+                        request.clanRank = com.getRank(p.getStaticIndex()).ordinal(); //this is on purpose because values arent parellel to client
+                        MasterModule.getLogic().addPlayerToCC(MasterModule.getLogic().getWorldContaining(p.getStaticIndex()), com, p, false);
                     } else {
+                        request.ignore = true;
                         request.clanRank = -i;
                     }
                     World w = MasterModule.getLogic().worlds().get(p.getWorldId());
@@ -182,6 +184,7 @@ public class RelationWorker implements Runnable, ComQuery {
                     if (request.getRequest().equals(Request.FIND_CLAN)) {
                         request.join_clan = true;
                         request.clanname = set.getString("clan");
+                        System.out.println(request.clanname);
                         if (!set.wasNull()) {
                             request.clan_join = set.getInt("clan_join");
                             request.clan_kick = set.getInt("clan_kick");
