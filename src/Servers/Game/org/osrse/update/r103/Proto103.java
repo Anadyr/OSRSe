@@ -39,6 +39,7 @@ public class Proto103 extends AbstractProtocol {
         player.write(new PacketBuilder(153).putByte(0).toPacket()); //wtf lol
         player.write(new PacketBuilder(183).toPacket()); //wtf lol
 
+
         //PacketBuilder pb = new PacketBuilder(171 , Packet.Type.VAR_SHORT);
         //pb.putShort(548).putShort(0).putInt(14286941).putShort(1).putShort(218).putInt(2);
                // putInt(10813453).putShort(218).putByte(0);
@@ -172,7 +173,7 @@ public class Proto103 extends AbstractProtocol {
 
     @Override
     public void sendPlayerOption(String option, int slot, boolean top) {
-        //player.getSession().write(new PacketBuilder(82, Packet.Type.VAR_BYTE).putString(option).putByteA(0).putByteC(slot).toPacket());
+        player.getSession().write(new PacketBuilder(82, Packet.Type.VAR_BYTE).putString(option).putByteA(0).putByteC(slot).toPacket());
     }
 
     @Override
@@ -296,11 +297,11 @@ public class Proto103 extends AbstractProtocol {
         bldr.putShort(items.capacity());
         for (Item item : items.toArray(new Item[0])) {
             if (item != null) {
-                bldr.putShort(item.getType() + 1);
+                bldr.putLEShortA(item.getType() + 1);
                 int count = item.getAmount();
                 if (count > 254) {
                     bldr.put((byte) 255);
-                    bldr.putInt(count);
+                    bldr.putInt1(count);
                 } else {
                     bldr.put((byte) count);
                 }

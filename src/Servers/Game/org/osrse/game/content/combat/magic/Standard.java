@@ -34,7 +34,7 @@ public class Standard extends MagicBook {
 
     static {
         //1 home tele
-        spells.put(1, new Spell());
+        spells.put(1, new Spell(Magic.Teleports.Lumbridge));
         spells.put(2, new Spell(new Runes[] {Runes.Air, Runes.Mind}, 1));
         spells.put(3, new Spell(new Runes[] {Runes.Water, Runes.Earth, Runes.Body}, new int[] {3, 2, 1}, 3));
         //4 cbow bolt ench

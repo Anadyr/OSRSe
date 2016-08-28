@@ -47,8 +47,9 @@ public class Spell {
         this.levelReq = level;
     }
 
-    public Spell() {
+    public Spell(Magic.Teleports teleport) {
         base = 0;
+        this.city = teleport;
     }
 
     public boolean isTeleport() {

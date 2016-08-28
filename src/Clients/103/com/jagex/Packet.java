@@ -14,7 +14,7 @@ public class Packet extends Node {
 		this.position = 0;
 	}
 
-	public int method1989(byte var1) {
+	public int readMediumm(byte var1) {
 		this.position += -552526767;
 		return ((this.payload[this.position * 314639891 - 2] & 255) << 16)
 				+ ((this.payload[this.position * 314639891 - 3] & 255) << 8)

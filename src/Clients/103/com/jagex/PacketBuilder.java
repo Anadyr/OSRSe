@@ -21,6 +21,7 @@ public final class PacketBuilder extends Packet {
    }
 
    public void startPacket(int var1, byte var2) {
+      System.out.println("packetstart="+var1);
       this.payload[(this.position += -184175589) * 314639891 - 1] = (byte)(var1 + this.isaac.getNextValue());
    }
 

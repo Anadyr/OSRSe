@@ -542,7 +542,7 @@ public class Class116_Sub23_Sub11 extends NodeContainer {
       this.anInt2372 = 1721830175;
    }
 
-   static void method2637(int var0, int var1, int var2, int var3, int var4) {
+   static void method2637(int var0, int var1, int itemId, int amt, int var4) {
       Class116_Sub10 var5 = (Class116_Sub10)Class116_Sub10.aHashtable_1803.get((long) var0);
       if(var5 == null) {
          var5 = new Class116_Sub10();
@@ -568,8 +568,8 @@ public class Class116_Sub23_Sub11 extends NodeContainer {
          var5.anIntArray1804 = var6;
       }
 
-      var5.anIntArray1812[var1] = var2;
-      var5.anIntArray1804[var1] = var3;
+      var5.anIntArray1812[var1] = itemId;
+      var5.anIntArray1804[var1] = amt;
    }
 
    static Class29 method2638(int var0) {

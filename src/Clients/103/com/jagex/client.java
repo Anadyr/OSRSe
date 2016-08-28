@@ -1843,7 +1843,7 @@ public final class client extends Applet_Sub1 {
 									break readBuffer;
 								}
 
-								if (currentOpcode  == 212) {
+								if (currentOpcode  == 212) { //setting reset for bullshit
                                     int ok = packetBuffer.readSignedByte(1708176767);
                                     int ok2 = packetBuffer.readSignedByte(1708176767);
 									anInt3064 = ok * -677280985;
@@ -2103,7 +2103,7 @@ public final class client extends Applet_Sub1 {
 									break readBuffer;
 								}
 
-								if (183 == currentOpcode ) {
+								if (183 == currentOpcode ) { //friendserver busy
 									anInt3203 = -593871665;
 									anInt3068 = -712636309 * anInt3118;
 									currentOpcode = -1;
@@ -2258,7 +2258,7 @@ public final class client extends Applet_Sub1 {
 										value1 = -1;
 									}
 
-									value2 = packetBuffer.method1989((byte) -61);
+									value2 = packetBuffer.readMediumm((byte) -61);
 									if (anInt3171 * -1994948003 != 0 && -1 != value1) {
 										Class80.method1099(Class108.aCacheIndex_1471, value1, 0,
 												anInt3171 * -1994948003, false, (short) 3438);
@@ -2270,7 +2270,7 @@ public final class client extends Applet_Sub1 {
 									break readBuffer;
 								}
 
-								if (239 == currentOpcode) {
+								if (239 == currentOpcode) {//both player and map update
 									Class8.decodeMapRegion(false, (byte) 10);
 									int packetId =  packetBuffer.method2955((byte) 9);
 									value1 = packetBuffer.readUnsignedShort(-59243090);
@@ -2280,7 +2280,7 @@ public final class client extends Applet_Sub1 {
 									break readBuffer;
 								}
 
-								if (currentOpcode  == 143) {
+								if (currentOpcode  == 143) {//world hop
 									value1 = packetBuffer.readInt(-273006259);
 									RSImageProducer.aClass72_1675 = ISAAC.signLink.workAddress(value1, 769075048);
 									currentOpcode = -1;
@@ -2382,7 +2382,7 @@ public final class client extends Applet_Sub1 {
 									break readBuffer;
 								}
 
-								if (208 == currentOpcode ) {
+								if (208 == currentOpcode ) { //sendwindow
 									value1 = packetBuffer.readLEShort((byte) -60);
 									anInt3200 = -605073011 * value1;
 									Class116_Sub10.method1971(false, (byte) 95);
@@ -2441,14 +2441,14 @@ public final class client extends Applet_Sub1 {
 									break readBuffer;
 								}
 
-								if (currentOpcode  == 151) {
+								if (currentOpcode  == 151) { //logout
 									Class93.method1270(-1305917269);
 									currentOpcode = -1;
 									var85 = false;
 									break readBuffer;
 								}
 
-								if (199 == currentOpcode) {
+								if (199 == currentOpcode) { //sentpm
 									var94 = packetBuffer.readString(61376769);
 									PacketBuilder buffer = packetBuffer;
 									try {
@@ -2474,7 +2474,7 @@ public final class client extends Applet_Sub1 {
 									break readBuffer;
 								}
 
-								if (currentOpcode == 142) {
+								if (currentOpcode == 142) { //sendclose interface
 									value1 = packetBuffer.readLEInt((byte) -32);
 									var124 = packetBuffer.readByteA((byte) -1) == 1;
 									var109 = Class107.getInterface(value1, 314639891);
@@ -2488,7 +2488,7 @@ public final class client extends Applet_Sub1 {
 									break readBuffer;
 								}
 
-								if (29 == currentOpcode ) {
+								if (29 == currentOpcode ) { //interfacesets?
 									value1 = packetBuffer.readInt1((byte) -59);
 									var121 = Class107.getInterface(value1, 314639891);
 									var121.modelTypeDisabled = -1129382121;
@@ -2568,7 +2568,7 @@ public final class client extends Applet_Sub1 {
 									break readBuffer;
 								}
 
-								if (82 == currentOpcode ) {
+								if (82 == currentOpcode) {
 									var94 = packetBuffer.readString(61376769); //playeroption
 									value2 = packetBuffer.readByteA((byte) -1); //??
 									value3 = packetBuffer.readByteC(382677552); //option
@@ -2633,15 +2633,15 @@ public final class client extends Applet_Sub1 {
 									}
 
 									Canvas_Sub1.method2972(value2, -2134508792);
-									clanRank = packetBuffer.readUnsignedShort(952313331);
+									clanRank = packetBuffer.readUnsignedShort(952313331);//amount of items
 
                                     System.out.print("160=" + value2 + "/" + value2 + ", size=" + clanRank);
 									for (var9 = 0; var9 < clanRank; ++var9) {
-										col = packetBuffer.readLEShortA(-2069803972);
-										var11 = packetBuffer.readSignedByte(1708176767);
+										col = packetBuffer.readLEShortA(-2069803972); //itemId
+										var11 = packetBuffer.readSignedByte(1708176767); //count
                                         System.out.print("[id["+var9+"]= 1="+col+", 2="+var11);
 										if (255 == var11) {
-											var11 = packetBuffer.readInt1((byte) -74);
+											var11 = packetBuffer.readInt1((byte) -74); //intcount
                                             System.out.print(", 3=" + var11);
 										}
 
@@ -2853,7 +2853,7 @@ public final class client extends Applet_Sub1 {
 									break readBuffer;
 								}
 
-								if (currentOpcode  == 0) {
+								if (currentOpcode  == 0) {//interface animation
 									value1 = packetBuffer.readUnsignedShort(899145687);
 									value2 = packetBuffer.readUnsignedShort(-151732770);
 									value3 = packetBuffer.readInt(-321469433);
@@ -2864,7 +2864,7 @@ public final class client extends Applet_Sub1 {
 									break readBuffer;
 								}
 
-								if (currentOpcode  == 153) {
+								if (currentOpcode  == 153) { //black out compass 45-99 0reset
                                     int i = packetBuffer.readSignedByte(1708176767);
 									anInt3170 = i * 583418197;
 									currentOpcode = -1;
@@ -3006,7 +3006,7 @@ public final class client extends Applet_Sub1 {
 									break readBuffer;
 								}
 
-								if (156 == currentOpcode) {
+								if (156 == currentOpcode) { //some reset shit
 									aBool2988 = false;
 
 									for (value1 = 0; value1 < 5; ++value1) {
@@ -3362,10 +3362,11 @@ public final class client extends Applet_Sub1 {
 						}
 
 						value2 = (int) var65;
-						rsaBuffer.startPacket(253, (byte) 50);
-						rsaBuffer.writeShort((value2 << 1) + (2 == 823601801 * Class85.anInt997 ? 1 : 0), -1767559648);
-						rsaBuffer.writeShort(value1, -2095351373);
-						rsaBuffer.writeShort(availData, -2115189406);
+						//rsaBuffer.startPacket(253, (byte) 50);
+						//rsaBuffer.writeShort((value2 << 1) + (2 == 823601801 * Class85.anInt997 ? 1 : 0), -1767559648);
+						//rsaBuffer.writeShort(value1, -2095351373);
+						//rsaBuffer.writeShort(availData, -2115189406);
+						//System.out.println(value1+"/"+value2+"/"+availData+"/"+(2 == 823601801 * Class85.anInt997 ? 1 : 0));
 					}
 
 					if (KeyFocusListener.anInt960 * 1701596051 > 0) {

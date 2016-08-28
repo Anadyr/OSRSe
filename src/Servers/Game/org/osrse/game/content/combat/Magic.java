@@ -67,9 +67,9 @@ public class Magic {
                             Varrock(3212, 3425), Lumbridge(3222, 3219), Falador(2965, 3381), House,
                             Camelot(2757, 3478), Ardougne(2661, 3307), Watchtower(2606, 3093), Trollheim(2892, 3680),
                             ApeAtol(2754, 2784),
-                            //0, 60, 66, 72, 78, 84, 96
-                            Edgeville(3086, 3498), Senntisten(3339, 3445), Kharyrll(3493, 3472),
-                            Lassar(3012, 3500), Dareeyak(2991, 3697), Carrallanger(3161, 3670), Ghorrock(2963, 3929),
+                            //0, 54, 60, 66, 72, 78, 84, 90, 96
+                            Edgeville(3086, 3498), Paddewwa, Senntisten(3339, 3445), Kharyrll(3493, 3472),
+                            Lassar(3012, 3500), Dareeyak(2991, 3697), Carrallanger(3161, 3670), Annakarl, Ghorrock(2963, 3929),
                             //69 72(73), 75(76), 78(79), 85(86), 87(88), 89(90)
                             Moonclan, Waterbirth, Barbarian, Khazard, FishingGuild, Catherby, IcePlateau,
                             //85

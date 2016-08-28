@@ -1715,6 +1715,7 @@ public abstract class Class63 {
                                                    client.rsaBuffer.startPacket(159, (byte) 52);
                                                    client.rsaBuffer.writeByte(Class22.calculateJGString(var84, -1938849605), 754187704);
                                                    client.rsaBuffer.writeJGString(var84, 1922790380);
+                                                   System.out.println(var84);
                                                    continue label3080;
                                                 }
 

@@ -126,11 +126,12 @@ public class ReflectionNode extends Node {
                }
 
                if(var17 && Class116_Sub17.method2314(Class35.method645(var11, (byte)0), var3 - 1, 1717977072)) {
-                  if(1 == var3) {
+                  if(1 == var3) { //unequip
                      client.rsaBuffer.startPacket(149, (byte) 67);
                      client.rsaBuffer.writeInt(var1, (byte)121);
                      client.rsaBuffer.writeShort(var0, -2128928871);
                      client.rsaBuffer.writeShort(var14, -2130754846);
+                     System.out.println(var1+"/"+var0+"/"+var14);
                   }
 
                   if(2 == var3) {

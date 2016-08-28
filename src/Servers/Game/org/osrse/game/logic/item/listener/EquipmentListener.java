@@ -12,7 +12,7 @@ public class EquipmentListener implements ItemCollectionListener {
 
     public void event(Player player, ItemCollection itemList, EventType type) {
         if (type == EventType.REFRESH) { 
-            //player.getProtocol().sendUpdateItems(387, 28, 94, itemList);
+            player.getProtocol().sendUpdateItems(-1, 64208, 94, itemList);
         }
     }
 

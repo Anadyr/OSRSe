@@ -46,7 +46,6 @@ public class CommercialProtocol extends AbstractPacketDispatcher<LoginSession> {
             packetHandlers[9]= new FCResponse();
             packetHandlers[10]= new CCDefinition();//syncs clan with this world
             packetHandlers[11] = new CCEdit();
-           // packetHandlers[12] = new USELESS();
 
             packetLength[0]=-1;
             packetLength[1]=-1;

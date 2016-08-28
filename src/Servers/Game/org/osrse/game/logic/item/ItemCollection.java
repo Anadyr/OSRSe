@@ -15,7 +15,7 @@ import java.util.List;
  * @author Jonathan
  */
 public class ItemCollection extends NodeCollection<Item> {
-    public static enum Stack {
+    public enum Stack {
         FORCE_STACK, STANDARD
     }
     private List<ItemCollectionListener> listeners;

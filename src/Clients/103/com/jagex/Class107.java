@@ -96,15 +96,15 @@ public class Class107 {
    }
 
    public static RSInterface getInterface(int var0, int var1) {
-      int var2 = var0 >> 16;
-      int var3 = var0 & '\uffff';
-      if(null == RSInterface.mainInterfaceArray[var2] || RSInterface.mainInterfaceArray[var2][var3] == null) {
-         boolean var4 = Class116_Sub23_Sub2.loadInterface(var2, -1006212225);
+      int interfaceId = var0 >> 16;
+      int childId = var0 & '\uffff';
+      if(null == RSInterface.mainInterfaceArray[interfaceId] || RSInterface.mainInterfaceArray[interfaceId][childId] == null) {
+         boolean var4 = Class116_Sub23_Sub2.loadInterface(interfaceId, -1006212225);
          if(!var4) {
             return null;
          }
       }
 
-      return RSInterface.mainInterfaceArray[var2][var3];
+      return RSInterface.mainInterfaceArray[interfaceId][childId];
    }
 }
