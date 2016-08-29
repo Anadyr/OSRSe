@@ -2,19 +2,19 @@ package com.jagex;
 
 public class Class116_Sub4_Sub3 extends Class116_Sub4 {
 
-   Deque aClass117_2528 = new Deque();
+   Class117 aClass117_2528 = new Class117();
    Class116_Sub4_Sub1 aClass116_Sub4_Sub1_2529 = new Class116_Sub4_Sub1();
    Class116_Sub4_Sub4 aClass116_Sub4_Sub4_2530;
 
    protected Class116_Sub4 method1907() {
-      Class116_Sub21 var1 = (Class116_Sub21)this.aClass117_2528.getFirst();
+      Class116_Sub21 var1 = (Class116_Sub21)this.aClass117_2528.method1551();
       return (Class116_Sub4)(var1 == null?null:(var1.aClass116_Sub4_Sub2_2140 != null?var1.aClass116_Sub4_Sub2_2140:this.method1913()));
    }
 
    protected Class116_Sub4 method1913() {
       Class116_Sub21 var1;
       do {
-         var1 = (Class116_Sub21)this.aClass117_2528.getNext();
+         var1 = (Class116_Sub21)this.aClass117_2528.method1553();
          if(null == var1) {
             return null;
          }
@@ -30,7 +30,7 @@ public class Class116_Sub4_Sub3 extends Class116_Sub4 {
    protected void method1919(int[] var1, int var2, int var3) {
       this.aClass116_Sub4_Sub1_2529.method1919(var1, var2, var3);
 
-      for(Class116_Sub21 var5 = (Class116_Sub21)this.aClass117_2528.getFirst(); var5 != null; var5 = (Class116_Sub21)this.aClass117_2528.getNext()) {
+      for(Class116_Sub21 var5 = (Class116_Sub21)this.aClass117_2528.method1551(); var5 != null; var5 = (Class116_Sub21)this.aClass117_2528.method1553()) {
          if(!this.aClass116_Sub4_Sub4_2530.method3025(var5, -569035212)) {
             int var6 = var2;
             int var4 = var3;
@@ -54,7 +54,7 @@ public class Class116_Sub4_Sub3 extends Class116_Sub4 {
    protected void method1911(int var1) {
       this.aClass116_Sub4_Sub1_2529.method1911(var1);
 
-      for(Class116_Sub21 var2 = (Class116_Sub21)this.aClass117_2528.getFirst(); var2 != null; var2 = (Class116_Sub21)this.aClass117_2528.getNext()) {
+      for(Class116_Sub21 var2 = (Class116_Sub21)this.aClass117_2528.method1551(); var2 != null; var2 = (Class116_Sub21)this.aClass117_2528.method1553()) {
          if(!this.aClass116_Sub4_Sub4_2530.method3025(var2, -569035212)) {
             int var3 = var1;
 

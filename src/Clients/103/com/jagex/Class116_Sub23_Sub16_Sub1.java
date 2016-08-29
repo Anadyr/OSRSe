@@ -20,18 +20,18 @@ public final class Class116_Sub23_Sub16_Sub1 extends Animable {
 
    static File method3093(String var0, String var1, int var2, int var3) {
       String var4 = var2 == 0?"":"" + var2;
-      Class86.aFile1008 = new File(PacketBuilder.USER_HOME, "jagex_cl_" + var0 + "_" + var1 + var4 + ".dat");
+      Class86.aFile1008 = new File(BitBuffer.aString2502, "jagex_cl_" + var0 + "_" + var1 + var4 + ".dat");
       String var5 = null;
       String var6 = null;
       boolean var7 = false;
-      Packet var9;
+      Buffer var9;
       File var21;
       if(Class86.aFile1008.exists()) {
          try {
             Class145 var8 = new Class145(Class86.aFile1008, "rw", 10000L);
 
             int var10;
-            for(var9 = new Packet((int)var8.method1813(-980664584)); 314639891 * var9.position < var9.payload.length; var9.position += -184175589 * var10) {
+            for(var9 = new Buffer((int)var8.method1813(-980664584)); 314639891 * var9.position < var9.payload.length; var9.position += -184175589 * var10) {
                var10 = var8.method1811(var9.payload, var9.position * 314639891, var9.payload.length - var9.position * 314639891, 920879608);
                if(var10 == -1) {
                   throw new IOException();
@@ -75,7 +75,7 @@ public final class Class116_Sub23_Sub16_Sub1 extends Animable {
 
          if(var5 != null) {
             var21 = new File(var5, "test.dat");
-            if(!RSIndex.testFile(var21, true, -1522628747)) {
+            if(!Class99.method1401(var21, true, -1522628747)) {
                var5 = null;
             }
          }
@@ -83,12 +83,11 @@ public final class Class116_Sub23_Sub16_Sub1 extends Animable {
 
       if(var5 == null && var2 == 0) {
          label113:
-         for(int var19 = 0; var19 < Class78.CACHE_FOLDER_NAME.length; ++var19) {
-            for(int var22 = 0; var22 < Class31.CACHE_ROOT_DIR.length; ++var22) {
-               File f = new File(Class31.CACHE_ROOT_DIR[var22] + Class78.CACHE_FOLDER_NAME[var19] + File.separatorChar + var0 + File.separatorChar);
-               if(f.exists() && RSIndex.testFile(new File(f, "test.dat"), true, -1707967216)) {
-                   System.out.println(f.getAbsolutePath());
-                  var5 = f.toString();
+         for(int var19 = 0; var19 < Class78.aStringArray905.length; ++var19) {
+            for(int var22 = 0; var22 < Class31.aStringArray429.length; ++var22) {
+               File var23 = new File(Class31.aStringArray429[var22] + Class78.aStringArray905[var19] + File.separatorChar + var0 + File.separatorChar);
+               if(var23.exists() && Class99.method1401(new File(var23, "test.dat"), true, -1707967216)) {
+                  var5 = var23.toString();
                   var7 = true;
                   break label113;
                }
@@ -97,7 +96,7 @@ public final class Class116_Sub23_Sub16_Sub1 extends Animable {
       }
 
       if(var5 == null) {
-         var5 = PacketBuilder.USER_HOME + File.separatorChar + "jagexcache" + var4 + File.separatorChar + var0 + File.separatorChar + var1 + File.separatorChar;
+         var5 = BitBuffer.aString2502 + File.separatorChar + "jagexcache" + var4 + File.separatorChar + var0 + File.separatorChar + var1 + File.separatorChar;
          var7 = true;
       }
 
@@ -131,7 +130,7 @@ public final class Class116_Sub23_Sub16_Sub1 extends Animable {
 
          try {
             Class145 var25 = new Class145(Class86.aFile1008, "rw", 10000L);
-            Packet var27 = new Packet(500);
+            Buffer var27 = new Buffer(500);
             var27.writeByte(3, 157895064);
             var27.writeByte(var9 != null?1:0, 836871783);
             var27.writeGJString2(var20.getPath(), -1942618019);
@@ -191,10 +190,10 @@ public final class Class116_Sub23_Sub16_Sub1 extends Animable {
 
    }
 
-   public static void method3097(SignLink var0, Object var1, byte var2) {
+   public static void method3097(Class74 var0, Object var1, byte var2) {
       if(var0.anEventQueue888 != null) {
          for(int var3 = 0; var3 < 50 && var0.anEventQueue888.peekEvent() != null; ++var3) {
-            Friend.sleep(1L);
+            Friend.method1836(1L);
          }
 
          if(var1 != null) {

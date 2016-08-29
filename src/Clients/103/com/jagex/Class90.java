@@ -3,6 +3,7 @@ import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.PrintWriter;
+import java.io.RandomAccessFile;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.net.URL;
@@ -81,7 +82,7 @@ public class Class90 {
             return;
          }
 
-         URL var16 = new URL(Class58.gameApplet.getCodeBase(), "clienterror.ws?c=" + 1316357127 * client.anInt1646 + "&u=" + RuntimeException_Sub1.aString2849 + "&v1=" + SignLink.aString886 + "&v2=" + SignLink.aString882 + "&e=" + var3);
+         URL var16 = new URL(Class58.gameApplet.getCodeBase(), "clienterror.ws?c=" + 1316357127 * client.anInt1646 + "&u=" + RuntimeException_Sub1.aString2849 + "&v1=" + Class74.aString886 + "&v2=" + Class74.aString882 + "&e=" + var3);
          DataInputStream var18 = new DataInputStream(var16.openStream());
          var18.read();
          var18.close();

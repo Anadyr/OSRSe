@@ -1,4 +1,10 @@
 package com.jagex;
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.PrintWriter;
+import java.io.StringReader;
+import java.io.StringWriter;
+import java.net.URL;
 
 public class RuntimeException_Sub1 extends RuntimeException {
 
@@ -16,22 +22,22 @@ public class RuntimeException_Sub1 extends RuntimeException {
       this.aThrowable2851 = var1;
    }
 
-   static final boolean method3448(RSInterface var0, int var1) {
-      if(null == var0.valueCompareType) {
+   static final boolean method3448(Class116_Sub15 var0, int var1) {
+      if(null == var0.anIntArray2036) {
          return false;
       } else {
-         for(int var2 = 0; var2 < var0.valueCompareType.length; ++var2) {
+         for(int var2 = 0; var2 < var0.anIntArray2036.length; ++var2) {
             int var3 = client.method1740(var0, var2, (byte)24);
-            int var4 = var0.requiredValues[var2];
-            if(var0.valueCompareType[var2] == 2) {
+            int var4 = var0.anIntArray2001[var2];
+            if(var0.anIntArray2036[var2] == 2) {
                if(var3 >= var4) {
                   return false;
                }
-            } else if(3 == var0.valueCompareType[var2]) {
+            } else if(3 == var0.anIntArray2036[var2]) {
                if(var3 <= var4) {
                   return false;
                }
-            } else if(var0.valueCompareType[var2] == 4) {
+            } else if(var0.anIntArray2036[var2] == 4) {
                if(var3 == var4) {
                   return false;
                }

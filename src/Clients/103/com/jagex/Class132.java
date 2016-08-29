@@ -14,8 +14,8 @@ public class Class132 {
    static int anInt1597;
 
 
-   public Class132(Packet var1, boolean var2) {
-      int var4 = var1.readUnsignedShort(1890999996);
+   public Class132(Buffer var1, boolean var2) {
+      int var4 = var1.readShort(1890999996);
       boolean var5 = var1.readSignedByte(1708176767) == 1;
       byte var6;
       if(var5) {
@@ -24,9 +24,9 @@ public class Class132 {
          var6 = 0;
       }
 
-      int var7 = var1.readUnsignedShort(-264672068);
+      int var7 = var1.readShort(-264672068);
 
-       System.out.print("readUnsignedShort="+var4+", readBoolean="+var5+", readUnsignedShort="+var7);
+       System.out.print("readShort="+var4+", readBoolean="+var5+", readShort="+var7);
       this.aList1594 = new ArrayList(var7);
 
       for(int var3 = 0; var3 < var7; ++var3) {

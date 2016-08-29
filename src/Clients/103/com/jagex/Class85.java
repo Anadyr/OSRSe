@@ -22,8 +22,8 @@ public class Class85 implements MouseListener, MouseMotionListener, FocusListene
    public static volatile int anInt995 = -884290827;
    public static volatile int anInt996 = 0;
    public static int anInt997 = 0;
-   public static int clickAreaX = 0;
-   public static int clickAreaY = 0;
+   public static int anInt998 = 0;
+   public static int anInt999 = 0;
    public static long aLong1000 = 0L;
    public static volatile int anInt1003 = 0;
 
@@ -67,7 +67,7 @@ public class Class85 implements MouseListener, MouseMotionListener, FocusListene
          anInt986 = 0;
          anInt1003 = var1.getX() * -2121653949;
          anInt990 = var1.getY() * -1947749793;
-         aLong985 = Class116_Sub5.generateHash(1330920504) * 1504365569888336301L;
+         aLong985 = Class116_Sub5.method1929(1330920504) * 1504365569888336301L;
          if(var1.isAltDown()) {
             anInt993 = -679655996;
             anInt996 = 1605267244;
@@ -125,13 +125,13 @@ public class Class85 implements MouseListener, MouseMotionListener, FocusListene
       client.anInt2983 += 530378793;
       if(736734233 * client.anInt2983 >= 50 || var0) {
          client.anInt2983 = 0;
-         if(!client.aBool3052 && null != Class38.streamBuffer) {
+         if(!client.aBool3052 && null != Class38.bufferIn) {
              if(Launcher.rsps)
                  return;
             client.rsaBuffer.startPacket(126, (byte) 41);
 
             try {
-               Class38.streamBuffer.flush(client.rsaBuffer.payload, 0, 314639891 * client.rsaBuffer.position, 272474741);
+               Class38.bufferIn.method1006(client.rsaBuffer.payload, 0, 314639891 * client.rsaBuffer.position, 272474741);
                client.rsaBuffer.position = 0;
             } catch (IOException var3) {
                client.aBool3052 = true;

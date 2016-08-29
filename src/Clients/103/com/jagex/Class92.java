@@ -7,7 +7,7 @@ public class Class92 {
    int[] anIntArray1325;
    int[] anIntArray1326;
    int anInt1327;
-   Packet aClass116_Sub14_1329 = new Packet((byte[])null);
+   Buffer aClass116_Sub14_1329 = new Buffer((byte[])null);
    static byte[] aByteArray1330 = new byte[]{(byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)1, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)2, (byte)0, (byte)1, (byte)2, (byte)1, (byte)0, (byte)0, (byte)0, (byte)0, (byte)0, (byte)0, (byte)0, (byte)0, (byte)0, (byte)0, (byte)0, (byte)0};
    int[] anIntArray1331;
    long aLong1332;
@@ -16,8 +16,8 @@ public class Class92 {
    void method1202(byte[] var1) {
       this.aClass116_Sub14_1329.payload = var1;
       this.aClass116_Sub14_1329.position = -1841755890;
-      int var3 = this.aClass116_Sub14_1329.readUnsignedShort(1410590027);
-      this.anInt1322 = this.aClass116_Sub14_1329.readUnsignedShort(755133976);
+      int var3 = this.aClass116_Sub14_1329.readShort(1410590027);
+      this.anInt1322 = this.aClass116_Sub14_1329.readShort(755133976);
       this.anInt1327 = 500000;
       this.anIntArray1326 = new int[var3];
 

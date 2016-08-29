@@ -32,8 +32,8 @@ public final class Class51 {
          } else {
             String var4 = Class6.username;
             Random var5 = new Random();
-            Packet var6 = new Packet(128);
-            Packet var7 = new Packet(128);
+            Buffer var6 = new Buffer(128);
+            Buffer var7 = new Buffer(128);
             int[] var8 = new int[]{var5.nextInt(), var5.nextInt(), (int)(var1 >> 32), (int)var1};
             var6.writeByte(10, -161709991);
 
@@ -88,11 +88,11 @@ public final class Class51 {
                var9 += 8 - var9 % 8;
             }
 
-            Packet var24 = new Packet(var9);
+            Buffer var24 = new Buffer(var9);
             var24.writeJGString(var4, -798526760);
             var24.position = var9 * -184175589;
             var24.method2020(var8, (byte)-30);
-            Packet var26 = new Packet(var6.position * 314639891 + 5 + 314639891 * var7.position + var24.position * 314639891);
+            Buffer var26 = new Buffer(var6.position * 314639891 + 5 + 314639891 * var7.position + var24.position * 314639891);
             var26.writeByte(2, -2084825668);
             var26.writeByte(var6.position * 314639891, -74434376);
             var26.method2110(var6.payload, 0, var6.position * 314639891, 512611054);
@@ -113,7 +113,7 @@ public final class Class51 {
                var15.write("data2=" + Class69.method984(var12, (byte)12) + "&dest=" + Class69.method984("passwordchoice.ws", (byte)-22));
                var15.flush();
                InputStream var16 = var14.getInputStream();
-               var26 = new Packet(new byte[1000]);
+               var26 = new Buffer(new byte[1000]);
 
                while(true) {
                   int var17 = var16.read(var26.payload, 314639891 * var26.position, 1000 - var26.position * 314639891);
@@ -211,23 +211,23 @@ public final class Class51 {
       int var6 = 0;
       int var5 = 0;
       if(-1976125003 * var0.anInt1838 == 0) {
-         var2 = GameInterface.region.method452(584375567 * var0.anInt1837, -1096801001 * var0.anInt1835, -127960105 * var0.anInt1847);
+         var2 = Class116_Sub11.groundItemController.method452(584375567 * var0.anInt1837, -1096801001 * var0.anInt1835, -127960105 * var0.anInt1847);
       }
 
       if(1 == -1976125003 * var0.anInt1838) {
-         var2 = GameInterface.region.method372(584375567 * var0.anInt1837, var0.anInt1835 * -1096801001, var0.anInt1847 * -127960105);
+         var2 = Class116_Sub11.groundItemController.method372(584375567 * var0.anInt1837, var0.anInt1835 * -1096801001, var0.anInt1847 * -127960105);
       }
 
       if(2 == -1976125003 * var0.anInt1838) {
-         var2 = GameInterface.region.getTileContents(584375567 * var0.anInt1837, var0.anInt1835 * -1096801001, -127960105 * var0.anInt1847);
+         var2 = Class116_Sub11.groundItemController.method373(584375567 * var0.anInt1837, var0.anInt1835 * -1096801001, -127960105 * var0.anInt1847);
       }
 
       if(-1976125003 * var0.anInt1838 == 3) {
-         var2 = GameInterface.region.method374(584375567 * var0.anInt1837, var0.anInt1835 * -1096801001, var0.anInt1847 * -127960105);
+         var2 = Class116_Sub11.groundItemController.method374(584375567 * var0.anInt1837, var0.anInt1835 * -1096801001, var0.anInt1847 * -127960105);
       }
 
       if(var2 != 0) {
-         int var3 = GameInterface.region.getTileContentsType(var0.anInt1837 * 584375567, var0.anInt1835 * -1096801001, var0.anInt1847 * -127960105, var2);
+         int var3 = Class116_Sub11.groundItemController.method375(var0.anInt1837 * 584375567, var0.anInt1835 * -1096801001, var0.anInt1847 * -127960105, var2);
          var4 = var2 >> 14 & 32767;
          var6 = var3 & 31;
          var5 = var3 >> 6 & 3;

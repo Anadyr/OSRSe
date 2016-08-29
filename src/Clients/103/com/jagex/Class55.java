@@ -7,7 +7,7 @@ public class Class55 {
       throw new Error();
    }
 
-   static byte[] copyArray(byte[] var0, int var1) {
+   static byte[] method813(byte[] var0, int var1) {
       int var2 = var0.length;
       byte[] var3 = new byte[var2];
       System.arraycopy(var0, 0, var3, 0, var2);

@@ -4,7 +4,7 @@ public final class Class66 {
 
    static Class57 aClass57_819 = new Class57();
 
-   public static int doBzipDecompression(byte[] var0, int var1, byte[] var2, int var3, int var4) {
+   public static int method943(byte[] var0, int var1, byte[] var2, int var3, int var4) {
       Class57 var5 = aClass57_819;
       synchronized(var5) {
          aClass57_819.aByteArray722 = var2;
@@ -16,7 +16,7 @@ public final class Class66 {
          aClass57_819.anInt731 = 0;
          aClass57_819.anInt727 = 0;
          aClass57_819.anInt728 = 0;
-         unpackBZip(aClass57_819);
+         method945(aClass57_819);
          var1 -= aClass57_819.anInt730 * 30302393;
          aClass57_819.aByteArray722 = null;
          aClass57_819.aByteArray718 = null;
@@ -152,7 +152,7 @@ public final class Class66 {
       var0.anInt730 = var7 * -1267751543;
    }
 
-   static void unpackBZip(Class57 var0) {
+   static void method945(Class57 var0) {
       boolean var1 = false;
       boolean var30 = false;
       boolean var3 = false;

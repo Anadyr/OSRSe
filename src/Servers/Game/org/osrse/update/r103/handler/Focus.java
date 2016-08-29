@@ -11,6 +11,14 @@ public class Focus extends PacketHandler<Player> {
 
     @Override
     public void handle(Player player, Packet packet) {
-
+        if(packet.getOpcode() == 23) {
+            int mode = packet.get();
+            int width = packet.getShort();
+            int height = packet.getShort();
+            player.setScreenDisplay(mode == 1 ? Player.Display.Fixed : (player.getAttribute("fixed_panel") != null ? Player.Display.Resizeable_Panel
+                    : Player.Display.Resizeable_FixedPanel));
+            player.getProtocol().sendWindow(player.getScreenDisplay().getWindowId());
+            player.getProtocol().sendTabs();
+        }
     }
 }

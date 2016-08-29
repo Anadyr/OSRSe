@@ -34,7 +34,7 @@ public abstract class Animable extends NodeContainer {
          }
       }
 
-      Class116_Sub23_Sub11 var8 = RelationList.method778(var0, (byte) 70);
+      Class116_Sub23_Sub11 var8 = Class50.method778(var0, (byte)70);
       if(var1 > 1 && null != var8.anIntArray2389) {
          int var12 = -1;
 
@@ -45,7 +45,7 @@ public abstract class Animable extends NodeContainer {
          }
 
          if(var12 != -1) {
-            var8 = RelationList.method778(var12, (byte) 70);
+            var8 = Class50.method778(var12, (byte)70);
          }
       }
 

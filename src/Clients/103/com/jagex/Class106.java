@@ -2,7 +2,7 @@ package com.jagex;
 
 public class Class106 {
 
-   public static Packet aClass116_Sub14_1444;
+   public static Buffer aClass116_Sub14_1444;
    static int[] anIntArray1447;
    static Sprite[] aClass116_Sub23_Sub19_Sub2Array1449;
 
@@ -24,7 +24,7 @@ public class Class106 {
          }
       }
 
-      Packet var11 = new Packet(var0);
+      Buffer var11 = new Buffer(var0);
 
       for(var8 = 0; var8 < 4; ++var8) {
          for(var9 = 0; var9 < 64; ++var9) {

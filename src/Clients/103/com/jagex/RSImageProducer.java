@@ -86,9 +86,9 @@ public final class RSImageProducer extends AbstractRSDrawing implements ImagePro
    }
 
     static Class116_Sub23_Sub19_Sub4_Sub1 aClass116_Sub23_Sub19_Sub4_Sub1_1672;
-    static SignlinkNode aClass72_1675;
+    static Class72 aClass72_1675;
 
-    static Sprite[] method1850(RSIndex var0, int var1, int var2, int var3) {
+    static Sprite[] method1850(Class99 var0, int var1, int var2, int var3) {
         if(!Class41.method687(var0, var1, var2, 1244068136)) {
             return null;
         } else {
@@ -121,10 +121,10 @@ public final class RSImageProducer extends AbstractRSDrawing implements ImagePro
       if(var2 != null) {
          return var2;
       } else {
-         byte[] var3 = Class116_Sub23_Sub2.aRSIndex_2187.getFiles(3, var0, 689534874);
+         byte[] var3 = Class116_Sub23_Sub2.aClass99_2187.method1394(3, var0, 689534874);
          var2 = new Class116_Sub23_Sub2();
          if(null != var3) {
-            var2.method2375(new Packet(var3), 2124429388);
+            var2.method2375(new Buffer(var3), 2124429388);
          }
 
          Class116_Sub23_Sub2.aClass123_2177.method1633(var2, (long)var0);

@@ -7,7 +7,7 @@ public class Class133 {
    String aString1600;
    public int anInt1601;
    String aString1602;
-   static String OPERATING_SYSTEM_NAME;
+   static String aString1603;
 
    public String method1710(int var1) {
       return this.aString1602;
@@ -17,10 +17,10 @@ public class Class133 {
       return this.aString1600;
    }
 
-   Class133(Packet var1, byte var2, int var3) {
+   Class133(Buffer var1, byte var2, int var3) {
       this.aString1600 = var1.readString(61376769);
       this.aString1602 = var1.readString(61376769);
-      this.anInt1601 = var1.readUnsignedShort(3742389) * -1446820033;
+      this.anInt1601 = var1.readShort(3742389) * -1446820033;
       this.aLong1599 = var1.readLong((byte) 72) * 5393883135847443407L;
       int var4 = var1.readInt(-872024090);
       int var5 = var1.readInt(-1199921422);

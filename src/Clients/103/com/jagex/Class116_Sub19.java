@@ -12,7 +12,7 @@ public class Class116_Sub19 extends Node {
    Class116_Sub2_Sub1[] aClass116_Sub2_Sub1Array2120 = new Class116_Sub2_Sub1[128];
 
    Class116_Sub19(byte[] var1) {
-      Packet var3 = new Packet(var1);
+      Buffer var3 = new Buffer(var1);
 
       int var4;
       for(var4 = 0; var3.payload[var4 + 314639891 * var3.position] != 0; ++var4) {

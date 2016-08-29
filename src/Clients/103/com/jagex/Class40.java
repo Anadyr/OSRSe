@@ -52,7 +52,7 @@ public final class Class40 {
          var5 = "_wip";
       }
 
-      File var6 = new File(PacketBuilder.USER_HOME, "jagex_" + var1 + "_preferences" + var0 + var5 + ".dat");
+      File var6 = new File(BitBuffer.aString2502, "jagex_" + var1 + "_preferences" + var0 + var5 + ".dat");
       Class145 var7;
       if(!var2 && var6.exists()) {
          try {

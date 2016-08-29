@@ -30,7 +30,7 @@ public class Proto103 extends AbstractProtocol {
     @Override
     public void applyLoginEssentials() {
         sendMapRegion();
-        sendWindow(player.getScreenDisplay().getWindowId());
+        sendWindow(165);
         player.write(new PacketBuilder(212).putByte(0).putByte(0).toPacket());
         //player.write(newcache PacketBuilder(143).putInt(-2135842399).toPacket()); //wtf lol
         player.write(new PacketBuilder(156).toPacket());
@@ -178,7 +178,7 @@ public class Proto103 extends AbstractProtocol {
 
     @Override
     public void sendString(int interfaceId, int child, String string) {
-
+        player.getSession().write(new PacketBuilder(110, Packet.Type.VAR_SHORT).putInt(interfaceId << 16 | child).putString(string).toPacket());
     }
 
     private void sendConfigs() {
@@ -218,9 +218,14 @@ public class Proto103 extends AbstractProtocol {
 
     @Override
     public void sendConfig(int configId, int value) {
-        PacketBuilder bldr = new PacketBuilder(201);
-        bldr.putByteA(value);
-        bldr.putShortA(configId);
+        PacketBuilder bldr = new PacketBuilder(value > 127 ? 192 : 201);
+        if(value > 127) {
+            bldr.putInt(value);
+            bldr.putLEShort(configId);
+        } else {
+            bldr.putByteA(value);
+            bldr.putShortA(configId);
+        }
         player.getSession().write(bldr.toPacket());
 
     }
@@ -409,11 +414,11 @@ public class Proto103 extends AbstractProtocol {
     @Override
     public void sendAccessMask(int interfaceId, int childId, int set, int offset, int length) {
         PacketBuilder pb = new PacketBuilder(196);
-        pb.putShortA(0);
+        pb.putShortA(length);
         pb.putLEInt(interfaceId << 16 | childId);
-        pb.putLEShort(0);
-        pb.putInt(0);
-        //player.write(pb.toPacket());
+        pb.putLEShort(offset);
+        pb.putInt(set);
+        player.write(pb.toPacket());
         //pb.putLEShortA(range2).putLEInt(interfaceId << 16 | childId).putLEShortA(0).putShortA(range1).putInt2(interfaceId2 << 16 | childId2);
     }
 

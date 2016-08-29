@@ -11,21 +11,21 @@ public class Class116_Sub5 extends Node {
    int[][] anIntArrayArray1726;
    static Class29 aClass29_1727;
    static final int anInt1728 = 3;
-   static CacheIndex spriteIndex;
+   static Class99_Sub1 aClass99_Sub1_1729;
    static final int anInt1730 = 1005;
    static final int anInt1731 = 38;
    int anInt1732;
    static final int anInt1733 = 1003;
 
 
-   public static synchronized long generateHash(int var0) {
-      long currentTimeMillis = System.currentTimeMillis();
-      if(currentTimeMillis < Class65.aLong815 * 3305107702197510133L) {
-         Class65.aLong816 += (Class65.aLong815 * 3305107702197510133L - currentTimeMillis) * 1735610642068573953L;
+   public static synchronized long method1929(int var0) {
+      long var1 = System.currentTimeMillis();
+      if(var1 < Class65.aLong815 * 3305107702197510133L) {
+         Class65.aLong816 += (Class65.aLong815 * 3305107702197510133L - var1) * 1735610642068573953L;
       }
 
-      Class65.aLong815 = currentTimeMillis * 4035292801851102301L;
-      return currentTimeMillis + 2047833492640657665L * Class65.aLong816;
+      Class65.aLong815 = var1 * 4035292801851102301L;
+      return var1 + 2047833492640657665L * Class65.aLong816;
    }
 
    static boolean method1930(String var0, boolean var1, int var2) {
@@ -35,12 +35,12 @@ public class Class116_Sub5 extends Node {
          String var3 = Class116_Sub23_Sub15.method2702(var0, Class59_Sub1.aClass143_1831, 1063727324);
 
          for(int var4 = 0; var4 < client.anInt3152 * -1616775607; ++var4) {
-            if(var3.equalsIgnoreCase(Class116_Sub23_Sub15.method2702(client.aClass50Array3204[var4].username, Class59_Sub1.aClass143_1831, 807859882)) && (!var1 || client.aClass50Array3204[var4].anInt666 * -698428043 != 0)) {
+            if(var3.equalsIgnoreCase(Class116_Sub23_Sub15.method2702(client.aClass50Array3204[var4].aString670, Class59_Sub1.aClass143_1831, 807859882)) && (!var1 || client.aClass50Array3204[var4].anInt666 * -698428043 != 0)) {
                return true;
             }
          }
 
-         if(var3.equalsIgnoreCase(Class116_Sub23_Sub15.method2702(Class79.ourPlayer.username, Class59_Sub1.aClass143_1831, 1960625428))) {
+         if(var3.equalsIgnoreCase(Class116_Sub23_Sub15.method2702(Class79.aPlayer_909.username, Class59_Sub1.aClass143_1831, 1960625428))) {
             return true;
          } else {
             return false;
@@ -96,7 +96,7 @@ public class Class116_Sub5 extends Node {
                var8 = var9;
             }
 
-            RSFIT.aAbstractRSDrawing_874 = (AbstractRSDrawing)var8;
+            Class73.aAbstractRSDrawing_874 = (AbstractRSDrawing)var8;
             if(var2 == Class116_Sub23_Sub13.aFrame2425) {
                Insets var17 = Class116_Sub23_Sub13.aFrame2425.getInsets();
                Tile.aCanvas1875.setLocation(76231581 * client.anInt2925 + var17.left, var17.top + -225353991 * client.anInt2920);
@@ -135,7 +135,7 @@ public class Class116_Sub5 extends Node {
 
    Class116_Sub5(int var1, byte[] var2) {
       this.anInt1724 = -586867395 * var1;
-      Packet var4 = new Packet(var2);
+      Buffer var4 = new Buffer(var2);
       this.anInt1732 = var4.readSignedByte(1708176767) * 1534158375;
       this.anIntArray1723 = new int[-1341412969 * this.anInt1732];
       this.anIntArrayArray1726 = new int[-1341412969 * this.anInt1732][];

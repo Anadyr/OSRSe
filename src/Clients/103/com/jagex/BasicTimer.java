@@ -3,7 +3,7 @@ package com.jagex;
 public class BasicTimer extends Timer {
 
    int anInt1890 = -1470624512;
-   long aLong1891 = Class116_Sub5.generateHash(-1399179239) * -7851503190461573869L;
+   long aLong1891 = Class116_Sub5.method1929(-1399179239) * -7851503190461573869L;
    long[] aLongArray1892 = new long[10];
    int anInt1894 = 0;
    int anInt1895;
@@ -21,7 +21,7 @@ public class BasicTimer extends Timer {
       int var5 = this.anInt1896 * -546326565;
       this.anInt1890 = 155660092;
       this.anInt1896 = -1663734701;
-      this.aLong1891 = Class116_Sub5.generateHash(1791711458) * -7851503190461573869L;
+      this.aLong1891 = Class116_Sub5.method1929(1791711458) * -7851503190461573869L;
       if(this.aLongArray1892[1407235087 * this.anInt1895] == 0L) {
          this.anInt1890 = var4 * -1817683955;
          this.anInt1896 = -1663734701 * var5;
@@ -57,7 +57,7 @@ public class BasicTimer extends Timer {
          this.anInt1896 = var2 * -1663734701;
       }
 
-      Friend.sleep((long) (this.anInt1896 * -546326565));
+      Friend.method1836((long) (this.anInt1896 * -546326565));
 
       for(var6 = 0; this.anInt1894 * -1165867281 < 256; this.anInt1894 += -1117782645 * this.anInt1890) {
          ++var6;
@@ -78,10 +78,10 @@ public class BasicTimer extends Timer {
       if(var2 != null) {
          return var2;
       } else {
-         byte[] var3 = Class116_Sub23_Sub13.aRSIndex_2423.getFiles(19, var0, -1810551098);
+         byte[] var3 = Class116_Sub23_Sub13.aClass99_2423.method1394(19, var0, -1810551098);
          var2 = new Class116_Sub23_Sub13();
          if(var3 != null) {
-            var2.method2657(new Packet(var3), (byte)80);
+            var2.method2657(new Buffer(var3), (byte)80);
          }
 
          Class116_Sub23_Sub13.aClass123_2420.method1633(var2, (long)var0);

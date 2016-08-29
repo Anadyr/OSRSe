@@ -3,7 +3,7 @@ import java.util.Comparator;
 
 final class Class130 implements Comparator {
 
-   static RSIndex aRSIndex_1584;
+   static Class99 aClass99_1584;
 
 
    public int compare(Object var1, Object var2) {

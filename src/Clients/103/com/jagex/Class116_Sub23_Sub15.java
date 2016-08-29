@@ -6,10 +6,10 @@ public class Class116_Sub23_Sub15 extends NodeContainer {
    static Class123 aClass123_2445 = new Class123(64);
    public int anInt2446 = 0;
    public static int anInt2448;
-   static RSIndex aRSIndex_2449;
+   static Class99 aClass99_2449;
 
 
-   void method2690(Packet var1, int var2) {
+   void method2690(Buffer var1, int var2) {
       while(true) {
          int var3 = var1.readSignedByte(1708176767);
          if(var3 == 0) {
@@ -24,13 +24,13 @@ public class Class116_Sub23_Sub15 extends NodeContainer {
       return (Class37.anInt495 += -1265413871) * 1518714865 - 1;
    }
 
-   static RSInterface method2696(RSInterface var0, byte var1) {
-      int var2 = CacheIndex.method2219(Class35.method645(var0, (byte) 0), 763449230);
+   static Class116_Sub15 method2696(Class116_Sub15 var0, byte var1) {
+      int var2 = Class99_Sub1.method2219(Class35.method645(var0, (byte)0), 763449230);
       if(var2 == 0) {
          return null;
       } else {
          for(int var3 = 0; var3 < var2; ++var3) {
-            var0 = Class107.getInterface(var0.parent * -1652479707, 314639891);
+            var0 = Class107.method1466(var0.anInt1944 * -1652479707, 314639891);
             if(var0 == null) {
                return null;
             }
@@ -40,9 +40,9 @@ public class Class116_Sub23_Sub15 extends NodeContainer {
       }
    }
 
-   void method2698(Packet var1, int var2, int var3) {
+   void method2698(Buffer var1, int var2, int var3) {
       if(5 == var2) {
-         this.anInt2446 = var1.readUnsignedShort(1280879349) * -205219945;
+         this.anInt2446 = var1.readShort(1280879349) * -205219945;
       }
 
    }
@@ -51,7 +51,7 @@ public class Class116_Sub23_Sub15 extends NodeContainer {
       aClass123_2445.method1635();
    }
 
-   public static String method2702(CharSequence var0, ClanRank var1, int var2) {
+   public static String method2702(CharSequence var0, Class143 var1, int var2) {
       if(null == var0) {
          return null;
       } else {
@@ -91,14 +91,14 @@ public class Class116_Sub23_Sub15 extends NodeContainer {
       }
    }
 
-   public static MobDefinition getMobDefinition(int var0, int var1) {
+   public static MobDefinition method2705(int var0, int var1) {
       MobDefinition var2 = (MobDefinition) MobDefinition.aClass123_2310.method1632((long)var0);
       if(var2 == null) {
-         byte[] var3 = Class96.aRSIndex_1367.getFiles(9, var0, 903745338);
+         byte[] var3 = Class96.aClass99_1367.method1394(9, var0, 903745338);
          var2 = new MobDefinition();
          var2.anInt2308 = 95406197 * var0;
          if(var3 != null) {
-            var2.method2549(new Packet(var3), 112155467);
+            var2.method2549(new Buffer(var3), 112155467);
          }
 
          var2.method2541((byte)9);

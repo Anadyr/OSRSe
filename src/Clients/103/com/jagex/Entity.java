@@ -6,19 +6,19 @@ public abstract class Entity extends Animable {
    int anInt2579;
    int anInt2580 = -505909337;
    int anInt2581 = 0;
-   int tileSize = 99722873;
+   int anInt2582 = 99722873;
    int[] anIntArray2583 = new int[4];
    int anInt2584 = 176841799;
    int anInt2585 = -1652337345;
    int anInt2586 = 929243503;
    int anInt2587 = 1587034171;
    boolean aBool2588 = false;
-   int currentGraphicDelay;
+   int anInt2589;
    int anInt2590 = -71707737;
    String forceChatString = null;
    int anInt2592 = 0;
    boolean aBool2593 = false;
-   int forceMovey2;
+   int anInt2594;
    int anInt2595 = 0;
    int anInt2596 = 0;
    int[] anIntArray2597 = new int[4];
@@ -38,14 +38,14 @@ public abstract class Entity extends Animable {
    int anInt2611 = 0;
    int anInt2612 = 0;
    int anInt2613;
-   int currentGraphic = 1738418729;
+   int anInt2614 = 1738418729;
    int anInt2615 = -1473487651;
    int anInt2616 = 0;
-   int currentGraphicHeight;
+   int anInt2617;
    int anInt2618 = 0;
    public static final int anInt2619 = 126;
-   int forceMovex2;
-   int forceMovey1;
+   int anInt2620;
+   int anInt2621;
    int[] xMovementSteps = new int[10];
    boolean aBool2623;
    int anInt2624;
@@ -56,7 +56,7 @@ public abstract class Entity extends Animable {
    int anInt2629 = 951990375;
    int anInt2630 = -939182368;
    int anInt2631;
-   int forceMovex1;
+   int anInt2632;
    int[] yMovementSteps = new int[10];
    static final int anInt2634 = 100;
    int anInt2635 = 0;
@@ -114,7 +114,7 @@ public abstract class Entity extends Animable {
    }
 
    static final int method3108(int var0, int var1, int var2) {
-      int var3 = RSInterface.method2275(var0 + '\ub135', var1 + 91923, 4, 161978140) - 128 + (RSInterface.method2275(10294 + var0, var1 + '\u93bd', 2, 161978140) - 128 >> 1) + (RSInterface.method2275(var0, var1, 1, 161978140) - 128 >> 2);
+      int var3 = Class116_Sub15.method2275(var0 + '\ub135', var1 + 91923, 4, 161978140) - 128 + (Class116_Sub15.method2275(10294 + var0, var1 + '\u93bd', 2, 161978140) - 128 >> 1) + (Class116_Sub15.method2275(var0, var1, 1, 161978140) - 128 >> 2);
       var3 = 35 + (int)((double)var3 * 0.3D);
       if(var3 >= 10) {
          if(var3 > 60) {

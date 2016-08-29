@@ -12,6 +12,7 @@ packet_handler[149]=Button
 packet_handler[253]=Focus
 packet_handler[188]=Focus
 packet_handler[153]=Focus
+packet_handler[23]=Focus
 
 packet_handler[248]=FriendList
 packet_handler[164]=FriendList
@@ -21,7 +22,18 @@ packet_handler[233]=Clan
 packet_handler[133]=CombatHandler
 packet_handler[74]=SpellHandler 
 packet_handler[182]=LogoutHandler
+packet_handler[158]=ItemHandler
+packet_handler[115]=ItemHandler
+packet_handler[6]=ItemHandler
+packet_handler[50]=ItemHandler
+packet_handler[187]=ItemHandler
+packet_handler[207]=ItemHandler
+packet_handler[72]=ItemHandler 
  
+packet_lengths[149]=8 
+packet_lengths[159]=-2
+packet_lengths[158]=2
+packet_lengths[115]=8
 packet_lengths[133]=3
 packet_lengths[74]=9
 packet_lengths[164]=-1

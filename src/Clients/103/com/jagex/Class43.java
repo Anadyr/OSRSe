@@ -33,10 +33,10 @@ public class Class43 implements OrdinalInterface {
    }
 
    public static void method696(int var0) {
-      RSInterface.aClass123_2000.method1635();
-      RSInterface.aClass123_1920.method1635();
-      RSInterface.aClass123_2038.method1635();
-      RSInterface.aClass123_2058.method1635();
+      Class116_Sub15.aClass123_2000.method1635();
+      Class116_Sub15.aClass123_1920.method1635();
+      Class116_Sub15.aClass123_2038.method1635();
+      Class116_Sub15.aClass123_2058.method1635();
    }
 
    static final void method697(int var0) {
@@ -45,8 +45,8 @@ public class Class43 implements OrdinalInterface {
       int var4 = 1899383153 * Class4.anInt50;
       int var5 = 1426002097 * Class4.anInt49;
       int var3 = 6116423;
-      DrawingArea.setRasterAreaColor(var1, var2, var4, var5, var3);
-      DrawingArea.setRasterAreaColor(1 + var1, var2 + 1, var4 - 2, 16, 0);
+      DrawingArea.method2927(var1, var2, var4, var5, var3);
+      DrawingArea.method2927(1 + var1, var2 + 1, var4 - 2, 16, 0);
       DrawingArea.method2897(1 + var1, 18 + var2, var4 - 2, var5 - 19, 0);
       Class41.aClass116_Sub23_Sub19_Sub4_Sub1_537.method3481(Class91.aString1200, var1 + 3, var2 + 14, var3, -1);
       int var6 = -453286219 * Class85.anInt991;

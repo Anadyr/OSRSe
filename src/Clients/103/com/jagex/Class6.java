@@ -1,4 +1,13 @@
 package com.jagex;
+import java.awt.Component;
+import java.awt.Graphics;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStreamWriter;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.Random;
 
 public class Class6 {
 
@@ -31,10 +40,10 @@ public class Class6 {
    static int anInt92 = 0;
    static String aString93 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"£$%^&*()-_=+[{]};:\'@#~,<.>/?\\| ";
    static boolean aBool94;
-   static boolean worldListUp = false;
+   static boolean aBool95 = false;
    static int anInt96 = -2121360341;
    static int[] anIntArray97 = new int[256];
-   static RSInterface[] aClass116_Sub15Array98;
+   static Class116_Sub15[] aClass116_Sub15Array98;
    static Class116_Sub23_Sub19_Sub3 aClass116_Sub23_Sub19_Sub3_99;
 
 

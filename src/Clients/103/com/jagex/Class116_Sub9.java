@@ -89,8 +89,8 @@ public class Class116_Sub9 extends Node {
       }
    }
 
-   Class116_Sub9(Packet var1) {
-      this.anInt1791 = var1.readUnsignedShort(-293599102);
+   Class116_Sub9(Buffer var1) {
+      this.anInt1791 = var1.readShort(-293599102);
       this.aBool1789 = var1.readSignedByte(1708176767) == 1;
       int var3 = var1.readSignedByte(1708176767);
       if(var3 >= 1 && var3 <= 4) {
@@ -98,7 +98,7 @@ public class Class116_Sub9 extends Node {
 
          int var2;
          for(var2 = 0; var2 < var3; ++var2) {
-            this.anIntArray1793[var2] = var1.readUnsignedShort(1814184791);
+            this.anIntArray1793[var2] = var1.readShort(1814184791);
          }
 
          if(var3 > 1) {
@@ -131,7 +131,7 @@ public class Class116_Sub9 extends Node {
       }
    }
 
-   boolean method1954(double var1, int var3, RSIndex var4) {
+   boolean method1954(double var1, int var3, Class99 var4) {
       int var5;
       for(var5 = 0; var5 < this.anIntArray1793.length; ++var5) {
          if(var4.method1395(this.anIntArray1793[var5], (byte)-112) == null) {
@@ -143,7 +143,7 @@ public class Class116_Sub9 extends Node {
       this.anIntArray1799 = new int[var5];
 
       for(int var7 = 0; var7 < this.anIntArray1793.length; ++var7) {
-         Class116_Sub23_Sub19_Sub3 var12 = RSFIT.method1041(var4, this.anIntArray1793[var7], (byte) -120);
+         Class116_Sub23_Sub19_Sub3 var12 = Class73.method1041(var4, this.anIntArray1793[var7], (byte)-120);
          var12.method3360();
          byte[] var14 = var12.aByteArray2762;
          int[] var9 = var12.anIntArray2761;

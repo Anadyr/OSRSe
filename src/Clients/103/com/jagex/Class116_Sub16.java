@@ -4,8 +4,8 @@ public class Class116_Sub16 extends Node {
 
    public static final int anInt2060 = 1;
    public static final int anInt2061 = 19136800;
-   RSFIT aRSIndexTable_2062;
-   CacheIndex aCacheIndex_2063;
+   Class73 aClass73_2062;
+   Class99_Sub1 aClass99_Sub1_2063;
    int anInt2064;
    public static int clientHeight;
    byte[] aByteArray2066;

@@ -30,10 +30,10 @@ public class Class8 {
       int xCalc;
       int regionID;
       if(!client.dynamicRegion) {
-         chunkY = client.packetBuffer.readShortA(-338860511);
-         chunkX = client.packetBuffer.readLEShort((byte) -126);
-         count = client.packetBuffer.readUnsignedShort(603012588);
-         Class116_Sub23_Sub17.reagionXTEAKeys = new int[count][4];
+         chunkY = client.bitBuffer.readShortA(-338860511);
+         chunkX = client.bitBuffer.readLEShort((byte) -126);
+         count = client.bitBuffer.readShort(603012588);
+         Class116_Sub23_Sub17.anIntArrayArray2472 = new int[count][4];
 
 
           ArrayList<int[]> keys = new ArrayList<int[]>();
@@ -41,16 +41,16 @@ public class Class8 {
          for(idx = 0; idx < count; ++idx) {
              int[] key = new int[4];
             for(xCalc = 0; xCalc < 4; ++xCalc) {
-                key[xCalc] = Class116_Sub23_Sub17.reagionXTEAKeys[idx][xCalc] = client.packetBuffer.readInt(-906178884);
+                key[xCalc] = Class116_Sub23_Sub17.anIntArrayArray2472[idx][xCalc] = client.bitBuffer.readInt(-906178884);
             }
              keys.add(key);
          }
 
-         client.regionIdArray = new int[count];
+         client.anIntArray2995 = new int[count];
          Class80.anIntArray920 = new int[count];
-         Class116_Sub23_Sub6.landscapeArray = new int[count];
+         Class116_Sub23_Sub6.anIntArray2282 = new int[count];
          aByteArrayArray127 = new byte[count][];
-         Tile.mapBufferArray = new byte[count][];
+         Tile.aByteArrayArray1858 = new byte[count][];
          boolean forceSend = false;
          if((48 == chunkX / 8 || 49 == chunkX / 8) && 48 == chunkY / 8) {
             forceSend = true;
@@ -69,9 +69,9 @@ public class Class8 {
                     int[] test = keys.get(count);
                    if(test != null)
                   Launcher.dumpMap(regionID, test);
-                  client.regionIdArray[count] = regionID;
-                  Class80.anIntArray920[count] = Class59_Sub1.mapFileIndex.getFileIdForName("m" + xCalc + "_" + var2, -341994779);
-                  Class116_Sub23_Sub6.landscapeArray[count] = Class59_Sub1.mapFileIndex.getFileIdForName("l" + xCalc + "_" + var2, -95452573);
+                  client.anIntArray2995[count] = regionID;
+                  Class80.anIntArray920[count] = Class59_Sub1.aClass99_Sub1_1828.method1366("m" + xCalc + "_" + var2, -341994779);
+                  Class116_Sub23_Sub6.anIntArray2282[count] = Class59_Sub1.aClass99_Sub1_1828.method1366("l" + xCalc + "_" + var2, -95452573);
                   ++count;
                }
             }
@@ -80,17 +80,17 @@ public class Class8 {
 
          Class116_Sub12.method1979(chunkX, chunkY, (byte)35);
       } else {
-         chunkY = client.packetBuffer.readUnsignedShort(769231792);
-         chunkX = client.packetBuffer.readLEShortA(-1858628130);
-         count = client.packetBuffer.readUnsignedShort(-438665915);
-         client.packetBuffer.resetBitPos((byte) 18);
+         chunkY = client.bitBuffer.readShort(769231792);
+         chunkX = client.bitBuffer.readLEShortA(-1858628130);
+         count = client.bitBuffer.readShort(-438665915);
+         client.bitBuffer.resetBitPos((byte) 18);
 
          for(idx = 0; idx < 4; ++idx) {
             for(xCalc = 0; xCalc < 13; ++xCalc) {
                for(var2 = 0; var2 < 13; ++var2) {
-                  regionID = client.packetBuffer.readBits(1, (byte) -1);
+                  regionID = client.bitBuffer.readBits(1, (byte) -1);
                   if(regionID == 1) {
-                     client.anIntArrayArrayArray2998[idx][xCalc][var2] = client.packetBuffer.readBits(26, (byte) -1);
+                     client.anIntArrayArrayArray2998[idx][xCalc][var2] = client.bitBuffer.readBits(26, (byte) -1);
                   } else {
                      client.anIntArrayArrayArray2998[idx][xCalc][var2] = -1;
                   }
@@ -98,21 +98,21 @@ public class Class8 {
             }
          }
 
-         client.packetBuffer.startBitAccess((byte) 76);
-         Class116_Sub23_Sub17.reagionXTEAKeys = new int[count][4];
+         client.bitBuffer.startBitAccess((byte) 76);
+         Class116_Sub23_Sub17.anIntArrayArray2472 = new int[count][4];
 
          
          for(idx = 0; idx < count; ++idx) {
             for(xCalc = 0; xCalc < 4; ++xCalc) {
-               Class116_Sub23_Sub17.reagionXTEAKeys[idx][xCalc] = client.packetBuffer.readInt(-1935483859);
+               Class116_Sub23_Sub17.anIntArrayArray2472[idx][xCalc] = client.bitBuffer.readInt(-1935483859);
             }
          }
 
-         client.regionIdArray = new int[count];
+         client.anIntArray2995 = new int[count];
          Class80.anIntArray920 = new int[count];
-         Class116_Sub23_Sub6.landscapeArray = new int[count];
+         Class116_Sub23_Sub6.anIntArray2282 = new int[count];
          aByteArrayArray127 = new byte[count][];
-         Tile.mapBufferArray = new byte[count][];
+         Tile.aByteArrayArray1858 = new byte[count][];
          count = 0;
  
          for(idx = 0; idx < 4; ++idx) {
@@ -126,7 +126,7 @@ public class Class8 {
                     
                      int var5;
                      for(var5 = 0; var5 < count; ++var5) {
-                        if(client.regionIdArray[var5] == var9) {
+                        if(client.anIntArray2995[var5] == var9) {
                            var9 = -1;
                            break;
                         }
@@ -135,11 +135,11 @@ public class Class8 {
                      Launcher.dumpMap(regionID, anIntArray126);
                      
                      if(var9 != -1) {
-                        client.regionIdArray[count] = var9;
+                        client.anIntArray2995[count] = var9;
                         var5 = var9 >> 8 & 255;
                         int var11 = var9 & 255;
-                        Class80.anIntArray920[count] = Class59_Sub1.mapFileIndex.getFileIdForName("m" + var5 + "_" + var11, -416918321);
-                        Class116_Sub23_Sub6.landscapeArray[count] = Class59_Sub1.mapFileIndex.getFileIdForName("l" + var5 + "_" + var11, 222447431);
+                        Class80.anIntArray920[count] = Class59_Sub1.aClass99_Sub1_1828.method1366("m" + var5 + "_" + var11, -416918321);
+                        Class116_Sub23_Sub6.anIntArray2282[count] = Class59_Sub1.aClass99_Sub1_1828.method1366("l" + var5 + "_" + var11, 222447431);
                         ++count;
                      }
                   }
@@ -189,7 +189,7 @@ public class Class8 {
          double var8 = Math.atan2((double)var14, (double)var15);
          int var16 = (int)(Math.sin(var8) * 63.0D);
          int var10 = (int)(Math.cos(var8) * 57.0D);
-         Mob.mapEdge.method3276(4 + var0 + 94 + var16 - 10, 83 + var1 - var10 - 20, 20, 20, 15, 15, var8, 256);
+         Mob.aClass116_Sub23_Sub19_Sub2_2875.method3276(4 + var0 + 94 + var16 - 10, 83 + var1 - var10 - 20, 20, 20, 15, 15, var8, 256);
       } else {
          Class62.markMiniMap(var0, var1, var2, var3, var4, var5, 637113535);
       }
@@ -203,115 +203,116 @@ public class Class8 {
    static final void decodeNpcUpdate(boolean var0, int var1) {
       client.anInt3055 = 0;
       client.npcFlagCount = 0;
-      client.packetBuffer.resetBitPos((byte) 53);
-      int localNpcs = client.packetBuffer.readBits(8, (byte) -1);
-      int index;
-      if(localNpcs < 727116725 * client.npcCount) {
-         for(index = localNpcs; index < client.npcCount * 727116725; ++index) {
-            client.pendingRemovalMobs[(client.anInt3055 += 1545207887) * 1457329839 - 1] = client.npcIndicies[index];
+      client.bitBuffer.resetBitPos((byte) 53);
+      int var2 = client.bitBuffer.readBits(8, (byte) -1);
+      int var5;
+      if(var2 < 727116725 * client.npcCount) {
+         for(var5 = var2; var5 < client.npcCount * 727116725; ++var5) {
+            client.anIntArray3060[(client.anInt3055 += 1545207887) * 1457329839 - 1] = client.npcIndicies[var5];
          }
       }
 
-      if(localNpcs > client.npcCount * 727116725) {
+      if(var2 > client.npcCount * 727116725) {
          throw new RuntimeException("");
       } else {
          client.npcCount = 0;
-         int stage;
-         int update;
+
+         int var3;
+         int var4;
          int var8;
          int var9;
-         for(index = 0; index < localNpcs; ++index) {
-            int currentIndex = client.npcIndicies[index];
-            Mob thisMob = client.aMobArray2972[currentIndex];
-            stage = client.packetBuffer.readBits(1, (byte) -1);
-            if(stage == 0) {
-               client.npcIndicies[(client.npcCount += -368645475) * 727116725 - 1] = currentIndex;
-               thisMob.anInt2626 = client.anInt2943 * 1050068427;
+         for(var5 = 0; var5 < var2; ++var5) {
+            int var6 = client.npcIndicies[var5];
+            Mob var7 = client.aMobArray2972[var6];
+            var3 = client.bitBuffer.readBits(1, (byte) -1);
+            if(var3 == 0) {
+               client.npcIndicies[(client.npcCount += -368645475) * 727116725 - 1] = var6;
+               var7.anInt2626 = client.anInt2943 * 1050068427;
             } else {
-               update = client.packetBuffer.readBits(2, (byte) -1);
-               if(update == 0) {//mask update
-                  client.npcIndicies[(client.npcCount += -368645475) * 727116725 - 1] = currentIndex;
-                  thisMob.anInt2626 = 1050068427 * client.anInt2943;
-                  client.pendingNpcFlags[(client.npcFlagCount += 2121422091) * -143667549 - 1] = currentIndex;
-               } else if(update == 1) { // walking update
-                  client.npcIndicies[(client.npcCount += -368645475) * 727116725 - 1] = currentIndex;
-                  thisMob.anInt2626 = client.anInt2943 * 1050068427;
-                  var8 = client.packetBuffer.readBits(3, (byte) -1); //walking 1
-                  thisMob.handleMovement(var8, (byte) 1, (byte) -91);
-                  var9 = client.packetBuffer.readBits(1, (byte) -1); //mask upd
+               var4 = client.bitBuffer.readBits(2, (byte) -1);
+               if(var4 == 0) {
+                  client.npcIndicies[(client.npcCount += -368645475) * 727116725 - 1] = var6;
+                  var7.anInt2626 = 1050068427 * client.anInt2943;
+                  client.pendingNpcFlags[(client.npcFlagCount += 2121422091) * -143667549 - 1] = var6;
+               } else if(var4 == 1) {
+                  client.npcIndicies[(client.npcCount += -368645475) * 727116725 - 1] = var6;
+                  var7.anInt2626 = client.anInt2943 * 1050068427;
+                  var8 = client.bitBuffer.readBits(3, (byte) -1);
+                  var7.handleMovement(var8, (byte) 1, (byte) -91);
+                  var9 = client.bitBuffer.readBits(1, (byte) -1);
                   if(1 == var9) {
-                     client.pendingNpcFlags[(client.npcFlagCount += 2121422091) * -143667549 - 1] = currentIndex;
+                     client.pendingNpcFlags[(client.npcFlagCount += 2121422091) * -143667549 - 1] = var6;
                   }
-               } else if(2 == update) { //multi tile walking
-                  client.npcIndicies[(client.npcCount += -368645475) * 727116725 - 1] = currentIndex;
-                  thisMob.anInt2626 = 1050068427 * client.anInt2943;
-                  var8 = client.packetBuffer.readBits(3, (byte) -1); //walking 2
-                  thisMob.handleMovement(var8, (byte) 2, (byte) -60);
-                  var9 = client.packetBuffer.readBits(3, (byte) -1); //walking 2
-                  thisMob.handleMovement(var9, (byte) 2, (byte) 73);
-                  int var10 = client.packetBuffer.readBits(1, (byte) -1); //mask update
+               } else if(2 == var4) {
+                  client.npcIndicies[(client.npcCount += -368645475) * 727116725 - 1] = var6;
+                  var7.anInt2626 = 1050068427 * client.anInt2943;
+                  var8 = client.bitBuffer.readBits(3, (byte) -1);
+                  var7.handleMovement(var8, (byte) 2, (byte) -60);
+                  var9 = client.bitBuffer.readBits(3, (byte) -1);
+                  var7.handleMovement(var9, (byte) 2, (byte) 73);
+                  int var10 = client.bitBuffer.readBits(1, (byte) -1);
                   if(1 == var10) {
-                     client.pendingNpcFlags[(client.npcFlagCount += 2121422091) * -143667549 - 1] = currentIndex;
+                     client.pendingNpcFlags[(client.npcFlagCount += 2121422091) * -143667549 - 1] = var6;
                   }
-               } else if(3 == update) { //remove mob
-                  client.pendingRemovalMobs[(client.anInt3055 += 1545207887) * 1457329839 - 1] = currentIndex;
+               } else if(3 == var4) {
+                  client.anIntArray3060[(client.anInt3055 += 1545207887) * 1457329839 - 1] = var6;
                }
             }
          }
-         while(client.packetBuffer.getBitPosition(client.packetLength * 371800591, (byte) -90) >= 27) {
-            localNpcs = client.packetBuffer.readBits(15, (byte) -1);
 
-            if(32767 == localNpcs) { //this no longer happens 27 - 15 = 12 - 10 = 2 - 2 = 0, meaning the 32767 will just crash client because of too many bits left in stream.
+         while(client.bitBuffer.getBitPosition(client.anInt2980 * 371800591, (byte) -90) >= 27) {
+            var2 = client.bitBuffer.readBits(15, (byte) -1);
+            if(32767 == var2) {
                break;
             }
 
             boolean var11 = false;
-            if(null == client.aMobArray2972[localNpcs]) {
-               client.aMobArray2972[localNpcs] = new Mob();
+            if(null == client.aMobArray2972[var2]) {
+               client.aMobArray2972[var2] = new Mob();
                var11 = true;
             }
 
-            Mob var12 = client.aMobArray2972[localNpcs];
-            client.npcIndicies[(client.npcCount += -368645475) * 727116725 - 1] = localNpcs;
+            Mob var12 = client.aMobArray2972[var2];
+            client.npcIndicies[(client.npcCount += -368645475) * 727116725 - 1] = var2;
             var12.anInt2626 = client.anInt2943 * 1050068427;
             int var13;
             if(var0) {
-               var13 = client.packetBuffer.readBits(8, (byte) -1);
+               var13 = client.bitBuffer.readBits(8, (byte) -1);
                if(var13 > 127) {
                   var13 -= 256;
                }
             } else {
-               var13 = client.packetBuffer.readBits(5, (byte) -1);
+               var13 = client.bitBuffer.readBits(5, (byte) -1);
                if(var13 > 15) {
                   var13 -= 32;
                }
             }
 
             if(var0) {
-               stage = client.packetBuffer.readBits(8, (byte) -1);
-               if(stage > 127) {
-                  stage -= 256;
+               var3 = client.bitBuffer.readBits(8, (byte) -1);
+               if(var3 > 127) {
+                  var3 -= 256;
                }
             } else {
-               stage = client.packetBuffer.readBits(5, (byte) -1);
-               if(stage > 15) {
-                  stage -= 32;
+               var3 = client.bitBuffer.readBits(5, (byte) -1);
+               if(var3 > 15) {
+                  var3 -= 32;
                }
             }
 
-            var12.definition = Class116_Sub23_Sub15.getMobDefinition(client.packetBuffer.readBits(14, (byte) -1), -1211850206);
-            update = client.anIntArray2959[client.packetBuffer.readBits(3, (byte) -1)];
+            var12.definition = Class116_Sub23_Sub15.method2705(client.bitBuffer.readBits(14, (byte) -1), -1211850206);
+            var4 = client.anIntArray2959[client.bitBuffer.readBits(3, (byte) -1)];
             if(var11) {
-               var12.anInt2631 = (var12.anInt2613 = update * 518992781) * -1253637257;
+               var12.anInt2631 = (var12.anInt2613 = var4 * 518992781) * -1253637257;
             }
 
-            var8 = client.packetBuffer.readBits(1, (byte) -1);
-            var9 = client.packetBuffer.readBits(1, (byte) -1);
+            var8 = client.bitBuffer.readBits(1, (byte) -1);
+            var9 = client.bitBuffer.readBits(1, (byte) -1);
             if(var9 == 1) {
-               client.pendingNpcFlags[(client.npcFlagCount += 2121422091) * -143667549 - 1] = localNpcs;
+               client.pendingNpcFlags[(client.npcFlagCount += 2121422091) * -143667549 - 1] = var2;
             }
 
-            var12.tileSize = 1447916577 * var12.definition.tileSize;
+            var12.anInt2582 = 1447916577 * var12.definition.tileSize;
             var12.anInt2630 = 506128019 * var12.definition.anInt2333;
             if(0 == var12.anInt2630 * 1361576967) {
                var12.anInt2613 = 0;
@@ -324,24 +325,26 @@ public class Class8 {
             var12.anInt2639 = 1706784279 * var12.definition.anInt2335;
             var12.anInt2584 = var12.definition.anInt2314 * -1634865443;
             var12.anInt2585 = var12.definition.anInt2322 * 118379263;
-            var12.method3540(stage + Class79.ourPlayer.xMovementSteps[0], var13 + Class79.ourPlayer.yMovementSteps[0], var8 == 1, (byte)-66);
+            var12.method3540(var3 + Class79.aPlayer_909.xMovementSteps[0], var13 + Class79.aPlayer_909.yMovementSteps[0], var8 == 1, (byte)-66);
          }
-         client.packetBuffer.startBitAccess((byte) 123);
-         Class116_Sub23_Sub2.decodeMobMasks(-1361601743);
 
-         for(localNpcs = 0; localNpcs < client.anInt3055 * 1457329839; ++localNpcs) {
-            index = client.pendingRemovalMobs[localNpcs];
-            if(client.aMobArray2972[index].anInt2626 * -494855465 != -1040073859 * client.anInt2943) {
-               client.aMobArray2972[index].definition = null;
-               client.aMobArray2972[index] = null;
+         client.bitBuffer.startBitAccess((byte) 123);
+         Class116_Sub23_Sub2.decodeNpcAdditions(-1361601743);
+
+         for(var2 = 0; var2 < client.anInt3055 * 1457329839; ++var2) {
+            var5 = client.anIntArray3060[var2];
+            if(client.aMobArray2972[var5].anInt2626 * -494855465 != -1040073859 * client.anInt2943) {
+               client.aMobArray2972[var5].definition = null;
+               client.aMobArray2972[var5] = null;
             }
          }
-         if(371800591 * client.packetLength != 314639891 * client.packetBuffer.position) {
-            throw new RuntimeException(314639891 * client.packetBuffer.position + Class41.aString538 + client.packetLength * 371800591);
+
+         if(371800591 * client.anInt2980 != 314639891 * client.bitBuffer.position) {
+            throw new RuntimeException(314639891 * client.bitBuffer.position + Class41.aString538 + client.anInt2980 * 371800591);
          } else {
-            for(localNpcs = 0; localNpcs < 727116725 * client.npcCount; ++localNpcs) {
-               if(null == client.aMobArray2972[client.npcIndicies[localNpcs]]) {
-                  throw new RuntimeException(localNpcs + Class41.aString538 + 727116725 * client.npcCount);
+            for(var2 = 0; var2 < 727116725 * client.npcCount; ++var2) {
+               if(null == client.aMobArray2972[client.npcIndicies[var2]]) {
+                  throw new RuntimeException(var2 + Class41.aString538 + 727116725 * client.npcCount);
                }
             }
 

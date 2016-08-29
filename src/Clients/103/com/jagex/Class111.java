@@ -17,7 +17,7 @@ public class Class111 implements Iterator {
       Node var1;
       if(this.aClass116_1480 != this.aClass124_1482.aClass116Array1552[this.anInt1481 - 1]) {
          var1 = this.aClass116_1480;
-         this.aClass116_1480 = var1.next;
+         this.aClass116_1480 = var1.prevNode;
          this.aClass116_1479 = var1;
          return var1;
       } else {
@@ -26,17 +26,17 @@ public class Class111 implements Iterator {
                return null;
             }
 
-            var1 = this.aClass124_1482.aClass116Array1552[this.anInt1481++].next;
+            var1 = this.aClass124_1482.aClass116Array1552[this.anInt1481++].prevNode;
          } while(var1 == this.aClass124_1482.aClass116Array1552[this.anInt1481 - 1]);
 
-         this.aClass116_1480 = var1.next;
+         this.aClass116_1480 = var1.prevNode;
          this.aClass116_1479 = var1;
          return var1;
       }
    }
 
    void method1512() {
-      this.aClass116_1480 = this.aClass124_1482.aClass116Array1552[0].next;
+      this.aClass116_1480 = this.aClass124_1482.aClass116Array1552[0].prevNode;
       this.anInt1481 = 1;
       this.aClass116_1479 = null;
    }
@@ -55,8 +55,8 @@ public class Class111 implements Iterator {
          return true;
       } else {
          while(this.anInt1481 < this.aClass124_1482.anInt1554) {
-            if(this.aClass124_1482.aClass116Array1552[this.anInt1481++].next != this.aClass124_1482.aClass116Array1552[this.anInt1481 - 1]) {
-               this.aClass116_1480 = this.aClass124_1482.aClass116Array1552[this.anInt1481 - 1].next;
+            if(this.aClass124_1482.aClass116Array1552[this.anInt1481++].prevNode != this.aClass124_1482.aClass116Array1552[this.anInt1481 - 1]) {
+               this.aClass116_1480 = this.aClass124_1482.aClass116Array1552[this.anInt1481 - 1].prevNode;
                return true;
             }
 

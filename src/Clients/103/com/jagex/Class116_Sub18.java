@@ -2,13 +2,13 @@ package com.jagex;
 
 public class Class116_Sub18 extends Node {
 
-   Hashtable aHashtable_2107;
+   Class127 aClass127_2107;
    byte[] aByteArray2108;
 
 
    void method2315() {
-      if(this.aHashtable_2107 == null) {
-         this.aHashtable_2107 = new Hashtable(16);
+      if(this.aClass127_2107 == null) {
+         this.aClass127_2107 = new Class127(16);
          int[] var3 = new int[16];
          int[] var5 = new int[16];
          var5[9] = 128;
@@ -68,10 +68,10 @@ public class Class116_Sub18 extends Node {
                   var12 = var9 >> 16 & 127;
                   if(var12 > 0) {
                      int var11 = var5[var10];
-                     Class116_Sub22 var14 = (Class116_Sub22)this.aHashtable_2107.get((long) var11);
+                     Class116_Sub22 var14 = (Class116_Sub22)this.aClass127_2107.method1658((long)var11);
                      if(var14 == null) {
                         var14 = new Class116_Sub22(new byte[128]);
-                        this.aHashtable_2107.put(var14, (long) var11);
+                        this.aClass127_2107.method1666(var14, (long)var11);
                      }
 
                      var14.aByteArray2143[var13] = 1;
@@ -85,10 +85,10 @@ public class Class116_Sub18 extends Node {
       }
    }
 
-   Class116_Sub18(Packet var1) {
+   Class116_Sub18(Buffer var1) {
       var1.position = (var1.payload.length - 3) * -184175589;
       int var2 = var1.readSignedByte(1708176767);
-      int var3 = var1.readUnsignedShort(-118457989);
+      int var3 = var1.readShort(-118457989);
       int var24 = 14 + var2 * 10;
       var1.position = 0;
       int var5 = 0;
@@ -246,7 +246,7 @@ public class Class116_Sub18 extends Node {
       int var58 = var1.position * 314639891;
       var1.position += var5 * -552526767;
       this.aByteArray2108 = new byte[var24];
-      Packet var17 = new Packet(this.aByteArray2108);
+      Buffer var17 = new Buffer(this.aByteArray2108);
       var17.writeInt(1297377380, (byte)118);
       var17.writeInt(6, (byte)49);
       var17.writeShort(var2 > 1 ? 1 : 0, -1645400134);
@@ -402,12 +402,12 @@ public class Class116_Sub18 extends Node {
    }
 
    void method2320() {
-      this.aHashtable_2107 = null;
+      this.aClass127_2107 = null;
    }
 
-   public static Class116_Sub18 method2321(RSIndex var0, int var1, int var2) {
-      byte[] var3 = var0.getFiles(var1, var2, -1266344289);
-      return var3 == null?null:new Class116_Sub18(new Packet(var3));
+   public static Class116_Sub18 method2321(Class99 var0, int var1, int var2) {
+      byte[] var3 = var0.method1394(var1, var2, -1266344289);
+      return var3 == null?null:new Class116_Sub18(new Buffer(var3));
    }
 
 }

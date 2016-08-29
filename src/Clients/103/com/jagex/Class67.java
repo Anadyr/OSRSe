@@ -56,20 +56,20 @@ public class Class67 {
 
    static final int method978(int var0) {
       if(Class116_Sub5.aClass29_1727.aBool403) {
-         return GameInterface.anInt1819 * -747958745;
+         return Class116_Sub11.anInt1819 * -747958745;
       } else {
          int var5 = 3;
          if(Class78.anInt904 * 1162853107 < 310) {
             int var3 = 282154897 * Class116_Sub23_Sub16_Sub5.anInt2740 >> 7;
             int var2 = Class83.anInt968 * -324676025 >> 7;
-            int var4 = 1272643751 * Class79.ourPlayer.anInt2609 >> 7;
-            int var1 = -1801433343 * Class79.ourPlayer.anInt2579 >> 7;
+            int var4 = 1272643751 * Class79.aPlayer_909.anInt2609 >> 7;
+            int var1 = -1801433343 * Class79.aPlayer_909.anInt2579 >> 7;
             if(var3 < 0 || var2 < 0 || var3 >= 104 || var2 >= 104) {
-               return GameInterface.anInt1819 * -747958745;
+               return Class116_Sub11.anInt1819 * -747958745;
             }
 
-            if((Class47.aByteArrayArrayArray634[GameInterface.anInt1819 * -747958745][var3][var2] & 4) != 0) {
-               var5 = GameInterface.anInt1819 * -747958745;
+            if((Class47.aByteArrayArrayArray634[Class116_Sub11.anInt1819 * -747958745][var3][var2] & 4) != 0) {
+               var5 = Class116_Sub11.anInt1819 * -747958745;
             }
 
             int var6;
@@ -99,8 +99,8 @@ public class Class67 {
                      --var3;
                   }
 
-                  if(0 != (Class47.aByteArrayArrayArray634[-747958745 * GameInterface.anInt1819][var3][var2] & 4)) {
-                     var5 = -747958745 * GameInterface.anInt1819;
+                  if(0 != (Class47.aByteArrayArrayArray634[-747958745 * Class116_Sub11.anInt1819][var3][var2] & 4)) {
+                     var5 = -747958745 * Class116_Sub11.anInt1819;
                   }
 
                   var9 += var8;
@@ -112,8 +112,8 @@ public class Class67 {
                         --var2;
                      }
 
-                     if((Class47.aByteArrayArrayArray634[GameInterface.anInt1819 * -747958745][var3][var2] & 4) != 0) {
-                        var5 = -747958745 * GameInterface.anInt1819;
+                     if((Class47.aByteArrayArrayArray634[Class116_Sub11.anInt1819 * -747958745][var3][var2] & 4) != 0) {
+                        var5 = -747958745 * Class116_Sub11.anInt1819;
                      }
                   }
                }
@@ -128,8 +128,8 @@ public class Class67 {
                      --var2;
                   }
 
-                  if((Class47.aByteArrayArrayArray634[GameInterface.anInt1819 * -747958745][var3][var2] & 4) != 0) {
-                     var5 = GameInterface.anInt1819 * -747958745;
+                  if((Class47.aByteArrayArrayArray634[Class116_Sub11.anInt1819 * -747958745][var3][var2] & 4) != 0) {
+                     var5 = Class116_Sub11.anInt1819 * -747958745;
                   }
 
                   var9 += var8;
@@ -141,22 +141,22 @@ public class Class67 {
                         --var3;
                      }
 
-                     if(0 != (Class47.aByteArrayArrayArray634[-747958745 * GameInterface.anInt1819][var3][var2] & 4)) {
-                        var5 = -747958745 * GameInterface.anInt1819;
+                     if(0 != (Class47.aByteArrayArrayArray634[-747958745 * Class116_Sub11.anInt1819][var3][var2] & 4)) {
+                        var5 = -747958745 * Class116_Sub11.anInt1819;
                      }
                   }
                }
             }
          }
 
-         if(1272643751 * Class79.ourPlayer.anInt2609 >= 0 && -1801433343 * Class79.ourPlayer.anInt2579 >= 0 && 1272643751 * Class79.ourPlayer.anInt2609 < 13312 && -1801433343 * Class79.ourPlayer.anInt2579 < 13312) {
-            if(0 != (Class47.aByteArrayArrayArray634[GameInterface.anInt1819 * -747958745][Class79.ourPlayer.anInt2609 * 1272643751 >> 7][Class79.ourPlayer.anInt2579 * -1801433343 >> 7] & 4)) {
-               var5 = GameInterface.anInt1819 * -747958745;
+         if(1272643751 * Class79.aPlayer_909.anInt2609 >= 0 && -1801433343 * Class79.aPlayer_909.anInt2579 >= 0 && 1272643751 * Class79.aPlayer_909.anInt2609 < 13312 && -1801433343 * Class79.aPlayer_909.anInt2579 < 13312) {
+            if(0 != (Class47.aByteArrayArrayArray634[Class116_Sub11.anInt1819 * -747958745][Class79.aPlayer_909.anInt2609 * 1272643751 >> 7][Class79.aPlayer_909.anInt2579 * -1801433343 >> 7] & 4)) {
+               var5 = Class116_Sub11.anInt1819 * -747958745;
             }
 
             return var5;
          } else {
-            return -747958745 * GameInterface.anInt1819;
+            return -747958745 * Class116_Sub11.anInt1819;
          }
       }
    }

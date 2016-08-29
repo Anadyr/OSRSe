@@ -37,7 +37,7 @@ public abstract class Class89 {
             Sounds var11 = client.aClass15Array3181[var1];
             if(var11 == null) {
                Sounds var10000 = (Sounds)null;
-               var11 = Sounds.method256(Class116_Sub23_Sub13.aCacheIndex_2424, client.anIntArray3177[var1], 0);
+               var11 = Sounds.method256(Class116_Sub23_Sub13.aClass99_Sub1_2424, client.anIntArray3177[var1], 0);
                if(null == var11) {
                   continue;
                }
@@ -51,13 +51,13 @@ public abstract class Class89 {
                if(client.anIntArray3180[var1] != 0) {
                   int var7 = 128 * (client.anIntArray3180[var1] & 255);
                   int var8 = client.anIntArray3180[var1] >> 16 & 255;
-                  int var2 = 128 * var8 + 64 - Class79.ourPlayer.anInt2609 * 1272643751;
+                  int var2 = 128 * var8 + 64 - Class79.aPlayer_909.anInt2609 * 1272643751;
                   if(var2 < 0) {
                      var2 = -var2;
                   }
 
                   int var5 = client.anIntArray3180[var1] >> 8 & 255;
-                  int var6 = 64 + 128 * var5 - Class79.ourPlayer.anInt2579 * -1801433343;
+                  int var6 = 64 + 128 * var5 - Class79.aPlayer_909.anInt2579 * -1801433343;
                   if(var6 < 0) {
                      var6 = -var6;
                   }
@@ -81,7 +81,7 @@ public abstract class Class89 {
                   Class116_Sub2_Sub1 var12 = var11.method261().method2687(Class70.aClass17_844);
                   Class116_Sub4_Sub2 var13 = Class116_Sub4_Sub2.method2800(var12, 100, var9);
                   var13.method2737(client.anIntArray3019[var1] - 1);
-                  RelationList.aClass116_Sub4_Sub1_673.method2706(var13);
+                  Class50.aClass116_Sub4_Sub1_673.method2706(var13);
                }
 
                client.anIntArray2964[var1] = -100;
@@ -99,7 +99,7 @@ public abstract class Class89 {
 
          if(!var10) {
             if(0 != client.anInt3171 * -1994948003 && 850867613 * client.anInt3172 != -1) {
-               Class80.method1099(Class2.aCacheIndex_23, client.anInt3172 * 850867613, 0, client.anInt3171 * -1994948003, false, (short)19161);
+               Class80.method1099(Class2.aClass99_Sub1_23, client.anInt3172 * 850867613, 0, client.anInt3171 * -1994948003, false, (short)19161);
             }
 
             client.aBool3159 = false;

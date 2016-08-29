@@ -15,7 +15,7 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
    short[] aShortArray2184;
    public boolean aBool2185 = false;
    static Class116_Sub17 aClass116_Sub17_2186;
-   static RSIndex aRSIndex_2187;
+   static Class99 aClass99_2187;
 
    public Model method2358(byte var1) {
       if(null == this.anIntArray2179) {
@@ -24,7 +24,7 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
          Model[] var3 = new Model[this.anIntArray2179.length];
 
          for(int var4 = 0; var4 < this.anIntArray2179.length; ++var4) {
-            var3[var4] = Model.method3114(client.aRSIndex_1618, this.anIntArray2179[var4], 0);
+            var3[var4] = Model.method3114(client.aClass99_1618, this.anIntArray2179[var4], 0);
          }
 
          Model var5;
@@ -51,7 +51,7 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
       }
    }
 
-   void method2359(Packet var1, int var2, byte var3) {
+   void method2359(Buffer var1, int var2, byte var3) {
       if(var2 == 1) {
          this.anInt2178 = var1.readSignedByte(1708176767) * -188525871;
       } else {
@@ -62,7 +62,7 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
             this.anIntArray2179 = new int[var4];
 
             for(var5 = 0; var5 < var4; ++var5) {
-               this.anIntArray2179[var5] = var1.readUnsignedShort(2110343470);
+               this.anIntArray2179[var5] = var1.readShort(2110343470);
             }
          } else if(3 == var2) {
             this.aBool2185 = true;
@@ -72,8 +72,8 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
             this.aShortArray2184 = new short[var4];
 
             for(var5 = 0; var5 < var4; ++var5) {
-               this.aShortArray2180[var5] = (short)var1.readUnsignedShort(-259159103);
-               this.aShortArray2184[var5] = (short)var1.readUnsignedShort(1243227009);
+               this.aShortArray2180[var5] = (short)var1.readShort(-259159103);
+               this.aShortArray2184[var5] = (short)var1.readShort(1243227009);
             }
          } else if(41 == var2) {
             var4 = var1.readSignedByte(1708176767);
@@ -81,11 +81,11 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
             this.aShortArray2183 = new short[var4];
 
             for(var5 = 0; var5 < var4; ++var5) {
-               this.aShortArray2182[var5] = (short)var1.readUnsignedShort(1971325418);
-               this.aShortArray2183[var5] = (short)var1.readUnsignedShort(1072310901);
+               this.aShortArray2182[var5] = (short)var1.readShort(1971325418);
+               this.aShortArray2183[var5] = (short)var1.readShort(1072310901);
             }
          } else if(var2 >= 60 && var2 < 70) {
-            this.anIntArray2181[var2 - 60] = var1.readUnsignedShort(1068775301);
+            this.anIntArray2181[var2 - 60] = var1.readShort(1068775301);
          }
       }
 
@@ -98,7 +98,7 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
          boolean var2 = true;
 
          for(int var3 = 0; var3 < this.anIntArray2179.length; ++var3) {
-            if(!client.aRSIndex_1618.method1373(this.anIntArray2179[var3], 0, (byte)1)) {
+            if(!client.aClass99_1618.method1373(this.anIntArray2179[var3], 0, (byte)1)) {
                var2 = false;
             }
          }
@@ -113,7 +113,7 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
 
       for(int var4 = 0; var4 < 5; ++var4) {
          if(-1 != this.anIntArray2181[var4]) {
-            var2[var5++] = Model.method3114(client.aRSIndex_1618, this.anIntArray2181[var4], 0);
+            var2[var5++] = Model.method3114(client.aClass99_1618, this.anIntArray2181[var4], 0);
          }
       }
 
@@ -134,18 +134,18 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
       return var6;
    }
 
-   static final void decodeMobMasks(int var0) {
+   static final void decodeNpcAdditions(int var0) {
       for(int var1 = 0; var1 < -143667549 * client.npcFlagCount; ++var1) {
          int var3 = client.pendingNpcFlags[var1];
          Mob var4 = client.aMobArray2972[var3];
-         int var2 = client.packetBuffer.readSignedByte(1708176767);
-         if(0 != (var2 & 4)) { //forcechat
-            var4.forceChatString = client.packetBuffer.readString(61376769);
+         int var2 = client.bitBuffer.readSignedByte(1708176767);
+         if(0 != (var2 & 4)) {
+            var4.forceChatString = client.bitBuffer.readString(61376769);
             var4.anInt2598 = -569035212;
          }
 
-         if(0 != (var2 & 16)) { //switch id
-            var4.anInt2603 = client.packetBuffer.readLEShort((byte) -96) * 1611414733;
+         if(0 != (var2 & 16)) {
+            var4.anInt2603 = client.bitBuffer.readLEShort((byte) -96) * 1611414733;
             if(734924805 * var4.anInt2603 == '\uffff') {
                var4.anInt2603 = -1611414733;
             }
@@ -154,9 +154,9 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
          int var5;
          int var6;
          int var7;
-         if((var2 & 1) != 0) { //animation
-            var6 = client.packetBuffer.readLEShortA(-2071246787);
-            var5 = client.packetBuffer.readShortA(-338860511);
+         if((var2 & 1) != 0) {
+            var6 = client.bitBuffer.readLEShortA(-2071246787);
+            var5 = client.bitBuffer.readShortA(-338860511);
             var7 = var4.anInt2609 * 1272643751 - (var6 - 1426698711 * Class116_Sub17.anInt2105 - Class116_Sub17.anInt2105 * 1426698711) * 64;
             int var8 = var4.anInt2579 * -1801433343 - (var5 - 714823515 * Class33.anInt456 - Class33.anInt456 * 714823515) * 64;
             if(0 != var7 || 0 != var8) {
@@ -164,43 +164,43 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
             }
          }
 
-         if((var2 & 64) != 0) { //hit1
-            var6 = client.packetBuffer.readByteS((byte) -35);
-            var5 = client.packetBuffer.readByteA((byte) -1);
+         if((var2 & 64) != 0) {
+            var6 = client.bitBuffer.readByteS((byte) -35);
+            var5 = client.bitBuffer.readByteA((byte) -1);
             var4.method3102(var6, var5, -1040073859 * client.anInt2943, 52643890);
             var4.anInt2600 = 568824035 * client.anInt2943 + -1453430444;
-            var4.anInt2601 = client.packetBuffer.readLEShort((byte) -19) * -182432293;
-            var4.anInt2602 = client.packetBuffer.readUnsignedShort(2035754905) * 119158941;
+            var4.anInt2601 = client.bitBuffer.readLEShort((byte) -19) * -182432293;
+            var4.anInt2602 = client.bitBuffer.readShort(2035754905) * 119158941;
          }
 
-         if((var2 & 128) != 0) {//gfx
-            var4.currentGraphic = client.packetBuffer.readLEShortA(-1875472717) * -1738418729;
-            var6 = client.packetBuffer.readInt(-2048148009);
-            var4.currentGraphicDelay = (var6 >> 16) * 878509897;
-            var4.currentGraphicHeight = 1621235571 * (client.anInt2943 * -1040073859 + (var6 & '\uffff'));
+         if((var2 & 128) != 0) {
+            var4.anInt2614 = client.bitBuffer.readLEShortA(-1875472717) * -1738418729;
+            var6 = client.bitBuffer.readInt(-2048148009);
+            var4.anInt2589 = (var6 >> 16) * 878509897;
+            var4.anInt2617 = 1621235571 * (client.anInt2943 * -1040073859 + (var6 & '\uffff'));
             var4.anInt2595 = 0;
             var4.anInt2616 = 0;
-            if(489022907 * var4.currentGraphicHeight > -1040073859 * client.anInt2943) {
+            if(489022907 * var4.anInt2617 > -1040073859 * client.anInt2943) {
                var4.anInt2595 = -1825378913;
             }
 
-            if(1631645159 * var4.currentGraphic == '\uffff') {
-               var4.currentGraphic = 1738418729;
+            if(1631645159 * var4.anInt2614 == '\uffff') {
+               var4.anInt2614 = 1738418729;
             }
          }
 
-         if((var2 & 32) != 0) { //hit2
-            var6 = client.packetBuffer.readByteC(1591384393);
-            var5 = client.packetBuffer.readSignedByte(1708176767);
+         if((var2 & 32) != 0) {
+            var6 = client.bitBuffer.readByteC(1591384393);
+            var5 = client.bitBuffer.readSignedByte(1708176767);
             var4.method3102(var6, var5, -1040073859 * client.anInt2943, 1619799537);
             var4.anInt2600 = -1453430444 + 568824035 * client.anInt2943;
-            var4.anInt2601 = client.packetBuffer.readLEShort((byte) -20) * -182432293;
-            var4.anInt2602 = client.packetBuffer.readLEShort((byte) -76) * 119158941;
+            var4.anInt2601 = client.bitBuffer.readLEShort((byte) -20) * -182432293;
+            var4.anInt2602 = client.bitBuffer.readLEShort((byte) -76) * 119158941;
          }
 
-         if(0 != (var2 & 8)) { //switch id
-            var4.definition = Class116_Sub23_Sub15.getMobDefinition(client.packetBuffer.readLEShortA(-2078235842), -987634260);
-            var4.tileSize = var4.definition.tileSize * 1447916577;
+         if(0 != (var2 & 8)) {
+            var4.definition = Class116_Sub23_Sub15.method2705(client.bitBuffer.readLEShortA(-2078235842), -987634260);
+            var4.anInt2582 = var4.definition.tileSize * 1447916577;
             var4.anInt2630 = var4.definition.anInt2333 * 506128019;
             var4.anInt2586 = -147360311 * var4.definition.anInt2316;
             var4.anInt2629 = var4.definition.anInt2315 * 404950129;
@@ -212,12 +212,12 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
          }
 
          if((var2 & 2) != 0) {
-            var6 = client.packetBuffer.readUnsignedShort(1738557930);
+            var6 = client.bitBuffer.readShort(1738557930);
             if('\uffff' == var6) {
                var6 = -1;
             }
 
-            var5 = client.packetBuffer.readByteA((byte) -1);
+            var5 = client.bitBuffer.readByteA((byte) -1);
             if(-922607859 * var4.anInt2587 == var6 && -1 != var6) {
                var7 = Class116_Sub8.method1946(var6, -1164132528).anInt2260 * 972933669;
                if(1 == var7) {
@@ -243,7 +243,7 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
 
    }
 
-   void method2375(Packet var1, int var2) {
+   void method2375(Buffer var1, int var2) {
       while(true) {
          int var3 = var1.readSignedByte(1708176767);
          if(var3 == 0) {
@@ -254,43 +254,44 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
       }
    }
 
-   public static boolean loadInterface(int interfaceId, int var1) {
-      if(RSInterface.interfacesLoaded[interfaceId]) {
+   public static boolean method2377(int var0, int var1) {
+      if(Class116_Sub15.aBoolArray1916[var0]) {
          return true;
-      } else if(!RSInterface.interfaceIndex.method1420(interfaceId, -2055197806)) {
+      } else if(!Class116_Sub15.aClass99_1917.method1420(var0, -2055197806)) {
          return false;
       } else {
-         int var2 = RSInterface.interfaceIndex.method1361(interfaceId, -824500445);
+         int var2 = Class116_Sub15.aClass99_1917.method1361(var0, -824500445);
          if(var2 == 0) {
-            RSInterface.interfacesLoaded[interfaceId] = true;
+            Class116_Sub15.aBoolArray1916[var0] = true;
             return true;
          } else {
-            if(RSInterface.mainInterfaceArray[interfaceId] == null) {
-               RSInterface.mainInterfaceArray[interfaceId] = new RSInterface[var2];
+            if(Class116_Sub15.aClass116_Sub15ArrayArray1956[var0] == null) {
+               Class116_Sub15.aClass116_Sub15ArrayArray1956[var0] = new Class116_Sub15[var2];
             }
-            for(int childId = 0; childId < var2; ++childId) {
-               if(null == RSInterface.mainInterfaceArray[interfaceId][childId]) {
-                  byte[] data = RSInterface.interfaceIndex.getFiles(interfaceId, childId, 880707290);
-                  if(null != data) {
-                     RSInterface.mainInterfaceArray[interfaceId][childId] = new RSInterface();
-                     RSInterface.mainInterfaceArray[interfaceId][childId].hash = ((interfaceId << 16) + childId) * 1463664765;
-                     if(-1 == data[0]) {
-                        RSInterface.mainInterfaceArray[interfaceId][childId].parseNew(new Packet(data), (short) 21739);
+
+            for(int var3 = 0; var3 < var2; ++var3) {
+               if(null == Class116_Sub15.aClass116_Sub15ArrayArray1956[var0][var3]) {
+                  byte[] var4 = Class116_Sub15.aClass99_1917.method1394(var0, var3, 880707290);
+                  if(null != var4) {
+                     Class116_Sub15.aClass116_Sub15ArrayArray1956[var0][var3] = new Class116_Sub15();
+                     Class116_Sub15.aClass116_Sub15ArrayArray1956[var0][var3].anInt1925 = ((var0 << 16) + var3) * 1463664765;
+                     if(-1 == var4[0]) {
+                        Class116_Sub15.aClass116_Sub15ArrayArray1956[var0][var3].method2247(new Buffer(var4), (short)21739);
                      } else {
-                        RSInterface.mainInterfaceArray[interfaceId][childId].parseOld(new Packet(data), -2113186590);
+                        Class116_Sub15.aClass116_Sub15ArrayArray1956[var0][var3].method2290(new Buffer(var4), -2113186590);
                      }
                   }
                }
             }
 
-            RSInterface.interfacesLoaded[interfaceId] = true;
+            Class116_Sub15.aBoolArray1916[var0] = true;
             return true;
          }
       }
    }
 
-   static final boolean method2384(RSInterface var0, int var1) {
-      int var2 = -179718399 * var0.clientCode;
+   static final boolean method2384(Class116_Sub15 var0, int var1) {
+      int var2 = -179718399 * var0.anInt2016;
       if(205 == var2) {
          client.anInt2987 = -453788862;
          return true;
@@ -340,7 +341,7 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
       boolean var2 = true;
 
       for(int var3 = 0; var3 < 5; ++var3) {
-         if(-1 != this.anIntArray2181[var3] && !client.aRSIndex_1618.method1373(this.anIntArray2181[var3], 0, (byte)1)) {
+         if(-1 != this.anIntArray2181[var3] && !client.aClass99_1618.method1373(this.anIntArray2181[var3], 0, (byte)1)) {
             var2 = false;
          }
       }
@@ -353,11 +354,11 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
       return var2 != 0?(1 == var2?var1:(2 == var2?7 - var0:7 - var1)):var0;
    }
 
-   public static void doReflectionCheck(Packet packet, int var1, int var2) {
+   public static void doReflectionCheck(Buffer buffer, int var1, int var2) {
 
       ReflectionNode var3 = new ReflectionNode();
-      var3.anInt2147 = packet.readSignedByte(1708176767) * 669809141;
-      var3.anInt2154 = packet.readInt(-370243691) * 554885847;
+      var3.anInt2147 = buffer.readSignedByte(1708176767) * 669809141;
+      var3.anInt2154 = buffer.readInt(-370243691) * 554885847;
       var3.anIntArray2148 = new int[var3.anInt2147 * -707810723];
       var3.anIntArray2149 = new int[var3.anInt2147 * -707810723];
       var3.aFieldArray2150 = new Field[-707810723 * var3.anInt2147];
@@ -367,29 +368,29 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
 
       for(int var4 = 0; var4 < -707810723 * var3.anInt2147; ++var4) {
          try {
-            int var5 = packet.readSignedByte(1708176767);
+            int var5 = buffer.readSignedByte(1708176767);
             String var6;
             String var7;
             int var8;
             if(0 != var5 && var5 != 1 && var5 != 2) {
                if(var5 == 3 || 4 == var5) {
-                  var6 = packet.readString(61376769);
-                  var7 = packet.readString(61376769);
-                  var8 = packet.readSignedByte(1708176767);
+                  var6 = buffer.readString(61376769);
+                  var7 = buffer.readString(61376769);
+                  var8 = buffer.readSignedByte(1708176767);
                   String[] var9 = new String[var8];
 
                   for(int var10 = 0; var10 < var8; ++var10) {
-                     var9[var10] = packet.readString(61376769);
+                     var9[var10] = buffer.readString(61376769);
                   }
 
-                  String var26 = packet.readString(61376769);
+                  String var26 = buffer.readString(61376769);
                   byte[][] var11 = new byte[var8][];
                   int var13;
                   if(var5 == 3) {
                      for(int var12 = 0; var12 < var8; ++var12) {
-                        var13 = packet.readInt(-2069567333);
+                        var13 = buffer.readInt(-2069567333);
                         var11[var12] = new byte[var13];
-                        packet.readBytes(var11[var12], 0, var13, 1904549673);
+                        buffer.readBytes(var11[var12], 0, var13, 1904549673);
                      }
                   }
 
@@ -432,11 +433,11 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
                   var3.aByteArrayArrayArray2153[var4] = var11;
                }
             } else {
-               var6 = packet.readString(61376769);
-               var7 = packet.readString(61376769);
+               var6 = buffer.readString(61376769);
+               var7 = buffer.readString(61376769);
                var8 = 0;
                if(1 == var5) {
-                  var8 = packet.readInt(-1028493527);
+                  var8 = buffer.readInt(-1028493527);
                }
 
                var3.anIntArray2148[var4] = var5;
@@ -465,16 +466,16 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
 
    static void method2390(int var0) {
       if(client.aBool3088) {
-         RSInterface var1 = AbstractRSDrawing.method339(Class116_Sub23_Sub4.anInt2262 * -1195336111, 1149825709 * client.anInt3089, -1468537866);
-         if(null != var1 && var1.spellUsedListener != null) {
+         Class116_Sub15 var1 = AbstractRSDrawing.method339(Class116_Sub23_Sub4.anInt2262 * -1195336111, 1149825709 * client.anInt3089, -1468537866);
+         if(null != var1 && var1.anObjectArray2015 != null) {
             Class116_Sub6 var2 = new Class116_Sub6();
             var2.aClass116_Sub15_1736 = var1;
-            var2.anObjectArray1737 = var1.spellUsedListener;
+            var2.anObjectArray1737 = var1.anObjectArray2015;
             Friend.method1840(var2, -2005616795);
          }
 
          client.aBool3088 = false;
-         Class79.refreshInterface(var1, -4213207);
+         Class79.method1097(var1, -4213207);
       }
    }
 }

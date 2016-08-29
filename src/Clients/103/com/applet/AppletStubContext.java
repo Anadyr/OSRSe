@@ -66,7 +66,7 @@ public class AppletStubContext implements AppletStub, AppletContext, Enumeration
 
 	@Override
 	public java.applet.AudioClip getAudioClip(final URL url) {
-		return null;// newcache AudioClip(url);
+		return null;// new AudioClip(url);
 	}
 
 	@Override

@@ -31,7 +31,7 @@ public final class TileObj5 {
    }
 
    static final void method699(Class1 var0, int var1) {
-      if(1272643751 * Class79.ourPlayer.anInt2609 >> 7 == -1712731251 * client.anInt3168 && -1801433343 * Class79.ourPlayer.anInt2579 >> 7 == client.anInt3208 * -691143955) {
+      if(1272643751 * Class79.aPlayer_909.anInt2609 >> 7 == -1712731251 * client.anInt3168 && -1801433343 * Class79.aPlayer_909.anInt2579 >> 7 == client.anInt3208 * -691143955) {
          client.anInt3168 = 0;
       }
 
@@ -46,8 +46,8 @@ public final class TileObj5 {
          Player var2;
          int var5;
          if(Class1.aClass1_4 == var0) {
-            var2 = Class79.ourPlayer;
-            var5 = 1011012763 * Class79.ourPlayer.anInt2902 << 14;
+            var2 = Class79.aPlayer_909;
+            var5 = 1011012763 * Class79.aPlayer_909.anInt2902 << 14;
          } else if(var0 == Class1.aClass1_2) {
             var2 = client.globalPlayers[971766913 * client.anInt3065];
             var5 = 971766913 * client.anInt3065 << 14;
@@ -70,8 +70,8 @@ public final class TileObj5 {
             if(var8 >= 0 && var8 < 104 && var9 >= 0 && var9 < 104) {
                if(null != var2.aSpotAnim_2903 && client.anInt2943 * -1040073859 >= 359131139 * var2.anInt2888 && client.anInt2943 * -1040073859 < var2.anInt2889 * 959962901) {
                   var2.aBool2896 = false;
-                  var2.anInt2897 = MobDefinition.method2552(var2.anInt2609 * 1272643751, -1801433343 * var2.anInt2579, -747958745 * GameInterface.anInt1819, (short) 11474) * 1126652769;
-                  GameInterface.region.method357(-747958745 * GameInterface.anInt1819, 1272643751 * var2.anInt2609, -1801433343 * var2.anInt2579, var2.anInt2897 * -868972383, 60, var2, var2.anInt2613 * -2031663291, var5, 1245527343 * var2.anInt2894, var2.anInt2895 * 1547766969, var2.anInt2885 * 1357352179, var2.anInt2880 * -688461469);
+                  var2.anInt2897 = MobDefinition.method2552(var2.anInt2609 * 1272643751, -1801433343 * var2.anInt2579, -747958745 * Class116_Sub11.anInt1819, (short) 11474) * 1126652769;
+                  Class116_Sub11.groundItemController.method357(-747958745 * Class116_Sub11.anInt1819, 1272643751 * var2.anInt2609, -1801433343 * var2.anInt2579, var2.anInt2897 * -868972383, 60, var2, var2.anInt2613 * -2031663291, var5, 1245527343 * var2.anInt2894, var2.anInt2895 * 1547766969, var2.anInt2885 * 1357352179, var2.anInt2880 * -688461469);
                } else {
                   if(64 == (1272643751 * var2.anInt2609 & 127) && 64 == (var2.anInt2579 * -1801433343 & 127)) {
                      if(-1317183381 * client.anInt3179 == client.anIntArrayArray3081[var8][var9]) {
@@ -81,8 +81,8 @@ public final class TileObj5 {
                      client.anIntArrayArray3081[var8][var9] = -1317183381 * client.anInt3179;
                   }
 
-                  var2.anInt2897 = MobDefinition.method2552(1272643751 * var2.anInt2609, var2.anInt2579 * -1801433343, GameInterface.anInt1819 * -747958745, (short) 14757) * 1126652769;
-                  GameInterface.region.method356(-747958745 * GameInterface.anInt1819, 1272643751 * var2.anInt2609, -1801433343 * var2.anInt2579, var2.anInt2897 * -868972383, 60, var2, var2.anInt2613 * -2031663291, var5, var2.aBool2588);
+                  var2.anInt2897 = MobDefinition.method2552(1272643751 * var2.anInt2609, var2.anInt2579 * -1801433343, Class116_Sub11.anInt1819 * -747958745, (short) 14757) * 1126652769;
+                  Class116_Sub11.groundItemController.method356(-747958745 * Class116_Sub11.anInt1819, 1272643751 * var2.anInt2609, -1801433343 * var2.anInt2579, var2.anInt2897 * -868972383, 60, var2, var2.anInt2613 * -2031663291, var5, var2.aBool2588);
                }
             }
          }

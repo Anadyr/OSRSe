@@ -38,7 +38,7 @@ public class Class26 {
          var2.write("data1=req");
          var2.flush();
          InputStream var3 = var1.getInputStream();
-         Packet var4 = new Packet(new byte[1000]);
+         Buffer var4 = new Buffer(new byte[1000]);
 
          do {
             int var5 = var3.read(var4.payload, var4.position * 314639891, 1000 - 1360342224 * var4.position);
@@ -61,12 +61,12 @@ public class Class26 {
       if(-1 == var0 && !client.aBool3159) {
          Class128.aClass116_Sub4_Sub4_1576.method3075(143263271);
          Class128.anInt1574 = 325298615;
-         Class128.aRSIndex_1575 = null;
+         Class128.aClass99_1575 = null;
       } else if(var0 != -1 && var0 != client.anInt3172 * 850867613 && 0 != client.anInt3171 * -1994948003 && !client.aBool3159) {
-         CacheIndex var3 = Class2.aCacheIndex_23;
+         Class99_Sub1 var3 = Class2.aClass99_Sub1_23;
          int var2 = client.anInt3171 * -1994948003;
          Class128.anInt1574 = 325298615;
-         Class128.aRSIndex_1575 = var3;
+         Class128.aClass99_1575 = var3;
          Class112.anInt1485 = 18032949 * var0;
          Class129.anInt1581 = 0;
          Class128.anInt1579 = 827167249 * var2;

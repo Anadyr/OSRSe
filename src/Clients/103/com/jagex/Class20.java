@@ -2,7 +2,7 @@ package com.jagex;
 
 public class Class20 implements Runnable {
 
-   SignLink aClass74_257;
+   Class74 aClass74_257;
    volatile Class9[] aClass9Array258 = new Class9[2];
    volatile boolean aBool259 = false;
    volatile boolean aBool260 = false;
@@ -24,7 +24,7 @@ public class Class20 implements Runnable {
                   }
                }
 
-               Friend.sleep(10L);
+               Friend.method1836(10L);
                Class116_Sub23_Sub16_Sub1.method3097(this.aClass74_257, (Object)null, (byte)1);
             }
          } catch (Exception var6) {
@@ -52,7 +52,7 @@ public class Class20 implements Runnable {
                   }
                }
 
-               Friend.sleep(10L);
+               Friend.method1836(10L);
                Class116_Sub23_Sub16_Sub1.method3097(this.aClass74_257, (Object)null, (byte)1);
             }
          } catch (Exception var6) {
@@ -80,7 +80,7 @@ public class Class20 implements Runnable {
                   }
                }
 
-               Friend.sleep(10L);
+               Friend.method1836(10L);
                Class116_Sub23_Sub16_Sub1.method3097(this.aClass74_257, (Object)null, (byte)1);
             }
          } catch (Exception var6) {
@@ -108,7 +108,7 @@ public class Class20 implements Runnable {
                   }
                }
 
-               Friend.sleep(10L);
+               Friend.method1836(10L);
                Class116_Sub23_Sub16_Sub1.method3097(this.aClass74_257, (Object)null, (byte)1);
             }
          } catch (Exception var6) {

@@ -5,7 +5,7 @@ public class Class107 {
    public static int[] anIntArray1454;
    static int[] anIntArray1455 = new int[32];
    public static boolean aBool1456;
-   public static int[] varpData;
+   public static int[] anIntArray1459;
 
 
    static {
@@ -17,15 +17,15 @@ public class Class107 {
       }
 
       anIntArray1454 = new int[2000];
-      varpData = new int[2000];
+      anIntArray1459 = new int[2000];
    }
 
    Class107() throws Throwable {
       throw new Error();
    }
 
-   static final void method1465(byte[] var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, Region var8, Class58[] var9, int var10) {
-      Packet var11 = new Packet(var0);
+   static final void method1465(byte[] var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, GroundController var8, Class58[] var9, int var10) {
+      Buffer var11 = new Buffer(var0);
       int var26 = -1;
 
       while(true) {
@@ -95,16 +95,16 @@ public class Class107 {
       }
    }
 
-   public static RSInterface getInterface(int var0, int var1) {
-      int interfaceId = var0 >> 16;
-      int childId = var0 & '\uffff';
-      if(null == RSInterface.mainInterfaceArray[interfaceId] || RSInterface.mainInterfaceArray[interfaceId][childId] == null) {
-         boolean var4 = Class116_Sub23_Sub2.loadInterface(interfaceId, -1006212225);
+   public static Class116_Sub15 method1466(int var0, int var1) {
+      int var2 = var0 >> 16;
+      int var3 = var0 & '\uffff';
+      if(null == Class116_Sub15.aClass116_Sub15ArrayArray1956[var2] || Class116_Sub15.aClass116_Sub15ArrayArray1956[var2][var3] == null) {
+         boolean var4 = Class116_Sub23_Sub2.method2377(var2, -1006212225);
          if(!var4) {
             return null;
          }
       }
 
-      return RSInterface.mainInterfaceArray[interfaceId][childId];
+      return Class116_Sub15.aClass116_Sub15ArrayArray1956[var2][var3];
    }
 }

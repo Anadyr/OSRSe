@@ -14,7 +14,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
-import javax.swing.*;
+import javax.swing.JFrame;
 
 import com.jagex.Class116_Sub16;
 import com.jagex.Class116_Sub23_Sub13;
@@ -26,18 +26,13 @@ public class Launcher {
 
 	private static final long serialVersionUID = -1657955994522660237L;
     public static JFrame frame;
-    public static JPanel gamepanel;
 	private String host;
 	private client clnt;
 	public static boolean rsps = true;
 	private Properties map;
     private static int world = 1;
 
-    public Launcher(JPanel gamePanel) {
-        gamepanel = gamePanel;startApplet();
-    }
-
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 		Launcher app = new Launcher();
         if(args != null && args.length > 0) {
             if(args[0].contains("t") || args[0].contains("f")) {
@@ -56,7 +51,7 @@ public class Launcher {
         frame.setDefaultCloseOperation(3);
 	}
 
-	public void startApplet() {
+	private void startApplet() {
 		try {
 			map = new Properties();
 			map.put("1", "0");
@@ -69,8 +64,8 @@ public class Launcher {
 			    map.put("6", ""+world);
                 map.put("10", "1");
             } else {
-                host = new String("http://127.0.0.1/");
-                map.put("6", "1");
+                host = new String("http://oldschool94.runescape.com");
+                map.put("6", "394");
                 map.put("10", "0");
             }
 			map.put("7", "true");
@@ -88,7 +83,7 @@ public class Launcher {
             app.init();
             app.start();
             app.setPreferredSize(new Dimension(765, 503));
-            frame.getContentPane().add(app, BorderLayout.WEST);
+            frame.getContentPane().add(app, "Center");
             frame.pack();
             frame.setVisible(true);
 		} catch (Exception e) {
@@ -110,7 +105,7 @@ public class Launcher {
 				builder.append("" + ((Integer) obj) + "" + ((i == params.length - 1) ? "" : ", "));
 			}
 		}
-		System.out.println("sendCS2Script(" + params[0] + ", newcache Object[] { " + builder.toString() + " });");
+		System.out.println("sendCS2Script(" + params[0] + ", new Object[] { " + builder.toString() + " });");
 	}
 
 
@@ -147,7 +142,7 @@ public class Launcher {
     public static void dumpOpcode(int i) {
         if(!dumped[i]) {
             dumped[i] = true;
-	        System.out.println("opcode="+i );
+            System.out.println("opcode="+i );
         }
     }
 }

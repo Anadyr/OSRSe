@@ -2,80 +2,50 @@ package com.jagex;
 
 public final class Mob extends Entity {
 
-   static Sprite mapEdge;
+   static Sprite aClass116_Sub23_Sub19_Sub2_2875;
    MobDefinition definition;
    public static byte[][] aByteArrayArray2877;
-   static RSIndex aRSIndex_2878;
+   static Class99 aClass99_2878;
    static Class35 aClass35_2879;
 
-    /*
-
-
-             if(1 == movement) {
-            var3 = buffer.readBits(3, (byte) -1);
-            xStep = playerInCycle.xMovementSteps[0];
-            yStep = playerInCycle.yMovementSteps[0];
-            if(0 == var3) {
-               --xStep;
-               --yStep;
-            } else if(var3 == 1) {
-               --yStep;
-            } else if(2 == var3) {
-               ++xStep;
-               --yStep;
-            } else if(var3 == 3) {
-               --xStep;
-            } else if(var3 == 4) {
-               ++xStep;
-            } else if(var3 == 5) {
-               --xStep;
-               ++yStep;
-            } else if(6 == var3) {
-               ++yStep;
-            } else if(var3 == 7) {
-               ++xStep;
-               ++yStep;
-            }
-
-     */
 
    final void handleMovement(int direction, byte movementMode, byte var3) {
-      int xStep = this.xMovementSteps[0];
-      int yStep = this.yMovementSteps[0];
-      if(direction == 0) {//northwest
-         --xStep;
-         ++yStep;
+      int var4 = this.xMovementSteps[0];
+      int var5 = this.yMovementSteps[0];
+      if(direction == 0) {
+         --var4;
+         ++var5;
       }
 
-      if(1 == direction) { //noth
-         ++yStep;
+      if(1 == direction) {
+         ++var5;
       }
 
-      if(direction == 2) { //north east
-         ++xStep;
-         ++yStep;
+      if(direction == 2) {
+         ++var4;
+         ++var5;
       }
 
-      if(direction == 3) { //west
-         --xStep;
+      if(direction == 3) {
+         --var4;
       }
 
-      if(direction == 4) { //east
-         ++xStep;
+      if(direction == 4) {
+         ++var4;
       }
 
-      if(direction == 5) {//southwest
-         --xStep;
-         --yStep;
+      if(direction == 5) {
+         --var4;
+         --var5;
       }
 
-      if(direction == 6) { //south
-         --yStep;
+      if(direction == 6) {
+         --var5;
       }
 
-      if(direction == 7) {//southeast
-         ++xStep;
-         --yStep;
+      if(direction == 7) {
+         ++var4;
+         --var5;
       }
 
       if(-922607859 * this.anInt2587 != -1 && Class116_Sub8.method1946(this.anInt2587 * -922607859, -990032604).anInt2242 * -1099577343 == 1) {
@@ -92,8 +62,8 @@ public final class Mob extends Entity {
          this.aByteArray2628[var6] = this.aByteArray2628[var6 - 1];
       }
 
-      this.xMovementSteps[0] = xStep;
-      this.yMovementSteps[0] = yStep;
+      this.xMovementSteps[0] = var4;
+      this.yMovementSteps[0] = var5;
       this.aByteArray2628[0] = movementMode;
    }
 
@@ -109,10 +79,10 @@ public final class Mob extends Entity {
          } else {
             var2.method3373();
             this.anInt2627 = var2.modelHeight * -1831653581;
-            if(1631645159 * this.currentGraphic != -1 && -1 != this.anInt2595 * -1255206495) {
-               SpotAnim var5 = Friend.method1835(1631645159 * this.currentGraphic, (byte) 1).method2344(-1255206495 * this.anInt2595, -1123899554);
+            if(1631645159 * this.anInt2614 != -1 && -1 != this.anInt2595 * -1255206495) {
+               SpotAnim var5 = Friend.method1835(1631645159 * this.anInt2614, (byte) 1).method2344(-1255206495 * this.anInt2595, -1123899554);
                if(null != var5) {
-                  var5.method3385(0, -(1719935737 * this.currentGraphicDelay), 0);
+                  var5.method3385(0, -(1719935737 * this.anInt2589), 0);
                   SpotAnim[] var6 = new SpotAnim[]{var2, var5};
                   var2 = new SpotAnim(var6, 2);
                }
@@ -162,17 +132,17 @@ public final class Mob extends Entity {
       this.anInt2635 = 0;
       this.xMovementSteps[0] = var1;
       this.yMovementSteps[0] = var2;
-      this.anInt2609 = this.tileSize * -1142586432 + -715945088 * this.xMovementSteps[0];
-      this.anInt2579 = this.tileSize * 1467429440 + this.yMovementSteps[0] * 1616412800;
+      this.anInt2609 = this.anInt2582 * -1142586432 + -715945088 * this.xMovementSteps[0];
+      this.anInt2579 = this.anInt2582 * 1467429440 + this.yMovementSteps[0] * 1616412800;
    }
 
-   static World method3547(byte var0) {
-      World.anInt387 = 0;
-      World var1;
-      if(World.anInt387 * -1614070229 >= World.totalWorldCount * -1946617791) {
+   static Class27 method3547(byte var0) {
+      Class27.anInt387 = 0;
+      Class27 var1;
+      if(Class27.anInt387 * -1614070229 >= Class27.anInt379 * -1946617791) {
          var1 = null;
       } else {
-         var1 = World.worldArray[(World.anInt387 += -1416261501) * -1614070229 - 1];
+         var1 = Class27.aClass27Array374[(Class27.anInt387 += -1416261501) * -1614070229 - 1];
       }
 
       return var1;

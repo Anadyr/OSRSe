@@ -3,7 +3,7 @@ package com.jagex;
 public final class Class22 {
 
    int anInt269;
-   static RSInterface aClass116_Sub15_270;
+   static Class116_Sub15 aClass116_Sub15_270;
    int anInt271;
    public Animable anAnimable;
    public int anInt273;
@@ -15,7 +15,7 @@ public final class Class22 {
 
    static final void method342(int var0, int var1, int var2, int var3, int var4) {
       if(0 == -1110581093 * client.anInt2991 && !client.aBool3088) {
-         RelationList.method776(Class91.aString1202, "", 23, 0, var0 - var2, var1 - var3, (byte) -57);
+         Class50.method776(Class91.aString1202, "", 23, 0, var0 - var2, var1 - var3, (byte)-57);
       }
 
       int var6 = -1;
@@ -31,9 +31,9 @@ public final class Class22 {
          int var18 = var9 >> 14 & 32767;
          if(var9 != var5) {
             var5 = var9;
-            if(var17 == 2 && GameInterface.region.getTileContentsType(-747958745 * GameInterface.anInt1819, var10, var11, var9) >= 0) {
+            if(var17 == 2 && Class116_Sub11.groundItemController.method375(-747958745 * Class116_Sub11.anInt1819, var10, var11, var9) >= 0) {
                ObjectDefinition var12 = Class45.method700(var18, 359750046);
-               if(null != var12.childIds) {
+               if(null != var12.anIntArray2206) {
                   var12 = var12.method2419(-1617474286);
                }
 
@@ -42,10 +42,10 @@ public final class Class22 {
                }
 
                if(-1110581093 * client.anInt2991 == 1) {
-                  RelationList.method776(Class91.aString1197, client.aString3201 + " " + Class41.aString542 + " " + Class59_Sub1.method1978('\uffff', (byte) 95) + var12.objectName, 1, var9, var10, var11, (byte) -73);
+                  Class50.method776(Class91.aString1197, client.aString3201 + " " + Class41.aString542 + " " + Class59_Sub1.method1978('\uffff', (byte)95) + var12.objectName, 1, var9, var10, var11, (byte)-73);
                } else if(client.aBool3088) {
                   if((Class38.anInt500 * 2016481409 & 4) == 4) {
-                     RelationList.method776(client.aString3192, client.aString2969 + " " + Class41.aString542 + " " + Class59_Sub1.method1978('\uffff', (byte) 125) + var12.objectName, 2, var9, var10, var11, (byte) -90);
+                     Class50.method776(client.aString3192, client.aString2969 + " " + Class41.aString542 + " " + Class59_Sub1.method1978('\uffff', (byte)125) + var12.objectName, 2, var9, var10, var11, (byte)-90);
                   }
                } else {
                   String[] var13 = var12.actions;
@@ -77,12 +77,12 @@ public final class Class22 {
                               var14 = 1001;
                            }
 
-                           RelationList.method776(var13[var7], Class59_Sub1.method1978('\uffff', (byte) 95) + var12.objectName, var14, var9, var10, var11, (byte) -46);
+                           Class50.method776(var13[var7], Class59_Sub1.method1978('\uffff', (byte)95) + var12.objectName, var14, var9, var10, var11, (byte)-46);
                         }
                      }
                   }
 
-                  RelationList.method776(Class91.aString1198, Class59_Sub1.method1978('\uffff', (byte) 37) + var12.objectName, 1002, var12.anInt2239 * -521826339 << 14, var10, var11, (byte) -59);
+                  Class50.method776(Class91.aString1198, Class59_Sub1.method1978('\uffff', (byte)37) + var12.objectName, 1002, var12.anInt2239 * -521826339 << 14, var10, var11, (byte)-59);
                }
             }
 
@@ -152,15 +152,15 @@ public final class Class22 {
             }
 
             if(3 == var17) {
-               Deque var25 = client.aClass117ArrayArrayArray3071[-747958745 * GameInterface.anInt1819][var10][var11];
+               Class117 var25 = client.aClass117ArrayArrayArray3071[-747958745 * Class116_Sub11.anInt1819][var10][var11];
                if(var25 != null) {
-                  for(Class116_Sub23_Sub16_Sub3 var27 = (Class116_Sub23_Sub16_Sub3)var25.getLast(); var27 != null; var27 = (Class116_Sub23_Sub16_Sub3)var25.getPrevious()) {
-                     Class116_Sub23_Sub11 var21 = RelationList.method778(var27.anInt2646 * -848428919, (byte) 70);
+                  for(Class116_Sub23_Sub16_Sub3 var27 = (Class116_Sub23_Sub16_Sub3)var25.method1552(); var27 != null; var27 = (Class116_Sub23_Sub16_Sub3)var25.method1579()) {
+                     Class116_Sub23_Sub11 var21 = Class50.method778(var27.anInt2646 * -848428919, (byte)70);
                      if(1 == client.anInt2991 * -1110581093) {
-                        RelationList.method776(Class91.aString1197, client.aString3201 + " " + Class41.aString542 + " " + Class59_Sub1.method1978(16748608, (byte) 113) + var21.aString2361, 16, -848428919 * var27.anInt2646, var10, var11, (byte) -82);
+                        Class50.method776(Class91.aString1197, client.aString3201 + " " + Class41.aString542 + " " + Class59_Sub1.method1978(16748608, (byte)113) + var21.aString2361, 16, -848428919 * var27.anInt2646, var10, var11, (byte)-82);
                      } else if(client.aBool3088) {
                         if((Class38.anInt500 * 2016481409 & 1) == 1) {
-                           RelationList.method776(client.aString3192, client.aString2969 + " " + Class41.aString542 + " " + Class59_Sub1.method1978(16748608, (byte) 58) + var21.aString2361, 17, var27.anInt2646 * -848428919, var10, var11, (byte) -48);
+                           Class50.method776(client.aString3192, client.aString2969 + " " + Class41.aString542 + " " + Class59_Sub1.method1978(16748608, (byte)58) + var21.aString2361, 17, var27.anInt2646 * -848428919, var10, var11, (byte)-48);
                         }
                      } else {
                         String[] var30 = var21.aStringArray2391;
@@ -191,13 +191,13 @@ public final class Class22 {
                                  var15 = 22;
                               }
 
-                              RelationList.method776(var30[var29], Class59_Sub1.method1978(16748608, (byte) 26) + var21.aString2361, var15, -848428919 * var27.anInt2646, var10, var11, (byte) -110);
+                              Class50.method776(var30[var29], Class59_Sub1.method1978(16748608, (byte)26) + var21.aString2361, var15, -848428919 * var27.anInt2646, var10, var11, (byte)-110);
                            } else if(var29 == 2) {
-                              RelationList.method776(Class91.aString1288, Class59_Sub1.method1978(16748608, (byte) 14) + var21.aString2361, 20, -848428919 * var27.anInt2646, var10, var11, (byte) -25);
+                              Class50.method776(Class91.aString1288, Class59_Sub1.method1978(16748608, (byte)14) + var21.aString2361, 20, -848428919 * var27.anInt2646, var10, var11, (byte)-25);
                            }
                         }
 
-                        RelationList.method776(Class91.aString1198, Class59_Sub1.method1978(16748608, (byte) 102) + var21.aString2361, 1004, var27.anInt2646 * -848428919, var10, var11, (byte) -110);
+                        Class50.method776(Class91.aString1198, Class59_Sub1.method1978(16748608, (byte)102) + var21.aString2361, 1004, var27.anInt2646 * -848428919, var10, var11, (byte)-110);
                      }
                   }
                }
@@ -214,42 +214,42 @@ public final class Class22 {
 
    }
 
-   static final void method343(RSInterface var0, int var1) {
-      int var2 = -179718399 * var0.clientCode;
+   static final void method343(Class116_Sub15 var0, int var1) {
+      int var2 = -179718399 * var0.anInt2016;
       if(324 == var2) {
          if(client.anInt3209 * 986088359 == -1) {
-            client.anInt3209 = var0.disabledSprite * -302180863;
-            client.anInt3023 = -953380781 * var0.enabledSprite;
+            client.anInt3209 = var0.anInt1958 * -302180863;
+            client.anInt3023 = -953380781 * var0.anInt1959;
          }
 
          if(client.aClass108_3103.aBool1464) {
-            var0.disabledSprite = -135861759 * client.anInt3209;
+            var0.anInt1958 = -135861759 * client.anInt3209;
          } else {
-            var0.disabledSprite = client.anInt3023 * 1903638949;
+            var0.anInt1958 = client.anInt3023 * 1903638949;
          }
 
       } else if(325 != var2) {
          if(var2 == 327) {
-            var0.rotateX = -532702102;
-            var0.rotateY = ((int)(Math.sin((double)(-1040073859 * client.anInt2943) / 40.0D) * 256.0D) & 2047) * -478470667;
-            var0.modelTypeDisabled = -1882303535;
-            var0.mediaIdDisabled = 0;
+            var0.anInt1935 = -532702102;
+            var0.anInt2057 = ((int)(Math.sin((double)(-1040073859 * client.anInt2943) / 40.0D) * 256.0D) & 2047) * -478470667;
+            var0.anInt1975 = -1882303535;
+            var0.anInt1967 = 0;
          } else if(328 == var2) {
-            var0.rotateX = -532702102;
-            var0.rotateY = ((int)(Math.sin((double)(client.anInt2943 * -1040073859) / 40.0D) * 256.0D) & 2047) * -478470667;
-            var0.modelTypeDisabled = -1882303535;
-            var0.mediaIdDisabled = -541123263;
+            var0.anInt1935 = -532702102;
+            var0.anInt2057 = ((int)(Math.sin((double)(client.anInt2943 * -1040073859) / 40.0D) * 256.0D) & 2047) * -478470667;
+            var0.anInt1975 = -1882303535;
+            var0.anInt1967 = -541123263;
          }
       } else {
          if(client.anInt3209 * 986088359 == -1) {
-            client.anInt3209 = var0.disabledSprite * -302180863;
-            client.anInt3023 = var0.enabledSprite * -953380781;
+            client.anInt3209 = var0.anInt1958 * -302180863;
+            client.anInt3023 = var0.anInt1959 * -953380781;
          }
 
          if(client.aClass108_3103.aBool1464) {
-            var0.disabledSprite = client.anInt3023 * 1903638949;
+            var0.anInt1958 = client.anInt3023 * 1903638949;
          } else {
-            var0.disabledSprite = client.anInt3209 * -135861759;
+            var0.anInt1958 = client.anInt3209 * -135861759;
          }
 
       }

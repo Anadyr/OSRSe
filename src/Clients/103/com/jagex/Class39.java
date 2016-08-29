@@ -21,7 +21,7 @@ public class Class39 {
    }
 
    static void method682(int var0, byte var1) {
-      Class116_Sub10 var2 = (Class116_Sub10)Class116_Sub10.aHashtable_1803.get((long) var0);
+      Class116_Sub10 var2 = (Class116_Sub10)Class116_Sub10.aClass127_1803.method1658((long)var0);
       if(var2 != null) {
          var2.unlink();
       }

@@ -7,12 +7,12 @@ public class Sounds {
    int anInt221;
 
 
-   public static Sounds method256(RSIndex var0, int var1, int var2) {
-      byte[] var3 = var0.getFiles(var1, var2, -516563011);
-      return var3 == null?null:new Sounds(new Packet(var3));
+   public static Sounds method256(Class99 var0, int var1, int var2) {
+      byte[] var3 = var0.method1394(var1, var2, -516563011);
+      return var3 == null?null:new Sounds(new Buffer(var3));
    }
 
-   Sounds(Packet var1) {
+   Sounds(Buffer var1) {
       for(int var2 = 0; var2 < 10; ++var2) {
          int var3 = var1.readSignedByte(1708176767);
          if(var3 != 0) {
@@ -22,8 +22,8 @@ public class Sounds {
          }
       }
 
-      this.anInt218 = var1.readUnsignedShort(570142834);
-      this.anInt221 = var1.readUnsignedShort(1710891158);
+      this.anInt218 = var1.readShort(570142834);
+      this.anInt221 = var1.readShort(1710891158);
    }
 
    public Class116_Sub2_Sub1 method257() {
@@ -100,9 +100,9 @@ public class Sounds {
       }
    }
 
-   public static Sounds method260(RSIndex var0, int var1, int var2) {
-      byte[] var3 = var0.getFiles(var1, var2, -627465697);
-      return var3 != null?new Sounds(new Packet(var3)):null;
+   public static Sounds method260(Class99 var0, int var1, int var2) {
+      byte[] var3 = var0.method1394(var1, var2, -627465697);
+      return var3 != null?new Sounds(new Buffer(var3)):null;
    }
 
    public Class116_Sub2_Sub1 method261() {

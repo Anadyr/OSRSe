@@ -13,9 +13,9 @@ public class Class116_Sub23_Sub12 extends NodeContainer {
    public int anInt2413;
    public int anInt2414;
    public int anInt2415;
-   public static RSIndex aRSIndex_2416;
+   public static Class99 aClass99_2416;
 
-   void method2641(Packet var1, int var2, int var3) {
+   void method2641(Buffer var1, int var2, int var3) {
       while(true) {
          int var4 = var1.readSignedByte(1708176767);
          if(0 == var4) {
@@ -26,7 +26,7 @@ public class Class116_Sub23_Sub12 extends NodeContainer {
       }
    }
 
-   void method2642(Packet var1, int var2, int var3, byte var4) {
+   void method2642(Buffer var1, int var2, int var3, byte var4) {
       if(var2 == 1) {
          this.anInt2409 = var1.readMedium((byte) 15) * 1304176145;
       } else if(var2 == 2) {
@@ -118,10 +118,10 @@ public class Class116_Sub23_Sub12 extends NodeContainer {
       if(null != var1) {
          return var1;
       } else {
-         byte[] var2 = aRSIndex_2416.getFiles(4, var0, -829714727);
+         byte[] var2 = aClass99_2416.method1394(4, var0, -829714727);
          var1 = new Class116_Sub23_Sub12();
          if(var2 != null) {
-            var1.method2641(new Packet(var2), var0, -496265853);
+            var1.method2641(new Buffer(var2), var0, -496265853);
          }
 
          var1.method2645(1730025247);
@@ -168,10 +168,10 @@ public class Class116_Sub23_Sub12 extends NodeContainer {
       if(null != var1) {
          return var1;
       } else {
-         byte[] var2 = aRSIndex_2416.getFiles(4, var0, -1900088754);
+         byte[] var2 = aClass99_2416.method1394(4, var0, -1900088754);
          var1 = new Class116_Sub23_Sub12();
          if(var2 != null) {
-            var1.method2641(new Packet(var2), var0, 580334286);
+            var1.method2641(new Buffer(var2), var0, 580334286);
          }
 
          var1.method2645(1957678668);

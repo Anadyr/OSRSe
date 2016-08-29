@@ -3,22 +3,22 @@ import java.util.zip.Inflater;
 
 public class Class60 {
 
-   static RSInputStream aClass71_779;
+   static Class71 aClass71_779;
    static byte[][][] aByteArrayArrayArray780;
    Inflater anInflater782;
-   public static RSIndex aRSIndex_783;
+   public static Class99 aClass99_783;
 
    Class60(int var1, int var2, int var3) {}
 
-   public void unpackGZip(Packet packet, byte[] payload, byte var3) {
-      if(31 == packet.payload[314639891 * packet.position] && -117 == packet.payload[1 + packet.position * 314639891]) {
+   public void method898(Buffer var1, byte[] var2, byte var3) {
+      if(31 == var1.payload[314639891 * var1.position] && -117 == var1.payload[1 + var1.position * 314639891]) {
          if(this.anInflater782 == null) {
             this.anInflater782 = new Inflater(true);
          }
 
          try {
-            this.anInflater782.setInput(packet.payload, 10 + 314639891 * packet.position, packet.payload.length - (8 + 10 + packet.position * 314639891));
-            this.anInflater782.inflate(payload);
+            this.anInflater782.setInput(var1.payload, 10 + 314639891 * var1.position, var1.payload.length - (8 + 10 + var1.position * 314639891));
+            this.anInflater782.inflate(var2);
          } catch (Exception var5) {
             this.anInflater782.reset();
             throw new RuntimeException("");
@@ -38,7 +38,7 @@ public class Class60 {
             int var6 = 1272643751 * var3.anInt2609 >> 7;
             int var4 = -1801433343 * var3.anInt2579 >> 7;
             if(var6 >= 0 && var6 < 104 && var4 >= 0 && var4 < 104) {
-               if(-1776294967 * var3.tileSize == 1 && 64 == (var3.anInt2609 * 1272643751 & 127) && (-1801433343 * var3.anInt2579 & 127) == 64) {
+               if(-1776294967 * var3.anInt2582 == 1 && 64 == (var3.anInt2609 * 1272643751 & 127) && (-1801433343 * var3.anInt2579 & 127) == 64) {
                   if(-1317183381 * client.anInt3179 == client.anIntArrayArray3081[var6][var4]) {
                      continue;
                   }
@@ -50,7 +50,7 @@ public class Class60 {
                   var5 -= Integer.MIN_VALUE;
                }
 
-               GameInterface.region.method356(GameInterface.anInt1819 * -747958745, 1272643751 * var3.anInt2609, -1801433343 * var3.anInt2579, MobDefinition.method2552(var3.tileSize * -2013728192 - 64 + var3.anInt2609 * 1272643751, var3.tileSize * -2013728192 - 64 + -1801433343 * var3.anInt2579, GameInterface.anInt1819 * -747958745, (short) 15323), 60 + (var3.tileSize * -2013728192 - 64), var3, var3.anInt2613 * -2031663291, var5, var3.aBool2588);
+               Class116_Sub11.groundItemController.method356(Class116_Sub11.anInt1819 * -747958745, 1272643751 * var3.anInt2609, -1801433343 * var3.anInt2579, MobDefinition.method2552(var3.anInt2582 * -2013728192 - 64 + var3.anInt2609 * 1272643751, var3.anInt2582 * -2013728192 - 64 + -1801433343 * var3.anInt2579, Class116_Sub11.anInt1819 * -747958745, (short) 15323), 60 + (var3.anInt2582 * -2013728192 - 64), var3, var3.anInt2613 * -2031663291, var5, var3.aBool2588);
             }
          }
       }

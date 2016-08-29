@@ -3,13 +3,13 @@ package com.jagex;
 public final class Class123 {
 
    int anInt1547;
-   Hashtable aHashtable_1548;
+   Class127 aClass127_1548;
    int anInt1549;
    NodeContainer aNodeContainer_1550 = new NodeContainer();
    Class121 aClass121_1551 = new Class121();
 
    public NodeContainer method1632(long var1) {
-      NodeContainer var3 = (NodeContainer)this.aHashtable_1548.get(var1);
+      NodeContainer var3 = (NodeContainer)this.aClass127_1548.method1658(var1);
       if(var3 != null) {
          this.aClass121_1551.method1620(var3);
       }
@@ -31,13 +31,13 @@ public final class Class123 {
          --this.anInt1549;
       }
 
-      this.aHashtable_1548.put(var1, var2);
+      this.aClass127_1548.method1666(var1, var2);
       this.aClass121_1551.method1620(var1);
    }
 
    public void method1635() {
       this.aClass121_1551.method1625();
-      this.aHashtable_1548.pool();
+      this.aClass127_1548.method1659();
       this.aNodeContainer_1550 = new NodeContainer();
       this.anInt1549 = this.anInt1547;
    }
@@ -51,11 +51,11 @@ public final class Class123 {
          ;
       }
 
-      this.aHashtable_1548 = new Hashtable(var2);
+      this.aClass127_1548 = new Class127(var2);
    }
 
    public void method1642(long var1) {
-      NodeContainer var3 = (NodeContainer)this.aHashtable_1548.get(var1);
+      NodeContainer var3 = (NodeContainer)this.aClass127_1548.method1658(var1);
       if(var3 != null) {
          var3.unlink();
          var3.unlinkContainer();

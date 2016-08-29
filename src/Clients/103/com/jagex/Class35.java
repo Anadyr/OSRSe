@@ -7,7 +7,7 @@ public class Class35 implements Runnable {
    boolean aBool470 = true;
    int[] anIntArray471 = new int[500];
    int anInt472 = 0;
-   static RSInterface aClass116_Sub15_473;
+   static Class116_Sub15 aClass116_Sub15_473;
    int[] anIntArray474 = new int[500];
    static Class9 aClass9_475;
    static final int anInt476 = 59;
@@ -16,10 +16,10 @@ public class Class35 implements Runnable {
    static final String aString479 = "main_file_cache.idx";
 
 
-   public static void method640(RSInputStream var0, boolean var1, int var2) {
+   public static void method640(Class71 var0, boolean var1, int var2) {
       if(Class93.aClass71_1335 != null) {
          try {
-            Class93.aClass71_1335.sync(-1740220275);
+            Class93.aClass71_1335.method1001(-1740220275);
          } catch (Exception var7) {
             ;
          }
@@ -35,21 +35,21 @@ public class Class35 implements Runnable {
       Class93.anInt1346 = 0;
 
       while(true) {
-         Class116_Sub23_Sub21 var3 = (Class116_Sub23_Sub21)Class93.aHashtable_1352.getFirst();
+         Class116_Sub23_Sub21 var3 = (Class116_Sub23_Sub21)Class93.aClass127_1352.method1661();
          if(var3 == null) {
             while(true) {
-               var3 = (Class116_Sub23_Sub21)Class93.aHashtable_1345.getFirst();
+               var3 = (Class116_Sub23_Sub21)Class93.aClass127_1345.method1661();
                if(null == var3) {
                   if(Class93.aByte1340 != 0) {
                      try {
-                        Packet var8 = new Packet(4);
+                        Buffer var8 = new Buffer(4);
                         var8.writeByte(4, -1126106019);
                         var8.writeByte(Class93.aByte1340, -175091979);
                         var8.writeShort(0, -1891309640);
-                        Class93.aClass71_1335.flush(var8.payload, 0, 4, -1444796574);
+                        Class93.aClass71_1335.method1006(var8.payload, 0, 4, -1444796574);
                      } catch (IOException var6) {
                         try {
-                           Class93.aClass71_1335.sync(-1644151489);
+                           Class93.aClass71_1335.method1001(-1644151489);
                         } catch (Exception var5) {
                            ;
                         }
@@ -60,25 +60,25 @@ public class Class35 implements Runnable {
                   }
 
                   Class93.anInt1336 = 0;
-                  Class93.aLong1337 = Class116_Sub5.generateHash(-1418201376) * 8420123348744189037L;
+                  Class93.aLong1337 = Class116_Sub5.method1929(-1418201376) * 8420123348744189037L;
                   return;
                }
 
                Class93.aClass121_1342.method1616(var3);
-               Class93.aHashtable_1343.put(var3, var3.hashId);
+               Class93.aClass127_1343.method1666(var3, var3.nodeId);
                Class93.anInt1344 += 556834453;
                Class93.anInt1338 -= 30759979;
             }
          }
 
-         Class93.aHashtable_1357.put(var3, var3.hashId);
+         Class93.aClass127_1357.method1666(var3, var3.nodeId);
          Class93.anInt1339 += -1554399579;
          Class93.anInt1349 -= 255344863;
       }
    }
 
    public void run() {
-      for(; this.aBool470; Friend.sleep(50L)) {
+      for(; this.aBool470; Friend.method1836(50L)) {
          Object var1 = this.anObject478;
          synchronized(var1) {
             if(this.anInt472 * 598524519 < 500) {
@@ -92,7 +92,7 @@ public class Class35 implements Runnable {
    }
 
    public void method641() {
-      for(; this.aBool470; Friend.sleep(50L)) {
+      for(; this.aBool470; Friend.method1836(50L)) {
          Object var1 = this.anObject478;
          synchronized(var1) {
             if(this.anInt472 * 598524519 < 500) {
@@ -106,7 +106,7 @@ public class Class35 implements Runnable {
    }
 
    public void method642() {
-      for(; this.aBool470; Friend.sleep(50L)) {
+      for(; this.aBool470; Friend.method1836(50L)) {
          Object var1 = this.anObject478;
          synchronized(var1) {
             if(this.anInt472 * 1415091532 < 500) {
@@ -119,53 +119,43 @@ public class Class35 implements Runnable {
 
    }
 
-   static boolean readWorldList(int var0) {
+   static boolean method643(int var0) {
       try {
-          if(KeyFocusListener.wlSocket == null) {
-
-          } else {
-
-          }
-         if(BuildType.worldListData == null) {
-            BuildType.worldListData = new Class32(ISAAC.signLink, new URL(client.worldListAddress));
+         if(BuildType.aClass32_1026 == null) {
+            BuildType.aClass32_1026 = new Class32(ISAAC.aClass74_705, new URL(client.aString2939));
          } else {
-            byte[] data = BuildType.worldListData.getURLToData((byte) -61);
-            if(data != null) {
-               Packet buffer = new Packet(data);
-               World.totalWorldCount = buffer.readUnsignedShort(682510663) * 1128208321;
-               World.worldArray = new World[-1946617791 * World.totalWorldCount];
+            byte[] var1 = BuildType.aClass32_1026.method593((byte)-61);
+            if(var1 != null) {
+               Buffer var2 = new Buffer(var1);
+               Class27.anInt379 = var2.readShort(682510663) * 1128208321;
+               Class27.aClass27Array374 = new Class27[-1946617791 * Class27.anInt379];
 
-               for(int var3 = 0; var3 < World.totalWorldCount * -1946617791; ++var3) {
-                  World curr = World.worldArray[var3] = new World();
-                   int worldId = buffer.readUnsignedShort(1320674949);
-                  curr.worldId = worldId * -430891615;
-                   int flag = buffer.readInt(-352478353);
-                   curr.activityFlag = flag * 1825398059;
-                  curr.address = buffer.readString(61376769);
-                  curr.activity = buffer.readString(61376769);
-                   int i = buffer.readSignedByte(1708176767);
-                   curr.flag = i * -348321337;
-                   int iiii =  buffer.readShort(-799536814);
-                  curr.anInt381 = iiii * 1388875023;
-                    System.out.println(worldId+"/"+flag+"/"+i+"/"+iiii+"/"+curr.activity);
-                  curr.anInt377 = var3 * -882618271;
+               for(int var3 = 0; var3 < Class27.anInt379 * -1946617791; ++var3) {
+                  Class27 var4 = Class27.aClass27Array374[var3] = new Class27();
+                  var4.anInt388 = var2.readShort(1320674949) * -430891615;
+                  var4.anInt380 = var2.readInt(-352478353) * 1825398059;
+                  var4.aString382 = var2.readString(61376769);
+                  var4.aString371 = var2.readString(61376769);
+                  var4.anInt385 = var2.readSignedByte(1708176767) * -348321337;
+                  var4.anInt381 = var2.method2007(-799536814) * 1388875023;
+                  var4.anInt377 = var3 * -882618271;
                }
 
-               Speach.handleWorldList(World.worldArray, 0, World.worldArray.length - 1, World.anIntArray378, World.anIntArray383, -2022654930);
-               BuildType.worldListData = null;
+               Speach.method1129(Class27.aClass27Array374, 0, Class27.aClass27Array374.length - 1, Class27.anIntArray378, Class27.anIntArray383, -2022654930);
+               BuildType.aClass32_1026 = null;
                return true;
             }
          }
       } catch (Exception var5) {
          var5.printStackTrace();
-         BuildType.worldListData = null;
+         BuildType.aClass32_1026 = null;
       }
 
       return false;
    }
 
    public void method644() {
-      for(; this.aBool470; Friend.sleep(50L)) {
+      for(; this.aBool470; Friend.method1836(50L)) {
          Object var1 = this.anObject478;
          synchronized(var1) {
             if(this.anInt472 * 598524519 < 500) {
@@ -178,9 +168,9 @@ public class Class35 implements Runnable {
 
    }
 
-   static int method645(RSInterface var0, byte var1) {
-      InterfaceSettings var2 = (InterfaceSettings)client.aHashtable_3135.get((long) (2021294259 * var0.anInt1926) + ((long) (-1536575275 * var0.hash) << 32));
-      return null != var2?var2.anInt2121:var0.click_mask * -1817319735;
+   static int method645(Class116_Sub15 var0, byte var1) {
+      InterfaceSettings var2 = (InterfaceSettings)client.aClass127_3135.method1658((long)(2021294259 * var0.anInt1926) + ((long)(-1536575275 * var0.anInt1925) << 32));
+      return null != var2?var2.anInt2121:var0.anInt1921 * -1817319735;
    }
 
    public static OrdinalInterface method646(OrdinalInterface[] ordinalInterfaces, int drawIcon, byte var2) {

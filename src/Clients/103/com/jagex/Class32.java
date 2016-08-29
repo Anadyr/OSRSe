@@ -14,14 +14,14 @@ public class Class32 {
    int anInt442;
    static Class89 aClass89_443;
    int anInt444;
-   SignlinkNode aClass72_445;
-   static CacheIndex aCacheIndex_446;
+   Class72 aClass72_445;
+   static Class99_Sub1 aClass99_Sub1_446;
    public static final int anInt447 = 111;
    public static final int anInt448 = 80;
 
 
    byte[] method592() throws IOException {
-      if(Class116_Sub5.generateHash(1176341176) > this.aLong441 * 5610376891018015397L) {
+      if(Class116_Sub5.method1929(1176341176) > this.aLong441 * 5610376891018015397L) {
          throw new IOException();
       } else {
          if(0 == this.anInt444 * -369390683) {
@@ -45,7 +45,7 @@ public class Class32 {
 
                this.anInt436 += this.aDataInputStream438.read(this.aByteArray439, this.anInt436 * 802462811, var1) * -201703850;
                if(4 == this.anInt436 * -1776200656) {
-                  int var2 = (new Packet(this.aByteArray439)).readInt(-1660308817);
+                  int var2 = (new Buffer(this.aByteArray439)).readInt(-1660308817);
                   this.aByteArray437 = new byte[var2];
                   this.anInt444 = -854013862;
                }
@@ -70,8 +70,8 @@ public class Class32 {
       }
    }
 
-   byte[] getURLToData(byte var1) throws IOException {
-      if(Class116_Sub5.generateHash(-651155454) > this.aLong441 * 5610376891018015397L) {
+   byte[] method593(byte var1) throws IOException {
+      if(Class116_Sub5.method1929(-651155454) > this.aLong441 * 5610376891018015397L) {
          throw new IOException();
       } else {
          if(0 == this.anInt444 * -369390683) {
@@ -95,7 +95,7 @@ public class Class32 {
 
                this.anInt436 += this.aDataInputStream438.read(this.aByteArray439, this.anInt436 * 802462811, var2) * -261671981;
                if(4 == this.anInt436 * 802462811) {
-                  int var3 = (new Packet(this.aByteArray439)).readInt(-1545072513);
+                  int var3 = (new Buffer(this.aByteArray439)).readInt(-1545072513);
                   this.aByteArray437 = new byte[var3];
                   this.anInt444 = -854013862;
                }
@@ -120,12 +120,12 @@ public class Class32 {
       }
    }
 
-   static String method594(RSInterface var0, byte var1) {
-      return SignLink.method1075(Class35.method645(var0, (byte) 0), -438925309) == 0?null:(var0.selectedActionName != null && var0.selectedActionName.trim().length() != 0?var0.selectedActionName :null);
+   static String method594(Class116_Sub15 var0, byte var1) {
+      return Class74.method1075(Class35.method645(var0, (byte)0), -438925309) == 0?null:(var0.aString2002 != null && var0.aString2002.trim().length() != 0?var0.aString2002:null);
    }
 
    byte[] method595() throws IOException {
-      if(Class116_Sub5.generateHash(-1164807841) > this.aLong441 * 5610376891018015397L) {
+      if(Class116_Sub5.method1929(-1164807841) > this.aLong441 * 5610376891018015397L) {
          throw new IOException();
       } else {
          if(0 == this.anInt444 * -369390683) {
@@ -149,7 +149,7 @@ public class Class32 {
 
                this.anInt436 += this.aDataInputStream438.read(this.aByteArray439, this.anInt436 * 802462811, var2) * -261671981;
                if(4 == this.anInt436 * 802462811) {
-                  int var1 = (new Packet(this.aByteArray439)).readInt(-239358606);
+                  int var1 = (new Buffer(this.aByteArray439)).readInt(-239358606);
                   this.aByteArray437 = new byte[var1];
                   this.anInt444 = 1831135649;
                }
@@ -175,7 +175,7 @@ public class Class32 {
    }
 
    byte[] method596() throws IOException {
-      if(Class116_Sub5.generateHash(-1942992069) > this.aLong441 * 5610376891018015397L) {
+      if(Class116_Sub5.method1929(-1942992069) > this.aLong441 * 5610376891018015397L) {
          throw new IOException();
       } else {
          if(0 == this.anInt444 * -369390683) {
@@ -199,7 +199,7 @@ public class Class32 {
 
                this.anInt436 += this.aDataInputStream438.read(this.aByteArray439, this.anInt436 * 802462811, var1) * 1769759440;
                if(4 == this.anInt436 * 802462811) {
-                  int var2 = (new Packet(this.aByteArray439)).readInt(-386401352);
+                  int var2 = (new Buffer(this.aByteArray439)).readInt(-386401352);
                   this.aByteArray437 = new byte[var2];
                   this.anInt444 = -1189271941;
                }
@@ -224,10 +224,10 @@ public class Class32 {
       }
    }
 
-   static final void decodePlayerUpdate(PacketBuilder buffer, int var1, byte var2) {
+   static final void decodePlayerUpdate(BitBuffer buffer, int var1, byte var2) {
       int var3 = 314639891 * buffer.position;
       Class7.anInt118 = 0;
-      World.updateGPI(buffer, -1347519291);
+      Class27.updateGPI(buffer, -1347519291);
         //Masks Block
       for(int i = 0; i < 716284941 * Class7.anInt118; ++i) {
          int index = Class7.anIntArray119[i];
@@ -249,7 +249,7 @@ public class Class32 {
    }
 
    byte[] method598() throws IOException {
-      if(Class116_Sub5.generateHash(-1991820622) > this.aLong441 * 5610376891018015397L) {
+      if(Class116_Sub5.method1929(-1991820622) > this.aLong441 * 5610376891018015397L) {
          throw new IOException();
       } else {
          if(0 == this.anInt444 * -369390683) {
@@ -273,7 +273,7 @@ public class Class32 {
 
                this.anInt436 += this.aDataInputStream438.read(this.aByteArray439, this.anInt436 * 802462811, var1) * -261671981;
                if(4 == this.anInt436 * 802462811) {
-                  int var2 = (new Packet(this.aByteArray439)).readInt(-772619471);
+                  int var2 = (new Buffer(this.aByteArray439)).readInt(-772619471);
                   this.aByteArray437 = new byte[var2];
                   this.anInt444 = -854013862;
                }
@@ -298,13 +298,13 @@ public class Class32 {
       }
    }
 
-   Class32(SignLink var1, URL url) {
-      this.aClass72_445 = var1.createDataStream(url, (byte) 76);
+   Class32(Class74 var1, URL var2) {
+      this.aClass72_445 = var1.method1048(var2, (byte)76);
       this.anInt444 = 0;
-      this.aLong441 = (Class116_Sub5.generateHash(334299940) + 30000L) * -4402853478160784083L;
+      this.aLong441 = (Class116_Sub5.method1929(334299940) + 30000L) * -4402853478160784083L;
    }
 
-   public static void method599(RSIndex var0, byte var1) {
-      Flo.aRSIndex_2298 = var0;
+   public static void method599(Class99 var0, byte var1) {
+      Flo.aClass99_2298 = var0;
    }
 }

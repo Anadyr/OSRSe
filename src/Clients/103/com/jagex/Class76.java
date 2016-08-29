@@ -33,14 +33,14 @@ public class Class76 {
    }
 
    static final void method1081(int var0, int var1, byte var2) {
-      if(Class116_Sub23_Sub2.loadInterface(var0, -1006212225)) {
-         Class98.method1343(RSInterface.mainInterfaceArray[var0], var1, (byte)57);
+      if(Class116_Sub23_Sub2.method2377(var0, -1006212225)) {
+         Class98.method1343(Class116_Sub15.aClass116_Sub15ArrayArray1956[var0], var1, (byte)57);
       }
    }
 
    public static void method1082(int var0, byte var1) {
       Class128.anInt1574 = 325298615;
-      Class128.aRSIndex_1575 = null;
+      Class128.aClass99_1575 = null;
       Class112.anInt1485 = -18032949;
       Class129.anInt1581 = 832158449;
       Class128.anInt1579 = 0;

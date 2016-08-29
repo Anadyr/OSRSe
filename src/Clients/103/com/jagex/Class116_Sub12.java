@@ -11,7 +11,7 @@ public final class Class116_Sub12 extends Node {
    int anInt1841;
    int anInt1842;
    int anInt1843;
-   static Sprite[] mapFunction;
+   static Sprite[] aClass116_Sub23_Sub19_Sub2Array1844;
    int anInt1845 = 0;
    int anInt1846 = 622541955;
    int anInt1847;
@@ -20,9 +20,9 @@ public final class Class116_Sub12 extends Node {
 
 
    static final void method1979(int var0, int var1, byte var2) {
-      if(-1361858763 * Class22.anInt276 != var0 || var1 != CacheWorker.anInt1419 * 1249154187) {
+      if(-1361858763 * Class22.anInt276 != var0 || var1 != Class102.anInt1419 * 1249154187) {
          Class22.anInt276 = var0 * 1071803165;
-         CacheWorker.anInt1419 = var1 * -1066912989;
+         Class102.anInt1419 = var1 * -1066912989;
          method1983(25, (byte)124);
          Class94.method1300(Class91.aString1056, true, -408037706);
          int var6 = 1426698711 * Class116_Sub17.anInt2105;
@@ -96,7 +96,7 @@ public final class Class116_Sub12 extends Node {
             }
          }
 
-         for(Class116_Sub12 var18 = (Class116_Sub12)client.aClass117_3162.getFirst(); var18 != null; var18 = (Class116_Sub12)client.aClass117_3162.getNext()) {
+         for(Class116_Sub12 var18 = (Class116_Sub12)client.aClass117_3162.method1551(); var18 != null; var18 = (Class116_Sub12)client.aClass117_3162.method1553()) {
             var18.anInt1835 -= var8 * -2106367321;
             var18.anInt1847 -= var4 * 1453500391;
             if(-1096801001 * var18.anInt1835 < 0 || var18.anInt1847 * -127960105 < 0 || var18.anInt1835 * -1096801001 >= 104 || var18.anInt1847 * -127960105 >= 104) {
@@ -112,8 +112,8 @@ public final class Class116_Sub12 extends Node {
          client.anInt3176 = 0;
          client.aBool2988 = false;
          client.anInt3163 = -1008529911;
-         client.aClass117_2973.clear();
-         client.aClass117_3028.clear();
+         client.aClass117_2973.method1545();
+         client.aClass117_3028.method1545();
 
          for(var14 = 0; var14 < 4; ++var14) {
             client.aClass58Array2996[var14].method890(462555413);
@@ -122,35 +122,35 @@ public final class Class116_Sub12 extends Node {
       }
    }
 
-   static final void drawMiniMap(RSInterface var0, int x, int y, int var3, short var4) {
+   static final void drawMiniMap(Class116_Sub15 var0, int var1, int var2, int var3, short var4) {
       Class42.method695((byte)80);
       Class116_Sub23_Sub20 var7 = var0.method2255(false, 1970516760);
       if(null != var7) {
-         DrawingArea.setRasterSize(x, y, x + var7.anInt2516 * 662480183, var7.anInt2518 * -988977157 + y);
+         DrawingArea.method2901(var1, var2, var1 + var7.anInt2516 * 662480183, var7.anInt2518 * -988977157 + var2);
          if(2 != client.anInt3170 * -1797803011 && 5 != client.anInt3170 * -1797803011) {
             int var9 = -1916997753 * client.anInt2929 + client.anInt3007 * -1718342721 & 2047;
-            int var8 = 48 + 1272643751 * Class79.ourPlayer.anInt2609 / 32;
-            int var15 = 464 - -1801433343 * Class79.ourPlayer.anInt2579 / 32;
-            Class116_Sub23_Sub18.mapSprite.method3283(x, y, var7.anInt2516 * 662480183, var7.anInt2518 * -988977157, var8, var15, var9, -806982331 * client.anInt3009 + 256, var7.anIntArray2513, var7.anIntArray2512);
+            int var8 = 48 + 1272643751 * Class79.aPlayer_909.anInt2609 / 32;
+            int var15 = 464 - -1801433343 * Class79.aPlayer_909.anInt2579 / 32;
+            Class116_Sub23_Sub18.aClass116_Sub23_Sub19_Sub2_2487.method3283(var1, var2, var7.anInt2516 * 662480183, var7.anInt2518 * -988977157, var8, var15, var9, -806982331 * client.anInt3009 + 256, var7.anIntArray2513, var7.anIntArray2512);
 
             int var5;
             int var10;
             int var11;
             for(var11 = 0; var11 < client.anInt3164 * -706898549; ++var11) {
-               var10 = 2 + client.anIntArray3165[var11] * 4 - Class79.ourPlayer.anInt2609 * 1272643751 / 32;
-               var5 = client.anIntArray3166[var11] * 4 + 2 - -1801433343 * Class79.ourPlayer.anInt2579 / 32;
-               Class62.markMiniMap(x, y, var10, var5, client.aClass116_Sub23_Sub19_Sub2Array3167[var11], var7, 433143345);
+               var10 = 2 + client.anIntArray3165[var11] * 4 - Class79.aPlayer_909.anInt2609 * 1272643751 / 32;
+               var5 = client.anIntArray3166[var11] * 4 + 2 - -1801433343 * Class79.aPlayer_909.anInt2579 / 32;
+               Class62.markMiniMap(var1, var2, var10, var5, client.aClass116_Sub23_Sub19_Sub2Array3167[var11], var7, 433143345);
             }
 
             int var6;
             int var12;
             for(var11 = 0; var11 < 104; ++var11) {
                for(var10 = 0; var10 < 104; ++var10) {
-                  Deque var18 = client.aClass117ArrayArrayArray3071[GameInterface.anInt1819 * -747958745][var11][var10];
+                  Class117 var18 = client.aClass117ArrayArrayArray3071[Class116_Sub11.anInt1819 * -747958745][var11][var10];
                   if(var18 != null) {
-                     var6 = 4 * var11 + 2 - Class79.ourPlayer.anInt2609 * 1272643751 / 32;
-                     var12 = 2 + var10 * 4 - Class79.ourPlayer.anInt2579 * -1801433343 / 32;
-                     Class62.markMiniMap(x, y, var6, var12, Class122.mapDots[0], var7, -1029254172);
+                     var6 = 4 * var11 + 2 - Class79.aPlayer_909.anInt2609 * 1272643751 / 32;
+                     var12 = 2 + var10 * 4 - Class79.aPlayer_909.anInt2579 * -1801433343 / 32;
+                     Class62.markMiniMap(var1, var2, var6, var12, Class122.aClass116_Sub23_Sub19_Sub2Array1538[0], var7, -1029254172);
                   }
                }
             }
@@ -164,9 +164,9 @@ public final class Class116_Sub12 extends Node {
                   }
 
                   if(null != var19 && var19.aBool2325 && var19.aBool2337) {
-                     var6 = var23.anInt2609 * 1272643751 / 32 - Class79.ourPlayer.anInt2609 * 1272643751 / 32;
-                     var12 = -1801433343 * var23.anInt2579 / 32 - -1801433343 * Class79.ourPlayer.anInt2579 / 32;
-                     Class62.markMiniMap(x, y, var6, var12, Class122.mapDots[1], var7, 1600744042);
+                     var6 = var23.anInt2609 * 1272643751 / 32 - Class79.aPlayer_909.anInt2609 * 1272643751 / 32;
+                     var12 = -1801433343 * var23.anInt2579 / 32 - -1801433343 * Class79.aPlayer_909.anInt2579 / 32;
+                     Class62.markMiniMap(var1, var2, var6, var12, Class122.aClass116_Sub23_Sub19_Sub2Array1538[1], var7, 1600744042);
                   }
                }
             }
@@ -175,37 +175,37 @@ public final class Class116_Sub12 extends Node {
             int[] var24 = Class7.anIntArray108;
 
             for(var5 = 0; var5 < var11; ++var5) {
-               Player player = client.globalPlayers[var24[var5]];
-               if(player != null && player.method3101((byte)60) && !player.aBool2900 && player != Class79.ourPlayer) {
-                  var12 = 1272643751 * player.anInt2609 / 32 - 1272643751 * Class79.ourPlayer.anInt2609 / 32;
-                  int var17 = -1801433343 * player.anInt2579 / 32 - -1801433343 * Class79.ourPlayer.anInt2579 / 32;
-                  boolean friend = false;
-                  if(Class116_Sub5.method1930(player.username, true, 1103773868)) {
-                     friend = true;
+               Player var20 = client.globalPlayers[var24[var5]];
+               if(var20 != null && var20.method3101((byte)60) && !var20.aBool2900 && var20 != Class79.aPlayer_909) {
+                  var12 = 1272643751 * var20.anInt2609 / 32 - 1272643751 * Class79.aPlayer_909.anInt2609 / 32;
+                  int var17 = -1801433343 * var20.anInt2579 / 32 - -1801433343 * Class79.aPlayer_909.anInt2579 / 32;
+                  boolean var16 = false;
+                  if(Class116_Sub5.method1930(var20.username, true, 1103773868)) {
+                     var16 = true;
                   }
 
-                  boolean ourPlayer = false;
+                  boolean var13 = false;
 
-                  for(int var14 = 0; var14 < -1304125287 * Class98.ccPlayerCount; ++var14) {
-                     if(player.username.equals(GameInterface.ourCurrentCC[var14].username)) {
-                        ourPlayer = true;
+                  for(int var14 = 0; var14 < -1304125287 * Class98.anInt1378; ++var14) {
+                     if(var20.username.equals(Class116_Sub11.aClass116_Sub7Array1820[var14].username)) {
+                        var13 = true;
                         break;
                      }
                   }
 
                   boolean var25 = false;
-                  if(-103629189 * Class79.ourPlayer.anInt2899 != 0 && player.anInt2899 * -103629189 != 0 && player.anInt2899 * -103629189 == -103629189 * Class79.ourPlayer.anInt2899) {
+                  if(-103629189 * Class79.aPlayer_909.anInt2899 != 0 && var20.anInt2899 * -103629189 != 0 && var20.anInt2899 * -103629189 == -103629189 * Class79.aPlayer_909.anInt2899) {
                      var25 = true;
                   }
 
-                  if(friend) {
-                     Class62.markMiniMap(x, y, var12, var17, Class122.mapDots[3], var7, 1084717937);
+                  if(var16) {
+                     Class62.markMiniMap(var1, var2, var12, var17, Class122.aClass116_Sub23_Sub19_Sub2Array1538[3], var7, 1084717937);
                   } else if(var25) {
-                     Class62.markMiniMap(x, y, var12, var17, Class122.mapDots[4], var7, -661951595);
-                  } else if(ourPlayer) {
-                     Class62.markMiniMap(x, y, var12, var17, Class122.mapDots[5], var7, 1454936829);
+                     Class62.markMiniMap(var1, var2, var12, var17, Class122.aClass116_Sub23_Sub19_Sub2Array1538[4], var7, -661951595);
+                  } else if(var13) {
+                     Class62.markMiniMap(var1, var2, var12, var17, Class122.aClass116_Sub23_Sub19_Sub2Array1538[5], var7, 1454936829);
                   } else {
-                     Class62.markMiniMap(x, y, var12, var17, Class122.mapDots[2], var7, -387470119);
+                     Class62.markMiniMap(var1, var2, var12, var17, Class122.aClass116_Sub23_Sub19_Sub2Array1538[2], var7, -387470119);
                   }
                }
             }
@@ -214,46 +214,46 @@ public final class Class116_Sub12 extends Node {
                if(314519437 * client.anInt3021 == 1 && client.anInt2952 * 1583399955 >= 0 && 1583399955 * client.anInt2952 < client.aMobArray2972.length) {
                   Mob var21 = client.aMobArray2972[client.anInt2952 * 1583399955];
                   if(var21 != null) {
-                     var6 = 1272643751 * var21.anInt2609 / 32 - 1272643751 * Class79.ourPlayer.anInt2609 / 32;
-                     var12 = -1801433343 * var21.anInt2579 / 32 - Class79.ourPlayer.anInt2579 * -1801433343 / 32;
-                     Class8.method140(x, y, var6, var12, Class83.mapMarker[1], var7, (short)1003);
+                     var6 = 1272643751 * var21.anInt2609 / 32 - 1272643751 * Class79.aPlayer_909.anInt2609 / 32;
+                     var12 = -1801433343 * var21.anInt2579 / 32 - Class79.aPlayer_909.anInt2579 * -1801433343 / 32;
+                     Class8.method140(var1, var2, var6, var12, Class83.aClass116_Sub23_Sub19_Sub2Array970[1], var7, (short)1003);
                   }
                }
 
                if(314519437 * client.anInt3021 == 2) {
-                  var5 = 2 + (-751140636 * client.anInt2954 - 1411827548 * Class116_Sub17.anInt2105) - 1272643751 * Class79.ourPlayer.anInt2609 / 32;
-                  var6 = 2 + (client.anInt2950 * 985346372 - Class33.anInt456 * -1435673236) - Class79.ourPlayer.anInt2579 * -1801433343 / 32;
-                  Class8.method140(x, y, var5, var6, Class83.mapMarker[1], var7, (short)1003);
+                  var5 = 2 + (-751140636 * client.anInt2954 - 1411827548 * Class116_Sub17.anInt2105) - 1272643751 * Class79.aPlayer_909.anInt2609 / 32;
+                  var6 = 2 + (client.anInt2950 * 985346372 - Class33.anInt456 * -1435673236) - Class79.aPlayer_909.anInt2579 * -1801433343 / 32;
+                  Class8.method140(var1, var2, var5, var6, Class83.aClass116_Sub23_Sub19_Sub2Array970[1], var7, (short)1003);
                }
 
                if(client.anInt3021 * 314519437 == 10 && client.anInt3125 * 1613691605 >= 0 && client.anInt3125 * 1613691605 < client.globalPlayers.length) {
                   Player var22 = client.globalPlayers[client.anInt3125 * 1613691605];
                   if(var22 != null) {
-                     var6 = var22.anInt2609 * 1272643751 / 32 - Class79.ourPlayer.anInt2609 * 1272643751 / 32;
-                     var12 = -1801433343 * var22.anInt2579 / 32 - -1801433343 * Class79.ourPlayer.anInt2579 / 32;
-                     Class8.method140(x, y, var6, var12, Class83.mapMarker[1], var7, (short)1003);
+                     var6 = var22.anInt2609 * 1272643751 / 32 - Class79.aPlayer_909.anInt2609 * 1272643751 / 32;
+                     var12 = -1801433343 * var22.anInt2579 / 32 - -1801433343 * Class79.aPlayer_909.anInt2579 / 32;
+                     Class8.method140(var1, var2, var6, var12, Class83.aClass116_Sub23_Sub19_Sub2Array970[1], var7, (short)1003);
                   }
                }
             }
 
             if(client.anInt3168 * -1712731251 != 0) {
-               var5 = 2 + 1739009588 * client.anInt3168 - 1272643751 * Class79.ourPlayer.anInt2609 / 32;
-               var6 = 2 + 1530391476 * client.anInt3208 - Class79.ourPlayer.anInt2579 * -1801433343 / 32;
-               Class62.markMiniMap(x, y, var5, var6, Class83.mapMarker[0], var7, 1522749504);
+               var5 = 2 + 1739009588 * client.anInt3168 - 1272643751 * Class79.aPlayer_909.anInt2609 / 32;
+               var6 = 2 + 1530391476 * client.anInt3208 - Class79.aPlayer_909.anInt2579 * -1801433343 / 32;
+               Class62.markMiniMap(var1, var2, var5, var6, Class83.aClass116_Sub23_Sub19_Sub2Array970[0], var7, 1522749504);
             }
 
-            if(!Class79.ourPlayer.aBool2900) {
-               DrawingArea.setRasterAreaColor(var7.anInt2516 * 662480183 / 2 + x - 1, y + -988977157 * var7.anInt2518 / 2 - 1, 3, 3, 16777215);
+            if(!Class79.aPlayer_909.aBool2900) {
+               DrawingArea.method2927(var7.anInt2516 * 662480183 / 2 + var1 - 1, var2 + -988977157 * var7.anInt2518 / 2 - 1, 3, 3, 16777215);
             }
          } else {
-            DrawingArea.method2904(x, y, 0, var7.anIntArray2513, var7.anIntArray2512);
+            DrawingArea.method2904(var1, var2, 0, var7.anIntArray2513, var7.anIntArray2512);
          }
 
          client.aBoolArray3139[var3] = true;
       }
    }
 
-   static int method1981(RSIndex var0, RSIndex var1, int var2) {
+   static int method1981(Class99 var0, Class99 var1, int var2) {
       int var3 = 0;
       if(var0.method1369("title.jpg", "", 1952315465)) {
          ++var3;
@@ -299,9 +299,9 @@ public final class Class116_Sub12 extends Node {
       return var3;
    }
 
-   public static void method1982(RSIndex var0, int var1) {
-      Class116_Sub23_Sub15.aRSIndex_2449 = var0;
-      Class116_Sub23_Sub15.anInt2448 = Class116_Sub23_Sub15.aRSIndex_2449.method1361(16, -824500445) * 1942513075;
+   public static void method1982(Class99 var0, int var1) {
+      Class116_Sub23_Sub15.aClass99_2449 = var0;
+      Class116_Sub23_Sub15.anInt2448 = Class116_Sub23_Sub15.aClass99_2449.method1361(16, -824500445) * 1942513075;
    }
 
    static void method1983(int var0, byte var1) {
@@ -311,13 +311,13 @@ public final class Class116_Sub12 extends Node {
          }
 
          if(var0 == 20 || var0 == 40 || var0 == 45) {
-            client.loginStep = 0;
+            client.anInt3182 = 0;
             client.anInt3148 = 0;
             client.anInt2978 = 0;
          }
 
          if(20 != var0 && 40 != var0 && null != Class41.aClass71_545) {
-            Class41.aClass71_545.sync(-1588464515);
+            Class41.aClass71_545.method1001(-1588464515);
             Class41.aClass71_545 = null;
          }
 
@@ -331,17 +331,17 @@ public final class Class116_Sub12 extends Node {
 
          if(var0 != 5 && 10 != var0) {
             if(20 == var0) {
-               Class116_Sub23_Sub16_Sub6.method3366(Tile.aCanvas1875, Class49.aCacheIndex_663, Class116_Sub5.spriteIndex, true, 11 == 846055547 * client.loginStage?4:0, 636338739);
+               Class116_Sub23_Sub16_Sub6.method3366(Tile.aCanvas1875, Class49.aClass99_Sub1_663, Class116_Sub5.aClass99_Sub1_1729, true, 11 == 846055547 * client.loginStage?4:0, 636338739);
             } else if(var0 == 11) {
-               Class116_Sub23_Sub16_Sub6.method3366(Tile.aCanvas1875, Class49.aCacheIndex_663, Class116_Sub5.spriteIndex, false, 4, 931750436);
+               Class116_Sub23_Sub16_Sub6.method3366(Tile.aCanvas1875, Class49.aClass99_Sub1_663, Class116_Sub5.aClass99_Sub1_1729, false, 4, 931750436);
             } else if(Class6.aBool94) {
                Class6.aClass116_Sub23_Sub19_Sub3_99 = null;
                Class6.aClass116_Sub23_Sub19_Sub3_65 = null;
                Class6.aClass116_Sub23_Sub19_Sub3Array66 = null;
                Class67.aClass116_Sub23_Sub19_Sub2_826 = null;
                Class6.aClass116_Sub23_Sub19_Sub2_89 = null;
-               Ignore.aClass116_Sub23_Sub19_Sub3_343 = null;
-               RelationList.aClass116_Sub23_Sub19_Sub3Array678 = null;
+               Class24.aClass116_Sub23_Sub19_Sub3_343 = null;
+               Class50.aClass116_Sub23_Sub19_Sub3Array678 = null;
                Class6.aClass116_Sub23_Sub19_Sub3_68 = null;
                Class6.aClass116_Sub23_Sub19_Sub3_69 = null;
                Class106.aClass116_Sub23_Sub19_Sub2Array1449 = null;
@@ -362,14 +362,14 @@ public final class Class116_Sub12 extends Node {
                Class6.aBool94 = false;
             }
          } else {
-            Class116_Sub23_Sub16_Sub6.method3366(Tile.aCanvas1875, Class49.aCacheIndex_663, Class116_Sub5.spriteIndex, true, 0, -473752451);
+            Class116_Sub23_Sub16_Sub6.method3366(Tile.aCanvas1875, Class49.aClass99_Sub1_663, Class116_Sub5.aClass99_Sub1_1729, true, 0, -473752451);
          }
 
          client.loginStage = -317532493 * var0;
       }
    }
 
-   static String method1984(String var0, RSInterface var1, int var2) {
+   static String method1984(String var0, Class116_Sub15 var1, int var2) {
       if(var0.indexOf("%") != -1) {
          int var3;
          for(var3 = 1; var3 <= 5; ++var3) {
@@ -400,7 +400,7 @@ public final class Class116_Sub12 extends Node {
 
             String var8 = "";
             if(null != RSImageProducer.aClass72_1675) {
-               var8 = SignLink.method1076(RSImageProducer.aClass72_1675.anInt867, (short) -9075);
+               var8 = Class74.method1076(RSImageProducer.aClass72_1675.anInt867, (short)-9075);
                if(RSImageProducer.aClass72_1675.anObject869 != null) {
                   var8 = (String) RSImageProducer.aClass72_1675.anObject869;
                }

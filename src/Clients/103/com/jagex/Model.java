@@ -61,32 +61,32 @@ public class Model extends Animable {
       this.method3130();
    }
 
-   public static Model method3114(RSIndex var0, int var1, int var2) {
-      byte[] var3 = var0.getFiles(var1, var2, 807823598);
+   public static Model method3114(Class99 var0, int var1, int var2) {
+      byte[] var3 = var0.method1394(var1, var2, 807823598);
       return var3 == null?null:new Model(var3);
    }
 
    void method3116(byte[] var1) {
       boolean var2 = false;
       boolean var9 = false;
-      Packet var5 = new Packet(var1);
-      Packet var6 = new Packet(var1);
-      Packet var7 = new Packet(var1);
-      Packet var8 = new Packet(var1);
-      Packet var38 = new Packet(var1);
+      Buffer var5 = new Buffer(var1);
+      Buffer var6 = new Buffer(var1);
+      Buffer var7 = new Buffer(var1);
+      Buffer var8 = new Buffer(var1);
+      Buffer var38 = new Buffer(var1);
       var5.position = (var1.length - 18) * -184175589;
-      int var10 = var5.readUnsignedShort(188608189);
-      int var11 = var5.readUnsignedShort(-253649436);
+      int var10 = var5.readShort(188608189);
+      int var11 = var5.readShort(-253649436);
       int var12 = var5.readSignedByte(1708176767);
       int var42 = var5.readSignedByte(1708176767);
       int var15 = var5.readSignedByte(1708176767);
       int var16 = var5.readSignedByte(1708176767);
       int var25 = var5.readSignedByte(1708176767);
       int var17 = var5.readSignedByte(1708176767);
-      int var18 = var5.readUnsignedShort(1204133330);
-      int var19 = var5.readUnsignedShort(-258835004);
-      int var20 = var5.readUnsignedShort(764022142);
-      int var21 = var5.readUnsignedShort(724559698);
+      int var18 = var5.readShort(1204133330);
+      int var19 = var5.readShort(-258835004);
+      int var20 = var5.readShort(764022142);
+      int var21 = var5.readShort(724559698);
       byte var13 = 0;
       int var46 = var13 + var10;
       int var24 = var46;
@@ -217,7 +217,7 @@ public class Model extends Animable {
       var38.position = var26 * -184175589;
 
       for(k12 = 0; k12 < var11; ++k12) {
-         this.aShortArray2671[k12] = (short)var5.readUnsignedShort(1553044671);
+         this.aShortArray2671[k12] = (short)var5.readShort(1553044671);
          if(var42 == 1) {
             var27 = var6.readSignedByte(1708176767);
             if((var27 & 1) == 1) {
@@ -308,9 +308,9 @@ public class Model extends Animable {
 
       for(il2 = 0; il2 < var12; ++il2) {
          this.aByteArray2664[il2] = 0;
-         this.aShortArray2665[il2] = (short)var5.readUnsignedShort(1255103629);
-         this.aShortArray2666[il2] = (short)var5.readUnsignedShort(537938330);
-         this.aShortArray2656[il2] = (short)var5.readUnsignedShort(1869385509);
+         this.aShortArray2665[il2] = (short)var5.readShort(1255103629);
+         this.aShortArray2666[il2] = (short)var5.readShort(537938330);
+         this.aShortArray2656[il2] = (short)var5.readShort(1869385509);
       }
 
       if(this.aByteArray2648 != null) {
@@ -1278,16 +1278,16 @@ public class Model extends Animable {
    }
 
    void method3184(byte[] var1) {
-      Packet var2 = new Packet(var1);
-      Packet var9 = new Packet(var1);
-      Packet var33 = new Packet(var1);
-      Packet var49 = new Packet(var1);
-      Packet var7 = new Packet(var1);
-      Packet var8 = new Packet(var1);
-      Packet var46 = new Packet(var1);
+      Buffer var2 = new Buffer(var1);
+      Buffer var9 = new Buffer(var1);
+      Buffer var33 = new Buffer(var1);
+      Buffer var49 = new Buffer(var1);
+      Buffer var7 = new Buffer(var1);
+      Buffer var8 = new Buffer(var1);
+      Buffer var46 = new Buffer(var1);
       var2.position = (var1.length - 23) * -184175589;
-      int var11 = var2.readUnsignedShort(478472557);
-      int var12 = var2.readUnsignedShort(528004133);
+      int var11 = var2.readShort(478472557);
+      int var12 = var2.readShort(528004133);
       int var27 = var2.readSignedByte(1708176767);
       int var13 = var2.readSignedByte(1708176767);
       int var31 = var2.readSignedByte(1708176767);
@@ -1295,11 +1295,11 @@ public class Model extends Animable {
       int var4 = var2.readSignedByte(1708176767);
       int var18 = var2.readSignedByte(1708176767);
       int var19 = var2.readSignedByte(1708176767);
-      int var20 = var2.readUnsignedShort(2095046537);
-      int var21 = var2.readUnsignedShort(171805959);
-      int var22 = var2.readUnsignedShort(293620621);
-      int var23 = var2.readUnsignedShort(1765199163);
-      int var24 = var2.readUnsignedShort(339901634);
+      int var20 = var2.readShort(2095046537);
+      int var21 = var2.readShort(171805959);
+      int var22 = var2.readShort(293620621);
+      int var23 = var2.readShort(1765199163);
+      int var24 = var2.readShort(339901634);
       int var25 = 0;
       int var3 = 0;
       int var26 = 0;
@@ -1490,7 +1490,7 @@ public class Model extends Animable {
       var46.position = var42 * -184175589;
 
       for(var15 = 0; var15 < var12; ++var15) {
-         this.aShortArray2671[var15] = (short)var2.readUnsignedShort(1768491177);
+         this.aShortArray2671[var15] = (short)var2.readShort(1768491177);
          if(var13 == 1) {
             this.aByteArray2662[var15] = var9.readUnsignedByte(-318131253);
          }
@@ -1508,7 +1508,7 @@ public class Model extends Animable {
          }
 
          if(var18 == 1) {
-            this.aShortArray2661[var15] = (short)(var8.readUnsignedShort(137844241) - 1);
+            this.aShortArray2661[var15] = (short)(var8.readShort(137844241) - 1);
          }
 
          if(this.aByteArray2648 != null && this.aShortArray2661[var15] != -1) {
@@ -1576,46 +1576,46 @@ public class Model extends Animable {
       for(var14 = 0; var14 < var27; ++var14) {
          var32 = this.aByteArray2664[var14] & 255;
          if(var32 == 0) {
-            this.aShortArray2665[var14] = (short)var2.readUnsignedShort(750478498);
-            this.aShortArray2666[var14] = (short)var2.readUnsignedShort(969927180);
-            this.aShortArray2656[var14] = (short)var2.readUnsignedShort(1962985673);
+            this.aShortArray2665[var14] = (short)var2.readShort(750478498);
+            this.aShortArray2666[var14] = (short)var2.readShort(969927180);
+            this.aShortArray2656[var14] = (short)var2.readShort(1962985673);
          }
 
          if(var32 == 1) {
-            this.aShortArray2665[var14] = (short)var9.readUnsignedShort(1636665350);
-            this.aShortArray2666[var14] = (short)var9.readUnsignedShort(1067364929);
-            this.aShortArray2656[var14] = (short)var9.readUnsignedShort(1800234935);
-            this.aShortArray2668[var14] = (short)var33.readUnsignedShort(-38992183);
-            this.aShortArray2669[var14] = (short)var33.readUnsignedShort(-412398138);
-            this.aShortArray2685[var14] = (short)var33.readUnsignedShort(-3213613);
-            this.aShortArray2686[var14] = (short)var49.readUnsignedShort(-144343004);
+            this.aShortArray2665[var14] = (short)var9.readShort(1636665350);
+            this.aShortArray2666[var14] = (short)var9.readShort(1067364929);
+            this.aShortArray2656[var14] = (short)var9.readShort(1800234935);
+            this.aShortArray2668[var14] = (short)var33.readShort(-38992183);
+            this.aShortArray2669[var14] = (short)var33.readShort(-412398138);
+            this.aShortArray2685[var14] = (short)var33.readShort(-3213613);
+            this.aShortArray2686[var14] = (short)var49.readShort(-144343004);
             this.aByteArray2653[var14] = var7.readUnsignedByte(100072808);
-            this.aShortArray2672[var14] = (short)var8.readUnsignedShort(835367600);
+            this.aShortArray2672[var14] = (short)var8.readShort(835367600);
          }
 
          if(var32 == 2) {
-            this.aShortArray2665[var14] = (short)var9.readUnsignedShort(557934644);
-            this.aShortArray2666[var14] = (short)var9.readUnsignedShort(-414775516);
-            this.aShortArray2656[var14] = (short)var9.readUnsignedShort(-355910644);
-            this.aShortArray2668[var14] = (short)var33.readUnsignedShort(2143372387);
-            this.aShortArray2669[var14] = (short)var33.readUnsignedShort(1011349249);
-            this.aShortArray2685[var14] = (short)var33.readUnsignedShort(485899624);
-            this.aShortArray2686[var14] = (short)var49.readUnsignedShort(-442507293);
+            this.aShortArray2665[var14] = (short)var9.readShort(557934644);
+            this.aShortArray2666[var14] = (short)var9.readShort(-414775516);
+            this.aShortArray2656[var14] = (short)var9.readShort(-355910644);
+            this.aShortArray2668[var14] = (short)var33.readShort(2143372387);
+            this.aShortArray2669[var14] = (short)var33.readShort(1011349249);
+            this.aShortArray2685[var14] = (short)var33.readShort(485899624);
+            this.aShortArray2686[var14] = (short)var49.readShort(-442507293);
             this.aByteArray2653[var14] = var7.readUnsignedByte(-2042914090);
-            this.aShortArray2672[var14] = (short)var8.readUnsignedShort(11278514);
-            this.aShortArray2673[var14] = (short)var8.readUnsignedShort(1361146368);
+            this.aShortArray2672[var14] = (short)var8.readShort(11278514);
+            this.aShortArray2673[var14] = (short)var8.readShort(1361146368);
          }
 
          if(var32 == 3) {
-            this.aShortArray2665[var14] = (short)var9.readUnsignedShort(565960167);
-            this.aShortArray2666[var14] = (short)var9.readUnsignedShort(919765384);
-            this.aShortArray2656[var14] = (short)var9.readUnsignedShort(868640232);
-            this.aShortArray2668[var14] = (short)var33.readUnsignedShort(340866419);
-            this.aShortArray2669[var14] = (short)var33.readUnsignedShort(-449703302);
-            this.aShortArray2685[var14] = (short)var33.readUnsignedShort(673829165);
-            this.aShortArray2686[var14] = (short)var49.readUnsignedShort(-217641994);
+            this.aShortArray2665[var14] = (short)var9.readShort(565960167);
+            this.aShortArray2666[var14] = (short)var9.readShort(919765384);
+            this.aShortArray2656[var14] = (short)var9.readShort(868640232);
+            this.aShortArray2668[var14] = (short)var33.readShort(340866419);
+            this.aShortArray2669[var14] = (short)var33.readShort(-449703302);
+            this.aShortArray2685[var14] = (short)var33.readShort(673829165);
+            this.aShortArray2686[var14] = (short)var49.readShort(-217641994);
             this.aByteArray2653[var14] = var7.readUnsignedByte(-1289221817);
-            this.aShortArray2672[var14] = (short)var8.readUnsignedShort(1922650677);
+            this.aShortArray2672[var14] = (short)var8.readShort(1922650677);
          }
       }
 
@@ -1623,9 +1623,9 @@ public class Model extends Animable {
       var14 = var2.readSignedByte(1708176767);
       if(var14 != 0) {
          new Class30();
-         var2.readUnsignedShort(84419115);
-         var2.readUnsignedShort(1300861724);
-         var2.readUnsignedShort(-320563092);
+         var2.readShort(84419115);
+         var2.readShort(1300861724);
+         var2.readShort(-320563092);
          var2.readInt(-995564962);
       }
 

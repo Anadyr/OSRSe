@@ -1,5 +1,4 @@
 package com.jagex;
-
 import com.applet.Launcher;
 
 import java.awt.FontMetrics;
@@ -177,27 +176,27 @@ public final class ISAAC {
          this.isaac();
          this.count = 255;
       }
-      // if(!Launcher.rsps)
-      //  return 0;
+       //if(Launcher.rsps)
+        //return 0;
        return this.result[this.count];
    }
 
     
     protected static FontMetrics aFontMetrics701;
-    public static SignLink signLink;
+    public static Class74 aClass74_705;
     static int anInt700;
     
    static final void method794(short var0) {
         client.rsaBuffer.startPacket(217, (byte) 32);
 
-        for(GameInterface var1 = (GameInterface)client.overridedInterfaces.getFirst(); null != var1; var1 = (GameInterface)client.overridedInterfaces.getNext()) {
-            if(-1882639549 * var1.type == 0 || var1.type * -1882639549 == 3) {
+        for(Class116_Sub11 var1 = (Class116_Sub11)client.aClass127_3094.method1661(); null != var1; var1 = (Class116_Sub11)client.aClass127_3094.method1662()) {
+            if(-1882639549 * var1.anInt1822 == 0 || var1.anInt1822 * -1882639549 == 3) {
                 Class116_Sub23_Sub5.method2490(var1, true, (byte)1);
             }
         }
 
         if(client.aClass116_Sub15_3097 != null) {
-            Class79.refreshInterface(client.aClass116_Sub15_3097, 2133316706);
+            Class79.method1097(client.aClass116_Sub15_3097, 2133316706);
             client.aClass116_Sub15_3097 = null;
         }
 
@@ -215,17 +214,17 @@ public final class ISAAC {
 
    }
 
-   static boolean method806(RSInterface var0, int var1) {
+   static boolean method806(Class116_Sub15 var0, int var1) {
       if(client.aBool2957) {
          if(Class35.method645(var0, (byte)0) != 0) {
             return false;
          }
 
-         if(0 == -1305917269 * var0.type) {
+         if(0 == -1305917269 * var0.anInt2018) {
             return false;
          }
       }
 
-      return var0.hidden;
+      return var0.aBool1945;
    }
 }

@@ -2689,7 +2689,7 @@ public class Texture extends DrawingArea {
       anInt2707 = var3 - var1;
       method3192();
       if(anIntArray2710.length < anInt2707) {
-         anIntArray2710 = new int[World.method542(anInt2707, 1417738334)];
+         anIntArray2710 = new int[Class27.method542(anInt2707, 1417738334)];
       }
 
       int var5 = var1 * width + var0;

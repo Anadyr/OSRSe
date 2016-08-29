@@ -172,7 +172,7 @@ public abstract class TextDrawingArea extends DrawingArea {
                }
 
                if(var2 == -1) {
-                  var4 += this.anIntArray2861[(char)(Ignore.cipherChar(var6, -543467890) & 255)];
+                  var4 += this.anIntArray2861[(char)(Class24.method529(var6, -543467890) & 255)];
                   if(this.aByteArray2856 != null && var3 != -1) {
                      var4 += this.aByteArray2856[(var3 << 8) + var6];
                   }
@@ -383,7 +383,7 @@ public abstract class TextDrawingArea extends DrawingArea {
 
       for(int var6 = 0; var6 < var1.length(); ++var6) {
          if(var1.charAt(var6) != 0) {
-            char var7 = (char)(Ignore.cipherChar(var1.charAt(var6), -543467890) & 255);
+            char var7 = (char)(Class24.method529(var1.charAt(var6), -543467890) & 255);
             if(var7 == 60) {
                var4 = var6;
             } else {
@@ -473,7 +473,7 @@ public abstract class TextDrawingArea extends DrawingArea {
 
       for(int var9 = 0; var9 < var1.length(); ++var9) {
          if(var1.charAt(var9) != 0) {
-            char var10 = (char)(Ignore.cipherChar(var1.charAt(var9), -543467890) & 255);
+            char var10 = (char)(Class24.method529(var1.charAt(var9), -543467890) & 255);
             if(var10 == 60) {
                var6 = var9;
             } else {
@@ -719,7 +719,7 @@ public abstract class TextDrawingArea extends DrawingArea {
          var1 = 32;
       }
 
-      return this.anIntArray2861[Ignore.cipherChar(var1, -543467890) & 255];
+      return this.anIntArray2861[Class24.method529(var1, -543467890) & 255];
    }
 
    public void method3492(String var1, int var2, int var3, int var4, int var5) {

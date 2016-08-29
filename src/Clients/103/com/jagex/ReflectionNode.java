@@ -34,14 +34,14 @@ public class ReflectionNode extends Node {
       }
 
       if(23 == var2) {
-         GameInterface.region.method514(-747958745 * GameInterface.anInt1819, var0, var1);
+         Class116_Sub11.groundItemController.method514(-747958745 * Class116_Sub11.anInt1819, var0, var1);
       }
 
-      RSInterface var9;
+      Class116_Sub15 var9;
       if(24 == var2) {
-         var9 = Class107.getInterface(var1, 314639891);
+         var9 = Class107.method1466(var1, 314639891);
          boolean var10 = true;
-         if(-179718399 * var9.clientCode > 0) {
+         if(-179718399 * var9.anInt2016 > 0) {
             var10 = Class116_Sub23_Sub2.method2384(var9, 1000093932);
          }
 
@@ -57,7 +57,7 @@ public class ReflectionNode extends Node {
          client.rsaBuffer.method2102(var3, 1471200376);
          client.rsaBuffer.writeShort(var0, -1881121516);
          client.anInt3047 = 0;
-         Class35.aClass116_Sub15_473 = Class107.getInterface(var1, 314639891);
+         Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
          client.anInt3048 = var0 * -1119534041;
       }
 
@@ -65,9 +65,9 @@ public class ReflectionNode extends Node {
          client.rsaBuffer.startPacket(115, (byte) 80);
          client.rsaBuffer.writeLEShortA(var0, -1983290574);
          client.rsaBuffer.writeLEShortA(var3, -128120499);
-         client.rsaBuffer.writeInt2(var1, 1582012970);
+         client.rsaBuffer.method2087(var1, 1582012970);
          client.anInt3047 = 0;
-         Class35.aClass116_Sub15_473 = Class107.getInterface(var1, 314639891);
+         Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
          client.anInt3048 = var0 * -1119534041;
       }
 
@@ -75,9 +75,9 @@ public class ReflectionNode extends Node {
          client.rsaBuffer.startPacket(212, (byte) 65);
          client.rsaBuffer.writeShort(var3, -1717128077);
          client.rsaBuffer.writeLEShort(var0, 1026860661);
-         client.rsaBuffer.writeInt2(var1, 1078546451);
+         client.rsaBuffer.method2087(var1, 1078546451);
          client.anInt3047 = 0;
-         Class35.aClass116_Sub15_473 = Class107.getInterface(var1, 314639891);
+         Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
          client.anInt3048 = -1119534041 * var0;
       }
 
@@ -109,7 +109,7 @@ public class ReflectionNode extends Node {
          var9 = AbstractRSDrawing.method339(var1, var0, -1985372156);
          if(var9 != null) {
             var14 = var9.anInt2043 * 813479615;
-            RSInterface var11 = AbstractRSDrawing.method339(var1, var0, -399224632);
+            Class116_Sub15 var11 = AbstractRSDrawing.method339(var1, var0, -399224632);
             if(var11 != null) {
                if(var11.anObjectArray2023 != null) {
                   Class116_Sub6 var12 = new Class116_Sub6();
@@ -121,17 +121,16 @@ public class ReflectionNode extends Node {
                }
 
                boolean var17 = true;
-               if(-179718399 * var11.clientCode > 0) {
+               if(-179718399 * var11.anInt2016 > 0) {
                   var17 = Class116_Sub23_Sub2.method2384(var11, 1244772122);
                }
 
                if(var17 && Class116_Sub17.method2314(Class35.method645(var11, (byte)0), var3 - 1, 1717977072)) {
-                  if(1 == var3) { //unequip
+                  if(1 == var3) {
                      client.rsaBuffer.startPacket(149, (byte) 67);
                      client.rsaBuffer.writeInt(var1, (byte)121);
                      client.rsaBuffer.writeShort(var0, -2128928871);
                      client.rsaBuffer.writeShort(var14, -2130754846);
-                     System.out.println(var1+"/"+var0+"/"+var14);
                   }
 
                   if(2 == var3) {
@@ -205,15 +204,15 @@ public class ReflectionNode extends Node {
          var9 = AbstractRSDrawing.method339(var1, var0, -2079730176);
          if(var9 != null) {
             Class116_Sub23_Sub2.method2390(1602924600);
-            Class9.method194(var1, var0, SignLink.method1075(Class35.method645(var9, (byte) 0), -1040783547), 813479615 * var9.anInt2043, (byte)-8);
+            Class9.method194(var1, var0, Class74.method1075(Class35.method645(var9, (byte)0), -1040783547), 813479615 * var9.anInt2043, (byte)-8);
             client.anInt2991 = 0;
             client.aString3192 = Class32.method594(var9, (byte)78);
             if(null == client.aString3192) {
                client.aString3192 = "Null";
             }
 
-            if(var9.newFormat) {
-               client.aString2969 = var9.action_name + Class59_Sub1.method1978(16777215, (byte)36);
+            if(var9.aBool1924) {
+               client.aString2969 = var9.aString1996 + Class59_Sub1.method1978(16777215, (byte)36);
             } else {
                client.aString2969 = Class59_Sub1.method1978('\uff00', (byte)75) + var9.aString1918 + Class59_Sub1.method1978(16777215, (byte)22);
             }
@@ -233,7 +232,7 @@ public class ReflectionNode extends Node {
             client.rsaBuffer.writeLEShortA(var3, 1305424037);
             client.rsaBuffer.writeByte(KeyFocusListener.keysHeldDown[82]?1:0, 246658255);
             client.rsaBuffer.writeShort(1905121485 * Class37.anInt493, -1813968628);
-            client.rsaBuffer.writeLEInt(Class26.anInt365 * -47339353, (byte) 35);
+            client.rsaBuffer.method2100(Class26.anInt365 * -47339353, (byte)35);
             client.rsaBuffer.writeShort(Class33.anInt456 * 714823515 + var1, -1981734451);
          }
 
@@ -270,11 +269,11 @@ public class ReflectionNode extends Node {
          if(var2 == 28) {
             client.rsaBuffer.startPacket(80, (byte) 106);
             client.rsaBuffer.writeInt(var1, (byte)77);
-            var9 = Class107.getInterface(var1, 314639891);
-            if(null != var9.cs1opcodes && 5 == var9.cs1opcodes[0][0]) {
-               var14 = var9.cs1opcodes[0][1];
-               Class107.varpData[var14] = 1 - Class107.varpData[var14];
-               World.method567(var14, 2104013615);
+            var9 = Class107.method1466(var1, 314639891);
+            if(null != var9.anIntArrayArray2035 && 5 == var9.anIntArrayArray2035[0][0]) {
+               var14 = var9.anIntArrayArray2035[0][1];
+               Class107.anIntArray1459[var14] = 1 - Class107.anIntArray1459[var14];
+               Class27.method567(var14, 2104013615);
             }
          }
 
@@ -297,24 +296,24 @@ public class ReflectionNode extends Node {
          if(35 == var2) {
             client.rsaBuffer.startPacket(6, (byte) 79);
             client.rsaBuffer.writeLEShort(var3, 1992323464);
-            client.rsaBuffer.writeLEInt(var1, (byte) 64);
+            client.rsaBuffer.method2100(var1, (byte)64);
             client.rsaBuffer.writeLEShort(var0, 1341634511);
             client.anInt3047 = 0;
-            Class35.aClass116_Sub15_473 = Class107.getInterface(var1, 314639891);
+            Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
             client.anInt3048 = var0 * -1119534041;
          }
 
          if(1005 == var2) {
-            var9 = Class107.getInterface(var1, 314639891);
-            if(var9 != null && var9.invStackSize[var0] >= 100000) {
-               Class86.appendMessage(27, "", var9.invStackSize[var0] + " x " + RelationList.method778(var3, (byte) 70).aString2361, -368486234);
+            var9 = Class107.method1466(var1, 314639891);
+            if(var9 != null && var9.anIntArray2042[var0] >= 100000) {
+               Class86.appendMessage(27, "", var9.anIntArray2042[var0] + " x " + Class50.method778(var3, (byte) 70).aString2361, -368486234);
             } else {
                client.rsaBuffer.startPacket(158, (byte) 85);
                client.rsaBuffer.writeLEShortA(var3, -1124935883);
             }
 
             client.anInt3047 = 0;
-            Class35.aClass116_Sub15_473 = Class107.getInterface(var1, 314639891);
+            Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
             client.anInt3048 = var0 * -1119534041;
          }
 
@@ -330,7 +329,7 @@ public class ReflectionNode extends Node {
                client.rsaBuffer.startPacket(74, (byte) 29);
                client.rsaBuffer.writeLEShort(var3, 760060720);
                client.rsaBuffer.method2209(KeyFocusListener.keysHeldDown[82]?1:0, 414335590);
-               client.rsaBuffer.writeInt2(Class116_Sub23_Sub4.anInt2262 * -1195336111, 789222626);
+               client.rsaBuffer.method2087(Class116_Sub23_Sub4.anInt2262 * -1195336111, 789222626);
                client.rsaBuffer.writeLEShortA(1149825709 * client.anInt3089, -35786081);
             }
          }
@@ -341,7 +340,7 @@ public class ReflectionNode extends Node {
             client.rsaBuffer.writeInt(var1, (byte)49);
             client.rsaBuffer.method2102(var3, -485273282);
             client.anInt3047 = 0;
-            Class35.aClass116_Sub15_473 = Class107.getInterface(var1, 314639891);
+            Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
             client.anInt3048 = var0 * -1119534041;
          }
 
@@ -370,7 +369,7 @@ public class ReflectionNode extends Node {
             client.rsaBuffer.writeLEShortA(Class37.anInt493 * 1905121485, 146583481);
             client.rsaBuffer.writeShort(var3, -2108158210);
             client.anInt3047 = 0;
-            Class35.aClass116_Sub15_473 = Class107.getInterface(var1, 314639891);
+            Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
             client.anInt3048 = var0 * -1119534041;
          }
 
@@ -394,7 +393,7 @@ public class ReflectionNode extends Node {
             client.rsaBuffer.writeLEShortA(var0, -2092765757);
             client.rsaBuffer.method2046(var1, 363001979);
             client.anInt3047 = 0;
-            Class35.aClass116_Sub15_473 = Class107.getInterface(var1, 314639891);
+            Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
             client.anInt3048 = -1119534041 * var0;
          }
 
@@ -406,7 +405,7 @@ public class ReflectionNode extends Node {
             client.anInt3168 = var0 * -1943900347;
             client.anInt3208 = var1 * 317027045;
             client.rsaBuffer.startPacket(118, (byte) 113);
-            client.rsaBuffer.writeInt2(-47339353 * Class26.anInt365, 1546447964);
+            client.rsaBuffer.method2087(-47339353 * Class26.anInt365, 1546447964);
             client.rsaBuffer.writeLEShortA(var3 >> 14 & 32767, 158940329);
             client.rsaBuffer.method2209(KeyFocusListener.keysHeldDown[82]?1:0, 1618076834);
             client.rsaBuffer.writeLEShortA(1905121485 * Class37.anInt493, -2121738406);
@@ -416,9 +415,9 @@ public class ReflectionNode extends Node {
          }
 
          if(30 == var2 && null == client.aClass116_Sub15_3097) {
-            RelationList.method779(var1, var0, (byte) 8);
+            Class50.method779(var1, var0, (byte)8);
             client.aClass116_Sub15_3097 = AbstractRSDrawing.method339(var1, var0, 305498668);
-            Class79.refreshInterface(client.aClass116_Sub15_3097, -1268697776);
+            Class79.method1097(client.aClass116_Sub15_3097, -1268697776);
          }
 
          if(48 == var2) {
@@ -440,19 +439,19 @@ public class ReflectionNode extends Node {
             client.rsaBuffer.startPacket(50, (byte) 40);
             client.rsaBuffer.writeShort(var0, -2048974417);
             client.rsaBuffer.method2102(var3, -1188884851);
-            client.rsaBuffer.writeLEInt(var1, (byte) 94);
+            client.rsaBuffer.method2100(var1, (byte)94);
             client.anInt3047 = 0;
-            Class35.aClass116_Sub15_473 = Class107.getInterface(var1, 314639891);
+            Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
             client.anInt3048 = var0 * -1119534041;
          }
 
          if(33 == var2) {
             client.rsaBuffer.startPacket(187, (byte) 113);
-            client.rsaBuffer.writeLEInt(var1, (byte) 76);
+            client.rsaBuffer.method2100(var1, (byte)76);
             client.rsaBuffer.writeLEShort(var0, 1581782405);
             client.rsaBuffer.method2102(var3, 1623103306);
             client.anInt3047 = 0;
-            Class35.aClass116_Sub15_473 = Class107.getInterface(var1, 314639891);
+            Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
             client.anInt3048 = var0 * -1119534041;
          }
 
@@ -478,11 +477,11 @@ public class ReflectionNode extends Node {
             client.rsaBuffer.startPacket(30, (byte) 123);
             client.rsaBuffer.method2102(1149825709 * client.anInt3089, 125713052);
             client.rsaBuffer.writeInt(var1, (byte)28);
-            client.rsaBuffer.writeInt2(Class116_Sub23_Sub4.anInt2262 * -1195336111, -1774074017);
+            client.rsaBuffer.method2087(Class116_Sub23_Sub4.anInt2262 * -1195336111, -1774074017);
             client.rsaBuffer.writeShort(var3, -1761039396);
             client.rsaBuffer.method2102(var0, 556807237);
             client.anInt3047 = 0;
-            Class35.aClass116_Sub15_473 = Class107.getInterface(var1, 314639891);
+            Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
             client.anInt3048 = var0 * -1119534041;
          }
 
@@ -507,7 +506,7 @@ public class ReflectionNode extends Node {
             client.rsaBuffer.writeLEShort(var0, 1318713980);
             client.rsaBuffer.writeLEShortA(var3, -565903448);
             client.anInt3047 = 0;
-            Class35.aClass116_Sub15_473 = Class107.getInterface(var1, 314639891);
+            Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
             client.anInt3048 = var0 * -1119534041;
          }
 
@@ -532,19 +531,19 @@ public class ReflectionNode extends Node {
             client.rsaBuffer.method2046(var1, 363001979);
             client.rsaBuffer.writeLEShortA(var3, -1845818499);
             client.anInt3047 = 0;
-            Class35.aClass116_Sub15_473 = Class107.getInterface(var1, 314639891);
+            Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
             client.anInt3048 = var0 * -1119534041;
          }
 
          if(var2 == 38) {
             Class116_Sub23_Sub2.method2390(1696725485);
-            var9 = Class107.getInterface(var1, 314639891);
+            var9 = Class107.method1466(var1, 314639891);
             client.anInt2991 = 2046756243;
             Class49.anInt661 = var0 * 1705405781;
             Class26.anInt365 = var1 * 541949719;
             Class37.anInt493 = 662033413 * var3;
-            Class79.refreshInterface(var9, -588000075);
-            client.aString3201 = Class59_Sub1.method1978(16748608, (byte)117) + RelationList.method778(var3, (byte) 70).aString2361 + Class59_Sub1.method1978(16777215, (byte)101);
+            Class79.method1097(var9, -588000075);
+            client.aString3201 = Class59_Sub1.method1978(16748608, (byte)117) + Class50.method778(var3, (byte)70).aString2361 + Class59_Sub1.method1978(16777215, (byte)101);
             if(client.aString3201 == null) {
                client.aString3201 = "null";
             }
@@ -560,7 +559,7 @@ public class ReflectionNode extends Node {
                client.rsaBuffer.startPacket(7, (byte) 87);
                client.rsaBuffer.writeLEShortA(var0 + 1426698711 * Class116_Sub17.anInt2105, -965482817);
                client.rsaBuffer.writeByte(KeyFocusListener.keysHeldDown[82]?1:0, -2128732133);
-               client.rsaBuffer.writeInt2(-1195336111 * Class116_Sub23_Sub4.anInt2262, 1467474663);
+               client.rsaBuffer.method2087(-1195336111 * Class116_Sub23_Sub4.anInt2262, 1467474663);
                client.rsaBuffer.method2102(1149825709 * client.anInt3089, -596036941);
                client.rsaBuffer.writeShort(var1 + 714823515 * Class33.anInt456, -1819686272);
                client.rsaBuffer.writeLEShortA(var3, 893491265);
@@ -714,12 +713,12 @@ public class ReflectionNode extends Node {
             if(29 == var2) {
                client.rsaBuffer.startPacket(80, (byte) 113);
                client.rsaBuffer.writeInt(var1, (byte)66);
-               var9 = Class107.getInterface(var1, 314639891);
-               if(null != var9.cs1opcodes && var9.cs1opcodes[0][0] == 5) {
-                  var14 = var9.cs1opcodes[0][1];
-                  if(Class107.varpData[var14] != var9.requiredValues[0]) {
-                     Class107.varpData[var14] = var9.requiredValues[0];
-                     World.method567(var14, 1704661204);
+               var9 = Class107.method1466(var1, 314639891);
+               if(null != var9.anIntArrayArray2035 && var9.anIntArrayArray2035[0][0] == 5) {
+                  var14 = var9.anIntArrayArray2035[0][1];
+                  if(Class107.anIntArray1459[var14] != var9.anIntArray2001[0]) {
+                     Class107.anIntArray1459[var14] = var9.anIntArray2001[0];
+                     Class27.method567(var14, 1704661204);
                   }
                }
             }
@@ -763,7 +762,7 @@ public class ReflectionNode extends Node {
                   client.rsaBuffer.writeShort(var0, -1854727998);
                   client.rsaBuffer.writeLEShortA(-1609091953 * client.anInt3090, -1720732137);
                   client.rsaBuffer.method2046(-1195336111 * Class116_Sub23_Sub4.anInt2262, 363001979);
-                  client.rsaBuffer.writeLEInt(var1, (byte) 111);
+                  client.rsaBuffer.method2100(var1, (byte)111);
                   client.rsaBuffer.writeShort(var9.anInt2043 * 813479615, -1689032643);
                   client.rsaBuffer.writeLEShortA(1149825709 * client.anInt3089, 1797799624);
                }
@@ -794,7 +793,7 @@ public class ReflectionNode extends Node {
                   client.anInt3208 = var1 * 317027045;
                   client.rsaBuffer.startPacket(106, (byte) 68);
                   client.rsaBuffer.writeLEShortA(1905121485 * Class37.anInt493, -1112229279);
-                  client.rsaBuffer.writeInt2(-47339353 * Class26.anInt365, 846818795);
+                  client.rsaBuffer.method2087(-47339353 * Class26.anInt365, 846818795);
                   client.rsaBuffer.writeLEShortA(Class49.anInt661 * 543565821, 1821876216);
                   client.rsaBuffer.writeByte(KeyFocusListener.keysHeldDown[82]?1:0, -2105914978);
                   client.rsaBuffer.writeLEShort(var3, 590184446);
@@ -865,7 +864,7 @@ public class ReflectionNode extends Node {
 
             if(-1110581093 * client.anInt2991 != 0) {
                client.anInt2991 = 0;
-               Class79.refreshInterface(Class107.getInterface(-47339353 * Class26.anInt365, 314639891), 1428707230);
+               Class79.method1097(Class107.method1466(-47339353 * Class26.anInt365, 314639891), 1428707230);
             }
 
             if(client.aBool3088) {
@@ -873,7 +872,7 @@ public class ReflectionNode extends Node {
             }
 
             if(Class35.aClass116_Sub15_473 != null && 0 == -1044454887 * client.anInt3047) {
-               Class79.refreshInterface(Class35.aClass116_Sub15_473, -792871744);
+               Class79.method1097(Class35.aClass116_Sub15_473, -792871744);
             }
 
          }

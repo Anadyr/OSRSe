@@ -47,7 +47,7 @@ public abstract class Class59 {
       return new String(var5);
    }
 
-   static int method896(World var0, World var1, int var2, boolean var3, byte var4) {
+   static int method896(Class27 var0, Class27 var1, int var2, boolean var3, byte var4) {
       if(1 == var2) {
          int var6 = 215269871 * var0.anInt381;
          int var5 = 215269871 * var1.anInt381;
@@ -63,7 +63,7 @@ public abstract class Class59 {
 
          return var6 - var5;
       } else {
-         return var2 == 2?-1854937097 * var0.flag - -1854937097 * var1.flag :(3 == var2?(var0.activity.equals("-")?(var1.activity.equals("-")?0:(var3?-1:1)):(var1.activity.equals("-")?(var3?1:-1):var0.activity.compareTo(var1.activity))):(4 == var2?(var0.method540(-819065046)?(var1.method540(1318010001)?0:1):(var1.method540(-696561353)?-1:0)):(5 == var2?(var0.method538(-914466288)?(var1.method538(-1811741119)?0:1):(var1.method538(26395215)?-1:0)):(var2 == 6?(var0.method539(1217140964)?(var1.method539(-639237207)?0:1):(var1.method539(-70734957)?-1:0)):(7 == var2?(var0.method537('\uffff')?(var1.method537('\uffff')?0:1):(var1.method537('\uffff')?-1:0)):var0.worldId * -145619359 - var1.worldId * -145619359)))));
+         return var2 == 2?-1854937097 * var0.anInt385 - -1854937097 * var1.anInt385:(3 == var2?(var0.aString371.equals("-")?(var1.aString371.equals("-")?0:(var3?-1:1)):(var1.aString371.equals("-")?(var3?1:-1):var0.aString371.compareTo(var1.aString371))):(4 == var2?(var0.method540(-819065046)?(var1.method540(1318010001)?0:1):(var1.method540(-696561353)?-1:0)):(5 == var2?(var0.method538(-914466288)?(var1.method538(-1811741119)?0:1):(var1.method538(26395215)?-1:0)):(var2 == 6?(var0.method539(1217140964)?(var1.method539(-639237207)?0:1):(var1.method539(-70734957)?-1:0)):(7 == var2?(var0.method537('\uffff')?(var1.method537('\uffff')?0:1):(var1.method537('\uffff')?-1:0)):var0.anInt388 * -145619359 - var1.anInt388 * -145619359)))));
       }
    }
 }

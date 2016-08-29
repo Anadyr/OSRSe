@@ -253,7 +253,7 @@ public class SoundClip {
       }
    }
 
-   final void method199(Packet var1) {
+   final void method199(Buffer var1) {
       this.aMidiSeq_179 = new MidiSeq();
       this.aMidiSeq_179.applyData(var1);
       this.aMidiSeq_167 = new MidiSeq();
@@ -298,8 +298,8 @@ public class SoundClip {
 
       this.anInt177 = var1.readSmartC(195025886);
       this.anInt178 = var1.readSmartC(1760556139);
-      this.anInt181 = var1.readUnsignedShort(1298607588);
-      this.anInt182 = var1.readUnsignedShort(624424616);
+      this.anInt181 = var1.readShort(1298607588);
+      this.anInt182 = var1.readShort(624424616);
       this.aClass12_166 = new Class12();
       this.aMidiSeq_180 = new MidiSeq();
       this.aClass12_166.method215(var1, this.aMidiSeq_180);

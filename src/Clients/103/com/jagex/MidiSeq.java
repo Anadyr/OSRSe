@@ -14,7 +14,7 @@ public class MidiSeq {
    int anInt231;
    int[] anIntArray232 = new int[2];
 
-   final void applyData(Packet var1) {
+   final void applyData(Buffer var1) {
       this.anInt227 = var1.readSignedByte(1708176767);
       this.anInt222 = var1.readInt(-316753801);
       this.anInt225 = var1.readInt(-2032381067);
@@ -54,14 +54,14 @@ public class MidiSeq {
       this.anIntArray232[1] = '\uffff';
    }
 
-   final void method278(Packet var1) {
+   final void method278(Buffer var1) {
       this.anInt226 = var1.readSignedByte(1708176767);
       this.anIntArray223 = new int[this.anInt226];
       this.anIntArray232 = new int[this.anInt226];
 
       for(int var2 = 0; var2 < this.anInt226; ++var2) {
-         this.anIntArray223[var2] = var1.readUnsignedShort(-65906373);
-         this.anIntArray232[var2] = var1.readUnsignedShort(901941890);
+         this.anIntArray223[var2] = var1.readShort(-65906373);
+         this.anIntArray232[var2] = var1.readShort(901941890);
       }
 
    }

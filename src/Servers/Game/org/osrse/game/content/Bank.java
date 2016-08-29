@@ -129,8 +129,8 @@ public class Bank {
 
     public static void openBank(Player player) {
         player.getProtocol().sendInterface(0, 548, 12, 13);
-        //player.getProtocol().sendInterfaceInventory(15);
-        //refresh(player);
+        player.getProtocol().sendInterfaceInventory(15);
+        refresh(player);
     }
 
 
@@ -141,8 +141,15 @@ public class Bank {
         player.getProtocol().sendString(12, 3, "" + free);
         player.getProtocol().sendString(12, 5, "" + player.getBank().size());
 
-        player.getProtocol().sendAccessMask(12, 6, 2046, 0, 424);
-        player.getProtocol().sendAccessMask(15, 0, 2046, 0, 28);
+        //player.getProtocol().sendAccessMask(12, 6, 2046, 0, 424);
+        //player.getProtocol().sendAccessMask(15, 0, 2046, 0, 28);
+
+
+        player.getProtocol().sendAccessMask(15, 10, 1054, 0, 27);//0, 799, 1311998, 12 << 16 | 12
+
+
+
+
         /*
         [7:28:20 PM] Greco: player.getActionSender().sendAccessMask(0, 799, 1311998, 12 << 16 | 12);
                               player.getActionSender().sendAccessMask(809, 817, 2, 12 << 16 | 12);

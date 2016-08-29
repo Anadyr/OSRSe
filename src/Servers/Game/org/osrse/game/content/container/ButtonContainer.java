@@ -6,8 +6,13 @@
 package org.osrse.game.content.container;
   
 import org.osrse.game.content.Bank;
+import org.osrse.game.logic.item.Item;
 import org.osrse.game.logic.player.Player;
 import org.osrse.game.logic.utility.LogicConstants;
+import org.osrse.model.commercial.Communications;
+import org.osrse.model.commercial.GroupChat;
+import org.osrse.utility.NameUtilities;
+
 /**
  *
  * @author Jonathan
@@ -19,7 +24,38 @@ public class ButtonContainer {
             case 182:
                 player.getProtocol().sendLogout();
                 break;
-            case 387: 
+            case 387:
+
+	            if (button >= 6 && button < 17) {
+		            int index = 0;
+		            if (button == 16) {
+			            index = 13;
+		            } else if (button == 15) {
+			            index = 12;
+		            } else if (button == 14) {
+			            index = 10;
+		            } else if (button == 13) {
+			            index = 9;
+		            } else if (button == 12) {
+			            index = 7;
+		            } else if (button == 11) {
+			            index = 5;
+		            }
+		            //System.out.println(widgetid + "/" + oldItemId + "/" + oldEquipSlot + "/" + button + "/" + interfaceId);
+
+		            if (player.getAttribute("cutScene") != null) {
+			            return;
+		            }
+		            Item item = player.getEquipment().get(index == 0 ? button - 6 : index);
+		            if (item == null) return;
+		            if (player.getInventory().add(item)) {
+			            Item i = player.getEquipment().remove(index == 0 ? button - 6 : index);
+			            if (i != null) {
+				            player.getEquipment().refresh();
+				            player.getInventory().refresh();
+			            }
+		            }
+	            }
                 //50 deathitems
                 if(button == 51) {
                     player.getProtocol().sendInterface(0, 548, 465, 75);
@@ -67,8 +103,20 @@ public class ButtonContainer {
             case 218:
                 player.getMagic().buttonCast(button, itemIndex);
                 break;
+	        case 589:
+		         if(button == 9) {
+			         GroupChat gc = player.getCommunication().basic().getClanChat();
+					if(gc.isValid()) {
+						player.getProtocol().sendString(590, 29, NameUtilities.capitalizeFormat(gc.getChatName()));
+					}
+			         player.getProtocol().sendString(590, 31, gc.getJoinReq().toString());
+			         player.getProtocol().sendString(590, 33, gc.getJoinReq().toString());
+			         player.getProtocol().sendString(590, 35, gc.getKickReq().toString());
+	        	     player.getProtocol().sendInterface(0, 548, 590, 12);
+		         }
+	        	break;
             default:
-               // System.out.println("unhandled button: widget="+widgetid+", interface="+interfaceId+", button="+button+", itemIndex="+itemIndex);
+                System.out.println("unhandled button: widget="+widgetid+", interface="+interfaceId+", button="+button+", itemIndex="+itemIndex);
                 break;
         }
  

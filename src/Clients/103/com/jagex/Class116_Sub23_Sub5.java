@@ -4,7 +4,7 @@ public class Class116_Sub23_Sub5 extends NodeContainer {
 
    public int anInt2265 = 0;
    static Class123 aClass123_2266 = new Class123(64);
-   static RSIndex aRSIndex_2267;
+   static Class99 aClass99_2267;
    public char aChar2268;
    public char aChar2269;
    public int anInt2271;
@@ -13,7 +13,7 @@ public class Class116_Sub23_Sub5 extends NodeContainer {
    public String[] aStringArray2274;
    public String aString2275 = "null";
 
-   void method2475(Packet var1, byte var2) {
+   void method2475(Buffer var1, byte var2) {
       while(true) {
          int var3 = var1.readSignedByte(1708176767);
          if(var3 == 0) {
@@ -24,7 +24,7 @@ public class Class116_Sub23_Sub5 extends NodeContainer {
       }
    }
 
-   void method2481(Packet var1, int var2, int var3) {
+   void method2481(Buffer var1, int var2, int var3) {
       if(var2 == 1) {
          this.aChar2269 = (char)var1.readSignedByte(1708176767);
       } else if(2 == var2) {
@@ -35,7 +35,7 @@ public class Class116_Sub23_Sub5 extends NodeContainer {
          } else {
             int var4;
             if(var2 == 5) {
-               this.anInt2265 = var1.readUnsignedShort(490195531) * 1451173443;
+               this.anInt2265 = var1.readShort(490195531) * 1451173443;
                this.anIntArray2272 = new int[this.anInt2265 * 557176427];
                this.aStringArray2274 = new String[this.anInt2265 * 557176427];
 
@@ -44,7 +44,7 @@ public class Class116_Sub23_Sub5 extends NodeContainer {
                   this.aStringArray2274[var4] = var1.readString(61376769);
                }
             } else if(6 == var2) {
-               this.anInt2265 = var1.readUnsignedShort(1675196555) * 1451173443;
+               this.anInt2265 = var1.readShort(1675196555) * 1451173443;
                this.anIntArray2272 = new int[this.anInt2265 * 557176427];
                this.anIntArray2273 = new int[557176427 * this.anInt2265];
 
@@ -80,23 +80,23 @@ public class Class116_Sub23_Sub5 extends NodeContainer {
       return var2.length() > 9?" " + Class59_Sub1.method1978('\uff80', (byte)122) + var2.substring(0, var2.length() - 8) + Class91.aString1208 + " " + Class41.aString540 + var2 + Class41.aString543 + Class41.aString544:(var2.length() > 6?" " + Class59_Sub1.method1978(16777215, (byte)34) + var2.substring(0, var2.length() - 4) + Class91.aString1268 + " " + Class41.aString540 + var2 + Class41.aString543 + Class41.aString544:" " + Class59_Sub1.method1978(16776960, (byte)123) + var2 + Class41.aString544);
    }
 
-   public static final void method2490(GameInterface var0, boolean var1, byte var2) {
-      int var3 = 226793949 * var0.interfaceId;
-      int var4 = (int)var0.hashId;
+   static final void method2490(Class116_Sub11 var0, boolean var1, byte var2) {
+      int var3 = 226793949 * var0.anInt1821;
+      int var4 = (int)var0.nodeId;
       var0.unlink();
       if(var1) {
          Class64.method940(var3, -511114832);
       }
 
-      for(InterfaceSettings var5 = (InterfaceSettings)client.aHashtable_3135.getFirst(); var5 != null; var5 = (InterfaceSettings)client.aHashtable_3135.getNext()) {
-         if((var5.hashId >> 48 & 65535L) == (long)var3) {
+      for(InterfaceSettings var5 = (InterfaceSettings)client.aClass127_3135.method1661(); var5 != null; var5 = (InterfaceSettings)client.aClass127_3135.method1662()) {
+         if((var5.nodeId >> 48 & 65535L) == (long)var3) {
             var5.unlink();
          }
       }
 
-      RSInterface var6 = Class107.getInterface(var4, 314639891);
+      Class116_Sub15 var6 = Class107.method1466(var4, 314639891);
       if(null != var6) {
-         Class79.refreshInterface(var6, -80945740);
+         Class79.method1097(var6, -80945740);
       }
 
       Flo.method2529(441135845);

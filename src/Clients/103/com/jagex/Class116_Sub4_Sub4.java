@@ -15,7 +15,7 @@ public class Class116_Sub4_Sub4 extends Class116_Sub4 {
    Class116_Sub21[][] aClass116_Sub21ArrayArray2543 = new Class116_Sub21[16][128];
    int[] anIntArray2544 = new int[16];
    int[] anIntArray2545 = new int[16];
-   Hashtable aHashtable_2546 = new Hashtable(128);
+   Class127 aClass127_2546 = new Class127(128);
    int[] anIntArray2547 = new int[16];
    int[] anIntArray2548 = new int[16];
    int[] anIntArray2549 = new int[16];
@@ -62,7 +62,7 @@ public class Class116_Sub4_Sub4 extends Class116_Sub4 {
       return this.anInt2534 * 1321975145;
    }
 
-   public synchronized boolean method2996(Class116_Sub18 var1, RSIndex var2, Class14 var3, int var4, int var5) {
+   public synchronized boolean method2996(Class116_Sub18 var1, Class99 var2, Class14 var3, int var4, int var5) {
       var1.method2315();
       boolean var8 = true;
       int[] var7 = null;
@@ -70,9 +70,9 @@ public class Class116_Sub4_Sub4 extends Class116_Sub4 {
          var7 = new int[]{var4};
       }
 
-      for(Class116_Sub22 var9 = (Class116_Sub22)var1.aHashtable_2107.getFirst(); null != var9; var9 = (Class116_Sub22)var1.aHashtable_2107.getNext()) {
-         int var10 = (int)var9.hashId;
-         Class116_Sub19 var6 = (Class116_Sub19)this.aHashtable_2546.get((long) var10);
+      for(Class116_Sub22 var9 = (Class116_Sub22)var1.aClass127_2107.method1661(); null != var9; var9 = (Class116_Sub22)var1.aClass127_2107.method1662()) {
+         int var10 = (int)var9.nodeId;
+         Class116_Sub19 var6 = (Class116_Sub19)this.aClass127_2546.method1658((long)var10);
          if(var6 == null) {
             byte[] var11 = var2.method1356(var10, 2122948392);
             Class116_Sub19 var12;
@@ -88,7 +88,7 @@ public class Class116_Sub4_Sub4 extends Class116_Sub4 {
                continue;
             }
 
-            this.aHashtable_2546.put(var12, (long) var10);
+            this.aClass127_2546.method1666(var12, (long)var10);
          }
 
          if(!var6.method2327(var3, var9.aByteArray2143, var7, 770834553)) {
@@ -104,7 +104,7 @@ public class Class116_Sub4_Sub4 extends Class116_Sub4 {
    }
 
    public synchronized void method2997(byte var1) {
-      for(Class116_Sub19 var2 = (Class116_Sub19)this.aHashtable_2546.getFirst(); var2 != null; var2 = (Class116_Sub19)this.aHashtable_2546.getNext()) {
+      for(Class116_Sub19 var2 = (Class116_Sub19)this.aClass127_2546.method1661(); var2 != null; var2 = (Class116_Sub19)this.aClass127_2546.method1662()) {
          var2.method2325(-828889465);
       }
 
@@ -181,7 +181,7 @@ public class Class116_Sub4_Sub4 extends Class116_Sub4 {
       if(var5 != null) {
          this.aClass116_Sub21ArrayArray2543[var1][var2] = null;
          if((this.anIntArray2545[var1] & 2) != 0) {
-            for(Class116_Sub21 var6 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.getFirst(); null != var6; var6 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.getNext()) {
+            for(Class116_Sub21 var6 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.method1551(); null != var6; var6 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.method1553()) {
                if(1956904859 * var6.anInt2125 == 1956904859 * var5.anInt2125 && -524941375 * var6.anInt2122 < 0 && var6 != var5) {
                   var5.anInt2122 = 0;
                   break;
@@ -201,7 +201,7 @@ public class Class116_Sub4_Sub4 extends Class116_Sub4 {
    }
 
    void method3010(int var1, int var2) {
-      for(Class116_Sub21 var3 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.getFirst(); var3 != null; var3 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.getNext()) {
+      for(Class116_Sub21 var3 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.method1551(); var3 != null; var3 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.method1553()) {
          if(var1 < 0 || var3.anInt2125 * 1956904859 == var1) {
             if(null != var3.aClass116_Sub4_Sub2_2140) {
                var3.aClass116_Sub4_Sub2_2140.method2748(-954458055 * Class9.anInt135 / 100);
@@ -242,7 +242,7 @@ public class Class116_Sub4_Sub4 extends Class116_Sub4 {
 
    void method3014(int var1, int var2) {
       if((this.anIntArray2545[var1] & 2) != 0) {
-         for(Class116_Sub21 var3 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.getFirst(); null != var3; var3 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.getNext()) {
+         for(Class116_Sub21 var3 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.method1551(); null != var3; var3 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.method1553()) {
             if(1956904859 * var3.anInt2125 == var1 && null == this.aClass116_Sub21ArrayArray2543[var1][1484938015 * var3.anInt2137] && -524941375 * var3.anInt2122 < 0) {
                var3.anInt2122 = 0;
             }
@@ -253,7 +253,7 @@ public class Class116_Sub4_Sub4 extends Class116_Sub4 {
 
    void method3015(int var1, byte var2) {
       if(0 != (this.anIntArray2545[var1] & 4)) {
-         for(Class116_Sub21 var3 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.getFirst(); null != var3; var3 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.getNext()) {
+         for(Class116_Sub21 var3 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.method1551(); null != var3; var3 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.method1553()) {
             if(var3.anInt2125 * 1956904859 == var1) {
                var3.anInt2134 = 0;
             }
@@ -445,7 +445,7 @@ public class Class116_Sub4_Sub4 extends Class116_Sub4 {
    }
 
    public synchronized void method3017(byte var1) {
-      for(Class116_Sub19 var2 = (Class116_Sub19)this.aHashtable_2546.getFirst(); var2 != null; var2 = (Class116_Sub19)this.aHashtable_2546.getNext()) {
+      for(Class116_Sub19 var2 = (Class116_Sub19)this.aClass127_2546.method1661(); var2 != null; var2 = (Class116_Sub19)this.aClass127_2546.method1662()) {
          var2.unlink();
       }
 
@@ -688,7 +688,7 @@ public class Class116_Sub4_Sub4 extends Class116_Sub4 {
    void method3026(int var1, int var2, int var3) {}
 
    void method3032(int var1, short var2) {
-      for(Class116_Sub21 var3 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.getFirst(); var3 != null; var3 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.getNext()) {
+      for(Class116_Sub21 var3 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.method1551(); var3 != null; var3 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.method1553()) {
          if((var1 < 0 || var1 == var3.anInt2125 * 1956904859) && -524941375 * var3.anInt2122 < 0) {
             this.aClass116_Sub21ArrayArray2543[1956904859 * var3.anInt2125][var3.anInt2137 * 1484938015] = null;
             var3.anInt2122 = 0;
@@ -715,7 +715,7 @@ public class Class116_Sub4_Sub4 extends Class116_Sub4 {
    void method3045(int var1, int var2, int var3, byte var4) {
       this.method3006(var1, var2, 64, 1839770032);
       if(0 != (this.anIntArray2545[var1] & 2)) {
-         for(Class116_Sub21 var5 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.getLast(); null != var5; var5 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.getPrevious()) {
+         for(Class116_Sub21 var5 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.method1552(); null != var5; var5 = (Class116_Sub21)this.aClass116_Sub4_Sub3_2559.aClass117_2528.method1579()) {
             if(var5.anInt2125 * 1956904859 == var1 && var5.anInt2122 * -524941375 < 0) {
                this.aClass116_Sub21ArrayArray2543[var1][1484938015 * var5.anInt2137] = null;
                this.aClass116_Sub21ArrayArray2543[var1][var2] = var5;
@@ -729,7 +729,7 @@ public class Class116_Sub4_Sub4 extends Class116_Sub4 {
          }
       }
 
-      Class116_Sub19 var9 = (Class116_Sub19)this.aHashtable_2546.get((long) this.anIntArray2540[var1]);
+      Class116_Sub19 var9 = (Class116_Sub19)this.aClass127_2546.method1658((long)this.anIntArray2540[var1]);
       if(var9 != null) {
          Class116_Sub2_Sub1 var10 = var9.aClass116_Sub2_Sub1Array2120[var2];
          if(var10 != null) {
@@ -769,7 +769,7 @@ public class Class116_Sub4_Sub4 extends Class116_Sub4 {
                this.aClass116_Sub21ArrayArray2551[var1][1587834581 * var8.anInt2126] = var8;
             }
 
-            this.aClass116_Sub4_Sub3_2559.aClass117_2528.addLast(var8);
+            this.aClass116_Sub4_Sub3_2559.aClass117_2528.method1571(var8);
             this.aClass116_Sub21ArrayArray2543[var1][var2] = var8;
          }
       }

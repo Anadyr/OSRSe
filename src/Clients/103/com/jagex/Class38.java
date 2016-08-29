@@ -12,14 +12,14 @@ public final class Class38 {
    protected static String aString507;
    static final int anInt508 = 5;
    public static Class116_Sub23_Sub19_Sub4_Sub1 aClass116_Sub23_Sub19_Sub4_Sub1_509;
-   static RSInputStream streamBuffer;
+   static Class71 bufferIn;
    static int anInt511;
    int anInt512;
    static final int anInt513 = 131072;
 
 
-   public static void method678(RSIndex var0, int var1) {
-      Class130.aRSIndex_1584 = var0;
+   public static void method678(Class99 var0, int var1) {
+      Class130.aClass99_1584 = var0;
    }
 
    public static int method679(int var0, int var1, byte var2) {

@@ -26,7 +26,7 @@ public class Class120 implements Iterator {
          var1 = null;
          this.aClass116_1525 = null;
       } else {
-         this.aClass116_1525 = var1.next;
+         this.aClass116_1525 = var1.prevNode;
       }
 
       this.aClass116_1527 = var1;
@@ -35,7 +35,7 @@ public class Class120 implements Iterator {
 
    Class120(NodeList var1) {
       this.aClass119_1526 = var1;
-      this.aClass116_1525 = this.aClass119_1526.currentNode.next;
+      this.aClass116_1525 = this.aClass119_1526.currentNode.prevNode;
       this.aClass116_1527 = null;
    }
 

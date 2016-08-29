@@ -15,7 +15,7 @@ public class NanoTimer extends Timer {
          var6 = var4;
       }
 
-      Friend.sleep(var6 / 1000000L);
+      Friend.method1836(var6 / 1000000L);
       long var9 = System.nanoTime();
 
       int var8;

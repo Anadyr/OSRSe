@@ -16,6 +16,7 @@ public class Clan extends PacketHandler<Player> {
 
     @Override
     public void handle(Player player, Packet packet) {
+        System.out.println("klol");
         if(packet.getLength() == 0) {
             ClanContainer.handleLeave(player); //leave cc
         } else {

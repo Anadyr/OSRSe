@@ -17,21 +17,21 @@ public abstract class AbstractRSDrawing {
    }
 
    static final void method328(Player var0, int var1, int var2, int var3, int var4) {
-      if(Class79.ourPlayer != var0) {
+      if(Class79.aPlayer_909 != var0) {
          if(client.anInt3075 * 1768430155 < 400) {
             String var6;
             if(var0.anInt2886 * -1553063231 == 0) {
-               var6 = var0.rightClickOptionMask[0] + var0.username + var0.rightClickOptionMask[1] + Class67.method976(1614853309 * var0.anInt2908, Class79.ourPlayer.anInt2908 * 1614853309, 1527013665) + " " + Class41.aString540 + Class91.aString1203 + 1614853309 * var0.anInt2908 + Class41.aString543 + var0.rightClickOptionMask[2];
+               var6 = var0.aStringArray2884[0] + var0.username + var0.aStringArray2884[1] + Class67.method976(1614853309 * var0.anInt2908, Class79.aPlayer_909.anInt2908 * 1614853309, 1527013665) + " " + Class41.aString540 + Class91.aString1203 + 1614853309 * var0.anInt2908 + Class41.aString543 + var0.aStringArray2884[2];
             } else {
-               var6 = var0.rightClickOptionMask[0] + var0.username + var0.rightClickOptionMask[1] + " " + Class41.aString540 + Class91.aString1193 + -1553063231 * var0.anInt2886 + Class41.aString543 + var0.rightClickOptionMask[2];
+               var6 = var0.aStringArray2884[0] + var0.username + var0.aStringArray2884[1] + " " + Class41.aString540 + Class91.aString1193 + -1553063231 * var0.anInt2886 + Class41.aString543 + var0.aStringArray2884[2];
             }
 
             int var7;
             if(client.anInt2991 * -1110581093 == 1) {
-               RelationList.method776(Class91.aString1197, client.aString3201 + " " + Class41.aString542 + " " + Class59_Sub1.method1978(16777215, (byte) 19) + var6, 14, var1, var2, var3, (byte) -83);
+               Class50.method776(Class91.aString1197, client.aString3201 + " " + Class41.aString542 + " " + Class59_Sub1.method1978(16777215, (byte)19) + var6, 14, var1, var2, var3, (byte)-83);
             } else if(client.aBool3088) {
                if(8 == (2016481409 * Class38.anInt500 & 8)) {
-                  RelationList.method776(client.aString3192, client.aString2969 + " " + Class41.aString542 + " " + Class59_Sub1.method1978(16777215, (byte) 105) + var6, 15, var1, var2, var3, (byte) -46);
+                  Class50.method776(client.aString3192, client.aString2969 + " " + Class41.aString542 + " " + Class59_Sub1.method1978(16777215, (byte)105) + var6, 15, var1, var2, var3, (byte)-46);
                }
             } else {
                for(var7 = 7; var7 >= 0; --var7) {
@@ -42,12 +42,12 @@ public abstract class AbstractRSDrawing {
                            continue;
                         }
 
-                        if(client.aClass43_3138 == Class43.aClass43_576 || client.aClass43_3138 == Class43.aClass43_581 && 1614853309 * var0.anInt2908 > 1614853309 * Class79.ourPlayer.anInt2908) {
+                        if(client.aClass43_3138 == Class43.aClass43_576 || client.aClass43_3138 == Class43.aClass43_581 && 1614853309 * var0.anInt2908 > 1614853309 * Class79.aPlayer_909.anInt2908) {
                            var5 = 2000;
                         }
 
-                        if(-103629189 * Class79.ourPlayer.anInt2899 != 0 && 0 != var0.anInt2899 * -103629189) {
-                           if(var0.anInt2899 * -103629189 == Class79.ourPlayer.anInt2899 * -103629189) {
+                        if(-103629189 * Class79.aPlayer_909.anInt2899 != 0 && 0 != var0.anInt2899 * -103629189) {
+                           if(var0.anInt2899 * -103629189 == Class79.aPlayer_909.anInt2899 * -103629189) {
                               var5 = 2000;
                            } else {
                               var5 = 0;
@@ -59,7 +59,7 @@ public abstract class AbstractRSDrawing {
 
                      boolean var8 = false;
                      int var9 = client.anIntArray3061[var7] + var5;
-                     RelationList.method776(client.aStringArray3062[var7], Class59_Sub1.method1978(16777215, (byte) 8) + var6, var9, var1, var2, var3, (byte) -61);
+                     Class50.method776(client.aStringArray3062[var7], Class59_Sub1.method1978(16777215, (byte)8) + var6, var9, var1, var2, var3, (byte)-61);
                   }
                }
             }
@@ -79,8 +79,8 @@ public abstract class AbstractRSDrawing {
 
    public abstract void method337(int var1, int var2, Component var3, byte var4);
 
-   public static RSInterface method339(int var0, int var1, int var2) {
-      RSInterface var3 = Class107.getInterface(var0, 314639891);
+   public static Class116_Sub15 method339(int var0, int var1, int var2) {
+      Class116_Sub15 var3 = Class107.method1466(var0, 314639891);
       return -1 == var1?var3:(null != var3 && var3.aClass116_Sub15Array1995 != null && var1 < var3.aClass116_Sub15Array1995.length?var3.aClass116_Sub15Array1995[var1]:null);
    }
 

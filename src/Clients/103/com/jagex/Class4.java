@@ -11,7 +11,7 @@ public class Class4 {
    int anInt51;
    static int[] anIntArray52;
 
-   static boolean updateGlobalPlayer(PacketBuilder var0, int var1, byte var2) {
+   static boolean updateGlobalPlayer(BitBuffer var0, int var1, byte var2) {
       int var3 = var0.readBits(2, (byte) -1);
       int var4;
       int var5;
@@ -37,7 +37,7 @@ public class Class4 {
             Player var12 = client.globalPlayers[var1] = new Player();
             var12.anInt2902 = var1 * -1055985261;
             if(Class7.aClass116_Sub14Array106[var1] != null) {
-               var12.doAppearance(Class7.aClass116_Sub14Array106[var1], -112397156);
+               var12.method3549(Class7.aClass116_Sub14Array106[var1], -112397156);
             }
 
             var12.anInt2631 = Class7.anIntArray103[var1] * 736533899;
@@ -46,10 +46,10 @@ public class Class4 {
             var4 = var11 >> 28;
             var7 = var11 >> 14 & 255;
             var9 = var11 & 255;
-            var12.aByteArray2628[0] = Class7.movementMode[var1];
+            var12.aByteArray2628[0] = Class7.aByteArray105[var1];
             var12.anInt2906 = -1668953739 * (byte)var4;
             var12.method3551(var5 + (var7 << 6) - 1426698711 * Class116_Sub17.anInt2105, var8 + (var9 << 6) - 714823515 * Class33.anInt456, 512250771);
-            var12.moving = false;
+            var12.aBool2901 = false;
             return true;
          }
       } else if(var3 == 1) {
@@ -121,29 +121,29 @@ public class Class4 {
       }
    }
 
-   static void method49(RSInterface[] var0, int var1, int var2, int var3, boolean var4, int var5) {
+   static void method49(Class116_Sub15[] var0, int var1, int var2, int var3, boolean var4, int var5) {
       for(int var6 = 0; var6 < var0.length; ++var6) {
-         RSInterface var7 = var0[var6];
-         if(null != var7 && var1 == var7.parent * -1652479707) {
+         Class116_Sub15 var7 = var0[var6];
+         if(null != var7 && var1 == var7.anInt1944 * -1652479707) {
             Class33.method638(var7, var2, var3, var4, 285272969);
             Class116_Sub23_Sub4.method2469(var7, var2, var3, 2003239806);
-            if(var7.anInt1946 * -352661099 > var7.anInt2037 * -302755437 - var7.wdth * 1645211541) {
-               var7.anInt1946 = -539648889 * var7.anInt2037 - var7.wdth * -1344985599;
+            if(var7.anInt1946 * -352661099 > var7.anInt2037 * -302755437 - var7.anInt1940 * 1645211541) {
+               var7.anInt1946 = -539648889 * var7.anInt2037 - var7.anInt1940 * -1344985599;
             }
 
             if(-352661099 * var7.anInt1946 < 0) {
                var7.anInt1946 = 0;
             }
 
-            if(-1602694527 * var7.anInt1947 > 177405235 * var7.maxScrollVertical - 1227800423 * var7.heght) {
-               var7.anInt1947 = -1656271437 * var7.maxScrollVertical - var7.heght * -1999090201;
+            if(-1602694527 * var7.anInt1947 > 177405235 * var7.anInt1949 - 1227800423 * var7.anInt1974) {
+               var7.anInt1947 = -1656271437 * var7.anInt1949 - var7.anInt1974 * -1999090201;
             }
 
             if(-1602694527 * var7.anInt1947 < 0) {
                var7.anInt1947 = 0;
             }
 
-            if(var7.type * -1305917269 == 0) {
+            if(var7.anInt2018 * -1305917269 == 0) {
                ObjectDefinition.method2435(var0, var7, var4, -1212205195);
             }
          }

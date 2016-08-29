@@ -21,7 +21,7 @@ public final class Class42 {
    int anInt567;
    int anInt569;
    int anInt573;
-   static CacheIndex aCacheIndex_574;
+   static Class99_Sub1 aClass99_Sub1_574;
 
 
    static final void method695(byte var0) {

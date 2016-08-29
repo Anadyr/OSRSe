@@ -39,7 +39,7 @@ public final class Sprite extends DrawingArea {
       return var1;
    }
 
-   public Sprite crop() {
+   public Sprite method3254() {
       Sprite var1 = new Sprite(this.anInt2725, this.anInt2726);
 
       for(int var3 = 0; var3 < this.myHeight; ++var3) {
@@ -519,7 +519,7 @@ public final class Sprite extends DrawingArea {
       }
    }
 
-   public void raster(int var1, int var2, int var3, int var4, int var5, int var6, int[] var7, int[] var8) {
+   public void method3275(int var1, int var2, int var3, int var4, int var5, int var6, int[] var7, int[] var8) {
       int var16 = var2 < 0?-var2:0;
       int var11 = var2 + this.myHeight > var6?var6 - var2:this.myHeight;
       int var9 = var1 < 0?-var1:0;

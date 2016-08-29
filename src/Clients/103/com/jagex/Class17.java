@@ -50,18 +50,18 @@ public class Class17 {
    }
 
    static void method280(Applet_Sub1 var0, int var1) {
-      if(Class6.worldListUp) {
-         Class31.drawWorldList(var0, 1945802104);
+      if(Class6.aBool95) {
+         Class31.method590(var0, 1945802104);
       } else {
-         if((823601801 * Class85.anInt997 == 1 || !PlayerAlias.aBool1756 && 4 == 823601801 * Class85.anInt997) && Class85.clickAreaX * -2040065729 >= Class6.anInt84 * 1933284923 + 765 - 50 && Class85.clickAreaY * 2090526775 >= 453) {
+         if((823601801 * Class85.anInt997 == 1 || !PlayerAlias.aBool1756 && 4 == 823601801 * Class85.anInt997) && Class85.anInt998 * -2040065729 >= Class6.anInt84 * 1933284923 + 765 - 50 && Class85.anInt999 * 2090526775 >= 453) {
             Class116_Sub5.aClass29_1727.aBool409 = !Class116_Sub5.aClass29_1727.aBool409;
             Class86.method1167((byte)-38);
             if(!Class116_Sub5.aClass29_1727.aBool409) {
-               Class108.method1505(Class2.aCacheIndex_23, "scape main", "", 255, false, 474250760);
+               Class108.method1505(Class2.aClass99_Sub1_23, "scape main", "", 255, false, 474250760);
             } else {
                Class128.aClass116_Sub4_Sub4_1576.method3075(-1740135719);
                Class128.anInt1574 = 325298615;
-               Class128.aRSIndex_1575 = null;
+               Class128.aClass99_1575 = null;
             }
          }
 
@@ -75,23 +75,23 @@ public class Class17 {
                      short var2 = 463;
                      byte var5 = 100;
                      byte var3 = 35;
-                     if(-2040065729 * Class85.clickAreaX >= var7 && -2040065729 * Class85.clickAreaX <= var7 + var5 && Class85.clickAreaY * 2090526775 >= var2 && 2090526775 * Class85.clickAreaY <= var3 + var2) {
-                        if(Class35.readWorldList(1002424370)) {
-                           Class6.worldListUp = true;
+                     if(-2040065729 * Class85.anInt998 >= var7 && -2040065729 * Class85.anInt998 <= var7 + var5 && Class85.anInt999 * 2090526775 >= var2 && 2090526775 * Class85.anInt999 <= var3 + var2) {
+                        if(Class35.method643(1002424370)) {
+                           Class6.aBool95 = true;
                         }
 
                         return;
                      }
                   }
 
-                  if(BuildType.worldListData != null && Class35.readWorldList(1002424370)) {
-                     Class6.worldListUp = true;
+                  if(BuildType.aClass32_1026 != null && Class35.method643(1002424370)) {
+                     Class6.aBool95 = true;
                   }
                }
 
                var7 = Class85.anInt997 * 823601801;
-               int var10 = Class85.clickAreaX * -2040065729;
-               int var15 = 2090526775 * Class85.clickAreaY;
+               int var10 = Class85.anInt998 * -2040065729;
+               int var15 = 2090526775 * Class85.anInt999;
                if(!PlayerAlias.aBool1756 && 4 == var7) {
                   var7 = 1;
                }
@@ -485,7 +485,7 @@ public class Class17 {
    }
 
    protected static final void method289(int var0) {
-      RSFIT.anImage876 = null;
+      Class73.anImage876 = null;
       Class8.aFont129 = null;
       ISAAC.aFontMetrics701 = null;
    }

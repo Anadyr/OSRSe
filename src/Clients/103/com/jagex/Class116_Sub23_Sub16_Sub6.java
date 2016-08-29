@@ -11,7 +11,7 @@ public class Class116_Sub23_Sub16_Sub6 extends Animable {
    Class116_Sub23_Sub4 aClass116_Sub23_Sub4_2775;
    int anInt2776;
    int anInt2777;
-   public static String OS_LOWER_CASE;
+   public static String aString2779;
    int anInt2780;
 
 
@@ -66,7 +66,7 @@ public class Class116_Sub23_Sub16_Sub6 extends Animable {
       }
 
       ObjectDefinition var13 = Class45.method700(-1889540595 * this.anInt2776, 359750046);
-      if(null != var13.childIds) {
+      if(null != var13.anIntArray2206) {
          var13 = var13.method2419(-1617474286);
       }
 
@@ -95,7 +95,7 @@ public class Class116_Sub23_Sub16_Sub6 extends Animable {
       }
    }
 
-   static void method3366(Component var0, RSIndex var1, RSIndex var2, boolean var3, int var4, int var5) {
+   static void method3366(Component var0, Class99 var1, Class99 var2, boolean var3, int var4, int var5) {
       if(Class6.aBool94) {
          if(4 == var4) {
             Class6.anInt64 = -868668484;
@@ -104,19 +104,19 @@ public class Class116_Sub23_Sub16_Sub6 extends Animable {
       } else {
          Class6.anInt64 = var4 * -217167121;
          DrawingArea.method2941();
-         byte[] var7 = var1.getFilesFromName("title.jpg", "", -1557464885);
+         byte[] var7 = var1.method1374("title.jpg", "", -1557464885);
          Class67.aClass116_Sub23_Sub19_Sub2_826 = new Sprite(var7, var0);
          Class6.aClass116_Sub23_Sub19_Sub2_89 = Class67.aClass116_Sub23_Sub19_Sub2_826.method3253();
          if((client.anInt2933 * 1115656689 & 536870912) != 0) {
-            Ignore.aClass116_Sub23_Sub19_Sub3_343 = Class116_Sub23_Sub4.method2447(var2, "logo_deadman_mode", "", -2033819440);
+            Class24.aClass116_Sub23_Sub19_Sub3_343 = Class116_Sub23_Sub4.method2447(var2, "logo_deadman_mode", "", -2033819440);
          } else {
-            Ignore.aClass116_Sub23_Sub19_Sub3_343 = Class116_Sub23_Sub4.method2447(var2, "logo", "", 906647594);
+            Class24.aClass116_Sub23_Sub19_Sub3_343 = Class116_Sub23_Sub4.method2447(var2, "logo", "", 906647594);
          }
 
          Class6.aClass116_Sub23_Sub19_Sub3_99 = Class116_Sub23_Sub4.method2447(var2, "titlebox", "", 1311964203);
          Class6.aClass116_Sub23_Sub19_Sub3_65 = Class116_Sub23_Sub4.method2447(var2, "titlebutton", "", 906521462);
          Class6.aClass116_Sub23_Sub19_Sub3Array66 = ObjectDefinition.method2433(var2, "runes", "", (short) -11238);
-         RelationList.aClass116_Sub23_Sub19_Sub3Array678 = ObjectDefinition.method2433(var2, "title_mute", "", (short) -14797);
+         Class50.aClass116_Sub23_Sub19_Sub3Array678 = ObjectDefinition.method2433(var2, "title_mute", "", (short) -14797);
          Class6.aClass116_Sub23_Sub19_Sub3_68 = Class116_Sub23_Sub4.method2447(var2, "options_radio_buttons,0", "", 1340761243);
          Class6.aClass116_Sub23_Sub19_Sub3_69 = Class116_Sub23_Sub4.method2447(var2, "options_radio_buttons,2", "", -986295101);
          Class22.anIntArray280 = new int[256];
@@ -188,9 +188,9 @@ public class Class116_Sub23_Sub16_Sub6 extends Animable {
          Class132.anInt1597 = 0;
          Class45.aString599 = "";
          Class6.aBool91 = true;
-         Class6.worldListUp = false;
+         Class6.aBool95 = false;
          if(!Class116_Sub5.aClass29_1727.aBool409) {
-            Class103.method1453(2, Class2.aCacheIndex_23, "scape main", "", 255, false, (byte)-89);
+            Class103.method1453(2, Class2.aClass99_Sub1_23, "scape main", "", 255, false, (byte)-89);
          } else {
             Class76.method1082(2, (byte)55);
          }
@@ -201,12 +201,12 @@ public class Class116_Sub23_Sub16_Sub6 extends Animable {
          Class6.anInt76 = 1843765198 + Class6.anInt84 * 132725497;
          Class67.aClass116_Sub23_Sub19_Sub2_826.method3286(1933284923 * Class6.anInt84, 0);
          Class6.aClass116_Sub23_Sub19_Sub2_89.method3286(Class6.anInt84 * 1933284923 + 382, 0);
-         Ignore.aClass116_Sub23_Sub19_Sub3_343.method3359(Class6.anInt84 * 1933284923 + 382 - Ignore.aClass116_Sub23_Sub19_Sub3_343.anInt2763 / 2, 18);
+         Class24.aClass116_Sub23_Sub19_Sub3_343.method3359(Class6.anInt84 * 1933284923 + 382 - Class24.aClass116_Sub23_Sub19_Sub3_343.anInt2763 / 2, 18);
       }
    }
 
-   public static Sprite[] method3367(RSIndex var0, String var1, String var2, int var3) {
-      int var4 = var0.getFileIdForName(var1, 1819432134);
+   public static Sprite[] method3367(Class99 var0, String var1, String var2, int var3) {
+      int var4 = var0.method1366(var1, 1819432134);
       int var5 = var0.method1367(var4, var2, 1940534285);
       return RSImageProducer.method1850(var0, var4, var5, 428617569);
    }

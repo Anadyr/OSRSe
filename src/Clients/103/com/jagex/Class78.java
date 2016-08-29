@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 public class Class78 {
 
    static int anInt904;
-   static String[] CACHE_FOLDER_NAME;
+   static String[] aStringArray905;
 
    Class78() throws Throwable {
       throw new Error();

@@ -12,7 +12,7 @@ public final class Canvas_Sub1 extends Canvas {
 
 
    static void method2972(int var0, int var1) {
-      Class116_Sub10 var2 = (Class116_Sub10)Class116_Sub10.aHashtable_1803.get((long) var0);
+      Class116_Sub10 var2 = (Class116_Sub10)Class116_Sub10.aClass127_1803.method1658((long)var0);
       if(var2 != null) {
          for(int var3 = 0; var3 < var2.anIntArray1812.length; ++var3) {
             var2.anIntArray1812[var3] = -1;

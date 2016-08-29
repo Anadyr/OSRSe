@@ -3,21 +3,21 @@ import java.awt.Graphics;
 
 public class Class98 {
 
-   static int ccPlayerCount;
+   static int anInt1378;
    public static Class116_Sub18 aClass116_Sub18_1381;
 
-   static final void method1343(RSInterface[] var0, int var1, byte var2) {
+   static final void method1343(Class116_Sub15[] var0, int var1, byte var2) {
       for(int var3 = 0; var3 < var0.length; ++var3) {
-         RSInterface var4 = var0[var3];
+         Class116_Sub15 var4 = var0[var3];
          if(null != var4) {
-            if(var4.type * -1305917269 == 0) {
+            if(var4.anInt2018 * -1305917269 == 0) {
                if(null != var4.aClass116_Sub15Array1995) {
                   method1343(var4.aClass116_Sub15Array1995, var1, (byte)30);
                }
 
-               GameInterface var5 = (GameInterface)client.overridedInterfaces.get((long) (-1536575275 * var4.hash));
+               Class116_Sub11 var5 = (Class116_Sub11)client.aClass127_3094.method1658((long)(-1536575275 * var4.anInt1925));
                if(var5 != null) {
-                  Class76.method1081(226793949 * var5.interfaceId, var1, (byte)2);
+                  Class76.method1081(226793949 * var5.anInt1821, var1, (byte)2);
                }
             }
 
@@ -31,7 +31,7 @@ public class Class98 {
 
             if(var1 == 1 && var4.anObjectArray2031 != null) {
                if(2021294259 * var4.anInt1926 >= 0) {
-                  RSInterface var7 = Class107.getInterface(var4.hash * -1536575275, 314639891);
+                  Class116_Sub15 var7 = Class107.method1466(var4.anInt1925 * -1536575275, 314639891);
                   if(null == var7 || null == var7.aClass116_Sub15Array1995 || 2021294259 * var4.anInt1926 >= var7.aClass116_Sub15Array1995.length || var7.aClass116_Sub15Array1995[var4.anInt1926 * 2021294259] != var4) {
                      continue;
                   }
@@ -81,27 +81,27 @@ public class Class98 {
       int var37;
       int var40;
       int var41;
-      if(Class6.worldListUp) {
+      if(Class6.aBool95) {
          if(null == Class106.aClass116_Sub23_Sub19_Sub2Array1449) {
-            Class106.aClass116_Sub23_Sub19_Sub2Array1449 = Class116_Sub23_Sub16_Sub6.method3367(Class116_Sub5.spriteIndex, "sl_back", "", 946279962);
+            Class106.aClass116_Sub23_Sub19_Sub2Array1449 = Class116_Sub23_Sub16_Sub6.method3367(Class116_Sub5.aClass99_Sub1_1729, "sl_back", "", 946279962);
          }
 
          if(Class2.aClass116_Sub23_Sub19_Sub3Array21 == null) {
-            Class2.aClass116_Sub23_Sub19_Sub3Array21 = ObjectDefinition.method2433(Class116_Sub5.spriteIndex, "sl_flags", "", (short) -1504);
+            Class2.aClass116_Sub23_Sub19_Sub3Array21 = ObjectDefinition.method2433(Class116_Sub5.aClass99_Sub1_1729, "sl_flags", "", (short) -1504);
          }
 
          if(Class37.aClass116_Sub23_Sub19_Sub3Array494 == null) {
-            Class37.aClass116_Sub23_Sub19_Sub3Array494 = ObjectDefinition.method2433(Class116_Sub5.spriteIndex, "sl_arrows", "", (short) 2517);
+            Class37.aClass116_Sub23_Sub19_Sub3Array494 = ObjectDefinition.method2433(Class116_Sub5.aClass99_Sub1_1729, "sl_arrows", "", (short) 2517);
          }
 
          if(Class116_Sub12.aClass116_Sub23_Sub19_Sub3Array1849 == null) {
-            Class116_Sub12.aClass116_Sub23_Sub19_Sub3Array1849 = ObjectDefinition.method2433(Class116_Sub5.spriteIndex, "sl_stars", "", (short) 9);
+            Class116_Sub12.aClass116_Sub23_Sub19_Sub3Array1849 = ObjectDefinition.method2433(Class116_Sub5.aClass99_Sub1_1729, "sl_stars", "", (short) 9);
          }
 
-         DrawingArea.setRasterAreaColor(1933284923 * Class6.anInt84, 23, 765, 480, 0);
+         DrawingArea.method2927(1933284923 * Class6.anInt84, 23, 765, 480, 0);
          DrawingArea.method2896(1933284923 * Class6.anInt84, 0, 125, 23, 12425273, 9135624);
          DrawingArea.method2896(Class6.anInt84 * 1933284923 + 125, 0, 640, 23, 5197647, 2697513);
-         var0.method3492(Class91.selectAWorld, 62 + Class6.anInt84 * 1933284923, 15, 0, -1);
+         var0.method3492(Class91.aString1310, 62 + Class6.anInt84 * 1933284923, 15, 0, -1);
          if(Class116_Sub12.aClass116_Sub23_Sub19_Sub3Array1849 != null) {
             Class116_Sub12.aClass116_Sub23_Sub19_Sub3Array1849[1].method3359(1933284923 * Class6.anInt84 + 140, 1);
             var1.method3481(Class91.aString1117, 1933284923 * Class6.anInt84 + 152, 10, 16777215, -1);
@@ -112,13 +112,13 @@ public class Class98 {
          int var39;
          if(Class37.aClass116_Sub23_Sub19_Sub3Array494 != null) {
             var29 = Class6.anInt84 * 1933284923 + 280;
-            if(0 == World.anIntArray378[0] && World.anIntArray383[0] == 0) {
+            if(0 == Class27.anIntArray378[0] && Class27.anIntArray383[0] == 0) {
                Class37.aClass116_Sub23_Sub19_Sub3Array494[2].method3359(var29, 4);
             } else {
                Class37.aClass116_Sub23_Sub19_Sub3Array494[0].method3359(var29, 4);
             }
 
-            if(0 == World.anIntArray378[0] && 1 == World.anIntArray383[0]) {
+            if(0 == Class27.anIntArray378[0] && 1 == Class27.anIntArray383[0]) {
                Class37.aClass116_Sub23_Sub19_Sub3Array494[3].method3359(var29 + 15, 4);
             } else {
                Class37.aClass116_Sub23_Sub19_Sub3Array494[1].method3359(var29 + 15, 4);
@@ -126,13 +126,13 @@ public class Class98 {
 
             var0.method3481(Class91.aString1062, var29 + 32, 17, 16777215, -1);
             var6 = 1933284923 * Class6.anInt84 + 390;
-            if(1 == World.anIntArray378[0] && World.anIntArray383[0] == 0) {
+            if(1 == Class27.anIntArray378[0] && Class27.anIntArray383[0] == 0) {
                Class37.aClass116_Sub23_Sub19_Sub3Array494[2].method3359(var6, 4);
             } else {
                Class37.aClass116_Sub23_Sub19_Sub3Array494[0].method3359(var6, 4);
             }
 
-            if(World.anIntArray378[0] == 1 && 1 == World.anIntArray383[0]) {
+            if(Class27.anIntArray378[0] == 1 && 1 == Class27.anIntArray383[0]) {
                Class37.aClass116_Sub23_Sub19_Sub3Array494[3].method3359(var6 + 15, 4);
             } else {
                Class37.aClass116_Sub23_Sub19_Sub3Array494[1].method3359(15 + var6, 4);
@@ -140,13 +140,13 @@ public class Class98 {
 
             var0.method3481(Class91.aString1089, var6 + 32, 17, 16777215, -1);
             var39 = 500 + 1933284923 * Class6.anInt84;
-            if(World.anIntArray378[0] == 2 && 0 == World.anIntArray383[0]) {
+            if(Class27.anIntArray378[0] == 2 && 0 == Class27.anIntArray383[0]) {
                Class37.aClass116_Sub23_Sub19_Sub3Array494[2].method3359(var39, 4);
             } else {
                Class37.aClass116_Sub23_Sub19_Sub3Array494[0].method3359(var39, 4);
             }
 
-            if(2 == World.anIntArray378[0] && World.anIntArray383[0] == 1) {
+            if(2 == Class27.anIntArray378[0] && Class27.anIntArray383[0] == 1) {
                Class37.aClass116_Sub23_Sub19_Sub3Array494[3].method3359(var39 + 15, 4);
             } else {
                Class37.aClass116_Sub23_Sub19_Sub3Array494[1].method3359(15 + var39, 4);
@@ -154,13 +154,13 @@ public class Class98 {
 
             var0.method3481(Class91.aString1315, 32 + var39, 17, 16777215, -1);
             var8 = 1933284923 * Class6.anInt84 + 610;
-            if(World.anIntArray378[0] == 3 && World.anIntArray383[0] == 0) {
+            if(Class27.anIntArray378[0] == 3 && Class27.anIntArray383[0] == 0) {
                Class37.aClass116_Sub23_Sub19_Sub3Array494[2].method3359(var8, 4);
             } else {
                Class37.aClass116_Sub23_Sub19_Sub3Array494[0].method3359(var8, 4);
             }
 
-            if(3 == World.anIntArray378[0] && 1 == World.anIntArray383[0]) {
+            if(3 == Class27.anIntArray378[0] && 1 == Class27.anIntArray383[0]) {
                Class37.aClass116_Sub23_Sub19_Sub3Array494[3].method3359(var8 + 15, 4);
             } else {
                Class37.aClass116_Sub23_Sub19_Sub3Array494[1].method3359(15 + var8, 4);
@@ -169,15 +169,15 @@ public class Class98 {
             var0.method3481(Class91.aString1276, 32 + var8, 17, 16777215, -1);
          }
 
-         DrawingArea.setRasterAreaColor(Class6.anInt84 * 1933284923 + 708, 4, 50, 16, 0);
+         DrawingArea.method2927(Class6.anInt84 * 1933284923 + 708, 4, 50, 16, 0);
          var1.method3492(Class91.aString1283, 25 + 1933284923 * Class6.anInt84 + 708, 16, 16777215, -1);
          var29 = 0;
          var6 = 33554432;
          var39 = 1115656689 * client.anInt2933 & var6;
 
-         for(var8 = 0; var8 < World.totalWorldCount * -1946617791; ++var8) {
-            World var35 = World.worldArray[var8];
-            if((-1784645245 * var35.activityFlag & var6) == var39 || 0 == (var35.activityFlag * -1784645245 & var6)) {
+         for(var8 = 0; var8 < Class27.anInt379 * -1946617791; ++var8) {
+            Class27 var35 = Class27.aClass27Array374[var8];
+            if((-1784645245 * var35.anInt380 & var6) == var39 || 0 == (var35.anInt380 * -1784645245 & var6)) {
                ++var29;
             }
          }
@@ -225,9 +225,9 @@ public class Class98 {
             boolean var19 = false;
 
             int var20;
-            for(var20 = 0; var20 < -1946617791 * World.totalWorldCount; ++var20) {
-               World var21 = World.worldArray[var20];
-               if(var39 == (-1784645245 * var21.activityFlag & var6) || (-1784645245 * var21.activityFlag & var6) == 0) {
+            for(var20 = 0; var20 < -1946617791 * Class27.anInt379; ++var20) {
+               Class27 var21 = Class27.aClass27Array374[var20];
+               if(var39 == (-1784645245 * var21.anInt380 & var6) || (-1784645245 * var21.anInt380 & var6) == 0) {
                   boolean var22 = true;
                   String var23 = Integer.toString(215269871 * var21.anInt381);
                   if(215269871 * var21.anInt381 == -1) {
@@ -268,10 +268,10 @@ public class Class98 {
                   }
 
                   if(Class2.aClass116_Sub23_Sub19_Sub3Array21 != null) {
-                     Class2.aClass116_Sub23_Sub19_Sub3Array21[(var21.method537('\uffff')?8:0) + var21.flag * -1854937097].method3359(29 + var17, var16);
+                     Class2.aClass116_Sub23_Sub19_Sub3Array21[(var21.method537('\uffff')?8:0) + var21.anInt385 * -1854937097].method3359(29 + var17, var16);
                   }
 
-                  var0.method3492(Integer.toString(var21.worldId * -145619359), 15 + var17, 5 + var16 + var38 / 2, var24, -1);
+                  var0.method3492(Integer.toString(var21.anInt388 * -145619359), 15 + var17, 5 + var16 + var38 / 2, var24, -1);
                   var1.method3492(var23, var17 + 60, 5 + var38 / 2 + var16, 268435455, -1);
                   var16 += var13 + var38;
                   ++var18;
@@ -284,17 +284,17 @@ public class Class98 {
             }
 
             if(var19) {
-               var20 = var1.method3455(World.worldArray[Class6.anInt96 * 154582397].activity) + 6;
+               var20 = var1.method3455(Class27.aClass27Array374[Class6.anInt96 * 154582397].aString371) + 6;
                int var48 = var1.anInt2859 + 8;
-               DrawingArea.setRasterAreaColor(Class85.anInt991 * -453286219 - var20 / 2, 5 + 103771565 * Class85.anInt992 + 20, var20, var48, 16777120);
+               DrawingArea.method2927(Class85.anInt991 * -453286219 - var20 / 2, 5 + 103771565 * Class85.anInt992 + 20, var20, var48, 16777120);
                DrawingArea.method2897(-453286219 * Class85.anInt991 - var20 / 2, 103771565 * Class85.anInt992 + 20 + 5, var20, var48, 0);
-               var1.method3492(World.worldArray[Class6.anInt96 * 154582397].activity, Class85.anInt991 * -453286219, 5 + 20 + 103771565 * Class85.anInt992 + var1.anInt2859 + 4, 0, -1);
+               var1.method3492(Class27.aClass27Array374[Class6.anInt96 * 154582397].aString371, Class85.anInt991 * -453286219, 5 + 20 + 103771565 * Class85.anInt992 + var1.anInt2859 + 4, 0, -1);
             }
          }
 
          try {
             Graphics var36 = Tile.aCanvas1875.getGraphics();
-            RSFIT.aAbstractRSDrawing_874.method333(var36, 0, 0, -819332484);
+            Class73.aAbstractRSDrawing_874.method333(var36, 0, 0, -819332484);
          } catch (Exception var26) {
             Tile.aCanvas1875.repaint();
          }
@@ -303,7 +303,7 @@ public class Class98 {
          if(var3) {
             Class67.aClass116_Sub23_Sub19_Sub2_826.method3286(1933284923 * Class6.anInt84, 0);
             Class6.aClass116_Sub23_Sub19_Sub2_89.method3286(Class6.anInt84 * 1933284923 + 382, 0);
-            Ignore.aClass116_Sub23_Sub19_Sub3_343.method3359(1933284923 * Class6.anInt84 + 382 - Ignore.aClass116_Sub23_Sub19_Sub3_343.anInt2763 / 2, 18);
+            Class24.aClass116_Sub23_Sub19_Sub3_343.method3359(1933284923 * Class6.anInt84 + 382 - Class24.aClass116_Sub23_Sub19_Sub3_343.anInt2763 / 2, 18);
          }
 
          if(client.loginStage * 846055547 == 0 || 846055547 * client.loginStage == 5) {
@@ -312,8 +312,8 @@ public class Class98 {
             var6 = 253 - var5;
             DrawingArea.method2897(Class6.anInt76 * 1744540627 + 180 - 152, var6, 304, 34, 9179409);
             DrawingArea.method2897(Class6.anInt76 * 1744540627 + 180 - 151, var6 + 1, 302, 32, 0);
-            DrawingArea.setRasterAreaColor(180 + 1744540627 * Class6.anInt76 - 150, var6 + 2, -140328599 * Class6.anInt72, 30, 9179409);
-            DrawingArea.setRasterAreaColor(-140328599 * Class6.anInt72 + (1744540627 * Class6.anInt76 + 180 - 150), var6 + 2, 300 - -140328599 * Class6.anInt72, 30, 0);
+            DrawingArea.method2927(180 + 1744540627 * Class6.anInt76 - 150, var6 + 2, -140328599 * Class6.anInt72, 30, 9179409);
+            DrawingArea.method2927(-140328599 * Class6.anInt72 + (1744540627 * Class6.anInt76 + 180 - 150), var6 + 2, 300 - -140328599 * Class6.anInt72, 30, 0);
             var0.method3492(Class6.aString83, 180 + 1744540627 * Class6.anInt76, 276 - var5, 16777215, -1);
          }
 
@@ -385,7 +385,7 @@ public class Class98 {
                var6 = 180 + Class6.anInt76 * 1744540627 - 80;
                var31 = 321;
                Class6.aClass116_Sub23_Sub19_Sub3_65.method3359(var6 - 73, var31 - 20);
-               var0.method3492(Class91.continueString, var6, var31 + 5, 16777215, 0);
+               var0.method3492(Class91.aString1052, var6, var31 + 5, 16777215, 0);
                var6 = 80 + 1744540627 * Class6.anInt76 + 180;
                Class6.aClass116_Sub23_Sub19_Sub3_65.method3359(var6 - 73, var31 - 20);
                var0.method3492(Class91.aString1283, var6, 5 + var31, 16777215, 0);
@@ -466,7 +466,7 @@ public class Class98 {
                var13 = 180 + 1744540627 * Class6.anInt76 - 80;
                short var45 = 321;
                Class6.aClass116_Sub23_Sub19_Sub3_65.method3359(var13 - 73, var45 - 20);
-               var0.method3492(Class91.continueString, var13, var45 + 5, 16777215, 0);
+               var0.method3492(Class91.aString1052, var13, var45 + 5, 16777215, 0);
                var13 = 80 + 1744540627 * Class6.anInt76 + 180;
                Class6.aClass116_Sub23_Sub19_Sub3_65.method3359(var13 - 73, var45 - 20);
                var0.method3492(Class91.aString1283, var13, 5 + var45, 16777215, 0);
@@ -518,7 +518,7 @@ public class Class98 {
          }
 
          Class14.method254((byte)-69);
-         RelationList.aClass116_Sub23_Sub19_Sub3Array678[Class116_Sub5.aClass29_1727.aBool409?1:0].method3359(Class6.anInt84 * 1933284923 + 765 - 40, 463);
+         Class50.aClass116_Sub23_Sub19_Sub3Array678[Class116_Sub5.aClass29_1727.aBool409?1:0].method3359(Class6.anInt84 * 1933284923 + 765 - 40, 463);
          if(846055547 * client.loginStage > 5 && -1025678859 * client.anInt2938 == 0) {
             if(Class116_Sub23_Sub16_Sub3.aClass116_Sub23_Sub19_Sub3_2644 != null) {
                var29 = 5 + Class6.anInt84 * 1933284923;
@@ -527,19 +527,19 @@ public class Class98 {
                var32 = 35;
                Class116_Sub23_Sub16_Sub3.aClass116_Sub23_Sub19_Sub3_2644.method3359(var29, var30);
                var0.method3492(Class91.aString1212 + " " + -1631311031 * client.anInt3115, var34 / 2 + var29, var30 + var32 / 2 - 2, 16777215, 0);
-               if(null != BuildType.worldListData) {
+               if(null != BuildType.aClass32_1026) {
                   var1.method3492(Class91.aString1319, var34 / 2 + var29, 12 + var32 / 2 + var30, 16777215, 0);
                } else {
                   var1.method3492(Class91.aString1133, var29 + var34 / 2, var30 + var32 / 2 + 12, 16777215, 0);
                }
             } else {
-               Class116_Sub23_Sub16_Sub3.aClass116_Sub23_Sub19_Sub3_2644 = Class116_Sub23_Sub4.method2447(Class116_Sub5.spriteIndex, "sl_button", "", 1566993598);
+               Class116_Sub23_Sub16_Sub3.aClass116_Sub23_Sub19_Sub3_2644 = Class116_Sub23_Sub4.method2447(Class116_Sub5.aClass99_Sub1_1729, "sl_button", "", 1566993598);
             }
          }
 
          try {
             Graphics var47 = Tile.aCanvas1875.getGraphics();
-            RSFIT.aAbstractRSDrawing_874.method333(var47, 0, 0, -819332484);
+            Class73.aAbstractRSDrawing_874.method333(var47, 0, 0, -819332484);
          } catch (Exception var27) {
             Tile.aCanvas1875.repaint();
          }

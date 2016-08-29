@@ -4,7 +4,7 @@ public class Flo extends NodeContainer {
 
    static Class123 aClass123_2296 = new Class123(64);
    int anInt2297 = 0;
-   static RSIndex aRSIndex_2298;
+   static Class99 aClass99_2298;
    public int anInt2299;
    public int anInt2300;
    public int anInt2303;
@@ -14,7 +14,7 @@ public class Flo extends NodeContainer {
       this.method2518(this.anInt2297 * -1160088629, (short)-23061);
    }
 
-   void method2516(Packet var1, int var2, int var3) {
+   void method2516(Buffer var1, int var2, int var3) {
       while(true) {
          int var4 = var1.readSignedByte(1708176767);
          if(var4 == 0) {
@@ -104,16 +104,16 @@ public class Flo extends NodeContainer {
       int var6 = 1;
 
       for(int var4 = 0; var4 < 4; ++var4) {
-         if(World.anIntArray378[var4] != var0) {
-            var3[var6] = World.anIntArray378[var4];
-            var5[var6] = World.anIntArray383[var4];
+         if(Class27.anIntArray378[var4] != var0) {
+            var3[var6] = Class27.anIntArray378[var4];
+            var5[var6] = Class27.anIntArray383[var4];
             ++var6;
          }
       }
 
-      World.anIntArray378 = var3;
-      World.anIntArray383 = var5;
-      Speach.handleWorldList(World.worldArray, 0, World.worldArray.length - 1, World.anIntArray378, World.anIntArray383, -1981081763);
+      Class27.anIntArray378 = var3;
+      Class27.anIntArray383 = var5;
+      Speach.method1129(Class27.aClass27Array374, 0, Class27.aClass27Array374.length - 1, Class27.anIntArray378, Class27.anIntArray383, -1981081763);
    }
 
    static void method2529(int var0) {
@@ -136,32 +136,33 @@ public class Flo extends NodeContainer {
 
    }
 
-   void method2538(Packet var1, int var2, int var3, int var4) {
+   void method2538(Buffer var1, int var2, int var3, int var4) {
       if(1 == var2) {
          this.anInt2297 = var1.readMedium((byte) 15) * -161113629;
       }
 
    }
 
-   static final byte[] decompress(byte[] compressedBuffer, int var1) {
-      Packet packet = new Packet(compressedBuffer);
-      int compression = packet.readSignedByte(1708176767);
-      int compressedLength = packet.readInt(-746666995);
-      if(compressedLength >= 0 && (-1150359653 * RSIndex.anInt1398 == 0 || compressedLength <= -1150359653 * RSIndex.anInt1398)) {
-         if(0 == compression) {
-            byte[] data = new byte[compressedLength];
-            packet.readBytes(data, 0, compressedLength, 1978056667);
-            return data;
+   static final byte[] method2539(byte[] var0, int var1) {
+      Buffer var2 = new Buffer(var0);
+      int var5 = var2.readSignedByte(1708176767);
+      int var4 = var2.readInt(-746666995);
+      if(var4 >= 0 && (-1150359653 * Class99.anInt1398 == 0 || var4 <= -1150359653 * Class99.anInt1398)) {
+         if(0 == var5) {
+            byte[] var7 = new byte[var4];
+            var2.readBytes(var7, 0, var4, 1978056667);
+            return var7;
          } else {
-            int decompressedLength = packet.readInt(-463996695);
-            if(decompressedLength >= 0 && (0 == -1150359653 * RSIndex.anInt1398 || decompressedLength <= RSIndex.anInt1398 * -1150359653)) {
-               byte[] decompressedBuffer = new byte[decompressedLength];
-               if(compression == 1) {
-                  Class66.doBzipDecompression(decompressedBuffer, decompressedLength, compressedBuffer, compressedLength, 9);
+            int var3 = var2.readInt(-463996695);
+            if(var3 >= 0 && (0 == -1150359653 * Class99.anInt1398 || var3 <= Class99.anInt1398 * -1150359653)) {
+               byte[] var6 = new byte[var3];
+               if(var5 == 1) {
+                  Class66.method943(var6, var3, var0, var4, 9);
                } else {
-                  RSIndex.aClass60_1387.unpackGZip(packet, decompressedBuffer, (byte) 59);
+                  Class99.aClass60_1387.method898(var2, var6, (byte)59);
                }
-               return decompressedBuffer;
+
+               return var6;
             } else {
                throw new RuntimeException();
             }

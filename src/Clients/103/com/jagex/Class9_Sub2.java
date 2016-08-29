@@ -27,7 +27,7 @@ public class Class9_Sub2 extends Class9 {
          this.anInt1681 = var1 * -1584098805;
       } catch (LineUnavailableException var3) {
          if(Class116_Sub21.method2333(var1, (byte)-58) != 1) {
-            this.method154(World.method542(var1, 1582993472));
+            this.method154(Class27.method542(var1, 1582993472));
          } else {
             this.aSourceDataLine1682 = null;
             throw var3;

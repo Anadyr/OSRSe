@@ -2,9 +2,9 @@ package com.jagex;
 
 public class Class59_Sub1 extends Class59 {
 
-   static CacheIndex mapFileIndex;
-   static Sprite compas;
-   static ClanRank aClass143_1831;
+   static Class99_Sub1 aClass99_Sub1_1828;
+   static Sprite aClass116_Sub23_Sub19_Sub2_1829;
+   static Class143 aClass143_1831;
    static int anInt1833;
    static int anInt1834;
 
@@ -14,10 +14,10 @@ public class Class59_Sub1 extends Class59 {
 
    static final int method1977(int var0) {
       if(Class116_Sub5.aClass29_1727.aBool403) {
-         return -747958745 * GameInterface.anInt1819;
+         return -747958745 * Class116_Sub11.anInt1819;
       } else {
-         int var1 = MobDefinition.method2552(282154897 * Class116_Sub23_Sub16_Sub5.anInt2740, -324676025 * Class83.anInt968, GameInterface.anInt1819 * -747958745, (short) 6046);
-         return var1 - 1447873857 * RelationList.anInt671 < 800 && (Class47.aByteArrayArrayArray634[GameInterface.anInt1819 * -747958745][Class116_Sub23_Sub16_Sub5.anInt2740 * 282154897 >> 7][Class83.anInt968 * -324676025 >> 7] & 4) != 0? GameInterface.anInt1819 * -747958745:3;
+         int var1 = MobDefinition.method2552(282154897 * Class116_Sub23_Sub16_Sub5.anInt2740, -324676025 * Class83.anInt968, Class116_Sub11.anInt1819 * -747958745, (short) 6046);
+         return var1 - 1447873857 * Class50.anInt671 < 800 && (Class47.aByteArrayArrayArray634[Class116_Sub11.anInt1819 * -747958745][Class116_Sub23_Sub16_Sub5.anInt2740 * 282154897 >> 7][Class83.anInt968 * -324676025 >> 7] & 4) != 0?Class116_Sub11.anInt1819 * -747958745:3;
       }
    }
 

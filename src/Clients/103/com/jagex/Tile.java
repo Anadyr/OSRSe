@@ -10,7 +10,7 @@ public final class Tile extends Node {
    Class38 aClass38_1855;
    Class46 aClass46_1856;
    Class40 aClass40_1857;
-   static byte[][] mapBufferArray;
+   static byte[][] aByteArrayArray1858;
    Class22 aClass22_1859;
    Class48 aClass48_1860;
    int anInt1861;

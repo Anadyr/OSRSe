@@ -7,7 +7,7 @@ public class BuildType {
    static BuildType aClass87_1023 = new BuildType("LIVE", 0);
    public String aString1024;
    public int anInt1025;
-   static Class32 worldListData;
+   static Class32 aClass32_1026;
    static BuildType aClass87_1027 = new BuildType("BUILDLIVE", 3);
 
    static void method1175(int var0) {
@@ -19,8 +19,8 @@ public class BuildType {
       client.aLong2966 = 8084475441026814739L;
       client.aClass119_1617 = new NodeList();
       client.rsaBuffer.position = 0;
-      client.packetBuffer.position = 0;
-      client.currentOpcode = -1;
+      client.bitBuffer.position = 0;
+      client.currentOpcode = -726667601;
       client.anInt2984 = -190671919;
       client.anInt3066 = -1000495973;
       client.anInt3173 = 1230533737;
@@ -53,7 +53,7 @@ public class BuildType {
       int var1;
       for(var1 = 0; var1 < 2048; ++var1) {
          Class7.aClass116_Sub14Array106[var1] = null;
-         Class7.movementMode[var1] = 1;
+         Class7.aByteArray105[var1] = 1;
       }
 
       for(var1 = 0; var1 < 2048; ++var1) {
@@ -65,8 +65,8 @@ public class BuildType {
       }
 
       client.anInt3065 = 1929362559;
-      client.aClass117_3028.clear();
-      client.aClass117_2973.clear();
+      client.aClass117_3028.method1545();
+      client.aClass117_2973.method1545();
 
       int var2;
       for(var1 = 0; var1 < 4; ++var1) {
@@ -77,7 +77,7 @@ public class BuildType {
          }
       }
 
-      client.aClass117_3162 = new Deque();
+      client.aClass117_3162 = new Class117();
       client.anInt3203 = 0;
       client.anInt3152 = 0;
       client.anInt3206 = 0;
@@ -86,7 +86,7 @@ public class BuildType {
          Class116_Sub23_Sub15 var4 = Class45.method702(var1, (short)-20488);
          if(var4 != null) {
             Class107.anIntArray1454[var1] = 0;
-            Class107.varpData[var1] = 0;
+            Class107.anIntArray1459[var1] = 0;
          }
       }
 
@@ -96,12 +96,12 @@ public class BuildType {
          Class64.method940(client.anInt3200 * -1074177723, 1618452709);
       }
 
-      for(GameInterface var5 = (GameInterface)client.overridedInterfaces.getFirst(); var5 != null; var5 = (GameInterface)client.overridedInterfaces.getNext()) {
+      for(Class116_Sub11 var5 = (Class116_Sub11)client.aClass127_3094.method1661(); var5 != null; var5 = (Class116_Sub11)client.aClass127_3094.method1662()) {
          Class116_Sub23_Sub5.method2490(var5, true, (byte)1);
       }
 
       client.anInt3200 = 605073011;
-      client.overridedInterfaces = new Hashtable(8);
+      client.aClass127_3094 = new Class127(8);
       client.aClass116_Sub15_3097 = null;
       client.aBool3074 = false;
       client.anInt3075 = 0;
@@ -120,14 +120,14 @@ public class BuildType {
       }
 
       client.rsaBuffer.startPacket(23, (byte) 106);
-      PacketBuilder var6 = client.rsaBuffer;
+      BitBuffer var6 = client.rsaBuffer;
       var2 = client.aBool3140?2:1;
       var6.writeByte(var2, 476681676);
       client.rsaBuffer.writeShort(-452716157 * Class42.clientWidth, -1915999133);
       client.rsaBuffer.writeShort(674167779 * Class116_Sub16.clientHeight, -2118540412);
-      client.currentCCName = null;
-      Class98.ccPlayerCount = 0;
-      GameInterface.ourCurrentCC = null;
+      client.aString3050 = null;
+      Class98.anInt1378 = 0;
+      Class116_Sub11.aClass116_Sub7Array1820 = null;
 
       for(var1 = 0; var1 < 8; ++var1) {
          client.aClass135Array3211[var1] = new Class135();

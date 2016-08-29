@@ -79,13 +79,13 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
          var10 = var8;
       }
 
-      if(RSFIT.aAbstractRSDrawing_874 != null) {
-         RSFIT.aAbstractRSDrawing_874.method333(((AbstractRSDrawing)var10).finalImage.getGraphics(), 0, 0, -819332484);
+      if(Class73.aAbstractRSDrawing_874 != null) {
+         Class73.aAbstractRSDrawing_874.method333(((AbstractRSDrawing)var10).finalImage.getGraphics(), 0, 0, -819332484);
       }
 
-      RSFIT.aAbstractRSDrawing_874 = (AbstractRSDrawing)var10;
+      Class73.aAbstractRSDrawing_874 = (AbstractRSDrawing)var10;
       aBool2924 = false;
-      aLong2927 = Class116_Sub5.generateHash(-1730340736) * -2460302806870968417L;
+      aLong2927 = Class116_Sub5.method1929(-1730340736) * -2460302806870968417L;
    }
 
    protected final boolean method3571(int var1) {
@@ -120,10 +120,10 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
    public void run() {
       try {
-         if(null != SignLink.aString886) {
-            String var1 = SignLink.aString886.toLowerCase();
+         if(null != Class74.aString886) {
+            String var1 = Class74.aString886.toLowerCase();
             if(var1.indexOf("sun") != -1 || var1.indexOf("apple") != -1) {
-               String var2 = SignLink.aString882;
+               String var2 = Class74.aString882;
                if(var2.equals("1.1") || var2.startsWith("1.1.") || var2.equals("1.2") || var2.startsWith("1.2.") || var2.equals("1.3") || var2.startsWith("1.3.") || var2.equals("1.4") || var2.startsWith("1.4.") || var2.equals("1.5") || var2.startsWith("1.5.") || var2.equals("1.6.0")) {
                   this.method3582("wrongjava", (byte)0);
                   return;
@@ -214,17 +214,17 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
          this.setFocusCycleRoot(true);
          this.method3570(232655903);
          this.method3578(-1295554880);
-         CacheWorker.aTimer_1418 = Class116_Sub23_Sub17.method2884(-74695759);
+         Class102.aTimer_1418 = Class116_Sub23_Sub17.method2884(-74695759);
 
-         while(aLong2914 * 2722427985237087875L == 0L || Class116_Sub5.generateHash(-698246111) < 2722427985237087875L * aLong2914) {
-            Class116_Sub12.anInt1836 = CacheWorker.aTimer_1418.method1085(anInt2916 * 2081489859, anInt2915 * 87833367, (byte)-6) * 1809972633;
+         while(aLong2914 * 2722427985237087875L == 0L || Class116_Sub5.method1929(-698246111) < 2722427985237087875L * aLong2914) {
+            Class116_Sub12.anInt1836 = Class102.aTimer_1418.method1085(anInt2916 * 2081489859, anInt2915 * 87833367, (byte)-6) * 1809972633;
 
             for(int var15 = 0; var15 < -108132695 * Class116_Sub12.anInt1836; ++var15) {
                this.method3572(1474139726);
             }
 
             this.method3616((byte)-1);
-            Class116_Sub23_Sub16_Sub1.method3097(ISAAC.signLink, Tile.aCanvas1875, (byte)1);
+            Class116_Sub23_Sub16_Sub1.method3097(ISAAC.aClass74_705, Tile.aCanvas1875, (byte)1);
          }
       } catch (Exception var14) {
          Class90.method1192((String)null, var14, 343294798);
@@ -235,7 +235,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
    }
 
    void method3572(int var1) {
-      long var2 = Class116_Sub5.generateHash(-1491530371);
+      long var2 = Class116_Sub5.method1929(-1491530371);
       long var4 = aLongArray2919[Class89.anInt1040 * 1149319977];
       aLongArray2919[Class89.anInt1040 * 1149319977] = var2;
       Class89.anInt1040 = 549949721 * (Class89.anInt1040 * 1149319977 + 1 & 31);
@@ -274,9 +274,9 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
             }
          }
 
-         if(null != ISAAC.signLink) {
+         if(null != ISAAC.aClass74_705) {
             try {
-               ISAAC.signLink.method1061((byte)10);
+               ISAAC.aClass74_705.method1061((byte)10);
             } catch (Exception var3) {
                ;
             }
@@ -294,8 +294,8 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
    public void destroy() {
       if(this == anApplet_Sub1_2909 && !aBool2912) {
-         aLong2914 = Class116_Sub5.generateHash(1813802300) * 4455918119670900779L;
-         Friend.sleep(5000L);
+         aLong2914 = Class116_Sub5.method1929(1813802300) * 4455918119670900779L;
+         Friend.method1836(5000L);
          this.method3574(-1974688852);
       }
    }
@@ -380,11 +380,11 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
          Class116_Sub16.clientHeight = 427958731 * var2;
          client.anInt1646 = var3 * -778950217;
          Class58.gameApplet = this;
-         if(ISAAC.signLink == null) {
-            ISAAC.signLink = new SignLink();
+         if(ISAAC.aClass74_705 == null) {
+            ISAAC.aClass74_705 = new Class74();
          }
 
-         ISAAC.signLink.method1063(this, 1, 1810544028);
+         ISAAC.aClass74_705.method1063(this, 1, 1810544028);
       } catch (Exception var6) {
          Class90.method1192((String)null, var6, 343294798);
          this.method3582("crash", (byte)0);
@@ -408,7 +408,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
    void method3616(byte var1) {
       Container var2 = this.method3583(912154773);
-      long var6 = Class116_Sub5.generateHash(-2020510104);
+      long var6 = Class116_Sub5.method1929(-2020510104);
       long var3 = aLongArray2917[263003187 * ISAAC.anInt700];
       aLongArray2917[ISAAC.anInt700 * 263003187] = var6;
       ISAAC.anInt700 = (1 + 263003187 * ISAAC.anInt700 & 31) * 1221279483;
@@ -436,7 +436,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
    public void stop() {
       if(anApplet_Sub1_2909 == this && !aBool2912) {
-         aLong2914 = (Class116_Sub5.generateHash(1893075306) + 4000L) * 4455918119670900779L;
+         aLong2914 = (Class116_Sub5.method1929(1893075306) + 4000L) * 4455918119670900779L;
       }
    }
 
@@ -444,7 +444,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
    public final synchronized void paint(Graphics var1) {
       if(anApplet_Sub1_2909 == this && !aBool2912) {
          aBool2921 = true;
-         if(SignLink.aString882 != null && SignLink.aString882.startsWith("1.5") && Class116_Sub5.generateHash(922488009) - aLong2927 * -2499368560980646817L > 1000L) {
+         if(Class74.aString882 != null && Class74.aString882.startsWith("1.5") && Class116_Sub5.method1929(922488009) - aLong2927 * -2499368560980646817L > 1000L) {
             Rectangle var2 = var1.getClipBounds();
             if(null == var2 || var2.width >= -452716157 * Class42.clientWidth && var2.height >= 674167779 * Class116_Sub16.clientHeight) {
                aBool2924 = true;

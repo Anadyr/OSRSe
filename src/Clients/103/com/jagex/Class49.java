@@ -8,13 +8,13 @@ public class Class49 {
    static final int anInt660 = 50;
    static int anInt661;
    public static final int anInt662 = 48;
-   static CacheIndex aCacheIndex_663;
+   static Class99_Sub1 aClass99_Sub1_663;
    static final int anInt664 = 171;
 
 
    static final void method773(int var0, int var1, int var2, int var3, int var4, int var5, int var6, byte var7) {
-      if(Class116_Sub23_Sub2.loadInterface(var0, -1006212225)) {
-         Friend.method1841(RSInterface.mainInterfaceArray[var0], -1, var1, var2, var3, var4, var5, var6, -1796445506);
+      if(Class116_Sub23_Sub2.method2377(var0, -1006212225)) {
+         Friend.method1841(Class116_Sub15.aClass116_Sub15ArrayArray1956[var0], -1, var1, var2, var3, var4, var5, var6, -1796445506);
       }
    }
 

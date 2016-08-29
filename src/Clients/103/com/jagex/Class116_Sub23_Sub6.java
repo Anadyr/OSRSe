@@ -4,19 +4,19 @@ public class Class116_Sub23_Sub6 extends NodeContainer {
 
    static Class123 aClass123_2277 = new Class123(64);
    public int anInt2278 = 0;
-   static CacheIndex aCacheIndex_2279;
-   static int[] landscapeArray;
+   static Class99_Sub1 aClass99_Sub1_2279;
+   static int[] anIntArray2282;
    static int anInt2286;
 
 
-   void method2491(Packet var1, int var2, int var3) {
+   void method2491(Buffer var1, int var2, int var3) {
       if(var2 == 2) {
-         this.anInt2278 = var1.readUnsignedShort(468365172) * -683865097;
+         this.anInt2278 = var1.readShort(468365172) * -683865097;
       }
 
    }
 
-   static final int method2492(ClanRank var0, int var1) {
+   static final int method2492(Class143 var0, int var1) {
       if(null == var0) {
          return 12;
       } else {
@@ -29,7 +29,7 @@ public class Class116_Sub23_Sub6 extends NodeContainer {
       }
    }
 
-   void method2494(Packet var1, int var2) {
+   void method2494(Buffer var1, int var2) {
       while(true) {
          int var3 = var1.readSignedByte(1708176767);
          if(var3 == 0) {

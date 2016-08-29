@@ -43,14 +43,14 @@ public class Speach implements OrdinalInterface {
       return this.anInt977 * -2052295414;
    }
 
-   static void handleWorldList(World[] worlds, int var1, int var2, int[] var3, int[] var4, int var5) {
+   static void method1129(Class27[] var0, int var1, int var2, int[] var3, int[] var4, int var5) {
       if(var1 < var2) {
          int var13 = var1 - 1;
          int var8 = 1 + var2;
          int var9 = (var1 + var2) / 2;
-         World var6 = worlds[var9];
-         worlds[var9] = worlds[var1];
-         worlds[var1] = var6;
+         Class27 var6 = var0[var9];
+         var0[var9] = var0[var1];
+         var0[var1] = var6;
 
          label178:
          while(var13 < var8) {
@@ -65,10 +65,10 @@ public class Speach implements OrdinalInterface {
                   int var10;
                   if(var12 < 4) {
                      if(2 == var3[var12]) {
-                        var10 = 639259553 * worlds[var8].anInt377;
+                        var10 = 639259553 * var0[var8].anInt377;
                         var7 = 639259553 * var6.anInt377;
                      } else if(var3[var12] == 1) {
-                        var10 = 215269871 * worlds[var8].anInt381;
+                        var10 = 215269871 * var0[var8].anInt381;
                         var7 = 215269871 * var6.anInt381;
                         if(var10 == -1 && 1 == var4[var12]) {
                            var10 = 2001;
@@ -78,11 +78,11 @@ public class Speach implements OrdinalInterface {
                            var7 = 2001;
                         }
                      } else if(var3[var12] == 3) {
-                        var10 = worlds[var8].method537('\uffff')?1:0;
+                        var10 = var0[var8].method537('\uffff')?1:0;
                         var7 = !var6.method537('\uffff')?0:1;
                      } else {
-                        var10 = worlds[var8].worldId * -145619359;
-                        var7 = var6.worldId * -145619359;
+                        var10 = var0[var8].anInt388 * -145619359;
+                        var7 = var6.anInt388 * -145619359;
                      }
 
                      if(var7 == var10) {
@@ -109,10 +109,10 @@ public class Speach implements OrdinalInterface {
                         while(true) {
                            if(var12 < 4) {
                               if(var3[var12] == 2) {
-                                 var10 = 639259553 * worlds[var13].anInt377;
+                                 var10 = 639259553 * var0[var13].anInt377;
                                  var7 = 639259553 * var6.anInt377;
                               } else if(1 == var3[var12]) {
-                                 var10 = 215269871 * worlds[var13].anInt381;
+                                 var10 = 215269871 * var0[var13].anInt381;
                                  var7 = var6.anInt381 * 215269871;
                                  if(var10 == -1 && 1 == var4[var12]) {
                                     var10 = 2001;
@@ -122,11 +122,11 @@ public class Speach implements OrdinalInterface {
                                     var7 = 2001;
                                  }
                               } else if(var3[var12] == 3) {
-                                 var10 = worlds[var13].method537('\uffff')?1:0;
+                                 var10 = var0[var13].method537('\uffff')?1:0;
                                  var7 = var6.method537('\uffff')?1:0;
                               } else {
-                                 var10 = -145619359 * worlds[var13].worldId;
-                                 var7 = -145619359 * var6.worldId;
+                                 var10 = -145619359 * var0[var13].anInt388;
+                                 var7 = -145619359 * var6.anInt388;
                               }
 
                               if(var10 == var7) {
@@ -145,9 +145,9 @@ public class Speach implements OrdinalInterface {
 
                            if(!var11) {
                               if(var13 < var8) {
-                                 World var14 = worlds[var13];
-                                 worlds[var13] = worlds[var8];
-                                 worlds[var8] = var14;
+                                 Class27 var14 = var0[var13];
+                                 var0[var13] = var0[var8];
+                                 var0[var8] = var14;
                               }
                               continue label178;
                            }
@@ -160,8 +160,8 @@ public class Speach implements OrdinalInterface {
             }
          }
 
-         handleWorldList(worlds, var1, var8, var3, var4, -1874643746);
-         handleWorldList(worlds, var8 + 1, var2, var3, var4, -2021687307);
+         method1129(var0, var1, var8, var3, var4, -1874643746);
+         method1129(var0, var8 + 1, var2, var3, var4, -2021687307);
       }
 
    }

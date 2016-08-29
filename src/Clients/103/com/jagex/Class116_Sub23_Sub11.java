@@ -27,10 +27,10 @@ public class Class116_Sub23_Sub11 extends NodeContainer {
    public int anInt2372 = 0;
    public int anInt2373;
    public boolean aBool2374 = false;
-   static Sprite[] headIconsPrayer;
+   static Sprite[] aClass116_Sub23_Sub19_Sub2Array2375;
    public static Class123 aClass123_2376 = new Class123(200);
    int anInt2377;
-   public static RSIndex aRSIndex_2378;
+   public static Class99 aClass99_2378;
    int anInt2379;
    public boolean aBool2380;
    int anInt2381;
@@ -58,7 +58,7 @@ public class Class116_Sub23_Sub11 extends NodeContainer {
    int anInt2403;
    void method2587(int var1) {}
 
-   void method2588(Packet var1, byte var2) {
+   void method2588(Buffer var1, byte var2) {
       while(true) {
          int var3 = var1.readSignedByte(1708176767);
          if(var3 == 0) {
@@ -81,11 +81,11 @@ public class Class116_Sub23_Sub11 extends NodeContainer {
          }
 
          if(var3 != -1) {
-            return RelationList.method778(var3, (byte) 70).method2591(1, -52018867);
+            return Class50.method778(var3, (byte)70).method2591(1, -52018867);
          }
       }
 
-      Model var5 = Model.method3114(Class60.aRSIndex_783, this.anInt2388 * 908818241, 0);
+      Model var5 = Model.method3114(Class60.aClass99_783, this.anInt2388 * 908818241, 0);
       if(var5 == null) {
          return null;
       } else {
@@ -149,7 +149,7 @@ public class Class116_Sub23_Sub11 extends NodeContainer {
          }
 
          if(-1 != var4) {
-            return RelationList.method778(var4, (byte) 70).method2593(1, 1861499827);
+            return Class50.method778(var4, (byte)70).method2593(1, 1861499827);
          }
       }
 
@@ -157,7 +157,7 @@ public class Class116_Sub23_Sub11 extends NodeContainer {
       if(var7 != null) {
          return var7;
       } else {
-         Model var6 = Model.method3114(Class60.aRSIndex_783, this.anInt2388 * 908818241, 0);
+         Model var6 = Model.method3114(Class60.aClass99_783, this.anInt2388 * 908818241, 0);
          if(var6 == null) {
             return null;
          } else {
@@ -197,7 +197,7 @@ public class Class116_Sub23_Sub11 extends NodeContainer {
          }
 
          if(-1 != var4) {
-            return RelationList.method778(var4, (byte) 70);
+            return Class50.method778(var4, (byte)70);
          }
       }
 
@@ -218,15 +218,15 @@ public class Class116_Sub23_Sub11 extends NodeContainer {
          return true;
       } else {
          boolean var6 = true;
-         if(!Class60.aRSIndex_783.method1373(var3, 0, (byte)1)) {
+         if(!Class60.aClass99_783.method1373(var3, 0, (byte)1)) {
             var6 = false;
          }
 
-         if(-1 != var4 && !Class60.aRSIndex_783.method1373(var4, 0, (byte)1)) {
+         if(-1 != var4 && !Class60.aClass99_783.method1373(var4, 0, (byte)1)) {
             var6 = false;
          }
 
-         if(var5 != -1 && !Class60.aRSIndex_783.method1373(var5, 0, (byte)1)) {
+         if(var5 != -1 && !Class60.aClass99_783.method1373(var5, 0, (byte)1)) {
             var6 = false;
          }
 
@@ -247,11 +247,11 @@ public class Class116_Sub23_Sub11 extends NodeContainer {
       if(-1 == var3) {
          return null;
       } else {
-         Model var7 = Model.method3114(Class60.aRSIndex_783, var3, 0);
+         Model var7 = Model.method3114(Class60.aClass99_783, var3, 0);
          if(var6 != -1) {
-            Model var4 = Model.method3114(Class60.aRSIndex_783, var6, 0);
+            Model var4 = Model.method3114(Class60.aClass99_783, var6, 0);
             if(-1 != var5) {
-               Model var8 = Model.method3114(Class60.aRSIndex_783, var5, 0);
+               Model var8 = Model.method3114(Class60.aClass99_783, var5, 0);
                Model[] var9 = new Model[]{var7, var4, var8};
                var7 = new Model(var9, 3);
             } else {
@@ -297,11 +297,11 @@ public class Class116_Sub23_Sub11 extends NodeContainer {
          return true;
       } else {
          boolean var4 = true;
-         if(!Class60.aRSIndex_783.method1373(var3, 0, (byte)1)) {
+         if(!Class60.aClass99_783.method1373(var3, 0, (byte)1)) {
             var4 = false;
          }
 
-         if(-1 != var5 && !Class60.aRSIndex_783.method1373(var5, 0, (byte)1)) {
+         if(-1 != var5 && !Class60.aClass99_783.method1373(var5, 0, (byte)1)) {
             var4 = false;
          }
 
@@ -347,24 +347,24 @@ public class Class116_Sub23_Sub11 extends NodeContainer {
       this.anInt2365 = 0;
    }
 
-   void method2605(Packet var1, int var2, short var3) {
+   void method2605(Buffer var1, int var2, short var3) {
       if(1 == var2) {
-         this.anInt2388 = var1.readUnsignedShort(839602619) * -674424639;
+         this.anInt2388 = var1.readShort(839602619) * -674424639;
       } else if(2 == var2) {
          this.aString2361 = var1.readString(61376769);
       } else if(4 == var2) {
-         this.anInt2396 = var1.readUnsignedShort(1169797142) * -1306150139;
+         this.anInt2396 = var1.readShort(1169797142) * -1306150139;
       } else if(var2 == 5) {
-         this.anInt2367 = var1.readUnsignedShort(1986676049) * 135687661;
+         this.anInt2367 = var1.readShort(1986676049) * 135687661;
       } else if(var2 == 6) {
-         this.anInt2368 = var1.readUnsignedShort(346814689) * -463941183;
+         this.anInt2368 = var1.readShort(346814689) * -463941183;
       } else if(var2 == 7) {
-         this.anInt2402 = var1.readUnsignedShort(807365027) * -1139144573;
+         this.anInt2402 = var1.readShort(807365027) * -1139144573;
          if(this.anInt2402 * 2086962731 > 32767) {
             this.anInt2402 -= 142802944;
          }
       } else if(var2 == 8) {
-         this.anInt2371 = var1.readUnsignedShort(2078798660) * 2111045293;
+         this.anInt2371 = var1.readShort(2078798660) * 2111045293;
          if(-2057824987 * this.anInt2371 > 32767) {
             this.anInt2371 -= -22216704;
          }
@@ -375,15 +375,15 @@ public class Class116_Sub23_Sub11 extends NodeContainer {
       } else if(var2 == 16) {
          this.aBool2374 = true;
       } else if(23 == var2) {
-         this.anInt2400 = var1.readUnsignedShort(1924820596) * 1910868069;
+         this.anInt2400 = var1.readShort(1924820596) * 1910868069;
          this.anInt2379 = var1.readSignedByte(1708176767) * -1037794981;
       } else if(var2 == 24) {
-         this.anInt2358 = var1.readUnsignedShort(726658145) * -836789619;
+         this.anInt2358 = var1.readShort(726658145) * -836789619;
       } else if(var2 == 25) {
-         this.anInt2355 = var1.readUnsignedShort(2032323900) * -1561226601;
+         this.anInt2355 = var1.readShort(2032323900) * -1561226601;
          this.anInt2382 = var1.readSignedByte(1708176767) * -908557027;
       } else if(var2 == 26) {
-         this.anInt2369 = var1.readUnsignedShort(1622815270) * -1814771513;
+         this.anInt2369 = var1.readShort(1622815270) * -1814771513;
       } else if(var2 >= 30 && var2 < 35) {
          this.aStringArray2391[var2 - 30] = var1.readString(61376769);
          if(this.aStringArray2391[var2 - 30].equalsIgnoreCase(Class91.hidden)) {
@@ -400,8 +400,8 @@ public class Class116_Sub23_Sub11 extends NodeContainer {
             this.aShortArray2363 = new short[var5];
 
             for(var4 = 0; var4 < var5; ++var4) {
-               this.aShortArray2362[var4] = (short)var1.readUnsignedShort(1626592604);
-               this.aShortArray2363[var4] = (short)var1.readUnsignedShort(526027824);
+               this.aShortArray2362[var4] = (short)var1.readShort(1626592604);
+               this.aShortArray2363[var4] = (short)var1.readShort(526027824);
             }
          } else if(var2 == 41) {
             var5 = var1.readSignedByte(1708176767);
@@ -409,43 +409,43 @@ public class Class116_Sub23_Sub11 extends NodeContainer {
             this.aShortArray2360 = new short[var5];
 
             for(var4 = 0; var4 < var5; ++var4) {
-               this.aShortArray2364[var4] = (short)var1.readUnsignedShort(1582650826);
-               this.aShortArray2360[var4] = (short)var1.readUnsignedShort(-393583002);
+               this.aShortArray2364[var4] = (short)var1.readShort(1582650826);
+               this.aShortArray2360[var4] = (short)var1.readShort(-393583002);
             }
          } else if(var2 == 65) {
             this.aBool2380 = true;
          } else if(var2 == 78) {
-            this.anInt2383 = var1.readUnsignedShort(-350169089) * -1629128967;
+            this.anInt2383 = var1.readShort(-350169089) * -1629128967;
          } else if(var2 == 79) {
-            this.anInt2384 = var1.readUnsignedShort(1395518503) * -1586370239;
+            this.anInt2384 = var1.readShort(1395518503) * -1586370239;
          } else if(var2 == 90) {
-            this.anInt2385 = var1.readUnsignedShort(-233772154) * -1668721209;
+            this.anInt2385 = var1.readShort(-233772154) * -1668721209;
          } else if(var2 == 91) {
-            this.anInt2403 = var1.readUnsignedShort(-205340022) * 327059663;
+            this.anInt2403 = var1.readShort(-205340022) * 327059663;
          } else if(92 == var2) {
-            this.anInt2386 = var1.readUnsignedShort(1271561739) * 304503181;
+            this.anInt2386 = var1.readShort(1271561739) * 304503181;
          } else if(93 == var2) {
-            this.anInt2377 = var1.readUnsignedShort(499158228) * 228605901;
+            this.anInt2377 = var1.readShort(499158228) * 228605901;
          } else if(95 == var2) {
-            this.anInt2393 = var1.readUnsignedShort(2121333323) * -375066123;
+            this.anInt2393 = var1.readShort(2121333323) * -375066123;
          } else if(var2 == 97) {
-            this.anInt2399 = var1.readUnsignedShort(-394139370) * 133297667;
+            this.anInt2399 = var1.readShort(-394139370) * 133297667;
          } else if(98 == var2) {
-            this.anInt2392 = var1.readUnsignedShort(45026868) * -1767449801;
+            this.anInt2392 = var1.readShort(45026868) * -1767449801;
          } else if(var2 >= 100 && var2 < 110) {
             if(this.anIntArray2389 == null) {
                this.anIntArray2389 = new int[10];
                this.anIntArray2390 = new int[10];
             }
 
-            this.anIntArray2389[var2 - 100] = var1.readUnsignedShort(233689216);
-            this.anIntArray2390[var2 - 100] = var1.readUnsignedShort(1215390393);
+            this.anIntArray2389[var2 - 100] = var1.readShort(233689216);
+            this.anIntArray2390[var2 - 100] = var1.readShort(1215390393);
          } else if(var2 == 110) {
-            this.anInt2370 = var1.readUnsignedShort(1624869876) * 1611805291;
+            this.anInt2370 = var1.readShort(1624869876) * 1611805291;
          } else if(111 == var2) {
-            this.anInt2394 = var1.readUnsignedShort(1987437728) * 1478558927;
+            this.anInt2394 = var1.readShort(1987437728) * 1478558927;
          } else if(var2 == 112) {
-            this.anInt2395 = var1.readUnsignedShort(1198132810) * -446826717;
+            this.anInt2395 = var1.readShort(1198132810) * -446826717;
          } else if(113 == var2) {
             this.anInt2373 = var1.readUnsignedByte(1993877045) * -262842863;
          } else if(var2 == 114) {
@@ -453,9 +453,9 @@ public class Class116_Sub23_Sub11 extends NodeContainer {
          } else if(var2 == 115) {
             this.anInt2398 = var1.readSignedByte(1708176767) * -1632397881;
          } else if(var2 == 139) {
-            this.anInt2381 = var1.readUnsignedShort(1677369300) * 922585677;
+            this.anInt2381 = var1.readShort(1677369300) * 922585677;
          } else if(var2 == 140) {
-            this.anInt2401 = var1.readUnsignedShort(91956155) * 1087213371;
+            this.anInt2401 = var1.readShort(91956155) * 1087213371;
          }
       }
 
@@ -500,9 +500,9 @@ public class Class116_Sub23_Sub11 extends NodeContainer {
       if(var3 == -1) {
          return null;
       } else {
-         Model var6 = Model.method3114(Class60.aRSIndex_783, var3, 0);
+         Model var6 = Model.method3114(Class60.aClass99_783, var3, 0);
          if(var5 != -1) {
-            Model var4 = Model.method3114(Class60.aRSIndex_783, var5, 0);
+            Model var4 = Model.method3114(Class60.aClass99_783, var5, 0);
             Model[] var7 = new Model[]{var6, var4};
             var6 = new Model(var7, 2);
          }
@@ -542,11 +542,11 @@ public class Class116_Sub23_Sub11 extends NodeContainer {
       this.anInt2372 = 1721830175;
    }
 
-   static void method2637(int var0, int var1, int itemId, int amt, int var4) {
-      Class116_Sub10 var5 = (Class116_Sub10)Class116_Sub10.aHashtable_1803.get((long) var0);
+   static void method2637(int var0, int var1, int var2, int var3, int var4) {
+      Class116_Sub10 var5 = (Class116_Sub10)Class116_Sub10.aClass127_1803.method1658((long)var0);
       if(var5 == null) {
          var5 = new Class116_Sub10();
-         Class116_Sub10.aHashtable_1803.put(var5, (long) var0);
+         Class116_Sub10.aClass127_1803.method1666(var5, (long)var0);
       }
 
       if(var5.anIntArray1812.length <= var1) {
@@ -568,8 +568,8 @@ public class Class116_Sub23_Sub11 extends NodeContainer {
          var5.anIntArray1804 = var6;
       }
 
-      var5.anIntArray1812[var1] = itemId;
-      var5.anIntArray1804[var1] = amt;
+      var5.anIntArray1812[var1] = var2;
+      var5.anIntArray1804[var1] = var3;
    }
 
    static Class29 method2638(int var0) {
@@ -588,7 +588,7 @@ public class Class116_Sub23_Sub11 extends NodeContainer {
             }
          }
 
-         var2 = new Class29(new Packet(var3));
+         var2 = new Class29(new Buffer(var3));
       } catch (Exception var7) {
          ;
       }

@@ -40,7 +40,7 @@ import java.util.List;
  */
 public class Player extends Entity implements Serviceable, Communicable {
 
-    public static enum Display { Fixed(548), Resizeable_FixedPanel(161), Resizeable_Panel(165);
+    public static enum Display { Fixed(548), Resizeable_FixedPanel(161), Resizeable_Panel(164);
 
         private int windowId;
 

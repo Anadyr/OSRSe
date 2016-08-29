@@ -1,6 +1,8 @@
 package org.osrse.model.commercial;
 
 
+import org.osrse.utility.NameUtilities;
+
 import java.util.*;
 import java.util.concurrent.LinkedBlockingQueue;
 
@@ -27,6 +29,10 @@ public class Communications {
             }
             return values()[id];
         }
+
+        public String toString() {
+            return NameUtilities.capitalizeFormat(name());
+        }
     }
 
     public Map<Integer, Alias> relationData;
@@ -34,7 +40,7 @@ public class Communications {
 
     public final int uid;
     private String username;
-    public String currentChat = "Lolololol";
+    public String currentChat;
 
     private final GroupChat clanChat;
     private static final Object lock = new Object();

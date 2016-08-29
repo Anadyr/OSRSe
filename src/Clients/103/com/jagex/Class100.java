@@ -3,7 +3,7 @@ package com.jagex;
 public class Class100 {
 
    static char[] aCharArray1401 = new char[64];
-   static Sprite[] cross;
+   static Sprite[] aClass116_Sub23_Sub19_Sub2Array1402;
    static int[] anIntArray1403;
    static char[] aCharArray1404;
 
@@ -11,7 +11,7 @@ public class Class100 {
       throw new Error();
    }
 
-   static void method1427(World var0, int var1) {
+   static void method1427(Class27 var0, int var1) {
       if(var0.method537('\uffff') != client.aBool2936) {
          client.aBool2936 = var0.method537('\uffff');
          boolean var2 = var0.method537('\uffff');
@@ -23,11 +23,11 @@ public class Class100 {
          }
       }
 
-      World.aString386 = var0.address;
-      client.anInt3115 = var0.worldId * 2027760217;
-      client.anInt2933 = 1096175283 * var0.activityFlag;
-      Class94.port = -767343703 * (1082541889 * client.anInt3020 == 0?'\uaa4a':'\u9c40' + -145619359 * var0.worldId);
-      Class51.anInt682 = 701960199 * (1082541889 * client.anInt3020 == 0?443:var0.worldId * -145619359 + '\uc350');
+      Class27.aString386 = var0.aString382;
+      client.anInt3115 = var0.anInt388 * 2027760217;
+      client.anInt2933 = 1096175283 * var0.anInt380;
+      Class94.port = -767343703 * (1082541889 * client.anInt3020 == 0?'\uaa4a':'\u9c40' + -145619359 * var0.anInt388);
+      Class51.anInt682 = 701960199 * (1082541889 * client.anInt3020 == 0?443:var0.anInt388 * -145619359 + '\uc350');
       Class29.anInt404 = 1439019167 * Class94.port;
    }
 

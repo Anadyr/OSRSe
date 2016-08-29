@@ -15,7 +15,7 @@ public class DrawingArea extends NodeContainer {
       rasterPixels = var0;
       width = var1;
       anInt2492 = var2;
-      setRasterSize(0, 0, var1, var2);
+      method2901(0, 0, var1, var2);
    }
 
    public static void method2888() {
@@ -189,27 +189,27 @@ public class DrawingArea extends NodeContainer {
       }
    }
 
-   public static void setRasterSize(int topX, int topY, int bottomX, int bottomY) {
-      if(topX < 0) {
-         topX = 0;
+   public static void method2901(int var0, int var1, int var2, int var3) {
+      if(var0 < 0) {
+         var0 = 0;
       }
 
-      if(topY < 0) {
-         topY = 0;
+      if(var1 < 0) {
+         var1 = 0;
       }
 
-      if(bottomX > width) {
-         bottomX = width;
+      if(var2 > width) {
+         var2 = width;
       }
 
-      if(bottomY > anInt2492) {
-         bottomY = anInt2492;
+      if(var3 > anInt2492) {
+         var3 = anInt2492;
       }
 
-      DrawingArea.topX = topX;
-      DrawingArea.topY = topY;
-      DrawingArea.bottomX = bottomX;
-      DrawingArea.bottomY = bottomY;
+      topX = var0;
+      topY = var1;
+      bottomX = var2;
+      bottomY = var3;
    }
 
    static void method2902(int var0, int var1, int var2, int var3, int var4) {
@@ -336,7 +336,7 @@ public class DrawingArea extends NodeContainer {
 
    }
 
-   public static void setRasterAreaColor(int var0, int var1, int var2, int var3, int color) {
+   public static void method2927(int var0, int var1, int var2, int var3, int var4) {
       if(var0 < topX) {
          var2 -= topX - var0;
          var0 = topX;
@@ -360,7 +360,7 @@ public class DrawingArea extends NodeContainer {
 
       for(int var5 = -var3; var5 < 0; ++var5) {
          for(int var7 = -var2; var7 < 0; ++var7) {
-            rasterPixels[var6++] = color;
+            rasterPixels[var6++] = var4;
          }
 
          var6 += var8;

@@ -4,9 +4,9 @@ public class Class113 {
 
    int[] anIntArray1486;
 
-   public int getFileId(int index) {
+   public int method1525(int var1) {
       int var2 = (this.anIntArray1486.length >> 1) - 1;
-      int var3 = index & var2;
+      int var3 = var1 & var2;
 
       while(true) {
          int var4 = this.anIntArray1486[var3 + var3 + 1];
@@ -14,7 +14,7 @@ public class Class113 {
             return -1;
          }
 
-         if(this.anIntArray1486[var3 + var3] == index) {
+         if(this.anIntArray1486[var3 + var3] == var1) {
             return var4;
          }
 

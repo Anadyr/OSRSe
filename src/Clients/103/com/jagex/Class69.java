@@ -23,7 +23,7 @@ public class Class69 {
             if(32 == var3) {
                var6.append('+');
             } else {
-               byte var4 = Ignore.cipherChar(var3, -543467890);
+               byte var4 = Class24.method529(var3, -543467890);
                var6.append('%');
                int var7 = var4 >> 4 & 15;
                if(var7 >= 10) {
@@ -65,7 +65,7 @@ public class Class69 {
       int var4 = -1;
 
       for(int var5 = var1; var5 < var2; ++var5) {
-         var4 = var4 >>> 8 ^ Packet.crcTable[(var4 ^ var0[var5]) & 255];
+         var4 = var4 >>> 8 ^ Buffer.crcTable[(var4 ^ var0[var5]) & 255];
       }
 
       var4 = ~var4;
@@ -74,54 +74,44 @@ public class Class69 {
 
    static final void processLogin(byte var0) {
       try {
-         if(0 == client.loginStep * -1250195825) {
-            if(Class38.streamBuffer != null) {
-               Class38.streamBuffer.sync(1137710223);
-               Class38.streamBuffer = null;
+         if(0 == client.anInt3182 * -1250195825) {
+            if(Class38.bufferIn != null) {
+               Class38.bufferIn.method1001(1137710223);
+               Class38.bufferIn = null;
             }
 
-            KeyFocusListener.gameSocket = null;
+            KeyFocusListener.aClass72_933 = null;
             client.aBool3052 = false;
             client.anInt3148 = 0;
-            client.loginStep = 1066981487; //1
+            client.anInt3182 = 1066981487;
          }
 
-         if(client.loginStep * -1250195825 == 1) {
-            if(null == KeyFocusListener.gameSocket) {
-               KeyFocusListener.gameSocket = ISAAC.signLink.socket(World.aString386, Class29.anInt404 * 2028673991, (byte) 1);
+         if(client.anInt3182 * -1250195825 == 1) {
+            if(null == KeyFocusListener.aClass72_933) {
+               KeyFocusListener.aClass72_933 = ISAAC.aClass74_705.method1054(Class27.aString386, Class29.anInt404 * 2028673991, (byte)1);
             }
 
-            if(2 == KeyFocusListener.gameSocket.anInt866) {
+            if(2 == KeyFocusListener.aClass72_933.anInt866) {
                throw new IOException();
             }
 
-            if(KeyFocusListener.gameSocket.anInt866 == 1) {
-               Class38.streamBuffer = new RSInputStream((Socket)KeyFocusListener.gameSocket.anObject869, ISAAC.signLink);
-               KeyFocusListener.gameSocket = null;
-               client.loginStep = 2133962974; //2
+            if(KeyFocusListener.aClass72_933.anInt866 == 1) {
+               Class38.bufferIn = new Class71((Socket)KeyFocusListener.aClass72_933.anObject869, ISAAC.aClass74_705);
+               KeyFocusListener.aClass72_933 = null;
+               client.anInt3182 = 2133962974;
             }
          }
 
-          System.out.println(-1250195825 * client.loginStep +"/"+ -1250195825+"/"+client.loginStep);
-         if(2 == -1250195825 * client.loginStep) {
+         if(2 == -1250195825 * client.anInt3182) {
             client.rsaBuffer.position = 0;
             client.rsaBuffer.writeByte(14, -893105279);
-            Class38.streamBuffer.flush(client.rsaBuffer.payload, 0, 1, -698540305);
-            client.packetBuffer.position = 0;
-            client.loginStep = -1094022835; //3
+            Class38.bufferIn.method1006(client.rsaBuffer.payload, 0, 1, -698540305);
+            client.bitBuffer.position = 0;
+            client.anInt3182 = -1094022835;
          }
 
-         int response;
-         if(3 == client.loginStep * -1250195825) {
-            if(Class116_Sub23_Sub20.aClass9_2510 != null) {
-               Class116_Sub23_Sub20.aClass9_2510.method163((byte) 24);
-            }
-
-            if(Class35.aClass9_475 != null) {
-               Class35.aClass9_475.method163((byte)24);
-            }
-
-            response = Class38.streamBuffer.readByte(-1664441415);
+         int var1;
+         if(3 == client.anInt3182 * -1250195825) {
             if(Class116_Sub23_Sub20.aClass9_2510 != null) {
                Class116_Sub23_Sub20.aClass9_2510.method163((byte)24);
             }
@@ -130,18 +120,27 @@ public class Class69 {
                Class35.aClass9_475.method163((byte)24);
             }
 
-            if(response != 0) {
-               ObjectDefinition.method2434(response, (byte) 1);
+            var1 = Class38.bufferIn.readByte(-1664441415);
+            if(Class116_Sub23_Sub20.aClass9_2510 != null) {
+               Class116_Sub23_Sub20.aClass9_2510.method163((byte)24);
+            }
+
+            if(Class35.aClass9_475 != null) {
+               Class35.aClass9_475.method163((byte)24);
+            }
+
+            if(var1 != 0) {
+               ObjectDefinition.method2434(var1, (byte) 1);
                return;
             }
 
-            client.packetBuffer.position = 0;
-            client.loginStep = 1039940139; //5
+            client.bitBuffer.position = 0;
+            client.anInt3182 = 1039940139;
          }
 
          int varStart;
          int xteaStart;
-         if(client.loginStep * -1250195825 == 5) {
+         if(client.anInt3182 * -1250195825 == 5) {
             int[] xteaKeys = new int[]{(int)(Math.random() * 9.9999999E7D), (int)(Math.random() * 9.9999999E7D), (int)(Math.random() * 9.9999999E7D), (int)(Math.random() * 9.9999999E7D)};
             client.rsaBuffer.position = 0;
             client.rsaBuffer.writeByte(1, -386086812);
@@ -186,7 +185,7 @@ public class Class69 {
             client.loginBuffer.writeByte(resized, -419937067);
             client.loginBuffer.writeShort(-452716157 * Class42.clientWidth, -2129169067);
             client.loginBuffer.writeShort(Class116_Sub16.clientHeight * 674167779, -2143407622);
-            PacketBuilder var4 = client.loginBuffer;
+            BitBuffer var4 = client.loginBuffer;
             byte[] randomData = new byte[24];
 
             int var6;
@@ -209,104 +208,106 @@ public class Class69 {
 
             var4.method2110(randomData, 0, 24, 512611054);
             client.loginBuffer.writeJGString(client.aString2940, 319380170);
-            client.loginBuffer.writeInt(-1929163163 * GameInterface.anInt1816, (byte)88);
-            Packet var20 = new Packet(Class116_Sub23_Sub2.aClass116_Sub17_2186.method2307((byte)-77));
+            client.loginBuffer.writeInt(-1929163163 * Class116_Sub11.anInt1816, (byte)88);
+            Buffer var20 = new Buffer(Class116_Sub23_Sub2.aClass116_Sub17_2186.method2307((byte)-77));
             Class116_Sub23_Sub2.aClass116_Sub17_2186.method2306(var20, 3600000);
             client.loginBuffer.method2110(var20.payload, 0, var20.payload.length, 512611054);
              int okLoginBuff1 = Class36.anInt488 * -1296445677;
             client.loginBuffer.writeByte(okLoginBuff1, 625626371);
 
-            client.loginBuffer.writeInt(Class42.aCacheIndex_574.anInt1383 * 1153748675, (byte)117);
-            client.loginBuffer.writeInt(client.aCacheIndex_2955.anInt1383 * 1153748675, (byte)75);
-            client.loginBuffer.writeInt(1153748675 * client.aCacheIndex_3054.anInt1383, (byte)75);
-            client.loginBuffer.writeInt(1153748675 * Class116_Sub23_Sub18.aCacheIndex_2484.anInt1383, (byte)54);
-            client.loginBuffer.writeInt(1153748675 * Class116_Sub23_Sub13.aCacheIndex_2424.anInt1383, (byte)78);
-            client.loginBuffer.writeInt(Class59_Sub1.mapFileIndex.anInt1383 * 1153748675, (byte)73);
-            client.loginBuffer.writeInt(1153748675 * Class2.aCacheIndex_23.anInt1383, (byte)86);
-            client.loginBuffer.writeInt(1153748675 * Class3.aCacheIndex_42.anInt1383, (byte)9);
-            client.loginBuffer.writeInt(Class116_Sub5.spriteIndex.anInt1383 * 1153748675, (byte)117);
-            client.loginBuffer.writeInt(1153748675 * Class1.aCacheIndex_6.anInt1383, (byte)73);
-            client.loginBuffer.writeInt(Class49.aCacheIndex_663.anInt1383 * 1153748675, (byte)13);
-            client.loginBuffer.writeInt(Class108.aCacheIndex_1471.anInt1383 * 1153748675, (byte)113);
-            client.loginBuffer.writeInt(1153748675 * Class116_Sub23_Sub6.aCacheIndex_2279.anInt1383, (byte)85);
-            client.loginBuffer.writeInt(Class2.aCacheIndex_12.anInt1383 * 1153748675, (byte)20);
-            client.loginBuffer.writeInt(1153748675 * Class32.aCacheIndex_446.anInt1383, (byte)125);
-            client.loginBuffer.writeInt(1153748675 * Class70.aCacheIndex_847.anInt1383, (byte)127);
+            client.loginBuffer.writeInt(Class42.aClass99_Sub1_574.anInt1383 * 1153748675, (byte)117);
+            client.loginBuffer.writeInt(client.aClass99_Sub1_2955.anInt1383 * 1153748675, (byte)75);
+            client.loginBuffer.writeInt(1153748675 * client.aClass99_Sub1_3054.anInt1383, (byte)75);
+            client.loginBuffer.writeInt(1153748675 * Class116_Sub23_Sub18.aClass99_Sub1_2484.anInt1383, (byte)54);
+            client.loginBuffer.writeInt(1153748675 * Class116_Sub23_Sub13.aClass99_Sub1_2424.anInt1383, (byte)78);
+            client.loginBuffer.writeInt(Class59_Sub1.aClass99_Sub1_1828.anInt1383 * 1153748675, (byte)73);
+            client.loginBuffer.writeInt(1153748675 * Class2.aClass99_Sub1_23.anInt1383, (byte)86);
+            client.loginBuffer.writeInt(1153748675 * Class3.aClass99_Sub1_42.anInt1383, (byte)9);
+            client.loginBuffer.writeInt(Class116_Sub5.aClass99_Sub1_1729.anInt1383 * 1153748675, (byte)117);
+            client.loginBuffer.writeInt(1153748675 * Class1.aClass99_Sub1_6.anInt1383, (byte)73);
+            client.loginBuffer.writeInt(Class49.aClass99_Sub1_663.anInt1383 * 1153748675, (byte)13);
+            client.loginBuffer.writeInt(Class108.aClass99_Sub1_1471.anInt1383 * 1153748675, (byte)113);
+            client.loginBuffer.writeInt(1153748675 * Class116_Sub23_Sub6.aClass99_Sub1_2279.anInt1383, (byte)85);
+            client.loginBuffer.writeInt(Class2.aClass99_Sub1_12.anInt1383 * 1153748675, (byte)20);
+            client.loginBuffer.writeInt(1153748675 * Class32.aClass99_Sub1_446.anInt1383, (byte)125);
+            client.loginBuffer.writeInt(1153748675 * Class70.aClass99_Sub1_847.anInt1383, (byte)127);
             client.loginBuffer.method2022(xteaKeys, xteaStart, 314639891 * client.loginBuffer.position, -1958841326);
             client.loginBuffer.method2000(client.loginBuffer.position * 314639891 - varStart, (byte)76);
-            Class38.streamBuffer.flush(client.loginBuffer.payload, 0, client.loginBuffer.position * 314639891, -1906339171);
+            Class38.bufferIn.method1006(client.loginBuffer.payload, 0, client.loginBuffer.position * 314639891, -1906339171);
             client.rsaBuffer.applyIsaac(xteaKeys);
 
-             System.out.println(resized+"/"+-1929163163 * GameInterface.anInt1816);
+             System.out.println(resized+"/"+-1929163163 * Class116_Sub11.anInt1816);
             for(var6 = 0; var6 < 4; ++var6) {
                xteaKeys[var6] += 50;
             }
 
-            client.packetBuffer.applyIsaac(xteaKeys);
-            client.loginStep = 2106921626; //6
+            client.bitBuffer.applyIsaac(xteaKeys);
+            client.anInt3182 = 2106921626;
          }
 
-         if(-1250195825 * client.loginStep == 6 && Class38.streamBuffer.readableBytes((byte) -38) > 0) {
-            response = Class38.streamBuffer.readByte(-1294760630);
-            if(21 == response && client.loginStage * 846055547 == 20) {
-               client.loginStep = -1121064183; //7
-            } else if(2 == response) {
-               client.loginStep = 1012898791; //9
-            } else if(response == 15 && 40 == client.loginStage * 846055547) {
-               client.packetLength = -260863215;
-               client.loginStep = 985857443; //13
-            } else if(response == 23 && client.anInt2978 * 288795893 < 1) {
+         if(-1250195825 * client.anInt3182 == 6 && Class38.bufferIn.method1004((byte)-38) > 0) {
+            var1 = Class38.bufferIn.readByte(-1294760630);
+            if(21 == var1 && client.loginStage * 846055547 == 20) {
+               client.anInt3182 = -1121064183;
+            } else if(2 == var1) {
+               client.anInt3182 = 1012898791;
+            } else if(var1 == 15 && 40 == client.loginStage * 846055547) {
+               client.anInt2980 = -260863215;
+               client.anInt3182 = 985857443;
+            } else if(var1 == 23 && client.anInt2978 * 288795893 < 1) {
                client.anInt2978 += -260333731;
-               client.loginStep = 0;
+               client.anInt3182 = 0;
             } else {
-               if(response != 29) {
-                  ObjectDefinition.method2434(response, (byte) 1);
+               if(var1 != 29) {
+                  ObjectDefinition.method2434(var1, (byte) 1);
                   return;
                }
 
-               client.loginStep = -1148105531; //11
+               client.anInt3182 = -1148105531;
             }
          }
 
-         if(7 == client.loginStep * -1250195825 && Class38.streamBuffer.readableBytes((byte) -44) > 0) {
-            client.anInt2971 = (Class38.streamBuffer.readByte(426620349) + 3) * -1985668988;
-            client.loginStep = -54082696; //8
+         if(7 == client.anInt3182 * -1250195825 && Class38.bufferIn.method1004((byte)-44) > 0) {
+            client.anInt2971 = (Class38.bufferIn.readByte(426620349) + 3) * -1985668988;
+            client.anInt3182 = -54082696;
          }
 
-         if(client.loginStep * -1250195825 == 8) {
+         if(client.anInt3182 * -1250195825 == 8) {
             client.anInt3148 = 0;
             Class7.method110(Class91.aString1083, Class91.aString1084, client.anInt2971 * -119005137 / 60 + Class91.aString1282, 1935975903);
             if((client.anInt2971 -= -534174001) * -119005137 <= 0) {
-               client.loginStep = 0;
+               client.anInt3182 = 0;
             }
 
          } else {
-            if(-1250195825 * client.loginStep == 9 && Class38.streamBuffer.readableBytes((byte) 32) >= 13) {
-               boolean authent = Class38.streamBuffer.readByte(-1774496701) == 1;
+            if(-1250195825 * client.anInt3182 == 9 && Class38.bufferIn.method1004((byte)32) >= 13) {
+               boolean authent = Class38.bufferIn.readByte(-1774496701) == 1;
                 System.out.println(authent);
-               Class38.streamBuffer.readBytes(client.packetBuffer.payload, 0, 4, 615894679);
-               client.packetBuffer.position = 0;
+               Class38.bufferIn.method1005(client.bitBuffer.payload, 0, 4, 615894679);
+               client.bitBuffer.position = 0;
+               boolean var14 = false;
                if(authent) {
-                  varStart = client.packetBuffer.method2955((byte)53) << 24;
-                  varStart |= client.packetBuffer.method2955((byte)69) << 16;
-                  varStart |= client.packetBuffer.method2955((byte)44) << 8;
-                  varStart |= client.packetBuffer.method2955((byte)75);
+                  varStart = client.bitBuffer.method2955((byte)53) << 24;
+                  varStart |= client.bitBuffer.method2955((byte)69) << 16;
+                  varStart |= client.bitBuffer.method2955((byte)44) << 8;
+                  varStart |= client.bitBuffer.method2955((byte)75);
                   xteaStart = Class103.method1450(Class6.username, -2034306732);
                   if(Class116_Sub5.aClass29_1727.aLinkedHashMap406.size() >= 10 && !Class116_Sub5.aClass29_1727.aLinkedHashMap406.containsKey(Integer.valueOf(xteaStart))) {
                      Iterator var18 = Class116_Sub5.aClass29_1727.aLinkedHashMap406.entrySet().iterator();
                      var18.next();
                      var18.remove();
                   }
+
                   Class116_Sub5.aClass29_1727.aLinkedHashMap406.put(Integer.valueOf(xteaStart), Integer.valueOf(varStart));
                   Class86.method1167((byte)-35);
                }
 
-                int rights, i2, index, index2, i3;
-                rights = Class38.streamBuffer.readByte(-1493228653);
-                i2 = Class38.streamBuffer.readByte(172572472);
-                index = Class38.streamBuffer.readByte(-265383719);
-                index2 = Class38.streamBuffer.readByte(414408423);
-                i3 = Class38.streamBuffer.readByte(246657997);
+                int rights, i2, index, index2, i5, i6, i7;
+                rights = Class38.bufferIn.readByte(-1493228653);
+                i2 = Class38.bufferIn.readByte(172572472);
+                index = Class38.bufferIn.readByte(-265383719);
+                index2 = Class38.bufferIn.readByte(414408423);
+                i5 = Class38.bufferIn.readByte(246657997);
 
                client.playerRights = rights * -753281333;
                client.aBool3147 = i2 == 1;
@@ -314,96 +315,103 @@ public class Class69 {
                client.playerIndex = -313169887 * (client.playerIndex * 1467227105 << 8);
                client.playerIndex += index2 * -313169887;
 
-               System.out.println("rights="+rights+", playerindex="+client.playerIndex * 1467227105+"["+i2+","+ index+","+index2+","+ i3+"]");
+                System.out.println("rights="+rights+", playerindex="+client.playerIndex * 1467227105+"["+i2+","+ index+","+index2+","+ i5+"]");
+               // System.out.println(Arrays.toString(client.bitBuffer.payload));
 
-               client.membership = i3 * 1163065535;
-               Class38.streamBuffer.readBytes(client.packetBuffer.payload, 0, 1, 615894679);
-               client.packetBuffer.position = 0;
-               client.currentOpcode = client.packetBuffer.method2955((byte)66);
+               client.membership = i5 * 1163065535;
+               Class38.bufferIn.method1005(client.bitBuffer.payload, 0, 1, 615894679);
+               client.bitBuffer.position = 0;
+               client.currentOpcode = client.bitBuffer.method2955((byte)66) * 726667601;
 
-               System.out.println(793368497 * client.currentOpcode+", should be 239");
-               Class38.streamBuffer.readBytes(client.packetBuffer.payload, 0, 2, 615894679);
-               client.packetBuffer.position = 0;
-               client.packetLength = client.packetBuffer.readUnsignedShort(1931864570) * 260863215;
-               client clientRef;
+               // System.out.println(793368497 * client.currentOpcode+", should be 239");//+ authent+"/"+client.bitBuffer.method2955((byte)66)+"/"+ client.bitBuffer.method2955((byte)66));
+               Class38.bufferIn.method1005(client.bitBuffer.payload, 0, 2, 615894679);
+               client.bitBuffer.position = 0;
+               client.anInt2980 = client.bitBuffer.readShort(1931864570) * 260863215;
+               client var16;
                if(1 == -905152705 * client.membership) {
                   try {
-                     clientRef = client.aclient2930;
-                     JSObject.getWindow(clientRef).call("zap", (Object[])null);
+                     var16 = client.aclient2930;
+                     JSObject.getWindow(var16).call("zap", (Object[])null);
                   } catch (Throwable var9) {
                      ;
                   }
                } else {
                   try {
-                     clientRef = client.aclient2930;
-                     JSObject.getWindow(clientRef).call("unzap", (Object[])null);
+                     var16 = client.aclient2930;
+                     JSObject.getWindow(var16).call("unzap", (Object[])null);
                   } catch (Throwable var8) {
                      ;
                   }
                }
 
-               client.loginStep = 2079880278;
+               client.anInt3182 = 2079880278;
             }
 
-            if(10 == client.loginStep * -1250195825) {
-               if(Class38.streamBuffer.readableBytes((byte) 61) >= client.packetLength * 371800591) {
-                  client.packetBuffer.position = 0;
+            if(10 == client.anInt3182 * -1250195825) {
+               if(Class38.bufferIn.method1004((byte)61) >= client.anInt2980 * 371800591) {
+                  client.bitBuffer.position = 0;
 
-                  Class38.streamBuffer.readBytes(client.packetBuffer.payload, 0, client.packetLength * 371800591, 615894679);
+                  Class38.bufferIn.method1005(client.bitBuffer.payload, 0, client.anInt2980 * 371800591, 615894679);
                   BuildType.method1175(-1633279152);
-                  Class116_Sub10.readPlayerHashLocations(client.packetBuffer, 443584860);
+                   //System.out.println( client.anInt2980 * 371800591+"POSB4 BITS" + (314639891 * client.bitBuffer.position));
+                   //System.out.println(Arrays.toString(client.bitBuffer.payload));
+                  Class116_Sub10.readPlayerHashLocations(client.bitBuffer, 443584860);
+                   //System.out.println("POSAFTER BITS" + (314639891 * client.bitBuffer.position));
+                   //System.out.println(Arrays.toString(client.bitBuffer.payload));
+
+                   //System.out.println(Arrays.toString(client.bitBuffer.payload));
                   Class22.anInt276 = -1071803165;
                   Class8.decodeMapRegion(false, (byte)41);
-                  client.currentOpcode = -1;
+                  client.currentOpcode = -726667601;
                }
 
             } else {
-               if(-1250195825 * client.loginStep == 11 && Class38.streamBuffer.readableBytes((byte) 45) >= 2) {
-                  client.packetBuffer.position = 0;
-                  Class38.streamBuffer.readBytes(client.packetBuffer.payload, 0, 2, 615894679);
-                  client.packetBuffer.position = 0;
-                   int i = client.packetBuffer.readUnsignedShort(1291579526);
+               if(-1250195825 * client.anInt3182 == 11 && Class38.bufferIn.method1004((byte)45) >= 2) {
+                  client.bitBuffer.position = 0;
+                  Class38.bufferIn.method1005(client.bitBuffer.payload, 0, 2, 615894679);
+                  client.bitBuffer.position = 0;
+                   int i = client.bitBuffer.readShort(1291579526);
                   Class38.anInt511 =  i* 542937605;
                    System.out.println("short after map");
 
-                  client.loginStep = -81124044;
+                  client.anInt3182 = -81124044;
                }
 
-               if(12 == -1250195825 * client.loginStep && Class38.streamBuffer.readableBytes((byte) 14) >= Class38.anInt511 * 1528130253) {
-                  client.packetBuffer.position = 0;
-                  Class38.streamBuffer.readBytes(client.packetBuffer.payload, 0, Class38.anInt511 * 1528130253, 615894679);
-                  client.packetBuffer.position = 0;
-                  String var15 = client.packetBuffer.readString(61376769);
-                  String var17 = client.packetBuffer.readString(61376769);
-                  String var19 = client.packetBuffer.readString(61376769);
+               if(12 == -1250195825 * client.anInt3182 && Class38.bufferIn.method1004((byte)14) >= Class38.anInt511 * 1528130253) {
+                  client.bitBuffer.position = 0;
+                  Class38.bufferIn.method1005(client.bitBuffer.payload, 0, Class38.anInt511 * 1528130253, 615894679);
+                  client.bitBuffer.position = 0;
+                  String var15 = client.bitBuffer.readString(61376769);
+                  String var17 = client.bitBuffer.readString(61376769);
+                  String var19 = client.bitBuffer.readString(61376769);
 
                    System.out.println("3 bytes after map/short "+var15+", "+var17+", "+var19);
                   Class7.method110(var15, var17, var19, 1935975903);
                   Class116_Sub12.method1983(10, (byte)60);
                }
 
-               if(-1250195825 * client.loginStep == 13) {
-                  if(-1 == 371800591 * client.packetLength) {
-                     if(Class38.streamBuffer.readableBytes((byte) -6) < 2) {
+               if(-1250195825 * client.anInt3182 == 13) {
+                  if(-1 == 371800591 * client.anInt2980) {
+                     if(Class38.bufferIn.method1004((byte)-6) < 2) {
                         return;
                      }
 
-                     Class38.streamBuffer.readBytes(client.packetBuffer.payload, 0, 2, 615894679);
-                     client.packetBuffer.position = 0;
-                      int i = client.packetBuffer.readUnsignedShort(2140060891);
-                     client.packetLength =  i* 260863215;
+                     Class38.bufferIn.method1005(client.bitBuffer.payload, 0, 2, 615894679);
+                     client.bitBuffer.position = 0;
+                      int i = client.bitBuffer.readShort(2140060891);
+                     client.anInt2980 =  i* 260863215;
                       System.out.println("short after map/short/strings "+i);
                   }
 
-                  if(Class38.streamBuffer.readableBytes((byte) -16) >= 371800591 * client.packetLength) {
-                     Class38.streamBuffer.readBytes(client.packetBuffer.payload, 0, client.packetLength * 371800591, 615894679);
-                     client.packetBuffer.position = 0;
-                     response = 371800591 * client.packetLength;
+                  if(Class38.bufferIn.method1004((byte)-16) >= 371800591 * client.anInt2980) {
+                     Class38.bufferIn.method1005(client.bitBuffer.payload, 0, client.anInt2980 * 371800591, 615894679);
+                     client.bitBuffer.position = 0;
+                     var1 = 371800591 * client.anInt2980;
                      Class45.method715(-1867435103);
-                     Class116_Sub10.readPlayerHashLocations(client.packetBuffer, 209548896);
+                     Class116_Sub10.readPlayerHashLocations(client.bitBuffer, 209548896);
 
                       System.out.println("reading player hashLocations after map???");
-                     if(response != client.packetBuffer.position * 314639891) {
+                     if(var1 != client.bitBuffer.position * 314639891) {
                         throw new RuntimeException();
                      }
                   }
@@ -418,7 +426,7 @@ public class Class69 {
                         }
 
                         client.anInt2978 += -260333731;
-                        client.loginStep = 0;
+                        client.anInt3182 = 0;
                      } else {
                         ObjectDefinition.method2434(-3, (byte) 1);
                      }
@@ -435,7 +443,7 @@ public class Class69 {
             }
 
             client.anInt2978 += -260333731;
-            client.loginStep = 0;
+            client.anInt3182 = 0;
          } else {
             ObjectDefinition.method2434(-2, (byte) 1);
          }

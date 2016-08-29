@@ -9,11 +9,11 @@ public class Class5 {
 
    static final void method50(int var0, int var1, int var2, int var3, int var4) {
       if(1 == client.anInt3046 * 2051359659) {
-         Class100.cross[client.anInt3045 * 179229491 / 100].drawSprite(1991936279 * client.anInt3043 - 8, -1888662593 * client.anInt3044 - 8);
+         Class100.aClass116_Sub23_Sub19_Sub2Array1402[client.anInt3045 * 179229491 / 100].drawSprite(1991936279 * client.anInt3043 - 8, -1888662593 * client.anInt3044 - 8);
       }
 
       if(2 == client.anInt3046 * 2051359659) {
-         Class100.cross[client.anInt3045 * 179229491 / 100 + 4].drawSprite(1991936279 * client.anInt3043 - 8, client.anInt3044 * -1888662593 - 8);
+         Class100.aClass116_Sub23_Sub19_Sub2Array1402[client.anInt3045 * 179229491 / 100 + 4].drawSprite(1991936279 * client.anInt3043 - 8, client.anInt3044 * -1888662593 - 8);
       }
 
       GameType.method1178(-2145792829);

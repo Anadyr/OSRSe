@@ -53,7 +53,7 @@ public class Class33 {
                   }
                }
 
-               Packet var28 = new Packet(var2);
+               Buffer var28 = new Buffer(var2);
                if(var28.payload.length - var28.position * 314639891 < 1) {
                   try {
                      var1.method1828(193698177);
@@ -75,23 +75,23 @@ public class Class33 {
                   return;
                }
 
-               int var6 = var28.readUnsignedShort(1284282166);
+               int var6 = var28.readShort(1284282166);
 
                int var7;
                int var8;
                int var9;
                for(var7 = 0; var7 < var6; ++var7) {
-                  var8 = var28.readUnsignedShort(334868697);
+                  var8 = var28.readShort(334868697);
                   var9 = var28.readInt(-1634556685);
                   if(this.aBoolArray450[var8]) {
                      this.anIntArray452[var8] = var9;
                   }
                }
 
-               var7 = var28.readUnsignedShort(1994003508);
+               var7 = var28.readShort(1994003508);
 
                for(var8 = 0; var8 < var7; ++var8) {
-                  var9 = var28.readUnsignedShort(-329666571);
+                  var9 = var28.readShort(-329666571);
                   String var10 = var28.readString(61376769);
                   if(this.aBoolArray451[var9]) {
                      this.aStringArray453[var9] = var10;
@@ -140,12 +140,12 @@ public class Class33 {
       return this.aStringArray453[var1];
    }
 
-   public static final void resetComponentAnimation(int var0, int var1) {
-      if(Class116_Sub23_Sub2.loadInterface(var0, -1006212225)) {
-         RSInterface[] var3 = RSInterface.mainInterfaceArray[var0];
+   static final void method605(int var0, int var1) {
+      if(Class116_Sub23_Sub2.method2377(var0, -1006212225)) {
+         Class116_Sub15[] var3 = Class116_Sub15.aClass116_Sub15ArrayArray1956[var0];
 
          for(int var4 = 0; var4 < var3.length; ++var4) {
-            RSInterface var2 = var3[var4];
+            Class116_Sub15 var2 = var3[var4];
             if(var2 != null) {
                var2.anInt2045 = 0;
                var2.anInt1919 = 0;
@@ -184,7 +184,7 @@ public class Class33 {
                   }
                }
 
-               Packet var21 = new Packet(var3);
+               Buffer var21 = new Buffer(var3);
                var21.writeByte(1, 785624943);
                var21.writeShort(var4, -1692652592);
 
@@ -241,7 +241,7 @@ public class Class33 {
       }
 
       this.aBool454 = false;
-      this.aLong455 = Class116_Sub5.generateHash(-1466167827) * -4897623063149766703L;
+      this.aLong455 = Class116_Sub5.method1929(-1466167827) * -4897623063149766703L;
    }
 
    void method607(int var1, int var2) {
@@ -270,7 +270,7 @@ public class Class33 {
                   }
                }
 
-               Packet var29 = new Packet(var3);
+               Buffer var29 = new Buffer(var3);
                if(var29.payload.length - var29.position * 314639891 < 1) {
                   try {
                      var2.method1828(-1085687152);
@@ -292,23 +292,23 @@ public class Class33 {
                   return;
                }
 
-               int var7 = var29.readUnsignedShort(259173383);
+               int var7 = var29.readShort(259173383);
 
                int var8;
                int var9;
                int var10;
                for(var8 = 0; var8 < var7; ++var8) {
-                  var9 = var29.readUnsignedShort(1535249708);
+                  var9 = var29.readShort(1535249708);
                   var10 = var29.readInt(-603405032);
                   if(this.aBoolArray450[var9]) {
                      this.anIntArray452[var9] = var10;
                   }
                }
 
-               var8 = var29.readUnsignedShort(1189476030);
+               var8 = var29.readShort(1189476030);
 
                for(var9 = 0; var9 < var8; ++var9) {
-                  var10 = var29.readUnsignedShort(1383807353);
+                  var10 = var29.readShort(1383807353);
                   String var11 = var29.readString(61376769);
                   if(this.aBoolArray451[var10]) {
                      this.aStringArray453[var10] = var11;
@@ -346,7 +346,7 @@ public class Class33 {
    }
 
    void method609(int var1) {
-      if(this.aBool454 && this.aLong455 * -2233906655684255439L < Class116_Sub5.generateHash(-989747377) - 60000L) {
+      if(this.aBool454 && this.aLong455 * -2233906655684255439L < Class116_Sub5.method1929(-989747377) - 60000L) {
          this.method606(635250554);
       }
 
@@ -405,7 +405,7 @@ public class Class33 {
    }
 
    void method618() {
-      if(this.aBool454 && this.aLong455 * -2233906655684255439L < Class116_Sub5.generateHash(-1903266206) - 60000L) {
+      if(this.aBool454 && this.aLong455 * -2233906655684255439L < Class116_Sub5.method1929(-1903266206) - 60000L) {
          this.method606(-1276450453);
       }
 
@@ -416,7 +416,7 @@ public class Class33 {
    }
 
    void method620() {
-      if(this.aBool454 && this.aLong455 * -2233906655684255439L < Class116_Sub5.generateHash(-85019628) - 60000L) {
+      if(this.aBool454 && this.aLong455 * -2233906655684255439L < Class116_Sub5.method1929(-85019628) - 60000L) {
          this.method606(-123233376);
       }
 
@@ -523,7 +523,7 @@ public class Class33 {
                   }
                }
 
-               Packet var20 = new Packet(var2);
+               Buffer var20 = new Buffer(var2);
                var20.writeByte(1, -129143148);
                var20.writeShort(var3, -1819058414);
 
@@ -580,7 +580,7 @@ public class Class33 {
       }
 
       this.aBool454 = false;
-      this.aLong455 = Class116_Sub5.generateHash(1955171302) * -4897623063149766703L;
+      this.aLong455 = Class116_Sub5.method1929(1955171302) * -4897623063149766703L;
    }
 
    void method628() {
@@ -612,7 +612,7 @@ public class Class33 {
                   }
                }
 
-               Packet var20 = new Packet(var2);
+               Buffer var20 = new Buffer(var2);
                var20.writeByte(1, 266376715);
                var20.writeShort(var3, -1822759654);
 
@@ -669,7 +669,7 @@ public class Class33 {
       }
 
       this.aBool454 = false;
-      this.aLong455 = Class116_Sub5.generateHash(-475100442) * -4897623063149766703L;
+      this.aLong455 = Class116_Sub5.method1929(-475100442) * -4897623063149766703L;
    }
 
    void method629() {
@@ -690,7 +690,7 @@ public class Class33 {
                   }
                }
 
-               Packet var28 = new Packet(var2);
+               Buffer var28 = new Buffer(var2);
                if(var28.payload.length - var28.position * 314639891 < 1) {
                   try {
                      var1.method1828(1793893390);
@@ -712,23 +712,23 @@ public class Class33 {
                   return;
                }
 
-               int var6 = var28.readUnsignedShort(905409244);
+               int var6 = var28.readShort(905409244);
 
                int var7;
                int var8;
                int var9;
                for(var7 = 0; var7 < var6; ++var7) {
-                  var8 = var28.readUnsignedShort(382483270);
+                  var8 = var28.readShort(382483270);
                   var9 = var28.readInt(-770912534);
                   if(this.aBoolArray450[var8]) {
                      this.anIntArray452[var8] = var9;
                   }
                }
 
-               var7 = var28.readUnsignedShort(1402405777);
+               var7 = var28.readShort(1402405777);
 
                for(var8 = 0; var8 < var7; ++var8) {
-                  var9 = var28.readUnsignedShort(1454846484);
+                  var9 = var28.readShort(1454846484);
                   String var10 = var28.readString(61376769);
                   if(this.aBoolArray451[var9]) {
                      this.aStringArray453[var9] = var10;
@@ -783,7 +783,7 @@ public class Class33 {
                   }
                }
 
-               Packet var28 = new Packet(var2);
+               Buffer var28 = new Buffer(var2);
                if(var28.payload.length - var28.position * 314639891 < 1) {
                   try {
                      var1.method1828(-723736808);
@@ -805,23 +805,23 @@ public class Class33 {
                   return;
                }
 
-               int var6 = var28.readUnsignedShort(114109441);
+               int var6 = var28.readShort(114109441);
 
                int var7;
                int var8;
                int var9;
                for(var7 = 0; var7 < var6; ++var7) {
-                  var8 = var28.readUnsignedShort(-331045130);
+                  var8 = var28.readShort(-331045130);
                   var9 = var28.readInt(-2092973103);
                   if(this.aBoolArray450[var8]) {
                      this.anIntArray452[var8] = var9;
                   }
                }
 
-               var7 = var28.readUnsignedShort(-389037227);
+               var7 = var28.readShort(-389037227);
 
                for(var8 = 0; var8 < var7; ++var8) {
-                  var9 = var28.readUnsignedShort(783640965);
+                  var9 = var28.readShort(783640965);
                   String var10 = var28.readString(61376769);
                   if(this.aBoolArray451[var9]) {
                      this.aStringArray453[var9] = var10;
@@ -863,8 +863,8 @@ public class Class33 {
    }
 
    Class33() {
-      this.anIntArray452 = new int[client.aCacheIndex_3054.method1361(19, -824500445)];
-      this.aStringArray453 = new String[client.aCacheIndex_3054.method1361(15, -824500445)];
+      this.anIntArray452 = new int[client.aClass99_Sub1_3054.method1361(19, -824500445)];
+      this.aStringArray453 = new String[client.aClass99_Sub1_3054.method1361(15, -824500445)];
       this.aBoolArray450 = new boolean[this.anIntArray452.length];
 
       int var1;
@@ -888,7 +888,7 @@ public class Class33 {
    }
 
    void method632() {
-      if(this.aBool454 && this.aLong455 * -2233906655684255439L < Class116_Sub5.generateHash(-1468140973) - 60000L) {
+      if(this.aBool454 && this.aLong455 * -2233906655684255439L < Class116_Sub5.method1929(-1468140973) - 60000L) {
          this.method606(-1172141498);
       }
 
@@ -952,64 +952,64 @@ public class Class33 {
 
    }
 
-   static void method638(RSInterface var0, int var1, int var2, boolean var3, int var4) {
-      int var5 = 1645211541 * var0.wdth;
-      int var7 = var0.heght * 1227800423;
+   static void method638(Class116_Sub15 var0, int var1, int var2, boolean var3, int var4) {
+      int var5 = 1645211541 * var0.anInt1940;
+      int var7 = var0.anInt1974 * 1227800423;
       if(0 == -1693000097 * var0.anInt1932) {
-         var0.wdth = var0.width * -1435301567;
+         var0.anInt1940 = var0.anInt1936 * -1435301567;
       } else if(-1693000097 * var0.anInt1932 == 1) {
-         var0.wdth = (var1 - var0.width * 124195285) * 786424765;
+         var0.anInt1940 = (var1 - var0.anInt1936 * 124195285) * 786424765;
       } else if(-1693000097 * var0.anInt1932 == 2) {
-         var0.wdth = 786424765 * (124195285 * var0.width * var1 >> 14);
+         var0.anInt1940 = 786424765 * (124195285 * var0.anInt1936 * var1 >> 14);
       }
 
       if(var0.anInt1933 * 1039689039 == 0) {
-         var0.heght = var0.height * -773929259;
+         var0.anInt1974 = var0.anInt1937 * -773929259;
       } else if(var0.anInt1933 * 1039689039 == 1) {
-         var0.heght = (var2 - 507570867 * var0.height) * -1446581161;
+         var0.anInt1974 = (var2 - 507570867 * var0.anInt1937) * -1446581161;
       } else if(1039689039 * var0.anInt1933 == 2) {
-         var0.heght = -1446581161 * (var2 * 507570867 * var0.height >> 14);
+         var0.anInt1974 = -1446581161 * (var2 * 507570867 * var0.anInt1937 >> 14);
       }
 
       if(var0.anInt1932 * -1693000097 == 4) {
-         var0.wdth = 786424765 * (-1440091941 * var0.anInt2041 * 1227800423 * var0.heght / (var0.anInt1976 * 1321191429));
+         var0.anInt1940 = 786424765 * (-1440091941 * var0.anInt2041 * 1227800423 * var0.anInt1974 / (var0.anInt1976 * 1321191429));
       }
 
       if(var0.anInt1933 * 1039689039 == 4) {
-         var0.heght = var0.wdth * 1645211541 * var0.anInt1976 * 1321191429 / (-1440091941 * var0.anInt2041) * -1446581161;
+         var0.anInt1974 = var0.anInt1940 * 1645211541 * var0.anInt1976 * 1321191429 / (-1440091941 * var0.anInt2041) * -1446581161;
       }
 
-      if(client.aBool2957 && 0 == var0.type * -1305917269) {
-         if(var0.heght * 1227800423 < 5 && 1645211541 * var0.wdth < 5) {
-            var0.heght = 1357028787;
-            var0.wdth = -362843471;
+      if(client.aBool2957 && 0 == var0.anInt2018 * -1305917269) {
+         if(var0.anInt1974 * 1227800423 < 5 && 1645211541 * var0.anInt1940 < 5) {
+            var0.anInt1974 = 1357028787;
+            var0.anInt1940 = -362843471;
          } else {
-            if(var0.heght * 1227800423 <= 0) {
-               var0.heght = 1357028787;
+            if(var0.anInt1974 * 1227800423 <= 0) {
+               var0.anInt1974 = 1357028787;
             }
 
-            if(var0.wdth * 1645211541 <= 0) {
-               var0.wdth = -362843471;
+            if(var0.anInt1940 * 1645211541 <= 0) {
+               var0.anInt1940 = -362843471;
             }
          }
       }
 
-      if(1337 == -179718399 * var0.clientCode) {
+      if(1337 == -179718399 * var0.anInt2016) {
          client.aClass116_Sub15_3210 = var0;
       }
 
-      if(var3 && var0.anObjectArray2032 != null && (var5 != 1645211541 * var0.wdth || 1227800423 * var0.heght != var7)) {
+      if(var3 && var0.anObjectArray2032 != null && (var5 != 1645211541 * var0.anInt1940 || 1227800423 * var0.anInt1974 != var7)) {
          Class116_Sub6 var6 = new Class116_Sub6();
          var6.aClass116_Sub15_1736 = var0;
          var6.anObjectArray1737 = var0.anObjectArray2032;
-         client.aClass117_3132.addLast(var6);
+         client.aClass117_3132.method1571(var6);
       }
 
    }
 
    static final void method639(int var0) {
-      for(Class116_Sub23_Sub16_Sub5 var1 = (Class116_Sub23_Sub16_Sub5)client.aClass117_3028.getFirst(); var1 != null; var1 = (Class116_Sub23_Sub16_Sub5)client.aClass117_3028.getNext()) {
-         if(var1.anInt2733 * -2138425693 == -747958745 * GameInterface.anInt1819 && -1040073859 * client.anInt2943 <= var1.anInt2739 * -2082473613) {
+      for(Class116_Sub23_Sub16_Sub5 var1 = (Class116_Sub23_Sub16_Sub5)client.aClass117_3028.method1551(); var1 != null; var1 = (Class116_Sub23_Sub16_Sub5)client.aClass117_3028.method1553()) {
+         if(var1.anInt2733 * -2138425693 == -747958745 * Class116_Sub11.anInt1819 && -1040073859 * client.anInt2943 <= var1.anInt2739 * -2082473613) {
             if(client.anInt2943 * -1040073859 >= 826970615 * var1.anInt2738) {
                if(846206463 * var1.anInt2742 > 0) {
                   Mob var2 = client.aMobArray2972[846206463 * var1.anInt2742 - 1];
@@ -1022,7 +1022,7 @@ public class Class33 {
                   int var3 = -(var1.anInt2742 * 846206463) - 1;
                   Player var4;
                   if(var3 == client.playerIndex * 1467227105) {
-                     var4 = Class79.ourPlayer;
+                     var4 = Class79.aPlayer_909;
                   } else {
                      var4 = client.globalPlayers[var3];
                   }
@@ -1033,7 +1033,7 @@ public class Class33 {
                }
 
                var1.method3344(-1163930299 * client.anInt3012, -848428919);
-               GameInterface.region.method356(-747958745 * GameInterface.anInt1819, (int)var1.aDouble2744, (int)var1.aDouble2745, (int)var1.aDouble2732, 60, var1, var1.anInt2746 * 1329670755, -1, false);
+               Class116_Sub11.groundItemController.method356(-747958745 * Class116_Sub11.anInt1819, (int)var1.aDouble2744, (int)var1.aDouble2745, (int)var1.aDouble2732, 60, var1, var1.anInt2746 * 1329670755, -1, false);
             }
          } else {
             var1.unlink();

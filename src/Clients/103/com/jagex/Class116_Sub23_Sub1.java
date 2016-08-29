@@ -7,13 +7,13 @@ import java.awt.Insets;
 public class Class116_Sub23_Sub1 extends NodeContainer {
 
    public static final int anInt2155 = 2;
-   public static RSIndex aRSIndex_2156;
+   public static Class99 aClass99_2156;
    public int anInt2157 = 1973532945;
    static Class123 aClass123_2158 = new Class123(30);
    int anInt2159;
    int anInt2160;
    static Class123 aClass123_2161 = new Class123(64);
-   static RSInterface aClass116_Sub15_2162;
+   static Class116_Sub15 aClass116_Sub15_2162;
    int anInt2163 = 0;
    short[] aShortArray2164;
    short[] aShortArray2165;
@@ -23,9 +23,9 @@ public class Class116_Sub23_Sub1 extends NodeContainer {
    int anInt2169 = 0;
    short[] aShortArray2170;
    int anInt2172 = -1396281216;
-   public static RSIndex aRSIndex_2174;
+   public static Class99 aClass99_2174;
 
-   void method2342(Packet var1, int var2) {
+   void method2342(Buffer var1, int var2) {
       while(true) {
          int var3 = var1.readSignedByte(1708176767);
          if(0 == var3) {
@@ -39,7 +39,7 @@ public class Class116_Sub23_Sub1 extends NodeContainer {
    public final SpotAnim method2344(int var1, int var2) {
       SpotAnim var3 = (SpotAnim)aClass123_2158.method1632((long)(this.anInt2159 * 189082171));
       if(null == var3) {
-         Model var4 = Model.method3114(aRSIndex_2156, this.anInt2160 * 1407877429, 0);
+         Model var4 = Model.method3114(aClass99_2156, this.anInt2160 * 1407877429, 0);
          if(null == var4) {
             return null;
          }
@@ -92,15 +92,15 @@ public class Class116_Sub23_Sub1 extends NodeContainer {
       return var6;
    }
 
-   void method2346(Packet var1, int var2, int var3) {
+   void method2346(Buffer var1, int var2, int var3) {
       if(var2 == 1) {
-         this.anInt2160 = var1.readUnsignedShort(831485460) * -2057139939;
+         this.anInt2160 = var1.readShort(831485460) * -2057139939;
       } else if(var2 == 2) {
-         this.anInt2157 = var1.readUnsignedShort(-205103059) * -1973532945;
+         this.anInt2157 = var1.readShort(-205103059) * -1973532945;
       } else if(4 == var2) {
-         this.anInt2166 = var1.readUnsignedShort(389634248) * -1359546525;
+         this.anInt2166 = var1.readShort(389634248) * -1359546525;
       } else if(var2 == 5) {
-         this.anInt2172 = var1.readUnsignedShort(639498483) * 895061217;
+         this.anInt2172 = var1.readShort(639498483) * 895061217;
       } else if(6 != var2) {
          if(var2 == 7) {
             this.anInt2169 = var1.readSignedByte(1708176767) * 59767221;
@@ -115,8 +115,8 @@ public class Class116_Sub23_Sub1 extends NodeContainer {
                this.aShortArray2167 = new short[var5];
 
                for(var4 = 0; var4 < var5; ++var4) {
-                  this.aShortArray2170[var4] = (short)var1.readUnsignedShort(476252632);
-                  this.aShortArray2167[var4] = (short)var1.readUnsignedShort(1650111450);
+                  this.aShortArray2170[var4] = (short)var1.readShort(476252632);
+                  this.aShortArray2167[var4] = (short)var1.readShort(1650111450);
                }
             } else if(var2 == 41) {
                var5 = var1.readSignedByte(1708176767);
@@ -124,13 +124,13 @@ public class Class116_Sub23_Sub1 extends NodeContainer {
                this.aShortArray2165 = new short[var5];
 
                for(var4 = 0; var4 < var5; ++var4) {
-                  this.aShortArray2164[var4] = (short)var1.readUnsignedShort(849218795);
-                  this.aShortArray2165[var4] = (short)var1.readUnsignedShort(1985930070);
+                  this.aShortArray2164[var4] = (short)var1.readShort(849218795);
+                  this.aShortArray2165[var4] = (short)var1.readShort(1985930070);
                }
             }
          }
       } else {
-         this.anInt2168 = var1.readUnsignedShort(1539792688) * 1160504335;
+         this.anInt2168 = var1.readShort(1539792688) * 1160504335;
       }
 
    }
@@ -140,11 +140,11 @@ public class Class116_Sub23_Sub1 extends NodeContainer {
       if(var1 != null) {
          return var1;
       } else {
-         byte[] var2 = aRSIndex_2174.getFiles(13, var0, 1102344109);
+         byte[] var2 = aClass99_2174.method1394(13, var0, 1102344109);
          var1 = new Class116_Sub23_Sub1();
          var1.anInt2159 = var0 * -892199181;
          if(null != var2) {
-            var1.method2342(new Packet(var2), 16488948);
+            var1.method2342(new Buffer(var2), 16488948);
          }
 
          aClass123_2161.method1633(var1, (long)var0);

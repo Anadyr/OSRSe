@@ -9,7 +9,7 @@ public class Class104 {
    public static short[] aShortArray1430 = new short[]{(short)6798, (short)8741, (short)25238, (short)4626, (short)4550};
 
    static void method1455(int var0) {
-      Class116_Sub10.aHashtable_1803 = new Hashtable(32);
+      Class116_Sub10.aClass127_1803 = new Class127(32);
    }
 
 }

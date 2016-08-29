@@ -14,7 +14,7 @@ public class Class9 {
    int[] anIntArray138;
    Class116_Sub4 aClass116_Sub4_139;
    long aLong140 = 0L;
-   long aLong141 = Class116_Sub5.generateHash(1970418178) * 7521534040423978303L;
+   long aLong141 = Class116_Sub5.method1929(1970418178) * 7521534040423978303L;
    int anInt142;
    int anInt143;
    public static boolean aBool144;
@@ -43,7 +43,7 @@ public class Class9 {
          var3.write("data1=req");
          var3.flush();
          InputStream var4 = var2.getInputStream();
-         Packet var5 = new Packet(new byte[1000]);
+         Buffer var5 = new Buffer(new byte[1000]);
 
          do {
             int var6 = var4.read(var5.payload, var5.position * 314639891, 1000 - 314639891 * var5.position);
@@ -64,7 +64,7 @@ public class Class9 {
 
    public final synchronized void method146(int var1) {
       if(null != this.anIntArray138) {
-         long var2 = Class116_Sub5.generateHash(682131189);
+         long var2 = Class116_Sub5.method1929(682131189);
 
          try {
             if(this.aLong145 * 4278827202856281897L != 0L) {
@@ -156,7 +156,7 @@ public class Class9 {
          this.method144();
       } catch (Exception var3) {
          this.method167();
-         this.aLong145 = (Class116_Sub5.generateHash(833067196) + 2000L) * 6964159870914700569L;
+         this.aLong145 = (Class116_Sub5.method1929(833067196) + 2000L) * 6964159870914700569L;
       }
 
    }
@@ -179,7 +179,7 @@ public class Class9 {
             aClass20_133.aBool259 = true;
 
             while(aClass20_133.aBool260) {
-               Friend.sleep(50L);
+               Friend.method1836(50L);
             }
 
             aClass20_133 = null;
@@ -337,7 +337,7 @@ public class Class9 {
          this.aClass116_Sub4_139.method1919(var1, 0, var2);
       }
 
-      this.aLong141 = Class116_Sub5.generateHash(495499856) * 7521534040423978303L;
+      this.aLong141 = Class116_Sub5.method1929(495499856) * 7521534040423978303L;
    }
 
    public static Class116_Sub23_Sub12 method193(int var0, byte var1) {
@@ -345,10 +345,10 @@ public class Class9 {
       if(null != var2) {
          return var2;
       } else {
-         byte[] var3 = Class116_Sub23_Sub12.aRSIndex_2416.getFiles(4, var0, 94600076);
+         byte[] var3 = Class116_Sub23_Sub12.aClass99_2416.method1394(4, var0, 94600076);
          var2 = new Class116_Sub23_Sub12();
          if(var3 != null) {
-            var2.method2641(new Packet(var3), var0, 1411287245);
+            var2.method2641(new Buffer(var3), var0, 1411287245);
          }
 
          var2.method2645(1885470859);
@@ -358,11 +358,11 @@ public class Class9 {
    }
 
    static void method194(int var0, int var1, int var2, int var3, byte var4) {
-      RSInterface var5 = AbstractRSDrawing.method339(var0, var1, -218126302);
-      if(null != var5 && null != var5.spellUsedOnItemListener) {
+      Class116_Sub15 var5 = AbstractRSDrawing.method339(var0, var1, -218126302);
+      if(null != var5 && null != var5.anObjectArray1927) {
          Class116_Sub6 var6 = new Class116_Sub6();
          var6.aClass116_Sub15_1736 = var5;
-         var6.anObjectArray1737 = var5.spellUsedOnItemListener;
+         var6.anObjectArray1737 = var5.anObjectArray1927;
          Friend.method1840(var6, -2031366285);
       }
 
@@ -371,6 +371,6 @@ public class Class9 {
       Class116_Sub23_Sub4.anInt2262 = var0 * -222991695;
       client.anInt3089 = 1188249893 * var1;
       Class38.anInt500 = -1648414847 * var2;
-      Class79.refreshInterface(var5, 1261856885);
+      Class79.method1097(var5, 1261856885);
    }
 }

@@ -12,7 +12,7 @@ public class Class108 {
    long aLong1467;
    static int[] anIntArray1468 = new int[]{8, 11, 4, 6, 9, 7, 10};
    int[] anIntArray1469;
-   static CacheIndex aCacheIndex_1471;
+   static Class99_Sub1 aClass99_Sub1_1471;
 
    public void method1468(int[] var1, int[] var2, boolean var3, int var4, int var5) {
       if(null == var1) {
@@ -93,7 +93,7 @@ public class Class108 {
       }
    }
 
-   public void method1472(Packet var1, int var2) {
+   public void method1472(Buffer var1, int var2) {
       var1.writeByte(this.aBool1464?1:0, -1729339571);
 
       int var4;
@@ -153,7 +153,7 @@ public class Class108 {
 
    public SpotAnim method1474(Class116_Sub23_Sub4 var1, int var2, Class116_Sub23_Sub4 var3, int var4, int var5) {
       if(-1 != -84158433 * this.anInt1466) {
-         return Class116_Sub23_Sub15.getMobDefinition(-84158433 * this.anInt1466, -1807583090).method2544(var1, var2, var3, var4, (byte)71);
+         return Class116_Sub23_Sub15.method2705(-84158433 * this.anInt1466, -1807583090).method2544(var1, var2, var3, var4, (byte)71);
       } else {
          long var9 = this.aLong1467 * -7792981304576825055L;
          int[] var6 = this.anIntArray1469;
@@ -186,7 +186,7 @@ public class Class108 {
                   var13 = true;
                }
 
-               if(var12 >= 512 && !RelationList.method778(var12 - 512, (byte) 70).method2595(this.aBool1464, -1022867603)) {
+               if(var12 >= 512 && !Class50.method778(var12 - 512, (byte)70).method2595(this.aBool1464, -1022867603)) {
                   var13 = true;
                }
             }
@@ -217,7 +217,7 @@ public class Class108 {
                   }
 
                   if(var11 >= 512) {
-                     var15 = RelationList.method778(var11 - 512, (byte) 70).method2596(this.aBool1464, 738113117);
+                     var15 = Class50.method778(var11 - 512, (byte)70).method2596(this.aBool1464, 738113117);
                      if(var15 != null) {
                         var19[var12++] = var15;
                      }
@@ -260,12 +260,12 @@ public class Class108 {
    }
 
    public int method1475(int var1) {
-      return -1 != this.anInt1466 * -84158433?305419896 + Class116_Sub23_Sub15.getMobDefinition(-84158433 * this.anInt1466, -1073521452).anInt2308 * -2095462435:(this.anIntArray1469[11] << 5) + (this.anIntArray1461[0] << 25) + (this.anIntArray1461[4] << 20) + (this.anIntArray1469[0] << 15) + (this.anIntArray1469[8] << 10) + this.anIntArray1469[1];
+      return -1 != this.anInt1466 * -84158433?305419896 + Class116_Sub23_Sub15.method2705(-84158433 * this.anInt1466, -1073521452).anInt2308 * -2095462435:(this.anIntArray1469[11] << 5) + (this.anIntArray1461[0] << 25) + (this.anIntArray1461[4] << 20) + (this.anIntArray1469[0] << 15) + (this.anIntArray1469[8] << 10) + this.anIntArray1469[1];
    }
 
    Model method1494(int var1) {
       if(-1 != this.anInt1466 * -84158433) {
-         return Class116_Sub23_Sub15.getMobDefinition(this.anInt1466 * -84158433, -127382149).method2545((byte)37);
+         return Class116_Sub23_Sub15.method2705(this.anInt1466 * -84158433, -127382149).method2545((byte)37);
       } else {
          boolean var5 = false;
 
@@ -276,7 +276,7 @@ public class Class108 {
                var5 = true;
             }
 
-            if(var4 >= 512 && !RelationList.method778(var4 - 512, (byte) 70).method2597(this.aBool1464, 1471416339)) {
+            if(var4 >= 512 && !Class50.method778(var4 - 512, (byte)70).method2597(this.aBool1464, 1471416339)) {
                var5 = true;
             }
          }
@@ -299,7 +299,7 @@ public class Class108 {
                }
 
                if(var3 >= 512) {
-                  var7 = RelationList.method778(var3 - 512, (byte) 70).method2624(this.aBool1464, -1241330286);
+                  var7 = Class50.method778(var3 - 512, (byte)70).method2624(this.aBool1464, -1241330286);
                   if(null != var7) {
                      var8[var4++] = var7;
                   }
@@ -323,8 +323,8 @@ public class Class108 {
       }
    }
 
-   public static void method1505(RSIndex var0, String var1, String var2, int var3, boolean var4, int var5) {
-      int var6 = var0.getFileIdForName(var1, -1747202576);
+   public static void method1505(Class99 var0, String var1, String var2, int var3, boolean var4, int var5) {
+      int var6 = var0.method1366(var1, -1747202576);
       int var7 = var0.method1367(var6, var2, 1921182125);
       Class80.method1099(var0, var6, var7, var3, var4, (short)18525);
    }

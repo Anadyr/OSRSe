@@ -1,17 +1,16 @@
 package com.jagex;
-import javax.swing.*;
 import java.awt.Frame;
 
 public class Class116_Sub23_Sub13 extends NodeContainer {
 
    static Class123 aClass123_2420 = new Class123(64);
    public boolean aBool2421 = false;
-   static RSIndex aRSIndex_2423;
-   static CacheIndex aCacheIndex_2424;
-   public static JPanel aFrame2425;
+   static Class99 aClass99_2423;
+   static Class99_Sub1 aClass99_Sub1_2424;
+   public static Frame aFrame2425;
 
 
-   void method2657(Packet var1, byte var2) {
+   void method2657(Buffer var1, byte var2) {
       while(true) {
          int var3 = var1.readSignedByte(1708176767);
          if(var3 == 0) {
@@ -22,7 +21,7 @@ public class Class116_Sub23_Sub13 extends NodeContainer {
       }
    }
 
-   void method2658(Packet var1, int var2, int var3) {
+   void method2658(Buffer var1, int var2, int var3) {
       if(2 == var2) {
          this.aBool2421 = true;
       }
@@ -33,7 +32,7 @@ public class Class116_Sub23_Sub13 extends NodeContainer {
       return (Class85.anInt986 += 673144361) * 932126233 - 1;
    }
 
-   static int readSkip(PacketBuilder buffer, int var1) {
+   static int readSkip(BitBuffer buffer, int var1) {
       int type = buffer.readBits(2, (byte) -1);
       int skip;
       if(type == 0) {

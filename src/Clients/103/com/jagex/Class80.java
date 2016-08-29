@@ -8,9 +8,9 @@ public class Class80 {
       throw new Error();
    }
 
-   public static void method1099(RSIndex var0, int var1, int var2, int var3, boolean var4, short var5) {
+   public static void method1099(Class99 var0, int var1, int var2, int var3, boolean var4, short var5) {
       Class128.anInt1574 = 325298615;
-      Class128.aRSIndex_1575 = var0;
+      Class128.aClass99_1575 = var0;
       Class112.anInt1485 = 18032949 * var1;
       Class129.anInt1581 = -832158449 * var2;
       Class128.anInt1579 = var3 * 827167249;
@@ -22,7 +22,7 @@ public class Class80 {
       int var3;
       Class116_Sub23_Sub4 var12;
       if(-2112283241 * var0.anInt2599 > -1040073859 * client.anInt2943) {
-         RelationList.method775(var0, 1070672258);
+         Class50.method775(var0, 1070672258);
       } else {
          int var5;
          int var6;
@@ -32,10 +32,10 @@ public class Class80 {
             if(-1158366777 * var0.anInt2624 == client.anInt2943 * -1040073859 || -1 == var0.anInt2587 * -922607859 || 0 != 1301453073 * var0.anInt2612 || var0.anInt2611 * -1968895439 + 1 > Class116_Sub8.method1946(var0.anInt2587 * -922607859, -763165684).anIntArray2255[1402685833 * var0.anInt2610]) {
                var3 = var0.anInt2624 * -1158366777 - var0.anInt2599 * -2112283241;
                var5 = -1040073859 * client.anInt2943 - -2112283241 * var0.anInt2599;
-               var7 = -2013728192 * var0.tileSize + -777033600 * var0.forceMovex1;
-               var8 = 20962432 * var0.forceMovey1 + var0.tileSize * -2013728192;
-               int var4 = -1235303552 * var0.forceMovex2 + -2013728192 * var0.tileSize;
-               var6 = -2013728192 * var0.tileSize + var0.forceMovey2 * 2137051008;
+               var7 = -2013728192 * var0.anInt2582 + -777033600 * var0.anInt2632;
+               var8 = 20962432 * var0.anInt2621 + var0.anInt2582 * -2013728192;
+               int var4 = -1235303552 * var0.anInt2620 + -2013728192 * var0.anInt2582;
+               var6 = -2013728192 * var0.anInt2582 + var0.anInt2594 * 2137051008;
                var0.anInt2609 = (var4 * var5 + var7 * (var3 - var5)) / var3 * 1705682711;
                var0.anInt2579 = (var6 * var5 + var8 * (var3 - var5)) / var3 * 1421914369;
             }
@@ -64,8 +64,8 @@ public class Class80 {
 
                   var3 = var0.anInt2609 * 1272643751;
                   var5 = -1801433343 * var0.anInt2579;
-                  var7 = var0.tileSize * -2013728192 + var0.xMovementSteps[632093179 * var0.anInt2578 - 1] * 128;
-                  var8 = -2013728192 * var0.tileSize + var0.yMovementSteps[632093179 * var0.anInt2578 - 1] * 128;
+                  var7 = var0.anInt2582 * -2013728192 + var0.xMovementSteps[632093179 * var0.anInt2578 - 1] * 128;
+                  var8 = -2013728192 * var0.anInt2582 + var0.yMovementSteps[632093179 * var0.anInt2578 - 1] * 128;
                   if(var3 < var7) {
                      if(var5 < var8) {
                         var0.anInt2631 = -2129414400;
@@ -202,21 +202,21 @@ public class Class80 {
 
       if(var0.anInt2609 * 1272643751 < 128 || var0.anInt2579 * -1801433343 < 128 || 1272643751 * var0.anInt2609 >= 13184 || -1801433343 * var0.anInt2579 >= 13184) {
          var0.anInt2587 = 1587034171;
-         var0.currentGraphic = 1738418729;
+         var0.anInt2614 = 1738418729;
          var0.anInt2599 = 0;
          var0.anInt2624 = 0;
-         var0.anInt2609 = var0.tileSize * -1142586432 + var0.xMovementSteps[0] * -715945088;
-         var0.anInt2579 = var0.yMovementSteps[0] * 1616412800 + 1467429440 * var0.tileSize;
+         var0.anInt2609 = var0.anInt2582 * -1142586432 + var0.xMovementSteps[0] * -715945088;
+         var0.anInt2579 = var0.yMovementSteps[0] * 1616412800 + 1467429440 * var0.anInt2582;
          var0.method3100(570264187);
       }
 
-      if(var0 == Class79.ourPlayer && (var0.anInt2609 * 1272643751 < 1536 || var0.anInt2579 * -1801433343 < 1536 || 1272643751 * var0.anInt2609 >= 11776 || -1801433343 * var0.anInt2579 >= 11776)) {
+      if(var0 == Class79.aPlayer_909 && (var0.anInt2609 * 1272643751 < 1536 || var0.anInt2579 * -1801433343 < 1536 || 1272643751 * var0.anInt2609 >= 11776 || -1801433343 * var0.anInt2579 >= 11776)) {
          var0.anInt2587 = 1587034171;
-         var0.currentGraphic = 1738418729;
+         var0.anInt2614 = 1738418729;
          var0.anInt2599 = 0;
          var0.anInt2624 = 0;
-         var0.anInt2609 = var0.xMovementSteps[0] * -715945088 + -1142586432 * var0.tileSize;
-         var0.anInt2579 = var0.yMovementSteps[0] * 1616412800 + 1467429440 * var0.tileSize;
+         var0.anInt2609 = var0.xMovementSteps[0] * -715945088 + -1142586432 * var0.anInt2582;
+         var0.anInt2579 = var0.yMovementSteps[0] * 1616412800 + 1467429440 * var0.anInt2582;
          var0.method3100(-408560841);
       }
 
@@ -242,12 +242,12 @@ public class Class80 {
          }
       }
 
-      if(var0.currentGraphic * 1631645159 != -1 && -1040073859 * client.anInt2943 >= var0.currentGraphicHeight * 489022907) {
+      if(var0.anInt2614 * 1631645159 != -1 && -1040073859 * client.anInt2943 >= var0.anInt2617 * 489022907) {
          if(-1255206495 * var0.anInt2595 < 0) {
             var0.anInt2595 = 0;
          }
 
-         var3 = Friend.method1835(1631645159 * var0.currentGraphic, (byte) 1).anInt2157 * -521951217;
+         var3 = Friend.method1835(1631645159 * var0.anInt2614, (byte) 1).anInt2157 * -521951217;
          if(-1 != var3) {
             Class116_Sub23_Sub4 var14 = Class116_Sub8.method1946(var3, -665663329);
             if(null != var14 && var14.anIntArray2247 != null) {
@@ -259,13 +259,13 @@ public class Class80 {
                }
 
                if(-1255206495 * var0.anInt2595 >= var14.anIntArray2247.length && (var0.anInt2595 * -1255206495 < 0 || -1255206495 * var0.anInt2595 >= var14.anIntArray2247.length)) {
-                  var0.currentGraphic = 1738418729;
+                  var0.anInt2614 = 1738418729;
                }
             } else {
-               var0.currentGraphic = 1738418729;
+               var0.anInt2614 = 1738418729;
             }
          } else {
-            var0.currentGraphic = 1738418729;
+            var0.anInt2614 = 1738418729;
          }
       }
 

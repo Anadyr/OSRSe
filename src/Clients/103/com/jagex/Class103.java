@@ -15,10 +15,10 @@ public final class Class103 {
    public static Class116_Sub23_Sub6 method1448(int var0, int var1) {
       Class116_Sub23_Sub6 var2 = (Class116_Sub23_Sub6)Class116_Sub23_Sub6.aClass123_2277.method1632((long)var0);
       if(null == var2) {
-         byte[] var3 = Class130.aRSIndex_1584.getFiles(5, var0, -763973017);
+         byte[] var3 = Class130.aClass99_1584.method1394(5, var0, -763973017);
          var2 = new Class116_Sub23_Sub6();
          if(var3 != null) {
-            var2.method2494(new Packet(var3), 1187466907);
+            var2.method2494(new Buffer(var3), 1187466907);
          }
 
          Class116_Sub23_Sub6.aClass123_2277.method1633(var2, (long)var0);
@@ -40,20 +40,20 @@ public final class Class103 {
    }
 
    public static int method1451(int var0, int var1) {
-      Class116_Sub23_Sub14 var2 = CacheIndex.method2226(var0, (byte) -97);
+      Class116_Sub23_Sub14 var2 = Class99_Sub1.method2226(var0, (byte)-97);
       int var5 = var2.anInt2429 * 12908597;
       int var4 = var2.anInt2427 * -585070571;
       int var3 = 984543857 * var2.anInt2436;
       int var6 = Class107.anIntArray1455[var3 - var4];
-      return Class107.varpData[var5] >> var4 & var6;
+      return Class107.anIntArray1459[var5] >> var4 & var6;
    }
 
-   public static void method1453(int var0, RSIndex var1, String var2, String var3, int var4, boolean var5, byte var6) {
-      int id = var1.getFileIdForName(var2, 53507744);
-      int var8 = var1.method1367(id, var3, 2037906143);
+   public static void method1453(int var0, Class99 var1, String var2, String var3, int var4, boolean var5, byte var6) {
+      int var7 = var1.method1366(var2, 53507744);
+      int var8 = var1.method1367(var7, var3, 2037906143);
       Class128.anInt1574 = 325298615;
-      Class128.aRSIndex_1575 = var1;
-      Class112.anInt1485 = 18032949 * id;
+      Class128.aClass99_1575 = var1;
+      Class112.anInt1485 = 18032949 * var7;
       Class129.anInt1581 = -832158449 * var8;
       Class128.anInt1579 = 827167249 * var4;
       Class55.aBool715 = var5;

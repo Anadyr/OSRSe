@@ -11,7 +11,7 @@ public class Class122 {
    public static Class122 aClass122_1535 = new Class122("12", "12");
    public static Class122 aClass122_1536 = new Class122("2", "2");
    public static Class122 aClass122_1537 = new Class122("4", "4");
-   static Sprite[] mapDots;
+   static Sprite[] aClass116_Sub23_Sub19_Sub2Array1538;
    public static Class122 aClass122_1539 = new Class122("13", "13");
    public static Class122 aClass122_1540 = new Class122("1", "1");
    public static Class122 aClass122_1541 = new Class122("15", "15");

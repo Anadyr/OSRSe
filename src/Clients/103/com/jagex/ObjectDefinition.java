@@ -3,8 +3,8 @@ package com.jagex;
 public class ObjectDefinition extends NodeContainer {
 
    public int sizeX = 1223037583;
-   static RSIndex aRSIndex_2189;
-   static RSIndex aRSIndex_2190;
+   static Class99 aClass99_2189;
+   static Class99 aClass99_2190;
    public boolean aBool2191 = false;
    public static Class123 aClass123_2192 = new Class123(500);
    public static Class123 aClass123_2193 = new Class123(64);
@@ -20,7 +20,7 @@ public class ObjectDefinition extends NodeContainer {
    public int anInt2203 = 1731920317;
    public static Class123 aClass123_2204 = new Class123(30);
    public int sizeY = -1884647669;
-   public int[] childIds;
+   public int[] anIntArray2206;
    short[] aShortArray2207;
    static int anInt2208;
    int anInt2209 = 1376526875;
@@ -45,14 +45,14 @@ public class ObjectDefinition extends NodeContainer {
    static Model[] aClass116_Sub23_Sub16_Sub4Array2228 = new Model[4];
    public int anInt2229 = 1740157925;
    public boolean walkable = true;
-   int varbitId = -459501529;
-   int configId = 2089557189;
+   int anInt2231 = -459501529;
+   int anInt2232 = 2089557189;
    public int anInt2233 = -1479982885;
    public int anInt2234 = 0;
    public int anInt2235 = 1295419843;
    public int anInt2236 = 0;
    public int anInt2239;
-   static RSInterface aClass116_Sub15_2240;
+   static Class116_Sub15 aClass116_Sub15_2240;
    boolean aBool2241 = false;
 
    void method2392(byte var1) {
@@ -75,7 +75,7 @@ public class ObjectDefinition extends NodeContainer {
 
    }
 
-   void method2393(Packet var1, byte var2) {
+   void method2393(Buffer var1, byte var2) {
       while(true) {
          int var3 = var1.readSignedByte(1708176767);
          if(var3 == 0) {
@@ -86,7 +86,7 @@ public class ObjectDefinition extends NodeContainer {
       }
    }
 
-   void method2394(Packet var1, int var2, byte var3) {
+   void method2394(Buffer var1, int var2, byte var3) {
       int loop;
       int subId;
       if(var2 == 1) {
@@ -99,7 +99,7 @@ public class ObjectDefinition extends NodeContainer {
                this.anIntArray2197 = new int[subId];
 
                for(loop = 0; loop < subId; ++loop) {
-                  this.anIntArray2197[loop] = var1.readUnsignedShort(161432317);
+                  this.anIntArray2197[loop] = var1.readShort(161432317);
                   this.anIntArray2198[loop] = var1.readSignedByte(1708176767);
                }
             }
@@ -116,7 +116,7 @@ public class ObjectDefinition extends NodeContainer {
                this.anIntArray2197 = new int[subId];
 
                for(loop = 0; loop < subId; ++loop) {
-                  this.anIntArray2197[loop] = var1.readUnsignedShort(839911328);
+                  this.anIntArray2197[loop] = var1.readShort(839911328);
                }
             }
          }
@@ -138,7 +138,7 @@ public class ObjectDefinition extends NodeContainer {
       } else if(var2 == 23) {
          this.aBool2191 = true;
       } else if(var2 == 24) {
-         this.anInt2212 = var1.readUnsignedShort(-281492796) * -1066502373;
+         this.anInt2212 = var1.readShort(-281492796) * -1066502373;
          if('\uffff' == this.anInt2212 * -100857069) {
             this.anInt2212 = 1066502373;
          }
@@ -161,8 +161,8 @@ public class ObjectDefinition extends NodeContainer {
          this.aShortArray2201 = new short[subId];
 
          for(loop = 0; loop < subId; ++loop) {
-            this.aShortArray2200[loop] = (short)var1.readUnsignedShort(-30316754);
-            this.aShortArray2201[loop] = (short)var1.readUnsignedShort(1985128227);
+            this.aShortArray2200[loop] = (short)var1.readShort(-30316754);
+            this.aShortArray2201[loop] = (short)var1.readShort(1985128227);
          }
       } else if(var2 == 41) {
          subId = var1.readSignedByte(1708176767);
@@ -170,31 +170,31 @@ public class ObjectDefinition extends NodeContainer {
          this.aShortArray2207 = new short[subId];
 
          for(loop = 0; loop < subId; ++loop) {
-            this.aShortArray2202[loop] = (short)var1.readUnsignedShort(-396502275);
-            this.aShortArray2207[loop] = (short)var1.readUnsignedShort(1157150384);
+            this.aShortArray2202[loop] = (short)var1.readShort(-396502275);
+            this.aShortArray2207[loop] = (short)var1.readShort(1157150384);
          }
       } else if(60 == var2) {
-         this.anInt2235 = var1.readUnsignedShort(54442791) * -1295419843;
+         this.anInt2235 = var1.readShort(54442791) * -1295419843;
       } else if(62 == var2) {
          this.aBool2219 = true;
       } else if(64 == var2) {
          this.aBool2220 = false;
       } else if(var2 == 65) {
-         this.anInt2221 = var1.readUnsignedShort(159071250) * 1478636557;
+         this.anInt2221 = var1.readShort(159071250) * 1478636557;
       } else if(var2 == 66) {
-         this.anInt2222 = var1.readUnsignedShort(-44103586) * 2016458261;
+         this.anInt2222 = var1.readShort(-44103586) * 2016458261;
       } else if(67 == var2) {
-         this.anInt2223 = var1.readUnsignedShort(240624060) * -1443997935;
+         this.anInt2223 = var1.readShort(240624060) * -1443997935;
       } else if(var2 == 68) {
-         this.anInt2218 = var1.readUnsignedShort(1784424913) * 19462571;
+         this.anInt2218 = var1.readShort(1784424913) * 19462571;
       } else if(var2 == 69) {
          var1.readSignedByte(1708176767);
       } else if(var2 == 70) {
-         this.anInt2224 = var1.readShort(1814822508) * -783331611;
+         this.anInt2224 = var1.method2007(1814822508) * -783331611;
       } else if(var2 == 71) {
-         this.anInt2225 = var1.readShort(-133935205) * 1137245033;
+         this.anInt2225 = var1.method2007(-133935205) * 1137245033;
       } else if(var2 == 72) {
-         this.anInt2226 = var1.readShort(816560760) * -305523735;
+         this.anInt2226 = var1.method2007(816560760) * -305523735;
       } else if(var2 == 73) {
          this.clippingFlag = true;
       } else if(74 == var2) {
@@ -202,37 +202,37 @@ public class ObjectDefinition extends NodeContainer {
       } else if(75 == var2) {
          this.anInt2229 = var1.readSignedByte(1708176767) * -1740157925;
       } else if(77 == var2) {
-         this.varbitId = var1.readUnsignedShort(-353732310) * 459501529;
-         if('\uffff' == -560193431 * this.varbitId) {
-            this.varbitId = -459501529;
+         this.anInt2231 = var1.readShort(-353732310) * 459501529;
+         if('\uffff' == -560193431 * this.anInt2231) {
+            this.anInt2231 = -459501529;
          }
 
-         this.configId = var1.readUnsignedShort(1283970856) * -2089557189;
-         if('\uffff' == this.configId * 560659955) {
-            this.configId = 2089557189;
+         this.anInt2232 = var1.readShort(1283970856) * -2089557189;
+         if('\uffff' == this.anInt2232 * 560659955) {
+            this.anInt2232 = 2089557189;
          }
 
          subId = var1.readSignedByte(1708176767);
-         this.childIds = new int[subId + 1];
+         this.anIntArray2206 = new int[subId + 1];
 
          for(loop = 0; loop <= subId; ++loop) {
-            this.childIds[loop] = var1.readUnsignedShort(867702460);
-            if('\uffff' == this.childIds[loop]) {
-               this.childIds[loop] = -1;
+            this.anIntArray2206[loop] = var1.readShort(867702460);
+            if('\uffff' == this.anIntArray2206[loop]) {
+               this.anIntArray2206[loop] = -1;
             }
          }
       } else if(var2 == 78) {
-         this.anInt2233 = var1.readUnsignedShort(1183446761) * 1479982885;
+         this.anInt2233 = var1.readShort(1183446761) * 1479982885;
          this.anInt2234 = var1.readSignedByte(1708176767) * 266176581;
       } else if(79 == var2) {
-         this.anInt2195 = var1.readUnsignedShort(897216197) * 1857310455;
-         this.anInt2236 = var1.readUnsignedShort(1125587898) * 979955917;
+         this.anInt2195 = var1.readShort(897216197) * 1857310455;
+         this.anInt2236 = var1.readShort(1125587898) * 979955917;
          this.anInt2234 = var1.readSignedByte(1708176767) * 266176581;
          subId = var1.readSignedByte(1708176767);
          this.anIntArray2211 = new int[subId];
 
          for(loop = 0; loop < subId; ++loop) {
-            this.anIntArray2211[loop] = var1.readUnsignedShort(601846703);
+            this.anIntArray2211[loop] = var1.readShort(601846703);
          }
       } else if(var2 == 81) {
          this.anInt2209 = var1.readSignedByte(1708176767) * -203561728;
@@ -375,7 +375,7 @@ public class ObjectDefinition extends NodeContainer {
 
             var4 = (Model)aClass123_2192.method1632((long)var5);
             if(null == var4) {
-               var4 = Model.method3114(aRSIndex_2190, var5 & '\uffff', 0);
+               var4 = Model.method3114(aClass99_2190, var5 & '\uffff', 0);
                if(var4 == null) {
                   return null;
                }
@@ -417,7 +417,7 @@ public class ObjectDefinition extends NodeContainer {
 
          var4 = (Model)aClass123_2192.method1632((long)var6);
          if(null == var4) {
-            var4 = Model.method3114(aRSIndex_2190, var6 & '\uffff', 0);
+            var4 = Model.method3114(aClass99_2190, var6 & '\uffff', 0);
             if(var4 == null) {
                return null;
             }
@@ -492,12 +492,12 @@ public class ObjectDefinition extends NodeContainer {
    }
 
    public boolean method2402(int var1) {
-      if(this.childIds == null) {
+      if(this.anIntArray2206 == null) {
          return this.anInt2233 * -874560339 != -1 || this.anIntArray2211 != null;
       } else {
-         for(int var2 = 0; var2 < this.childIds.length; ++var2) {
-            if(-1 != this.childIds[var2]) {
-               ObjectDefinition var3 = Class45.method700(this.childIds[var2], 359750046);
+         for(int var2 = 0; var2 < this.anIntArray2206.length; ++var2) {
+            if(-1 != this.anIntArray2206[var2]) {
+               ObjectDefinition var3 = Class45.method700(this.anIntArray2206[var2], 359750046);
                if(-1 != -874560339 * var3.anInt2233 || var3.anIntArray2211 != null) {
                   return true;
                }
@@ -512,7 +512,7 @@ public class ObjectDefinition extends NodeContainer {
       if(this.anIntArray2198 != null) {
          for(int var5 = 0; var5 < this.anIntArray2198.length; ++var5) {
             if(var1 == this.anIntArray2198[var5]) {
-               return aRSIndex_2190.method1373(this.anIntArray2197[var5] & '\uffff', 0, (byte)1);
+               return aClass99_2190.method1373(this.anIntArray2197[var5] & '\uffff', 0, (byte)1);
             }
          }
 
@@ -525,7 +525,7 @@ public class ObjectDefinition extends NodeContainer {
          boolean var3 = true;
 
          for(int var4 = 0; var4 < this.anIntArray2197.length; ++var4) {
-            var3 &= aRSIndex_2190.method1373(this.anIntArray2197[var4] & '\uffff', 0, (byte)1);
+            var3 &= aClass99_2190.method1373(this.anIntArray2197[var4] & '\uffff', 0, (byte)1);
          }
 
          return var3;
@@ -539,7 +539,7 @@ public class ObjectDefinition extends NodeContainer {
          boolean var2 = true;
 
          for(int var3 = 0; var3 < this.anIntArray2197.length; ++var3) {
-            var2 &= aRSIndex_2190.method1373(this.anIntArray2197[var3] & '\uffff', 0, (byte)1);
+            var2 &= aClass99_2190.method1373(this.anIntArray2197[var3] & '\uffff', 0, (byte)1);
          }
 
          return var2;
@@ -548,20 +548,20 @@ public class ObjectDefinition extends NodeContainer {
 
    public final ObjectDefinition method2419(int var1) {
       int var2 = -1;
-      if(-1 != this.varbitId * -560193431) {
-         var2 = Class103.method1451(-560193431 * this.varbitId, -584760962);
-      } else if(-1 != this.configId * 560659955) {
-         var2 = Class107.varpData[560659955 * this.configId];
+      if(-1 != this.anInt2231 * -560193431) {
+         var2 = Class103.method1451(-560193431 * this.anInt2231, -584760962);
+      } else if(-1 != this.anInt2232 * 560659955) {
+         var2 = Class107.anIntArray1459[560659955 * this.anInt2232];
       }
 
-      return var2 >= 0 && var2 < this.childIds.length && -1 != this.childIds[var2]?Class45.method700(this.childIds[var2], 359750046):null;
+      return var2 >= 0 && var2 < this.anIntArray2206.length && -1 != this.anIntArray2206[var2]?Class45.method700(this.anIntArray2206[var2], 359750046):null;
    }
 
-   public static Class116_Sub23_Sub19_Sub3[] method2433(RSIndex index, String name, String var2, short var3) {
-      int var4 = index.getFileIdForName(name, -714416867);
-      int var5 = index.method1367(var4, var2, 2015579647);
+   public static Class116_Sub23_Sub19_Sub3[] method2433(Class99 var0, String var1, String var2, short var3) {
+      int var4 = var0.method1366(var1, -714416867);
+      int var5 = var0.method1367(var4, var2, 2015579647);
       Class116_Sub23_Sub19_Sub3[] var6;
-      if(!Class41.method687(index, var4, var5, -49724657)) {
+      if(!Class41.method687(var0, var4, var5, -49724657)) {
          var6 = null;
       } else {
          var6 = Applet_Sub1.method3670((short)18278);
@@ -572,15 +572,15 @@ public class ObjectDefinition extends NodeContainer {
 
    static void method2434(int var0, byte var1) {
       if(var0 == -3) {
-         Class7.method110(Class91.connTimedOut, Class91.PleaseTryAgain, Class91.aString1164, 1935975903);
+         Class7.method110(Class91.aString1086, Class91.aString1201, Class91.aString1164, 1935975903);
       } else if(var0 == -2) {
-         Class7.method110(Class91.aString1277, Class91.ErrorConnecting, Class91.aString1091, 1935975903);
+         Class7.method110(Class91.aString1277, Class91.aString1090, Class91.aString1091, 1935975903);
       } else if(-1 == var0) {
-         Class7.method110(Class91.NoResponse, Class91.PleaseTryAnother, Class91.aString1094, 1935975903);
+         Class7.method110(Class91.aString1092, Class91.aString1244, Class91.aString1094, 1935975903);
       } else if(var0 == 3) {
-         Class7.method110(Class91.aString1135, Class91.InvalidDetails, Class91.aString1097, 1935975903);
+         Class7.method110(Class91.aString1135, Class91.aString1096, Class91.aString1097, 1935975903);
       } else if(var0 == 4) {
-         Class7.method110(Class91.YourAccountDisabled, Class91.aString1099, Class91.aString1100, 1935975903);
+         Class7.method110(Class91.aString1098, Class91.aString1099, Class91.aString1100, 1935975903);
       } else if(5 == var0) {
          Class7.method110(Class91.aString1101, Class91.aString1102, Class91.aString1265, 1935975903);
       } else if(6 == var0) {
@@ -652,20 +652,20 @@ public class ObjectDefinition extends NodeContainer {
       Class116_Sub12.method1983(10, (byte)109);
    }
 
-   static void method2435(RSInterface[] var0, RSInterface var1, boolean var2, int var3) {
-      int var5 = -302755437 * var1.anInt2037 != 0?-302755437 * var1.anInt2037:var1.wdth * 1645211541;
-      int var4 = 0 != 177405235 * var1.maxScrollVertical ?177405235 * var1.maxScrollVertical :1227800423 * var1.heght;
-      Class4.method49(var0, -1536575275 * var1.hash, var5, var4, var2, 1505619252);
+   static void method2435(Class116_Sub15[] var0, Class116_Sub15 var1, boolean var2, int var3) {
+      int var5 = -302755437 * var1.anInt2037 != 0?-302755437 * var1.anInt2037:var1.anInt1940 * 1645211541;
+      int var4 = 0 != 177405235 * var1.anInt1949?177405235 * var1.anInt1949:1227800423 * var1.anInt1974;
+      Class4.method49(var0, -1536575275 * var1.anInt1925, var5, var4, var2, 1505619252);
       if(var1.aClass116_Sub15Array1995 != null) {
-         Class4.method49(var1.aClass116_Sub15Array1995, var1.hash * -1536575275, var5, var4, var2, -1237152197);
+         Class4.method49(var1.aClass116_Sub15Array1995, var1.anInt1925 * -1536575275, var5, var4, var2, -1237152197);
       }
 
-      GameInterface var6 = (GameInterface)client.overridedInterfaces.get((long) (-1536575275 * var1.hash));
+      Class116_Sub11 var6 = (Class116_Sub11)client.aClass127_3094.method1658((long)(-1536575275 * var1.anInt1925));
       if(var6 != null) {
-         RelationList.method777(var6.interfaceId * 226793949, var5, var4, var2, (short) -256);
+         Class50.method777(var6.anInt1821 * 226793949, var5, var4, var2, (short)-256);
       }
 
-      if(1337 == -179718399 * var1.clientCode) {
+      if(1337 == -179718399 * var1.anInt2016) {
          ;
       }
 
@@ -718,10 +718,10 @@ public class ObjectDefinition extends NodeContainer {
       if(null != var2) {
          return var2;
       } else {
-         byte[] var3 = Class116_Sub23_Sub5.aRSIndex_2267.getFiles(8, var0, -991185501);
+         byte[] var3 = Class116_Sub23_Sub5.aClass99_2267.method1394(8, var0, -991185501);
          var2 = new Class116_Sub23_Sub5();
          if(null != var3) {
-            var2.method2475(new Packet(var3), (byte)64);
+            var2.method2475(new Buffer(var3), (byte)64);
          }
 
          Class116_Sub23_Sub5.aClass123_2266.method1633(var2, (long)var0);

@@ -26,7 +26,7 @@ public class MobDefinition extends NodeContainer {
    public int anInt2326 = 634114841;
    int anInt2327 = -787489920;
    int anInt2328 = 1544651392;
-   static RSIndex aRSIndex_2329;
+   static Class99 aClass99_2329;
    short[] aShortArray2330;
    int anInt2331 = 0;
    int anInt2332 = 0;
@@ -40,7 +40,7 @@ public class MobDefinition extends NodeContainer {
    public int anInt2340 = -2080856918;
 
 
-   void method2540(Packet var1, int var2, int var3) {
+   void method2540(Buffer var1, int var2, int var3) {
       int sub;
       int loop;
       if(1 == var2) {
@@ -48,25 +48,25 @@ public class MobDefinition extends NodeContainer {
          this.anIntArray2311 = new int[sub];
 
          for(loop = 0; loop < sub; ++loop) {
-            this.anIntArray2311[loop] = var1.readUnsignedShort(-346209211);
+            this.anIntArray2311[loop] = var1.readShort(-346209211);
          }
       } else if(2 == var2) {
          this.name = var1.readString(61376769);
       } else if(var2 == 12) {
          this.tileSize = var1.readSignedByte(1708176767) * 569075545;
       } else if(13 == var2) {
-         this.anInt2335 = var1.readUnsignedShort(1799101930) * 382962751;
+         this.anInt2335 = var1.readShort(1799101930) * 382962751;
       } else if(var2 == 14) {
-         this.anInt2316 = var1.readUnsignedShort(1789315418) * 1381705353;
+         this.anInt2316 = var1.readShort(1789315418) * 1381705353;
       } else if(15 == var2) {
-         this.anInt2314 = var1.readUnsignedShort(1980263656) * 1066302605;
+         this.anInt2314 = var1.readShort(1980263656) * 1066302605;
       } else if(var2 == 16) {
-         this.anInt2322 = var1.readUnsignedShort(816593763) * -1309687233;
+         this.anInt2322 = var1.readShort(816593763) * -1309687233;
       } else if(var2 == 17) {
-         this.anInt2316 = var1.readUnsignedShort(958792659) * 1381705353;
-         this.anInt2315 = var1.readUnsignedShort(691261764) * 499392937;
-         this.anInt2318 = var1.readUnsignedShort(-298648471) * -2058554739;
-         this.anInt2319 = var1.readUnsignedShort(51589270) * 592426295;
+         this.anInt2316 = var1.readShort(958792659) * 1381705353;
+         this.anInt2315 = var1.readShort(691261764) * 499392937;
+         this.anInt2318 = var1.readShort(-298648471) * -2058554739;
+         this.anInt2319 = var1.readShort(51589270) * 592426295;
       } else if(var2 >= 30 && var2 < 35) {
          this.aStringArray2324[var2 - 30] = var1.readString(61376769);
          if(this.aStringArray2324[var2 - 30].equalsIgnoreCase(Class91.hidden)) {
@@ -78,8 +78,8 @@ public class MobDefinition extends NodeContainer {
          this.aShortArray2330 = new short[sub];
 
          for(loop = 0; loop < sub; ++loop) {
-            this.aShortArray2306[loop] = (short)var1.readUnsignedShort(667935075);
-            this.aShortArray2330[loop] = (short)var1.readUnsignedShort(308526109);
+            this.aShortArray2306[loop] = (short)var1.readShort(667935075);
+            this.aShortArray2330[loop] = (short)var1.readShort(308526109);
          }
       } else if(41 == var2) {
          sub = var1.readSignedByte(1708176767);
@@ -87,24 +87,24 @@ public class MobDefinition extends NodeContainer {
          this.aShortArray2323 = new short[sub];
 
          for(loop = 0; loop < sub; ++loop) {
-            this.aShortArray2334[loop] = (short)var1.readUnsignedShort(468837412);
-            this.aShortArray2323[loop] = (short)var1.readUnsignedShort(-367465963);
+            this.aShortArray2334[loop] = (short)var1.readShort(468837412);
+            this.aShortArray2323[loop] = (short)var1.readShort(-367465963);
          }
       } else if(var2 == 60) {
          sub = var1.readSignedByte(1708176767);
          this.anIntArray2312 = new int[sub];
 
          for(loop = 0; loop < sub; ++loop) {
-            this.anIntArray2312[loop] = var1.readUnsignedShort(1581273477);
+            this.anIntArray2312[loop] = var1.readShort(1581273477);
          }
       } else if(var2 == 93) {
          this.aBool2325 = false;
       } else if(95 == var2) {
-         this.anInt2326 = var1.readUnsignedShort(-169771852) * -634114841;
+         this.anInt2326 = var1.readShort(-169771852) * -634114841;
       } else if(97 == var2) {
-         this.anInt2327 = var1.readUnsignedShort(1926116611) * -6152265;
+         this.anInt2327 = var1.readShort(1926116611) * -6152265;
       } else if(var2 == 98) {
-         this.anInt2328 = var1.readUnsignedShort(1336491466) * 112730885;
+         this.anInt2328 = var1.readShort(1336491466) * 112730885;
       } else if(99 == var2) {
          this.aBool2317 = true;
       } else if(100 == var2) {
@@ -112,16 +112,16 @@ public class MobDefinition extends NodeContainer {
       } else if(101 == var2) {
          this.anInt2331 = var1.readUnsignedByte(-18842300) * 1528591265;
       } else if(var2 == 102) {
-         this.anInt2305 = var1.readUnsignedShort(-444196962) * -1076528657;
+         this.anInt2305 = var1.readShort(-444196962) * -1076528657;
       } else if(var2 == 103) {
-         this.anInt2333 = var1.readUnsignedShort(689372567) * 627188429;
+         this.anInt2333 = var1.readShort(689372567) * 627188429;
       } else if(106 == var2) {
-         this.anInt2309 = var1.readUnsignedShort(1093369139) * -341695561;
+         this.anInt2309 = var1.readShort(1093369139) * -341695561;
          if(this.anInt2309 * 1660103175 == '\uffff') {
             this.anInt2309 = 341695561;
          }
 
-         this.anInt2338 = var1.readUnsignedShort(663834261) * 87498741;
+         this.anInt2338 = var1.readShort(663834261) * 87498741;
          if('\uffff' == -1519823779 * this.anInt2338) {
             this.anInt2338 = -87498741;
          }
@@ -130,7 +130,7 @@ public class MobDefinition extends NodeContainer {
          this.anIntArray2313 = new int[1 + sub];
 
          for(loop = 0; loop <= sub; ++loop) {
-            this.anIntArray2313[loop] = var1.readUnsignedShort(-190485852);
+            this.anIntArray2313[loop] = var1.readShort(-190485852);
             if('\uffff' == this.anIntArray2313[loop]) {
                this.anIntArray2313[loop] = -1;
             }
@@ -159,7 +159,7 @@ public class MobDefinition extends NodeContainer {
             boolean var10 = false;
 
             for(int var8 = 0; var8 < this.anIntArray2311.length; ++var8) {
-               if(!aRSIndex_2329.method1373(this.anIntArray2311[var8], 0, (byte)1)) {
+               if(!aClass99_2329.method1373(this.anIntArray2311[var8], 0, (byte)1)) {
                   var10 = true;
                }
             }
@@ -172,7 +172,7 @@ public class MobDefinition extends NodeContainer {
 
             int var7;
             for(var7 = 0; var7 < this.anIntArray2311.length; ++var7) {
-               var9[var7] = Model.method3114(aRSIndex_2329, this.anIntArray2311[var7], 0);
+               var9[var7] = Model.method3114(aClass99_2329, this.anIntArray2311[var7], 0);
             }
 
             Model var12;
@@ -227,7 +227,7 @@ public class MobDefinition extends NodeContainer {
          boolean var3 = false;
 
          for(int var5 = 0; var5 < this.anIntArray2312.length; ++var5) {
-            if(!aRSIndex_2329.method1373(this.anIntArray2312[var5], 0, (byte)1)) {
+            if(!aClass99_2329.method1373(this.anIntArray2312[var5], 0, (byte)1)) {
                var3 = true;
             }
          }
@@ -238,7 +238,7 @@ public class MobDefinition extends NodeContainer {
             Model[] var8 = new Model[this.anIntArray2312.length];
 
             for(int var4 = 0; var4 < this.anIntArray2312.length; ++var4) {
-               var8[var4] = Model.method3114(aRSIndex_2329, this.anIntArray2312[var4], 0);
+               var8[var4] = Model.method3114(aClass99_2329, this.anIntArray2312[var4], 0);
             }
 
             Model var7;
@@ -271,13 +271,13 @@ public class MobDefinition extends NodeContainer {
       if(-1 != this.anInt2309 * 1660103175) {
          var2 = Class103.method1451(this.anInt2309 * 1660103175, -584760962);
       } else if(-1 != -1519823779 * this.anInt2338) {
-         var2 = Class107.varpData[this.anInt2338 * -1519823779];
+         var2 = Class107.anIntArray1459[this.anInt2338 * -1519823779];
       }
 
-      return var2 >= 0 && var2 < this.anIntArray2313.length && -1 != this.anIntArray2313[var2]?Class116_Sub23_Sub15.getMobDefinition(this.anIntArray2313[var2], 1382157122):null;
+      return var2 >= 0 && var2 < this.anIntArray2313.length && -1 != this.anIntArray2313[var2]?Class116_Sub23_Sub15.method2705(this.anIntArray2313[var2], 1382157122):null;
    }
 
-   void method2549(Packet var1, int var2) {
+   void method2549(Buffer var1, int var2) {
       while(true) {
          int var3 = var1.readSignedByte(1708176767);
          if(0 == var3) {
@@ -315,7 +315,7 @@ public class MobDefinition extends NodeContainer {
          if(this.anInt2309 * 1660103175 != -1) {
             var2 = Class103.method1451(1660103175 * this.anInt2309, -584760962);
          } else if(-1 != -1519823779 * this.anInt2338) {
-            var2 = Class107.varpData[-1519823779 * this.anInt2338];
+            var2 = Class107.anIntArray1459[-1519823779 * this.anInt2338];
          }
 
          return var2 >= 0 && var2 < this.anIntArray2313.length && this.anIntArray2313[var2] != -1;
@@ -324,13 +324,13 @@ public class MobDefinition extends NodeContainer {
 
    static int method2569(int var0, int var1, byte var2) {
       long var3 = (long)(var1 + (var0 << 16));
-      return null != Class1.aClass116_Sub23_Sub21_7 && Class1.aClass116_Sub23_Sub21_7.hashId == var3?1084578137 * Class93.aClass116_Sub14_1348.position / (Class93.aClass116_Sub14_1348.payload.length - Class1.aClass116_Sub23_Sub21_7.aByte2524) + 1:0;
+      return null != Class1.aClass116_Sub23_Sub21_7 && Class1.aClass116_Sub23_Sub21_7.nodeId == var3?1084578137 * Class93.aClass116_Sub14_1348.position / (Class93.aClass116_Sub14_1348.payload.length - Class1.aClass116_Sub23_Sub21_7.aByte2524) + 1:0;
    }
 
    static final void method2574(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9) {
       Class116_Sub12 var10 = null;
 
-      for(Class116_Sub12 var11 = (Class116_Sub12)client.aClass117_3162.getFirst(); var11 != null; var11 = (Class116_Sub12)client.aClass117_3162.getNext()) {
+      for(Class116_Sub12 var11 = (Class116_Sub12)client.aClass117_3162.method1551(); var11 != null; var11 = (Class116_Sub12)client.aClass117_3162.method1553()) {
          if(var0 == var11.anInt1837 * 584375567 && var1 == -1096801001 * var11.anInt1835 && -127960105 * var11.anInt1847 == var2 && var11.anInt1838 * -1976125003 == var3) {
             var10 = var11;
             break;
@@ -344,7 +344,7 @@ public class MobDefinition extends NodeContainer {
          var10.anInt1835 = -2106367321 * var1;
          var10.anInt1847 = var2 * 1453500391;
          Class51.method784(var10, -1752116952);
-         client.aClass117_3162.addLast(var10);
+         client.aClass117_3162.method1571(var10);
       }
 
       var10.anInt1842 = 618060995 * var4;
@@ -354,12 +354,13 @@ public class MobDefinition extends NodeContainer {
       var10.anInt1846 = -622541955 * var8;
    }
 
-   static CacheIndex openIndex(int indexId, boolean var1, boolean var2, boolean var3, int var4) {
-      RSFIT rsIndexTable = null;
-      if(null != Class86.gameDataFile) {
-         rsIndexTable = new RSFIT(indexId, Class86.gameDataFile, Class47.aClass140Array625[indexId], 1000000);
+   static Class99_Sub1 method2575(int var0, boolean var1, boolean var2, boolean var3, int var4) {
+      Class73 var5 = null;
+      if(null != Class86.aClass140_1011) {
+         var5 = new Class73(var0, Class86.aClass140_1011, Class47.aClass140Array625[var0], 1000000);
       }
-      return new CacheIndex(rsIndexTable, Class3.checksumIndex, indexId, var1, var2, var3);
+
+      return new Class99_Sub1(var5, Class3.aClass73_40, var0, var1, var2, var3);
    }
 
 }

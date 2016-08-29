@@ -3,29 +3,29 @@ package com.jagex;
 public class Class116_Sub23_Sub17 extends NodeContainer {
 
    Class28[] aClass28Array2471;
-   static int[][] reagionXTEAKeys;
+   static int[][] anIntArrayArray2472;
 
    public boolean method2881(int var1, byte var2) {
       return this.aClass28Array2471[var1].aBool400;
    }
 
-   public Class116_Sub23_Sub17(RSIndex var1, RSIndex var2, int var3, boolean var4) {
-      Deque var5 = new Deque();
+   public Class116_Sub23_Sub17(Class99 var1, Class99 var2, int var3, boolean var4) {
+      Class117 var5 = new Class117();
       int var6 = var1.method1361(var3, -824500445);
       this.aClass28Array2471 = new Class28[var6];
       int[] var7 = var1.method1404(var3, (byte)0);
       int var8 = 0;
 
       while(var8 < var7.length) {
-         byte[] var9 = var1.getFiles(var3, var7[var8], -2013451143);
+         byte[] var9 = var1.method1394(var3, var7[var8], -2013451143);
          Class116_Sub5 var10 = null;
          int var12 = (var9[0] & 255) << 8 | var9[1] & 255;
-         Class116_Sub5 var11 = (Class116_Sub5)var5.getFirst();
+         Class116_Sub5 var11 = (Class116_Sub5)var5.method1551();
 
          while(true) {
             if(var11 != null) {
                if(var12 != -207314411 * var11.anInt1724) {
-                  var11 = (Class116_Sub5)var5.getNext();
+                  var11 = (Class116_Sub5)var5.method1553();
                   continue;
                }
 
@@ -41,7 +41,7 @@ public class Class116_Sub23_Sub17 extends NodeContainer {
                }
 
                var10 = new Class116_Sub5(var12, var13);
-               var5.addLast(var10);
+               var5.method1571(var10);
             }
 
             this.aClass28Array2471[var7[var8]] = new Class28(var9, var10);

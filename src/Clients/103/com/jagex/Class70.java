@@ -3,21 +3,21 @@ package com.jagex;
 public class Class70 {
 
    static Class17 aClass17_844;
-   static CacheIndex aCacheIndex_847;
+   static Class99_Sub1 aClass99_Sub1_847;
 
    Class70() throws Throwable {
       throw new Error();
    }
 
-   static void method996(int var0, RSFIT var1, CacheIndex var2, int var3) {
+   static void method996(int var0, Class73 var1, Class99_Sub1 var2, int var3) {
       byte[] var4 = null;
-      Deque var5 = CacheWorker.aClass117_1414;
+      Class117 var5 = Class102.aClass117_1414;
       synchronized(var5) {
-         Class116_Sub16 var6 = (Class116_Sub16) CacheWorker.aClass117_1414.getFirst();
+         Class116_Sub16 var6 = (Class116_Sub16)Class102.aClass117_1414.method1551();
 
          while(var6 != null) {
-            if(var6.hashId != (long)var0 || var6.aRSIndexTable_2062 != var1 || 1215410337 * var6.anInt2064 != 0) {
-               var6 = (Class116_Sub16) CacheWorker.aClass117_1414.getNext();
+            if(var6.nodeId != (long)var0 || var6.aClass73_2062 != var1 || 1215410337 * var6.anInt2064 != 0) {
+               var6 = (Class116_Sub16)Class102.aClass117_1414.method1553();
             } else {
                var4 = var6.aByteArray2066;
                break;
@@ -28,7 +28,7 @@ public class Class70 {
       if(var4 != null) {
          var2.method2228(var1, var0, var4, true, -1331767415);
       } else {
-         byte[] var9 = var1.getFile(var0, -1529493978);
+         byte[] var9 = var1.method1033(var0, -1529493978);
          var2.method2228(var1, var0, var9, true, 126184079);
       }
    }

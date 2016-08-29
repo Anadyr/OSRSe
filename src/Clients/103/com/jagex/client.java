@@ -1,6 +1,10 @@
 package com.jagex;
 
-import java.awt.*;
+import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Graphics;
 import java.awt.datatransfer.ClipboardOwner;
 import java.awt.datatransfer.StringSelection;
 import java.awt.image.ImageObserver;
@@ -22,11 +26,11 @@ public final class client extends Applet_Sub1 {
 	static int[] anIntArray2932 = new int[500];
 	static int anInt2933 = 0;
 	static int anInt2934 = -2027276566;
-	static RSInterface aClass116_Sub15_2935 = null;
+	static Class116_Sub15 aClass116_Sub15_2935 = null;
 	static boolean aBool2936 = false;
 	static boolean aBool2937 = false;
 	static int anInt2938 = 0;
-	static String worldListAddress;
+	static String aString2939;
 	static String aString2940;
 	static short aShort2941 = 320;
 	static int anInt2942 = 0;
@@ -42,7 +46,7 @@ public final class client extends Applet_Sub1 {
 	static int anInt2952 = 0;
 	static int[] anIntArray2953 = new int[25];
 	static int anInt2954 = 0;
-	static CacheIndex aCacheIndex_2955;
+	static Class99_Sub1 aClass99_Sub1_2955;
 	static int[] anIntArray2956 = new int[] { 16776960, 16711680, '\uff00', '\uffff', 16711935, 16777215 };
 	static boolean aBool2957 = false;
 	static int anInt2958 = 0;
@@ -52,7 +56,7 @@ public final class client extends Applet_Sub1 {
 	static int anInt2962 = 0;
 	static int anInt2963 = 0;
 	static int[] anIntArray2964 = new int[50];
-	static byte ourccrank;
+	static byte aByte2965;
 	static long aLong2966 = 8084475441026814739L;
 	static int anInt2967 = 0;
 	static int anInt2968 = 0;
@@ -60,14 +64,14 @@ public final class client extends Applet_Sub1 {
 	static boolean[] aBoolArray2970 = new boolean[5];
 	static int anInt2971 = 0;
 	static Mob[] aMobArray2972 = new Mob['\u8000'];
-	static Deque aClass117_2973 = new Deque();
+	static Class117 aClass117_2973 = new Class117();
 	static int[] npcIndicies = new int['\u8000'];
 	static long aLong2975 = 0L;
 	static int[] pendingNpcFlags = new int[250];
-	static PacketBuilder rsaBuffer = new PacketBuilder(5000);
+	static BitBuffer rsaBuffer = new BitBuffer(5000);
 	static int anInt2978 = 0;
-	static PacketBuilder packetBuffer = new PacketBuilder(15000);
-	static int packetLength = 0;
+	static BitBuffer bitBuffer = new BitBuffer(15000);
+	static int anInt2980 = 0;
 	static int currentOpcode = 0;
 	static int anInt2982 = 0;
 	static int anInt2983 = 0;
@@ -82,7 +86,7 @@ public final class client extends Applet_Sub1 {
 	static int anInt2992 = 0;
 	static int anInt2993 = 693748815;
 	static int anInt2994 = -943887744;
-	static int[] regionIdArray;
+	static int[] anIntArray2995;
 	static Class58[] aClass58Array2996 = new Class58[4];
 	static boolean dynamicRegion = false;
 	static int[][][] anIntArrayArrayArray2998 = new int[4][13][13];
@@ -114,7 +118,7 @@ public final class client extends Applet_Sub1 {
 	static int anInt3025 = 0;
 	static int anInt3026 = 0;
 	static boolean aBool3027 = false;
-	static Deque aClass117_3028 = new Deque();
+	static Class117 aClass117_3028 = new Class117();
 	static int anInt3029 = 0;
 	static int anInt3030 = -2042425390;
 	static int[] anIntArray3031 = new int[-475281231 * anInt3030];
@@ -136,17 +140,17 @@ public final class client extends Applet_Sub1 {
 	static int anInt3047 = 0;
 	static int anInt3048 = 0;
 	static int anInt3049 = 0;
-	static String currentCCName = null;
+	static String aString3050 = null;
 	static int anInt3051 = 0;
 	static boolean aBool3052 = false;
 	static boolean aBool3053 = false;
-	static CacheIndex aCacheIndex_3054;
+	static Class99_Sub1 aClass99_Sub1_3054;
 	static int anInt3055 = 0;
 	static Player[] globalPlayers = new Player[2048];
 	static int playerIndex = 313169887;
 	static int membership = 0;
 	static int anInt3059 = 0;
-	static int[] pendingRemovalMobs = new int[1000];
+	static int[] anIntArray3060 = new int[1000];
 	static int[] anIntArray3061 = new int[] { 44, 45, 46, 47, 48, 49, 50, 51 };
 	static String[] aStringArray3062 = new String[8];
 	static boolean[] aBoolArray3063 = new boolean[8];
@@ -155,9 +159,9 @@ public final class client extends Applet_Sub1 {
 	static int anInt3066 = 0;
 	static int loginStage = 0;
 	static int anInt3068 = 0;
-	static PacketBuilder loginBuffer = new PacketBuilder(5000);
+	static BitBuffer loginBuffer = new BitBuffer(5000);
 	static int anInt3070 = 0;
-	static Deque[][][] aClass117ArrayArrayArray3071 = new Deque[4][104][104];
+	static Class117[][][] aClass117ArrayArrayArray3071 = new Class117[4][104][104];
 	static int anInt3072 = 0;
 	static boolean[] aBoolArray3073 = new boolean[100];
 	static boolean aBool3074 = false;
@@ -180,10 +184,10 @@ public final class client extends Applet_Sub1 {
 	static int anInt3091 = 0;
 	static int anInt3092 = 0;
 	static int[] anIntArray3093 = new int[anInt3030 * -475281231];
-	public static Hashtable overridedInterfaces = new Hashtable(8);
+	static Class127 aClass127_3094 = new Class127(8);
 	static int anInt3095 = 0;
 	static int anInt3096 = 0;
-	static RSInterface aClass116_Sub15_3097 = null;
+	static Class116_Sub15 aClass116_Sub15_3097 = null;
 	static int anInt3098 = 0;
 	static int anInt3099 = 0;
 	static int playerRights = 0;
@@ -192,8 +196,8 @@ public final class client extends Applet_Sub1 {
 	static Class108 aClass108_3103 = new Class108();
 	static boolean aBool3104 = false;
 	static int anInt3105 = 1739605141;
-	static RSInterface aClass116_Sub15_3106 = null;
-	static RSInterface aClass116_Sub15_3107 = null;
+	static Class116_Sub15 aClass116_Sub15_3106 = null;
+	static Class116_Sub15 aClass116_Sub15_3107 = null;
 	static int[] anIntArray3108 = new int[25];
 	static int anInt3109 = 0;
 	static int anInt3110 = 0;
@@ -218,10 +222,10 @@ public final class client extends Applet_Sub1 {
 	static int anInt3129 = 0;
 	static int[] anIntArray3130 = new int[128];
 	static int anInt3131 = 0;
-	static Deque aClass117_3132 = new Deque();
-	static Deque aClass117_3133 = new Deque();
-	static Deque aClass117_3134 = new Deque();
-	static Hashtable aHashtable_3135 = new Hashtable(512);
+	static Class117 aClass117_3132 = new Class117();
+	static Class117 aClass117_3133 = new Class117();
+	static Class117 aClass117_3134 = new Class117();
+	static Class127 aClass127_3135 = new Class127(512);
 	static int anInt3136 = 0;
 	static int anInt3137 = 0;
 	static Class43 aClass43_3138 = Class43.aClass43_577;
@@ -240,7 +244,7 @@ public final class client extends Applet_Sub1 {
 	static int anInt3151 = 0;
 	static int anInt3152 = 0;
 	static int anInt3153 = 416103202;
-	static long[] msgUid = new long[100];
+	static long[] aLongArray3154 = new long[100];
 	static int anInt3155 = 0;
 	static int anInt3156 = 0;
 	static int anInt3157 = 0;
@@ -248,7 +252,7 @@ public final class client extends Applet_Sub1 {
 	static boolean aBool3159 = false;
 	static int anInt3160 = -233464314;
 	static String currentClanOwner = null;
-	static Deque aClass117_3162 = new Deque();
+	static Class117 aClass117_3162 = new Class117();
 	static int anInt3163 = -1008529911;
 	static int anInt3164 = 0;
 	static int[] anIntArray3165 = new int[1000];
@@ -268,7 +272,7 @@ public final class client extends Applet_Sub1 {
 	static int anInt3179 = 0;
 	static int[] anIntArray3180 = new int[50];
 	static Sounds[] aClass15Array3181 = new Sounds[50];
-	static int loginStep = 0;
+	static int anInt3182 = 0;
 	static int anInt3183;
 	static String[] aStringArray3184 = new String[500];
 	static int[] anIntArray3185 = new int[5];
@@ -290,13 +294,13 @@ public final class client extends Applet_Sub1 {
 	static String aString3201 = null;
 	static int anInt3202 = 1955793445;
 	static int anInt3203 = 0;
-	static RelationList[] aClass50Array3204 = new RelationList[400];
-	static Queue friendList = new Queue();
+	static Class50[] aClass50Array3204 = new Class50[400];
+	static FriendsList friendList = new FriendsList();
 	static int anInt3206 = 0;
-	static Ignore[] aClass24Array3207 = new Ignore[400];
+	static Class24[] aClass24Array3207 = new Class24[400];
 	static int anInt3208 = 0;
 	static int anInt3209 = 1984302057;
-	static RSInterface aClass116_Sub15_3210 = null;
+	static Class116_Sub15 aClass116_Sub15_3210 = null;
 	static Class135[] aClass135Array3211 = new Class135[8];
 	static long aLong3212 = -2086566510266153657L;
 	static int anInt3213 = -719576605;
@@ -319,7 +323,7 @@ public final class client extends Applet_Sub1 {
 				if (null != var5) {
 					switch (Integer.parseInt(var4.aString1544)) {
 					case 1:
-						GameInterface.anInt1816 = Integer.parseInt(var5) * -1162103955;
+						Class116_Sub11.anInt1816 = Integer.parseInt(var5) * -1162103955;
 						break;
 					case 2:
 						anInt2938 = Integer.parseInt(var5) * 2086765149;
@@ -348,7 +352,7 @@ public final class client extends Applet_Sub1 {
 						Class26.aClass87_364 = var10;
 						break;
 					case 4:
-						worldListAddress = var5;
+						aString2939 = var5;
 					case 5:
 					case 9:
 					default:
@@ -368,12 +372,12 @@ public final class client extends Applet_Sub1 {
 						anInt3020 = Integer.parseInt(var5) * -231061311;
 						break;
 					case 11:
-						aClass88_3039 = (GameType) Class35.method646(RSInputStream.method1021(545495947),
+						aClass88_3039 = (GameType) Class35.method646(Class71.method1021(545495947),
 								Integer.parseInt(var5), (byte) -9);
 						if (GameType.aClass88_1033 == aClass88_3039) {
-							Class59_Sub1.aClass143_1831 = ClanRank.aClass143_1636;
+							Class59_Sub1.aClass143_1831 = Class143.aClass143_1636;
 						} else {
-							Class59_Sub1.aClass143_1831 = ClanRank.aClass143_1643;
+							Class59_Sub1.aClass143_1831 = Class143.aClass143_1643;
 						}
 						break;
 					case 12:
@@ -393,7 +397,7 @@ public final class client extends Applet_Sub1 {
 			}
 
 			Class91.method1200(338654022);
-			World.aString386 = this.getCodeBase().getHost();
+			Class27.aString386 = this.getCodeBase().getHost();
 			String var12 = Class26.aClass87_364.aString1024;
 			byte var13 = 0;
 
@@ -427,7 +431,7 @@ public final class client extends Applet_Sub1 {
 				} else {
 					Class128.aClass116_Sub4_Sub4_1576.method3075(903708083);
 					Class128.aClass116_Sub4_Sub4_1576.method3017((byte) -42);
-					if (null != Class128.aRSIndex_1575) {
+					if (null != Class128.aClass99_1575) {
 						Class128.anInt1574 = 650597230;
 					} else {
 						Class128.anInt1574 = 0;
@@ -443,7 +447,7 @@ public final class client extends Applet_Sub1 {
 			Class128.anInt1574 = 0;
 			Class98.aClass116_Sub18_1381 = null;
 			Class116_Sub23_Sub18.aClass14_2478 = null;
-			Class128.aRSIndex_1575 = null;
+			Class128.aClass99_1575 = null;
 		}
 
 		Class42.method695((byte) 57);
@@ -454,8 +458,8 @@ public final class client extends Applet_Sub1 {
 			Class85.anInt991 = 52838135 * Class85.anInt995;
 			Class85.anInt992 = 2128944719 * Class85.anInt989;
 			Class85.anInt997 = Class85.anInt993 * 389487305;
-			Class85.clickAreaX = 1773102805 * Class85.anInt1003;
-			Class85.clickAreaY = Class85.anInt990 * 1659422169;
+			Class85.anInt998 = 1773102805 * Class85.anInt1003;
+			Class85.anInt999 = Class85.anInt990 * 1659422169;
 			Class85.aLong1000 = -1772624683215344831L * Class85.aLong985;
 			Class85.anInt993 = 0;
 		}
@@ -465,21 +469,21 @@ public final class client extends Applet_Sub1 {
 			anInt3131 = 2085925489 * var2;
 		}
 
-		int i2;
-		int value1;
-		int value2;
-		int clanRank;
+		int var3;
+		int interfaceId;
+		int interfaceHash;
+		int var8;
 		int var9;
-		int col;
+		int var10;
 		int var11;
-		int id;
+		int var12;
 		int var13;
 		int var14;
 		int var16;
 		int var17;
 		int var18;
-		int availData;
-		int value3;
+		int var83;
+		int clickThrough;
 		int var114;
 		int var145;
 		if (0 == 846055547 * loginStage) {
@@ -498,22 +502,22 @@ public final class client extends Applet_Sub1 {
 				anInt3078 = 0;
 				boolean var82 = true;
 
-				for (i2 = 0; i2 < Class8.aByteArrayArray127.length; ++i2) {
-					if (Class80.anIntArray920[i2] != -1 && Class8.aByteArrayArray127[i2] == null) {
-						Class8.aByteArrayArray127[i2] = Class59_Sub1.mapFileIndex
-								.getFiles(Class80.anIntArray920[i2], 0, -1585901328);
-						if (null == Class8.aByteArrayArray127[i2]) {
+				for (var3 = 0; var3 < Class8.aByteArrayArray127.length; ++var3) {
+					if (Class80.anIntArray920[var3] != -1 && Class8.aByteArrayArray127[var3] == null) {
+						Class8.aByteArrayArray127[var3] = Class59_Sub1.aClass99_Sub1_1828
+								.method1394(Class80.anIntArray920[var3], 0, -1585901328);
+						if (null == Class8.aByteArrayArray127[var3]) {
 							var82 = false;
 							anInt3078 += 1643775755;
 						}
 					}
 
-					if (Class116_Sub23_Sub6.landscapeArray[i2] != -1
-							&& null == Tile.mapBufferArray[i2]) {
-						Tile.mapBufferArray[i2] = Class59_Sub1.mapFileIndex.getFileData(
-                                Class116_Sub23_Sub6.landscapeArray[i2], 0,
-                                Class116_Sub23_Sub17.reagionXTEAKeys[i2], 2124420900);
-						if (null == Tile.mapBufferArray[i2]) {
+					if (Class116_Sub23_Sub6.anIntArray2282[var3] != -1
+							&& null == Tile.aByteArrayArray1858[var3]) {
+						Tile.aByteArrayArray1858[var3] = Class59_Sub1.aClass99_Sub1_1828.method1352(
+								Class116_Sub23_Sub6.anIntArray2282[var3], 0,
+								Class116_Sub23_Sub17.anIntArrayArray2472[var3], 2124420900);
+						if (null == Tile.aByteArrayArray1858[var3]) {
 							var82 = false;
 							anInt3078 += 1643775755;
 						}
@@ -526,17 +530,17 @@ public final class client extends Applet_Sub1 {
 					anInt2992 = 0;
 					var82 = true;
 
-					for (i2 = 0; i2 < Class8.aByteArrayArray127.length; ++i2) {
-						byte[] var4 = Tile.mapBufferArray[i2];
+					for (var3 = 0; var3 < Class8.aByteArrayArray127.length; ++var3) {
+						byte[] var4 = Tile.aByteArrayArray1858[var3];
 						if (var4 != null) {
-							value1 = 64 * (regionIdArray[i2] >> 8) - Class116_Sub17.anInt2105 * 1426698711;
-							value2 = 64 * (regionIdArray[i2] & 255) - Class33.anInt456 * 714823515;
+							interfaceId = 64 * (anIntArray2995[var3] >> 8) - Class116_Sub17.anInt2105 * 1426698711;
+							interfaceHash = 64 * (anIntArray2995[var3] & 255) - Class33.anInt456 * 714823515;
 							if (dynamicRegion) {
-								value1 = 10;
-								value2 = 10;
+								interfaceId = 10;
+								interfaceHash = 10;
 							}
 
-							var82 &= Class25.method531(var4, value1, value2, (byte) 3);
+							var82 &= Class25.method531(var4, interfaceId, interfaceHash, (byte) 3);
 						}
 					}
 
@@ -551,18 +555,18 @@ public final class client extends Applet_Sub1 {
 						Class42.method695((byte) 61);
 						Timer.method1092((byte) -9);
 						Class42.method695((byte) 121);
-						GameInterface.region.clearTiles();
+						Class116_Sub11.groundItemController.clearTiles();
 						Class42.method695((byte) 110);
 						System.gc();
 
-						for (i2 = 0; i2 < 4; ++i2) {
-							aClass58Array2996[i2].method890(462555413);
+						for (var3 = 0; var3 < 4; ++var3) {
+							aClass58Array2996[var3].method890(462555413);
 						}
 
-						for (i2 = 0; i2 < 4; ++i2) {
-							for (availData = 0; availData < 104; ++availData) {
-								for (value1 = 0; value1 < 104; ++value1) {
-									Class47.aByteArrayArrayArray634[i2][availData][value1] = 0;
+						for (var3 = 0; var3 < 4; ++var3) {
+							for (var83 = 0; var83 < 104; ++var83) {
+								for (interfaceId = 0; interfaceId < 104; ++interfaceId) {
+									Class47.aByteArrayArrayArray634[var3][var83][interfaceId] = 0;
 								}
 							}
 						}
@@ -581,56 +585,56 @@ public final class client extends Applet_Sub1 {
 						Class47.anIntArray629 = new int[104];
 						Class101.anIntArray1409 = new int[104];
 						Class116_Sub23_Sub18.anIntArray2486 = new int[104];
-						i2 = Class8.aByteArrayArray127.length;
+						var3 = Class8.aByteArrayArray127.length;
 
 						for (Class116_Sub8 var84 = (Class116_Sub8) Class116_Sub8.aClass117_1779
-								.getFirst(); var84 != null; var84 = (Class116_Sub8) Class116_Sub8.aClass117_1779
-										.getNext()) {
+								.method1551(); var84 != null; var84 = (Class116_Sub8) Class116_Sub8.aClass117_1779
+										.method1553()) {
 							if (null != var84.aClass116_Sub4_Sub2_1775) {
-								RelationList.aClass116_Sub4_Sub1_673.method2707(var84.aClass116_Sub4_Sub2_1775);
+								Class50.aClass116_Sub4_Sub1_673.method2707(var84.aClass116_Sub4_Sub2_1775);
 								var84.aClass116_Sub4_Sub2_1775 = null;
 							}
 
 							if (var84.aClass116_Sub4_Sub2_1780 != null) {
-								RelationList.aClass116_Sub4_Sub1_673.method2707(var84.aClass116_Sub4_Sub2_1780);
+								Class50.aClass116_Sub4_Sub1_673.method2707(var84.aClass116_Sub4_Sub2_1780);
 								var84.aClass116_Sub4_Sub2_1780 = null;
 							}
 						}
 
-						Class116_Sub8.aClass117_1779.clear();
+						Class116_Sub8.aClass117_1779.method1545();
 						Class85.method1157(true, (byte) -66);
 						if (!dynamicRegion) {
 							byte[] var7;
-							for (availData = 0; availData < i2; ++availData) {
-								value1 = (regionIdArray[availData] >> 8) * 64 - 1426698711 * Class116_Sub17.anInt2105;
-								value2 = 64 * (regionIdArray[availData] & 255) - Class33.anInt456 * 714823515;
-								var7 = Class8.aByteArrayArray127[availData];
+							for (var83 = 0; var83 < var3; ++var83) {
+								interfaceId = (anIntArray2995[var83] >> 8) * 64 - 1426698711 * Class116_Sub17.anInt2105;
+								interfaceHash = 64 * (anIntArray2995[var83] & 255) - Class33.anInt456 * 714823515;
+								var7 = Class8.aByteArrayArray127[var83];
 								if (var7 != null) {
 									Class42.method695((byte) 49);
-									Class106.method1459(var7, value1, value2, 1990031784 * Class22.anInt276 - 48,
-											1403298904 * CacheWorker.anInt1419 - 48, aClass58Array2996, (byte) 1);
+									Class106.method1459(var7, interfaceId, interfaceHash, 1990031784 * Class22.anInt276 - 48,
+											1403298904 * Class102.anInt1419 - 48, aClass58Array2996, (byte) 1);
 								}
 							}
 
-							for (availData = 0; availData < i2; ++availData) {
-								value1 = (regionIdArray[availData] >> 8) * 64 - 1426698711 * Class116_Sub17.anInt2105;
-								value2 = 64 * (regionIdArray[availData] & 255) - Class33.anInt456 * 714823515;
-								var7 = Class8.aByteArrayArray127[availData];
-								if (null == var7 && 1249154187 * CacheWorker.anInt1419 < 800) {
+							for (var83 = 0; var83 < var3; ++var83) {
+								interfaceId = (anIntArray2995[var83] >> 8) * 64 - 1426698711 * Class116_Sub17.anInt2105;
+								interfaceHash = 64 * (anIntArray2995[var83] & 255) - Class33.anInt456 * 714823515;
+								var7 = Class8.aByteArrayArray127[var83];
+								if (null == var7 && 1249154187 * Class102.anInt1419 < 800) {
 									Class42.method695((byte) 19);
-									Class33.method637(value1, value2, 64, 64, 1719974944);
+									Class33.method637(interfaceId, interfaceHash, 64, 64, 1719974944);
 								}
 							}
 
 							Class85.method1157(true, (byte) 0);
 
-							for (availData = 0; availData < i2; ++availData) {
-								byte[] var87 = Tile.mapBufferArray[availData];
+							for (var83 = 0; var83 < var3; ++var83) {
+								byte[] var87 = Tile.aByteArrayArray1858[var83];
 								if (var87 != null) {
-									value2 = 64 * (regionIdArray[availData] >> 8) - Class116_Sub17.anInt2105 * 1426698711;
-									value3 = 64 * (regionIdArray[availData] & 255) - 714823515 * Class33.anInt456;
+									interfaceHash = 64 * (anIntArray2995[var83] >> 8) - Class116_Sub17.anInt2105 * 1426698711;
+									clickThrough = 64 * (anIntArray2995[var83] & 255) - 714823515 * Class33.anInt456;
 									Class42.method695((byte) 57);
-									Class31.method589(var87, value2, value3, GameInterface.region,
+									Class31.method589(var87, interfaceHash, clickThrough, Class116_Sub11.groundItemController,
 											aClass58Array2996, -1871600971);
 								}
 							}
@@ -647,41 +651,41 @@ public final class client extends Applet_Sub1 {
 						int var31;
 						int var32;
 						if (dynamicRegion) {
-							for (availData = 0; availData < 4; ++availData) {
+							for (var83 = 0; var83 < 4; ++var83) {
 								Class42.method695((byte) 4);
 
-								for (value1 = 0; value1 < 13; ++value1) {
-									for (value2 = 0; value2 < 13; ++value2) {
+								for (interfaceId = 0; interfaceId < 13; ++interfaceId) {
+									for (interfaceHash = 0; interfaceHash < 13; ++interfaceHash) {
 										boolean var90 = false;
-										clanRank = anIntArrayArrayArray2998[availData][value1][value2];
-										if (-1 != clanRank) {
-											var9 = clanRank >> 24 & 3;
-											col = clanRank >> 1 & 3;
-											var11 = clanRank >> 14 & 1023;
-											id = clanRank >> 3 & 2047;
-											var13 = (var11 / 8 << 8) + id / 8;
+										var8 = anIntArrayArrayArray2998[var83][interfaceId][interfaceHash];
+										if (-1 != var8) {
+											var9 = var8 >> 24 & 3;
+											var10 = var8 >> 1 & 3;
+											var11 = var8 >> 14 & 1023;
+											var12 = var8 >> 3 & 2047;
+											var13 = (var11 / 8 << 8) + var12 / 8;
 
-											for (var14 = 0; var14 < regionIdArray.length; ++var14) {
-												if (regionIdArray[var14] == var13
+											for (var14 = 0; var14 < anIntArray2995.length; ++var14) {
+												if (anIntArray2995[var14] == var13
 														&& null != Class8.aByteArrayArray127[var14]) {
 													byte[] var15 = Class8.aByteArrayArray127[var14];
-													var16 = value1 * 8;
-													var17 = 8 * value2;
+													var16 = interfaceId * 8;
+													var17 = 8 * interfaceHash;
 													var18 = 8 * (var11 & 7);
-													var19 = (id & 7) * 8;
+													var19 = (var12 & 7) * 8;
 													Class58[] var20 = aClass58Array2996;
 
 													for (var21 = 0; var21 < 8; ++var21) {
 														for (var22 = 0; var22 < 8; ++var22) {
 															if (var16 + var21 > 0 && var16 + var21 < 103
 																	&& var22 + var17 > 0 && var22 + var17 < 103) {
-																var20[availData].anIntArrayArray764[var21 + var16][var22
+																var20[var83].anIntArrayArray764[var21 + var16][var22
 																		+ var17] &= -16777217;
 															}
 														}
 													}
 
-													Packet var151 = new Packet(var15);
+													Buffer var151 = new Buffer(var15);
 
 													for (var22 = 0; var22 < 4; ++var22) {
 														for (var23 = 0; var23 < 64; ++var23) {
@@ -689,10 +693,10 @@ public final class client extends Applet_Sub1 {
 																if (var9 == var22 && var23 >= var18 && var23 < 8 + var18
 																		&& var24 >= var19 && var24 < 8 + var19) {
 																	var27 = var16 + Class116_Sub23_Sub2.method2388(
-																			var23 & 7, var24 & 7, col, (byte) 119);
+																			var23 & 7, var24 & 7, var10, (byte) 119);
 																	var29 = var23 & 7;
 																	var30 = var24 & 7;
-																	var31 = col & 3;
+																	var31 = var10 & 3;
 																	if (var31 == 0) {
 																		var32 = var30;
 																	} else if (1 == var31) {
@@ -703,8 +707,8 @@ public final class client extends Applet_Sub1 {
 																		var32 = var29;
 																	}
 
-																	Class141.method1795(var151, availData, var27,
-																			var17 + var32, 0, 0, col, (byte) -1);
+																	Class141.method1795(var151, var83, var27,
+																			var17 + var32, 0, 0, var10, (byte) -1);
 																} else {
 																	Class141.method1795(var151, 0, -1, -1, 0, 0, 0,
 																			(byte) 12);
@@ -720,42 +724,42 @@ public final class client extends Applet_Sub1 {
 										}
 
 										if (!var90) {
-											RSImageProducer.method1874(availData, value1 * 8, value2 * 8, -1427766149);
+											RSImageProducer.method1874(var83, interfaceId * 8, interfaceHash * 8, -1427766149);
 										}
 									}
 								}
 							}
 
-							for (availData = 0; availData < 13; ++availData) {
-								for (value1 = 0; value1 < 13; ++value1) {
-									value2 = anIntArrayArrayArray2998[0][availData][value1];
-									if (value2 == -1) {
-										Class33.method637(8 * availData, 8 * value1, 8, 8, 1382678139);
+							for (var83 = 0; var83 < 13; ++var83) {
+								for (interfaceId = 0; interfaceId < 13; ++interfaceId) {
+									interfaceHash = anIntArrayArrayArray2998[0][var83][interfaceId];
+									if (interfaceHash == -1) {
+										Class33.method637(8 * var83, 8 * interfaceId, 8, 8, 1382678139);
 									}
 								}
 							}
 
 							Class85.method1157(true, (byte) -22);
 
-							for (availData = 0; availData < 4; ++availData) {
+							for (var83 = 0; var83 < 4; ++var83) {
 								Class42.method695((byte) 23);
 
-								for (value1 = 0; value1 < 13; ++value1) {
-									for (value2 = 0; value2 < 13; ++value2) {
-										value3 = anIntArrayArrayArray2998[availData][value1][value2];
-										if (value3 != -1) {
-											clanRank = value3 >> 24 & 3;
-											var9 = value3 >> 1 & 3;
-											col = value3 >> 14 & 1023;
-											var11 = value3 >> 3 & 2047;
-											id = var11 / 8 + (col / 8 << 8);
+								for (interfaceId = 0; interfaceId < 13; ++interfaceId) {
+									for (interfaceHash = 0; interfaceHash < 13; ++interfaceHash) {
+										clickThrough = anIntArrayArrayArray2998[var83][interfaceId][interfaceHash];
+										if (clickThrough != -1) {
+											var8 = clickThrough >> 24 & 3;
+											var9 = clickThrough >> 1 & 3;
+											var10 = clickThrough >> 14 & 1023;
+											var11 = clickThrough >> 3 & 2047;
+											var12 = var11 / 8 + (var10 / 8 << 8);
 
-											for (var13 = 0; var13 < regionIdArray.length; ++var13) {
-												if (id == regionIdArray[var13]
-														&& Tile.mapBufferArray[var13] != null) {
-													Class107.method1465(Tile.mapBufferArray[var13],
-															availData, value1 * 8, 8 * value2, clanRank, 8 * (col & 7),
-															(var11 & 7) * 8, var9, GameInterface.region,
+											for (var13 = 0; var13 < anIntArray2995.length; ++var13) {
+												if (var12 == anIntArray2995[var13]
+														&& Tile.aByteArrayArray1858[var13] != null) {
+													Class107.method1465(Tile.aByteArrayArray1858[var13],
+															var83, interfaceId * 8, 8 * interfaceHash, var8, 8 * (var10 & 7),
+															(var11 & 7) * 8, var9, Class116_Sub11.groundItemController,
 															aClass58Array2996, -422893524);
 													break;
 												}
@@ -769,20 +773,20 @@ public final class client extends Applet_Sub1 {
 						Class85.method1157(true, (byte) -88);
 						Timer.method1092((byte) 19);
 						Class42.method695((byte) 120);
-						Region var92 = GameInterface.region;
+						GroundController var92 = Class116_Sub11.groundItemController;
 						Class58[] var93 = aClass58Array2996;
 
-						for (value2 = 0; value2 < 4; ++value2) {
-							for (value3 = 0; value3 < 104; ++value3) {
-								for (clanRank = 0; clanRank < 104; ++clanRank) {
-									if ((Class47.aByteArrayArrayArray634[value2][value3][clanRank] & 1) == 1) {
-										var9 = value2;
-										if (2 == (Class47.aByteArrayArrayArray634[1][value3][clanRank] & 2)) {
-											var9 = value2 - 1;
+						for (interfaceHash = 0; interfaceHash < 4; ++interfaceHash) {
+							for (clickThrough = 0; clickThrough < 104; ++clickThrough) {
+								for (var8 = 0; var8 < 104; ++var8) {
+									if ((Class47.aByteArrayArrayArray634[interfaceHash][clickThrough][var8] & 1) == 1) {
+										var9 = interfaceHash;
+										if (2 == (Class47.aByteArrayArrayArray634[1][clickThrough][var8] & 2)) {
+											var9 = interfaceHash - 1;
 										}
 
 										if (var9 >= 0) {
-											var93[var9].method858(value3, clanRank, -1767893563);
+											var93[var9].method858(clickThrough, var8, -1767893563);
 										}
 									}
 								}
@@ -807,17 +811,17 @@ public final class client extends Applet_Sub1 {
 							Class47.anInt639 = 1780059792;
 						}
 
-						for (value2 = 0; value2 < 4; ++value2) {
-							byte[][] var95 = Class47.aByteArrayArrayArray627[value2];
+						for (interfaceHash = 0; interfaceHash < 4; ++interfaceHash) {
+							byte[][] var95 = Class47.aByteArrayArrayArray627[interfaceHash];
 							var13 = (int) Math.sqrt(5100.0D);
 							var14 = var13 * 768 >> 8;
 
 							for (var114 = 1; var114 < 103; ++var114) {
 								for (var16 = 1; var16 < 103; ++var16) {
-									var17 = Class47.anIntArrayArrayArray635[value2][1 + var16][var114]
-											- Class47.anIntArrayArrayArray635[value2][var16 - 1][var114];
-									var18 = Class47.anIntArrayArrayArray635[value2][var16][1 + var114]
-											- Class47.anIntArrayArrayArray635[value2][var16][var114 - 1];
+									var17 = Class47.anIntArrayArrayArray635[interfaceHash][1 + var16][var114]
+											- Class47.anIntArrayArrayArray635[interfaceHash][var16 - 1][var114];
+									var18 = Class47.anIntArrayArrayArray635[interfaceHash][var16][1 + var114]
+											- Class47.anIntArrayArrayArray635[interfaceHash][var16][var114 - 1];
 									var19 = (int) Math.sqrt((double) (var18 * var18 + var17 * var17 + 65536));
 									var145 = (var17 << 8) / var19;
 									var21 = 65536 / var19;
@@ -842,10 +846,10 @@ public final class client extends Applet_Sub1 {
 								for (var16 = 0; var16 < 104; ++var16) {
 									var17 = 5 + var114;
 									if (var17 >= 0 && var17 < 104) {
-										var18 = client.aByteArrayArrayArray1614[value2][var17][var16] & 255;
+										var18 = client.aByteArrayArrayArray1614[interfaceHash][var17][var16] & 255;
 										if (var18 > 0) {
-											Flo var143 = GameInterface.method1974(var18 - 1,
-                                                    -1048537678);
+											Flo var143 = Class116_Sub11.method1974(var18 - 1,
+													-1048537678);
 											Speach.anIntArray981[var16] += var143.anInt2299 * -389568753;
 											Class62.anIntArray800[var16] += 1757454653 * var143.anInt2303;
 											Class47.anIntArray629[var16] += var143.anInt2300 * 789203561;
@@ -856,10 +860,10 @@ public final class client extends Applet_Sub1 {
 
 									var18 = var114 - 5;
 									if (var18 >= 0 && var18 < 104) {
-										var19 = client.aByteArrayArrayArray1614[value2][var18][var16] & 255;
+										var19 = client.aByteArrayArrayArray1614[interfaceHash][var18][var16] & 255;
 										if (var19 > 0) {
-											Flo var146 = GameInterface.method1974(var19 - 1,
-                                                    -1533837593);
+											Flo var146 = Class116_Sub11.method1974(var19 - 1,
+													-1533837593);
 											Speach.anIntArray981[var16] -= var146.anInt2299 * -389568753;
 											Class62.anIntArray800[var16] -= var146.anInt2303 * 1757454653;
 											Class47.anIntArray629[var16] -= 789203561 * var146.anInt2300;
@@ -897,19 +901,19 @@ public final class client extends Applet_Sub1 {
 
 										if (var21 >= 1 && var21 < 103 && (!aBool2937
 												|| 0 != (Class47.aByteArrayArrayArray634[0][var114][var21] & 2)
-												|| (Class47.aByteArrayArrayArray634[value2][var114][var21] & 16) == 0)) {
-											if (value2 < Class47.anInt638 * -1263368093) {
-												Class47.anInt638 = value2 * -241419957;
+												|| (Class47.aByteArrayArrayArray634[interfaceHash][var114][var21] & 16) == 0)) {
+											if (interfaceHash < Class47.anInt638 * -1263368093) {
+												Class47.anInt638 = interfaceHash * -241419957;
 											}
 
-											var24 = client.aByteArrayArrayArray1614[value2][var114][var21] & 255;
-											int var25 = Class47.aByteArrayArrayArray626[value2][var114][var21] & 255;
+											var24 = client.aByteArrayArrayArray1614[interfaceHash][var114][var21] & 255;
+											int var25 = Class47.aByteArrayArrayArray626[interfaceHash][var114][var21] & 255;
 											if (var24 > 0 || var25 > 0) {
-												int var26 = Class47.anIntArrayArrayArray635[value2][var114][var21];
-												var27 = Class47.anIntArrayArrayArray635[value2][var114 + 1][var21];
-												int var28 = Class47.anIntArrayArrayArray635[value2][var114 + 1][var21
+												int var26 = Class47.anIntArrayArrayArray635[interfaceHash][var114][var21];
+												var27 = Class47.anIntArrayArrayArray635[interfaceHash][var114 + 1][var21];
+												int var28 = Class47.anIntArrayArrayArray635[interfaceHash][var114 + 1][var21
 														+ 1];
-												var32 = Class47.anIntArrayArrayArray635[value2][var114][var21 + 1];
+												var32 = Class47.anIntArrayArrayArray635[interfaceHash][var114][var21 + 1];
 												var29 = Class47.anIntArrayArray642[var114][var21];
 												var30 = Class47.anIntArrayArray642[1 + var114][var21];
 												var31 = Class47.anIntArrayArray642[1 + var114][var21 + 1];
@@ -922,7 +926,7 @@ public final class client extends Applet_Sub1 {
 													var36 = 256 * var16 / var19;
 													var37 = var17 / var145;
 													int var38 = var18 / var145;
-													var34 = RSFIT.method1035(var36, var37, var38, 599723067);
+													var34 = Class73.method1035(var36, var37, var38, 599723067);
 													var36 = var36 + Class47.anInt628 * -1833492449 & 255;
 													var38 += 1969012569 * Class47.anInt639;
 													if (var38 < 0) {
@@ -931,13 +935,13 @@ public final class client extends Applet_Sub1 {
 														var38 = 255;
 													}
 
-													var35 = RSFIT.method1035(var36, var37, var38, 508398812);
+													var35 = Class73.method1035(var36, var37, var38, 508398812);
 												}
 
-												if (value2 > 0) {
+												if (interfaceHash > 0) {
 													boolean var179 = true;
 													if (0 == var24
-															&& 0 != Class116_Sub23_Sub7.aByteArrayArrayArray2291[value2][var114][var21]) {
+															&& 0 != Class116_Sub23_Sub7.aByteArrayArrayArray2291[interfaceHash][var114][var21]) {
 														var179 = false;
 													}
 
@@ -947,7 +951,7 @@ public final class client extends Applet_Sub1 {
 													}
 
 													if (var179 && var26 == var27 && var26 == var28 && var26 == var32) {
-														Class47.anIntArrayArrayArray630[value2][var114][var21] |= 2340;
+														Class47.anIntArrayArrayArray630[interfaceHash][var114][var21] |= 2340;
 													}
 												}
 
@@ -958,7 +962,7 @@ public final class client extends Applet_Sub1 {
 												}
 
 												if (0 == var25) {
-													var92.method350(value2, var114, var21, 0, 0, -1, var26, var27, var28,
+													var92.method350(interfaceHash, var114, var21, 0, 0, -1, var26, var27, var28,
 															var32, Class98.method1344(var34, var29, (byte) 15),
 															Class98.method1344(var34, var30, (byte) 15),
 															Class98.method1344(var34, var31, (byte) 15),
@@ -966,8 +970,8 @@ public final class client extends Applet_Sub1 {
 															var36, 0);
 												} else {
 													var37 = 1
-															+ Class116_Sub23_Sub7.aByteArrayArrayArray2291[value2][var114][var21];
-													byte var180 = Class60.aByteArrayArrayArray780[value2][var114][var21];
+															+ Class116_Sub23_Sub7.aByteArrayArrayArray2291[interfaceHash][var114][var21];
+													byte var180 = Class60.aByteArrayArrayArray780[interfaceHash][var114][var21];
 													Class116_Sub23_Sub12 var39 = Class9.method193(var25 - 1, (byte) -1);
 													int var40 = var39.anInt2405 * 1261368579;
 													int var41;
@@ -983,9 +987,9 @@ public final class client extends Applet_Sub1 {
 														var40 = -1;
 														var41 = -2;
 													} else {
-														var42 = RSFIT.method1035(-491020635 * var39.anInt2414,
-                                                                var39.anInt2407 * -958248725,
-                                                                1921798311 * var39.anInt2413, 1107209710);
+														var42 = Class73.method1035(-491020635 * var39.anInt2414,
+																var39.anInt2407 * -958248725,
+																1921798311 * var39.anInt2413, 1107209710);
 														var43 = Class47.anInt628 * -1833492449
 																+ -491020635 * var39.anInt2414 & 255;
 														var44 = Class47.anInt639 * 1969012569
@@ -996,8 +1000,8 @@ public final class client extends Applet_Sub1 {
 															var44 = 255;
 														}
 
-														var41 = RSFIT.method1035(var43, -958248725 * var39.anInt2407,
-                                                                var44, 79641394);
+														var41 = Class73.method1035(var43, -958248725 * var39.anInt2407,
+																var44, 79641394);
 													}
 
 													var43 = 0;
@@ -1017,13 +1021,13 @@ public final class client extends Applet_Sub1 {
 															var45 = 255;
 														}
 
-														var41 = RSFIT.method1035(var44, -285023507 * var39.anInt2415,
-                                                                var45, 1688802341);
+														var41 = Class73.method1035(var44, -285023507 * var39.anInt2415,
+																var45, 1688802341);
 														var43 = Texture.anIntArray2714[Class39
 																.method684(var41, 96, -198695545)];
 													}
 
-													var92.method350(value2, var114, var21, var37, var180, var40, var26,
+													var92.method350(interfaceHash, var114, var21, var37, var180, var40, var26,
 															var27, var28, var32,
 															Class98.method1344(var34, var29, (byte) 15),
 															Class98.method1344(var34, var30, (byte) 15),
@@ -1042,64 +1046,64 @@ public final class client extends Applet_Sub1 {
 
 							for (var114 = 1; var114 < 103; ++var114) {
 								for (var16 = 1; var16 < 103; ++var16) {
-									var92.method440(value2, var16, var114,
-											RuntimeException_Sub1.method3446(value2, var16, var114, -431635258));
+									var92.method440(interfaceHash, var16, var114,
+											RuntimeException_Sub1.method3446(interfaceHash, var16, var114, -431635258));
 								}
 							}
 
-							client.aByteArrayArrayArray1614[value2] = (byte[][]) null;
-							Class47.aByteArrayArrayArray626[value2] = (byte[][]) null;
-							Class116_Sub23_Sub7.aByteArrayArrayArray2291[value2] = (byte[][]) null;
-							Class60.aByteArrayArrayArray780[value2] = (byte[][]) null;
-							Class47.aByteArrayArrayArray627[value2] = (byte[][]) null;
+							client.aByteArrayArrayArray1614[interfaceHash] = (byte[][]) null;
+							Class47.aByteArrayArrayArray626[interfaceHash] = (byte[][]) null;
+							Class116_Sub23_Sub7.aByteArrayArrayArray2291[interfaceHash] = (byte[][]) null;
+							Class60.aByteArrayArrayArray780[interfaceHash] = (byte[][]) null;
+							Class47.aByteArrayArrayArray627[interfaceHash] = (byte[][]) null;
 						}
 
 						var92.method466(-50, -10, -50);
 
-						for (value2 = 0; value2 < 104; ++value2) {
-							for (value3 = 0; value3 < 104; ++value3) {
-								if ((Class47.aByteArrayArrayArray634[1][value2][value3] & 2) == 2) {
-									var92.method376(value2, value3);
+						for (interfaceHash = 0; interfaceHash < 104; ++interfaceHash) {
+							for (clickThrough = 0; clickThrough < 104; ++clickThrough) {
+								if ((Class47.aByteArrayArrayArray634[1][interfaceHash][clickThrough] & 2) == 2) {
+									var92.method376(interfaceHash, clickThrough);
 								}
 							}
 						}
 
-						value2 = 1;
-						value3 = 2;
-						clanRank = 4;
+						interfaceHash = 1;
+						clickThrough = 2;
+						var8 = 4;
 
 						for (var9 = 0; var9 < 4; ++var9) {
 							if (var9 > 0) {
-								value2 <<= 3;
-								value3 <<= 3;
-								clanRank <<= 3;
+								interfaceHash <<= 3;
+								clickThrough <<= 3;
+								var8 <<= 3;
 							}
 
-							for (col = 0; col <= var9; ++col) {
+							for (var10 = 0; var10 <= var9; ++var10) {
 								for (var11 = 0; var11 <= 104; ++var11) {
-									for (id = 0; id <= 104; ++id) {
+									for (var12 = 0; var12 <= 104; ++var12) {
 										short var147;
-										if ((Class47.anIntArrayArrayArray630[col][id][var11] & value2) != 0) {
+										if ((Class47.anIntArrayArrayArray630[var10][var12][var11] & interfaceHash) != 0) {
 											var13 = var11;
 											var14 = var11;
-											var114 = col;
+											var114 = var10;
 
-											for (var16 = col; var13 > 0
-													&& (Class47.anIntArrayArrayArray630[col][id][var13 - 1]
-															& value2) != 0; --var13) {
+											for (var16 = var10; var13 > 0
+													&& (Class47.anIntArrayArrayArray630[var10][var12][var13 - 1]
+															& interfaceHash) != 0; --var13) {
 												;
 											}
 
 											while (var14 < 104
-													&& (Class47.anIntArrayArrayArray630[col][id][var14 + 1]
-															& value2) != 0) {
+													&& (Class47.anIntArrayArrayArray630[var10][var12][var14 + 1]
+															& interfaceHash) != 0) {
 												++var14;
 											}
 
 											label3175: while (var114 > 0) {
 												for (var17 = var13; var17 <= var14; ++var17) {
-													if (0 == (Class47.anIntArrayArrayArray630[var114 - 1][id][var17]
-															& value2)) {
+													if (0 == (Class47.anIntArrayArrayArray630[var114 - 1][var12][var17]
+															& interfaceHash)) {
 														break label3175;
 													}
 												}
@@ -1109,8 +1113,8 @@ public final class client extends Applet_Sub1 {
 
 											label3186: while (var16 < var9) {
 												for (var17 = var13; var17 <= var14; ++var17) {
-													if ((Class47.anIntArrayArrayArray630[1 + var16][id][var17]
-															& value2) == 0) {
+													if ((Class47.anIntArrayArrayArray630[1 + var16][var12][var17]
+															& interfaceHash) == 0) {
 														break label3186;
 													}
 												}
@@ -1121,40 +1125,40 @@ public final class client extends Applet_Sub1 {
 											var17 = (var16 + 1 - var114) * (var14 - var13 + 1);
 											if (var17 >= 8) {
 												var147 = 240;
-												var19 = Class47.anIntArrayArrayArray635[var16][id][var13] - var147;
-												var145 = Class47.anIntArrayArrayArray635[var114][id][var13];
-												Region.method408(var9, 1, 128 * id, 128 * id, var13 * 128,
+												var19 = Class47.anIntArrayArrayArray635[var16][var12][var13] - var147;
+												var145 = Class47.anIntArrayArrayArray635[var114][var12][var13];
+												GroundController.method408(var9, 1, 128 * var12, 128 * var12, var13 * 128,
                                                         128 + 128 * var14, var19, var145);
 
 												for (var21 = var114; var21 <= var16; ++var21) {
 													for (var22 = var13; var22 <= var14; ++var22) {
-														Class47.anIntArrayArrayArray630[var21][id][var22] &= ~value2;
+														Class47.anIntArrayArrayArray630[var21][var12][var22] &= ~interfaceHash;
 													}
 												}
 											}
 										}
 
-										if ((Class47.anIntArrayArrayArray630[col][id][var11] & value3) != 0) {
-											var13 = id;
-											var14 = id;
-											var114 = col;
+										if ((Class47.anIntArrayArrayArray630[var10][var12][var11] & clickThrough) != 0) {
+											var13 = var12;
+											var14 = var12;
+											var114 = var10;
 
-											for (var16 = col; var13 > 0
-													&& 0 != (Class47.anIntArrayArrayArray630[col][var13 - 1][var11]
-															& value3); --var13) {
+											for (var16 = var10; var13 > 0
+													&& 0 != (Class47.anIntArrayArrayArray630[var10][var13 - 1][var11]
+															& clickThrough); --var13) {
 												;
 											}
 
 											while (var14 < 104
-													&& 0 != (Class47.anIntArrayArrayArray630[col][var14 + 1][var11]
-															& value3)) {
+													&& 0 != (Class47.anIntArrayArrayArray630[var10][var14 + 1][var11]
+															& clickThrough)) {
 												++var14;
 											}
 
 											label3224: while (var114 > 0) {
 												for (var17 = var13; var17 <= var14; ++var17) {
 													if ((Class47.anIntArrayArrayArray630[var114 - 1][var17][var11]
-															& value3) == 0) {
+															& clickThrough) == 0) {
 														break label3224;
 													}
 												}
@@ -1165,7 +1169,7 @@ public final class client extends Applet_Sub1 {
 											label3235: while (var16 < var9) {
 												for (var17 = var13; var17 <= var14; ++var17) {
 													if ((Class47.anIntArrayArrayArray630[1 + var16][var17][var11]
-															& value3) == 0) {
+															& clickThrough) == 0) {
 														break label3235;
 													}
 												}
@@ -1178,38 +1182,38 @@ public final class client extends Applet_Sub1 {
 												var147 = 240;
 												var19 = Class47.anIntArrayArrayArray635[var16][var13][var11] - var147;
 												var145 = Class47.anIntArrayArrayArray635[var114][var13][var11];
-												Region.method408(var9, 2, 128 * var13, var14 * 128 + 128, 128 * var11,
+												GroundController.method408(var9, 2, 128 * var13, var14 * 128 + 128, 128 * var11,
                                                         var11 * 128, var19, var145);
 
 												for (var21 = var114; var21 <= var16; ++var21) {
 													for (var22 = var13; var22 <= var14; ++var22) {
-														Class47.anIntArrayArrayArray630[var21][var22][var11] &= ~value3;
+														Class47.anIntArrayArrayArray630[var21][var22][var11] &= ~clickThrough;
 													}
 												}
 											}
 										}
 
-										if ((Class47.anIntArrayArrayArray630[col][id][var11] & clanRank) != 0) {
-											var13 = id;
-											var14 = id;
+										if ((Class47.anIntArrayArrayArray630[var10][var12][var11] & var8) != 0) {
+											var13 = var12;
+											var14 = var12;
 											var114 = var11;
 
 											for (var16 = var11; var114 > 0
-													&& (Class47.anIntArrayArrayArray630[col][id][var114 - 1]
-															& clanRank) != 0; --var114) {
+													&& (Class47.anIntArrayArrayArray630[var10][var12][var114 - 1]
+															& var8) != 0; --var114) {
 												;
 											}
 
 											while (var16 < 104
-													&& (Class47.anIntArrayArrayArray630[col][id][var16 + 1]
-															& clanRank) != 0) {
+													&& (Class47.anIntArrayArrayArray630[var10][var12][var16 + 1]
+															& var8) != 0) {
 												++var16;
 											}
 
 											label3274: while (var13 > 0) {
 												for (var17 = var114; var17 <= var16; ++var17) {
-													if ((Class47.anIntArrayArrayArray630[col][var13 - 1][var17]
-															& clanRank) == 0) {
+													if ((Class47.anIntArrayArrayArray630[var10][var13 - 1][var17]
+															& var8) == 0) {
 														break label3274;
 													}
 												}
@@ -1219,8 +1223,8 @@ public final class client extends Applet_Sub1 {
 
 											label3285: while (var14 < 104) {
 												for (var17 = var114; var17 <= var16; ++var17) {
-													if (0 == (Class47.anIntArrayArrayArray630[col][var14 + 1][var17]
-															& clanRank)) {
+													if (0 == (Class47.anIntArrayArrayArray630[var10][var14 + 1][var17]
+															& var8)) {
 														break label3285;
 													}
 												}
@@ -1229,13 +1233,13 @@ public final class client extends Applet_Sub1 {
 											}
 
 											if ((1 + (var14 - var13)) * (1 + (var16 - var114)) >= 4) {
-												var17 = Class47.anIntArrayArrayArray635[col][var13][var114];
-												Region.method408(var9, 4, 128 * var13, 128 * var14 + 128, var114 * 128,
+												var17 = Class47.anIntArrayArrayArray635[var10][var13][var114];
+												GroundController.method408(var9, 4, 128 * var13, 128 * var14 + 128, var114 * 128,
                                                         128 + 128 * var16, var17, var17);
 
 												for (var18 = var13; var18 <= var14; ++var18) {
 													for (var19 = var114; var19 <= var16; ++var19) {
-														Class47.anIntArrayArrayArray630[col][var18][var19] &= ~clanRank;
+														Class47.anIntArrayArrayArray630[var10][var18][var19] &= ~var8;
 													}
 												}
 											}
@@ -1246,31 +1250,31 @@ public final class client extends Applet_Sub1 {
 						}
 
 						Class85.method1157(true, (byte) -87);
-						value2 = Class47.anInt638 * -1263368093;
-						if (value2 > -747958745 * GameInterface.anInt1819) {
-							value2 = -747958745 * GameInterface.anInt1819;
+						interfaceHash = Class47.anInt638 * -1263368093;
+						if (interfaceHash > -747958745 * Class116_Sub11.anInt1819) {
+							interfaceHash = -747958745 * Class116_Sub11.anInt1819;
 						}
 
-						if (value2 < GameInterface.anInt1819 * -747958745 - 1) {
-							value2 = -747958745 * GameInterface.anInt1819 - 1;
+						if (interfaceHash < Class116_Sub11.anInt1819 * -747958745 - 1) {
+							interfaceHash = -747958745 * Class116_Sub11.anInt1819 - 1;
 						}
 
 						if (aBool2937) {
-							GameInterface.region.method347(Class47.anInt638 * -1263368093);
+							Class116_Sub11.groundItemController.method347(Class47.anInt638 * -1263368093);
 						} else {
-							GameInterface.region.method347(0);
+							Class116_Sub11.groundItemController.method347(0);
 						}
 
-						for (value3 = 0; value3 < 104; ++value3) {
-							for (clanRank = 0; clanRank < 104; ++clanRank) {
-								Class37.method672(value3, clanRank, -781684645);
+						for (clickThrough = 0; clickThrough < 104; ++clickThrough) {
+							for (var8 = 0; var8 < 104; ++var8) {
+								Class37.method672(clickThrough, var8, -781684645);
 							}
 						}
 
 						Class42.method695((byte) 119);
 
 						for (Class116_Sub12 var99 = (Class116_Sub12) aClass117_3162
-								.getFirst(); null != var99; var99 = (Class116_Sub12) aClass117_3162.getNext()) {
+								.method1551(); null != var99; var99 = (Class116_Sub12) aClass117_3162.method1553()) {
 							if (var99.anInt1846 * 1030491605 == -1) {
 								var99.anInt1845 = 0;
 								Class51.method784(var99, -1072094094);
@@ -1286,17 +1290,17 @@ public final class client extends Applet_Sub1 {
 						}
 
 						if (!dynamicRegion) {
-							value3 = (-1361858763 * Class22.anInt276 - 6) / 8;
-							clanRank = (6 + -1361858763 * Class22.anInt276) / 8;
-							var9 = (CacheWorker.anInt1419 * 1249154187 - 6) / 8;
-							col = (6 + 1249154187 * CacheWorker.anInt1419) / 8;
+							clickThrough = (-1361858763 * Class22.anInt276 - 6) / 8;
+							var8 = (6 + -1361858763 * Class22.anInt276) / 8;
+							var9 = (Class102.anInt1419 * 1249154187 - 6) / 8;
+							var10 = (6 + 1249154187 * Class102.anInt1419) / 8;
 
-							for (var11 = value3 - 1; var11 <= clanRank + 1; ++var11) {
-								for (id = var9 - 1; id <= 1 + col; ++id) {
-									if (var11 < value3 || var11 > clanRank || id < var9 || id > col) {
-										Class59_Sub1.mapFileIndex.method1371("m" + var11 + "_" + id,
+							for (var11 = clickThrough - 1; var11 <= var8 + 1; ++var11) {
+								for (var12 = var9 - 1; var12 <= 1 + var10; ++var12) {
+									if (var11 < clickThrough || var11 > var8 || var12 < var9 || var12 > var10) {
+										Class59_Sub1.aClass99_Sub1_1828.method1371("m" + var11 + "_" + var12,
 												(byte) -3);
-										Class59_Sub1.mapFileIndex.method1371("l" + var11 + "_" + id,
+										Class59_Sub1.aClass99_Sub1_1828.method1371("l" + var11 + "_" + var12,
 												(byte) -15);
 									}
 								}
@@ -1338,161 +1342,162 @@ public final class client extends Applet_Sub1 {
 				long key;
 				boolean var85;
 				String var94;
-				RSInterface var121;
+				Class116_Sub15 var121;
 				for (var2 = 0; var2 < 100; ++var2) {
-					if (null == Class38.streamBuffer) {
+					if (null == Class38.bufferIn) {
 						var85 = false;
 					} else {
-						readBuffer: {
+						label3092: {
 							try {
-								availData = Class38.streamBuffer.readableBytes((byte) -24);
-								if (0 == availData) {
+								var83 = Class38.bufferIn.method1004((byte) -24);
+								if (0 == var83) {
 									var85 = false;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode == -1) {
-									Class38.streamBuffer.readBytes(packetBuffer.payload, 0, 1, 615894679);
-									packetBuffer.position = 0;
-									currentOpcode = packetBuffer.method2955((byte) 112);
-									packetLength = 260863215 * Class114.anIntArray1513[currentOpcode];
-									--availData;
+								if (793368497 * currentOpcode == -1) {
+									Class38.bufferIn.method1005(bitBuffer.payload, 0, 1, 615894679);
+									bitBuffer.position = 0;
+									currentOpcode = bitBuffer.method2955((byte) 112) * 726667601;
+									anInt2980 = 260863215 * Class114.anIntArray1513[currentOpcode * 793368497];
+									--var83;
 								}
 
-								if (-1 == packetLength * 371800591) {
-									if (availData <= 0) {
+								if (-1 == anInt2980 * 371800591) {
+									if (var83 <= 0) {
 										var85 = false;
-										break readBuffer;
+										break label3092;
 									}
 
-									Class38.streamBuffer.readBytes(packetBuffer.payload, 0, 1, 615894679);
-									packetLength = 260863215 * (packetBuffer.payload[0] & 255);
-									--availData;
+									Class38.bufferIn.method1005(bitBuffer.payload, 0, 1, 615894679);
+									anInt2980 = 260863215 * (bitBuffer.payload[0] & 255);
+									--var83;
 								}
 
-								if (-2 == 371800591 * packetLength) {
-									if (availData <= 1) {
+								if (-2 == 371800591 * anInt2980) {
+									if (var83 <= 1) {
 										var85 = false;
-										break readBuffer;
+										break label3092;
 									}
 
-									Class38.streamBuffer.readBytes(packetBuffer.payload, 0, 2, 615894679);
-									packetBuffer.position = 0;
-									packetLength = packetBuffer.readUnsignedShort(374567938) * 260863215;
-									availData -= 2;
+									Class38.bufferIn.method1005(bitBuffer.payload, 0, 2, 615894679);
+									bitBuffer.position = 0;
+									anInt2980 = bitBuffer.readShort(374567938) * 260863215;
+									var83 -= 2;
 								}
 
-								if (availData < packetLength * 371800591) {
+								if (var83 < anInt2980 * 371800591) {
 									var85 = false;
-									break readBuffer;
+									break label3092;
 								}
 
-								packetBuffer.position = 0;
-								Class38.streamBuffer.readBytes(packetBuffer.payload, 0, packetLength * 371800591, 615894679);
+								bitBuffer.position = 0;
+								Class38.bufferIn.method1005(bitBuffer.payload, 0, anInt2980 * 371800591, 615894679);
 								anInt2982 = 0;
 								anInt3173 = 470278475 * anInt3066;
 								anInt3066 = anInt2984 * -633837397;
-								anInt2984 = (currentOpcode * 793368497) * -874887809;
-                                Launcher.dumpOpcode(currentOpcode);
-								if (120 == currentOpcode) {//interface config?
-									value1 = packetBuffer.readInt2(2114849364);
-									value2 = packetBuffer.readLEShortA(-2137447339);
-									value3 = value2 >> 10 & 31;
-									clanRank = value2 >> 5 & 31;
-									var9 = value2 & 31;
-									col = (var9 << 3) + (clanRank << 11) + (value3 << 19);
-									RSInterface var142 = Class107.getInterface(value1, 314639891);
-									if (var142.disabledColor * 1384750979 != col) {
-										var142.disabledColor = 1053943595 * col;
-										Class79.refreshInterface(var142, -1046712732);
+								anInt2984 = currentOpcode * -874887809;
+                                Launcher.dumpOpcode(793368497 * currentOpcode);
+								if (120 == 793368497 * currentOpcode) {
+									interfaceId = bitBuffer.readInt2(2114849364);
+									interfaceHash = bitBuffer.readLEShortA(-2137447339);
+									clickThrough = interfaceHash >> 10 & 31;
+									var8 = interfaceHash >> 5 & 31;
+									var9 = interfaceHash & 31;
+									var10 = (var9 << 3) + (var8 << 11) + (clickThrough << 19);
+									Class116_Sub15 var142 = Class107.method1466(interfaceId, 314639891);
+									if (var142.anInt1950 * 1384750979 != var10) {
+										var142.anInt1950 = 1053943595 * var10;
+										Class79.method1097(var142, -1046712732);
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode == 98) {
+								if (793368497 * currentOpcode == 98) {
 									Class7.anInt107 = 0;
 
-									for (value1 = 0; value1 < 2048; ++value1) {
-										Class7.aClass116_Sub14Array106[value1] = null;
-										Class7.movementMode[value1] = 1;
+									for (interfaceId = 0; interfaceId < 2048; ++interfaceId) {
+										Class7.aClass116_Sub14Array106[interfaceId] = null;
+										Class7.aByteArray105[interfaceId] = 1;
 									}
 
-									for (value1 = 0; value1 < 2048; ++value1) {
-										globalPlayers[value1] = null;
+									for (interfaceId = 0; interfaceId < 2048; ++interfaceId) {
+										globalPlayers[interfaceId] = null;
 									}
 
-									Class116_Sub10.readPlayerHashLocations(packetBuffer, 1698553703);
-									currentOpcode = -1;
+									Class116_Sub10.readPlayerHashLocations(bitBuffer, 1698553703);
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								GameInterface var163;
-								if (158 == currentOpcode ) {
-									value1 = packetBuffer.readUnsignedShort(1637048889);
-									value2 = packetBuffer.readLEInt((byte) -55);
-									value3 = packetBuffer.readByteS((byte) -125);
-							         int root = value2 >> 16;
-							         int child = value2 - (root << 16);
-							         System.out.println("window: "+root+", Interface: "+value1+", Widget: "+child+", clickThrough: "+(value3 == 1));
-									var163 = (GameInterface) overridedInterfaces.get((long) value2);
+								Class116_Sub11 var163;
+								if (158 == currentOpcode * 793368497) {
+									interfaceId = bitBuffer.readShort(1637048889);
+									interfaceHash = bitBuffer.readLEInt((byte) -55);
+									clickThrough = bitBuffer.readByteS((byte) -125);
+							         int root = interfaceHash >> 16;
+							         int child = interfaceHash - (root << 16);
+							         System.out.println("Root: "+root+", Interface: "+interfaceId+", Child: "+child+", clickThrough: "+(clickThrough == 1));
+									var163 = (Class116_Sub11) aClass127_3094.method1658((long) interfaceHash);
 									if (null != var163) {
-										Class116_Sub23_Sub5.method2490(var163, var163.interfaceId * 226793949 != value1, (byte) 1);
+										Class116_Sub23_Sub5.method2490(var163, var163.anInt1821 * 226793949 != interfaceId,
+												(byte) 1);
 									}
 
-									GameInterface.display(value2, value1, value3, (byte) 13);
-									currentOpcode = -1;
+									Class116_Sub11.method1976(interfaceHash, interfaceId, clickThrough, (byte) 13);
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (77 == currentOpcode ) {
-									anInt3157 = packetBuffer.readShortA(-338860511) * -1190396522;
+								if (77 == currentOpcode * 793368497) {
+									anInt3157 = bitBuffer.readShortA(-338860511) * -1190396522;
 									anInt3122 = anInt3118 * 434653173;
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								RSInterface var105;
-								if (152 == currentOpcode) {
-									value1 = packetBuffer.readInt(-525694326);
-									value2 = packetBuffer.readInt(-881353325);
-									value3 = packetBuffer.readLEShortA(-1863125256);
-									if ('\uffff' == value3) {
-										value3 = -1;
+								Class116_Sub15 var105;
+								if (152 == 793368497 * currentOpcode) {
+									interfaceId = bitBuffer.readInt(-525694326);
+									interfaceHash = bitBuffer.readInt(-881353325);
+									clickThrough = bitBuffer.readLEShortA(-1863125256);
+									if ('\uffff' == clickThrough) {
+										clickThrough = -1;
 									}
 
-									var105 = Class107.getInterface(value2, 314639891);
+									var105 = Class107.method1466(interfaceHash, 314639891);
 									Class116_Sub23_Sub11 var150;
-									if (!var105.newFormat) {
-										if (value3 == -1) {
-											var105.modelTypeDisabled = 0;
-											currentOpcode = -1;
+									if (!var105.aBool1924) {
+										if (clickThrough == -1) {
+											var105.anInt1975 = 0;
+											currentOpcode = -726667601;
 											var85 = true;
-											break readBuffer;
+											break label3092;
 										}
 
-										var150 = RelationList.method778(value3, (byte) 70);
-										var105.modelTypeDisabled = -1505842828;
-										var105.mediaIdDisabled = value3 * -541123263;
-										var105.rotateX = var150.anInt2367 * 1778672027;
-										var105.rotateY = var150.anInt2368 * -438177483;
-										var105.zoom = -438091779 * (1568478228 * var150.anInt2396 / value1);
-										Class79.refreshInterface(var105, 392272303);
+										var150 = Class50.method778(clickThrough, (byte) 70);
+										var105.anInt1975 = -1505842828;
+										var105.anInt1967 = clickThrough * -541123263;
+										var105.anInt1935 = var150.anInt2367 * 1778672027;
+										var105.anInt2057 = var150.anInt2368 * -438177483;
+										var105.anInt1977 = -438091779 * (1568478228 * var150.anInt2396 / interfaceId);
+										Class79.method1097(var105, 392272303);
 									} else {
-										var105.anInt2043 = value3 * -444483265;
-										var105.anInt2044 = value1 * 1567728457;
-										var150 = RelationList.method778(value3, (byte) 70);
-										var105.rotateX = 1778672027 * var150.anInt2367;
-										var105.rotateY = -438177483 * var150.anInt2368;
+										var105.anInt2043 = clickThrough * -444483265;
+										var105.anInt2044 = interfaceId * 1567728457;
+										var150 = Class50.method778(clickThrough, (byte) 70);
+										var105.anInt1935 = 1778672027 * var150.anInt2367;
+										var105.anInt2057 = -438177483 * var150.anInt2368;
 										var105.anInt1990 = 292702103 * var150.anInt2393;
-										var105.translateX = 889655743 * var150.anInt2402;
-										var105.translateY = var150.anInt2371 * -738298705;
-										var105.zoom = -1079397735 * var150.anInt2396;
+										var105.anInt2052 = 889655743 * var150.anInt2402;
+										var105.anInt1973 = var150.anInt2371 * -738298705;
+										var105.anInt1977 = -1079397735 * var150.anInt2396;
 										if (1 == var150.anInt2372 * 1303294175) {
 											var105.anInt1981 = -1548696853;
 										} else {
@@ -1500,103 +1505,105 @@ public final class client extends Applet_Sub1 {
 										}
 
 										if (var105.anInt1987 * 1501804265 > 0) {
-											var105.zoom = -438091779
-													* (126003872 * var105.zoom / (var105.anInt1987 * 1501804265));
-										} else if (var105.width * 124195285 > 0) {
-											var105.zoom = -438091779
-													* (var105.zoom * 126003872 / (124195285 * var105.width));
+											var105.anInt1977 = -438091779
+													* (126003872 * var105.anInt1977 / (var105.anInt1987 * 1501804265));
+										} else if (var105.anInt1936 * 124195285 > 0) {
+											var105.anInt1977 = -438091779
+													* (var105.anInt1977 * 126003872 / (124195285 * var105.anInt1936));
 										}
 
-										Class79.refreshInterface(var105, 1734335051);
+										Class79.method1097(var105, 1734335051);
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode == 187) { //delete ground object?
-									value1 = packetBuffer.readUnsignedShort(1520365580);
-									value2 = packetBuffer.readSignedByte(1708176767);
-									value3 = packetBuffer.readUnsignedShort(1680557255);
-									TileObj5.method698(value1, value2, value3, 1962531113);
-									currentOpcode = -1;
+								if (793368497 * currentOpcode == 187) {
+									interfaceId = bitBuffer.readShort(1520365580);
+									interfaceHash = bitBuffer.readSignedByte(1708176767);
+									clickThrough = bitBuffer.readShort(1680557255);
+									TileObj5.method698(interfaceId, interfaceHash, clickThrough, 1962531113);
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
 								boolean var125;
-								if (161 == currentOpcode ) {
-									var125 = packetBuffer.readSignedByte(1708176767) == 1;
+								if (161 == currentOpcode * 793368497) {
+									var125 = bitBuffer.readSignedByte(1708176767) == 1;
                                     System.out.print("Packet 161 b="+var125);
 									if (var125) {
-                                        long l = packetBuffer.readLong((byte) -57);
+                                        long l = bitBuffer.readLong((byte) -57);
                                         System.out.print("l="+l+", ");
-										HuffManEncryption.aLong687 = (Class116_Sub5.generateHash(-2137110599)
+										Class52.aLong687 = (Class116_Sub5.method1929(-2137110599)
 												- l) * 3889566144197309745L;
-										Class81.aClass132_928 = new Class132(packetBuffer, true);
+										Class81.aClass132_928 = new Class132(bitBuffer, true);
 									} else {
 										Class81.aClass132_928 = null;
 									}
 									anInt3129 = 263290095 * anInt3118;
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode  == 176) {
-									anInt3168 = packetBuffer.readSignedByte(1708176767) * -1943900347;
+								if (currentOpcode * 793368497 == 176) {
+									anInt3168 = bitBuffer.readSignedByte(1708176767) * -1943900347;
 									if (255 == anInt3168 * -1712731251) {
 										anInt3168 = 0;
 									}
 
-									anInt3208 = packetBuffer.readSignedByte(1708176767) * 317027045;
+									anInt3208 = bitBuffer.readSignedByte(1708176767) * 317027045;
 									if (-691143955 * anInt3208 == 255) {
 										anInt3208 = 0;
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode == 171) {
-									value1 = 314639891 * packetBuffer.position + 371800591 * packetLength;
-									value2 = packetBuffer.readUnsignedShort(2005300630);
-									value3 = packetBuffer.readUnsignedShort(1530454988);
+								if (793368497 * currentOpcode == 171) {
 
-                                    System.out.print(value2+"/"+ anInt3200 * -1074177723+"Packet 171 [readUnsignedShort=" + value2 + ", readUnsignedShort=" + value3 + " =");
-									if (value2 != anInt3200 * -1074177723) {
-										anInt3200 = value2 * -605073011;
+									interfaceId = 314639891 * bitBuffer.position + 371800591 * anInt2980;
+									interfaceHash = bitBuffer.readShort(2005300630);
+									clickThrough = bitBuffer.readShort(1530454988);
+
+                                    System.out.print("Packet 171 [readShort=" + interfaceHash + ", readShort=" + clickThrough + " =");
+									if (interfaceHash != anInt3200 * -1074177723) {
+										anInt3200 = interfaceHash * -605073011;
 										Class116_Sub10.method1971(false, (byte) 90);
-										Class33.resetComponentAnimation(anInt3200 * -1074177723, -389379352);
-										Class29.executeOnStart(-1074177723 * anInt3200, -447196070);
-										for (clanRank = 0; clanRank < 100; ++clanRank) {
-											aBoolArray3073[clanRank] = true;
+										Class33.method605(anInt3200 * -1074177723, -389379352);
+										Class29.method573(-1074177723 * anInt3200, -447196070);
+
+										for (var8 = 0; var8 < 100; ++var8) {
+											aBoolArray3073[var8] = true;
 										}
 									}
 
-									GameInterface var130;
-									for (; value3-- > 0; var130.aBool1815 = true) {
-										clanRank = packetBuffer.readInt(-1434644251);
-										var9 = packetBuffer.readUnsignedShort(1655721914);
-										col = packetBuffer.readSignedByte(1708176767);
-                                        System.out.print("[readInt="+clanRank+", readUnsignedShort="+var9+", readByte="+col+"],");
-										var130 = (GameInterface) overridedInterfaces.get((long) clanRank);
-										if (var130 != null && 226793949 * var130.interfaceId != var9) {
+									Class116_Sub11 var130;
+									for (; clickThrough-- > 0; var130.aBool1815 = true) {
+										var8 = bitBuffer.readInt(-1434644251);
+										var9 = bitBuffer.readShort(1655721914);
+										var10 = bitBuffer.readSignedByte(1708176767);
+                                        System.out.print("[readInt="+var8+", readShort="+var9+", readByte="+var10+"],");
+										var130 = (Class116_Sub11) aClass127_3094.method1658((long) var8);
+										if (var130 != null && 226793949 * var130.anInt1821 != var9) {
 											Class116_Sub23_Sub5.method2490(var130, true, (byte) 1);
 											var130 = null;
 										}
 
 										if (var130 == null) {
-											var130 = GameInterface.display(clanRank, var9, col, (byte) -7);
+											var130 = Class116_Sub11.method1976(var8, var9, var10, (byte) -7);
 										}
 									}
                                     System.out.print("- next -");
 
-									for (var163 = (GameInterface) overridedInterfaces
-											.getFirst(); var163 != null; var163 = (GameInterface) overridedInterfaces
-													.getNext()) {
+									for (var163 = (Class116_Sub11) aClass127_3094
+											.method1661(); var163 != null; var163 = (Class116_Sub11) aClass127_3094
+													.method1662()) {
 										if (var163.aBool1815) {
 											var163.aBool1815 = false;
 										} else {
@@ -1604,138 +1611,139 @@ public final class client extends Applet_Sub1 {
 										}
 									}
 
-									aHashtable_3135 = new Hashtable(512);
+									aClass127_3135 = new Class127(512);
 
-									while (packetBuffer.position * 314639891 < value1) {
-										clanRank = packetBuffer.readInt(-936716570);
-										var9 = packetBuffer.readUnsignedShort(1612930959);
-										col = packetBuffer.readUnsignedShort(-29618334);
-										var11 = packetBuffer.readInt(-236698976);
-                                        System.out.print("[readInt="+clanRank+", readUnsignedShort="+var9+", readUnsignedShort="+col+", readInt="+var11+"],");
-										for (id = var9; id <= col; ++id) {
-											long var46 = ((long) clanRank << 32) + (long) id;
-											aHashtable_3135.put(new InterfaceSettings(var11), var46);
+									while (bitBuffer.position * 314639891 < interfaceId) {
+										var8 = bitBuffer.readInt(-936716570);
+										var9 = bitBuffer.readShort(1612930959);
+										var10 = bitBuffer.readShort(-29618334);
+										var11 = bitBuffer.readInt(-236698976);
+                                        System.out.print("[readInt="+var8+", readShort="+var9+", readShort="+var10+", readInt="+var11+"],");
+										for (var12 = var9; var12 <= var10; ++var12) {
+											long var46 = ((long) var8 << 32) + (long) var12;
+											aClass127_3135.method1666(new InterfaceSettings(var11), var46);
 										}
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
 								long var48;
-								if (196 == currentOpcode) {
-									value1 = packetBuffer.readShortA(-338860511);
-									if (value1 == '\uffff') {
-										value1 = -1;
+								if (196 == 793368497 * currentOpcode) {
+									interfaceId = bitBuffer.readShortA(-338860511);
+									if (interfaceId == '\uffff') {
+										interfaceId = -1;
 									}
 
-									value2 = packetBuffer.readLEInt((byte) -121);
-									value3 = packetBuffer.readLEShort((byte) -5);
-									if (value3 == '\uffff') {
-										value3 = -1;
+									interfaceHash = bitBuffer.readLEInt((byte) -121);
+									clickThrough = bitBuffer.readLEShort((byte) -5);
+									if (clickThrough == '\uffff') {
+										clickThrough = -1;
 									}
 
-									clanRank = packetBuffer.readInt(-1120701666);
+									var8 = bitBuffer.readInt(-1120701666);
 
-									for (var9 = value3; var9 <= value1; ++var9) {
-										var48 = (long) var9 + ((long) value2 << 32);
-										Node var123 = aHashtable_3135.get(var48);
+									for (var9 = clickThrough; var9 <= interfaceId; ++var9) {
+										var48 = (long) var9 + ((long) interfaceHash << 32);
+										Node var123 = aClass127_3135.method1658(var48);
 										if (var123 != null) {
 											var123.unlink();
 										}
 
-										aHashtable_3135.put(new InterfaceSettings(clanRank), var48);
+										aClass127_3135.method1666(new InterfaceSettings(var8), var48);
 									}
-                                    System.out.println("opcode 196="+value1+"/"+value2+"/"+value3+"/"+clanRank);
-									currentOpcode = -1;
+                                    System.out.println("opcode 196="+interfaceId+"/"+interfaceHash+"/"+clickThrough+"/"+var8);
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
-								if (currentOpcode  == 201) {
-									byte var173 = packetBuffer.readByteA(-2111583012);
-									value2 = packetBuffer.readShortA(-338860511);
+								if (currentOpcode * 793368497 == 201) {
+
+									byte var173 = bitBuffer.readByteA(-2111583012);
+									interfaceHash = bitBuffer.readShortA(-338860511);
                                     //System.out.println("Small configP201 "+var173+"/"+interfaceHash);
-									Class107.anIntArray1454[value2] = var173;
-									if (Class107.varpData[value2] != var173) {
-										Class107.varpData[value2] = var173;
+									Class107.anIntArray1454[interfaceHash] = var173;
+									if (Class107.anIntArray1459[interfaceHash] != var173) {
+										Class107.anIntArray1459[interfaceHash] = var173;
 									}
 
-									World.method567(value2, 1814638903);
-									anIntArray3119[(anInt3120 += 1551596873) * -729938695 - 1 & 31] = value2;
-									currentOpcode = -1;
+									Class27.method567(interfaceHash, 1814638903);
+									anIntArray3119[(anInt3120 += 1551596873) * -729938695 - 1 & 31] = interfaceHash;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode  == 192) {
-									value1 = packetBuffer.readInt(-1927934378);
-									value2 = packetBuffer.readLEShort((byte) -107);
-									Class107.anIntArray1454[value2] = value1;
-									if (value1 != Class107.varpData[value2]) {
-										Class107.varpData[value2] = value1;
+								if (currentOpcode * 793368497 == 192) {
+									interfaceId = bitBuffer.readInt(-1927934378);
+									interfaceHash = bitBuffer.readLEShort((byte) -107);
+									Class107.anIntArray1454[interfaceHash] = interfaceId;
+									if (interfaceId != Class107.anIntArray1459[interfaceHash]) {
+										Class107.anIntArray1459[interfaceHash] = interfaceId;
 									}
 
-									World.method567(value2, 1714872839);
-									anIntArray3119[(anInt3120 += 1551596873) * -729938695 - 1 & 31] = value2;
-									currentOpcode = -1;
+									Class27.method567(interfaceHash, 1714872839);
+									anIntArray3119[(anInt3120 += 1551596873) * -729938695 - 1 & 31] = interfaceHash;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (218 == currentOpcode) {
-									value1 = packetBuffer.readSignedByte(1708176767);
-									if (packetBuffer.readSignedByte(1708176767) == 0) {
-										aClass135Array3211[value1] = new Class135();
-										packetBuffer.position += 979806694;
+								if (218 == 793368497 * currentOpcode) {
+									interfaceId = bitBuffer.readSignedByte(1708176767);
+									if (bitBuffer.readSignedByte(1708176767) == 0) {
+										aClass135Array3211[interfaceId] = new Class135();
+										bitBuffer.position += 979806694;
 									} else {
-										packetBuffer.position -= -184175589;
-										aClass135Array3211[value1] = new Class135(packetBuffer, false);
+										bitBuffer.position -= -184175589;
+										aClass135Array3211[interfaceId] = new Class135(bitBuffer, false);
 									}
 
 									anInt3128 = anInt3118 * -929632705;
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode == 247) {
-									value1 = packetBuffer.readLEShortA(-1842019943);
-									Class39.method682(value1, (byte) -69);
-									anIntArray3121[(anInt3025 += -1121866621) * -1512766933 - 1 & 31] = value1 & 32767;
-									currentOpcode = -1;
+								if (793368497 * currentOpcode == 247) {
+									interfaceId = bitBuffer.readLEShortA(-1842019943);
+									Class39.method682(interfaceId, (byte) -69);
+									anIntArray3121[(anInt3025 += -1121866621) * -1512766933 - 1 & 31] = interfaceId & 32767;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
 								long var52;
 								long var54;
-								if (currentOpcode  == 1) {
-									var94 = packetBuffer.readString(61376769);
-									key = (long) packetBuffer.readUnsignedShort(1083471355);
-									var52 = (long) packetBuffer.readMedium((byte) 15);
+								if (currentOpcode * 793368497 == 1) {
+									var94 = bitBuffer.readString(61376769);
+									key = (long) bitBuffer.readShort(1083471355);
+									var52 = (long) bitBuffer.readMedium((byte) 15);
 									Speach[] icons = new Speach[] { Speach.OFFLINE, Speach.PLAYER,
 											Speach.MOD, Speach.ADMIN, Speach.ULT_IRONMAN};
-                                    int rank = packetBuffer.readSignedByte(1708176767);
+                                    int rank = bitBuffer.readSignedByte(1708176767);
 									Speach thisIcon = (Speach) Class35.method646(icons, rank, (byte) -30);
 									var54 = (key << 32) + var52;
 									boolean var136 = false;
 
 									for (var114 = 0; var114 < 100; ++var114) {
-										if (msgUid[var114] == var54) {
+										if (aLongArray3154[var114] == var54) {
                                                 var136 = true;
 											    break;
 										}
 									}
 
-									if (World.method568(var94, -2142744792)) {
+									if (Class27.method568(var94, -2142744792)) {
 										var136 = true;
 									}
 
 									if (!var136 && anInt3151 * 198136383 == 0) {
-										msgUid[anInt3155 * 1926465309] = var54;
+										aLongArray3154[anInt3155 * 1926465309] = var54;
 										anInt3155 = (1 + anInt3155 * 1926465309) % 100 * -1205898443;
-										PacketBuilder var162 = packetBuffer;
+										BitBuffer var162 = bitBuffer;
 
 										String var167;
 										try {
@@ -1745,7 +1753,7 @@ public final class client extends Applet_Sub1 {
 											}
 
 											byte[] var166 = new byte[var18];
-											var162.position += client.aClass52_1621.getBytes(var162.payload,
+											var162.position += client.aClass52_1621.method786(var162.payload,
 													314639891 * var162.position, var166, 0, var18, (byte) 16)
 													* -184175589;
 											String var164 = Tile.method1987(var166, 0, var18, (byte) 89);
@@ -1775,115 +1783,115 @@ public final class client extends Applet_Sub1 {
 										}
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								RSInterface var109;
-								if (225 == currentOpcode) {
-									value1 = packetBuffer.readUnsignedShort(-414514260);
-									value2 = packetBuffer.readInt1((byte) -42);
-									var109 = Class107.getInterface(value2, 314639891);
-									if (null != var109 && 0 == var109.type * -1305917269) {
-										if (value1 > 177405235 * var109.maxScrollVertical - 1227800423 * var109.heght) {
-											value1 = 177405235 * var109.maxScrollVertical - 1227800423 * var109.heght;
+								Class116_Sub15 var109;
+								if (225 == 793368497 * currentOpcode) {
+									interfaceId = bitBuffer.readShort(-414514260);
+									interfaceHash = bitBuffer.readInt1((byte) -42);
+									var109 = Class107.method1466(interfaceHash, 314639891);
+									if (null != var109 && 0 == var109.anInt2018 * -1305917269) {
+										if (interfaceId > 177405235 * var109.anInt1949 - 1227800423 * var109.anInt1974) {
+											interfaceId = 177405235 * var109.anInt1949 - 1227800423 * var109.anInt1974;
 										}
 
-										if (value1 < 0) {
-											value1 = 0;
+										if (interfaceId < 0) {
+											interfaceId = 0;
 										}
 
-										if (value1 != -1602694527 * var109.anInt1947) {
-											var109.anInt1947 = value1 * -1459786367;
-											Class79.refreshInterface(var109, -504138998);
+										if (interfaceId != -1602694527 * var109.anInt1947) {
+											var109.anInt1947 = interfaceId * -1459786367;
+											Class79.method1097(var109, -504138998);
 										}
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (236 == currentOpcode) {
-									GameInterface.anInt1818 = packetBuffer.readByteA((byte) -1) * -958823289;
-									Player.anInt2887 = packetBuffer.readSignedByte(1708176767)
+								if (236 == 793368497 * currentOpcode) {
+									Class116_Sub11.anInt1818 = bitBuffer.readByteA((byte) -1) * -958823289;
+									Player.anInt2887 = bitBuffer.readSignedByte(1708176767)
 											* 1689579987;
 
-									while (packetBuffer.position * 314639891 < packetLength * 371800591) {
-										currentOpcode = packetBuffer.readSignedByte(1708176767);
+									while (bitBuffer.position * 314639891 < anInt2980 * 371800591) {
+										currentOpcode = bitBuffer.readSignedByte(1708176767) * 726667601;
 										Class116_Sub23_Sub18.method2886(1665542406);
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (80 == currentOpcode ) { // CS2
+								if (80 == currentOpcode * 793368497) { // CS2
 																	// Scripts
-									var94 = packetBuffer.readString(61376769);
+									var94 = bitBuffer.readString(61376769);
 									Object[] var172 = new Object[var94.length() + 1];
                                     boolean intt = true;
-									for (value3 = var94.length() - 1; value3 >= 0; --value3) {
-										if (var94.charAt(value3) == 115) {
+									for (clickThrough = var94.length() - 1; clickThrough >= 0; --clickThrough) {
+										if (var94.charAt(clickThrough) == 115) {
                                             intt = false;
-											var172[1 + value3] = packetBuffer.readString(61376769);
+											var172[1 + clickThrough] = bitBuffer.readString(61376769);
 										} else {
-											var172[value3 + 1] = new Integer(packetBuffer.readInt(-2123480913));
+											var172[clickThrough + 1] = new Integer(bitBuffer.readInt(-2123480913));
 										}
 									}
-									var172[0] = new Integer(packetBuffer.readInt(-409921150));
+									var172[0] = new Integer(bitBuffer.readInt(-409921150));
                                     System.out.println(intt+"CSConfig dump[backwards]"+var94+", "+ Arrays.toString(var172));
 									Class116_Sub6 var171 = new Class116_Sub6();
 									var171.anObjectArray1737 = var172;
 									Friend.method1840(var171, -2062508489);
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode  == 212) { //setting reset for bullshit
-                                    int ok = packetBuffer.readSignedByte(1708176767);
-                                    int ok2 = packetBuffer.readSignedByte(1708176767);
+								if (currentOpcode * 793368497 == 212) {
+                                    int ok = bitBuffer.readSignedByte(1708176767);
+                                    int ok2 = bitBuffer.readSignedByte(1708176767);
 									anInt3064 = ok * -677280985;
 									anInt3150 = ok2 * -1946178403;
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (15 == currentOpcode  || 220 == currentOpcode
-										|| 5 == currentOpcode || currentOpcode  == 231
-										|| currentOpcode == 108 || currentOpcode  == 36
-										|| currentOpcode  == 147 || 25 == currentOpcode
-										|| currentOpcode == 182 || currentOpcode == 189) {
+								if (15 == currentOpcode * 793368497 || 220 == 793368497 * currentOpcode
+										|| 5 == 793368497 * currentOpcode || currentOpcode * 793368497 == 231
+										|| 793368497 * currentOpcode == 108 || currentOpcode * 793368497 == 36
+										|| currentOpcode * 793368497 == 147 || 25 == 793368497 * currentOpcode
+										|| 793368497 * currentOpcode == 182 || 793368497 * currentOpcode == 189) {
 									Class116_Sub23_Sub18.method2886(1880607336);
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode == 190) {
+								if (793368497 * currentOpcode == 190) {
 									aBool2988 = true;
-									Class59_Sub1.anInt1834 = packetBuffer.readSignedByte(1708176767) * 182040463;
-									anInt3183 = packetBuffer.readSignedByte(1708176767) * 1904595561;
-									Class116_Sub23_Sub16_Sub1.anInt2573 = packetBuffer.readUnsignedShort(321813526) * 1696668619;
-									Class43.anInt580 = packetBuffer.readSignedByte(1708176767) * 1081596097;
-									Class36.anInt487 = packetBuffer.readSignedByte(1708176767) * 1511028371;
+									Class59_Sub1.anInt1834 = bitBuffer.readSignedByte(1708176767) * 182040463;
+									anInt3183 = bitBuffer.readSignedByte(1708176767) * 1904595561;
+									Class116_Sub23_Sub16_Sub1.anInt2573 = bitBuffer.readShort(321813526) * 1696668619;
+									Class43.anInt580 = bitBuffer.readSignedByte(1708176767) * 1081596097;
+									Class36.anInt487 = bitBuffer.readSignedByte(1708176767) * 1511028371;
 									if (549132187 * Class36.anInt487 >= 100) {
-										value1 = 64 + 1908651904 * Class59_Sub1.anInt1834;
-										value2 = 64 + 107932800 * anInt3183;
-										value3 = MobDefinition.method2552(value1, value2,
-                                                -747958745 * GameInterface.anInt1819, (short) 19328)
+										interfaceId = 64 + 1908651904 * Class59_Sub1.anInt1834;
+										interfaceHash = 64 + 107932800 * anInt3183;
+										clickThrough = MobDefinition.method2552(interfaceId, interfaceHash,
+                                                -747958745 * Class116_Sub11.anInt1819, (short) 19328)
 												- Class116_Sub23_Sub16_Sub1.anInt2573 * 715633123;
-										clanRank = value1 - Class116_Sub23_Sub16_Sub5.anInt2740 * 282154897;
-										var9 = value3 - RelationList.anInt671 * 1447873857;
-										col = value2 - Class83.anInt968 * -324676025;
-										var11 = (int) Math.sqrt((double) (clanRank * clanRank + col * col));
+										var8 = interfaceId - Class116_Sub23_Sub16_Sub5.anInt2740 * 282154897;
+										var9 = clickThrough - Class50.anInt671 * 1447873857;
+										var10 = interfaceHash - Class83.anInt968 * -324676025;
+										var11 = (int) Math.sqrt((double) (var8 * var8 + var10 * var10));
 										Class78.anInt904 = ((int) (Math.atan2((double) var9, (double) var11) * 325.949D)
 												& 2047) * 1852239419;
-										Class76.anInt895 = ((int) (Math.atan2((double) clanRank, (double) col)
+										Class76.anInt895 = ((int) (Math.atan2((double) var8, (double) var10)
 												* -325.949D) & 2047) * 531969645;
 										if (Class78.anInt904 * 1162853107 < 128) {
 											Class78.anInt904 = 863444352;
@@ -1894,62 +1902,62 @@ public final class client extends Applet_Sub1 {
 										}
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode == 31) {
+								if (793368497 * currentOpcode == 31) {
 									Class8.decodeNpcUpdate(false, 1645385550);
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (96 == currentOpcode) {
-									value1 = packetBuffer.method2041((short) -21192);
-									value2 = packetBuffer.readLEInt((byte) -38);
-									var109 = Class107.getInterface(value2, 314639891);
-									if (value1 != var109.disabledAnim * 467073769 || value1 == -1) {
-										var109.disabledAnim = value1 * 1986493785;
+								if (96 == 793368497 * currentOpcode) {
+									interfaceId = bitBuffer.method2041((short) -21192);
+									interfaceHash = bitBuffer.readLEInt((byte) -38);
+									var109 = Class107.method1466(interfaceHash, 314639891);
+									if (interfaceId != var109.anInt1991 * 467073769 || interfaceId == -1) {
+										var109.anInt1991 = interfaceId * 1986493785;
 										var109.anInt2045 = 0;
 										var109.anInt1919 = 0;
-										Class79.refreshInterface(var109, 727765596);
+										Class79.method1097(var109, 727765596);
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								RSInterface var141;
-								if (currentOpcode == 126) {
-									value1 = packetBuffer.readLEInt((byte) -21);
-									value2 = packetBuffer.readInt1((byte) -123);
-									GameInterface var169 = (GameInterface) overridedInterfaces.get((long) value2);
-									var163 = (GameInterface) overridedInterfaces.get((long) value1);
+								Class116_Sub15 var141;
+								if (793368497 * currentOpcode == 126) {
+									interfaceId = bitBuffer.readLEInt((byte) -21);
+									interfaceHash = bitBuffer.readInt1((byte) -123);
+									Class116_Sub11 var169 = (Class116_Sub11) aClass127_3094.method1658((long) interfaceHash);
+									var163 = (Class116_Sub11) aClass127_3094.method1658((long) interfaceId);
 									if (null != var163) {
 										Class116_Sub23_Sub5.method2490(var163,
 												var169 == null
-														|| var163.interfaceId * 226793949 != var169.interfaceId * 226793949,
+														|| var163.anInt1821 * 226793949 != var169.anInt1821 * 226793949,
 												(byte) 1);
 									}
 
 									if (null != var169) {
 										var169.unlink();
-										overridedInterfaces.put(var169, (long) value1);
+										aClass127_3094.method1666(var169, (long) interfaceId);
 									}
 
-									var141 = Class107.getInterface(value2, 314639891);
+									var141 = Class107.method1466(interfaceHash, 314639891);
 									if (null != var141) {
-										Class79.refreshInterface(var141, -1205316273);
+										Class79.method1097(var141, -1205316273);
 									}
 
-									var141 = Class107.getInterface(value1, 314639891);
+									var141 = Class107.method1466(interfaceId, 314639891);
 									if (null != var141) {
-										Class79.refreshInterface(var141, 1018130792);
+										Class79.method1097(var141, 1018130792);
 										ObjectDefinition.method2435(
-                                                RSInterface.mainInterfaceArray[var141.hash
+                                                Class116_Sub15.aClass116_Sub15ArrayArray1956[var141.anInt1925
                                                         * -1536575275 >>> 16],
                                                 var141, true, 1094777552);
 									}
@@ -1958,83 +1966,81 @@ public final class client extends Applet_Sub1 {
 										Class76.method1081(anInt3200 * -1074177723, 1, (byte) 2);
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode  == 144) {
-									value1 = packetBuffer.readUnsignedShort(135593029);
-									value2 = packetBuffer.readUnsignedShort(2133692823);
-									value3 = packetBuffer.readInt(-1542050773);
-									clanRank = packetBuffer.readUnsignedShort(1082949407);
-									var141 = Class107.getInterface(value3, 314639891);
-									if (value1 != var141.rotateX * 175924351 || 745334365 * var141.rotateY != clanRank
-											|| var141.zoom * -1472457387 != value2) {
-										var141.rotateX = value1 * 1055873919;
-										var141.rotateY = -478470667 * clanRank;
-										var141.zoom = value2 * -438091779;
-										Class79.refreshInterface(var141, 7689073);
+								if (currentOpcode * 793368497 == 144) {
+									interfaceId = bitBuffer.readShort(135593029);
+									interfaceHash = bitBuffer.readShort(2133692823);
+									clickThrough = bitBuffer.readInt(-1542050773);
+									var8 = bitBuffer.readShort(1082949407);
+									var141 = Class107.method1466(clickThrough, 314639891);
+									if (interfaceId != var141.anInt1935 * 175924351 || 745334365 * var141.anInt2057 != var8
+											|| var141.anInt1977 * -1472457387 != interfaceHash) {
+										var141.anInt1935 = interfaceId * 1055873919;
+										var141.anInt2057 = -478470667 * var8;
+										var141.anInt1977 = interfaceHash * -438091779;
+										Class79.method1097(var141, 7689073);
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								long uid;
-								if (currentOpcode  == 214) { //cc msg
-									var94 = packetBuffer.readString(61376769);
-									key = packetBuffer.readLong((byte) -17);
-									var52 = (long) packetBuffer.readUnsignedShort(647124529);
-									var48 = (long) packetBuffer.readMedium((byte) 15);
-									Speach[] iconArray = new Speach[] { Speach.OFFLINE, Speach.PLAYER,
+								long var56;
+								if (currentOpcode * 793368497 == 214) {
+									var94 = bitBuffer.readString(61376769);
+									key = bitBuffer.readLong((byte) -17);
+									var52 = (long) bitBuffer.readShort(647124529);
+									var48 = (long) bitBuffer.readMedium((byte) 15);
+									Speach[] var118 = new Speach[] { Speach.OFFLINE, Speach.PLAYER,
 											Speach.MOD, Speach.ADMIN, Speach.ULT_IRONMAN};
-									Speach chatIcon = (Speach) Class35.method646(iconArray, packetBuffer.readSignedByte(1708176767), (byte) -86);
-									uid = (var52 << 32) + var48;
+									Speach var137 = (Speach) Class35.method646(var118,
+											bitBuffer.readSignedByte(1708176767), (byte) -86);
+									var56 = (var52 << 32) + var48;
 									boolean draw = false;
 
 									for (var17 = 0; var17 < 100; ++var17) {
-										if (msgUid[var17] == uid) {
+										if (aLongArray3154[var17] == var56) {
 											draw = true;
 											break;
 										}
 									}
 
-									if (chatIcon.aBool982 && World.method568(var94, -1959669550)) {
+									if (var137.aBool982 && Class27.method568(var94, -1959669550)) {
 										draw = true;
 									}
 
 									if (!draw && 198136383 * anInt3151 == 0) {
-										msgUid[1926465309 * anInt3155] = uid;
+										aLongArray3154[1926465309 * anInt3155] = var56;
 										anInt3155 = -1205898443 * ((1 + anInt3155 * 1926465309) % 100);
-										PacketBuilder buff = packetBuffer;
+										BitBuffer var155 = bitBuffer;
 
 										String var158;
 										try {
-											var145 = buff.readSmartC(-1841595977);
-                                            System.out.println(var145);
+											var145 = var155.readSmartC(-1841595977);
 											if (var145 > 32767) {
 												var145 = 32767;
 											}
 
 											byte[] var165 = new byte[var145];
-											int ok = client.aClass52_1621.getBytes(buff.payload,
-													314639891 * buff.position, var165, 0, var145, (byte) 16);
-											buff.position += ok * -184175589;
+											var155.position += client.aClass52_1621.method786(var155.payload,
+													314639891 * var155.position, var165, 0, var145, (byte) 16)
+													* -184175589;
 											String var168 = Tile.method1987(var165, 0, var145, (byte) 122);
-											System.out.println("clan msg ="+var168+", len="+var145+", ok="+ok+", "+var94+", "+key+","+chatIcon.iconId+"/"+Arrays.toString(var165));
 											var158 = var168;
 										} catch (Exception var73) {
-                                            var73.printStackTrace();
 											var158 = "Cabbage";
 										}
 
 										var158 = TextDrawingArea
 												.method3459(Class59.method892(var158, -1433905521));
-										if (chatIcon.iconId * -2127218069 != -1) {
+										if (var137.iconId * -2127218069 != -1) {
 											Class116_Sub23_Sub1.appendChat(9,
-                                                    Class51.method780(-2127218069 * chatIcon.iconId, (short) -12678)
+                                                    Class51.method780(-2127218069 * var137.iconId, (short) -12678)
                                                             + var94,
                                                     var158, Class116_Sub23_Sub12.method2655(key), -2040945609);
 										} else {
@@ -2042,24 +2048,24 @@ public final class client extends Applet_Sub1 {
                                                     Class116_Sub23_Sub12.method2655(key), -1649261059);
 										}
 									}
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (90 == currentOpcode) {
-									Packet.method2213((byte) -128);
-									anInt3099 = packetBuffer.readShort(-460342608) * 135408337;
+								if (90 == 793368497 * currentOpcode) {
+									Buffer.method2213((byte) -128);
+									anInt3099 = bitBuffer.method2007(-460342608) * 135408337;
 									anInt3122 = anInt3118 * 434653173;
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (180 == currentOpcode) {
-									anInt3021 = packetBuffer.readSignedByte(1708176767) * -2000049339;
+								if (180 == 793368497 * currentOpcode) {
+									anInt3021 = bitBuffer.readSignedByte(1708176767) * -2000049339;
 									if (1 == anInt3021 * 314519437) {
-										anInt2952 = packetBuffer.readUnsignedShort(1233316153) * 1604167195;
+										anInt2952 = bitBuffer.readShort(1233316153) * 1604167195;
 									}
 
 									if (anInt3021 * 314519437 >= 2 && 314519437 * anInt3021 <= 6) {
@@ -2089,282 +2095,284 @@ public final class client extends Applet_Sub1 {
 										}
 
 										anInt3021 = 294868618;
-										anInt2954 = packetBuffer.readUnsignedShort(131355065) * -918335991;
-										anInt2950 = packetBuffer.readUnsignedShort(1504877900) * -1217004367;
-										anInt2968 = packetBuffer.readSignedByte(1708176767) * -537897385;
+										anInt2954 = bitBuffer.readShort(131355065) * -918335991;
+										anInt2950 = bitBuffer.readShort(1504877900) * -1217004367;
+										anInt2968 = bitBuffer.readSignedByte(1708176767) * -537897385;
 									}
 
 									if (anInt3021 * 314519437 == 10) {
-										anInt3125 = packetBuffer.readUnsignedShort(1992660421) * 136867453;
+										anInt3125 = bitBuffer.readShort(1992660421) * 136867453;
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (183 == currentOpcode ) { //friendserver busy
+								if (183 == currentOpcode * 793368497) {
 									anInt3203 = -593871665;
 									anInt3068 = -712636309 * anInt3118;
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (237 == currentOpcode) {
-									Packet.method2213((byte) -128);
-									value1 = packetBuffer.readInt(-1679285157);
-									value2 = packetBuffer.readByteS((byte) -119);
-									value3 = packetBuffer.readByteC(-143981914);
-									anIntArray3108[value3] = value1;
-									anIntArray2953[value3] = value2;
-									anIntArray2951[value3] = 1;
+								if (237 == 793368497 * currentOpcode) {
+									Buffer.method2213((byte) -128);
+									interfaceId = bitBuffer.readInt(-1679285157);
+									interfaceHash = bitBuffer.readByteS((byte) -119);
+									clickThrough = bitBuffer.readByteC(-143981914);
+									anIntArray3108[clickThrough] = interfaceId;
+									anIntArray2953[clickThrough] = interfaceHash;
+									anIntArray2951[clickThrough] = 1;
 
-									for (clanRank = 0; clanRank < 98; ++clanRank) {
-										if (value1 >= Class76.anIntArray891[clanRank]) {
-											anIntArray2951[value3] = clanRank + 2;
+									for (var8 = 0; var8 < 98; ++var8) {
+										if (interfaceId >= Class76.anIntArray891[var8]) {
+											anIntArray2951[clickThrough] = var8 + 2;
 										}
 									}
 
-									anIntArray3123[(anInt3124 += -245523573) * -549276637 - 1 & 31] = value3;
-									currentOpcode = -1;
+									anIntArray3123[(anInt3124 += -245523573) * -549276637 - 1 & 31] = clickThrough;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								String username;
-								if (110 == currentOpcode) {//send music
-									value1 = packetBuffer.readInt(-236513998);
-									username = packetBuffer.readString(61376769);
+								String var135;
+								if (110 == 793368497 * currentOpcode) {//send music
+									interfaceId = bitBuffer.readInt(-236513998);
+									var135 = bitBuffer.readString(61376769);
 
-									var109 = Class107.getInterface(value1, 314639891);
-									if (!username.equals(var109.disabledText)) {
-										var109.disabledText = username;
-										Class79.refreshInterface(var109, 1670119001);
+									var109 = Class107.method1466(interfaceId, 314639891);
+									if (!var135.equals(var109.aString1983)) {
+										var109.aString1983 = var135;
+										Class79.method1097(var109, 1670119001);
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								String name;
+								String var112;
 								boolean var124;
-								String lastUser;
-								if (currentOpcode  == 107) {
-									while (packetBuffer.position * 314639891 < 371800591 * packetLength) {
-										value1 = packetBuffer.readSignedByte(1708176767);
-										var124 = 1 == (value1 & 1);
-										name = packetBuffer.readString(61376769);
-										lastUser = packetBuffer.readString(61376769);
-										packetBuffer.readString(61376769);
+								String var138;
+								if (currentOpcode * 793368497 == 107) {
+									while (bitBuffer.position * 314639891 < 371800591 * anInt2980) {
+										interfaceId = bitBuffer.readSignedByte(1708176767);
+										var124 = 1 == (interfaceId & 1);
+										var112 = bitBuffer.readString(61376769);
+										var138 = bitBuffer.readString(61376769);
+										bitBuffer.readString(61376769);
 
 										for (var9 = 0; var9 < 1820302153 * anInt3206; ++var9) {
-											Ignore var126 = aClass24Array3207[var9];
+											Class24 var126 = aClass24Array3207[var9];
 											if (var124) {
-												if (lastUser.equals(var126.currentName)) {
-													var126.currentName = name;
-													var126.lastName = lastUser;
-													name = null;
+												if (var138.equals(var126.aString345)) {
+													var126.aString345 = var112;
+													var126.aString344 = var138;
+													var112 = null;
 													break;
 												}
-											} else if (name.equals(var126.currentName)) {
-												var126.currentName = name;
-												var126.lastName = lastUser;
-												name = null;
+											} else if (var112.equals(var126.aString345)) {
+												var126.aString345 = var112;
+												var126.aString344 = var138;
+												var112 = null;
 												break;
 											}
 										}
 
-										if (null != name && anInt3206 * 1820302153 < 400) {
-											Ignore var140 = new Ignore();
+										if (null != var112 && anInt3206 * 1820302153 < 400) {
+											Class24 var140 = new Class24();
 											aClass24Array3207[anInt3206 * 1820302153] = var140;
-											var140.currentName = name;
-											var140.lastName = lastUser;
+											var140.aString345 = var112;
+											var140.aString344 = var138;
 											anInt3206 += -334739719;
 										}
 									}
 
 									anInt3068 = anInt3118 * -712636309;
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode == 242) {
-									Class116_Sub23_Sub2.doReflectionCheck(packetBuffer, packetLength * 371800591, -1457674298);
-									currentOpcode = -1;
+								if (793368497 * currentOpcode == 242) {
+									Class116_Sub23_Sub2.doReflectionCheck(bitBuffer, anInt2980 * 371800591, -1457674298);
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode == 87) {
-									value1 = packetBuffer.readLEShortA(-2094345266);
-									value2 = packetBuffer.readInt2(2137652109);
-									var109 = Class107.getInterface(value2, 314639891);
-									if (1 != var109.modelTypeDisabled * -768837131 || value1 != 686060225 * var109.mediaIdDisabled) {
-										var109.modelTypeDisabled = -376460707;
-										var109.mediaIdDisabled = value1 * -541123263;
-										Class79.refreshInterface(var109, -961889719);
+								if (793368497 * currentOpcode == 87) {
+									interfaceId = bitBuffer.readLEShortA(-2094345266);
+									interfaceHash = bitBuffer.readInt2(2137652109);
+									var109 = Class107.method1466(interfaceHash, 314639891);
+									if (1 != var109.anInt1975 * -768837131 || interfaceId != 686060225 * var109.anInt1967) {
+										var109.anInt1975 = -376460707;
+										var109.anInt1967 = interfaceId * -541123263;
+										Class79.method1097(var109, -961889719);
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode == 217) {
-									value2 = packetBuffer.readSignedByte(1708176767);
+								if (793368497 * currentOpcode == 217) {
+									interfaceHash = bitBuffer.readSignedByte(1708176767);
 									Class62[] var159 = Class51.method783(94483834);
-									clanRank = 0;
+									var8 = 0;
 
 									Class62 var170;
 									while (true) {
-										if (clanRank >= var159.length) {
+										if (var8 >= var159.length) {
 											var170 = null;
 											break;
 										}
 
-										Class62 var133 = var159[clanRank];
-										if (var133.anInt799 * -1916029001 == value2) {
+										Class62 var133 = var159[var8];
+										if (var133.anInt799 * -1916029001 == interfaceHash) {
 											var170 = var133;
 											break;
 										}
 
-										++clanRank;
+										++var8;
 									}
 
 									Class33.aClass62_449 = var170;
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (103 == currentOpcode) {
-									value1 = packetBuffer.readLEShortA(-2038534886);
-									if (value1 == '\uffff') {
-										value1 = -1;
+								if (103 == 793368497 * currentOpcode) {
+									interfaceId = bitBuffer.readLEShortA(-2038534886);
+									if (interfaceId == '\uffff') {
+										interfaceId = -1;
 									}
 
-									Class26.method535(value1, (byte) -6);
-									currentOpcode = -1;
+									Class26.method535(interfaceId, (byte) -6);
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode  == 135) {
-									value1 = packetBuffer.readShortA(-338860511);
-									if ('\uffff' == value1) {
-										value1 = -1;
+								if (currentOpcode * 793368497 == 135) {
+									interfaceId = bitBuffer.readShortA(-338860511);
+									if ('\uffff' == interfaceId) {
+										interfaceId = -1;
 									}
 
-									value2 = packetBuffer.readMediumm((byte) -61);
-									if (anInt3171 * -1994948003 != 0 && -1 != value1) {
-										Class80.method1099(Class108.aCacheIndex_1471, value1, 0,
+									interfaceHash = bitBuffer.method1989((byte) -61);
+									if (anInt3171 * -1994948003 != 0 && -1 != interfaceId) {
+										Class80.method1099(Class108.aClass99_Sub1_1471, interfaceId, 0,
 												anInt3171 * -1994948003, false, (short) 3438);
 										aBool3159 = true;
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (239 == currentOpcode) {//both player and map update
+								if (239 == currentOpcode * 793368497) {
 									Class8.decodeMapRegion(false, (byte) 10);
-									int packetId =  packetBuffer.method2955((byte) 9);
-									value1 = packetBuffer.readUnsignedShort(-59243090);
-									Class32.decodePlayerUpdate(packetBuffer, value1, (byte) 10);
-									currentOpcode = -1;
+									int packetId =  bitBuffer.method2955((byte) 9);
+									interfaceId = bitBuffer.readShort(-59243090);
+									Class32.decodePlayerUpdate(bitBuffer, interfaceId, (byte) 10);
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode  == 143) {//world hop
-									value1 = packetBuffer.readInt(-273006259);
-									RSImageProducer.aClass72_1675 = ISAAC.signLink.workAddress(value1, 769075048);
-									currentOpcode = -1;
+								if (currentOpcode * 793368497 == 143) {
+									interfaceId = bitBuffer.readInt(-273006259);
+									RSImageProducer.aClass72_1675 = ISAAC.aClass74_705.method1047(interfaceId, 769075048);
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
 								boolean var108;
-								if (84 == currentOpcode) { //send entire cc
+								if (84 == 793368497 * currentOpcode) {
 									anInt3127 = anInt3118 * -942030581;
-									if (371800591 * packetLength == 0) { //exit
-										currentCCName = null;
+									if (371800591 * anInt2980 == 0) {
+										aString3050 = null;
 										currentClanOwner = null;
-										Class98.ccPlayerCount = 0;
-										GameInterface.ourCurrentCC = null;
-										currentOpcode = -1;
+										Class98.anInt1378 = 0;
+										Class116_Sub11.aClass116_Sub7Array1820 = null;
+										currentOpcode = -726667601;
 										var85 = true;
 									} else {
-										currentClanOwner = packetBuffer.readString(61376769);
-										long ccName = packetBuffer.readLong((byte) 27);
+										currentClanOwner = bitBuffer.readString(61376769);
+										long ccName = bitBuffer.readLong((byte) 27);
 										var52 = ccName;
 										if (ccName > 0L && ccName < 6582952005840035281L) {
 											if (0L == ccName % 37L) {
-												name = null;
+												var112 = null;
 											} else {
-												col = 0;
+												var10 = 0;
 
 												for (long var60 = ccName; 0L != var60; var60 /= 37L) {
-													++col;
+													++var10;
 												}
 
-												StringBuilder var132 = new StringBuilder(col);
+												StringBuilder var132 = new StringBuilder(var10);
 
 												while (0L != var52) {
-													uid = var52;
+													var56 = var52;
 													var52 /= 37L;
-													var132.append(Class103.lowercase[(int) (uid - 37L * var52)]);
+													var132.append(Class103.lowercase[(int) (var56 - 37L * var52)]);
 												}
 
-												name = var132.reverse().toString();
+												var112 = var132.reverse().toString();
 											}
 										} else {
-											name = null;
+											var112 = null;
 										}
 
-										currentCCName = name;
-                                        packetBuffer.readUnsignedByte(985375785);
+										aString3050 = var112;
+                                        bitBuffer.readUnsignedByte(985375785);
 										Class53.currentClanKickRank = 0;
-										col = packetBuffer.readSignedByte(1708176767); //people in cc max is 100 iirc
-										if (col == 255) { //empty
-											currentOpcode = -1;
+										var10 = bitBuffer.readSignedByte(1708176767); //people in cc max is 200 iirc
+										if (var10 == 255) {
+											currentOpcode = -726667601;
 											var85 = true;
 										} else {
-											Class98.ccPlayerCount = -1124093015 * col;
-											PlayerAlias[] incc = new PlayerAlias[100];
+											Class98.anInt1378 = -1124093015 * var10;
+											PlayerAlias[] var122 = new PlayerAlias[100];
 
-											for (id = 0; id < -1304125287 * Class98.ccPlayerCount; ++id) {
-												incc[id] = new PlayerAlias();
-												incc[id].username = packetBuffer.readString(61376769);
-												incc[id].clanRankIcon = Class116_Sub23_Sub15.method2702(incc[id].username, Class59_Sub1.aClass143_1831, 1351377995);
-                                                int ok = packetBuffer.readUnsignedShort(1895289456);
-												incc[id].worldId = ok * 967496063;
-                                                byte lol =  packetBuffer.readUnsignedByte(1016104202);
-												incc[id].clanRank = lol;
-												packetBuffer.readString(61376769);
-                                                System.out.println(incc[id].username+"/"+ok+"/"+lol+"/"+-1304125287 * Class98.ccPlayerCount+"/"+id);
-												if (incc[id].username.equals(Class79.ourPlayer.username)) {
-													ourccrank = incc[id].clanRank;
+											for (var12 = 0; var12 < -1304125287 * Class98.anInt1378; ++var12) {
+												var122[var12] = new PlayerAlias();
+												var122[var12].username = bitBuffer.readString(61376769);
+												var122[var12].lastKnownName = Class116_Sub23_Sub15.method2702(
+														var122[var12].username, Class59_Sub1.aClass143_1831,
+														1351377995);
+                                                int ok = bitBuffer.readShort(1895289456);
+												var122[var12].worldId = ok * 967496063;
+                                                byte lol =  bitBuffer.readUnsignedByte(1016104202);
+												var122[var12].clanRank = lol;
+												bitBuffer.readString(61376769);
+												if (var122[var12].username.equals(
+														Class79.aPlayer_909.username)) {
+													aByte2965 = var122[var12].clanRank;
 												}
 											}
 
 											var108 = false;
-											var14 = Class98.ccPlayerCount * -1304125287;
+											var14 = Class98.anInt1378 * -1304125287;
 
 											while (var14 > 0) {
 												var108 = true;
 												--var14;
 
 												for (var114 = 0; var114 < var14; ++var114) {
-													if (incc[var114].clanRankIcon
-															.compareTo(incc[var114 + 1].clanRankIcon) > 0) {
-														PlayerAlias var134 = incc[var114];
-														incc[var114] = incc[1 + var114];
-														incc[var114 + 1] = var134;
+													if (var122[var114].lastKnownName
+															.compareTo(var122[var114 + 1].lastKnownName) > 0) {
+														PlayerAlias var134 = var122[var114];
+														var122[var114] = var122[1 + var114];
+														var122[var114 + 1] = var134;
 														var108 = false;
 													}
 												}
@@ -2374,83 +2382,84 @@ public final class client extends Applet_Sub1 {
 												}
 											}
 
-											GameInterface.ourCurrentCC = incc;
-											currentOpcode = -1;
+											Class116_Sub11.aClass116_Sub7Array1820 = var122;
+											currentOpcode = -726667601;
 											var85 = true;
 										}
 									}
-									break readBuffer;
+									break label3092;
 								}
 
-								if (208 == currentOpcode ) { //sendwindow
-									value1 = packetBuffer.readLEShort((byte) -60);
-									anInt3200 = -605073011 * value1;
-									Class116_Sub10.method1971(false, (byte) 95);
-									Class33.resetComponentAnimation(value1, 1196532469);
-									Class29.executeOnStart(-1074177723 * anInt3200, -447196070);
+								if (208 == currentOpcode * 793368497) {
 
-									for (value2 = 0; value2 < 100; ++value2) {
-										aBoolArray3073[value2] = true;
+									interfaceId = bitBuffer.readLEShort((byte) -60);
+									anInt3200 = -605073011 * interfaceId;
+									Class116_Sub10.method1971(false, (byte) 95);
+									Class33.method605(interfaceId, 1196532469);
+									Class29.method573(-1074177723 * anInt3200, -447196070);
+
+									for (interfaceHash = 0; interfaceHash < 100; ++interfaceHash) {
+										aBoolArray3073[interfaceHash] = true;
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode  == 132) {
-                                    int i = packetBuffer.readByteS((byte) -119);
-                                    int ii = packetBuffer.readSignedByte(1708176767);
+								if (currentOpcode * 793368497 == 132) {
+                                    int i = bitBuffer.readByteS((byte) -119);
+                                    int i2 = bitBuffer.readSignedByte(1708176767);
                                     Player.anInt2887 = i * 1689579987;
-									GameInterface.anInt1818 = ii * -958823289;
+									Class116_Sub11.anInt1818 = i2 * -958823289;
 
-									for (value1 = 1413480759
-											* GameInterface.anInt1818; value1 < GameInterface.anInt1818 * 1413480759
-													+ 8; ++value1) {
-										for (value2 = 40472155
-												* Player.anInt2887; value2 < Player.anInt2887
-														* 40472155 + 8; ++value2) {
+									for (interfaceId = 1413480759
+											* Class116_Sub11.anInt1818; interfaceId < Class116_Sub11.anInt1818 * 1413480759
+													+ 8; ++interfaceId) {
+										for (interfaceHash = 40472155
+												* Player.anInt2887; interfaceHash < Player.anInt2887
+														* 40472155 + 8; ++interfaceHash) {
 											if (null != aClass117ArrayArrayArray3071[-747958745
-													* GameInterface.anInt1819][value1][value2]) {
-												aClass117ArrayArrayArray3071[GameInterface.anInt1819
-														* -747958745][value1][value2] = null;
-												Class37.method672(value1, value2, -1770186955);
+													* Class116_Sub11.anInt1819][interfaceId][interfaceHash]) {
+												aClass117ArrayArrayArray3071[Class116_Sub11.anInt1819
+														* -747958745][interfaceId][interfaceHash] = null;
+												Class37.method672(interfaceId, interfaceHash, -1770186955);
 											}
 										}
 									}
 
 									for (Class116_Sub12 var157 = (Class116_Sub12) aClass117_3162
-											.getFirst(); var157 != null; var157 = (Class116_Sub12) aClass117_3162
-													.getNext()) {
-										if (var157.anInt1835 * -1096801001 >= 1413480759 * GameInterface.anInt1818
+											.method1551(); var157 != null; var157 = (Class116_Sub12) aClass117_3162
+													.method1553()) {
+										if (var157.anInt1835 * -1096801001 >= 1413480759 * Class116_Sub11.anInt1818
 												&& -1096801001 * var157.anInt1835 < 8
-														+ GameInterface.anInt1818 * 1413480759
+														+ Class116_Sub11.anInt1818 * 1413480759
 												&& -127960105 * var157.anInt1847 >= 40472155
 														* Player.anInt2887
 												&& -127960105
 														* var157.anInt1847 < Player.anInt2887
 																* 40472155 + 8
-												&& GameInterface.anInt1819 * -747958745 == var157.anInt1837
+												&& Class116_Sub11.anInt1819 * -747958745 == var157.anInt1837
 														* 584375567) {
 											var157.anInt1846 = 0;
 										}
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode  == 151) { //logout
+								if (currentOpcode * 793368497 == 151) {
 									Class93.method1270(-1305917269);
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = false;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (199 == currentOpcode) { //sentpm
-									var94 = packetBuffer.readString(61376769);
-									PacketBuilder buffer = packetBuffer;
+								if (199 == 793368497 * currentOpcode) {
+									var94 = bitBuffer.readString(61376769);
+									BitBuffer buffer = bitBuffer;
 									try {
 										var9 = buffer.readSmartC(485266038);
 										if (var9 > 32767) {
@@ -2458,344 +2467,346 @@ public final class client extends Applet_Sub1 {
 										}
 
 										byte[] var116 = new byte[var9];
-										buffer.position += client.aClass52_1621.getBytes(buffer.payload,
+										buffer.position += client.aClass52_1621.method786(buffer.payload,
 										buffer.position * 314639891, var116, 0, var9, (byte) 16) * -184175589;
 										String var119 = Tile.method1987(var116, 0, var9, (byte) 63);
-										lastUser = var119;
+										var138 = var119;
 									} catch (Exception var72) {
-										lastUser = "Cabbage";
+										var138 = "Cabbage";
 									}
 
-									lastUser = TextDrawingArea
-											.method3459(Class59.method892(lastUser, -1536394700));
-									Class86.appendMessage(6, var94, lastUser, -1880322425);
-									currentOpcode = -1;
+									var138 = TextDrawingArea
+											.method3459(Class59.method892(var138, -1536394700));
+									Class86.appendMessage(6, var94, var138, -1880322425);
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode == 142) { //sendclose interface
-									value1 = packetBuffer.readLEInt((byte) -32);
-									var124 = packetBuffer.readByteA((byte) -1) == 1;
-									var109 = Class107.getInterface(value1, 314639891);
-									if (var109.hidden != var124) {
-										var109.hidden = var124;
-										Class79.refreshInterface(var109, -2067500791);
+								if (793368497 * currentOpcode == 142) {
+									interfaceId = bitBuffer.readLEInt((byte) -32);
+									var124 = bitBuffer.readByteA((byte) -1) == 1;
+									var109 = Class107.method1466(interfaceId, 314639891);
+									if (var109.aBool1945 != var124) {
+										var109.aBool1945 = var124;
+										Class79.method1097(var109, -2067500791);
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (29 == currentOpcode ) { //interfacesets?
-									value1 = packetBuffer.readInt1((byte) -59);
-									var121 = Class107.getInterface(value1, 314639891);
-									var121.modelTypeDisabled = -1129382121;
-									var121.mediaIdDisabled = Class79.ourPlayer.aClass108_2881
+								if (29 == currentOpcode * 793368497) {
+									interfaceId = bitBuffer.readInt1((byte) -59);
+									var121 = Class107.method1466(interfaceId, 314639891);
+									var121.anInt1975 = -1129382121;
+									var121.anInt1967 = Class79.aPlayer_909.aClass108_2881
 											.method1475(-1887969660) * -541123263;
-									Class79.refreshInterface(var121, 1384098274);
-									currentOpcode = -1;
+									Class79.method1097(var121, 1384098274);
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (244 == currentOpcode) {
-									value1 = packetBuffer.readInt(-1869764490);
-									GameInterface var160 = (GameInterface) overridedInterfaces.get((long) value1);
+								if (244 == 793368497 * currentOpcode) {
+									interfaceId = bitBuffer.readInt(-1869764490);
+									Class116_Sub11 var160 = (Class116_Sub11) aClass127_3094.method1658((long) interfaceId);
 									if (var160 != null) {
 										Class116_Sub23_Sub5.method2490(var160, true, (byte) 1);
 									}
 
 									if (aClass116_Sub15_3097 != null) {
-										Class79.refreshInterface(aClass116_Sub15_3097, -1829538804);
+										Class79.method1097(aClass116_Sub15_3097, -1829538804);
 										aClass116_Sub15_3097 = null;
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (216 == currentOpcode ) {
-									value1 = packetBuffer.readInt(-1564411053);
-									value2 = packetBuffer.readUnsignedShort(1794487952);
-									if (value1 < -70000) {
-										value2 += '\u8000';
+								if (216 == currentOpcode * 793368497) {
+									interfaceId = bitBuffer.readInt(-1564411053);
+									interfaceHash = bitBuffer.readShort(1794487952);
+									if (interfaceId < -70000) {
+										interfaceHash += '\u8000';
 									}
 
-									if (value1 >= 0) {
-										var109 = Class107.getInterface(value1, 314639891);
+									if (interfaceId >= 0) {
+										var109 = Class107.method1466(interfaceId, 314639891);
 									} else {
 										var109 = null;
 									}
 
-									for (; 314639891 * packetBuffer.position < 371800591 * packetLength; Class116_Sub23_Sub11
-											.method2637(value2, clanRank, var9 - 1, col, 1100895887)) {
-										clanRank = packetBuffer.readSmartC(1333330635);
-										var9 = packetBuffer.readUnsignedShort(1329782102);
-										col = 0;
+									for (; 314639891 * bitBuffer.position < 371800591 * anInt2980; Class116_Sub23_Sub11
+											.method2637(interfaceHash, var8, var9 - 1, var10, 1100895887)) {
+										var8 = bitBuffer.readSmartC(1333330635);
+										var9 = bitBuffer.readShort(1329782102);
+										var10 = 0;
 										if (0 != var9) {
-											col = packetBuffer.readSignedByte(1708176767);
-											if (255 == col) {
-												col = packetBuffer.readInt(-169482322);
+											var10 = bitBuffer.readSignedByte(1708176767);
+											if (255 == var10) {
+												var10 = bitBuffer.readInt(-169482322);
 											}
 										}
 
-										if (null != var109 && clanRank >= 0 && clanRank < var109.inv.length) {
-											var109.inv[clanRank] = var9;
-											var109.invStackSize[clanRank] = col;
+										if (null != var109 && var8 >= 0 && var8 < var109.anIntArray2047.length) {
+											var109.anIntArray2047[var8] = var9;
+											var109.anIntArray2042[var8] = var10;
 										}
 									}
 
 									if (var109 != null) {
-										Class79.refreshInterface(var109, 2122052560);
+										Class79.method1097(var109, 2122052560);
 									}
 
-									Packet.method2213((byte) -119);
-									anIntArray3121[(anInt3025 += -1121866621) * -1512766933 - 1 & 31] = value2 & 32767;
-									currentOpcode = -1;
+									Buffer.method2213((byte) -119);
+									anIntArray3121[(anInt3025 += -1121866621) * -1512766933 - 1 & 31] = interfaceHash & 32767;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (41 == currentOpcode ) {
-									Player.anInt2887 = packetBuffer.readByteC(908877591)
+								if (41 == currentOpcode * 793368497) {
+									Player.anInt2887 = bitBuffer.readByteC(908877591)
 											* 1689579987;
-									GameInterface.anInt1818 = packetBuffer.readByteC(1673471458) * -958823289;
-									currentOpcode = -1;
+									Class116_Sub11.anInt1818 = bitBuffer.readByteC(1673471458) * -958823289;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (82 == currentOpcode) {
-									var94 = packetBuffer.readString(61376769); //playeroption
-									value2 = packetBuffer.readByteA((byte) -1); //??
-									value3 = packetBuffer.readByteC(382677552); //option
-									if (value3 >= 1 && value3 <= 8) {
+								if (82 == currentOpcode * 793368497) {
+									var94 = bitBuffer.readString(61376769); //playeroption
+									interfaceHash = bitBuffer.readByteA((byte) -1); //??
+									clickThrough = bitBuffer.readByteC(382677552); //option
+									if (clickThrough >= 1 && clickThrough <= 8) {
 										if (var94.equalsIgnoreCase("null")) {
 											var94 = null;
 										}
 
-										aStringArray3062[value3 - 1] = var94;
-										aBoolArray3063[value3 - 1] = 0 == value2;
+										aStringArray3062[clickThrough - 1] = var94;
+										aBoolArray3063[clickThrough - 1] = 0 == interfaceHash;
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode  == 137) {
-									for (value1 = 0; value1 < -1248800389 * Class116_Sub23_Sub15.anInt2448; ++value1) {
-										Class116_Sub23_Sub15 var148 = Class45.method702(value1, (short) -19370);
+								if (currentOpcode * 793368497 == 137) {
+									for (interfaceId = 0; interfaceId < -1248800389 * Class116_Sub23_Sub15.anInt2448; ++interfaceId) {
+										Class116_Sub23_Sub15 var148 = Class45.method702(interfaceId, (short) -19370);
 										if (var148 != null) {
-											Class107.anIntArray1454[value1] = 0;
-											Class107.varpData[value1] = 0;
+											Class107.anIntArray1454[interfaceId] = 0;
+											Class107.anIntArray1459[interfaceId] = 0;
 										}
 									}
 
-									Packet.method2213((byte) -127);
+									Buffer.method2213((byte) -127);
 									anInt3120 += -1888507616;
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode  == 202) {
+								if (currentOpcode * 793368497 == 202) {
 									if (-1 != -1074177723 * anInt3200) {
 										Class76.method1081(-1074177723 * anInt3200, 0, (byte) 2);
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (160 == currentOpcode ) { // senditemupdate
-									value1 = packetBuffer.readInt(-972423359);
-									value2 = packetBuffer.readUnsignedShort(1705911463);
-									if (value1 < -70000) {
-										value2 += '\u8000';
+								if (160 == currentOpcode * 793368497) {
+									interfaceId = bitBuffer.readInt(-972423359);
+									interfaceHash = bitBuffer.readShort(1705911463);
+									if (interfaceId < -70000) {
+										interfaceHash += '\u8000';
 									}
 
-									if (value1 >= 0) {
-										var109 = Class107.getInterface(value1, 314639891);
+									if (interfaceId >= 0) {
+										var109 = Class107.method1466(interfaceId, 314639891);
 									} else {
 										var109 = null;
 									}
 
 									if (null != var109) {
-										for (clanRank = 0; clanRank < var109.inv.length; ++clanRank) {
-											var109.inv[clanRank] = 0;
-											var109.invStackSize[clanRank] = 0;
+										for (var8 = 0; var8 < var109.anIntArray2047.length; ++var8) {
+											var109.anIntArray2047[var8] = 0;
+											var109.anIntArray2042[var8] = 0;
 										}
 									}
 
-									Canvas_Sub1.method2972(value2, -2134508792);
-									clanRank = packetBuffer.readUnsignedShort(952313331);//amount of items
+									Canvas_Sub1.method2972(interfaceHash, -2134508792);
+									var8 = bitBuffer.readShort(952313331);
 
-                                    System.out.print("160=" + value2 + "/" + value2 + ", size=" + clanRank);
-									for (var9 = 0; var9 < clanRank; ++var9) {
-										col = packetBuffer.readLEShortA(-2069803972); //itemId
-										var11 = packetBuffer.readSignedByte(1708176767); //count
-                                        System.out.print("[id["+var9+"]= 1="+col+", 2="+var11);
+                                    System.out.print("160=" + interfaceHash + "/" + interfaceHash + ", size=" + var8);
+									for (var9 = 0; var9 < var8; ++var9) {
+										var10 = bitBuffer.readLEShortA(-2069803972);
+										var11 = bitBuffer.readSignedByte(1708176767);
+                                        System.out.print("[id["+var9+"]= 1="+var10+", 2="+var11);
 										if (255 == var11) {
-											var11 = packetBuffer.readInt1((byte) -74); //intcount
+											var11 = bitBuffer.readInt1((byte) -74);
                                             System.out.print(", 3=" + var11);
 										}
 
-										if (var109 != null && var9 < var109.inv.length) {
-											var109.inv[var9] = col;
-											var109.invStackSize[var9] = var11;
+										if (var109 != null && var9 < var109.anIntArray2047.length) {
+											var109.anIntArray2047[var9] = var10;
+											var109.anIntArray2042[var9] = var11;
 									} 
-										Class116_Sub23_Sub11.method2637(value2, var9, col - 1, var11, -455301126);
+										Class116_Sub23_Sub11.method2637(interfaceHash, var9, var10 - 1, var11, -455301126);
 									}
                                     System.out.println(" -done");
 
 									if (var109 != null) {
-										Class79.refreshInterface(var109, -182733946);
+										Class79.method1097(var109, -182733946);
 									}
 
-									Packet.method2213((byte) -125);
-									anIntArray3121[(anInt3025 += -1121866621) * -1512766933 - 1 & 31] = value2 & 32767;
-									currentOpcode = -1;
+									Buffer.method2213((byte) -125);
+									anIntArray3121[(anInt3025 += -1121866621) * -1512766933 - 1 & 31] = interfaceHash & 32767;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode == 9) {
-									var94 = packetBuffer.readString(61376769);
+								if (793368497 * currentOpcode == 9) {
+									var94 = bitBuffer.readString(61376769);
 									aString2940 = var94;
 
 									try {
-										username = aclient2930.getParameter(Class122.aClass122_1529.aString1544);
-										name = aclient2930.getParameter(Class122.aClass122_1542.aString1544);
-										lastUser = username + "settings=" + var94 + "; version=1; path=/; domain=" + name;
+										var135 = aclient2930.getParameter(Class122.aClass122_1529.aString1544);
+										var112 = aclient2930.getParameter(Class122.aClass122_1542.aString1544);
+										var138 = var135 + "settings=" + var94 + "; version=1; path=/; domain=" + var112;
 										if (var94.length() == 0) {
-											lastUser = lastUser + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+											var138 = var138 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
 										} else {
-											lastUser = lastUser + "; Expires="
+											var138 = var138 + "; Expires="
 													+ Class62.method916(
-															Class116_Sub5.generateHash(-2027425312) + 94608000000L)
+															Class116_Sub5.method1929(-2027425312) + 94608000000L)
 													+ "; Max-Age=" + 94608000L;
 										}
 
 										client var117 = aclient2930;
-										String var102 = "document.cookie=\"" + lastUser + "\"";
+										String var102 = "document.cookie=\"" + var138 + "\"";
 										JSObject.getWindow(var117).eval(var102);
 									} catch (Throwable var71) {
 										;
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode  == 117) {
+								if (currentOpcode * 793368497 == 117) {
 									aBool2988 = true;
-									Class31.anInt428 = packetBuffer.readSignedByte(1708176767) * -1737876805;
-									Class32.anInt440 = packetBuffer.readSignedByte(1708176767) * -1608345747;
-									Class3.anInt43 = packetBuffer.readUnsignedShort(797348180) * 1185326837;
-									ObjectDefinition.anInt2208 = packetBuffer.readSignedByte(1708176767) * 1146873531;
-									Class116_Sub23_Sub18.anInt2481 = packetBuffer.readSignedByte(1708176767) * -714496409;
+									Class31.anInt428 = bitBuffer.readSignedByte(1708176767) * -1737876805;
+									Class32.anInt440 = bitBuffer.readSignedByte(1708176767) * -1608345747;
+									Class3.anInt43 = bitBuffer.readShort(797348180) * 1185326837;
+									ObjectDefinition.anInt2208 = bitBuffer.readSignedByte(1708176767) * 1146873531;
+									Class116_Sub23_Sub18.anInt2481 = bitBuffer.readSignedByte(1708176767) * -714496409;
 									if (-2101471913 * Class116_Sub23_Sub18.anInt2481 >= 100) {
 										Class116_Sub23_Sub16_Sub5.anInt2740 = -910433920 * Class31.anInt428
 												+ -401449920;
 										Class83.anInt968 = -1084622464 * Class32.anInt440 + 1463606720;
-										RelationList.anInt671 = (MobDefinition.method2552(
+										Class50.anInt671 = (MobDefinition.method2552(
                                                 Class116_Sub23_Sub16_Sub5.anInt2740 * 282154897,
-                                                -324676025 * Class83.anInt968, GameInterface.anInt1819 * -747958745,
+                                                -324676025 * Class83.anInt968, Class116_Sub11.anInt1819 * -747958745,
                                                 (short) 20581) - 3036509 * Class3.anInt43) * -1022442815;
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (43 == currentOpcode) {///hmmm interfaceconfig?
-									value1 = packetBuffer.readSignedByte(1708176767);
-									value2 = packetBuffer.readSignedByte(1708176767);
-									value3 = packetBuffer.readSignedByte(1708176767);
-									clanRank = packetBuffer.readSignedByte(1708176767);
-									aBoolArray2970[value1] = true;
-									anIntArray3185[value1] = value2;
-									anIntArray3186[value1] = value3;
-									anIntArray3189[value1] = clanRank;
-									anIntArray3188[value1] = 0;
-									currentOpcode = -1;
+								if (43 == 793368497 * currentOpcode) {///hmmm interfaceconfig?
+									interfaceId = bitBuffer.readSignedByte(1708176767);
+									interfaceHash = bitBuffer.readSignedByte(1708176767);
+									clickThrough = bitBuffer.readSignedByte(1708176767);
+									var8 = bitBuffer.readSignedByte(1708176767);
+									aBoolArray2970[interfaceId] = true;
+									anIntArray3185[interfaceId] = interfaceHash;
+									anIntArray3186[interfaceId] = clickThrough;
+									anIntArray3189[interfaceId] = var8;
+									anIntArray3188[interfaceId] = 0;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
 								boolean var97;
-								if (currentOpcode == 165) {
+								if (793368497 * currentOpcode == 165) {
                                     System.out.print("Packet 165 = [");
-									while (packetBuffer.position * 314639891 < packetLength * 371800591) {
-										var125 = packetBuffer.readSignedByte(1708176767) == 1;
-										username = packetBuffer.readString(61376769);
-										name = packetBuffer.readString(61376769);
-										clanRank = packetBuffer.readUnsignedShort(1822095344);
-										var9 = packetBuffer.readSignedByte(1708176767);
-										col = packetBuffer.readSignedByte(1708176767);
-                                        System.out.print("readbool=" + var125 + ", readString=" + username + ", readString=" + name + ", readUnsignedShort=" + clanRank + ", rank=" + var9 + ", byte=" + col + ", byte 0 end., ");
-										boolean var107 = (col & 2) != 0;
-										var108 = (col & 1) != 0;
-										if (clanRank > 0) {
-											String lol = packetBuffer.readString(61376769);
-											int i = packetBuffer.readSignedByte(1708176767);
-											int iii = packetBuffer.readInt(-298677770);
-                                            System.out.print("read 6 bytes" + lol + ", i=" + i + ", i2=" + iii);
+									while (bitBuffer.position * 314639891 < anInt2980 * 371800591) {
+										var125 = bitBuffer.readSignedByte(1708176767) == 1;
+										var135 = bitBuffer.readString(61376769);
+										var112 = bitBuffer.readString(61376769);
+										var8 = bitBuffer.readShort(1822095344);
+										var9 = bitBuffer.readSignedByte(1708176767);
+										var10 = bitBuffer.readSignedByte(1708176767);
+                                        System.out.print("readbool="+var125+", readString="+var135+", readString="+var112+", readShort="+var8+", rank="+var9+", byte="+var10+", byte 0 end., ");
+										boolean var107 = (var10 & 2) != 0;
+										var108 = (var10 & 1) != 0;
+										if (var8 > 0) {
+											String lol = bitBuffer.readString(61376769);
+											int i = bitBuffer.readSignedByte(1708176767);
+											int i2 = bitBuffer.readInt(-298677770);
+                                            System.out.print("read 6 bytes" + lol + ", i=" + i + ", i2=" + i2);
 										}
 
-										String l = packetBuffer.readString(61376769);
+										String l = bitBuffer.readString(61376769);
                                         System.out.print("str =" + l + ", ");
 
 										for (var13 = 0; var13 < -1616775607 * anInt3152; ++var13) {
-											RelationList list = aClass50Array3204[var13];
+											Class50 var128 = aClass50Array3204[var13];
 											if (!var125) {
-												if (username.equals(list.username)) {
-													if (-698428043 * list.anInt666 != clanRank) {
+												if (var135.equals(var128.aString670)) {
+													if (-698428043 * var128.anInt666 != var8) {
 														boolean var144 = true;
-														for (Friend frnd = (Friend) friendList.popFront(); frnd != null; frnd = (Friend) friendList.peekFront()) {
-															if (frnd.username.equals(username)) {
-																if (0 != clanRank && 0 == frnd.clanRank) {
-																	frnd.unlink();
+														for (Friend var153 = (Friend) friendList
+																.method1580(); var153 != null; var153 = (Friend) friendList
+																		.method1582()) {
+															if (var153.username.equals(var135)) {
+																if (0 != var8 && 0 == var153.clanRank) {
+																	var153.unlink();
 																	var144 = false;
-																} else if (clanRank == 0 && 0 != frnd.clanRank) {
-																	frnd.unlink();
+																} else if (var8 == 0 && 0 != var153.clanRank) {
+																	var153.unlink();
 																	var144 = false;
 																}
 															}
 														}
 														if (var144) {
-															friendList.insertBack(new Friend(username, clanRank));
+															friendList.addFriend(new Friend(var135, var8));
 														}
-														list.anInt666 = 590451421 * clanRank;
+														var128.anInt666 = 590451421 * var8;
 													}
-													list.lastUsername = name;
-													list.anInt668 = var9 * 882807583;
-													list.aBool667 = var107;
-													list.aBool669 = var108;
-													username = null;
+													var128.aString676 = var112;
+													var128.anInt668 = var9 * 882807583;
+													var128.aBool667 = var107;
+													var128.aBool669 = var108;
+													var135 = null;
 													break;
 												}
-											} else if (name.equals(list.username)) {
-												list.username = username;
-												list.lastUsername = name;
-												username = null;
+											} else if (var112.equals(var128.aString670)) {
+												var128.aString670 = var135;
+												var128.aString676 = var112;
+												var135 = null;
 												break;
 											}
 										}
 
-										if (username != null && anInt3152 * -1616775607 < 400) {
-											RelationList var129 = new RelationList();
+										if (var135 != null && anInt3152 * -1616775607 < 400) {
+											Class50 var129 = new Class50();
 											aClass50Array3204[anInt3152 * -1616775607] = var129;
-											var129.username = username;
-											var129.lastUsername = name;
-											var129.anInt666 = clanRank * 590451421;
+											var129.aString670 = var135;
+											var129.aString676 = var112;
+											var129.anInt666 = var8 * 590451421;
 											var129.anInt668 = var9 * 882807583;
 											var129.aBool667 = var107;
 											var129.aBool669 = var108;
@@ -2807,16 +2818,16 @@ public final class client extends Applet_Sub1 {
 									anInt3203 = -1187743330;
 									anInt3068 = -712636309 * anInt3118;
 									var125 = false;
-									value2 = -1616775607 * anInt3152;
+									interfaceHash = -1616775607 * anInt3152;
 
-									while (value2 > 0) {
+									while (interfaceHash > 0) {
 										var125 = true;
-										--value2;
+										--interfaceHash;
 
-										for (value3 = 0; value3 < value2; ++value3) {
+										for (clickThrough = 0; clickThrough < interfaceHash; ++clickThrough) {
 											var97 = false;
-											RelationList var113 = aClass50Array3204[value3];
-											RelationList var100 = aClass50Array3204[value3 + 1];
+											Class50 var113 = aClass50Array3204[clickThrough];
+											Class50 var100 = aClass50Array3204[clickThrough + 1];
 											if (var113.anInt666 * -698428043 != anInt3115 * -1631311031
 													&& -698428043 * var100.anInt666 == -1631311031 * anInt3115) {
 												var97 = true;
@@ -2836,9 +2847,9 @@ public final class client extends Applet_Sub1 {
 											}
 
 											if (var97) {
-												RelationList var111 = aClass50Array3204[value3];
-												aClass50Array3204[value3] = aClass50Array3204[value3 + 1];
-												aClass50Array3204[value3 + 1] = var111;
+												Class50 var111 = aClass50Array3204[clickThrough];
+												aClass50Array3204[clickThrough] = aClass50Array3204[clickThrough + 1];
+												aClass50Array3204[clickThrough + 1] = var111;
 												var125 = false;
 											}
 										}
@@ -2848,128 +2859,128 @@ public final class client extends Applet_Sub1 {
 										}
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode  == 0) {//interface animation
-									value1 = packetBuffer.readUnsignedShort(899145687);
-									value2 = packetBuffer.readUnsignedShort(-151732770);
-									value3 = packetBuffer.readInt(-321469433);
-									var105 = Class107.getInterface(value3, 314639891);
-									var105.anInt1970 = -103301195 * (value2 + (value1 << 16));
-									currentOpcode = -1;
+								if (currentOpcode * 793368497 == 0) {
+									interfaceId = bitBuffer.readShort(899145687);
+									interfaceHash = bitBuffer.readShort(-151732770);
+									clickThrough = bitBuffer.readInt(-321469433);
+									var105 = Class107.method1466(clickThrough, 314639891);
+									var105.anInt1970 = -103301195 * (interfaceHash + (interfaceId << 16));
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode  == 153) { //black out compass 45-99 0reset
-                                    int i = packetBuffer.readSignedByte(1708176767);
+								if (currentOpcode * 793368497 == 153) {
+                                    int i = bitBuffer.readSignedByte(1708176767);
 									anInt3170 = i * 583418197;
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode  == 122) {
-									value1 = packetBuffer.readInt2(2133575024);
-									value2 = packetBuffer.method2069((byte) 0);
-									value3 = packetBuffer.method2075(-202112122);
-									var105 = Class107.getInterface(value1, 314639891);
-									if (-459849887 * var105.xOffset != value2 || value3 != 538516377 * var105.yOffset
+								if (currentOpcode * 793368497 == 122) {
+									interfaceId = bitBuffer.readInt2(2133575024);
+									interfaceHash = bitBuffer.method2069((byte) 0);
+									clickThrough = bitBuffer.method2075(-202112122);
+									var105 = Class107.method1466(interfaceId, 314639891);
+									if (-459849887 * var105.anInt1934 != interfaceHash || clickThrough != 538516377 * var105.anInt2029
 											|| var105.anInt1930 * -1186475957 != 0
 											|| -306698303 * var105.anInt1915 != 0) {
-										var105.xOffset = 10986657 * value2;
-										var105.yOffset = -720369495 * value3;
+										var105.anInt1934 = 10986657 * interfaceHash;
+										var105.anInt2029 = -720369495 * clickThrough;
 										var105.anInt1930 = 0;
 										var105.anInt1915 = 0;
-										Class79.refreshInterface(var105, -1396732294);
+										Class79.method1097(var105, -1396732294);
 										Player.method3563(var105, 1950203888);
-										if (0 == -1305917269 * var105.type) {
+										if (0 == -1305917269 * var105.anInt2018) {
 											ObjectDefinition.method2435(
-                                                    RSInterface.mainInterfaceArray[value1 >> 16], var105,
+                                                    Class116_Sub15.aClass116_Sub15ArrayArray1956[interfaceId >> 16], var105,
                                                     false, 1213318410);
 										}
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (177 == currentOpcode ) {
-									Packet.method2213((byte) -118);
-                                    int i = packetBuffer.readSignedByte(1708176767);
+								if (177 == currentOpcode * 793368497) {
+									Buffer.method2213((byte) -118);
+                                    int i = bitBuffer.readSignedByte(1708176767);
 									anInt3098 = i * -84367693;
 									anInt3122 = anInt3118 * 434653173;
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode == 116) { //remove or add to cc
-									var94 = packetBuffer.readString(61376769);
-									value2 = packetBuffer.readUnsignedShort(-237384292);
-									byte removeByte = packetBuffer.readUnsignedByte(1390301658);
+								if (793368497 * currentOpcode == 116) {
+									var94 = bitBuffer.readString(61376769);
+									interfaceHash = bitBuffer.readShort(-237384292);
+									byte var120 = bitBuffer.readUnsignedByte(1390301658);
 									var97 = false;
-									if (removeByte == -128) {
+									if (var120 == -128) {
 										var97 = true;
 									}
 
-									if (var97) { //remove player
-										if (-1304125287 * Class98.ccPlayerCount == 0) {
-											currentOpcode = -1;
+									if (var97) {
+										if (-1304125287 * Class98.anInt1378 == 0) {
+											currentOpcode = -726667601;
 											var85 = true;
-											break readBuffer;
+											break label3092;
 										}
 
 										boolean var103 = false;
 
-										for (var9 = 0; var9 < Class98.ccPlayerCount * -1304125287
-												&& (!GameInterface.ourCurrentCC[var9].username
+										for (var9 = 0; var9 < Class98.anInt1378 * -1304125287
+												&& (!Class116_Sub11.aClass116_Sub7Array1820[var9].username
 														.equals(var94)
-														|| value2 != GameInterface.ourCurrentCC[var9].worldId
+														|| interfaceHash != Class116_Sub11.aClass116_Sub7Array1820[var9].worldId
 																* 1300426367); ++var9) {
 											;
 										}
 
-										if (var9 < Class98.ccPlayerCount * -1304125287) {
-											while (var9 < -1304125287 * Class98.ccPlayerCount - 1) {
-												GameInterface.ourCurrentCC[var9] = GameInterface.ourCurrentCC[1
+										if (var9 < Class98.anInt1378 * -1304125287) {
+											while (var9 < -1304125287 * Class98.anInt1378 - 1) {
+												Class116_Sub11.aClass116_Sub7Array1820[var9] = Class116_Sub11.aClass116_Sub7Array1820[1
 														+ var9];
 												++var9;
 											}
 
-											Class98.ccPlayerCount -= -1124093015;
-											GameInterface.ourCurrentCC[Class98.ccPlayerCount
+											Class98.anInt1378 -= -1124093015;
+											Class116_Sub11.aClass116_Sub7Array1820[Class98.anInt1378
 													* -1304125287] = null;
 										}
-									} else { //add player/change rank
-										packetBuffer.readString(61376769);
-										PlayerAlias per = new PlayerAlias();
-										per.username = var94;
-										per.clanRankIcon = Class116_Sub23_Sub15.method2702(per.username,
+									} else {
+										bitBuffer.readString(61376769);
+										PlayerAlias var110 = new PlayerAlias();
+										var110.username = var94;
+										var110.lastKnownName = Class116_Sub23_Sub15.method2702(var110.username,
 												Class59_Sub1.aClass143_1831, -806241291);
-										per.worldId = 967496063 * value2;
-										per.clanRank = removeByte;
+										var110.worldId = 967496063 * interfaceHash;
+										var110.clanRank = var120;
 
-										for (col = Class98.ccPlayerCount * -1304125287 - 1; col >= 0; --col) {
-											var11 = GameInterface.ourCurrentCC[col].clanRankIcon
-													.compareTo(per.clanRankIcon);
+										for (var10 = Class98.anInt1378 * -1304125287 - 1; var10 >= 0; --var10) {
+											var11 = Class116_Sub11.aClass116_Sub7Array1820[var10].lastKnownName
+													.compareTo(var110.lastKnownName);
 											if (var11 == 0) {
-												GameInterface.ourCurrentCC[col].worldId = 967496063
-														* value2;
-												GameInterface.ourCurrentCC[col].clanRank = removeByte;
+												Class116_Sub11.aClass116_Sub7Array1820[var10].worldId = 967496063
+														* interfaceHash;
+												Class116_Sub11.aClass116_Sub7Array1820[var10].clanRank = var120;
 												if (var94.equals(
-														Class79.ourPlayer.username)) {
-													ourccrank = removeByte;
+														Class79.aPlayer_909.username)) {
+													aByte2965 = var120;
 												}
 
 												anInt3127 = -942030581 * anInt3118;
-												currentOpcode = -1;
+												currentOpcode = -726667601;
 												var85 = true;
-												break readBuffer;
+												break label3092;
 											}
 
 											if (var11 < 0) {
@@ -2978,191 +2989,192 @@ public final class client extends Applet_Sub1 {
 										}
 
 										if (-1304125287
-												* Class98.ccPlayerCount >= GameInterface.ourCurrentCC.length) {
-											currentOpcode = -1;
+												* Class98.anInt1378 >= Class116_Sub11.aClass116_Sub7Array1820.length) {
+											currentOpcode = -726667601;
 											var85 = true;
-											break readBuffer;
+											break label3092;
 										}
 
-										for (var11 = Class98.ccPlayerCount * -1304125287 - 1; var11 > col; --var11) {
-											GameInterface.ourCurrentCC[var11
-													+ 1] = GameInterface.ourCurrentCC[var11];
+										for (var11 = Class98.anInt1378 * -1304125287 - 1; var11 > var10; --var11) {
+											Class116_Sub11.aClass116_Sub7Array1820[var11
+													+ 1] = Class116_Sub11.aClass116_Sub7Array1820[var11];
 										}
 
-										if (0 == -1304125287 * Class98.ccPlayerCount) {
-											GameInterface.ourCurrentCC = new PlayerAlias[100];
+										if (0 == -1304125287 * Class98.anInt1378) {
+											Class116_Sub11.aClass116_Sub7Array1820 = new PlayerAlias[100];
 										}
 
-										GameInterface.ourCurrentCC[1 + col] = per;
-										Class98.ccPlayerCount += -1124093015;
-										if (var94.equals(Class79.ourPlayer.username)) {
-											ourccrank = removeByte;
+										Class116_Sub11.aClass116_Sub7Array1820[1 + var10] = var110;
+										Class98.anInt1378 += -1124093015;
+										if (var94.equals(Class79.aPlayer_909.username)) {
+											aByte2965 = var120;
 										}
 									}
 
 									anInt3127 = -942030581 * anInt3118;
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (156 == currentOpcode) { //some reset shit
+								if (156 == 793368497 * currentOpcode) {
 									aBool2988 = false;
 
-									for (value1 = 0; value1 < 5; ++value1) {
-										aBoolArray2970[value1] = false;
+									for (interfaceId = 0; interfaceId < 5; ++interfaceId) {
+										aBoolArray2970[interfaceId] = false;
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode  == 19) {
-									for (value1 = 0; value1 < Class107.varpData.length; ++value1) {
-										if (Class107.varpData[value1] != Class107.anIntArray1454[value1]) {
-											Class107.varpData[value1] = Class107.anIntArray1454[value1];
-											World.method567(value1, 1961008023);
-											anIntArray3119[(anInt3120 += 1551596873) * -729938695 - 1 & 31] = value1;
+								if (currentOpcode * 793368497 == 19) {
+									for (interfaceId = 0; interfaceId < Class107.anIntArray1459.length; ++interfaceId) {
+										if (Class107.anIntArray1459[interfaceId] != Class107.anIntArray1454[interfaceId]) {
+											Class107.anIntArray1459[interfaceId] = Class107.anIntArray1454[interfaceId];
+											Class27.method567(interfaceId, 1961008023);
+											anIntArray3119[(anInt3120 += 1551596873) * -729938695 - 1 & 31] = interfaceId;
 										}
-									} 
-									currentOpcode = -1;
+									}
+
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (145 == currentOpcode ) {//sendmessage
-									value1 = packetBuffer.readSmartC(-14393444);
-									var124 = packetBuffer.readSignedByte(1708176767) == 1;
-									name = "";
+								if (145 == currentOpcode * 793368497) {//sendmessage
+									interfaceId = bitBuffer.readSmartC(-14393444);
+									var124 = bitBuffer.readSignedByte(1708176767) == 1;
+									var112 = "";
 									var97 = false;
 									if (var124) {
-										name = packetBuffer.readString(61376769);
-										if (World.method568(name, -1976350399)) {
+										var112 = bitBuffer.readString(61376769);
+										if (Class27.method568(var112, -1976350399)) {
 											var97 = true;
 										}
 									}
 
-									String someStr = packetBuffer.readString(61376769);
+									String someStr = bitBuffer.readString(61376769);
 									if (!var97) {
-										Class86.appendMessage(value1, name, someStr, 1763502798);
+										Class86.appendMessage(interfaceId, var112, someStr, 1763502798);
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (185 == currentOpcode ) {
-									value1 = packetBuffer.readInt(-1454872856);
-									var121 = Class107.getInterface(value1, 314639891);
+								if (185 == currentOpcode * 793368497) {
+									interfaceId = bitBuffer.readInt(-1454872856);
+									var121 = Class107.method1466(interfaceId, 314639891);
 
-									for (value3 = 0; value3 < var121.inv.length; ++value3) {
-										var121.inv[value3] = -1;
-										var121.inv[value3] = 0;
+									for (clickThrough = 0; clickThrough < var121.anIntArray2047.length; ++clickThrough) {
+										var121.anIntArray2047[clickThrough] = -1;
+										var121.anIntArray2047[clickThrough] = 0;
 									}
 
-									Class79.refreshInterface(var121, 888621302);
-									currentOpcode = -1;
+									Class79.method1097(var121, 888621302);
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (62 == currentOpcode ) {
-									World var104 = new World();
-									var104.address = packetBuffer.readString(61376769);
-									var104.worldId = packetBuffer.readUnsignedShort(1354845383) * -430891615;
-									value2 = packetBuffer.readInt(-895205583);
-									var104.activityFlag = 1825398059 * value2;
+								if (62 == currentOpcode * 793368497) {
+									Class27 var104 = new Class27();
+									var104.aString382 = bitBuffer.readString(61376769);
+									var104.anInt388 = bitBuffer.readShort(1354845383) * -430891615;
+									interfaceHash = bitBuffer.readInt(-895205583);
+									var104.anInt380 = 1825398059 * interfaceHash;
 									Class116_Sub12.method1983(45, (byte) 69);
-									Class38.streamBuffer.sync(1615140366);
-									Class38.streamBuffer = null;
+									Class38.bufferIn.method1001(1615140366);
+									Class38.bufferIn = null;
 									Class100.method1427(var104, 2115992956);
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = false;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode == 35) {
+								if (793368497 * currentOpcode == 35) {
 									Class8.decodeMapRegion(true, (byte) 110);
-									packetBuffer.method2955((byte) 15);
-									value1 = packetBuffer.readUnsignedShort(1091601294);
-									Class32.decodePlayerUpdate(packetBuffer, value1, (byte) 10);
-									currentOpcode = -1;
+									bitBuffer.method2955((byte) 15);
+									interfaceId = bitBuffer.readShort(1091601294);
+									Class32.decodePlayerUpdate(bitBuffer, interfaceId, (byte) 10);
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode  == 181) {
+								if (currentOpcode * 793368497 == 181) {
 									Class8.decodeNpcUpdate(true, 1550204582);
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode == 172) {
-									value1 = packetBuffer.readUnsignedShort(787331107);
-									value2 = packetBuffer.readInt(-1422557084);
-									var109 = Class107.getInterface(value2, 314639891);
-									if (2 != var109.modelTypeDisabled * -768837131 || value1 != var109.mediaIdDisabled * 686060225) {
-										var109.modelTypeDisabled = -752921414;
-										var109.mediaIdDisabled = -541123263 * value1;
-										Class79.refreshInterface(var109, 231468397);
+								if (793368497 * currentOpcode == 172) {
+									interfaceId = bitBuffer.readShort(787331107);
+									interfaceHash = bitBuffer.readInt(-1422557084);
+									var109 = Class107.method1466(interfaceHash, 314639891);
+									if (2 != var109.anInt1975 * -768837131 || interfaceId != var109.anInt1967 * 686060225) {
+										var109.anInt1975 = -752921414;
+										var109.anInt1967 = -541123263 * interfaceId;
+										Class79.method1097(var109, 231468397);
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (169 == currentOpcode ) {
-									Class32.decodePlayerUpdate(packetBuffer, 371800591 * packetLength, (byte) 10);
-									currentOpcode = -1;
+								if (169 == currentOpcode * 793368497) {
+									Class32.decodePlayerUpdate(bitBuffer, 371800591 * anInt2980, (byte) 10);
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode == 4) { //dafuq 4?nigger
-									packetBuffer.position += -861949196;
-									if (packetBuffer.method2166((byte) 50)) {
-										PacketBuilder var98 = packetBuffer;
-										value2 = packetBuffer.position * 314639891 - 28;
+								if (793368497 * currentOpcode == 4) { //dafuq 4?nigger
+									bitBuffer.position += -861949196;
+									if (bitBuffer.method2166((byte) 50)) {
+										BitBuffer var98 = bitBuffer;
+										interfaceHash = bitBuffer.position * 314639891 - 28;
 										if (Class86.aClass140_1010 != null) {
 											try {
 												Class86.aClass140_1010.method1771(0L);
-												Class86.aClass140_1010.method1764(var98.payload, value2, 24, -348227858);
+												Class86.aClass140_1010.method1764(var98.payload, interfaceHash, 24, -348227858);
 											} catch (Exception var70) {
 												;
 											}
 										}
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (222 == currentOpcode) { //for custom regions reset
-									for (value1 = 0; value1 < globalPlayers.length; ++value1) {
-										if (globalPlayers[value1] != null) {
-											globalPlayers[value1].anInt2587 = 1587034171;
+								if (222 == 793368497 * currentOpcode) {
+									for (interfaceId = 0; interfaceId < globalPlayers.length; ++interfaceId) {
+										if (globalPlayers[interfaceId] != null) {
+											globalPlayers[interfaceId].anInt2587 = 1587034171;
 										}
 									}
 
-									for (value1 = 0; value1 < aMobArray2972.length; ++value1) {
-										if (null != aMobArray2972[value1]) {
-											aMobArray2972[value1].anInt2587 = 1587034171;
+									for (interfaceId = 0; interfaceId < aMobArray2972.length; ++interfaceId) {
+										if (null != aMobArray2972[interfaceId]) {
+											aMobArray2972[interfaceId].anInt2587 = 1587034171;
 										}
 									}
 
-									currentOpcode = -1;
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								if (currentOpcode  == 68) {
-									value1 = packetBuffer.readInt(-1759251463);
-									value2 = packetBuffer.readInt(-436481837);
+								if (currentOpcode * 793368497 == 68) {
+									interfaceId = bitBuffer.readInt(-1759251463);
+									interfaceHash = bitBuffer.readInt(-436481837);
 									if (null == Class43.aGarbageCollectorMXBean578
 											|| !Class43.aGarbageCollectorMXBean578.isValid()) {
 										try {
@@ -3181,15 +3193,15 @@ public final class client extends Applet_Sub1 {
 										}
 									}
 
-									long var62 = Class116_Sub5.generateHash(135540026);
+									long var62 = Class116_Sub5.method1929(135540026);
 									var9 = -1;
 									if (null != Class43.aGarbageCollectorMXBean578) {
 										var48 = Class43.aGarbageCollectorMXBean578.getCollectionTime();
 										if (-1L != 229038749475924873L * aLong3212) {
 											var54 = var48 - 229038749475924873L * aLong3212;
-											uid = var62 - aLong3086 * 6918662072055282017L;
-											if (uid != 0L) {
-												var9 = (int) (100L * var54 / uid);
+											var56 = var62 - aLong3086 * 6918662072055282017L;
+											if (var56 != 0L) {
+												var9 = (int) (100L * var54 / var56);
 											}
 										}
 
@@ -3200,32 +3212,32 @@ public final class client extends Applet_Sub1 {
 									rsaBuffer.startPacket(230, (byte) 84);
 									rsaBuffer.writeByteC(anInt2918 * 305420995, 218638507);
 									rsaBuffer.writeByteC(var9, 1888483689);
-									rsaBuffer.writeLEInt(value1, (byte) 80);
-									rsaBuffer.method2046(value2, 363001979);
-									currentOpcode = -1;
+									rsaBuffer.method2100(interfaceId, (byte) 80);
+									rsaBuffer.method2046(interfaceHash, 363001979);
+									currentOpcode = -726667601;
 									var85 = true;
-									break readBuffer;
+									break label3092;
 								}
 
-								Class90.method1192("" + currentOpcode  + Class41.aString538
+								Class90.method1192("" + currentOpcode * 793368497 + Class41.aString538
 										+ anInt3066 * -1475322259 + Class41.aString538 + anInt3173 * 385590311
-										+ Class41.aString538 + packetLength * 371800591, (Throwable) null, 343294798);
+										+ Class41.aString538 + anInt2980 * 371800591, (Throwable) null, 343294798);
 								Class93.method1270(-1305917269);
 							} catch (IOException var78) {
 								Class93.method1265(1847951744);
 							} catch (Exception var79) {
-								var94 = "" + currentOpcode + Class41.aString538 + anInt3066 * -1475322259
+								var94 = "" + 793368497 * currentOpcode + Class41.aString538 + anInt3066 * -1475322259
 										+ Class41.aString538 + 385590311 * anInt3173 + Class41.aString538
-										+ packetLength * 371800591 + Class41.aString538
-										+ (Class79.ourPlayer.xMovementSteps[0]
+										+ anInt2980 * 371800591 + Class41.aString538
+										+ (Class79.aPlayer_909.xMovementSteps[0]
 												+ Class116_Sub17.anInt2105 * 1426698711)
 										+ Class41.aString538
 										+ (714823515 * Class33.anInt456
-												+ Class79.ourPlayer.yMovementSteps[0])
+												+ Class79.aPlayer_909.yMovementSteps[0])
 										+ Class41.aString538;
 
-								for (value2 = 0; value2 < 371800591 * packetLength && value2 < 50; ++value2) {
-									var94 = var94 + packetBuffer.payload[value2] + Class41.aString538;
+								for (interfaceHash = 0; interfaceHash < 371800591 * anInt2980 && interfaceHash < 50; ++interfaceHash) {
+									var94 = var94 + bitBuffer.payload[interfaceHash] + Class41.aString538;
 								}
 
 								Class90.method1192(var94, var79, 343294798);
@@ -3246,7 +3258,7 @@ public final class client extends Applet_Sub1 {
 						rsaBuffer.startPacket(54, (byte) 125);
 						rsaBuffer.writeByte(0, 18641204);
 						var2 = rsaBuffer.position * 314639891;
-						PacketBuilder.addressReflection(rsaBuffer, 1078920098);
+						BitBuffer.addressReflection(rsaBuffer, 1078920098);
 						rsaBuffer.method2152(rsaBuffer.position * 314639891 - var2, -801848431);
 					}
 
@@ -3258,77 +3270,77 @@ public final class client extends Applet_Sub1 {
 									|| 598524519 * Mob.aClass35_2879.anInt472 >= 40) {
 								rsaBuffer.startPacket(157, (byte) 40);
 								rsaBuffer.writeByte(0, 716656388);
-								i2 = rsaBuffer.position * 314639891;
-								availData = 0;
+								var3 = rsaBuffer.position * 314639891;
+								var83 = 0;
 
-								for (value1 = 0; value1 < Mob.aClass35_2879.anInt472 * 598524519
-										&& 314639891 * rsaBuffer.position - i2 < 240; ++value1) {
-									++availData;
-									value2 = Mob.aClass35_2879.anIntArray474[value1];
-									if (value2 < 0) {
-										value2 = 0;
-									} else if (value2 > 502) {
-										value2 = 502;
+								for (interfaceId = 0; interfaceId < Mob.aClass35_2879.anInt472 * 598524519
+										&& 314639891 * rsaBuffer.position - var3 < 240; ++interfaceId) {
+									++var83;
+									interfaceHash = Mob.aClass35_2879.anIntArray474[interfaceId];
+									if (interfaceHash < 0) {
+										interfaceHash = 0;
+									} else if (interfaceHash > 502) {
+										interfaceHash = 502;
 									}
 
-									value3 = Mob.aClass35_2879.anIntArray471[value1];
-									if (value3 < 0) {
-										value3 = 0;
-									} else if (value3 > 764) {
-										value3 = 764;
+									clickThrough = Mob.aClass35_2879.anIntArray471[interfaceId];
+									if (clickThrough < 0) {
+										clickThrough = 0;
+									} else if (clickThrough > 764) {
+										clickThrough = 764;
 									}
 
-									clanRank = value3 + value2 * 765;
-									if (-1 == Mob.aClass35_2879.anIntArray474[value1]
-											&& -1 == Mob.aClass35_2879.anIntArray471[value1]) {
-										value3 = -1;
-										value2 = -1;
-										clanRank = 524287;
+									var8 = clickThrough + interfaceHash * 765;
+									if (-1 == Mob.aClass35_2879.anIntArray474[interfaceId]
+											&& -1 == Mob.aClass35_2879.anIntArray471[interfaceId]) {
+										clickThrough = -1;
+										interfaceHash = -1;
+										var8 = 524287;
 									}
 
-									if (443707603 * anInt2945 == value3 && value2 == -2142765485 * anInt3202) {
+									if (443707603 * anInt2945 == clickThrough && interfaceHash == -2142765485 * anInt3202) {
 										if (anInt2947 * 1157656041 < 2047) {
 											anInt2947 += 1669020249;
 										}
 									} else {
-										var9 = value3 - anInt2945 * 443707603;
-										anInt2945 = value3 * -834705573;
-										col = value2 - anInt3202 * -2142765485;
-										anInt3202 = value2 * -1955793445;
-										if (anInt2947 * 1157656041 < 8 && var9 >= -32 && var9 <= 31 && col >= -32
-												&& col <= 31) {
+										var9 = clickThrough - anInt2945 * 443707603;
+										anInt2945 = clickThrough * -834705573;
+										var10 = interfaceHash - anInt3202 * -2142765485;
+										anInt3202 = interfaceHash * -1955793445;
+										if (anInt2947 * 1157656041 < 8 && var9 >= -32 && var9 <= 31 && var10 >= -32
+												&& var10 <= 31) {
 											var9 += 32;
-											col += 32;
+											var10 += 32;
                                             int okk = anInt2947 * 1157656041;
-											rsaBuffer.writeShort(col + (var9 << 6) + (anInt2947 * 1157656041 << 12),
+											rsaBuffer.writeShort(var10 + (var9 << 6) + (anInt2947 * 1157656041 << 12),
                                                     -1913737174);
 											anInt2947 = 0;
 										} else if (1157656041 * anInt2947 < 8) {
                                             int okk = anInt2947 * 1157656041;
-											rsaBuffer.writeMedium(clanRank + (1157656041 * anInt2947 << 19) + 8388608,
+											rsaBuffer.writeMedium(var8 + (1157656041 * anInt2947 << 19) + 8388608,
 													(byte) 2);
 											anInt2947 = 0;
 										} else {
                                             int okk = anInt2947 * 1157656041;
-											rsaBuffer.writeInt(-1073741824 + (anInt2947 * 1157656041 << 19) + clanRank,
+											rsaBuffer.writeInt(-1073741824 + (anInt2947 * 1157656041 << 19) + var8,
 													(byte) 108);
 											anInt2947 = 0;
 										}
 									}
 								}
 
-								rsaBuffer.method2152(314639891 * rsaBuffer.position - i2, 16463291);
-								if (availData >= Mob.aClass35_2879.anInt472 * 598524519) {
+								rsaBuffer.method2152(314639891 * rsaBuffer.position - var3, 16463291);
+								if (var83 >= Mob.aClass35_2879.anInt472 * 598524519) {
 									Mob.aClass35_2879.anInt472 = 0;
 								} else {
-									Mob.aClass35_2879.anInt472 -= availData * -396936873;
+									Mob.aClass35_2879.anInt472 -= var83 * -396936873;
 
-									for (value1 = 0; value1 < Mob.aClass35_2879.anInt472
-											* 598524519; ++value1) {
-										Mob.aClass35_2879.anIntArray471[value1] = Mob.aClass35_2879.anIntArray471[value1
-												+ availData];
-										Mob.aClass35_2879.anIntArray474[value1] = Mob.aClass35_2879.anIntArray474[value1
-												+ availData];
+									for (interfaceId = 0; interfaceId < Mob.aClass35_2879.anInt472
+											* 598524519; ++interfaceId) {
+										Mob.aClass35_2879.anIntArray471[interfaceId] = Mob.aClass35_2879.anIntArray471[interfaceId
+												+ var83];
+										Mob.aClass35_2879.anIntArray474[interfaceId] = Mob.aClass35_2879.anIntArray474[interfaceId
+												+ var83];
 									}
 								}
 							}
@@ -3347,35 +3359,34 @@ public final class client extends Applet_Sub1 {
 						}
 
 						aLong2944 = -6014946799255235345L * Class85.aLong1000;
-						availData = 2090526775 * Class85.clickAreaY;
-						if (availData < 0) {
-							availData = 0;
-						} else if (availData > 674167779 * Class116_Sub16.clientHeight) {
-							availData = Class116_Sub16.clientHeight * 674167779;
+						var83 = 2090526775 * Class85.anInt999;
+						if (var83 < 0) {
+							var83 = 0;
+						} else if (var83 > 674167779 * Class116_Sub16.clientHeight) {
+							var83 = Class116_Sub16.clientHeight * 674167779;
 						}
 
-						value1 = Class85.clickAreaX * -2040065729;
-						if (value1 < 0) {
-							value1 = 0;
-						} else if (value1 > Class42.clientWidth * -452716157) {
-							value1 = -452716157 * Class42.clientWidth;
+						interfaceId = Class85.anInt998 * -2040065729;
+						if (interfaceId < 0) {
+							interfaceId = 0;
+						} else if (interfaceId > Class42.clientWidth * -452716157) {
+							interfaceId = -452716157 * Class42.clientWidth;
 						}
 
-						value2 = (int) var65;
-						//rsaBuffer.startPacket(253, (byte) 50);
-						//rsaBuffer.writeShort((value2 << 1) + (2 == 823601801 * Class85.anInt997 ? 1 : 0), -1767559648);
-						//rsaBuffer.writeShort(value1, -2095351373);
-						//rsaBuffer.writeShort(availData, -2115189406);
-						//System.out.println(value1+"/"+value2+"/"+availData+"/"+(2 == 823601801 * Class85.anInt997 ? 1 : 0));
+						interfaceHash = (int) var65;
+						rsaBuffer.startPacket(253, (byte) 50);
+						rsaBuffer.writeShort((interfaceHash << 1) + (2 == 823601801 * Class85.anInt997 ? 1 : 0), -1767559648);
+						rsaBuffer.writeShort(interfaceId, -2095351373);
+						rsaBuffer.writeShort(var83, -2115189406);
 					}
 
 					if (KeyFocusListener.anInt960 * 1701596051 > 0) {
 						rsaBuffer.startPacket(251, (byte) 80);
 						rsaBuffer.writeShort(0, -2033053465);
 						var2 = rsaBuffer.position * 314639891;
-						long var67 = Class116_Sub5.generateHash(280981620);
+						long var67 = Class116_Sub5.method1929(280981620);
 
-						for (value1 = 0; value1 < 1701596051 * KeyFocusListener.anInt960; ++value1) {
+						for (interfaceId = 0; interfaceId < 1701596051 * KeyFocusListener.anInt960; ++interfaceId) {
 							key = var67 - aLong2966 * -7993424411696623387L;
 							if (key > 16777215L) {
 								key = 16777215L;
@@ -3383,7 +3394,7 @@ public final class client extends Applet_Sub1 {
 
 							aLong2966 = -8084475441026814739L * var67;
 							rsaBuffer.writeMedium1((int) key, 750099869);
-							rsaBuffer.writeByteC(KeyFocusListener.anIntArray940[value1], 1009803743);
+							rsaBuffer.writeByteC(KeyFocusListener.anIntArray940[interfaceId], 1009803743);
 						}
 
 						rsaBuffer.method2000(314639891 * rsaBuffer.position - var2, (byte) 56);
@@ -3418,107 +3429,107 @@ public final class client extends Applet_Sub1 {
 						rsaBuffer.writeByte(0, -186352084);
 					}
 
-					if (GameInterface.anInt1819 * -747958745 != anInt3163 * -1331355705) {
-						anInt3163 = 1960926881 * GameInterface.anInt1819;
-						var2 = GameInterface.anInt1819 * -747958745;
-						int[] var174 = Class116_Sub23_Sub18.mapSprite.myPixels;
-						availData = var174.length;
+					if (Class116_Sub11.anInt1819 * -747958745 != anInt3163 * -1331355705) {
+						anInt3163 = 1960926881 * Class116_Sub11.anInt1819;
+						var2 = Class116_Sub11.anInt1819 * -747958745;
+						int[] var174 = Class116_Sub23_Sub18.aClass116_Sub23_Sub19_Sub2_2487.myPixels;
+						var83 = var174.length;
 
-						for (value1 = 0; value1 < availData; ++value1) {
-							var174[value1] = 0;
+						for (interfaceId = 0; interfaceId < var83; ++interfaceId) {
+							var174[interfaceId] = 0;
 						}
 
-						for (value1 = 1; value1 < 103; ++value1) {
-							value2 = (103 - value1) * 2048 + 24628;
+						for (interfaceId = 1; interfaceId < 103; ++interfaceId) {
+							interfaceHash = (103 - interfaceId) * 2048 + 24628;
 
-							for (value3 = 1; value3 < 103; ++value3) {
-								if (0 == (Class47.aByteArrayArrayArray634[var2][value3][value1] & 24)) {
-									GameInterface.region.method379(var174, value2, 512, var2, value3, value1);
+							for (clickThrough = 1; clickThrough < 103; ++clickThrough) {
+								if (0 == (Class47.aByteArrayArrayArray634[var2][clickThrough][interfaceId] & 24)) {
+									Class116_Sub11.groundItemController.method379(var174, interfaceHash, 512, var2, clickThrough, interfaceId);
 								}
 
-								if (var2 < 3 && 0 != (Class47.aByteArrayArrayArray634[1 + var2][value3][value1] & 8)) {
-									GameInterface.region.method379(var174, value2, 512, 1 + var2, value3, value1);
+								if (var2 < 3 && 0 != (Class47.aByteArrayArrayArray634[1 + var2][clickThrough][interfaceId] & 8)) {
+									Class116_Sub11.groundItemController.method379(var174, interfaceHash, 512, 1 + var2, clickThrough, interfaceId);
 								}
 
-								value2 += 4;
+								interfaceHash += 4;
 							}
 						}
 
-						value1 = (238 + (int) (Math.random() * 20.0D) - 10 << 16)
+						interfaceId = (238 + (int) (Math.random() * 20.0D) - 10 << 16)
 								+ (238 + (int) (Math.random() * 20.0D) - 10 << 8)
 								+ (238 + (int) (Math.random() * 20.0D) - 10);
-						value2 = 238 + (int) (Math.random() * 20.0D) - 10 << 16;
-						Class116_Sub23_Sub18.mapSprite.initToDrawer();
+						interfaceHash = 238 + (int) (Math.random() * 20.0D) - 10 << 16;
+						Class116_Sub23_Sub18.aClass116_Sub23_Sub19_Sub2_2487.initToDrawer();
 
-						for (value3 = 1; value3 < 103; ++value3) {
-							for (clanRank = 1; clanRank < 103; ++clanRank) {
-								if (0 == (Class47.aByteArrayArrayArray634[var2][clanRank][value3] & 24)) {
-									method3952(var2, clanRank, value3, value1, value2, (byte) 0);
+						for (clickThrough = 1; clickThrough < 103; ++clickThrough) {
+							for (var8 = 1; var8 < 103; ++var8) {
+								if (0 == (Class47.aByteArrayArrayArray634[var2][var8][clickThrough] & 24)) {
+									method3952(var2, var8, clickThrough, interfaceId, interfaceHash, (byte) 0);
 								}
 
-								if (var2 < 3 && 0 != (Class47.aByteArrayArrayArray634[var2 + 1][clanRank][value3] & 8)) {
-									method3952(1 + var2, clanRank, value3, value1, value2, (byte) 0);
+								if (var2 < 3 && 0 != (Class47.aByteArrayArrayArray634[var2 + 1][var8][clickThrough] & 8)) {
+									method3952(1 + var2, var8, clickThrough, interfaceId, interfaceHash, (byte) 0);
 								}
 							}
 						}
 
 						anInt3164 = 0;
 
-						for (value3 = 0; value3 < 104; ++value3) {
-							for (clanRank = 0; clanRank < 104; ++clanRank) {
-								var9 = GameInterface.region.method374(GameInterface.anInt1819 * -747958745,
-										value3, clanRank);
+						for (clickThrough = 0; clickThrough < 104; ++clickThrough) {
+							for (var8 = 0; var8 < 104; ++var8) {
+								var9 = Class116_Sub11.groundItemController.method374(Class116_Sub11.anInt1819 * -747958745,
+										clickThrough, var8);
 								if (var9 != 0) {
 									var9 = var9 >> 14 & 32767;
-									col = Class45.method700(var9, 359750046).anInt2235 * 1951420693;
-									if (col >= 0) {
-										var11 = value3;
-										id = clanRank;
-										if (22 != col && col != 29 && 34 != col && col != 36 && 46 != col
-												&& 47 != col && col != 48) {
+									var10 = Class45.method700(var9, 359750046).anInt2235 * 1951420693;
+									if (var10 >= 0) {
+										var11 = clickThrough;
+										var12 = var8;
+										if (22 != var10 && var10 != 29 && 34 != var10 && var10 != 36 && 46 != var10
+												&& 47 != var10 && var10 != 48) {
 											int[][] var154 = aClass58Array2996[-747958745
-													* GameInterface.anInt1819].anIntArrayArray764;
+													* Class116_Sub11.anInt1819].anIntArrayArray764;
 
 											for (var16 = 0; var16 < 10; ++var16) {
 												var17 = (int) (Math.random() * 4.0D);
-												if (var17 == 0 && var11 > 0 && var11 > value3 - 3
-														&& 0 == (var154[var11 - 1][id] & 19136776)) {
+												if (var17 == 0 && var11 > 0 && var11 > clickThrough - 3
+														&& 0 == (var154[var11 - 1][var12] & 19136776)) {
 													--var11;
 												}
 
-												if (var17 == 1 && var11 < 103 && var11 < 3 + value3
-														&& (var154[var11 + 1][id] & 19136896) == 0) {
+												if (var17 == 1 && var11 < 103 && var11 < 3 + clickThrough
+														&& (var154[var11 + 1][var12] & 19136896) == 0) {
 													++var11;
 												}
 
-												if (var17 == 2 && id > 0 && id > clanRank - 3
-														&& 0 == (var154[var11][id - 1] & 19136770)) {
-													--id;
+												if (var17 == 2 && var12 > 0 && var12 > var8 - 3
+														&& 0 == (var154[var11][var12 - 1] & 19136770)) {
+													--var12;
 												}
 
-												if (var17 == 3 && id < 103 && id < clanRank + 3
-														&& (var154[var11][1 + id] & 19136800) == 0) {
-													++id;
+												if (var17 == 3 && var12 < 103 && var12 < var8 + 3
+														&& (var154[var11][1 + var12] & 19136800) == 0) {
+													++var12;
 												}
 											}
 										}
 
 										aClass116_Sub23_Sub19_Sub2Array3167[-706898549
-												* anInt3164] = Class116_Sub12.mapFunction[col];
+												* anInt3164] = Class116_Sub12.aClass116_Sub23_Sub19_Sub2Array1844[var10];
 										anIntArray3165[-706898549 * anInt3164] = var11;
-										anIntArray3166[anInt3164 * -706898549] = id;
+										anIntArray3166[anInt3164 * -706898549] = var12;
 										anInt3164 += -1686410717;
 									}
 								}
 							}
 						}
 
-						RSFIT.aAbstractRSDrawing_874.method326((byte) 7);
+						Class73.aAbstractRSDrawing_874.method326((byte) 7);
 					}
 
 					if (30 == 846055547 * loginStage) {
 						for (Class116_Sub12 var88 = (Class116_Sub12) aClass117_3162
-								.getFirst(); var88 != null; var88 = (Class116_Sub12) aClass117_3162.getNext()) {
+								.method1551(); var88 != null; var88 = (Class116_Sub12) aClass117_3162.method1553()) {
 							if (var88.anInt1846 * 1030491605 > 0) {
 								var88.anInt1846 -= -622541955;
 							}
@@ -3526,18 +3537,18 @@ public final class client extends Applet_Sub1 {
 							ObjectDefinition var175;
 							if (1030491605 * var88.anInt1846 == 0) {
 								if (-1525381273 * var88.anInt1839 >= 0) {
-									availData = var88.anInt1839 * -1525381273;
-									value1 = -2072747651 * var88.anInt1848;
-									var175 = Class45.method700(availData, 359750046);
-									if (value1 == 11) {
-										value1 = 10;
+									var83 = var88.anInt1839 * -1525381273;
+									interfaceId = -2072747651 * var88.anInt1848;
+									var175 = Class45.method700(var83, 359750046);
+									if (interfaceId == 11) {
+										interfaceId = 10;
 									}
 
-									if (value1 >= 5 && value1 <= 8) {
-										value1 = 4;
+									if (interfaceId >= 5 && interfaceId <= 8) {
+										interfaceId = 4;
 									}
 
-									var85 = var175.method2403(value1, (byte) -17);
+									var85 = var175.method2403(interfaceId, (byte) -17);
 									if (!var85) {
 										continue;
 									}
@@ -3557,18 +3568,18 @@ public final class client extends Applet_Sub1 {
 										&& var88.anInt1847 * -127960105 >= 1 && -1096801001 * var88.anInt1835 <= 102
 										&& -127960105 * var88.anInt1847 <= 102) {
 									if (-1987202069 * var88.anInt1842 >= 0) {
-										availData = var88.anInt1842 * -1987202069;
-										value1 = -227757021 * var88.anInt1840;
-										var175 = Class45.method700(availData, 359750046);
-										if (11 == value1) {
-											value1 = 10;
+										var83 = var88.anInt1842 * -1987202069;
+										interfaceId = -227757021 * var88.anInt1840;
+										var175 = Class45.method700(var83, 359750046);
+										if (11 == interfaceId) {
+											interfaceId = 10;
 										}
 
-										if (value1 >= 5 && value1 <= 8) {
-											value1 = 4;
+										if (interfaceId >= 5 && interfaceId <= 8) {
+											interfaceId = 4;
 										}
 
-										var85 = var175.method2403(value1, (byte) -50);
+										var85 = var175.method2403(interfaceId, (byte) -50);
 										if (!var85) {
 											continue;
 										}
@@ -3597,7 +3608,7 @@ public final class client extends Applet_Sub1 {
 							Class93.method1265(807289975);
 						} else {
 							Class95.method1310((byte) 127);
-							RelationList.method774(-631947116);
+							Class50.method774(-631947116);
 							Class70.method997((short) -19269);
 							anInt3012 += -437029491;
 							if (0 != 2051359659 * anInt3046) {
@@ -3610,13 +3621,13 @@ public final class client extends Applet_Sub1 {
 							if (Class35.aClass116_Sub15_473 != null) {
 								anInt3047 += 479812137;
 								if (-1044454887 * anInt3047 >= 15) {
-									Class79.refreshInterface(Class35.aClass116_Sub15_473, 1124078602);
+									Class79.method1097(Class35.aClass116_Sub15_473, 1124078602);
 									Class35.aClass116_Sub15_473 = null;
 								}
 							}
 
-							RSInterface var91 = ObjectDefinition.aClass116_Sub15_2240;
-							RSInterface var176 = Class116_Sub6.aClass116_Sub15_1745;
+							Class116_Sub15 var91 = ObjectDefinition.aClass116_Sub15_2240;
+							Class116_Sub15 var176 = Class116_Sub6.aClass116_Sub15_1745;
 							ObjectDefinition.aClass116_Sub15_2240 = null;
 							Class116_Sub6.aClass116_Sub15_1745 = null;
 							aClass116_Sub15_2935 = null;
@@ -3636,7 +3647,7 @@ public final class client extends Applet_Sub1 {
 										var178 = (ChatMessage) var177.next();
 									}
 
-									CacheIndex.aClipboard1907.setContents(new StringSelection(var94),
+									Class99_Sub1.aClipboard1907.setContents(new StringSelection(var94),
 											(ClipboardOwner) null);
 								} else {
 									anIntArray3158[-703165807 * anInt3156] = Class5.anInt57 * -1989794123;
@@ -3653,71 +3664,71 @@ public final class client extends Applet_Sub1 {
 							anInt3118 += 44844977;
 
 							while (true) {
-								Class116_Sub6 var115 = (Class116_Sub6) aClass117_3133.removeFirst();
-								RSInterface var182;
+								Class116_Sub6 var115 = (Class116_Sub6) aClass117_3133.method1549();
+								Class116_Sub15 var182;
 								if (var115 == null) {
 									while (true) {
-										var115 = (Class116_Sub6) aClass117_3134.removeFirst();
+										var115 = (Class116_Sub6) aClass117_3134.method1549();
 										if (var115 == null) {
 											while (true) {
-												var115 = (Class116_Sub6) aClass117_3132.removeFirst();
+												var115 = (Class116_Sub6) aClass117_3132.method1549();
 												if (null == var115) {
-													RSInputStream.method1031(-2073277849);
+													Class71.method1031(-2073277849);
 													if (null != aClass116_Sub15_3106) {
-														Class79.refreshInterface(aClass116_Sub15_3106, 1768459946);
-														RelationList.anInt672 += -95915169;
+														Class79.method1097(aClass116_Sub15_3106, 1768459946);
+														Class50.anInt672 += -95915169;
 														if (aBool3114 && aBool3111) {
-															availData = Class85.anInt991 * -453286219;
-															value1 = Class85.anInt992 * 103771565;
-															availData -= anInt3087 * -725471655;
-															value1 -= 702495857 * anInt3109;
-															if (availData < anInt3112 * 1272175975) {
-																availData = anInt3112 * 1272175975;
+															var83 = Class85.anInt991 * -453286219;
+															interfaceId = Class85.anInt992 * 103771565;
+															var83 -= anInt3087 * -725471655;
+															interfaceId -= 702495857 * anInt3109;
+															if (var83 < anInt3112 * 1272175975) {
+																var83 = anInt3112 * 1272175975;
 															}
 
-															if (availData + aClass116_Sub15_3106.wdth
-																	* 1645211541 > aClass116_Sub15_3107.wdth
+															if (var83 + aClass116_Sub15_3106.anInt1940
+																	* 1645211541 > aClass116_Sub15_3107.anInt1940
 																			* 1645211541 + anInt3112 * 1272175975) {
-																availData = anInt3112 * 1272175975
-																		+ aClass116_Sub15_3107.wdth * 1645211541
-																		- aClass116_Sub15_3106.wdth * 1645211541;
+																var83 = anInt3112 * 1272175975
+																		+ aClass116_Sub15_3107.anInt1940 * 1645211541
+																		- aClass116_Sub15_3106.anInt1940 * 1645211541;
 															}
 
-															if (value1 < -765593137 * anInt3113) {
-																value1 = -765593137 * anInt3113;
+															if (interfaceId < -765593137 * anInt3113) {
+																interfaceId = -765593137 * anInt3113;
 															}
 
-															if (value1 + aClass116_Sub15_3106.heght
+															if (interfaceId + aClass116_Sub15_3106.anInt1974
 																	* 1227800423 > -765593137 * anInt3113
-																			+ aClass116_Sub15_3107.heght
+																			+ aClass116_Sub15_3107.anInt1974
 																					* 1227800423) {
-																value1 = anInt3113 * -765593137
-																		+ aClass116_Sub15_3107.heght * 1227800423
-																		- 1227800423 * aClass116_Sub15_3106.heght;
+																interfaceId = anInt3113 * -765593137
+																		+ aClass116_Sub15_3107.anInt1974 * 1227800423
+																		- 1227800423 * aClass116_Sub15_3106.anInt1974;
 															}
 
-															value2 = availData - anInt2993 * -625398447;
-															value3 = value1 - 1566554261 * anInt3116;
-															clanRank = -345684957 * aClass116_Sub15_3106.anInt1999;
+															interfaceHash = var83 - anInt2993 * -625398447;
+															clickThrough = interfaceId - 1566554261 * anInt3116;
+															var8 = -345684957 * aClass116_Sub15_3106.anInt1999;
 															if (1559668895
-																	* RelationList.anInt672 > aClass116_Sub15_3106.anInt1965
+																	* Class50.anInt672 > aClass116_Sub15_3106.anInt1965
 																			* 464917361
-																	&& (value2 > clanRank || value2 < -clanRank || value3 > clanRank
-																			|| value3 < -clanRank)) {
+																	&& (interfaceHash > var8 || interfaceHash < -var8 || clickThrough > var8
+																			|| clickThrough < -var8)) {
 																aBool3117 = true;
 															}
 
 															var9 = -352661099 * aClass116_Sub15_3107.anInt1946
-																	+ (availData - 1272175975 * anInt3112);
-															col = aClass116_Sub15_3107.anInt1947 * -1602694527
-																	+ (value1 - anInt3113 * -765593137);
+																	+ (var83 - 1272175975 * anInt3112);
+															var10 = aClass116_Sub15_3107.anInt1947 * -1602694527
+																	+ (interfaceId - anInt3113 * -765593137);
 															Class116_Sub6 var149;
 															if (aClass116_Sub15_3106.anObjectArray2012 != null
 																	&& aBool3117) {
 																var149 = new Class116_Sub6();
 																var149.aClass116_Sub15_1736 = aClass116_Sub15_3106;
 																var149.anInt1747 = var9 * 1833150263;
-																var149.anInt1738 = col * 1385195697;
+																var149.anInt1738 = var10 * 1385195697;
 																var149.anObjectArray1737 = aClass116_Sub15_3106.anObjectArray2012;
 																Friend.method1840(var149, -1995423912);
 															}
@@ -3728,7 +3739,7 @@ public final class client extends Applet_Sub1 {
 																		var149 = new Class116_Sub6();
 																		var149.aClass116_Sub15_1736 = aClass116_Sub15_3106;
 																		var149.anInt1747 = var9 * 1833150263;
-																		var149.anInt1738 = 1385195697 * col;
+																		var149.anInt1738 = 1385195697 * var10;
 																		var149.aClass116_Sub15_1740 = aClass116_Sub15_2935;
 																		var149.anObjectArray1737 = aClass116_Sub15_3106.anObjectArray2013;
 																		Friend.method1840(var149, -2005386357);
@@ -3745,7 +3756,7 @@ public final class client extends Applet_Sub1 {
                                                                                 -1806855152);
 																		rsaBuffer.writeInt(
 																				-1536575275
-																						* aClass116_Sub15_2935.hash,
+																						* aClass116_Sub15_2935.anInt1925,
 																				(byte) 51);
 																		rsaBuffer
 																				.writeLEShortA(
@@ -3758,7 +3769,7 @@ public final class client extends Applet_Sub1 {
 																				773256407);
 																		rsaBuffer.method2046(
 																				-1536575275
-																						* aClass116_Sub15_3106.hash,
+																						* aClass116_Sub15_3106.anInt1925,
 																				363001979);
 																		rsaBuffer
 																				.writeLEShortA(
@@ -3779,37 +3790,37 @@ public final class client extends Applet_Sub1 {
 																} else if (anInt3075 * 1768430155 > 0) {
 																	var11 = -725471655 * anInt3087
 																			+ -625398447 * anInt2993;
-																	id = 1566554261 * anInt3116
+																	var12 = 1566554261 * anInt3116
 																			+ anInt3109 * 702495857;
-																	Class116_Sub16.method2303(CacheIndex.aClass4_1911,
-																			var11, id, (byte) -77);
-																	CacheIndex.aClass4_1911 = null;
+																	Class116_Sub16.method2303(Class99_Sub1.aClass4_1911,
+																			var11, var12, (byte) -77);
+																	Class99_Sub1.aClass4_1911 = null;
 																}
 
 																aClass116_Sub15_3106 = null;
 															}
-														} else if (RelationList.anInt672 * 1559668895 > 1) {
+														} else if (Class50.anInt672 * 1559668895 > 1) {
 															aClass116_Sub15_3106 = null;
 														}
 													}
 
 													if (null != Class116_Sub23_Sub1.aClass116_Sub15_2162) {
-														Class79.refreshInterface(Class116_Sub23_Sub1.aClass116_Sub15_2162,
-                                                                129159276);
+														Class79.method1097(Class116_Sub23_Sub1.aClass116_Sub15_2162,
+																129159276);
 														anInt3040 += -1664677949;
 														if (-562612321 * Class85.anInt994 == 0) {
 															if (aBool3053) {
 																if (Class116_Sub23_Sub1.aClass116_Sub15_2162 == Class22.aClass116_Sub15_270
 																		&& anInt3049 * 1979905201 != anInt3084
 																				* -408071259) {
-																	RSInterface var139 = Class116_Sub23_Sub1.aClass116_Sub15_2162;
+																	Class116_Sub15 var139 = Class116_Sub23_Sub1.aClass116_Sub15_2162;
 																	byte var183 = 0;
 																	if (anInt3096 * -137828697 == 1
-																			&& 206 == -179718399 * var139.clientCode) {
+																			&& 206 == -179718399 * var139.anInt2016) {
 																		var183 = 1;
 																	}
 
-																	if (var139.inv[-408071259
+																	if (var139.anIntArray2047[-408071259
 																			* anInt3084] <= 0) {
 																		var183 = 0;
 																	}
@@ -3817,25 +3828,25 @@ public final class client extends Applet_Sub1 {
 																	if (Class69.method990(
 																			Class35.method645(var139, (byte) 0),
 																			(byte) 4)) {
-																		value2 = anInt3049 * 1979905201;
-																		value3 = anInt3084 * -408071259;
-																		var139.inv[value3] = var139.inv[value2];
-																		var139.invStackSize[value3] = var139.invStackSize[value2];
-																		var139.inv[value2] = -1;
-																		var139.invStackSize[value2] = 0;
+																		interfaceHash = anInt3049 * 1979905201;
+																		clickThrough = anInt3084 * -408071259;
+																		var139.anIntArray2047[clickThrough] = var139.anIntArray2047[interfaceHash];
+																		var139.anIntArray2042[clickThrough] = var139.anIntArray2042[interfaceHash];
+																		var139.anIntArray2047[interfaceHash] = -1;
+																		var139.anIntArray2042[interfaceHash] = 0;
 																	} else if (1 == var183) {
-																		value2 = anInt3049 * 1979905201;
-																		value3 = anInt3084 * -408071259;
+																		interfaceHash = anInt3049 * 1979905201;
+																		clickThrough = anInt3084 * -408071259;
 
-																		while (value2 != value3) {
-																			if (value2 > value3) {
-																				var139.method2297(value2 - 1, value2,
+																		while (interfaceHash != clickThrough) {
+																			if (interfaceHash > clickThrough) {
+																				var139.method2297(interfaceHash - 1, interfaceHash,
 																						-1598843181);
-																				--value2;
-																			} else if (value2 < value3) {
-																				var139.method2297(1 + value2, value2,
+																				--interfaceHash;
+																			} else if (interfaceHash < clickThrough) {
+																				var139.method2297(1 + interfaceHash, interfaceHash,
 																						1296469503);
-																				++value2;
+																				++interfaceHash;
 																			}
 																		}
 																	} else {
@@ -3849,10 +3860,10 @@ public final class client extends Applet_Sub1 {
 																	rsaBuffer.writeByteC(var183, -612734714);
 																	rsaBuffer.method2102(anInt3049 * 1979905201,
 																			-627792754);
-																	rsaBuffer.writeInt2(
-                                                                            Class116_Sub23_Sub1.aClass116_Sub15_2162.hash
-                                                                                    * -1536575275,
-                                                                            1655679789);
+																	rsaBuffer.method2087(
+																			Class116_Sub23_Sub1.aClass116_Sub15_2162.anInt1925
+																					* -1536575275,
+																			1655679789);
 																}
 															} else if ((1 == anInt3110 * 1052316233 || Class47
 																	.method758(anInt3075 * 1768430155 - 1, -777039393))
@@ -3860,11 +3871,11 @@ public final class client extends Applet_Sub1 {
 																BasicTimer.method2218(anInt3092 * -827759387,
                                                                         45845103 * anInt3051, -1966311464);
 															} else if (anInt3075 * 1768430155 > 0) {
-																availData = -827759387 * anInt3092;
-																value1 = anInt3051 * 45845103;
-																Class116_Sub16.method2303(CacheIndex.aClass4_1911,
-																		availData, value1, (byte) -52);
-																CacheIndex.aClass4_1911 = null;
+																var83 = -827759387 * anInt3092;
+																interfaceId = anInt3051 * 45845103;
+																Class116_Sub16.method2303(Class99_Sub1.aClass4_1911,
+																		var83, interfaceId, (byte) -52);
+																Class99_Sub1.aClass4_1911 = null;
 															}
 
 															anInt3047 = 503154074;
@@ -3882,48 +3893,48 @@ public final class client extends Applet_Sub1 {
 														}
 													}
 
-													if (-1 != Region.anInt336) {
-														availData = Region.anInt336;
-														value1 = Region.anInt341;
+													if (-1 != GroundController.anInt336) {
+														var83 = GroundController.anInt336;
+														interfaceId = GroundController.anInt341;
 														rsaBuffer.startPacket(12, (byte) 21);
 														rsaBuffer.writeByte(5, 477370879);
                                                         //82 = ctrl for running
 														rsaBuffer.writeByteC(KeyFocusListener.keysHeldDown[82]  ? (KeyFocusListener.keysHeldDown[81] ? 2 : 1) : 0,
                                                                 1357281269);
 														rsaBuffer.writeLEShortA(
-                                                                Class116_Sub17.anInt2105 * 1426698711 + availData,
+                                                                Class116_Sub17.anInt2105 * 1426698711 + var83,
                                                                 -31505191);
-														rsaBuffer.writeLEShort(Class33.anInt456 * 714823515 + value1,
+														rsaBuffer.writeLEShort(Class33.anInt456 * 714823515 + interfaceId,
                                                                 1405134017);
-														Region.anInt336 = -1;
-														anInt3043 = Class85.clickAreaX * -1489075687;
-														anInt3044 = -250191479 * Class85.clickAreaY;
+														GroundController.anInt336 = -1;
+														anInt3043 = Class85.anInt998 * -1489075687;
+														anInt3044 = -250191479 * Class85.anInt999;
 														anInt3046 = 461086467;
 														anInt3045 = 0;
-														anInt3168 = -1943900347 * availData;
-														anInt3208 = value1 * 317027045;
+														anInt3168 = -1943900347 * var83;
+														anInt3208 = interfaceId * 317027045;
 													}
 
 													if (var91 != ObjectDefinition.aClass116_Sub15_2240) {
 														if (null != var91) {
-															Class79.refreshInterface(var91, -1073672970);
+															Class79.method1097(var91, -1073672970);
 														}
 
 														if (ObjectDefinition.aClass116_Sub15_2240 != null) {
-															Class79.refreshInterface(ObjectDefinition.aClass116_Sub15_2240,
-                                                                    1574680721);
+															Class79.method1097(ObjectDefinition.aClass116_Sub15_2240,
+																	1574680721);
 														}
 													}
 
 													if (Class116_Sub6.aClass116_Sub15_1745 != var176
 															&& 1149981077 * anInt2934 == 1046829805 * anInt3072) {
 														if (null != var176) {
-															Class79.refreshInterface(var176, 1081083694);
+															Class79.method1097(var176, 1081083694);
 														}
 
 														if (Class116_Sub6.aClass116_Sub15_1745 != null) {
-															Class79.refreshInterface(Class116_Sub6.aClass116_Sub15_1745,
-                                                                    -841448050);
+															Class79.method1097(Class116_Sub6.aClass116_Sub15_1745,
+																	-841448050);
 														}
 													}
 
@@ -3931,48 +3942,48 @@ public final class client extends Applet_Sub1 {
 														if (1046829805 * anInt3072 < 1149981077 * anInt2934) {
 															anInt3072 += 1335169765;
 															if (anInt3072 * 1046829805 == anInt2934 * 1149981077) {
-																Class79.refreshInterface(Class116_Sub6.aClass116_Sub15_1745,
-                                                                        -670094191);
+																Class79.method1097(Class116_Sub6.aClass116_Sub15_1745,
+																		-670094191);
 															}
 														}
 													} else if (anInt3072 * 1046829805 > 0) {
 														anInt3072 -= 1335169765;
 													}
 
-													availData = Class79.ourPlayer.anInt2609
+													var83 = Class79.aPlayer_909.anInt2609
 															* 1272643751 + anInt3194 * 1311998203;
-													value1 = -896118313 * anInt3002 + -1801433343
-															* Class79.ourPlayer.anInt2579;
-													if (-2122646045 * Class7.anInt117 - availData < -500
-															|| Class7.anInt117 * -2122646045 - availData > 500
-															|| Class116_Sub23_Sub4.anInt2249 * 1406199355 - value1 < -500
+													interfaceId = -896118313 * anInt3002 + -1801433343
+															* Class79.aPlayer_909.anInt2579;
+													if (-2122646045 * Class7.anInt117 - var83 < -500
+															|| Class7.anInt117 * -2122646045 - var83 > 500
+															|| Class116_Sub23_Sub4.anInt2249 * 1406199355 - interfaceId < -500
 															|| 1406199355 * Class116_Sub23_Sub4.anInt2249
-																	- value1 > 500) {
-														Class7.anInt117 = availData * -1133236277;
-														Class116_Sub23_Sub4.anInt2249 = 959120115 * value1;
+																	- interfaceId > 500) {
+														Class7.anInt117 = var83 * -1133236277;
+														Class116_Sub23_Sub4.anInt2249 = 959120115 * interfaceId;
 													}
 
-													if (-2122646045 * Class7.anInt117 != availData) {
+													if (-2122646045 * Class7.anInt117 != var83) {
 														Class7.anInt117 += -1133236277
-																* ((availData - Class7.anInt117 * -2122646045) / 16);
+																* ((var83 - Class7.anInt117 * -2122646045) / 16);
 													}
 
-													if (1406199355 * Class116_Sub23_Sub4.anInt2249 != value1) {
-														Class116_Sub23_Sub4.anInt2249 += (value1
+													if (1406199355 * Class116_Sub23_Sub4.anInt2249 != interfaceId) {
+														Class116_Sub23_Sub4.anInt2249 += (interfaceId
 																- 1406199355 * Class116_Sub23_Sub4.anInt2249) / 16
 																* 959120115;
 													}
 
 													if (Class85.anInt994 * -562612321 == 4 && PlayerAlias.aBool1756) {
-														value2 = 103771565 * Class85.anInt992 - -1174998117 * anInt2990;
-														anInt3022 = value2 * 1215960858;
-														anInt2990 = 1184053907 * (value2 != -1 && value2 != 1
+														interfaceHash = 103771565 * Class85.anInt992 - -1174998117 * anInt2990;
+														anInt3022 = interfaceHash * 1215960858;
+														anInt2990 = 1184053907 * (interfaceHash != -1 && interfaceHash != 1
 																? (103771565 * Class85.anInt992
 																		+ -1174998117 * anInt2990) / 2
 																: 103771565 * Class85.anInt992);
-														value3 = 371877991 * anInt2942 - Class85.anInt991 * -453286219;
-														anInt3178 = value3 * -1440533622;
-														anInt2942 = (value3 != -1 && value3 != 1
+														clickThrough = 371877991 * anInt2942 - Class85.anInt991 * -453286219;
+														anInt3178 = clickThrough * -1440533622;
+														anInt2942 = (clickThrough != -1 && clickThrough != 1
 																? (Class85.anInt991 * -453286219
 																		+ 371877991 * anInt2942) / 2
 																: -453286219 * Class85.anInt991) * -559533225;
@@ -4010,24 +4021,24 @@ public final class client extends Applet_Sub1 {
 														anInt2994 = -408370005;
 													}
 
-													value2 = Class7.anInt117 * -2122646045 >> 7;
-													value3 = 1406199355 * Class116_Sub23_Sub4.anInt2249 >> 7;
-													clanRank = MobDefinition.method2552(-2122646045 * Class7.anInt117,
+													interfaceHash = Class7.anInt117 * -2122646045 >> 7;
+													clickThrough = 1406199355 * Class116_Sub23_Sub4.anInt2249 >> 7;
+													var8 = MobDefinition.method2552(-2122646045 * Class7.anInt117,
                                                             Class116_Sub23_Sub4.anInt2249 * 1406199355,
-                                                            -747958745 * GameInterface.anInt1819, (short) 2178);
+                                                            -747958745 * Class116_Sub11.anInt1819, (short) 2178);
 													var9 = 0;
-													if (value2 > 3 && value3 > 3 && value2 < 100 && value3 < 100) {
-														for (col = value2 - 4; col <= value2 + 4; ++col) {
-															for (var11 = value3 - 4; var11 <= 4 + value3; ++var11) {
-																id = GameInterface.anInt1819 * -747958745;
-																if (id < 3
-																		&& 2 == (Class47.aByteArrayArrayArray634[1][col][var11]
+													if (interfaceHash > 3 && clickThrough > 3 && interfaceHash < 100 && clickThrough < 100) {
+														for (var10 = interfaceHash - 4; var10 <= interfaceHash + 4; ++var10) {
+															for (var11 = clickThrough - 4; var11 <= 4 + clickThrough; ++var11) {
+																var12 = Class116_Sub11.anInt1819 * -747958745;
+																if (var12 < 3
+																		&& 2 == (Class47.aByteArrayArrayArray634[1][var10][var11]
 																				& 2)) {
-																	++id;
+																	++var12;
 																}
 
-																var13 = clanRank
-																		- Class47.anIntArrayArrayArray635[id][col][var11];
+																var13 = var8
+																		- Class47.anIntArrayArrayArray635[var12][var10][var11];
 																if (var13 > var9) {
 																	var9 = var13;
 																}
@@ -4035,109 +4046,109 @@ public final class client extends Applet_Sub1 {
 														}
 													}
 
-													col = var9 * 192;
-													if (col > 98048) {
-														col = 98048;
+													var10 = var9 * 192;
+													if (var10 > 98048) {
+														var10 = 98048;
 													}
 
-													if (col < '\u8000') {
-														col = '\u8000';
+													if (var10 < '\u8000') {
+														var10 = '\u8000';
 													}
 
-													if (col > 137595259 * anInt3077) {
-														anInt3077 += (col - anInt3077 * 137595259) / 24 * 34663859;
-													} else if (col < 137595259 * anInt3077) {
-														anInt3077 += 34663859 * ((col - anInt3077 * 137595259) / 80);
+													if (var10 > 137595259 * anInt3077) {
+														anInt3077 += (var10 - anInt3077 * 137595259) / 24 * 34663859;
+													} else if (var10 < 137595259 * anInt3077) {
+														anInt3077 += 34663859 * ((var10 - anInt3077 * 137595259) / 80);
 													}
 
 													if (aBool2988) {
-														availData = Class31.anInt428 * 915224960 + 64;
-														value1 = Class32.anInt440 * 402993792 + 64;
-														value2 = MobDefinition.method2552(availData, value1,
-                                                                -747958745 * GameInterface.anInt1819, (short) 15766)
+														var83 = Class31.anInt428 * 915224960 + 64;
+														interfaceId = Class32.anInt440 * 402993792 + 64;
+														interfaceHash = MobDefinition.method2552(var83, interfaceId,
+                                                                -747958745 * Class116_Sub11.anInt1819, (short) 15766)
 																- Class3.anInt43 * 3036509;
-														if (282154897 * Class116_Sub23_Sub16_Sub5.anInt2740 < availData) {
-															Class116_Sub23_Sub16_Sub5.anInt2740 += 933251441 * ((availData
+														if (282154897 * Class116_Sub23_Sub16_Sub5.anInt2740 < var83) {
+															Class116_Sub23_Sub16_Sub5.anInt2740 += 933251441 * ((var83
 																	- Class116_Sub23_Sub16_Sub5.anInt2740 * 282154897)
 																	* -2101471913 * Class116_Sub23_Sub18.anInt2481
 																	/ 1000
 																	+ ObjectDefinition.anInt2208 * -2096533901);
 															if (282154897
-																	* Class116_Sub23_Sub16_Sub5.anInt2740 > availData) {
-																Class116_Sub23_Sub16_Sub5.anInt2740 = availData * 933251441;
+																	* Class116_Sub23_Sub16_Sub5.anInt2740 > var83) {
+																Class116_Sub23_Sub16_Sub5.anInt2740 = var83 * 933251441;
 															}
 														}
 
-														if (282154897 * Class116_Sub23_Sub16_Sub5.anInt2740 > availData) {
+														if (282154897 * Class116_Sub23_Sub16_Sub5.anInt2740 > var83) {
 															Class116_Sub23_Sub16_Sub5.anInt2740 -= 933251441
 																	* ((Class116_Sub23_Sub16_Sub5.anInt2740 * 282154897
-																			- availData) * Class116_Sub23_Sub18.anInt2481
+																			- var83) * Class116_Sub23_Sub18.anInt2481
 																			* -2101471913 / 1000
 																			+ ObjectDefinition.anInt2208
 																					* -2096533901);
 															if (282154897
-																	* Class116_Sub23_Sub16_Sub5.anInt2740 < availData) {
-																Class116_Sub23_Sub16_Sub5.anInt2740 = 933251441 * availData;
+																	* Class116_Sub23_Sub16_Sub5.anInt2740 < var83) {
+																Class116_Sub23_Sub16_Sub5.anInt2740 = 933251441 * var83;
 															}
 														}
 
-														if (RelationList.anInt671 * 1447873857 < value2) {
-															RelationList.anInt671 += (ObjectDefinition.anInt2208
+														if (Class50.anInt671 * 1447873857 < interfaceHash) {
+															Class50.anInt671 += (ObjectDefinition.anInt2208
 																	* -2096533901
 																	+ Class116_Sub23_Sub18.anInt2481 * -2101471913
-																			* (value2 - RelationList.anInt671 * 1447873857)
+																			* (interfaceHash - Class50.anInt671 * 1447873857)
 																			/ 1000)
 																	* -1022442815;
-															if (1447873857 * RelationList.anInt671 > value2) {
-																RelationList.anInt671 = value2 * -1022442815;
+															if (1447873857 * Class50.anInt671 > interfaceHash) {
+																Class50.anInt671 = interfaceHash * -1022442815;
 															}
 														}
 
-														if (1447873857 * RelationList.anInt671 > value2) {
-															RelationList.anInt671 -= -1022442815
+														if (1447873857 * Class50.anInt671 > interfaceHash) {
+															Class50.anInt671 -= -1022442815
 																	* (-2096533901 * ObjectDefinition.anInt2208
-																			+ (1447873857 * RelationList.anInt671 - value2)
+																			+ (1447873857 * Class50.anInt671 - interfaceHash)
 																					* Class116_Sub23_Sub18.anInt2481
 																					* -2101471913 / 1000);
-															if (1447873857 * RelationList.anInt671 < value2) {
-																RelationList.anInt671 = -1022442815 * value2;
+															if (1447873857 * Class50.anInt671 < interfaceHash) {
+																Class50.anInt671 = -1022442815 * interfaceHash;
 															}
 														}
 
-														if (-324676025 * Class83.anInt968 < value1) {
+														if (-324676025 * Class83.anInt968 < interfaceId) {
 															Class83.anInt968 += 1432154999
 																	* (-2096533901 * ObjectDefinition.anInt2208
-																			+ (value1 - -324676025 * Class83.anInt968)
+																			+ (interfaceId - -324676025 * Class83.anInt968)
 																					* Class116_Sub23_Sub18.anInt2481
 																					* -2101471913 / 1000);
-															if (Class83.anInt968 * -324676025 > value1) {
-																Class83.anInt968 = 1432154999 * value1;
+															if (Class83.anInt968 * -324676025 > interfaceId) {
+																Class83.anInt968 = 1432154999 * interfaceId;
 															}
 														}
 
-														if (Class83.anInt968 * -324676025 > value1) {
+														if (Class83.anInt968 * -324676025 > interfaceId) {
 															Class83.anInt968 -= (Class116_Sub23_Sub18.anInt2481
 																	* -2101471913
-																	* (-324676025 * Class83.anInt968 - value1) / 1000
+																	* (-324676025 * Class83.anInt968 - interfaceId) / 1000
 																	+ ObjectDefinition.anInt2208 * -2096533901)
 																	* 1432154999;
-															if (-324676025 * Class83.anInt968 < value1) {
-																Class83.anInt968 = 1432154999 * value1;
+															if (-324676025 * Class83.anInt968 < interfaceId) {
+																Class83.anInt968 = 1432154999 * interfaceId;
 															}
 														}
 
-														availData = 64 + Class59_Sub1.anInt1834 * 1908651904;
-														value1 = anInt3183 * 107932800 + 64;
-														value2 = MobDefinition.method2552(availData, value1,
-                                                                -747958745 * GameInterface.anInt1819, (short) 2695)
+														var83 = 64 + Class59_Sub1.anInt1834 * 1908651904;
+														interfaceId = anInt3183 * 107932800 + 64;
+														interfaceHash = MobDefinition.method2552(var83, interfaceId,
+                                                                -747958745 * Class116_Sub11.anInt1819, (short) 2695)
 																- Class116_Sub23_Sub16_Sub1.anInt2573 * 715633123;
-														value3 = availData - Class116_Sub23_Sub16_Sub5.anInt2740 * 282154897;
-														clanRank = value2 - 1447873857 * RelationList.anInt671;
-														var9 = value1 - -324676025 * Class83.anInt968;
-														col = (int) Math.sqrt((double) (value3 * value3 + var9 * var9));
-														var11 = (int) (Math.atan2((double) clanRank, (double) col)
+														clickThrough = var83 - Class116_Sub23_Sub16_Sub5.anInt2740 * 282154897;
+														var8 = interfaceHash - 1447873857 * Class50.anInt671;
+														var9 = interfaceId - -324676025 * Class83.anInt968;
+														var10 = (int) Math.sqrt((double) (clickThrough * clickThrough + var9 * var9));
+														var11 = (int) (Math.atan2((double) var8, (double) var10)
 																* 325.949D) & 2047;
-														id = (int) (Math.atan2((double) value3, (double) var9)
+														var12 = (int) (Math.atan2((double) clickThrough, (double) var9)
 																* -325.949D) & 2047;
 														if (var11 < 128) {
 															var11 = 128;
@@ -4165,7 +4176,7 @@ public final class client extends Applet_Sub1 {
 															}
 														}
 
-														var13 = id - -210812059 * Class76.anInt895;
+														var13 = var12 - -210812059 * Class76.anInt895;
 														if (var13 > 1024) {
 															var13 -= 2048;
 														}
@@ -4190,7 +4201,7 @@ public final class client extends Applet_Sub1 {
 																	* 531969645;
 														}
 
-														var14 = id - -210812059 * Class76.anInt895;
+														var14 = var12 - -210812059 * Class76.anInt895;
 														if (var14 > 1024) {
 															var14 -= 2048;
 														}
@@ -4200,18 +4211,18 @@ public final class client extends Applet_Sub1 {
 														}
 
 														if (var14 < 0 && var13 > 0 || var14 > 0 && var13 < 0) {
-															Class76.anInt895 = 531969645 * id;
+															Class76.anInt895 = 531969645 * var12;
 														}
 													}
 
-													for (availData = 0; availData < 5; ++availData) {
-														++anIntArray3188[availData];
+													for (var83 = 0; var83 < 5; ++var83) {
+														++anIntArray3188[var83];
 													}
 
 													Class39.aClass33_518.method609(-595957965);
-													availData = Class116_Sub23_Sub13.method2667(-1747370542);
-													value1 = 689796811 * KeyFocusListener.anInt959;
-													if (availData > 15000 && value1 > 15000) {
+													var83 = Class116_Sub23_Sub13.method2667(-1747370542);
+													interfaceId = 689796811 * KeyFocusListener.anInt959;
+													if (var83 > 15000 && interfaceId > 15000) {
 														anInt2987 = -453788862;
 														Class85.anInt986 = -1867429308;
 														rsaBuffer.startPacket(182, (byte) 19);
@@ -4220,16 +4231,16 @@ public final class client extends Applet_Sub1 {
 													anInt3006 += -1363846693;
 													if (-2137195949 * anInt3006 > 500) {
 														anInt3006 = 0;
-														value3 = (int) (Math.random() * 8.0D);
-														if ((value3 & 1) == 1) {
+														clickThrough = (int) (Math.random() * 8.0D);
+														if ((clickThrough & 1) == 1) {
 															anInt3194 += 741363619 * anInt3001;
 														}
 
-														if (2 == (value3 & 2)) {
+														if (2 == (clickThrough & 2)) {
 															anInt3002 += -330854363 * anInt3003;
 														}
 
-														if ((value3 & 4) == 4) {
+														if ((clickThrough & 4) == 4) {
 															anInt3004 += anInt3005 * -1044167141;
 														}
 													}
@@ -4261,12 +4272,12 @@ public final class client extends Applet_Sub1 {
 													anInt2946 += 745733717;
 													if (1420431101 * anInt2946 > 500) {
 														anInt2946 = 0;
-														value3 = (int) (Math.random() * 8.0D);
-														if (1 == (value3 & 1)) {
+														clickThrough = (int) (Math.random() * 8.0D);
+														if (1 == (clickThrough & 1)) {
 															anInt3007 += -1297834643 * anInt3008;
 														}
 
-														if ((value3 & 2) == 2) {
+														if ((clickThrough & 2) == 2) {
 															anInt3009 += anInt3010 * -2091901849;
 														}
 													}
@@ -4288,10 +4299,10 @@ public final class client extends Applet_Sub1 {
 													}
 
 													for (Friend var181 = (Friend) friendList
-															.popFront(); null != var181; var181 = (Friend) friendList
-																	.peekFront()) {
+															.method1580(); null != var181; var181 = (Friend) friendList
+																	.method1582()) {
 														if ((long) (var181.anInt1663 * -1725912957) < Class116_Sub5
-																.generateHash(1788993582) / 1000L - 5L) {
+																.method1929(1788993582) / 1000L - 5L) {
 															if (var181.clanRank > 0) {
 																Class86.appendMessage(5, "",
                                                                         var181.username + Class91.hasLoggedIn,
@@ -4315,10 +4326,10 @@ public final class client extends Applet_Sub1 {
 													}
 
 													try {
-														if (null != Class38.streamBuffer
+														if (null != Class38.bufferIn
 																&& 314639891 * rsaBuffer.position > 0) {
-															Class38.streamBuffer.flush(rsaBuffer.payload, 0,
-                                                                    314639891 * rsaBuffer.position, 1619314133);
+															Class38.bufferIn.method1006(rsaBuffer.payload, 0,
+																	314639891 * rsaBuffer.position, 1619314133);
 															rsaBuffer.position = 0;
 															anInt2983 = 0;
 															return;
@@ -4332,8 +4343,8 @@ public final class client extends Applet_Sub1 {
 
 												var182 = var115.aClass116_Sub15_1736;
 												if (2021294259 * var182.anInt1926 >= 0) {
-													var121 = Class107.getInterface(var182.parent * -1652479707,
-                                                            314639891);
+													var121 = Class107.method1466(var182.anInt1944 * -1652479707,
+															314639891);
 													if (null == var121 || null == var121.aClass116_Sub15Array1995
 															|| 2021294259
 																	* var182.anInt1926 >= var121.aClass116_Sub15Array1995.length
@@ -4349,7 +4360,7 @@ public final class client extends Applet_Sub1 {
 
 										var182 = var115.aClass116_Sub15_1736;
 										if (2021294259 * var182.anInt1926 >= 0) {
-											var121 = Class107.getInterface(var182.parent * -1652479707, 314639891);
+											var121 = Class107.method1466(var182.anInt1944 * -1652479707, 314639891);
 											if (null == var121 || null == var121.aClass116_Sub15Array1995
 													|| 2021294259
 															* var182.anInt1926 >= var121.aClass116_Sub15Array1995.length
@@ -4365,7 +4376,7 @@ public final class client extends Applet_Sub1 {
 
 								var182 = var115.aClass116_Sub15_1736;
 								if (var182.anInt1926 * 2021294259 >= 0) {
-									var121 = Class107.getInterface(-1652479707 * var182.parent, 314639891);
+									var121 = Class107.method1466(-1652479707 * var182.anInt1944, 314639891);
 									if (var121 == null || null == var121.aClass116_Sub15Array1995
 											|| 2021294259 * var182.anInt1926 >= var121.aClass116_Sub15Array1995.length
 											|| var121.aClass116_Sub15Array1995[2021294259
@@ -4388,7 +4399,7 @@ public final class client extends Applet_Sub1 {
 
 	void method3677(int var1) {
 		if (loginStage * 846055547 != 1000) {
-			long var2 = Class116_Sub5.generateHash(-975988584);
+			long var2 = Class116_Sub5.method1929(-975988584);
 			int var4 = (int) (var2 - Class93.aLong1337 * -7519494246777129627L);
 			Class93.aLong1337 = 8420123348744189037L * var2;
 			if (var4 > 200) {
@@ -4409,26 +4420,26 @@ public final class client extends Applet_Sub1 {
 					}
 
 					Class116_Sub23_Sub21 var6;
-					Packet var7;
+					Buffer var7;
 					while (Class93.anInt1349 * 1721465631 < 20 && 1018165549 * Class93.anInt1339 > 0) {
-						var6 = (Class116_Sub23_Sub21) Class93.aHashtable_1357.getFirst();
-						var7 = new Packet(4);
+						var6 = (Class116_Sub23_Sub21) Class93.aClass127_1357.method1661();
+						var7 = new Buffer(4);
 						var7.writeByte(1, 190496985);
-						var7.writeMedium((int) var6.hashId, (byte) 92);
-						Class93.aClass71_1335.flush(var7.payload, 0, 4, -2108577204);
-						Class93.aHashtable_1352.put(var6, var6.hashId);
+						var7.writeMedium((int) var6.nodeId, (byte) 92);
+						Class93.aClass71_1335.method1006(var7.payload, 0, 4, -2108577204);
+						Class93.aClass127_1352.method1666(var6, var6.nodeId);
 						Class93.anInt1339 -= -1554399579;
 						Class93.anInt1349 += 255344863;
 					}
 
 					while (-1358134653 * Class93.anInt1338 < 20 && 1714437309 * Class93.anInt1344 > 0) {
 						var6 = (Class116_Sub23_Sub21) Class93.aClass121_1342.method1618();
-						var7 = new Packet(4);
+						var7 = new Buffer(4);
 						var7.writeByte(0, -1122938777);
-						var7.writeMedium((int) var6.hashId, (byte) -58);
-						Class93.aClass71_1335.flush(var7.payload, 0, 4, -1321971833);
+						var7.writeMedium((int) var6.nodeId, (byte) -58);
+						Class93.aClass71_1335.method1006(var7.payload, 0, 4, -1321971833);
 						var6.unlinkContainer();
-						Class93.aHashtable_1345.put(var6, var6.hashId);
+						Class93.aClass127_1345.method1666(var6, var6.nodeId);
 						Class93.anInt1344 -= 556834453;
 						Class93.anInt1338 += 30759979;
 					}
@@ -4437,7 +4448,7 @@ public final class client extends Applet_Sub1 {
 
 					while (true) {
 						if (var23 < 100) {
-							int var24 = Class93.aClass71_1335.readableBytes((byte) -7);
+							int var24 = Class93.aClass71_1335.method1004((byte) -7);
 							if (var24 < 0) {
 								throw new IOException();
 							}
@@ -4462,8 +4473,8 @@ public final class client extends Applet_Sub1 {
 											var9 = var24;
 										}
 
-										Class93.aClass71_1335.readBytes(Class93.aClass116_Sub14_1347.payload,
-                                                Class93.aClass116_Sub14_1347.position * 314639891, var9, 615894679);
+										Class93.aClass71_1335.method1005(Class93.aClass116_Sub14_1347.payload,
+												Class93.aClass116_Sub14_1347.position * 314639891, var9, 615894679);
 										if (Class93.aByte1340 != 0) {
 											for (var10 = 0; var10 < var9; ++var10) {
 												Class93.aClass116_Sub14_1347.payload[Class93.aClass116_Sub14_1347.position
@@ -4479,15 +4490,15 @@ public final class client extends Applet_Sub1 {
 										if (null == Class1.aClass116_Sub23_Sub21_7) {
 											Class93.aClass116_Sub14_1347.position = 0;
 											var10 = Class93.aClass116_Sub14_1347.readSignedByte(1708176767);
-											var11 = Class93.aClass116_Sub14_1347.readUnsignedShort(1893562159);
+											var11 = Class93.aClass116_Sub14_1347.readShort(1893562159);
 											int var12 = Class93.aClass116_Sub14_1347.readSignedByte(1708176767);
 											var13 = Class93.aClass116_Sub14_1347.readInt(-1238876923);
 											long var14 = (long) ((var10 << 16) + var11);
-											Class116_Sub23_Sub21 var16 = (Class116_Sub23_Sub21) Class93.aHashtable_1352
-													.get(var14);
+											Class116_Sub23_Sub21 var16 = (Class116_Sub23_Sub21) Class93.aClass127_1352
+													.method1658(var14);
 											Class105.aBool1435 = true;
 											if (var16 == null) {
-												var16 = (Class116_Sub23_Sub21) Class93.aHashtable_1345.get(var14);
+												var16 = (Class116_Sub23_Sub21) Class93.aClass127_1345.method1658(var14);
 												Class105.aBool1435 = false;
 											}
 
@@ -4497,7 +4508,7 @@ public final class client extends Applet_Sub1 {
 
 											int var17 = var12 == 0 ? 5 : 9;
 											Class1.aClass116_Sub23_Sub21_7 = var16;
-											Class93.aClass116_Sub14_1348 = new Packet(
+											Class93.aClass116_Sub14_1348 = new Buffer(
 													var17 + var13 + Class1.aClass116_Sub23_Sub21_7.aByte2524);
 											Class93.aClass116_Sub14_1348.writeByte(var12, -190710003);
 											Class93.aClass116_Sub14_1348.writeInt(var13, (byte) 69);
@@ -4523,8 +4534,8 @@ public final class client extends Applet_Sub1 {
 											var10 = var24;
 										}
 
-										Class93.aClass71_1335.readBytes(Class93.aClass116_Sub14_1348.payload,
-                                                314639891 * Class93.aClass116_Sub14_1348.position, var10, 615894679);
+										Class93.aClass71_1335.method1005(Class93.aClass116_Sub14_1348.payload,
+												314639891 * Class93.aClass116_Sub14_1348.position, var10, 615894679);
 										if (Class93.aByte1340 != 0) {
 											for (var11 = 0; var11 < var10; ++var11) {
 												Class93.aClass116_Sub14_1348.payload[Class93.aClass116_Sub14_1348.position
@@ -4535,11 +4546,11 @@ public final class client extends Applet_Sub1 {
 										Class93.aClass116_Sub14_1348.position += -184175589 * var10;
 										Class93.anInt1346 += var10 * -351459491;
 										if (Class93.aClass116_Sub14_1348.position * 314639891 == var9) {
-											if (Class1.aClass116_Sub23_Sub21_7.hashId == 16711935L) {
+											if (Class1.aClass116_Sub23_Sub21_7.nodeId == 16711935L) {
 												Class106.aClass116_Sub14_1444 = Class93.aClass116_Sub14_1348;
 
 												for (var11 = 0; var11 < 256; ++var11) {
-													CacheIndex var25 = Class93.aCacheIndexArray1351[var11];
+													Class99_Sub1 var25 = Class93.aClass99_Sub1Array1351[var11];
 													if (null != var25) {
 														Class106.aClass116_Sub14_1444.position = -920877945
 																+ var11 * -1473404712;
@@ -4556,7 +4567,7 @@ public final class client extends Applet_Sub1 {
 												var11 = (int) Class93.aCRC32_1350.getValue();
 												if (Class1.aClass116_Sub23_Sub21_7.anInt2525 * -2143112411 != var11) {
 													try {
-														Class93.aClass71_1335.sync(-1395799089);
+														Class93.aClass71_1335.method1001(-1395799089);
 													} catch (Exception var21) {
 														;
 													}
@@ -4570,12 +4581,12 @@ public final class client extends Applet_Sub1 {
 
 												Class93.anInt1353 = 0;
 												Class93.anInt1354 = 0;
-												Class1.aClass116_Sub23_Sub21_7.aCacheIndex_2523
+												Class1.aClass116_Sub23_Sub21_7.aClass99_Sub1_2523
 														.method2221(
-																(int) (Class1.aClass116_Sub23_Sub21_7.hashId
+																(int) (Class1.aClass116_Sub23_Sub21_7.nodeId
 																		& 65535L),
 																Class93.aClass116_Sub14_1348.payload,
-																16711680L == (Class1.aClass116_Sub23_Sub21_7.hashId
+																16711680L == (Class1.aClass116_Sub23_Sub21_7.nodeId
 																		& 16711680L),
 																Class105.aBool1435, (byte) 49);
 											}
@@ -4609,11 +4620,9 @@ public final class client extends Applet_Sub1 {
 						break;
 					}
 				} catch (IOException var22) {
-                    var22.printStackTrace();
 					try {
-						Class93.aClass71_1335.sync(1426280457);
+						Class93.aClass71_1335.method1001(1426280457);
 					} catch (Exception var20) {
-                        var22.printStackTrace();
 						;
 					}
 
@@ -4653,8 +4662,8 @@ public final class client extends Applet_Sub1 {
 			if ((anInt3137 -= 1071293367) * 1042459143 + 1 <= 0) {
 				try {
 					if (anInt2963 * 871661897 == 0) {
-						Friend.aClass72_1665 = ISAAC.signLink.socket(World.aString386,
-                                Class29.anInt404 * 2028673991, (byte) 1);
+						Friend.aClass72_1665 = ISAAC.aClass74_705.method1054(Class27.aString386,
+								Class29.anInt404 * 2028673991, (byte) 1);
 						anInt2963 += 2080129273;
 					}
 
@@ -4670,20 +4679,20 @@ public final class client extends Applet_Sub1 {
 					}
 
 					if (2 == 871661897 * anInt2963) {
-						Class60.aClass71_779 = new RSInputStream((Socket) Friend.aClass72_1665.anObject869,
-								ISAAC.signLink);
-						Packet var2 = new Packet(5);
+						Class60.aClass71_779 = new Class71((Socket) Friend.aClass72_1665.anObject869,
+								ISAAC.aClass74_705);
+						Buffer var2 = new Buffer(5);
 						var2.writeByte(15, 763184261);
 						var2.writeInt(103, (byte) 74);
-						Class60.aClass71_779.flush(var2.payload, 0, 5, 990017971);
+						Class60.aClass71_779.method1006(var2.payload, 0, 5, 990017971);
 						anInt2963 += 2080129273;
-						GameInterface.aLong1813 = Class116_Sub5.generateHash(-1961009970) * 438338058587165431L;
+						Class116_Sub11.aLong1813 = Class116_Sub5.method1929(-1961009970) * 438338058587165431L;
 					}
 
 					if (3 == 871661897 * anInt2963) {
-						if (loginStage * 846055547 > 5 && Class60.aClass71_779.readableBytes((byte) -38) <= 0) {
-							if (Class116_Sub5.generateHash(-739190424)
-									- GameInterface.aLong1813 * 6665081146797919943L > 30000L) {
+						if (loginStage * 846055547 > 5 && Class60.aClass71_779.method1004((byte) -38) <= 0) {
+							if (Class116_Sub5.method1929(-739190424)
+									- Class116_Sub11.aLong1813 * 6665081146797919943L > 30000L) {
 								this.method3803(-2, -486091785);
 								return;
 							}
@@ -4755,9 +4764,9 @@ public final class client extends Applet_Sub1 {
 		}
 
 		Mob.aClass35_2879 = null;
-		if (null != Class38.streamBuffer) {
-			Class38.streamBuffer.sync(592546375);
-			Class38.streamBuffer = null;
+		if (null != Class38.bufferIn) {
+			Class38.bufferIn.method1001(592546375);
+			Class38.bufferIn = null;
 		}
 
 		if (null != KeyFocusListener.aClass82_962) {
@@ -4784,16 +4793,16 @@ public final class client extends Applet_Sub1 {
 		}
 
 		if (Class93.aClass71_1335 != null) {
-			Class93.aClass71_1335.sync(1912589932);
+			Class93.aClass71_1335.method1001(1912589932);
 		}
 
-		Object var11 = CacheWorker.anObject1416;
+		Object var11 = Class102.anObject1416;
 		synchronized (var11) {
-			if (0 != CacheWorker.anInt1415 * 1638013353) {
-				CacheWorker.anInt1415 = 9935513;
+			if (0 != Class102.anInt1415 * 1638013353) {
+				Class102.anInt1415 = 9935513;
 
 				try {
-					CacheWorker.anObject1416.wait();
+					Class102.anObject1416.wait();
 				} catch (InterruptedException var6) {
 					;
 				}
@@ -4830,9 +4839,9 @@ public final class client extends Applet_Sub1 {
 			Class32.aClass89_443.method1180(Tile.aCanvas1875, (short) 17146);
 		}
 
-		Class3.checksumIndex = new RSFIT(255, Class86.gameDataFile, Class86.gameDataChecksums, 500000);
+		Class3.aClass73_40 = new Class73(255, Class86.aClass140_1011, Class86.aClass140_1015, 500000);
 		Class116_Sub5.aClass29_1727 = Class116_Sub23_Sub11.method2638(-215124388);
-		CacheIndex.aClipboard1907 = this.getToolkit().getSystemClipboard();
+		Class99_Sub1.aClipboard1907 = this.getToolkit().getSystemClipboard();
 		Class63.method933(this, Class38.aString507, (byte) 91);
 		if (0 != anInt3020 * 1082541889) {
 			aBool2949 = true;
@@ -4849,7 +4858,7 @@ public final class client extends Applet_Sub1 {
 		Class116_Sub5.method1931(-1960013450);
 		if (846055547 * loginStage >= 25) {
 			rsaBuffer.startPacket(23, (byte) 55);
-			PacketBuilder var5 = rsaBuffer;
+			BitBuffer var5 = rsaBuffer;
 			int var6 = aBool3140 ? 2 : 1;
 			var5.writeByte(var6, -1525728607);
 			rsaBuffer.writeShort(Class42.clientWidth * -452716157, -2066709703);
@@ -4866,7 +4875,7 @@ public final class client extends Applet_Sub1 {
 			try {
 				if (-1587772409 * Class128.anInt1574 == 2) {
 					if (null == Class98.aClass116_Sub18_1381) {
-						Class98.aClass116_Sub18_1381 = Class116_Sub18.method2321(Class128.aRSIndex_1575,
+						Class98.aClass116_Sub18_1381 = Class116_Sub18.method2321(Class128.aClass99_1575,
 								Class112.anInt1485 * 729981213, -664270353 * Class129.anInt1581);
 						if (null == Class98.aClass116_Sub18_1381) {
 							var2 = false;
@@ -4875,12 +4884,12 @@ public final class client extends Applet_Sub1 {
 					}
 
 					if (Class116_Sub23_Sub18.aClass14_2478 == null) {
-						Class116_Sub23_Sub18.aClass14_2478 = new Class14(Class128.aRSIndex_1573,
-								Class128.aRSIndex_1578);
+						Class116_Sub23_Sub18.aClass14_2478 = new Class14(Class128.aClass99_1573,
+								Class128.aClass99_1578);
 					}
 
 					if (Class128.aClass116_Sub4_Sub4_1576.method2996(Class98.aClass116_Sub18_1381,
-							Class101.aRSIndex_1411, Class116_Sub23_Sub18.aClass14_2478, 22050, -1235957410)) {
+							Class101.aClass99_1411, Class116_Sub23_Sub18.aClass14_2478, 22050, -1235957410)) {
 						Class128.aClass116_Sub4_Sub4_1576.method2997((byte) -75);
 						Class128.aClass116_Sub4_Sub4_1576.method2994(1705221873 * Class128.anInt1579, 1310409596);
 						Class128.aClass116_Sub4_Sub4_1576.method3057(Class98.aClass116_Sub18_1381, Class55.aBool715,
@@ -4888,7 +4897,7 @@ public final class client extends Applet_Sub1 {
 						Class128.anInt1574 = 0;
 						Class98.aClass116_Sub18_1381 = null;
 						Class116_Sub23_Sub18.aClass14_2478 = null;
-						Class128.aRSIndex_1575 = null;
+						Class128.aClass99_1575 = null;
 						var2 = true;
 						break label202;
 					}
@@ -4899,7 +4908,7 @@ public final class client extends Applet_Sub1 {
 				Class128.anInt1574 = 0;
 				Class98.aClass116_Sub18_1381 = null;
 				Class116_Sub23_Sub18.aClass14_2478 = null;
-				Class128.aRSIndex_1575 = null;
+				Class128.aClass99_1575 = null;
 			}
 
 			var2 = false;
@@ -4912,7 +4921,7 @@ public final class client extends Applet_Sub1 {
 		int var6;
 		if (loginStage * 846055547 == 10 || loginStage * 846055547 == 20 || loginStage * 846055547 == 30) {
 			if (0L != aLong2975 * 203608972292936527L
-					&& Class116_Sub5.generateHash(2036828818) > 203608972292936527L * aLong2975) {
+					&& Class116_Sub5.method1929(2036828818) > 203608972292936527L * aLong2975) {
 				int var4 = aBool3140 ? 2 : 1;
 				aLong2975 = 0L;
 				if (var4 >= 2) {
@@ -4924,7 +4933,7 @@ public final class client extends Applet_Sub1 {
 				Class116_Sub5.method1931(-1638007568);
 				if (846055547 * loginStage >= 25) {
 					rsaBuffer.startPacket(23, (byte) 99);
-					PacketBuilder var5 = rsaBuffer;
+					BitBuffer var5 = rsaBuffer;
 					var6 = aBool3140 ? 2 : 1;
 					var5.writeByte(var6, 543693404);
 					rsaBuffer.writeShort(-452716157 * Class42.clientWidth, -1692676158);
@@ -4941,7 +4950,7 @@ public final class client extends Applet_Sub1 {
 		if (var18.width != -1830553327 * Class116_Sub23_Sub7.anInt2289 || var18.height != Class25.anInt354 * 2045896553
 				|| aBool2923) {
 			Class116_Sub5.method1931(-826328067);
-			aLong2975 = (Class116_Sub5.generateHash(115647549) + 500L) * 276652985331671983L;
+			aLong2975 = (Class116_Sub5.method1929(115647549) + 500L) * 276652985331671983L;
 			aBool2923 = false;
 		}
 
@@ -4981,11 +4990,11 @@ public final class client extends Applet_Sub1 {
 				}
 
 				try {
-					if (null == RSFIT.anImage876) {
-						RSFIT.anImage876 = Tile.aCanvas1875.createImage(304, 34);
+					if (null == Class73.anImage876) {
+						Class73.anImage876 = Tile.aCanvas1875.createImage(304, 34);
 					}
 
-					Graphics var10 = RSFIT.anImage876.getGraphics();
+					Graphics var10 = Class73.anImage876.getGraphics();
 					var10.setColor(var8);
 					var10.drawRect(0, 0, 303, 33);
 					var10.fillRect(2, 2, 3 * var6, 30);
@@ -4995,7 +5004,7 @@ public final class client extends Applet_Sub1 {
 					var10.setFont(Class8.aFont129);
 					var10.setColor(Color.white);
 					var10.drawString(var7, (304 - ISAAC.aFontMetrics701.stringWidth(var7)) / 2, 22);
-					var9.drawImage(RSFIT.anImage876, Class42.clientWidth * -452716157 / 2 - 152,
+					var9.drawImage(Class73.anImage876, Class42.clientWidth * -452716157 / 2 - 152,
 							Class116_Sub16.clientHeight * 674167779 / 2 - 18, (ImageObserver) null);
 				} catch (Exception var13) {
 					int var11 = -452716157 * Class42.clientWidth / 2 - 152;
@@ -5063,7 +5072,7 @@ public final class client extends Applet_Sub1 {
 
 				for (var20 = 0; var20 < anInt3136 * -580551879; ++var20) {
 					if (aBoolArray3139[var20]) {
-						RSFIT.aAbstractRSDrawing_874.method325(var21, anIntArray3141[var20], anIntArray3142[var20],
+						Class73.aAbstractRSDrawing_874.method325(var21, anIntArray3141[var20], anIntArray3142[var20],
 								anIntArray3143[var20], anIntArray3144[var20], (short) 271);
 						aBoolArray3139[var20] = false;
 					}
@@ -5074,7 +5083,7 @@ public final class client extends Applet_Sub1 {
 		} else if (loginStage * 846055547 > 0) {
 			try {
 				var21 = Tile.aCanvas1875.getGraphics();
-				RSFIT.aAbstractRSDrawing_874.method333(var21, 0, 0, -819332484);
+				Class73.aAbstractRSDrawing_874.method333(var21, 0, 0, -819332484);
 
 				for (var20 = 0; var20 < anInt3136 * -580551879; ++var20) {
 					aBoolArray3139[var20] = false;
@@ -5087,28 +5096,28 @@ public final class client extends Applet_Sub1 {
 	}
 
 	static final void method3952(int var0, int var1, int var2, int var3, int var4, byte var5) {
-		int onTile = GameInterface.region.method452(var0, var1, var2);
+		int var6 = Class116_Sub11.groundItemController.method452(var0, var1, var2);
 		int var7;
 		int var8;
 		int var9;
-		int objectId;
+		int var11;
 		int var12;
 		int var15;
-		if (0 != onTile) {
-			var8 = GameInterface.region.getTileContentsType(var0, var1, var2, onTile);
+		if (0 != var6) {
+			var8 = Class116_Sub11.groundItemController.method375(var0, var1, var2, var6);
 			var15 = var8 >> 6 & 3;
 			var9 = var8 & 31;
-			objectId = var3;
-			if (onTile > 0) {
-				objectId = var4;
+			var11 = var3;
+			if (var6 > 0) {
+				var11 = var4;
 			}
 
-			int[] var10 = Class116_Sub23_Sub18.mapSprite.myPixels;
+			int[] var10 = Class116_Sub23_Sub18.aClass116_Sub23_Sub19_Sub2_2487.myPixels;
 			var7 = 4 * var1 + 24624 + 2048 * (103 - var2);
-			var12 = onTile >> 14 & 32767;
+			var12 = var6 >> 14 & 32767;
 			ObjectDefinition var13 = Class45.method700(var12, 359750046);
 			if (-1 != var13.anInt2218 * -1798686461) {
-				Class116_Sub23_Sub19_Sub3 var14 = Class2.mapScene[var13.anInt2218
+				Class116_Sub23_Sub19_Sub3 var14 = Class2.aClass116_Sub23_Sub19_Sub3Array18[var13.anInt2218
 						* -1798686461];
 				if (var14 != null) {
 					int var16 = (var13.sizeX * 355676604 - var14.anInt2763) / 2;
@@ -5119,76 +5128,76 @@ public final class client extends Applet_Sub1 {
 			} else {
 				if (var9 == 0 || 2 == var9) {
 					if (0 == var15) {
-						var10[var7] = objectId;
-						var10[512 + var7] = objectId;
-						var10[var7 + 1024] = objectId;
-						var10[var7 + 1536] = objectId;
+						var10[var7] = var11;
+						var10[512 + var7] = var11;
+						var10[var7 + 1024] = var11;
+						var10[var7 + 1536] = var11;
 					} else if (var15 == 1) {
-						var10[var7] = objectId;
-						var10[1 + var7] = objectId;
-						var10[2 + var7] = objectId;
-						var10[3 + var7] = objectId;
+						var10[var7] = var11;
+						var10[1 + var7] = var11;
+						var10[2 + var7] = var11;
+						var10[3 + var7] = var11;
 					} else if (2 == var15) {
-						var10[var7 + 3] = objectId;
-						var10[512 + 3 + var7] = objectId;
-						var10[1024 + 3 + var7] = objectId;
-						var10[1536 + var7 + 3] = objectId;
+						var10[var7 + 3] = var11;
+						var10[512 + 3 + var7] = var11;
+						var10[1024 + 3 + var7] = var11;
+						var10[1536 + var7 + 3] = var11;
 					} else if (3 == var15) {
-						var10[var7 + 1536] = objectId;
-						var10[var7 + 1536 + 1] = objectId;
-						var10[1536 + var7 + 2] = objectId;
-						var10[var7 + 1536 + 3] = objectId;
+						var10[var7 + 1536] = var11;
+						var10[var7 + 1536 + 1] = var11;
+						var10[1536 + var7 + 2] = var11;
+						var10[var7 + 1536 + 3] = var11;
 					}
 				}
 
 				if (3 == var9) {
 					if (var15 == 0) {
-						var10[var7] = objectId;
+						var10[var7] = var11;
 					} else if (var15 == 1) {
-						var10[3 + var7] = objectId;
+						var10[3 + var7] = var11;
 					} else if (2 == var15) {
-						var10[var7 + 3 + 1536] = objectId;
+						var10[var7 + 3 + 1536] = var11;
 					} else if (3 == var15) {
-						var10[1536 + var7] = objectId;
+						var10[1536 + var7] = var11;
 					}
 				}
 
 				if (var9 == 2) {
 					if (3 == var15) {
-						var10[var7] = objectId;
-						var10[var7 + 512] = objectId;
-						var10[var7 + 1024] = objectId;
-						var10[1536 + var7] = objectId;
+						var10[var7] = var11;
+						var10[var7 + 512] = var11;
+						var10[var7 + 1024] = var11;
+						var10[1536 + var7] = var11;
 					} else if (var15 == 0) {
-						var10[var7] = objectId;
-						var10[1 + var7] = objectId;
-						var10[2 + var7] = objectId;
-						var10[3 + var7] = objectId;
+						var10[var7] = var11;
+						var10[1 + var7] = var11;
+						var10[2 + var7] = var11;
+						var10[3 + var7] = var11;
 					} else if (1 == var15) {
-						var10[3 + var7] = objectId;
-						var10[512 + var7 + 3] = objectId;
-						var10[1024 + var7 + 3] = objectId;
-						var10[1536 + var7 + 3] = objectId;
+						var10[3 + var7] = var11;
+						var10[512 + var7 + 3] = var11;
+						var10[1024 + var7 + 3] = var11;
+						var10[1536 + var7 + 3] = var11;
 					} else if (2 == var15) {
-						var10[var7 + 1536] = objectId;
-						var10[1 + 1536 + var7] = objectId;
-						var10[2 + var7 + 1536] = objectId;
-						var10[var7 + 1536 + 3] = objectId;
+						var10[var7 + 1536] = var11;
+						var10[1 + 1536 + var7] = var11;
+						var10[2 + var7 + 1536] = var11;
+						var10[var7 + 1536 + 3] = var11;
 					}
 				}
 			}
 		}
 
-		onTile = GameInterface.region.getTileContents(var0, var1, var2);
-		if (onTile != 0) {
-			var8 = GameInterface.region.getTileContentsType(var0, var1, var2, onTile);
+		var6 = Class116_Sub11.groundItemController.method373(var0, var1, var2);
+		if (var6 != 0) {
+			var8 = Class116_Sub11.groundItemController.method375(var0, var1, var2, var6);
 			var15 = var8 >> 6 & 3;
 			var9 = var8 & 31;
-			objectId = onTile >> 14 & 32767;
-			ObjectDefinition var20 = Class45.method700(objectId, 359750046);
+			var11 = var6 >> 14 & 32767;
+			ObjectDefinition var20 = Class45.method700(var11, 359750046);
 			int var23;
 			if (var20.anInt2218 * -1798686461 != -1) {
-				Class116_Sub23_Sub19_Sub3 var18 = Class2.mapScene[-1798686461
+				Class116_Sub23_Sub19_Sub3 var18 = Class2.aClass116_Sub23_Sub19_Sub3Array18[-1798686461
 						* var20.anInt2218];
 				if (var18 != null) {
 					var12 = (355676604 * var20.sizeX - var18.anInt2763) / 2;
@@ -5198,11 +5207,11 @@ public final class client extends Applet_Sub1 {
 				}
 			} else if (9 == var9) {
 				var7 = 15658734;
-				if (onTile > 0) {
+				if (var6 > 0) {
 					var7 = 15597568;
 				}
 
-				int[] var22 = Class116_Sub23_Sub18.mapSprite.myPixels;
+				int[] var22 = Class116_Sub23_Sub18.aClass116_Sub23_Sub19_Sub2_2487.myPixels;
 				var23 = var1 * 4 + 24624 + 2048 * (103 - var2);
 				if (0 != var15 && var15 != 2) {
 					var22[var23] = var7;
@@ -5218,17 +5227,17 @@ public final class client extends Applet_Sub1 {
 			}
 		}
 
-		onTile = GameInterface.region.method374(var0, var1, var2);
-		if (0 != onTile) {
-			var8 = onTile >> 14 & 32767;
+		var6 = Class116_Sub11.groundItemController.method374(var0, var1, var2);
+		if (0 != var6) {
+			var8 = var6 >> 14 & 32767;
 			ObjectDefinition var24 = Class45.method700(var8, 359750046);
 			if (var24.anInt2218 * -1798686461 != -1) {
-				Class116_Sub23_Sub19_Sub3 var19 = Class2.mapScene[var24.anInt2218
+				Class116_Sub23_Sub19_Sub3 var19 = Class2.aClass116_Sub23_Sub19_Sub3Array18[var24.anInt2218
 						* -1798686461];
 				if (null != var19) {
-					objectId = (var24.sizeX * 355676604 - var19.anInt2763) / 2;
+					var11 = (var24.sizeX * 355676604 - var19.anInt2763) / 2;
 					int var21 = (685838988 * var24.sizeY - var19.anInt2764) / 2;
-					var19.method3359(48 + var1 * 4 + objectId,
+					var19.method3359(48 + var1 * 4 + var11,
 							var21 + (104 - var2 - -1976023901 * var24.sizeY) * 4 + 48);
 				}
 			}
@@ -5236,7 +5245,7 @@ public final class client extends Applet_Sub1 {
 
 	}
 
-	public static int method3953(Packet var0, String var1, int var2) {
+	public static int method3953(Buffer var0, String var1, int var2) {
 		int var3 = var0.position * 314639891;
 		byte[] var4 = Class64.method938(var1, (byte) -97);
 		var0.writeSmart(var4.length, 720272980);
@@ -5256,8 +5265,8 @@ public final class client extends Applet_Sub1 {
 
 
 
-    static RSIndex aRSIndex_1618;
-    public static HuffManEncryption aClass52_1621;
+    static Class99 aClass99_1618;
+    public static Class52 aClass52_1621;
 
     static int anInt1646;
     public static NodeList aClass119_1617 = new NodeList();
@@ -5267,10 +5276,10 @@ public final class client extends Applet_Sub1 {
     static int[] anIntArray1615;
 
 
-    static final int method1740(RSInterface var0, int var1, byte var2) {
-        if(var0.cs1opcodes != null && var1 < var0.cs1opcodes.length) {
+    static final int method1740(Class116_Sub15 var0, int var1, byte var2) {
+        if(var0.anIntArrayArray2035 != null && var1 < var0.anIntArrayArray2035.length) {
             try {
-                int[] var3 = var0.cs1opcodes[var1];
+                int[] var3 = var0.anIntArrayArray2035[var1];
                 int var4 = 0;
                 int var5 = 0;
                 byte var6 = 0;
@@ -5296,25 +5305,25 @@ public final class client extends Applet_Sub1 {
                     }
 
                     int var10;
-                    RSInterface var11;
+                    Class116_Sub15 var11;
                     int var12;
                     int var13;
                     if(4 == var7) {
                         var10 = var3[var5++] << 16;
                         var10 += var3[var5++];
-                        var11 = Class107.getInterface(var10, 314639891);
+                        var11 = Class107.method1466(var10, 314639891);
                         var12 = var3[var5++];
-                        if(var12 != -1 && (!RelationList.method778(var12, (byte) 70).aBool2374 || client.aBool2936)) {
-                            for(var13 = 0; var13 < var11.inv.length; ++var13) {
-                                if(1 + var12 == var11.inv[var13]) {
-                                    var8 += var11.invStackSize[var13];
+                        if(var12 != -1 && (!Class50.method778(var12, (byte)70).aBool2374 || client.aBool2936)) {
+                            for(var13 = 0; var13 < var11.anIntArray2047.length; ++var13) {
+                                if(1 + var12 == var11.anIntArray2047[var13]) {
+                                    var8 += var11.anIntArray2042[var13];
                                 }
                             }
                         }
                     }
 
                     if(var7 == 5) {
-                        var8 = Class107.varpData[var3[var5++]];
+                        var8 = Class107.anIntArray1459[var3[var5++]];
                     }
 
                     if(var7 == 6) {
@@ -5322,11 +5331,11 @@ public final class client extends Applet_Sub1 {
                     }
 
                     if(7 == var7) {
-                        var8 = Class107.varpData[var3[var5++]] * 100 / '\ub71b';
+                        var8 = Class107.anIntArray1459[var3[var5++]] * 100 / '\ub71b';
                     }
 
                     if(8 == var7) {
-                        var8 = Class79.ourPlayer.anInt2908 * 1614853309;
+                        var8 = Class79.aPlayer_909.anInt2908 * 1614853309;
                     }
 
                     if(var7 == 9) {
@@ -5340,11 +5349,11 @@ public final class client extends Applet_Sub1 {
                     if(var7 == 10) {
                         var10 = var3[var5++] << 16;
                         var10 += var3[var5++];
-                        var11 = Class107.getInterface(var10, 314639891);
+                        var11 = Class107.method1466(var10, 314639891);
                         var12 = var3[var5++];
-                        if(-1 != var12 && (!RelationList.method778(var12, (byte) 70).aBool2374 || client.aBool2936)) {
-                            for(var13 = 0; var13 < var11.inv.length; ++var13) {
-                                if(var12 + 1 == var11.inv[var13]) {
+                        if(-1 != var12 && (!Class50.method778(var12, (byte)70).aBool2374 || client.aBool2936)) {
+                            for(var13 = 0; var13 < var11.anIntArray2047.length; ++var13) {
+                                if(var12 + 1 == var11.anIntArray2047[var13]) {
                                     var8 = 999999999;
                                     break;
                                 }
@@ -5361,7 +5370,7 @@ public final class client extends Applet_Sub1 {
                     }
 
                     if(var7 == 13) {
-                        var10 = Class107.varpData[var3[var5++]];
+                        var10 = Class107.anIntArray1459[var3[var5++]];
                         int var15 = var3[var5++];
                         var8 = (var10 & 1 << var15) != 0?1:0;
                     }
@@ -5384,11 +5393,11 @@ public final class client extends Applet_Sub1 {
                     }
 
                     if(var7 == 18) {
-                        var8 = 1426698711 * Class116_Sub17.anInt2105 + (1272643751 * Class79.ourPlayer.anInt2609 >> 7);
+                        var8 = 1426698711 * Class116_Sub17.anInt2105 + (1272643751 * Class79.aPlayer_909.anInt2609 >> 7);
                     }
 
                     if(var7 == 19) {
-                        var8 = (Class79.ourPlayer.anInt2579 * -1801433343 >> 7) + 714823515 * Class33.anInt456;
+                        var8 = (Class79.aPlayer_909.anInt2579 * -1801433343 >> 7) + 714823515 * Class33.anInt456;
                     }
 
                     if(var7 == 20) {

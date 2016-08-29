@@ -18,7 +18,7 @@ public class ItemHandler extends PacketHandler<Player> {
 	//187 eat/look at? item=7638
 	//207 item on item
 	//72 empty
-	private static final int EXAMINE = 158, EQUIP = 115, UNEQUIP = 149;
+	private static final int EXAMINE = 158, EQUIP = 115;
 
 	@Override
 	public void handle(Player player, Packet packet) {
@@ -51,47 +51,6 @@ public class ItemHandler extends PacketHandler<Player> {
 				player.getInventory().refresh();
 			} else if (player.getInventory().isFull()) {
 				player.getProtocol().sendMessage("full");
-			}
-		} else if(packet.getOpcode() == UNEQUIP) {
-
-			int widgetid = packet.getInt();
-			int oldItemId = packet.getShort();
-			int oldEquipSlot = packet.getShort();
-
-			int interfaceId = widgetid >> 16;
-			if(interfaceId != 387) return;
-
-
-			int button = widgetid & 0xffff;
-			if (button >= 6 && button < 17) {
-				int index = 0;
-				 if (button == 16) {
-					index = 13;
-				} else if (button == 15) {
-					index = 12;
-				 } else if (button == 14) {
-					 index = 10;
-				} else if (button == 13) {
-					index = 9;
-				} else if (button == 12) {
-					 index = 7;
-				} else if (button == 11) {
-					index = 5;
-				}
-				//System.out.println(widgetid + "/" + oldItemId + "/" + oldEquipSlot + "/" + button + "/" + interfaceId);
-
-				if (player.getAttribute("cutScene") != null) {
-					return;
-				}
-				Item item = player.getEquipment().get(index == 0 ? button - 6 : index);
-				if (item == null) return;
-				if (player.getInventory().add(item)) {
-					Item i = player.getEquipment().remove(index == 0 ? button - 6 : index);
-					if (i != null) {
-						player.getEquipment().refresh();
-						player.getInventory().refresh();
-					}
-				}
 			}
 		}
 	}

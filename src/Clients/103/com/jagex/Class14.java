@@ -2,17 +2,17 @@ package com.jagex;
 
 public class Class14 {
 
-   RSIndex aRSIndex_211;
-   Hashtable aHashtable_212 = new Hashtable(256);
-   Hashtable aHashtable_213 = new Hashtable(256);
-   RSIndex aRSIndex_215;
+   Class99 aClass99_211;
+   Class127 aClass127_212 = new Class127(256);
+   Class127 aClass127_213 = new Class127(256);
+   Class99 aClass99_215;
    public static int anInt216;
 
 
    public Class116_Sub2_Sub1 method240(int var1, int[] var2, short var3) {
-      if(this.aRSIndex_215.method1424(567579185) == 1) {
+      if(this.aClass99_215.method1424(567579185) == 1) {
          return this.method246(0, var1, var2, -868998725);
-      } else if(this.aRSIndex_215.method1361(var1, -824500445) == 1) {
+      } else if(this.aClass99_215.method1361(var1, -824500445) == 1) {
          return this.method246(var1, 0, var2, -2012079315);
       } else {
          throw new RuntimeException();
@@ -23,20 +23,20 @@ public class Class14 {
       int var5 = var2 ^ (var1 << 4 & '\uffff' | var1 >>> 12);
       var5 |= var1 << 16;
       long var6 = (long)var5 ^ 4294967296L;
-      Class116_Sub2_Sub1 var9 = (Class116_Sub2_Sub1)this.aHashtable_213.get(var6);
+      Class116_Sub2_Sub1 var9 = (Class116_Sub2_Sub1)this.aClass127_213.method1658(var6);
       if(null != var9) {
          return var9;
       } else if(var3 != null && var3[0] <= 0) {
          return null;
       } else {
-         Class116_Sub3 var8 = (Class116_Sub3)this.aHashtable_212.get(var6);
+         Class116_Sub3 var8 = (Class116_Sub3)this.aClass127_212.method1658(var6);
          if(null == var8) {
-            var8 = Class116_Sub3.method1889(this.aRSIndex_211, var1, var2);
+            var8 = Class116_Sub3.method1889(this.aClass99_211, var1, var2);
             if(null == var8) {
                return null;
             }
 
-            this.aHashtable_212.put(var8, var6);
+            this.aClass127_212.method1666(var8, var6);
          }
 
          var9 = var8.method1885(var3);
@@ -44,15 +44,15 @@ public class Class14 {
             return null;
          } else {
             var8.unlink();
-            this.aHashtable_213.put(var9, var6);
+            this.aClass127_213.method1666(var9, var6);
             return var9;
          }
       }
    }
 
    public Class116_Sub2_Sub1 method244(int var1, int[] var2, int var3) {
-      if(this.aRSIndex_211.method1424(-200551522) != 1) {
-         if(this.aRSIndex_211.method1361(var1, -824500445) == 1) {
+      if(this.aClass99_211.method1424(-200551522) != 1) {
+         if(this.aClass99_211.method1361(var1, -824500445) == 1) {
             return this.method243(var1, 0, var2, 897127095);
          } else {
             throw new RuntimeException();
@@ -66,18 +66,18 @@ public class Class14 {
       int var5 = var2 ^ (var1 << 4 & '\uffff' | var1 >>> 12);
       var5 |= var1 << 16;
       long var6 = (long)var5;
-      Class116_Sub2_Sub1 var8 = (Class116_Sub2_Sub1)this.aHashtable_213.get(var6);
+      Class116_Sub2_Sub1 var8 = (Class116_Sub2_Sub1)this.aClass127_213.method1658(var6);
       if(var8 != null) {
          return var8;
       } else if(null != var3 && var3[0] <= 0) {
          return null;
       } else {
-         Sounds var9 = Sounds.method256(this.aRSIndex_215, var1, var2);
+         Sounds var9 = Sounds.method256(this.aClass99_215, var1, var2);
          if(var9 == null) {
             return null;
          } else {
             var8 = var9.method261();
-            this.aHashtable_213.put(var8, var6);
+            this.aClass127_213.method1666(var8, var6);
             if(var3 != null) {
                var3[0] -= var8.aByteArray2442.length;
             }
@@ -87,9 +87,9 @@ public class Class14 {
       }
    }
 
-   public Class14(RSIndex var1, RSIndex var2) {
-      this.aRSIndex_215 = var1;
-      this.aRSIndex_211 = var2;
+   public Class14(Class99 var1, Class99 var2) {
+      this.aClass99_215 = var1;
+      this.aClass99_211 = var2;
    }
 
    static final void method254(byte var0) {
@@ -98,9 +98,9 @@ public class Class14 {
       if(-1468156361 * Class6.anInt90 > 0) {
          for(var2 = 0; var2 < 256; ++var2) {
             if(Class6.anInt90 * -1468156361 > 768) {
-               Class6.anIntArray74[var2] = Packet.method2150(Class22.anIntArray280[var2], client.anIntArray1615[var2], 1024 - Class6.anInt90 * -1468156361, 1562158132);
+               Class6.anIntArray74[var2] = Buffer.method2150(Class22.anIntArray280[var2], client.anIntArray1615[var2], 1024 - Class6.anInt90 * -1468156361, 1562158132);
             } else if(Class6.anInt90 * -1468156361 <= 256) {
-               Class6.anIntArray74[var2] = Packet.method2150(client.anIntArray1615[var2], Class22.anIntArray280[var2], 256 - -1468156361 * Class6.anInt90, 1883119742);
+               Class6.anIntArray74[var2] = Buffer.method2150(client.anIntArray1615[var2], Class22.anIntArray280[var2], 256 - -1468156361 * Class6.anInt90, 1883119742);
             } else {
                Class6.anIntArray74[var2] = client.anIntArray1615[var2];
             }
@@ -108,11 +108,11 @@ public class Class14 {
       } else if(Class6.anInt77 * 560977075 > 0) {
          for(var2 = 0; var2 < 256; ++var2) {
             if(Class6.anInt77 * 560977075 > 768) {
-               Class6.anIntArray74[var2] = Packet.method2150(Class22.anIntArray280[var2], Class6.anIntArray75[var2], 1024 - Class6.anInt77 * 560977075, 1610997705);
+               Class6.anIntArray74[var2] = Buffer.method2150(Class22.anIntArray280[var2], Class6.anIntArray75[var2], 1024 - Class6.anInt77 * 560977075, 1610997705);
             } else if(560977075 * Class6.anInt77 > 256) {
                Class6.anIntArray74[var2] = Class6.anIntArray75[var2];
             } else {
-               Class6.anIntArray74[var2] = Packet.method2150(Class6.anIntArray75[var2], Class22.anIntArray280[var2], 256 - Class6.anInt77 * 560977075, 1820755221);
+               Class6.anIntArray74[var2] = Buffer.method2150(Class6.anIntArray75[var2], Class22.anIntArray280[var2], 256 - Class6.anInt77 * 560977075, 1820755221);
             }
          }
       } else {
@@ -121,11 +121,11 @@ public class Class14 {
          }
       }
 
-      DrawingArea.setRasterSize(Class6.anInt84 * 1933284923, 9, 128 + 1933284923 * Class6.anInt84, var1 + 7);
+      DrawingArea.method2901(Class6.anInt84 * 1933284923, 9, 128 + 1933284923 * Class6.anInt84, var1 + 7);
       Class67.aClass116_Sub23_Sub19_Sub2_826.method3286(Class6.anInt84 * 1933284923, 0);
       DrawingArea.method2888();
       var2 = 0;
-      int var3 = RSFIT.aAbstractRSDrawing_874.anInt264 * 1802935495 + 1933284923 * Class6.anInt84;
+      int var3 = Class73.aAbstractRSDrawing_874.anInt264 * 1802935495 + 1933284923 * Class6.anInt84;
 
       int var4;
       int var5;
@@ -150,21 +150,21 @@ public class Class14 {
                var11 = var4;
                var9 = 256 - var4;
                var4 = Class6.anIntArray74[var4];
-               var10 = RSFIT.aAbstractRSDrawing_874.anIntArray265[var3];
-               RSFIT.aAbstractRSDrawing_874.anIntArray265[var3++] = (var9 * (var10 & 16711935) + var11 * (var4 & 16711935) & -16711936) + ((var10 & '\uff00') * var9 + var11 * (var4 & '\uff00') & 16711680) >> 8;
+               var10 = Class73.aAbstractRSDrawing_874.anIntArray265[var3];
+               Class73.aAbstractRSDrawing_874.anIntArray265[var3++] = (var9 * (var10 & 16711935) + var11 * (var4 & 16711935) & -16711936) + ((var10 & '\uff00') * var9 + var11 * (var4 & '\uff00') & 16711680) >> 8;
             } else {
                ++var3;
             }
          }
 
-         var3 += var5 + 1154763343 * RSFIT.aAbstractRSDrawing_874.anInt264 - 128;
+         var3 += var5 + 1154763343 * Class73.aAbstractRSDrawing_874.anInt264 - 128;
       }
 
-      DrawingArea.setRasterSize(1933284923 * Class6.anInt84 + 765 - 128, 9, 1933284923 * Class6.anInt84 + 765, var1 + 7);
+      DrawingArea.method2901(1933284923 * Class6.anInt84 + 765 - 128, 9, 1933284923 * Class6.anInt84 + 765, var1 + 7);
       Class6.aClass116_Sub23_Sub19_Sub2_89.method3286(382 + 1933284923 * Class6.anInt84, 0);
       DrawingArea.method2888();
       var2 = 0;
-      var3 = 637 + 24 + 1802935495 * RSFIT.aAbstractRSDrawing_874.anInt264 + Class6.anInt84 * 1933284923;
+      var3 = 637 + 24 + 1802935495 * Class73.aAbstractRSDrawing_874.anInt264 + Class6.anInt84 * 1933284923;
 
       for(var6 = 1; var6 < var1 - 1; ++var6) {
          var8 = Class6.anIntArray97[var6] * (var1 - var6) / var1;
@@ -177,15 +177,15 @@ public class Class14 {
                var11 = var4;
                var9 = 256 - var4;
                var4 = Class6.anIntArray74[var4];
-               var10 = RSFIT.aAbstractRSDrawing_874.anIntArray265[var3];
-               RSFIT.aAbstractRSDrawing_874.anIntArray265[var3++] = (var11 * (var4 & '\uff00') + var9 * (var10 & '\uff00') & 16711680) + ((var4 & 16711935) * var11 + var9 * (var10 & 16711935) & -16711936) >> 8;
+               var10 = Class73.aAbstractRSDrawing_874.anIntArray265[var3];
+               Class73.aAbstractRSDrawing_874.anIntArray265[var3++] = (var11 * (var4 & '\uff00') + var9 * (var10 & '\uff00') & 16711680) + ((var4 & 16711935) * var11 + var9 * (var10 & 16711935) & -16711936) >> 8;
             } else {
                ++var3;
             }
          }
 
          var2 += 128 - var5;
-         var3 += RSFIT.aAbstractRSDrawing_874.anInt264 * 1154763343 - var5 - var8;
+         var3 += Class73.aAbstractRSDrawing_874.anInt264 * 1154763343 - var5 - var8;
       }
 
    }
@@ -220,8 +220,8 @@ public class Class14 {
             var7 = (var2 - var13) / 2;
             if(var4) {
                DrawingArea.method2888();
-               DrawingArea.setRasterAreaColor(var0, var1, var7, var3, -16777216);
-               DrawingArea.setRasterAreaColor(var0 + var2 - var7, var1, var7, var3, -16777216);
+               DrawingArea.method2927(var0, var1, var7, var3, -16777216);
+               DrawingArea.method2927(var0 + var2 - var7, var1, var7, var3, -16777216);
             }
 
             var0 += var7;
@@ -236,8 +236,8 @@ public class Class14 {
             var7 = (var3 - var13) / 2;
             if(var4) {
                DrawingArea.method2888();
-               DrawingArea.setRasterAreaColor(var0, var1, var2, var7, -16777216);
-               DrawingArea.setRasterAreaColor(var0, var3 + var1 - var7, var2, var7, -16777216);
+               DrawingArea.method2927(var0, var1, var2, var7, -16777216);
+               DrawingArea.method2927(var0, var3 + var1 - var7, var2, var7, -16777216);
             }
 
             var1 += var7;
@@ -257,7 +257,7 @@ public class Class14 {
             var15[var10] = var11 * var12 >> 16;
          }
 
-         Region.method428(var15, 500, 800, var2, var3);
+         GroundController.method428(var15, 500, 800, var2, var3);
       }
 
       client.anInt3197 = var0 * 878924253;

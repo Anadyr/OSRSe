@@ -6,9 +6,9 @@ public class Class91 {
    public static String aString1047 = "Loading sprites - ";
    public static String aString1048 = "Drop";
    public static String hidden = "Hidden";
-   public static String ok = "Ok";
-   public static String select = "Select";
-   public static String continueString = "Continue";
+   public static String aString1050 = "Ok";
+   public static String aString1051 = "Select";
+   public static String aString1052 = "Continue";
    public static String aString1053 = "";
    public static String aString1054 = "glow2:";
    public static String aString1055 = "purple:";
@@ -42,19 +42,19 @@ public class Class91 {
    public static String aString1083 = "You have only just left another world.";
    public static String aString1084 = "Your profile will be transferred in:";
    public static String aString1085 = "Please enter your password.";
-   public static String connTimedOut = "Connection timed out.";
+   public static String aString1086 = "Connection timed out.";
    public static String aString1087 = "Please remove ";
    public static String aString1088 = "Login server offline.";
    public static String aString1089 = "Players";
-   public static String ErrorConnecting = "Error connecting to server.";
+   public static String aString1090 = "Error connecting to server.";
    public static String aString1091 = "";
-   public static String NoResponse = "No response from server.";
+   public static String aString1092 = "No response from server.";
    public static String aString1093 = "log you in to this part of the website.";
    public static String aString1094 = "";
    public static String aString1095 = "No reply from loginserver.";
-   public static String InvalidDetails = "Invalid username/email or password.";
+   public static String aString1096 = "Invalid username/email or password.";
    public static String aString1097 = "";
-   public static String YourAccountDisabled = "Your account has been disabled.";
+   public static String aString1098 = "Your account has been disabled.";
    public static String aString1099 = "Please check your message-centre for details.";
    public static String aString1100 = "";
    public static String aString1101 = "Your account is already logged in.";
@@ -157,7 +157,7 @@ public class Class91 {
    public static String aString1198 = "Examine";
    public static String aString1199 = "Back";
    public static String aString1200 = "Choose Option";
-   public static String PleaseTryAgain = "Please try using a different world.";
+   public static String aString1201 = "Please try using a different world.";
    public static String aString1202 = "Walk here";
    public static String aString1203 = "level-";
    public static String aString1204 = "";
@@ -200,7 +200,7 @@ public class Class91 {
    public static String aString1241 = "glow1:";
    public static String aString1242 = "glow1:";
    public static String aString1243 = "glow2:";
-   public static String PleaseTryAnother = "Please try using a different world.";
+   public static String aString1244 = "Please try using a different world.";
    public static String aString1245 = "glow3:";
    public static String aString1246 = "flash1:";
    public static String aString1247 = "glow3:";
@@ -249,7 +249,7 @@ public class Class91 {
    public static String aString1290 = "If you created your account after November";
    public static String aString1291 = "2010, this will be the creation email address.";
    public static String aString1292 = "";
-   public static String aString1293 = "Page has opened in a newcache window.";
+   public static String aString1293 = "Page has opened in a new window.";
    public static String aString1294 = "(Please check your popup blocker.)";
    public static String aString1295 = "";
    public static String aString1296 = "Error connecting to server.";
@@ -266,7 +266,7 @@ public class Class91 {
    public static String aString1307 = "You must enter a valid login to proceed. For accounts";
    public static String aString1308 = "created after 24th November 2010, please use your";
    public static String aString1309 = "email address. Otherwise please use your username.";
-   public static String selectAWorld = "Select a world";
+   public static String aString1310 = "Select a world";
    public static String aString1311 = "Visit runescape.com and vote,";
    public static String aString1312 = "Malformed login packet.";
    public static String aString1313 = "";
@@ -288,7 +288,7 @@ public class Class91 {
    }
 
    static final void method1200(int var0) {
-      Region.aBool300 = false;
+      GroundController.aBool300 = false;
       client.aBool2937 = false;
    }
 

@@ -17,8 +17,8 @@ public class Class28 {
 
    Class28(byte[] var1, Class116_Sub5 var2) {
       this.aClass116_Sub5_394 = var2;
-      Packet var6 = new Packet(var1);
-      Packet var9 = new Packet(var1);
+      Buffer var6 = new Buffer(var1);
+      Buffer var9 = new Buffer(var1);
       var6.position = -368351178;
       int var7 = var6.readSignedByte(1708176767);
       int var8 = -1;

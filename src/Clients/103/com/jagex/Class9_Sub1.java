@@ -35,7 +35,7 @@ public class Class9_Sub1 extends Class9 {
       anInterface2_1667.method4(this.anInt1666, this.anIntArray138, (byte)66);
    }
 
-   Class9_Sub1(SignLink var1, int var2) {
+   Class9_Sub1(Class74 var1, int var2) {
       anInterface2_1667 = var1.method1049((byte)105);
       this.anInt1666 = var2;
    }

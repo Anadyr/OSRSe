@@ -6,11 +6,11 @@ public class Class116_Sub23_Sub14 extends NodeContainer {
    public int anInt2427;
    static Class123 aClass123_2428 = new Class123(64);
    public int anInt2429;
-   public static RSIndex aRSIndex_2431;
-   static Sprite[] headIconSkull;
+   public static Class99 aClass99_2431;
+   static Sprite[] aClass116_Sub23_Sub19_Sub2Array2433;
     public int anInt2436;
 
-   void method2674(Packet var1, int var2) {
+   void method2674(Buffer var1, int var2) {
       while(true) {
          int var3 = var1.readSignedByte(1708176767);
          if(var3 == 0) {
@@ -21,9 +21,9 @@ public class Class116_Sub23_Sub14 extends NodeContainer {
       }
    }
 
-   void method2678(Packet var1, int var2, int var3) {
+   void method2678(Buffer var1, int var2, int var3) {
       if(1 == var2) {
-         this.anInt2429 = var1.readUnsignedShort(45436517) * 115382813;
+         this.anInt2429 = var1.readShort(45436517) * 115382813;
          this.anInt2427 = var1.readSignedByte(1708176767) * 1344997181;
          this.anInt2436 = var1.readSignedByte(1708176767) * 2051968657;
       }

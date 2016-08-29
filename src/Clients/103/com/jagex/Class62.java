@@ -38,7 +38,7 @@ public class Class62 {
             int var11 = var9 * var3 + var2 * var8 >> 16;
             int var12 = var8 * var3 - var9 * var2 >> 16;
             if(var10 > 2500) {
-               var4.raster(662480183 * var5.anInt2516 / 2 + var11 - var4.anInt2725 / 2, -988977157 * var5.anInt2518 / 2 - var12 - var4.anInt2726 / 2, var0, var1, 662480183 * var5.anInt2516, var5.anInt2518 * -988977157, var5.anIntArray2513, var5.anIntArray2512);
+               var4.method3275(662480183 * var5.anInt2516 / 2 + var11 - var4.anInt2725 / 2, -988977157 * var5.anInt2518 / 2 - var12 - var4.anInt2726 / 2, var0, var1, 662480183 * var5.anInt2516, var5.anInt2518 * -988977157, var5.anIntArray2513, var5.anIntArray2512);
             } else {
                var4.drawSprite(var11 + 662480183 * var5.anInt2516 / 2 + var0 - var4.anInt2725 / 2, var5.anInt2518 * -988977157 / 2 + var1 - var12 - var4.anInt2726 / 2);
             }

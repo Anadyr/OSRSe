@@ -45,8 +45,8 @@ public class Class61 {
       int var2;
       if(-1 != -1074177723 * client.anInt3200) {
          var2 = client.anInt3200 * -1074177723;
-         if(Class116_Sub23_Sub2.loadInterface(var2, -1006212225)) {
-            GameType.openInterfaces(RSInterface.mainInterfaceArray[var2], -1, (byte) -3);
+         if(Class116_Sub23_Sub2.method2377(var2, -1006212225)) {
+            GameType.method1177(Class116_Sub15.aClass116_Sub15ArrayArray1956[var2], -1, (byte)-3);
          }
       }
 
@@ -105,12 +105,12 @@ public class Class61 {
          }
       }
 
-      var2 = -747958745 * GameInterface.anInt1819;
-      var8 = 1272643751 * Class79.ourPlayer.anInt2609;
-      int var14 = Class79.ourPlayer.anInt2579 * -1801433343;
+      var2 = -747958745 * Class116_Sub11.anInt1819;
+      var8 = 1272643751 * Class79.aPlayer_909.anInt2609;
+      int var14 = Class79.aPlayer_909.anInt2579 * -1801433343;
       int var9 = client.anInt3012 * -1163930299;
 
-      for(Class116_Sub8 var3 = (Class116_Sub8)Class116_Sub8.aClass117_1779.getFirst(); var3 != null; var3 = (Class116_Sub8)Class116_Sub8.aClass117_1779.getNext()) {
+      for(Class116_Sub8 var3 = (Class116_Sub8)Class116_Sub8.aClass117_1779.method1551(); var3 != null; var3 = (Class116_Sub8)Class116_Sub8.aClass117_1779.method1553()) {
          if(-1 != -1177973365 * var3.anInt1781 || var3.anIntArray1771 != null) {
             int var5 = 0;
             if(var8 > var3.anInt1767 * -159017461) {
@@ -136,12 +136,12 @@ public class Class61 {
                if(null == var3.aClass116_Sub4_Sub2_1775) {
                   if(var3.anInt1781 * -1177973365 >= 0) {
                      var10000 = (Sounds)null;
-                     Sounds var4 = Sounds.method256(Class116_Sub23_Sub13.aCacheIndex_2424, -1177973365 * var3.anInt1781, 0);
+                     Sounds var4 = Sounds.method256(Class116_Sub23_Sub13.aClass99_Sub1_2424, -1177973365 * var3.anInt1781, 0);
                      if(null != var4) {
                         Class116_Sub2_Sub1 var10 = var4.method261().method2687(Class70.aClass17_844);
                         Class116_Sub4_Sub2 var7 = Class116_Sub4_Sub2.method2800(var10, 100, var11);
                         var7.method2737(-1);
-                        RelationList.aClass116_Sub4_Sub1_673.method2706(var7);
+                        Class50.aClass116_Sub4_Sub1_673.method2706(var7);
                         var3.aClass116_Sub4_Sub2_1775 = var7;
                      }
                   }
@@ -153,30 +153,30 @@ public class Class61 {
                   if(null != var3.anIntArray1771 && (var3.anInt1772 -= var9 * -2049360189) * -2041650709 <= 0) {
                      int var12 = (int)(Math.random() * (double)var3.anIntArray1771.length);
                      var10000 = (Sounds)null;
-                     Sounds var15 = Sounds.method256(Class116_Sub23_Sub13.aCacheIndex_2424, var3.anIntArray1771[var12], 0);
+                     Sounds var15 = Sounds.method256(Class116_Sub23_Sub13.aClass99_Sub1_2424, var3.anIntArray1771[var12], 0);
                      if(null != var15) {
                         Class116_Sub2_Sub1 var13 = var15.method261().method2687(Class70.aClass17_844);
                         Class116_Sub4_Sub2 var1 = Class116_Sub4_Sub2.method2800(var13, 100, var11);
                         var1.method2737(0);
-                        RelationList.aClass116_Sub4_Sub1_673.method2706(var1);
+                        Class50.aClass116_Sub4_Sub1_673.method2706(var1);
                         var3.aClass116_Sub4_Sub2_1780 = var1;
                         var3.anInt1772 = (var3.anInt1776 * -1875457101 + (int)(Math.random() * (double)(var3.anInt1777 * -1201579529 - -1875457101 * var3.anInt1776))) * -2049360189;
                      }
                   }
                } else {
                   var3.aClass116_Sub4_Sub2_1780.method2738(var11);
-                  if(!var3.aClass116_Sub4_Sub2_1780.hasPrevious()) {
+                  if(!var3.aClass116_Sub4_Sub2_1780.hasNext()) {
                      var3.aClass116_Sub4_Sub2_1780 = null;
                   }
                }
             } else {
                if(null != var3.aClass116_Sub4_Sub2_1775) {
-                  RelationList.aClass116_Sub4_Sub1_673.method2707(var3.aClass116_Sub4_Sub2_1775);
+                  Class50.aClass116_Sub4_Sub1_673.method2707(var3.aClass116_Sub4_Sub2_1775);
                   var3.aClass116_Sub4_Sub2_1775 = null;
                }
 
                if(null != var3.aClass116_Sub4_Sub2_1780) {
-                  RelationList.aClass116_Sub4_Sub1_673.method2707(var3.aClass116_Sub4_Sub2_1780);
+                  Class50.aClass116_Sub4_Sub1_673.method2707(var3.aClass116_Sub4_Sub2_1780);
                   var3.aClass116_Sub4_Sub2_1780 = null;
                }
             }

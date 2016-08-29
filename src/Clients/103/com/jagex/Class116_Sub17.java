@@ -61,7 +61,7 @@ public class Class116_Sub17 extends Node {
       }
    }
 
-   public void method2306(Packet var1, int var2) {
+   public void method2306(Buffer var1, int var2) {
       var1.writeByte(6, 576235594);
       var1.writeByte(-411220879 * this.anInt2072, -992562519);
       var1.writeByte(this.aBool2073?1:0, 498870517);
@@ -95,11 +95,11 @@ public class Class116_Sub17 extends Node {
 
    public Class116_Sub17(boolean var1) {
       if(var1) {
-         if(Class116_Sub23_Sub16_Sub6.OS_LOWER_CASE.startsWith("win")) {
+         if(Class116_Sub23_Sub16_Sub6.aString2779.startsWith("win")) {
             this.anInt2072 = 1610480785;
-         } else if(Class116_Sub23_Sub16_Sub6.OS_LOWER_CASE.startsWith("mac")) {
+         } else if(Class116_Sub23_Sub16_Sub6.aString2779.startsWith("mac")) {
             this.anInt2072 = -1074005726;
-         } else if(Class116_Sub23_Sub16_Sub6.OS_LOWER_CASE.startsWith("linux")) {
+         } else if(Class116_Sub23_Sub16_Sub6.aString2779.startsWith("linux")) {
             this.anInt2072 = 536475059;
          } else {
             this.anInt2072 = 2146955844;

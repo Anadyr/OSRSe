@@ -2,7 +2,7 @@ package com.jagex;
 
 public class Class116_Sub3 extends Node {
 
-   static int bufferPos;
+   static int soundBufferPos;
    int anInt1686;
    int anInt1687;
    int anInt1688;
@@ -30,7 +30,7 @@ public class Class116_Sub3 extends Node {
    static float[] aFloatArray1710;
    static float[] aFloatArray1711;
    static float[] aFloatArray1712;
-   static byte[] buffer;
+   static byte[] soundBuffer;
    static int[] anIntArray1714;
    static int[] anIntArray1715;
    byte[][] aByteArrayArray1716;
@@ -38,10 +38,9 @@ public class Class116_Sub3 extends Node {
    int anInt1718;
 
    static int method1877() {
-       if(buffer.length <= bufferPos) return 0;
-      int var0 = buffer[bufferPos] >> anInt1693 & 1;
+      int var0 = soundBuffer[soundBufferPos] >> anInt1693 & 1;
       ++anInt1693;
-      bufferPos += anInt1693 >> 3;
+      soundBufferPos += anInt1693 >> 3;
       anInt1693 &= 7;
       return var0;
    }
@@ -164,29 +163,27 @@ public class Class116_Sub3 extends Node {
 
       int var2;
       int var3;
-
-       if(buffer.length <= bufferPos) return 0;
       for(var2 = 0; var0 >= 8 - anInt1693; var0 -= var3) {
          var3 = 8 - anInt1693;
          int nextSytemNoise = (1 << var3) - 1;
-         var1 += (buffer[bufferPos] >> anInt1693 & nextSytemNoise) << var2;
+         var1 += (soundBuffer[soundBufferPos] >> anInt1693 & nextSytemNoise) << var2;
          anInt1693 = 0;
-         ++bufferPos;
+         ++soundBufferPos;
          var2 += var3;
       }
-        if(buffer.length <= bufferPos) return 0;
+
       if(var0 > 0) {
          var3 = (1 << var0) - 1;
-         var1 += (buffer[bufferPos] >> anInt1693 & var3) << var2;
+         var1 += (soundBuffer[soundBufferPos] >> anInt1693 & var3) << var2;
          anInt1693 += var0;
       }
 
       return var1;
    }
 
-   static boolean method1882(RSIndex var0) {
+   static boolean method1882(Class99 var0) {
       if(!aBool1702) {
-         byte[] var1 = var0.getFiles(0, 0, -1530234715);
+         byte[] var1 = var0.method1394(0, 0, -1530234715);
          if(var1 == null) {
             return false;
          }
@@ -248,7 +245,7 @@ public class Class116_Sub3 extends Node {
    }
 
    void method1887(byte[] var1) {
-      Packet var2 = new Packet(var1);
+      Buffer var2 = new Buffer(var1);
       this.anInt1701 = var2.readInt(-833702041);
       this.anInt1687 = var2.readInt(-139471892);
       this.anInt1717 = var2.readInt(-1378692472);
@@ -278,17 +275,17 @@ public class Class116_Sub3 extends Node {
    }
 
    static void method1888(byte[] var0, int var1) {
-      buffer = var0;
-      bufferPos = var1;
+      soundBuffer = var0;
+      soundBufferPos = var1;
       anInt1693 = 0;
    }
 
-   static Class116_Sub3 method1889(RSIndex var0, int var1, int var2) {
+   static Class116_Sub3 method1889(Class99 var0, int var1, int var2) {
       if(!method1882(var0)) {
          var0.method1373(var1, var2, (byte)1);
          return null;
       } else {
-         byte[] var3 = var0.getFiles(var1, var2, -808646941);
+         byte[] var3 = var0.method1394(var1, var2, -808646941);
          return var3 == null?null:new Class116_Sub3(var3);
       }
    }
@@ -340,7 +337,7 @@ public class Class116_Sub3 extends Node {
       Class18 var26 = aClass18Array1699[anIntArray1694[var25]];
       int var27 = var26.anInt243;
       int var28 = var26.anIntArray242[var27];
-      boolean var29 = var28 < aClass19Array1697.length && !aClass19Array1697[var28].method297();
+      boolean var29 = !aClass19Array1697[var28].method297();
       boolean var50 = var29;
 
       for(var28 = 0; var28 < var26.anInt241; ++var28) {

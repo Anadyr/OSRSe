@@ -11,14 +11,14 @@ public final class Class94 {
       int var5 = var3 + 6;
       int var6 = client.aClass116_Sub23_Sub19_Sub4_Sub1_2989.method3457(var0, 250);
       int var7 = client.aClass116_Sub23_Sub19_Sub4_Sub1_2989.method3458(var0, 250) * 13;
-      DrawingArea.setRasterAreaColor(var4 - var3, var5 - var3, var3 + var6 + var3, var3 + var3 + var7, 0);
+      DrawingArea.method2927(var4 - var3, var5 - var3, var3 + var6 + var3, var3 + var3 + var7, 0);
       DrawingArea.method2897(var4 - var3, var5 - var3, var6 + var3 + var3, var3 + var3 + var7, 16777215);
       client.aClass116_Sub23_Sub19_Sub4_Sub1_2989.method3537(var0, var4, var5, var6, var7, 16777215, -1, 1, 1, 0);
       Class116_Sub23_Sub2.method2385(var4 - var3, var5 - var3, var3 + var3 + var6, var3 + var3 + var7, (short)10798);
       if(var1) {
          try {
             Graphics var8 = Tile.aCanvas1875.getGraphics();
-            RSFIT.aAbstractRSDrawing_874.method333(var8, 0, 0, -819332484);
+            Class73.aAbstractRSDrawing_874.method333(var8, 0, 0, -819332484);
          } catch (Exception var13) {
             Tile.aCanvas1875.repaint();
          }

@@ -69,29 +69,29 @@ public class Class12 {
       return var1 * 3.1415927F / 11025.0F;
    }
 
-   final void method215(Packet var1, MidiSeq var2) {
+   final void method215(Buffer var1, MidiSeq var2) {
       int var3 = var1.readSignedByte(1708176767);
       this.anIntArray202[0] = var3 >> 4;
       this.anIntArray202[1] = var3 & 15;
       if(var3 != 0) {
-         this.anIntArray196[0] = var1.readUnsignedShort(656652422);
-         this.anIntArray196[1] = var1.readUnsignedShort(1009093508);
+         this.anIntArray196[0] = var1.readShort(656652422);
+         this.anIntArray196[1] = var1.readShort(1009093508);
          int var6 = var1.readSignedByte(1708176767);
 
          int var4;
          int var5;
          for(var4 = 0; var4 < 2; ++var4) {
             for(var5 = 0; var5 < this.anIntArray202[var4]; ++var5) {
-               this.anIntArrayArrayArray193[var4][0][var5] = var1.readUnsignedShort(798475648);
-               this.anIntArrayArrayArray195[var4][0][var5] = var1.readUnsignedShort(277675887);
+               this.anIntArrayArrayArray193[var4][0][var5] = var1.readShort(798475648);
+               this.anIntArrayArrayArray195[var4][0][var5] = var1.readShort(277675887);
             }
          }
 
          for(var4 = 0; var4 < 2; ++var4) {
             for(var5 = 0; var5 < this.anIntArray202[var4]; ++var5) {
                if((var6 & 1 << var4 * 4 << var5) != 0) {
-                  this.anIntArrayArrayArray193[var4][1][var5] = var1.readUnsignedShort(358945024);
-                  this.anIntArrayArrayArray195[var4][1][var5] = var1.readUnsignedShort(290341204);
+                  this.anIntArrayArrayArray193[var4][1][var5] = var1.readShort(358945024);
+                  this.anIntArrayArrayArray195[var4][1][var5] = var1.readShort(290341204);
                } else {
                   this.anIntArrayArrayArray193[var4][1][var5] = this.anIntArrayArrayArray193[var4][0][var5];
                   this.anIntArrayArrayArray195[var4][1][var5] = this.anIntArrayArrayArray195[var4][0][var5];

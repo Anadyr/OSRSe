@@ -1,6 +1,6 @@
 package com.jagex;
 
 public class Class96 {
-   static RSIndex aRSIndex_1367;
+   static Class99 aClass99_1367;
 
 }

@@ -11,7 +11,7 @@ public class Class25 {
 
    static final boolean method531(byte[] var0, int var1, int var2, byte var3) {
       boolean var4 = true;
-      Packet var6 = new Packet(var0);
+      Buffer var6 = new Buffer(var0);
       int var8 = -1;
 
       while(true) {

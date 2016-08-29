@@ -9,7 +9,7 @@ public final class Player extends Entity {
    Class108 aClass108_2881;
    int anInt2882 = 1894915347;
    int anInt2883 = 262247627;
-   String[] rightClickOptionMask = new String[3];
+   String[] aStringArray2884 = new String[3];
    int anInt2885;
    int anInt2886;
    static int anInt2887;
@@ -25,7 +25,7 @@ public final class Player extends Entity {
    int anInt2897;
    int anInt2899;
    boolean aBool2900;
-   boolean moving;
+   boolean aBool2901;
    int anInt2902;
    SpotAnim aSpotAnim_2903;
    int anInt2904;
@@ -34,7 +34,7 @@ public final class Player extends Entity {
    int anInt2908;
 
 
-   final void doAppearance(Packet var1, int var2) {
+   final void method3549(Buffer var1, int var2) {
       var1.position = 0;
       int var3 = var1.readSignedByte(1708176767);
       this.anInt2882 = var1.readUnsignedByte(879481021) * -1894915347;
@@ -53,12 +53,12 @@ public final class Player extends Entity {
             var8 = var1.readSignedByte(1708176767);
             var7[var5] = var8 + (var6 << 8);
             if(0 == var5 && '\uffff' == var7[0]) {
-               var4 = var1.readUnsignedShort(139513604);
+               var4 = var1.readShort(139513604);
                break;
             }
 
             if(var7[var5] >= 512) {
-               int var9 = RelationList.method778(var7[var5] - 512, (byte) 70).anInt2398 * 1721605111;
+               int var9 = Class50.method778(var7[var5] - 512, (byte)70).anInt2398 * 1721605111;
                if(0 != var9) {
                   this.anInt2899 = -1052938061 * var9;
                }
@@ -77,49 +77,49 @@ public final class Player extends Entity {
          var10[var6] = var8;
       }
 
-      this.anInt2639 = var1.readUnsignedShort(-186314688) * -592731223;
+      this.anInt2639 = var1.readShort(-186314688) * -592731223;
       if('\uffff' == 370127001 * this.anInt2639) {
          this.anInt2639 = 592731223;
       }
 
-      this.anInt2584 = var1.readUnsignedShort(2101883387) * -176841799;
+      this.anInt2584 = var1.readShort(2101883387) * -176841799;
       if('\uffff' == this.anInt2584 * 711326345) {
          this.anInt2584 = 176841799;
       }
 
       this.anInt2585 = 2073877321 * this.anInt2584;
-      this.anInt2586 = var1.readUnsignedShort(1045091620) * -929243503;
+      this.anInt2586 = var1.readShort(1045091620) * -929243503;
       if(1481286257 * this.anInt2586 == '\uffff') {
          this.anInt2586 = 929243503;
       }
 
-      this.anInt2629 = var1.readUnsignedShort(60920739) * -951990375;
+      this.anInt2629 = var1.readShort(60920739) * -951990375;
       if('\uffff' == -826106711 * this.anInt2629) {
          this.anInt2629 = 951990375;
       }
 
-      this.anInt2580 = var1.readUnsignedShort(1922132346) * 505909337;
+      this.anInt2580 = var1.readShort(1922132346) * 505909337;
       if(this.anInt2580 * -897665047 == '\uffff') {
          this.anInt2580 = -505909337;
       }
 
-      this.anInt2615 = var1.readUnsignedShort(1704373309) * 1473487651;
+      this.anInt2615 = var1.readShort(1704373309) * 1473487651;
       if(this.anInt2615 * -1453546357 == '\uffff') {
          this.anInt2615 = -1473487651;
       }
 
-      this.anInt2590 = var1.readUnsignedShort(526093807) * 71707737;
+      this.anInt2590 = var1.readShort(526093807) * 71707737;
       if(this.anInt2590 * -108110871 == '\uffff') {
          this.anInt2590 = -71707737;
       }
 
       this.username = var1.readString(61376769);
-      if(Class79.ourPlayer == this) {
+      if(Class79.aPlayer_909 == this) {
          RuntimeException_Sub1.aString2849 = this.username;
       }
 
       this.anInt2908 = var1.readSignedByte(1708176767) * -811997547;
-      this.anInt2886 = var1.readUnsignedShort(1501916187) * -1535283903;
+      this.anInt2886 = var1.readShort(1501916187) * -1535283903;
       this.aBool2900 = var1.readSignedByte(1708176767) == 1;
       if(0 == client.anInt3020 * 1082541889 && client.playerRights * 1520983779 >= 2) {
          this.aBool2900 = false;
@@ -146,10 +146,10 @@ public final class Player extends Entity {
             this.anInt2627 = var4.modelHeight * -1831653581;
             SpotAnim var2;
             SpotAnim[] var5;
-            if(!this.aBool2896 && -1 != this.currentGraphic * 1631645159 && -1 != this.anInt2595 * -1255206495) {
-               var2 = Friend.method1835(this.currentGraphic * 1631645159, (byte) 1).method2344(-1255206495 * this.anInt2595, -1854347926);
+            if(!this.aBool2896 && -1 != this.anInt2614 * 1631645159 && -1 != this.anInt2595 * -1255206495) {
+               var2 = Friend.method1835(this.anInt2614 * 1631645159, (byte) 1).method2344(-1255206495 * this.anInt2595, -1854347926);
                if(var2 != null) {
-                  var2.method3385(0, -(1719935737 * this.currentGraphicDelay), 0);
+                  var2.method3385(0, -(1719935737 * this.anInt2589), 0);
                   var5 = new SpotAnim[]{var4, var2};
                   var4 = new SpotAnim(var5, 2);
                }
@@ -197,48 +197,48 @@ public final class Player extends Entity {
       }
    }
 
-   static void method3550(byte[] data, short var1) {
-      Packet packet = new Packet(data);
-      packet.position = (data.length - 2) * -184175589;
-      Class8.anInt130 = packet.readUnsignedShort(579200638) * 2080683417;
+   static void method3550(byte[] var0, short var1) {
+      Buffer var2 = new Buffer(var0);
+      var2.position = (var0.length - 2) * -184175589;
+      Class8.anInt130 = var2.readShort(579200638) * 2080683417;
       Class8.anIntArray124 = new int[Class8.anInt130 * 817614505];
       Class116_Sub23_Sub15.anIntArray2444 = new int[817614505 * Class8.anInt130];
       Class8.anIntArray125 = new int[817614505 * Class8.anInt130];
       Class8.anIntArray126 = new int[Class8.anInt130 * 817614505];
       Mob.aByteArrayArray2877 = new byte[817614505 * Class8.anInt130][];
-      packet.position = -184175589 * (data.length - 7 - Class8.anInt130 * -2049018552);
-      Class8.anInt122 = packet.readUnsignedShort(2049727675) * -1327133543;
-      Class8.anInt132 = packet.readUnsignedShort(1819338767) * -1754818609;
-      int var4 = (packet.readSignedByte(1708176767) & 255) + 1;
+      var2.position = -184175589 * (var0.length - 7 - Class8.anInt130 * -2049018552);
+      Class8.anInt122 = var2.readShort(2049727675) * -1327133543;
+      Class8.anInt132 = var2.readShort(1819338767) * -1754818609;
+      int var4 = (var2.readSignedByte(1708176767) & 255) + 1;
 
       int var3;
       for(var3 = 0; var3 < 817614505 * Class8.anInt130; ++var3) {
-         Class8.anIntArray124[var3] = packet.readUnsignedShort(381534893);
+         Class8.anIntArray124[var3] = var2.readShort(381534893);
       }
 
       for(var3 = 0; var3 < 817614505 * Class8.anInt130; ++var3) {
-         Class116_Sub23_Sub15.anIntArray2444[var3] = packet.readUnsignedShort(1215495351);
+         Class116_Sub23_Sub15.anIntArray2444[var3] = var2.readShort(1215495351);
       }
 
       for(var3 = 0; var3 < 817614505 * Class8.anInt130; ++var3) {
-         Class8.anIntArray125[var3] = packet.readUnsignedShort(758314513);
+         Class8.anIntArray125[var3] = var2.readShort(758314513);
       }
 
       for(var3 = 0; var3 < 817614505 * Class8.anInt130; ++var3) {
-         Class8.anIntArray126[var3] = packet.readUnsignedShort(404240465);
+         Class8.anIntArray126[var3] = var2.readShort(404240465);
       }
 
-      packet.position = (data.length - 7 - -2049018552 * Class8.anInt130 - (var4 - 1) * 3) * -184175589;
+      var2.position = (var0.length - 7 - -2049018552 * Class8.anInt130 - (var4 - 1) * 3) * -184175589;
       Class97.anIntArray1372 = new int[var4];
 
       for(var3 = 1; var3 < var4; ++var3) {
-         Class97.anIntArray1372[var3] = packet.readMedium((byte) 15);
+         Class97.anIntArray1372[var3] = var2.readMedium((byte) 15);
          if(0 == Class97.anIntArray1372[var3]) {
             Class97.anIntArray1372[var3] = 1;
          }
       }
 
-      packet.position = 0;
+      var2.position = 0;
 
       for(var3 = 0; var3 < 817614505 * Class8.anInt130; ++var3) {
          int var6 = Class8.anIntArray125[var3];
@@ -246,16 +246,16 @@ public final class Player extends Entity {
          int var10 = var9 * var6;
          byte[] var8 = new byte[var10];
          Mob.aByteArrayArray2877[var3] = var8;
-         int var7 = packet.readSignedByte(1708176767);
+         int var7 = var2.readSignedByte(1708176767);
          int var5;
          if(0 == var7) {
             for(var5 = 0; var5 < var10; ++var5) {
-               var8[var5] = packet.readUnsignedByte(933200154);
+               var8[var5] = var2.readUnsignedByte(933200154);
             }
          } else if(1 == var7) {
             for(var5 = 0; var5 < var6; ++var5) {
                for(int var11 = 0; var11 < var9; ++var11) {
-                  var8[var6 * var11 + var5] = packet.readUnsignedByte(-227978775);
+                  var8[var6 * var11 + var5] = var2.readUnsignedByte(-227978775);
                }
             }
          }
@@ -318,7 +318,7 @@ public final class Player extends Entity {
 
    Player() {
       for(int var1 = 0; var1 < 3; ++var1) {
-         this.rightClickOptionMask[var1] = "";
+         this.aStringArray2884[var1] = "";
       }
 
       this.anInt2908 = 0;
@@ -328,14 +328,14 @@ public final class Player extends Entity {
       this.aBool2896 = false;
       this.anInt2899 = 0;
       this.aBool2900 = false;
-      this.moving = false;
+      this.aBool2901 = false;
    }
 
    int method3561(int var1) {
-      return null != this.aClass108_2881 && -1 != this.aClass108_2881.anInt1466 * -84158433?Class116_Sub23_Sub15.getMobDefinition(this.aClass108_2881.anInt1466 * -84158433, -1541777826).tileSize * -691506967:1;
+      return null != this.aClass108_2881 && -1 != this.aClass108_2881.anInt1466 * -84158433?Class116_Sub23_Sub15.method2705(this.aClass108_2881.anInt1466 * -84158433, -1541777826).tileSize * -691506967:1;
    }
 
-   static void updateLocalPlayer(PacketBuilder buffer, int player, int var2) {
+   static void updateLocalPlayer(BitBuffer buffer, int player, int var2) {
       boolean maskUpdate = buffer.readBits(1, (byte) -1) == 1;
       if(maskUpdate) {
          Class7.anIntArray119[(Class7.anInt118 += -299545915) * 716284941 - 1] = player;
@@ -344,7 +344,7 @@ public final class Player extends Entity {
       Player playerInCycle = client.globalPlayers[player];
       if(0 == movement) {
          if(maskUpdate) {
-            playerInCycle.moving = false;
+            playerInCycle.aBool2901 = false;
          } else if(client.playerIndex * 1467227105 == player) {
             throw new RuntimeException();
          } else {
@@ -393,14 +393,14 @@ public final class Player extends Entity {
             }
              if(player == 1467227105 * client.playerIndex && (playerInCycle.anInt2609 * 1272643751 < 1536 || playerInCycle.anInt2579 * -1801433343 < 1536 || playerInCycle.anInt2609 * 1272643751 >= 11776 || playerInCycle.anInt2579 * -1801433343 >= 11776)) {
                playerInCycle.method3551(xStep, yStep, -719844896);
-               playerInCycle.moving = false;
+               playerInCycle.aBool2901 = false;
             } else if(maskUpdate) {
-               playerInCycle.moving = true;
+               playerInCycle.aBool2901 = true;
                playerInCycle.anInt2904 = -37570689 * xStep;
                playerInCycle.anInt2905 = yStep * 1026931509;
             } else {
-               playerInCycle.moving = false;
-               playerInCycle.method3553(xStep, yStep, Class7.movementMode[player], 402350089);
+               playerInCycle.aBool2901 = false;
+               playerInCycle.method3553(xStep, yStep, Class7.aByteArray105[player], 402350089);
             }
 
          } else if(2 == movement) {
@@ -456,14 +456,14 @@ public final class Player extends Entity {
             }
             if(client.playerIndex * 1467227105 == player && (1272643751 * playerInCycle.anInt2609 < 1536 || -1801433343 * playerInCycle.anInt2579 < 1536 || playerInCycle.anInt2609 * 1272643751 >= 11776 || playerInCycle.anInt2579 * -1801433343 >= 11776)) {
                playerInCycle.method3551(xStep, yStep, 1202188093);
-               playerInCycle.moving = false;
+               playerInCycle.aBool2901 = false;
             } else if(maskUpdate) {
-               playerInCycle.moving = true;
+               playerInCycle.aBool2901 = true;
                playerInCycle.anInt2904 = xStep * -37570689;
                playerInCycle.anInt2905 = yStep * 1026931509;
             } else {
-               playerInCycle.moving = false;
-               playerInCycle.method3553(xStep, yStep, Class7.movementMode[player], 4980578);
+               playerInCycle.aBool2901 = false;
+               playerInCycle.method3553(xStep, yStep, Class7.aByteArray105[player], 4980578);
             }
 
          } else {
@@ -489,18 +489,18 @@ public final class Player extends Entity {
                var9 = playerInCycle.yMovementSteps[0] + var11;
                if(player == client.playerIndex * 1467227105 && (playerInCycle.anInt2609 * 1272643751 < 1536 || playerInCycle.anInt2579 * -1801433343 < 1536 || 1272643751 * playerInCycle.anInt2609 >= 11776 || -1801433343 * playerInCycle.anInt2579 >= 11776)) {
                   playerInCycle.method3551(var10, var9, 1308806232);
-                  playerInCycle.moving = false;
+                  playerInCycle.aBool2901 = false;
                } else if(maskUpdate) {
-                  playerInCycle.moving = true;
+                  playerInCycle.aBool2901 = true;
                   playerInCycle.anInt2904 = -37570689 * var10;
                   playerInCycle.anInt2905 = var9 * 1026931509;
                } else {
-                  playerInCycle.moving = false;
-                  playerInCycle.method3553(var10, var9, Class7.movementMode[player], -1113939609);
+                  playerInCycle.aBool2901 = false;
+                  playerInCycle.method3553(var10, var9, Class7.aByteArray105[player], -1113939609);
                }
                playerInCycle.anInt2906 = (byte)(-1522270499 * playerInCycle.anInt2906 + yStep & 3) * -1668953739;
                if(player == 1467227105 * client.playerIndex) {
-                  GameInterface.anInt1819 = playerInCycle.anInt2906 * -1941196453;
+                  Class116_Sub11.anInt1819 = playerInCycle.anInt2906 * -1941196453;
                }
 
             } else {
@@ -512,19 +512,19 @@ public final class Player extends Entity {
                var9 = (var11 + Class33.anInt456 * 714823515 + playerInCycle.yMovementSteps[0] & 16383) - 714823515 * Class33.anInt456;
                if(1467227105 * client.playerIndex == player && (1272643751 * playerInCycle.anInt2609 < 1536 || -1801433343 * playerInCycle.anInt2579 < 1536 || 1272643751 * playerInCycle.anInt2609 >= 11776 || playerInCycle.anInt2579 * -1801433343 >= 11776)) {
                   playerInCycle.method3551(var10, var9, 898747744);
-                  playerInCycle.moving = false;
+                  playerInCycle.aBool2901 = false;
                } else if(maskUpdate) {
-                  playerInCycle.moving = true;
+                  playerInCycle.aBool2901 = true;
                   playerInCycle.anInt2904 = var10 * -37570689;
                   playerInCycle.anInt2905 = var9 * 1026931509;
                } else {
-                  playerInCycle.moving = false;
-                  playerInCycle.method3553(var10, var9, Class7.movementMode[player], -1157705353);
+                  playerInCycle.aBool2901 = false;
+                  playerInCycle.method3553(var10, var9, Class7.aByteArray105[player], -1157705353);
                }
 
                playerInCycle.anInt2906 = -1668953739 * (byte)(yStep + -1522270499 * playerInCycle.anInt2906 & 3);
                if(client.playerIndex * 1467227105 == player) {
-                  GameInterface.anInt1819 = -1941196453 * playerInCycle.anInt2906;
+                  Class116_Sub11.anInt1819 = -1941196453 * playerInCycle.anInt2906;
                }
 
             }
@@ -532,24 +532,24 @@ public final class Player extends Entity {
       }
    }
 
-   static void method3563(RSInterface var0, int var1) {
-      RSInterface var4 = -1652479707 * var0.parent == -1?null:Class107.getInterface(var0.parent * -1652479707, 314639891);
+   static void method3563(Class116_Sub15 var0, int var1) {
+      Class116_Sub15 var4 = -1652479707 * var0.anInt1944 == -1?null:Class107.method1466(var0.anInt1944 * -1652479707, 314639891);
       int var2;
       int var3;
       if(var4 == null) {
          var2 = Class42.clientWidth * -452716157;
          var3 = 674167779 * Class116_Sub16.clientHeight;
       } else {
-         var2 = 1645211541 * var4.wdth;
-         var3 = 1227800423 * var4.heght;
+         var2 = 1645211541 * var4.anInt1940;
+         var3 = 1227800423 * var4.anInt1974;
       }
 
       Class33.method638(var0, var2, var3, false, 1565079094);
       Class116_Sub23_Sub4.method2469(var0, var2, var3, 1878257671);
    }
 
-   static String method3565(RSInterface var0, int var1, int var2) {
-      return !Class116_Sub17.method2314(Class35.method645(var0, (byte)0), var1, 104857025) && var0.anObjectArray2023 == null?null:(null != var0.niActions && var0.niActions.length > var1 && null != var0.niActions[var1] && var0.niActions[var1].trim().length() != 0?var0.niActions[var1]:null);
+   static String method3565(Class116_Sub15 var0, int var1, int var2) {
+      return !Class116_Sub17.method2314(Class35.method645(var0, (byte)0), var1, 104857025) && var0.anObjectArray2023 == null?null:(null != var0.aStringArray1997 && var0.aStringArray1997.length > var1 && null != var0.aStringArray1997[var1] && var0.aStringArray1997[var1].trim().length() != 0?var0.aStringArray1997[var1]:null);
    }
 
    static boolean method3566(String var0, int var1, String var2, byte var3) {
