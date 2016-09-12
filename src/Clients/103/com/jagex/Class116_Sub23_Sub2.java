@@ -6,133 +6,16 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
 
    public static int anInt2175;
    static Class123 aClass123_2177 = new Class123(64);
+	static Class116_Sub17 aClass116_Sub17_2186;
+	static Class99 aClass99_2187;
    public int anInt2178 = 188525871;
+	public boolean aBool2185 = false;
    int[] anIntArray2179;
    short[] aShortArray2180;
    int[] anIntArray2181 = new int[]{-1, -1, -1, -1, -1};
    short[] aShortArray2182;
    short[] aShortArray2183;
    short[] aShortArray2184;
-   public boolean aBool2185 = false;
-   static Class116_Sub17 aClass116_Sub17_2186;
-   static Class99 aClass99_2187;
-
-   public Model method2358(byte var1) {
-      if(null == this.anIntArray2179) {
-         return null;
-      } else {
-         Model[] var3 = new Model[this.anIntArray2179.length];
-
-         for(int var4 = 0; var4 < this.anIntArray2179.length; ++var4) {
-            var3[var4] = Model.method3114(client.aClass99_1618, this.anIntArray2179[var4], 0);
-         }
-
-         Model var5;
-         if(var3.length == 1) {
-            var5 = var3[0];
-         } else {
-            var5 = new Model(var3, var3.length);
-         }
-
-         int var2;
-         if(this.aShortArray2180 != null) {
-            for(var2 = 0; var2 < this.aShortArray2180.length; ++var2) {
-               var5.method3125(this.aShortArray2180[var2], this.aShortArray2184[var2]);
-            }
-         }
-
-         if(this.aShortArray2182 != null) {
-            for(var2 = 0; var2 < this.aShortArray2182.length; ++var2) {
-               var5.method3126(this.aShortArray2182[var2], this.aShortArray2183[var2]);
-            }
-         }
-
-         return var5;
-      }
-   }
-
-   void method2359(Buffer var1, int var2, byte var3) {
-      if(var2 == 1) {
-         this.anInt2178 = var1.readSignedByte(1708176767) * -188525871;
-      } else {
-         int var4;
-         int var5;
-         if(var2 == 2) {
-            var4 = var1.readSignedByte(1708176767);
-            this.anIntArray2179 = new int[var4];
-
-            for(var5 = 0; var5 < var4; ++var5) {
-               this.anIntArray2179[var5] = var1.readShort(2110343470);
-            }
-         } else if(3 == var2) {
-            this.aBool2185 = true;
-         } else if(var2 == 40) {
-            var4 = var1.readSignedByte(1708176767);
-            this.aShortArray2180 = new short[var4];
-            this.aShortArray2184 = new short[var4];
-
-            for(var5 = 0; var5 < var4; ++var5) {
-               this.aShortArray2180[var5] = (short)var1.readShort(-259159103);
-               this.aShortArray2184[var5] = (short)var1.readShort(1243227009);
-            }
-         } else if(41 == var2) {
-            var4 = var1.readSignedByte(1708176767);
-            this.aShortArray2182 = new short[var4];
-            this.aShortArray2183 = new short[var4];
-
-            for(var5 = 0; var5 < var4; ++var5) {
-               this.aShortArray2182[var5] = (short)var1.readShort(1971325418);
-               this.aShortArray2183[var5] = (short)var1.readShort(1072310901);
-            }
-         } else if(var2 >= 60 && var2 < 70) {
-            this.anIntArray2181[var2 - 60] = var1.readShort(1068775301);
-         }
-      }
-
-   }
-
-   public boolean method2360(int var1) {
-      if(this.anIntArray2179 == null) {
-         return true;
-      } else {
-         boolean var2 = true;
-
-         for(int var3 = 0; var3 < this.anIntArray2179.length; ++var3) {
-            if(!client.aClass99_1618.method1373(this.anIntArray2179[var3], 0, (byte)1)) {
-               var2 = false;
-            }
-         }
-
-         return var2;
-      }
-   }
-
-   public Model method2363(int var1) {
-      Model[] var2 = new Model[5];
-      int var5 = 0;
-
-      for(int var4 = 0; var4 < 5; ++var4) {
-         if(-1 != this.anIntArray2181[var4]) {
-            var2[var5++] = Model.method3114(client.aClass99_1618, this.anIntArray2181[var4], 0);
-         }
-      }
-
-      Model var6 = new Model(var2, var5);
-      int var3;
-      if(this.aShortArray2180 != null) {
-         for(var3 = 0; var3 < this.aShortArray2180.length; ++var3) {
-            var6.method3125(this.aShortArray2180[var3], this.aShortArray2184[var3]);
-         }
-      }
-
-      if(this.aShortArray2182 != null) {
-         for(var3 = 0; var3 < this.aShortArray2182.length; ++var3) {
-            var6.method3126(this.aShortArray2182[var3], this.aShortArray2183[var3]);
-         }
-      }
-
-      return var6;
-   }
 
    static final void decodeNpcAdditions(int var0) {
       for(int var1 = 0; var1 < -143667549 * client.npcFlagCount; ++var1) {
@@ -157,11 +40,11 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
          if((var2 & 1) != 0) {
             var6 = client.bitBuffer.readLEShortA(-2071246787);
             var5 = client.bitBuffer.readShortA(-338860511);
-            var7 = var4.anInt2609 * 1272643751 - (var6 - 1426698711 * Class116_Sub17.anInt2105 - Class116_Sub17.anInt2105 * 1426698711) * 64;
-            int var8 = var4.anInt2579 * -1801433343 - (var5 - 714823515 * Class33.anInt456 - Class33.anInt456 * 714823515) * 64;
-            if(0 != var7 || 0 != var8) {
-               var4.anInt2605 = ((int)(Math.atan2((double)var7, (double)var8) * 325.949D) & 2047) * -316267887;
-            }
+	         var7 = var4.anInt2609 * 1272643751 - (var6 - 1426698711 * Class116_Sub17.clickX - Class116_Sub17.clickX * 1426698711) * 64;
+	         int var8 = var4.anInt2579 * -1801433343 - (var5 - 714823515 * Class33.clickY - Class33.clickY * 714823515) * 64;
+	         if(0 != var7 || 0 != var8) {
+	            var4.faceDirection = ((int) (Math.atan2((double) var7, (double) var8) * 325.949D) & 2047) * -316267887;
+	         }
          }
 
          if((var2 & 64) != 0) {
@@ -241,17 +124,6 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
          }
       }
 
-   }
-
-   void method2375(Buffer var1, int var2) {
-      while(true) {
-         int var3 = var1.readSignedByte(1708176767);
-         if(var3 == 0) {
-            return;
-         }
-
-         this.method2359(var1, var3, (byte)20);
-      }
    }
 
    public static boolean method2377(int var0, int var1) {
@@ -335,18 +207,6 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
          }
       }
 
-   }
-
-   public boolean method2387(int var1) {
-      boolean var2 = true;
-
-      for(int var3 = 0; var3 < 5; ++var3) {
-         if(-1 != this.anIntArray2181[var3] && !client.aClass99_1618.method1373(this.anIntArray2181[var3], 0, (byte)1)) {
-            var2 = false;
-         }
-      }
-
-      return var2;
    }
 
    public static int method2388(int var0, int var1, int var2, byte var3) {
@@ -477,5 +337,145 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
          client.aBool3088 = false;
          Class79.method1097(var1, -4213207);
       }
+   }
+
+	public Model method2358(byte var1) {
+		if (null == this.anIntArray2179) {
+			return null;
+		} else {
+			Model[] var3 = new Model[this.anIntArray2179.length];
+
+			for (int var4 = 0; var4 < this.anIntArray2179.length; ++var4) {
+				var3[var4] = Model.method3114(client.aClass99_1618, this.anIntArray2179[var4], 0);
+			}
+
+			Model var5;
+			if (var3.length == 1) {
+				var5 = var3[0];
+			} else {
+				var5 = new Model(var3, var3.length);
+			}
+
+			int var2;
+			if (this.aShortArray2180 != null) {
+				for (var2 = 0; var2 < this.aShortArray2180.length; ++var2) {
+					var5.method3125(this.aShortArray2180[var2], this.aShortArray2184[var2]);
+				}
+			}
+
+			if (this.aShortArray2182 != null) {
+				for (var2 = 0; var2 < this.aShortArray2182.length; ++var2) {
+					var5.method3126(this.aShortArray2182[var2], this.aShortArray2183[var2]);
+				}
+			}
+
+			return var5;
+		}
+	}
+
+	void method2359(Buffer var1, int var2, byte var3) {
+		if (var2 == 1) {
+			this.anInt2178 = var1.readSignedByte(1708176767) * -188525871;
+		} else {
+			int var4;
+			int var5;
+			if (var2 == 2) {
+				var4 = var1.readSignedByte(1708176767);
+				this.anIntArray2179 = new int[var4];
+
+				for (var5 = 0; var5 < var4; ++var5) {
+					this.anIntArray2179[var5] = var1.readShort(2110343470);
+				}
+			} else if (3 == var2) {
+				this.aBool2185 = true;
+			} else if (var2 == 40) {
+				var4 = var1.readSignedByte(1708176767);
+				this.aShortArray2180 = new short[var4];
+				this.aShortArray2184 = new short[var4];
+
+				for (var5 = 0; var5 < var4; ++var5) {
+					this.aShortArray2180[var5] = (short) var1.readShort(-259159103);
+					this.aShortArray2184[var5] = (short) var1.readShort(1243227009);
+				}
+			} else if (41 == var2) {
+				var4 = var1.readSignedByte(1708176767);
+				this.aShortArray2182 = new short[var4];
+				this.aShortArray2183 = new short[var4];
+
+				for (var5 = 0; var5 < var4; ++var5) {
+					this.aShortArray2182[var5] = (short) var1.readShort(1971325418);
+					this.aShortArray2183[var5] = (short) var1.readShort(1072310901);
+				}
+			} else if (var2 >= 60 && var2 < 70) {
+				this.anIntArray2181[var2 - 60] = var1.readShort(1068775301);
+			}
+		}
+
+	}
+
+	public boolean method2360(int var1) {
+		if (this.anIntArray2179 == null) {
+			return true;
+		} else {
+			boolean var2 = true;
+
+			for (int var3 = 0; var3 < this.anIntArray2179.length; ++var3) {
+				if (!client.aClass99_1618.method1373(this.anIntArray2179[var3], 0, (byte) 1)) {
+					var2 = false;
+				}
+			}
+
+			return var2;
+		}
+	}
+
+	public Model method2363(int var1) {
+		Model[] var2 = new Model[5];
+		int var5 = 0;
+
+		for (int var4 = 0; var4 < 5; ++var4) {
+			if (-1 != this.anIntArray2181[var4]) {
+				var2[var5++] = Model.method3114(client.aClass99_1618, this.anIntArray2181[var4], 0);
+			}
+		}
+
+		Model var6 = new Model(var2, var5);
+		int var3;
+		if (this.aShortArray2180 != null) {
+			for (var3 = 0; var3 < this.aShortArray2180.length; ++var3) {
+				var6.method3125(this.aShortArray2180[var3], this.aShortArray2184[var3]);
+			}
+		}
+
+		if (this.aShortArray2182 != null) {
+			for (var3 = 0; var3 < this.aShortArray2182.length; ++var3) {
+				var6.method3126(this.aShortArray2182[var3], this.aShortArray2183[var3]);
+			}
+		}
+
+		return var6;
+	}
+
+	void method2375(Buffer var1, int var2) {
+		while (true) {
+			int var3 = var1.readSignedByte(1708176767);
+			if (var3 == 0) {
+				return;
+			}
+
+			this.method2359(var1, var3, (byte) 20);
+		}
+	}
+
+	public boolean method2387(int var1) {
+		boolean var2 = true;
+
+		for (int var3 = 0; var3 < 5; ++var3) {
+			if (-1 != this.anIntArray2181[var3] && !client.aClass99_1618.method1373(this.anIntArray2181[var3], 0, (byte) 1)) {
+				var2 = false;
+			}
+		}
+
+		return var2;
    }
 }

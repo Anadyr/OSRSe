@@ -1,17 +1,23 @@
 package com.jagex;
-import java.awt.Desktop;
+
+import java.awt.*;
 import java.awt.Desktop.Action;
 import java.net.URI;
 
 public class Friend extends ListEntry {
 
-   String username;
    static Sprite[] aClass116_Sub23_Sub19_Sub2Array1660;
-   short clanRank;
-   int anInt1663 = (int)(Class116_Sub5.method1929(-374874055) / 1000L) * 1225451051;
    static Class99 aClass99_1664;
    static Class72 aClass72_1665;
+   String username;
+   short clanRank;
+   int anInt1663 = (int) (Class116_Sub5.method1929(-374874055) / 1000L) * 1225451051;
 
+
+   Friend(String name, int rank) {
+      this.username = name;
+      this.clanRank = (short) rank;
+   }
 
    public static void method1834(Class99 var0, Class99 var1, boolean var2, int var3) {
       ObjectDefinition.aClass99_2189 = var0;
@@ -44,19 +50,16 @@ public class Friend extends ListEntry {
             try {
                Thread.sleep(var2);
             } catch (InterruptedException var8) {
-               ;
             }
 
             try {
                Thread.sleep(1L);
             } catch (InterruptedException var7) {
-               ;
             }
          } else {
             try {
                Thread.sleep(var0);
             } catch (InterruptedException var6) {
-               ;
             }
          }
 
@@ -215,7 +218,6 @@ public class Friend extends ListEntry {
                Desktop.getDesktop().browse(new URI(var0));
                return;
             } catch (Exception var6) {
-               ;
             }
          }
 
@@ -238,11 +240,6 @@ public class Friend extends ListEntry {
 
    static void method1840(Class116_Sub6 var0, int var1) {
       Class63.method934(var0, 200000, 1405115201);
-   }
-
-   Friend(String name, int rank) {
-      this.username = name;
-      this.clanRank = (short)rank;
    }
 
    static final void method1841(Class116_Sub15[] var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8) {
@@ -340,8 +337,8 @@ public class Friend extends ListEntry {
                               client.rsaBuffer.startPacket(239, (byte) 51);
                               client.rsaBuffer.writeByte(18, 402383460);
                               client.rsaBuffer.writeByteC(KeyFocusListener.keysHeldDown[82] ? (KeyFocusListener.keysHeldDown[81] ? 2 : 1) : 0, 113168318);
-                              client.rsaBuffer.writeLEShortA(Class116_Sub17.anInt2105 * 1426698711 + var54, 1447178959);
-                              client.rsaBuffer.writeLEShort(Class33.anInt456 * 714823515 + var19, 1565527644);
+                              client.rsaBuffer.writeLEShortA(Class116_Sub17.clickX * 1426698711 + var54, 1447178959);
+                              client.rsaBuffer.writeLEShort(Class33.clickY * 714823515 + var19, 1565527644);
                               client.rsaBuffer.writeByte(var12, 53190968);
                               client.rsaBuffer.writeByte(var47, 229708442);
                               client.rsaBuffer.writeShort(-1916997753 * client.anInt2929, -1656763529);
@@ -633,21 +630,14 @@ public class Friend extends ListEntry {
                         }
 
                         boolean var44;
-                        if(-453286219 * Class85.anInt991 >= var24 && Class85.anInt992 * 103771565 >= var26 && Class85.anInt991 * -453286219 < var17 && 103771565 * Class85.anInt992 < var18) {
-                           var44 = true;
-                        } else {
-                           var44 = false;
-                        }
+                        var44 = -453286219 * Class85.anInt991 >= var24 && Class85.anInt992 * 103771565 >= var26 && Class85.anInt991 * -453286219 < var17 && 103771565 * Class85.anInt992 < var18;
 
                         boolean var41 = false;
                         if((-562612321 * Class85.anInt994 == 1 || !PlayerAlias.aBool1756 && 4 == Class85.anInt994 * -562612321) && var44) {
                            var41 = true;
                         }
 
-                        var48 = false;
-                        if((823601801 * Class85.anInt997 == 1 || !PlayerAlias.aBool1756 && 4 == 823601801 * Class85.anInt997) && -2040065729 * Class85.anInt998 >= var24 && Class85.anInt999 * 2090526775 >= var26 && Class85.anInt998 * -2040065729 < var17 && Class85.anInt999 * 2090526775 < var18) {
-                           var48 = true;
-                        }
+                        var48 = (823601801 * Class85.anInt997 == 1 || !PlayerAlias.aBool1756 && 4 == 823601801 * Class85.anInt997) && -2040065729 * Class85.anInt998 >= var24 && Class85.anInt999 * 2090526775 >= var26 && Class85.anInt998 * -2040065729 < var17 && Class85.anInt999 * 2090526775 < var18;
 
                         if(var48) {
                            Class79.method1098(var14, Class85.anInt998 * -2040065729 - var21, Class85.anInt999 * 2090526775 - var16, (short)-7416);

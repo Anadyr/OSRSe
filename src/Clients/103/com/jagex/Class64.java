@@ -5,21 +5,20 @@ import java.util.TimeZone;
 
 public class Class64 {
 
-   static Calendar aCalendar809;
    public static final int anInt810 = 144;
+	static final int anInt813 = 41;
+	static Calendar aCalendar809;
    static String[] aStringArray811 = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
    static String[][] aStringArrayArray812 = new String[][]{{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"}, {"Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"}};
-   static final int anInt813 = 41;
-
-
-   Class64() throws Throwable {
-      throw new Error();
-   }
 
    static {
       Calendar.getInstance(TimeZone.getTimeZone("Europe/London"));
       aCalendar809 = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
    }
+
+	Class64() throws Throwable {
+		throw new Error();
+	}
 
    public static String method936(long var0) {
       aCalendar809.setTime(new Date(var0));
@@ -470,8 +469,8 @@ public class Class64 {
                         }
 
                         if(314519437 * client.anInt3021 == 2) {
-                           Class2.method39(client.anInt3070 * -1809686571 + (-1261526983 * client.anInt2954 - 1426698711 * Class116_Sub17.anInt2105 << 7), (client.anInt2950 * -1901147055 - Class33.anInt456 * 714823515 << 7) + -1460280361 * client.anInt2958, 1818880718 * client.anInt2968, (byte)-10);
-                           if(-94432357 * client.anInt3041 > -1 && client.anInt2943 * -1040073859 % 20 < 10) {
+	                        Class2.method39(client.anInt3070 * -1809686571 + (-1261526983 * client.anInt2954 - 1426698711 * Class116_Sub17.clickX << 7), (client.anInt2950 * -1901147055 - Class33.clickY * 714823515 << 7) + -1460280361 * client.anInt2958, 1818880718 * client.anInt2968, (byte) -10);
+	                        if(-94432357 * client.anInt3041 > -1 && client.anInt2943 * -1040073859 % 20 < 10) {
                               Class47.aClass116_Sub23_Sub19_Sub2Array646[0].drawSprite(-94432357 * client.anInt3041 + var10 - 12, -770682383 * client.anInt3042 + var17 - 28);
                            }
                         }
@@ -737,8 +736,8 @@ public class Class64 {
                                  }
 
                                  if(var16 == client.aClass116_Sub15_3097) {
-                                    Class91 var10000 = (Class91)null;
-                                    var58 = Class91.aString1149;
+	                                 Class91 var10000 = null;
+	                                 var58 = Class91.aString1149;
                                     var17 = var16.anInt1950 * 1384750979;
                                  }
 
@@ -829,13 +828,13 @@ public class Class64 {
                                     }
                                  } else if(var16.anInt1975 * -768837131 == 5) {
                                     if(0 == 686060225 * var16.anInt1967) {
-                                       var53 = client.aClass108_3103.method1474((Class116_Sub23_Sub4)null, -1, (Class116_Sub23_Sub4)null, -1, -1054926160);
+	                                    var53 = client.aClass108_3103.method1474(null, -1, null, -1, -1054926160);
                                     } else {
                                        var53 = Class79.aPlayer_909.getRotatedModel((byte) 13);
                                     }
                                  } else if(-1 == var17) {
-                                    var53 = var16.method2256((Class116_Sub23_Sub4)null, -1, var50, Class79.aPlayer_909.aClass108_2881, -131892088);
-                                    if(null == var53 && Class116_Sub15.aBool1923) {
+	                                 var53 = var16.method2256(null, -1, var50, Class79.aPlayer_909.aClass108_2881, -131892088);
+	                                 if(null == var53 && Class116_Sub15.aBool1923) {
                                        Class79.method1097(var16, 1847164270);
                                     }
                                  } else {

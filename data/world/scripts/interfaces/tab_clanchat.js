@@ -14,7 +14,17 @@ function handlecc(player, interfaceId, button, idx, idx2) {
             player.getProtocol().sendString(590, 35, gc.getKickReq().toString() + "+");
             player.getProtocol().sendInterface(false, 590)
         }
-    } else
+    } else if (interfaceId == 590) {
+        if (button == 29) {
+            //change cc name
+        } else if (button == 31) {
+            //change cc join rank
+        } else if (button == 33) {
+            //change cc talk rank
+        }
+        //35 change kick packet now
+        //17 close
+    }
         player.sendMessage("" + interfaceId + ", " + button)
 
 }

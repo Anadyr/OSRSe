@@ -1,13 +1,10 @@
 package com.jagex;
 
-import java.awt.Canvas;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.datatransfer.ClipboardOwner;
+import com.applet.Launcher;
+import netscape.javascript.JSObject;
+
+import java.awt.*;
 import java.awt.datatransfer.StringSelection;
-import java.awt.image.ImageObserver;
 import java.io.IOException;
 import java.lang.management.GarbageCollectorMXBean;
 import java.lang.management.ManagementFactory;
@@ -15,11 +12,11 @@ import java.net.Socket;
 import java.util.Arrays;
 import java.util.Iterator;
 
-import com.applet.Launcher;
-import netscape.javascript.JSObject;
-
 public final class client extends Applet_Sub1 {
 
+	static final int anInt2961 = 16;
+	public static Class52 aClass52_1621;
+	public static NodeList aClass119_1617 = new NodeList();
 	static int anInt2929 = 0;
 	static client aclient2930;
 	static boolean aBool2931 = false;
@@ -52,7 +49,6 @@ public final class client extends Applet_Sub1 {
 	static int anInt2958 = 0;
 	static int[] anIntArray2959 = new int[] { 768, 1024, 1280, 512, 1536, 256, 0, 1792 };
 	static int anInt2960 = 550236941;
-	static final int anInt2961 = 16;
 	static int anInt2962 = 0;
 	static int anInt2963 = 0;
 	static int[] anIntArray2964 = new int[50];
@@ -307,6 +303,327 @@ public final class client extends Applet_Sub1 {
 	static Class59_Sub1 aClass59_Sub1_3214 = new Class59_Sub1();
 	static int[] anIntArray3215 = new int[50];
 	static int[] anIntArray3216 = new int[50];
+	static Class99 aClass99_1618;
+	static int anInt1646;
+	static byte[][][] aByteArrayArrayArray1614;
+	static int[] anIntArray1615;
+
+	static final void method3952(int var0, int var1, int var2, int var3, int var4, byte var5) {
+		int var6 = Class116_Sub11.groundItemController.method452(var0, var1, var2);
+		int var7;
+		int var8;
+		int var9;
+		int var11;
+		int var12;
+		int var15;
+		if (0 != var6) {
+			var8 = Class116_Sub11.groundItemController.method375(var0, var1, var2, var6);
+			var15 = var8 >> 6 & 3;
+			var9 = var8 & 31;
+			var11 = var3;
+			if (var6 > 0) {
+				var11 = var4;
+			}
+
+			int[] var10 = Class116_Sub23_Sub18.aClass116_Sub23_Sub19_Sub2_2487.myPixels;
+			var7 = 4 * var1 + 24624 + 2048 * (103 - var2);
+			var12 = var6 >> 14 & 32767;
+			ObjectDefinition var13 = Class45.method700(var12, 359750046);
+			if (-1 != var13.anInt2218 * -1798686461) {
+				Class116_Sub23_Sub19_Sub3 var14 = Class2.aClass116_Sub23_Sub19_Sub3Array18[var13.anInt2218
+						* -1798686461];
+				if (var14 != null) {
+					int var16 = (var13.sizeX * 355676604 - var14.anInt2763) / 2;
+					int var17 = (685838988 * var13.sizeY - var14.anInt2764) / 2;
+					var14.method3359(4 * var1 + 48 + var16,
+							4 * (104 - var2 - var13.sizeY * -1976023901) + 48 + var17);
+				}
+			} else {
+				if (var9 == 0 || 2 == var9) {
+					if (0 == var15) {
+						var10[var7] = var11;
+						var10[512 + var7] = var11;
+						var10[var7 + 1024] = var11;
+						var10[var7 + 1536] = var11;
+					} else if (var15 == 1) {
+						var10[var7] = var11;
+						var10[1 + var7] = var11;
+						var10[2 + var7] = var11;
+						var10[3 + var7] = var11;
+					} else if (2 == var15) {
+						var10[var7 + 3] = var11;
+						var10[512 + 3 + var7] = var11;
+						var10[1024 + 3 + var7] = var11;
+						var10[1536 + var7 + 3] = var11;
+					} else if (3 == var15) {
+						var10[var7 + 1536] = var11;
+						var10[var7 + 1536 + 1] = var11;
+						var10[1536 + var7 + 2] = var11;
+						var10[var7 + 1536 + 3] = var11;
+					}
+				}
+
+				if (3 == var9) {
+					if (var15 == 0) {
+						var10[var7] = var11;
+					} else if (var15 == 1) {
+						var10[3 + var7] = var11;
+					} else if (2 == var15) {
+						var10[var7 + 3 + 1536] = var11;
+					} else if (3 == var15) {
+						var10[1536 + var7] = var11;
+					}
+				}
+
+				if (var9 == 2) {
+					if (3 == var15) {
+						var10[var7] = var11;
+						var10[var7 + 512] = var11;
+						var10[var7 + 1024] = var11;
+						var10[1536 + var7] = var11;
+					} else if (var15 == 0) {
+						var10[var7] = var11;
+						var10[1 + var7] = var11;
+						var10[2 + var7] = var11;
+						var10[3 + var7] = var11;
+					} else if (1 == var15) {
+						var10[3 + var7] = var11;
+						var10[512 + var7 + 3] = var11;
+						var10[1024 + var7 + 3] = var11;
+						var10[1536 + var7 + 3] = var11;
+					} else if (2 == var15) {
+						var10[var7 + 1536] = var11;
+						var10[1 + 1536 + var7] = var11;
+						var10[2 + var7 + 1536] = var11;
+						var10[var7 + 1536 + 3] = var11;
+					}
+				}
+			}
+		}
+
+		var6 = Class116_Sub11.groundItemController.method373(var0, var1, var2);
+		if (var6 != 0) {
+			var8 = Class116_Sub11.groundItemController.method375(var0, var1, var2, var6);
+			var15 = var8 >> 6 & 3;
+			var9 = var8 & 31;
+			var11 = var6 >> 14 & 32767;
+			ObjectDefinition var20 = Class45.method700(var11, 359750046);
+			int var23;
+			if (var20.anInt2218 * -1798686461 != -1) {
+				Class116_Sub23_Sub19_Sub3 var18 = Class2.aClass116_Sub23_Sub19_Sub3Array18[-1798686461
+						* var20.anInt2218];
+				if (var18 != null) {
+					var12 = (355676604 * var20.sizeX - var18.anInt2763) / 2;
+					var23 = (685838988 * var20.sizeY - var18.anInt2764) / 2;
+					var18.method3359(var1 * 4 + 48 + var12,
+							48 + (104 - var2 - -1976023901 * var20.sizeY) * 4 + var23);
+				}
+			} else if (9 == var9) {
+				var7 = 15658734;
+				if (var6 > 0) {
+					var7 = 15597568;
+				}
+
+				int[] var22 = Class116_Sub23_Sub18.aClass116_Sub23_Sub19_Sub2_2487.myPixels;
+				var23 = var1 * 4 + 24624 + 2048 * (103 - var2);
+				if (0 != var15 && var15 != 2) {
+					var22[var23] = var7;
+					var22[1 + 512 + var23] = var7;
+					var22[var23 + 1024 + 2] = var7;
+					var22[3 + var23 + 1536] = var7;
+				} else {
+					var22[1536 + var23] = var7;
+					var22[1024 + var23 + 1] = var7;
+					var22[2 + 512 + var23] = var7;
+					var22[var23 + 3] = var7;
+				}
+			}
+		}
+
+		var6 = Class116_Sub11.groundItemController.method374(var0, var1, var2);
+		if (0 != var6) {
+			var8 = var6 >> 14 & 32767;
+			ObjectDefinition var24 = Class45.method700(var8, 359750046);
+			if (var24.anInt2218 * -1798686461 != -1) {
+				Class116_Sub23_Sub19_Sub3 var19 = Class2.aClass116_Sub23_Sub19_Sub3Array18[var24.anInt2218
+						* -1798686461];
+				if (null != var19) {
+					var11 = (var24.sizeX * 355676604 - var19.anInt2763) / 2;
+					int var21 = (685838988 * var24.sizeY - var19.anInt2764) / 2;
+					var19.method3359(48 + var1 * 4 + var11,
+							var21 + (104 - var2 - -1976023901 * var24.sizeY) * 4 + 48);
+				}
+			}
+		}
+
+	}
+
+	public static int method3953(Buffer var0, String var1, int var2) {
+		int var3 = var0.position * 314639891;
+		byte[] var4 = Class64.method938(var1, (byte) -97);
+		var0.writeSmart(var4.length, 720272980);
+		var0.position += client.aClass52_1621.method789(var4, 0, var4.length, var0.payload, 314639891 * var0.position,
+				-1887037095) * -184175589;
+		return var0.position * 314639891 - var3;
+	}
+
+	static final int method1740(Class116_Sub15 var0, int var1, byte var2) {
+		if (var0.anIntArrayArray2035 != null && var1 < var0.anIntArrayArray2035.length) {
+			try {
+				int[] var3 = var0.anIntArrayArray2035[var1];
+				int var4 = 0;
+				int var5 = 0;
+				byte var6 = 0;
+
+				while (true) {
+					int var7 = var3[var5++];
+					int var8 = 0;
+					byte var9 = 0;
+					if (var7 == 0) {
+						return var4;
+					}
+
+					if (1 == var7) {
+						var8 = client.anIntArray2953[var3[var5++]];
+					}
+
+					if (var7 == 2) {
+						var8 = client.anIntArray2951[var3[var5++]];
+					}
+
+					if (var7 == 3) {
+						var8 = client.anIntArray3108[var3[var5++]];
+					}
+
+					int var10;
+					Class116_Sub15 var11;
+					int var12;
+					int var13;
+					if (4 == var7) {
+						var10 = var3[var5++] << 16;
+						var10 += var3[var5++];
+						var11 = Class107.method1466(var10, 314639891);
+						var12 = var3[var5++];
+						if (var12 != -1 && (!Class50.method778(var12, (byte) 70).aBool2374 || client.aBool2936)) {
+							for (var13 = 0; var13 < var11.anIntArray2047.length; ++var13) {
+								if (1 + var12 == var11.anIntArray2047[var13]) {
+									var8 += var11.anIntArray2042[var13];
+								}
+							}
+						}
+					}
+
+					if (var7 == 5) {
+						var8 = Class107.varpData[var3[var5++]];
+					}
+
+					if (var7 == 6) {
+						var8 = Class76.anIntArray891[client.anIntArray2951[var3[var5++]] - 1];
+					}
+
+					if (7 == var7) {
+						var8 = Class107.varpData[var3[var5++]] * 100 / '\ub71b';
+					}
+
+					if (8 == var7) {
+						var8 = Class79.aPlayer_909.anInt2908 * 1614853309;
+					}
+
+					if (var7 == 9) {
+						for (var10 = 0; var10 < 25; ++var10) {
+							if (Class76.aBoolArray892[var10]) {
+								var8 += client.anIntArray2951[var10];
+							}
+						}
+					}
+
+					if (var7 == 10) {
+						var10 = var3[var5++] << 16;
+						var10 += var3[var5++];
+						var11 = Class107.method1466(var10, 314639891);
+						var12 = var3[var5++];
+						if (-1 != var12 && (!Class50.method778(var12, (byte) 70).aBool2374 || client.aBool2936)) {
+							for (var13 = 0; var13 < var11.anIntArray2047.length; ++var13) {
+								if (var12 + 1 == var11.anIntArray2047[var13]) {
+									var8 = 999999999;
+									break;
+								}
+							}
+						}
+					}
+
+					if (var7 == 11) {
+						var8 = client.anInt3098 * -1005815685;
+					}
+
+					if (var7 == 12) {
+						var8 = client.anInt3099 * -1944031695;
+					}
+
+					if (var7 == 13) {
+						var10 = Class107.varpData[var3[var5++]];
+						int var15 = var3[var5++];
+						var8 = (var10 & 1 << var15) != 0 ? 1 : 0;
+					}
+
+					if (var7 == 14) {
+						var10 = var3[var5++];
+						var8 = Class103.method1451(var10, -584760962);
+					}
+
+					if (15 == var7) {
+						var9 = 1;
+					}
+
+					if (16 == var7) {
+						var9 = 2;
+					}
+
+					if (17 == var7) {
+						var9 = 3;
+					}
+
+					if (var7 == 18) {
+						var8 = 1426698711 * Class116_Sub17.clickX + (1272643751 * Class79.aPlayer_909.anInt2609 >> 7);
+					}
+
+					if (var7 == 19) {
+						var8 = (Class79.aPlayer_909.anInt2579 * -1801433343 >> 7) + 714823515 * Class33.clickY;
+					}
+
+					if (var7 == 20) {
+						var8 = var3[var5++];
+					}
+
+					if (var9 == 0) {
+						if (0 == var6) {
+							var4 += var8;
+						}
+
+						if (1 == var6) {
+							var4 -= var8;
+						}
+
+						if (var6 == 2 && var8 != 0) {
+							var4 /= var8;
+						}
+
+						if (3 == var6) {
+							var4 *= var8;
+						}
+
+						var6 = 0;
+					} else {
+						var6 = var9;
+					}
+				}
+			} catch (Exception var14) {
+				return -1;
+			}
+		} else {
+			return -2;
+		}
+	}
 
 	public final void init() {
 		if (this.method3571(797241207)) {
@@ -362,7 +679,6 @@ public final class client extends Applet_Sub1 {
 						break;
 					case 7:
 						if (var5.equalsIgnoreCase(Class41.aString548)) {
-							;
 						}
 						break;
 					case 8:
@@ -381,11 +697,7 @@ public final class client extends Applet_Sub1 {
 						}
 						break;
 					case 12:
-						if (var5.equalsIgnoreCase(Class41.aString548)) {
-							aBool2936 = true;
-						} else {
-							aBool2936 = false;
-						}
+						aBool2936 = var5.equalsIgnoreCase(Class41.aString548);
 						break;
 					case 13:
 						aString2940 = var5;
@@ -404,7 +716,7 @@ public final class client extends Applet_Sub1 {
 			try {
 				Class116_Sub8.method1945("oldschool", var12, var13, 16, (byte) 127);
 			} catch (Exception var11) {
-				Class90.method1192((String) null, var11, 343294798);
+				Class90.method1192(null, var11, 343294798);
 			}
 
 			aclient2930 = this;
@@ -533,8 +845,8 @@ public final class client extends Applet_Sub1 {
 					for (var3 = 0; var3 < Class8.aByteArrayArray127.length; ++var3) {
 						byte[] var4 = Tile.aByteArrayArray1858[var3];
 						if (var4 != null) {
-							interfaceId = 64 * (anIntArray2995[var3] >> 8) - Class116_Sub17.anInt2105 * 1426698711;
-							interfaceHash = 64 * (anIntArray2995[var3] & 255) - Class33.anInt456 * 714823515;
+							interfaceId = 64 * (anIntArray2995[var3] >> 8) - Class116_Sub17.clickX * 1426698711;
+							interfaceHash = 64 * (anIntArray2995[var3] & 255) - Class33.clickY * 714823515;
 							if (dynamicRegion) {
 								interfaceId = 10;
 								interfaceHash = 10;
@@ -606,8 +918,8 @@ public final class client extends Applet_Sub1 {
 						if (!dynamicRegion) {
 							byte[] var7;
 							for (var83 = 0; var83 < var3; ++var83) {
-								interfaceId = (anIntArray2995[var83] >> 8) * 64 - 1426698711 * Class116_Sub17.anInt2105;
-								interfaceHash = 64 * (anIntArray2995[var83] & 255) - Class33.anInt456 * 714823515;
+								interfaceId = (anIntArray2995[var83] >> 8) * 64 - 1426698711 * Class116_Sub17.clickX;
+								interfaceHash = 64 * (anIntArray2995[var83] & 255) - Class33.clickY * 714823515;
 								var7 = Class8.aByteArrayArray127[var83];
 								if (var7 != null) {
 									Class42.method695((byte) 49);
@@ -617,8 +929,8 @@ public final class client extends Applet_Sub1 {
 							}
 
 							for (var83 = 0; var83 < var3; ++var83) {
-								interfaceId = (anIntArray2995[var83] >> 8) * 64 - 1426698711 * Class116_Sub17.anInt2105;
-								interfaceHash = 64 * (anIntArray2995[var83] & 255) - Class33.anInt456 * 714823515;
+								interfaceId = (anIntArray2995[var83] >> 8) * 64 - 1426698711 * Class116_Sub17.clickX;
+								interfaceHash = 64 * (anIntArray2995[var83] & 255) - Class33.clickY * 714823515;
 								var7 = Class8.aByteArrayArray127[var83];
 								if (null == var7 && 1249154187 * Class102.anInt1419 < 800) {
 									Class42.method695((byte) 19);
@@ -631,8 +943,8 @@ public final class client extends Applet_Sub1 {
 							for (var83 = 0; var83 < var3; ++var83) {
 								byte[] var87 = Tile.aByteArrayArray1858[var83];
 								if (var87 != null) {
-									interfaceHash = 64 * (anIntArray2995[var83] >> 8) - Class116_Sub17.anInt2105 * 1426698711;
-									clickThrough = 64 * (anIntArray2995[var83] & 255) - 714823515 * Class33.anInt456;
+									interfaceHash = 64 * (anIntArray2995[var83] >> 8) - Class116_Sub17.clickX * 1426698711;
+									clickThrough = 64 * (anIntArray2995[var83] & 255) - 714823515 * Class33.clickY;
 									Class42.method695((byte) 57);
 									Class31.method589(var87, interfaceHash, clickThrough, Class116_Sub11.groundItemController,
 											aClass58Array2996, -1871600971);
@@ -1051,11 +1363,11 @@ public final class client extends Applet_Sub1 {
 								}
 							}
 
-							client.aByteArrayArrayArray1614[interfaceHash] = (byte[][]) null;
-							Class47.aByteArrayArrayArray626[interfaceHash] = (byte[][]) null;
-							Class116_Sub23_Sub7.aByteArrayArrayArray2291[interfaceHash] = (byte[][]) null;
-							Class60.aByteArrayArrayArray780[interfaceHash] = (byte[][]) null;
-							Class47.aByteArrayArrayArray627[interfaceHash] = (byte[][]) null;
+							client.aByteArrayArrayArray1614[interfaceHash] = null;
+							Class47.aByteArrayArrayArray626[interfaceHash] = null;
+							Class116_Sub23_Sub7.aByteArrayArrayArray2291[interfaceHash] = null;
+							Class60.aByteArrayArrayArray780[interfaceHash] = null;
+							Class47.aByteArrayArrayArray627[interfaceHash] = null;
 						}
 
 						var92.method466(-50, -10, -50);
@@ -1091,7 +1403,6 @@ public final class client extends Applet_Sub1 {
 											for (var16 = var10; var13 > 0
 													&& (Class47.anIntArrayArrayArray630[var10][var12][var13 - 1]
 															& interfaceHash) != 0; --var13) {
-												;
 											}
 
 											while (var14 < 104
@@ -1146,7 +1457,6 @@ public final class client extends Applet_Sub1 {
 											for (var16 = var10; var13 > 0
 													&& 0 != (Class47.anIntArrayArrayArray630[var10][var13 - 1][var11]
 															& clickThrough); --var13) {
-												;
 											}
 
 											while (var14 < 104
@@ -1201,7 +1511,6 @@ public final class client extends Applet_Sub1 {
 											for (var16 = var11; var114 > 0
 													&& (Class47.anIntArrayArrayArray630[var10][var12][var114 - 1]
 															& var8) != 0; --var114) {
-												;
 											}
 
 											while (var16 < 104
@@ -2654,7 +2963,7 @@ public final class client extends Applet_Sub1 {
 										if (var109 != null && var9 < var109.anIntArray2047.length) {
 											var109.anIntArray2047[var9] = var10;
 											var109.anIntArray2042[var9] = var11;
-									} 
+										}
 										Class116_Sub23_Sub11.method2637(interfaceHash, var9, var10 - 1, var11, -455301126);
 									}
                                     System.out.println(" -done");
@@ -2691,7 +3000,6 @@ public final class client extends Applet_Sub1 {
 										String var102 = "document.cookie=\"" + var138 + "\"";
 										JSObject.getWindow(var117).eval(var102);
 									} catch (Throwable var71) {
-										;
 									}
 
 									currentOpcode = -726667601;
@@ -2920,10 +3228,7 @@ public final class client extends Applet_Sub1 {
 									var94 = bitBuffer.readString(61376769);
 									interfaceHash = bitBuffer.readShort(-237384292);
 									byte var120 = bitBuffer.readUnsignedByte(1390301658);
-									var97 = false;
-									if (var120 == -128) {
-										var97 = true;
-									}
+									var97 = var120 == -128;
 
 									if (var97) {
 										if (-1304125287 * Class98.anInt1378 == 0) {
@@ -2939,7 +3244,6 @@ public final class client extends Applet_Sub1 {
 														.equals(var94)
 														|| interfaceHash != Class116_Sub11.aClass116_Sub7Array1820[var9].worldId
 																* 1300426367); ++var9) {
-											;
 										}
 
 										if (var9 < Class98.anInt1378 * -1304125287) {
@@ -3141,7 +3445,6 @@ public final class client extends Applet_Sub1 {
 												Class86.aClass140_1010.method1771(0L);
 												Class86.aClass140_1010.method1764(var98.payload, interfaceHash, 24, -348227858);
 											} catch (Exception var70) {
-												;
 											}
 										}
 									}
@@ -3186,7 +3489,6 @@ public final class client extends Applet_Sub1 {
 												}
 											}
 										} catch (Throwable var77) {
-											;
 										}
 									}
 
@@ -3218,7 +3520,7 @@ public final class client extends Applet_Sub1 {
 
 								Class90.method1192("" + currentOpcode * 793368497 + Class41.aString538
 										+ anInt3066 * -1475322259 + Class41.aString538 + anInt3173 * 385590311
-										+ Class41.aString538 + anInt2980 * 371800591, (Throwable) null, 343294798);
+										+ Class41.aString538 + anInt2980 * 371800591, null, 343294798);
 								Class93.method1270(-1305917269);
 							} catch (IOException var78) {
 								Class93.method1265(1847951744);
@@ -3227,9 +3529,9 @@ public final class client extends Applet_Sub1 {
 										+ Class41.aString538 + 385590311 * anInt3173 + Class41.aString538
 										+ anInt2980 * 371800591 + Class41.aString538
 										+ (Class79.aPlayer_909.xMovementSteps[0]
-												+ Class116_Sub17.anInt2105 * 1426698711)
+										+ Class116_Sub17.clickX * 1426698711)
 										+ Class41.aString538
-										+ (714823515 * Class33.anInt456
+										+ (714823515 * Class33.clickY
 												+ Class79.aPlayer_909.yMovementSteps[0])
 										+ Class41.aString538;
 
@@ -3645,7 +3947,7 @@ public final class client extends Applet_Sub1 {
 									}
 
 									Class99_Sub1.aClipboard1907.setContents(new StringSelection(var94),
-											(ClipboardOwner) null);
+											null);
 								} else {
 									anIntArray3158[-703165807 * anInt3156] = Class5.anInt57 * -1989794123;
 									anIntArray3130[-703165807 * anInt3156] = Class2.aChar24;
@@ -3760,7 +4062,7 @@ public final class client extends Applet_Sub1 {
                                                                                         aClass116_Sub15_2935.anInt1926
                                                                                                 * 2021294259,
                                                                                         1181998013);
-																		rsaBuffer.method2102(
+																		rsaBuffer.writeShortA(
 																				813479615
 																						* aClass116_Sub15_3106.anInt2043,
 																				773256407);
@@ -3855,7 +4157,7 @@ public final class client extends Applet_Sub1 {
 																	rsaBuffer.writeShort(anInt3084 * -408071259,
                                                                             -2121228661);
 																	rsaBuffer.writeByteC(var183, -612734714);
-																	rsaBuffer.method2102(anInt3049 * 1979905201,
+																	rsaBuffer.writeShortA(anInt3049 * 1979905201,
 																			-627792754);
 																	rsaBuffer.method2087(
 																			Class116_Sub23_Sub1.aClass116_Sub15_2162.anInt1925
@@ -3899,10 +4201,10 @@ public final class client extends Applet_Sub1 {
 														rsaBuffer.writeByteC(KeyFocusListener.keysHeldDown[82]  ? (KeyFocusListener.keysHeldDown[81] ? 2 : 1) : 0,
                                                                 1357281269);
 														rsaBuffer.writeLEShortA(
-                                                                Class116_Sub17.anInt2105 * 1426698711 + var83,
-                                                                -31505191);
-														rsaBuffer.writeLEShort(Class33.anInt456 * 714823515 + interfaceId,
-                                                                1405134017);
+																Class116_Sub17.clickX * 1426698711 + var83,
+																-31505191);
+														rsaBuffer.writeLEShort(Class33.clickY * 714823515 + interfaceId,
+																1405134017);
 														GroundController.anInt336 = -1;
 														anInt3043 = Class85.anInt998 * -1489075687;
 														anInt3044 = -250191479 * Class85.anInt999;
@@ -4566,7 +4868,6 @@ public final class client extends Applet_Sub1 {
 													try {
 														Class93.aClass71_1335.method1001(-1395799089);
 													} catch (Exception var21) {
-														;
 													}
 
 													Class93.anInt1353 += 1983812729;
@@ -4620,7 +4921,6 @@ public final class client extends Applet_Sub1 {
 					try {
 						Class93.aClass71_1335.method1001(1426280457);
 					} catch (Exception var20) {
-						;
 					}
 
 					Class93.anInt1354 += -1096754175;
@@ -4638,7 +4938,6 @@ public final class client extends Applet_Sub1 {
 
 	protected final void method3585(byte var1) {
 	}
-
 
 	void method3700(int var1) {
 		if (-448031287 * Class93.anInt1353 >= 4) {
@@ -4801,7 +5100,6 @@ public final class client extends Applet_Sub1 {
 				try {
 					Class102.anObject1416.wait();
 				} catch (InterruptedException var6) {
-					;
 				}
 			}
 		}
@@ -4846,11 +5144,7 @@ public final class client extends Applet_Sub1 {
 
 		int var4 = -1207115777 * Class116_Sub5.aClass29_1727.anInt405;
 		aLong2975 = 0L;
-		if (var4 >= 2) {
-			aBool3140 = true;
-		} else {
-			aBool3140 = false;
-		}
+		aBool3140 = var4 >= 2;
 
 		Class116_Sub5.method1931(-1960013450);
 		if (846055547 * loginStage >= 25) {
@@ -4864,7 +5158,6 @@ public final class client extends Applet_Sub1 {
 
 		aBool2921 = true;
 	}
-
 
 	protected final void method3587(short var1) {
 		boolean var2;
@@ -4921,11 +5214,7 @@ public final class client extends Applet_Sub1 {
 					&& Class116_Sub5.method1929(2036828818) > 203608972292936527L * aLong2975) {
 				int var4 = aBool3140 ? 2 : 1;
 				aLong2975 = 0L;
-				if (var4 >= 2) {
-					aBool3140 = true;
-				} else {
-					aBool3140 = false;
-				}
+				aBool3140 = var4 >= 2;
 
 				Class116_Sub5.method1931(-1638007568);
 				if (846055547 * loginStage >= 25) {
@@ -5002,7 +5291,7 @@ public final class client extends Applet_Sub1 {
 					var10.setColor(Color.white);
 					var10.drawString(var7, (304 - ISAAC.aFontMetrics701.stringWidth(var7)) / 2, 22);
 					var9.drawImage(Class73.anImage876, Class42.clientWidth * -452716157 / 2 - 152,
-							Class116_Sub16.clientHeight * 674167779 / 2 - 18, (ImageObserver) null);
+							Class116_Sub16.clientHeight * 674167779 / 2 - 18, null);
 				} catch (Exception var13) {
 					int var11 = -452716157 * Class42.clientWidth / 2 - 152;
 					int var12 = 674167779 * Class116_Sub16.clientHeight / 2 - 18;
@@ -5091,345 +5380,6 @@ public final class client extends Applet_Sub1 {
 		}
 
 	}
-
-	static final void method3952(int var0, int var1, int var2, int var3, int var4, byte var5) {
-		int var6 = Class116_Sub11.groundItemController.method452(var0, var1, var2);
-		int var7;
-		int var8;
-		int var9;
-		int var11;
-		int var12;
-		int var15;
-		if (0 != var6) {
-			var8 = Class116_Sub11.groundItemController.method375(var0, var1, var2, var6);
-			var15 = var8 >> 6 & 3;
-			var9 = var8 & 31;
-			var11 = var3;
-			if (var6 > 0) {
-				var11 = var4;
-			}
-
-			int[] var10 = Class116_Sub23_Sub18.aClass116_Sub23_Sub19_Sub2_2487.myPixels;
-			var7 = 4 * var1 + 24624 + 2048 * (103 - var2);
-			var12 = var6 >> 14 & 32767;
-			ObjectDefinition var13 = Class45.method700(var12, 359750046);
-			if (-1 != var13.anInt2218 * -1798686461) {
-				Class116_Sub23_Sub19_Sub3 var14 = Class2.aClass116_Sub23_Sub19_Sub3Array18[var13.anInt2218
-						* -1798686461];
-				if (var14 != null) {
-					int var16 = (var13.sizeX * 355676604 - var14.anInt2763) / 2;
-					int var17 = (685838988 * var13.sizeY - var14.anInt2764) / 2;
-					var14.method3359(4 * var1 + 48 + var16,
-							4 * (104 - var2 - var13.sizeY * -1976023901) + 48 + var17);
-				}
-			} else {
-				if (var9 == 0 || 2 == var9) {
-					if (0 == var15) {
-						var10[var7] = var11;
-						var10[512 + var7] = var11;
-						var10[var7 + 1024] = var11;
-						var10[var7 + 1536] = var11;
-					} else if (var15 == 1) {
-						var10[var7] = var11;
-						var10[1 + var7] = var11;
-						var10[2 + var7] = var11;
-						var10[3 + var7] = var11;
-					} else if (2 == var15) {
-						var10[var7 + 3] = var11;
-						var10[512 + 3 + var7] = var11;
-						var10[1024 + 3 + var7] = var11;
-						var10[1536 + var7 + 3] = var11;
-					} else if (3 == var15) {
-						var10[var7 + 1536] = var11;
-						var10[var7 + 1536 + 1] = var11;
-						var10[1536 + var7 + 2] = var11;
-						var10[var7 + 1536 + 3] = var11;
-					}
-				}
-
-				if (3 == var9) {
-					if (var15 == 0) {
-						var10[var7] = var11;
-					} else if (var15 == 1) {
-						var10[3 + var7] = var11;
-					} else if (2 == var15) {
-						var10[var7 + 3 + 1536] = var11;
-					} else if (3 == var15) {
-						var10[1536 + var7] = var11;
-					}
-				}
-
-				if (var9 == 2) {
-					if (3 == var15) {
-						var10[var7] = var11;
-						var10[var7 + 512] = var11;
-						var10[var7 + 1024] = var11;
-						var10[1536 + var7] = var11;
-					} else if (var15 == 0) {
-						var10[var7] = var11;
-						var10[1 + var7] = var11;
-						var10[2 + var7] = var11;
-						var10[3 + var7] = var11;
-					} else if (1 == var15) {
-						var10[3 + var7] = var11;
-						var10[512 + var7 + 3] = var11;
-						var10[1024 + var7 + 3] = var11;
-						var10[1536 + var7 + 3] = var11;
-					} else if (2 == var15) {
-						var10[var7 + 1536] = var11;
-						var10[1 + 1536 + var7] = var11;
-						var10[2 + var7 + 1536] = var11;
-						var10[var7 + 1536 + 3] = var11;
-					}
-				}
-			}
-		}
-
-		var6 = Class116_Sub11.groundItemController.method373(var0, var1, var2);
-		if (var6 != 0) {
-			var8 = Class116_Sub11.groundItemController.method375(var0, var1, var2, var6);
-			var15 = var8 >> 6 & 3;
-			var9 = var8 & 31;
-			var11 = var6 >> 14 & 32767;
-			ObjectDefinition var20 = Class45.method700(var11, 359750046);
-			int var23;
-			if (var20.anInt2218 * -1798686461 != -1) {
-				Class116_Sub23_Sub19_Sub3 var18 = Class2.aClass116_Sub23_Sub19_Sub3Array18[-1798686461
-						* var20.anInt2218];
-				if (var18 != null) {
-					var12 = (355676604 * var20.sizeX - var18.anInt2763) / 2;
-					var23 = (685838988 * var20.sizeY - var18.anInt2764) / 2;
-					var18.method3359(var1 * 4 + 48 + var12,
-							48 + (104 - var2 - -1976023901 * var20.sizeY) * 4 + var23);
-				}
-			} else if (9 == var9) {
-				var7 = 15658734;
-				if (var6 > 0) {
-					var7 = 15597568;
-				}
-
-				int[] var22 = Class116_Sub23_Sub18.aClass116_Sub23_Sub19_Sub2_2487.myPixels;
-				var23 = var1 * 4 + 24624 + 2048 * (103 - var2);
-				if (0 != var15 && var15 != 2) {
-					var22[var23] = var7;
-					var22[1 + 512 + var23] = var7;
-					var22[var23 + 1024 + 2] = var7;
-					var22[3 + var23 + 1536] = var7;
-				} else {
-					var22[1536 + var23] = var7;
-					var22[1024 + var23 + 1] = var7;
-					var22[2 + 512 + var23] = var7;
-					var22[var23 + 3] = var7;
-				}
-			}
-		}
-
-		var6 = Class116_Sub11.groundItemController.method374(var0, var1, var2);
-		if (0 != var6) {
-			var8 = var6 >> 14 & 32767;
-			ObjectDefinition var24 = Class45.method700(var8, 359750046);
-			if (var24.anInt2218 * -1798686461 != -1) {
-				Class116_Sub23_Sub19_Sub3 var19 = Class2.aClass116_Sub23_Sub19_Sub3Array18[var24.anInt2218
-						* -1798686461];
-				if (null != var19) {
-					var11 = (var24.sizeX * 355676604 - var19.anInt2763) / 2;
-					int var21 = (685838988 * var24.sizeY - var19.anInt2764) / 2;
-					var19.method3359(48 + var1 * 4 + var11,
-							var21 + (104 - var2 - -1976023901 * var24.sizeY) * 4 + 48);
-				}
-			}
-		}
-
-	}
-
-	public static int method3953(Buffer var0, String var1, int var2) {
-		int var3 = var0.position * 314639891;
-		byte[] var4 = Class64.method938(var1, (byte) -97);
-		var0.writeSmart(var4.length, 720272980);
-		var0.position += client.aClass52_1621.method789(var4, 0, var4.length, var0.payload, 314639891 * var0.position,
-				-1887037095) * -184175589;
-		return var0.position * 314639891 - var3;
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-    static Class99 aClass99_1618;
-    public static Class52 aClass52_1621;
-
-    static int anInt1646;
-    public static NodeList aClass119_1617 = new NodeList();
-
-
-    static byte[][][] aByteArrayArrayArray1614;
-    static int[] anIntArray1615;
-
-
-    static final int method1740(Class116_Sub15 var0, int var1, byte var2) {
-        if(var0.anIntArrayArray2035 != null && var1 < var0.anIntArrayArray2035.length) {
-            try {
-                int[] var3 = var0.anIntArrayArray2035[var1];
-                int var4 = 0;
-                int var5 = 0;
-                byte var6 = 0;
-
-                while(true) {
-                    int var7 = var3[var5++];
-                    int var8 = 0;
-                    byte var9 = 0;
-                    if(var7 == 0) {
-                        return var4;
-                    }
-
-                    if(1 == var7) {
-                        var8 = client.anIntArray2953[var3[var5++]];
-                    }
-
-                    if(var7 == 2) {
-                        var8 = client.anIntArray2951[var3[var5++]];
-                    }
-
-                    if(var7 == 3) {
-                        var8 = client.anIntArray3108[var3[var5++]];
-                    }
-
-                    int var10;
-                    Class116_Sub15 var11;
-                    int var12;
-                    int var13;
-                    if(4 == var7) {
-                        var10 = var3[var5++] << 16;
-                        var10 += var3[var5++];
-                        var11 = Class107.method1466(var10, 314639891);
-                        var12 = var3[var5++];
-                        if(var12 != -1 && (!Class50.method778(var12, (byte)70).aBool2374 || client.aBool2936)) {
-                            for(var13 = 0; var13 < var11.anIntArray2047.length; ++var13) {
-                                if(1 + var12 == var11.anIntArray2047[var13]) {
-                                    var8 += var11.anIntArray2042[var13];
-                                }
-                            }
-                        }
-                    }
-
-                    if(var7 == 5) {
-                        var8 = Class107.varpData[var3[var5++]];
-                    }
-
-                    if(var7 == 6) {
-                        var8 = Class76.anIntArray891[client.anIntArray2951[var3[var5++]] - 1];
-                    }
-
-                    if(7 == var7) {
-                        var8 = Class107.varpData[var3[var5++]] * 100 / '\ub71b';
-                    }
-
-                    if(8 == var7) {
-                        var8 = Class79.aPlayer_909.anInt2908 * 1614853309;
-                    }
-
-                    if(var7 == 9) {
-                        for(var10 = 0; var10 < 25; ++var10) {
-                            if(Class76.aBoolArray892[var10]) {
-                                var8 += client.anIntArray2951[var10];
-                            }
-                        }
-                    }
-
-                    if(var7 == 10) {
-                        var10 = var3[var5++] << 16;
-                        var10 += var3[var5++];
-                        var11 = Class107.method1466(var10, 314639891);
-                        var12 = var3[var5++];
-                        if(-1 != var12 && (!Class50.method778(var12, (byte)70).aBool2374 || client.aBool2936)) {
-                            for(var13 = 0; var13 < var11.anIntArray2047.length; ++var13) {
-                                if(var12 + 1 == var11.anIntArray2047[var13]) {
-                                    var8 = 999999999;
-                                    break;
-                                }
-                            }
-                        }
-                    }
-
-                    if(var7 == 11) {
-                        var8 = client.anInt3098 * -1005815685;
-                    }
-
-                    if(var7 == 12) {
-                        var8 = client.anInt3099 * -1944031695;
-                    }
-
-                    if(var7 == 13) {
-                        var10 = Class107.varpData[var3[var5++]];
-                        int var15 = var3[var5++];
-                        var8 = (var10 & 1 << var15) != 0?1:0;
-                    }
-
-                    if(var7 == 14) {
-                        var10 = var3[var5++];
-                        var8 = Class103.method1451(var10, -584760962);
-                    }
-
-                    if(15 == var7) {
-                        var9 = 1;
-                    }
-
-                    if(16 == var7) {
-                        var9 = 2;
-                    }
-
-                    if(17 == var7) {
-                        var9 = 3;
-                    }
-
-                    if(var7 == 18) {
-                        var8 = 1426698711 * Class116_Sub17.anInt2105 + (1272643751 * Class79.aPlayer_909.anInt2609 >> 7);
-                    }
-
-                    if(var7 == 19) {
-                        var8 = (Class79.aPlayer_909.anInt2579 * -1801433343 >> 7) + 714823515 * Class33.anInt456;
-                    }
-
-                    if(var7 == 20) {
-                        var8 = var3[var5++];
-                    }
-
-                    if(var9 == 0) {
-                        if(0 == var6) {
-                            var4 += var8;
-                        }
-
-                        if(1 == var6) {
-                            var4 -= var8;
-                        }
-
-                        if(var6 == 2 && var8 != 0) {
-                            var4 /= var8;
-                        }
-
-                        if(3 == var6) {
-                            var4 *= var8;
-                        }
-
-                        var6 = 0;
-                    } else {
-                        var6 = var9;
-                    }
-                }
-            } catch (Exception var14) {
-                return -1;
-            }
-        } else {
-            return -2;
-        }
-    }
 
 
 }

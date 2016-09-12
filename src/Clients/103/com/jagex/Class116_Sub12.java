@@ -2,8 +2,10 @@ package com.jagex;
 
 public final class Class116_Sub12 extends Node {
 
-   int anInt1835;
    static int anInt1836;
+	static Sprite[] aClass116_Sub23_Sub19_Sub2Array1844;
+	static Class116_Sub23_Sub19_Sub3[] aClass116_Sub23_Sub19_Sub3Array1849;
+	int anInt1835;
    int anInt1837;
    int anInt1838;
    int anInt1839;
@@ -11,13 +13,10 @@ public final class Class116_Sub12 extends Node {
    int anInt1841;
    int anInt1842;
    int anInt1843;
-   static Sprite[] aClass116_Sub23_Sub19_Sub2Array1844;
    int anInt1845 = 0;
    int anInt1846 = 622541955;
    int anInt1847;
    int anInt1848;
-   static Class116_Sub23_Sub19_Sub3[] aClass116_Sub23_Sub19_Sub3Array1849;
-
 
    static final void method1979(int var0, int var1, byte var2) {
       if(-1361858763 * Class22.anInt276 != var0 || var1 != Class102.anInt1419 * 1249154187) {
@@ -25,14 +24,14 @@ public final class Class116_Sub12 extends Node {
          Class102.anInt1419 = var1 * -1066912989;
          method1983(25, (byte)124);
          Class94.method1300(Class91.aString1056, true, -408037706);
-         int var6 = 1426698711 * Class116_Sub17.anInt2105;
-         int var10 = 714823515 * Class33.anInt456;
-         Class116_Sub17.anInt2105 = (var0 - 6) * -1551462600;
-         Class33.anInt456 = (var1 - 6) * -190314856;
-         int var8 = 1426698711 * Class116_Sub17.anInt2105 - var6;
-         int var4 = 714823515 * Class33.anInt456 - var10;
-         var6 = Class116_Sub17.anInt2105 * 1426698711;
-         var10 = 714823515 * Class33.anInt456;
+	      int var6 = 1426698711 * Class116_Sub17.clickX;
+	      int var10 = 714823515 * Class33.clickY;
+	      Class116_Sub17.clickX = (var0 - 6) * -1551462600;
+	      Class33.clickY = (var1 - 6) * -190314856;
+	      int var8 = 1426698711 * Class116_Sub17.clickX - var6;
+	      int var4 = 714823515 * Class33.clickY - var10;
+	      var6 = Class116_Sub17.clickX * 1426698711;
+	      var10 = 714823515 * Class33.clickY;
 
          int var11;
          int var12;
@@ -221,9 +220,9 @@ public final class Class116_Sub12 extends Node {
                }
 
                if(314519437 * client.anInt3021 == 2) {
-                  var5 = 2 + (-751140636 * client.anInt2954 - 1411827548 * Class116_Sub17.anInt2105) - 1272643751 * Class79.aPlayer_909.anInt2609 / 32;
-                  var6 = 2 + (client.anInt2950 * 985346372 - Class33.anInt456 * -1435673236) - Class79.aPlayer_909.anInt2579 * -1801433343 / 32;
-                  Class8.method140(var1, var2, var5, var6, Class83.aClass116_Sub23_Sub19_Sub2Array970[1], var7, (short)1003);
+	               var5 = 2 + (-751140636 * client.anInt2954 - 1411827548 * Class116_Sub17.clickX) - 1272643751 * Class79.aPlayer_909.anInt2609 / 32;
+	               var6 = 2 + (client.anInt2950 * 985346372 - Class33.clickY * -1435673236) - Class79.aPlayer_909.anInt2579 * -1801433343 / 32;
+	               Class8.method140(var1, var2, var5, var6, Class83.aClass116_Sub23_Sub19_Sub2Array970[1], var7, (short)1003);
                }
 
                if(client.anInt3021 * 314519437 == 10 && client.anInt3125 * 1613691605 >= 0 && client.anInt3125 * 1613691605 < client.globalPlayers.length) {

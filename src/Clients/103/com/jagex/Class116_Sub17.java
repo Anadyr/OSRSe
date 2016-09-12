@@ -2,6 +2,7 @@ package com.jagex;
 
 public class Class116_Sub17 extends Node {
 
+	static int clickX;
    int anInt2067;
    int anInt2068;
    int anInt2072;
@@ -26,72 +27,6 @@ public class Class116_Sub17 extends Node {
    int[] anIntArray2102 = new int[3];
    int anInt2103;
    boolean aBool2104;
-   static int anInt2105;
-
-   static final boolean method2305(char var0, int var1) {
-      if(Character.isISOControl(var0)) {
-         return false;
-      } else {
-         boolean var5 = var0 >= 48 && var0 <= 57 || var0 >= 65 && var0 <= 90 || var0 >= 97 && var0 <= 122;
-         if(var5) {
-            return true;
-         } else {
-            char[] var2 = Class95.aCharArray1362;
-
-            int var3;
-            char var4;
-            for(var3 = 0; var3 < var2.length; ++var3) {
-               var4 = var2[var3];
-               if(var4 == var0) {
-                  return true;
-               }
-            }
-
-            var2 = Class95.aCharArray1361;
-
-            for(var3 = 0; var3 < var2.length; ++var3) {
-               var4 = var2[var3];
-               if(var4 == var0) {
-                  return true;
-               }
-            }
-
-            return false;
-         }
-      }
-   }
-
-   public void method2306(Buffer var1, int var2) {
-      var1.writeByte(6, 576235594);
-      var1.writeByte(-411220879 * this.anInt2072, -992562519);
-      var1.writeByte(this.aBool2073?1:0, 498870517);
-      var1.writeByte(this.anInt2079 * 567640867, -958779416);
-      var1.writeByte(-1844108581 * this.anInt2103, 116731030);
-      var1.writeByte(this.anInt2087 * 535197789, -466813891);
-      var1.writeByte(-1149750771 * this.anInt2085, -1632207459);
-      var1.writeByte(1374491313 * this.anInt2068, -2093625522);
-      var1.writeByte(this.aBool2104?1:0, -1323010348);
-      var1.writeShort(-864398599 * this.anInt2088, -1642370960);
-      var1.writeByte(-856978823 * this.anInt2083, 86061193);
-      var1.writeMedium(-830383997 * this.anInt2090, (byte)15);
-      var1.writeShort(-620298247 * this.anInt2091, -2087249060);
-      var1.method2079(this.aString2092, -1800967893);
-      var1.method2079(this.aString2089, 1020438195);
-      var1.method2079(this.aString2094, 576880156);
-      var1.method2079(this.aString2095, -1281968322);
-      var1.writeByte(1311683181 * this.anInt2097, -771989611);
-      var1.writeShort(32408097 * this.anInt2096, -1651629051);
-      var1.method2079(this.aString2100, -1669179969);
-      var1.method2079(this.aString2101, 1643557033);
-      var1.writeByte(this.anInt2067 * 153252251, -1212804235);
-      var1.writeByte(this.anInt2099 * 2060761779, -311458014);
-
-      for(int var3 = 0; var3 < this.anIntArray2102.length; ++var3) {
-         var1.writeInt(this.anIntArray2102[var3], (byte)18);
-      }
-
-      var1.writeInt(1223494517 * this.anInt2082, (byte)125);
-   }
 
    public Class116_Sub17(boolean var1) {
       if(var1) {
@@ -126,14 +61,9 @@ public class Class116_Sub17 extends Node {
             var3 = System.getProperty("java.vendor");
             var5 = System.getProperty("java.version");
          } catch (Exception var9) {
-            ;
          }
 
-         if(!var2.startsWith("amd64") && !var2.startsWith("x86_64")) {
-            this.aBool2073 = false;
-         } else {
-            this.aBool2073 = true;
-         }
+	      this.aBool2073 = !(!var2.startsWith("amd64") && !var2.startsWith("x86_64"));
 
          if(1 == this.anInt2072 * -411220879) {
             if(var4.indexOf("4.0") != -1) {
@@ -202,7 +132,6 @@ public class Class116_Sub17 extends Node {
                ++var6;
             }
          } catch (Exception var14) {
-            ;
          }
 
          this.anInt2087 = var7 * -522118155;
@@ -220,7 +149,6 @@ public class Class116_Sub17 extends Node {
                ++var6;
             }
          } catch (Exception var13) {
-            ;
          }
 
          this.anInt2085 = -537629499 * var7;
@@ -238,7 +166,6 @@ public class Class116_Sub17 extends Node {
                ++var6;
             }
          } catch (Exception var12) {
-            ;
          }
 
          this.anInt2068 = 1077409361 * var7;
@@ -280,6 +207,75 @@ public class Class116_Sub17 extends Node {
       this.method2313(-483832203);
    }
 
+	static final boolean method2305(char var0, int var1) {
+		if (Character.isISOControl(var0)) {
+			return false;
+		} else {
+			boolean var5 = var0 >= 48 && var0 <= 57 || var0 >= 65 && var0 <= 90 || var0 >= 97 && var0 <= 122;
+			if (var5) {
+				return true;
+			} else {
+				char[] var2 = Class95.aCharArray1362;
+
+				int var3;
+				char var4;
+				for (var3 = 0; var3 < var2.length; ++var3) {
+					var4 = var2[var3];
+					if (var4 == var0) {
+						return true;
+					}
+				}
+
+				var2 = Class95.aCharArray1361;
+
+				for (var3 = 0; var3 < var2.length; ++var3) {
+					var4 = var2[var3];
+					if (var4 == var0) {
+						return true;
+					}
+				}
+
+				return false;
+			}
+		}
+	}
+
+	public static boolean method2314(int var0, int var1, int var2) {
+		return (var0 >> var1 + 1 & 1) != 0;
+	}
+
+	public void method2306(Buffer var1, int var2) {
+		var1.writeByte(6, 576235594);
+		var1.writeByte(-411220879 * this.anInt2072, -992562519);
+		var1.writeByte(this.aBool2073 ? 1 : 0, 498870517);
+		var1.writeByte(this.anInt2079 * 567640867, -958779416);
+		var1.writeByte(-1844108581 * this.anInt2103, 116731030);
+		var1.writeByte(this.anInt2087 * 535197789, -466813891);
+		var1.writeByte(-1149750771 * this.anInt2085, -1632207459);
+		var1.writeByte(1374491313 * this.anInt2068, -2093625522);
+		var1.writeByte(this.aBool2104 ? 1 : 0, -1323010348);
+		var1.writeShort(-864398599 * this.anInt2088, -1642370960);
+		var1.writeByte(-856978823 * this.anInt2083, 86061193);
+		var1.writeMedium(-830383997 * this.anInt2090, (byte) 15);
+		var1.writeShort(-620298247 * this.anInt2091, -2087249060);
+		var1.method2079(this.aString2092, -1800967893);
+		var1.method2079(this.aString2089, 1020438195);
+		var1.method2079(this.aString2094, 576880156);
+		var1.method2079(this.aString2095, -1281968322);
+		var1.writeByte(1311683181 * this.anInt2097, -771989611);
+		var1.writeShort(32408097 * this.anInt2096, -1651629051);
+		var1.method2079(this.aString2100, -1669179969);
+		var1.method2079(this.aString2101, 1643557033);
+		var1.writeByte(this.anInt2067 * 153252251, -1212804235);
+		var1.writeByte(this.anInt2099 * 2060761779, -311458014);
+
+		for (int var3 = 0; var3 < this.anIntArray2102.length; ++var3) {
+			var1.writeInt(this.anIntArray2102[var3], (byte) 18);
+		}
+
+		var1.writeInt(1223494517 * this.anInt2082, (byte) 125);
+	}
+
    public int method2307(byte var1) {
       byte var2 = 38;
       String var17 = this.aString2092;
@@ -320,9 +316,5 @@ public class Class116_Sub17 extends Node {
          this.aString2095 = this.aString2095.substring(0, 10);
       }
 
-   }
-
-   public static boolean method2314(int var0, int var1, int var2) {
-      return (var0 >> var1 + 1 & 1) != 0;
    }
 }

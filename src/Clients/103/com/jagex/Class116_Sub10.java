@@ -8,7 +8,7 @@ public class Class116_Sub10 extends Node {
 
 
    public static final boolean method1960(String var0, String var1, String var2, String var3, int var4) {
-      return null != var0 && var2 != null?(!var0.startsWith("#") && !var2.startsWith("#")?var1.equals(var3):var0.equals(var2)):false;
+	   return (null != var0 && var2 != null) && (!var0.startsWith("#") && !var2.startsWith("#") ? var1.equals(var3) : var0.equals(var2));
    }
 
 
@@ -29,10 +29,10 @@ public class Class116_Sub10 extends Node {
       byte var8 = (byte)(var4 >> 28);
       int var5 = var4 >> 14 & 16383;
       int var7 = var4 & 16383;
-      var3.xMovementSteps[0] = var5 - 1426698711 * Class116_Sub17.anInt2105;
-      var3.anInt2609 = ((var3.xMovementSteps[0] << 7) + (var3.method3561(-1030060260) << 6)) * 1705682711;
-      var3.yMovementSteps[0] = var7 - Class33.anInt456 * 714823515;
-      var3.anInt2579 = ((var3.yMovementSteps[0] << 7) + (var3.method3561(1984644454) << 6)) * 1421914369;
+	   var3.xMovementSteps[0] = var5 - 1426698711 * Class116_Sub17.clickX;
+	   var3.anInt2609 = ((var3.xMovementSteps[0] << 7) + (var3.method3561(-1030060260) << 6)) * 1705682711;
+	   var3.yMovementSteps[0] = var7 - Class33.clickY * 714823515;
+	   var3.anInt2579 = ((var3.yMovementSteps[0] << 7) + (var3.method3561(1984644454) << 6)) * 1421914369;
       Class116_Sub11.anInt1819 = (var3.anInt2906 = var8 * -1668953739) * -1941196453;
       if(null != Class7.aClass116_Sub14Array106[var2]) {
          var3.method3549(Class7.aClass116_Sub14Array106[var2], 2095903438);

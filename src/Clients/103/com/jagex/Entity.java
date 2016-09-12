@@ -2,6 +2,9 @@ package com.jagex;
 
 public abstract class Entity extends Animable {
 
+	public static final int anInt2619 = 126;
+	static final int anInt2634 = 100;
+	static final int anInt2638 = 2;
    int anInt2578 = 0;
    int anInt2579;
    int anInt2580 = -505909337;
@@ -29,7 +32,7 @@ public abstract class Entity extends Animable {
    int anInt2602;
    int anInt2603 = -1611414733;
    boolean aBool2604 = false;
-   int anInt2605 = 316267887;
+	int faceDirection = 316267887;
    int anInt2606 = -517768871;
    int[] anIntArray2607 = new int[4];
    int anInt2608 = 0;
@@ -43,7 +46,6 @@ public abstract class Entity extends Animable {
    int anInt2616 = 0;
    int anInt2617;
    int anInt2618 = 0;
-   public static final int anInt2619 = 126;
    int anInt2620;
    int anInt2621;
    int[] xMovementSteps = new int[10];
@@ -55,38 +57,13 @@ public abstract class Entity extends Animable {
    byte[] aByteArray2628 = new byte[10];
    int anInt2629 = 951990375;
    int anInt2630 = -939182368;
-   int anInt2631;
+	int faceDir1;
    int anInt2632;
    int[] yMovementSteps = new int[10];
-   static final int anInt2634 = 100;
    int anInt2635 = 0;
    int anInt2636 = 0;
    int anInt2637 = 0;
-   static final int anInt2638 = 2;
    int anInt2639 = 592731223;
-
-
-
-   final void method3100(int var1) {
-      this.anInt2578 = 0;
-      this.anInt2636 = 0;
-   }
-
-   boolean method3101(byte var1) {
-      return false;
-   }
-
-   final void method3102(int var1, int var2, int var3, int var4) {
-      for(int var5 = 0; var5 < 4; ++var5) {
-         if(this.anIntArray2583[var5] <= var3) {
-            this.anIntArray2597[var5] = var1;
-            this.anIntArray2607[var5] = var2;
-            this.anIntArray2583[var5] = 70 + var3;
-            return;
-         }
-      }
-
-   }
 
    public static String method3103(byte[] var0, int var1) {
       int var2 = var0.length;
@@ -136,5 +113,26 @@ public abstract class Entity extends Animable {
 
       var2 &= 3;
       return 0 == var2?var1:(1 == var2?7 - var0 - (var3 - 1):(var2 != 2?var0:7 - var1 - (var4 - 1)));
+   }
+
+	final void method3100(int var1) {
+		this.anInt2578 = 0;
+		this.anInt2636 = 0;
+	}
+
+	boolean method3101(byte var1) {
+		return false;
+	}
+
+	final void method3102(int var1, int var2, int var3, int var4) {
+		for (int var5 = 0; var5 < 4; ++var5) {
+			if (this.anIntArray2583[var5] <= var3) {
+				this.anIntArray2597[var5] = var1;
+				this.anIntArray2607[var5] = var2;
+				this.anIntArray2583[var5] = 70 + var3;
+				return;
+			}
+		}
+
    }
 }

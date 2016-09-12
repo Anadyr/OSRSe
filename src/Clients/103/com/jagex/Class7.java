@@ -2,6 +2,11 @@ package com.jagex;
 
 public class Class7 {
 
+	public static final int anInt115 = 122;
+	public static final int anInt120 = 7;
+	static final int anInt112 = 48;
+	static final int anInt114 = 1;
+	static final int anInt116 = 2;
    static int[] anIntArray102 = new int[2048];
    static int[] anIntArray103 = new int[2048];
    static byte[] gpiPlayerFlag = new byte[2048];
@@ -12,16 +17,15 @@ public class Class7 {
    static int anInt109 = 0;
    static int[] playerIndexes = new int[2048];
    static int[] anIntArray111 = new int[2048];
-   static final int anInt112 = 48;
    static Buffer aClass116_Sub14_113 = new Buffer(new byte[5000]);
-   static final int anInt114 = 1;
-   public static final int anInt115 = 122;
-   static final int anInt116 = 2;
    static int anInt117;
    static int anInt118 = 0;
    static int[] anIntArray119 = new int[2048];
-   public static final int anInt120 = 7;
 
+
+	Class7() throws Throwable {
+		throw new Error();
+	}
 
    static boolean method95(BitBuffer var0, int var1) {
       int var2 = var0.readBits(2, (byte) -1);
@@ -52,16 +56,16 @@ public class Class7 {
                var11.method3549(aClass116_Sub14Array106[var1], 809263108);
             }
 
-            var11.anInt2631 = anIntArray103[var1] * 736533899;
-            var11.anInt2603 = anIntArray102[var1] * 1611414733;
+	         var11.faceDir1 = anIntArray103[var1] * 736533899;
+	         var11.anInt2603 = anIntArray102[var1] * 1611414733;
             var6 = anIntArray111[var1];
             var3 = var6 >> 28;
             var4 = var6 >> 14 & 255;
             var7 = var6 & 255;
             var11.aByteArray2628[0] = aByteArray105[var1];
             var11.anInt2906 = -1668953739 * (byte)var3;
-            var11.method3551(var10 + (var4 << 6) - 1426698711 * Class116_Sub17.anInt2105, var8 + (var7 << 6) - 714823515 * Class33.anInt456, 803918560);
-            var11.aBool2901 = false;
+	         var11.method3551(var10 + (var4 << 6) - 1426698711 * Class116_Sub17.clickX, var8 + (var7 << 6) - 714823515 * Class33.clickY, 803918560);
+	         var11.aBool2901 = false;
             return true;
          }
       } else if(var2 == 1) {
@@ -133,7 +137,6 @@ public class Class7 {
       }
    }
 
-
    static void method97(BitBuffer var0, int var1) {
       boolean var4 = var0.readBits(1, (byte) -1) == 1;
       if(var4) {
@@ -148,12 +151,12 @@ public class Class7 {
          } else if(client.playerIndex * 1467227105 == var1) {
             throw new RuntimeException();
          } else {
-            anIntArray111[var1] = (var3.anInt2906 * -1522270499 << 28) + (1426698711 * Class116_Sub17.anInt2105 + var3.xMovementSteps[0] >> 6 << 14) + (Class33.anInt456 * 714823515 + var3.yMovementSteps[0] >> 6);
-            if(-1 != var3.anInt2605 * -744366479) {
-               anIntArray103[var1] = var3.anInt2605 * -744366479;
-            } else {
-               anIntArray103[var1] = -2061229533 * var3.anInt2631;
-            }
+	         anIntArray111[var1] = (var3.anInt2906 * -1522270499 << 28) + (1426698711 * Class116_Sub17.clickX + var3.xMovementSteps[0] >> 6 << 14) + (Class33.clickY * 714823515 + var3.yMovementSteps[0] >> 6);
+	         if (-1 != var3.faceDirection * -744366479) {
+		         anIntArray103[var1] = var3.faceDirection * -744366479;
+	         } else {
+		         anIntArray103[var1] = -2061229533 * var3.faceDir1;
+	         }
 
             anIntArray102[var1] = var3.anInt2603 * 734924805;
             client.globalPlayers[var1] = null;
@@ -309,9 +312,9 @@ public class Class7 {
                var2 = var7 >> 28;
                var8 = var7 >> 14 & 16383;
                var10 = var7 & 16383;
-               var9 = (var8 + Class116_Sub17.anInt2105 * 1426698711 + var3.xMovementSteps[0] & 16383) - 1426698711 * Class116_Sub17.anInt2105;
-               var11 = (var10 + Class33.anInt456 * 714823515 + var3.yMovementSteps[0] & 16383) - 714823515 * Class33.anInt456;
-               if(1467227105 * client.playerIndex == var1 && (1272643751 * var3.anInt2609 < 1536 || -1801433343 * var3.anInt2579 < 1536 || 1272643751 * var3.anInt2609 >= 11776 || var3.anInt2579 * -1801433343 >= 11776)) {
+	            var9 = (var8 + Class116_Sub17.clickX * 1426698711 + var3.xMovementSteps[0] & 16383) - 1426698711 * Class116_Sub17.clickX;
+	            var11 = (var10 + Class33.clickY * 714823515 + var3.yMovementSteps[0] & 16383) - 714823515 * Class33.clickY;
+	            if(1467227105 * client.playerIndex == var1 && (1272643751 * var3.anInt2609 < 1536 || -1801433343 * var3.anInt2579 < 1536 || 1272643751 * var3.anInt2609 >= 11776 || var3.anInt2579 * -1801433343 >= 11776)) {
                   var3.method3551(var9, var11, 1221991878);
                   var3.aBool2901 = false;
                } else if(var4) {
@@ -362,16 +365,16 @@ public class Class7 {
                var12.method3549(aClass116_Sub14Array106[var1], -1775626165);
             }
 
-            var12.anInt2631 = anIntArray103[var1] * 773415966;
-            var12.anInt2603 = anIntArray102[var1] * 1611414733;
+	         var12.faceDir1 = anIntArray103[var1] * 773415966;
+	         var12.anInt2603 = anIntArray102[var1] * 1611414733;
             var9 = anIntArray111[var1];
             var5 = var9 >> 28;
             var8 = var9 >> 14 & 255;
             var10 = var9 & 255;
             var12.aByteArray2628[0] = aByteArray105[var1];
             var12.anInt2906 = -1668953739 * (byte)var5;
-            var12.method3551(var4 + (var8 << 6) - -1604897984 * Class116_Sub17.anInt2105, var3 + (var10 << 6) - 714823515 * Class33.anInt456, -184696511);
-            var12.aBool2901 = false;
+	         var12.method3551(var4 + (var8 << 6) - -1604897984 * Class116_Sub17.clickX, var3 + (var10 << 6) - 714823515 * Class33.clickY, -184696511);
+	         var12.aBool2901 = false;
             return true;
          }
       } else if(var2 == 1) {
@@ -452,10 +455,10 @@ public class Class7 {
       byte var7 = (byte)(var4 >> 28);
       int var5 = var4 >> 14 & 16383;
       int var6 = var4 & 16383;
-      var2.xMovementSteps[0] = var5 - 1426698711 * Class116_Sub17.anInt2105;
-      var2.anInt2609 = ((var2.xMovementSteps[0] << 7) + (var2.method3561(177974473) << 6)) * 1705682711;
-      var2.yMovementSteps[0] = var6 - Class33.anInt456 * 714823515;
-      var2.anInt2579 = ((var2.yMovementSteps[0] << 7) + (var2.method3561(-804141590) << 6)) * 1421914369;
+	   var2.xMovementSteps[0] = var5 - 1426698711 * Class116_Sub17.clickX;
+	   var2.anInt2609 = ((var2.xMovementSteps[0] << 7) + (var2.method3561(177974473) << 6)) * 1705682711;
+	   var2.yMovementSteps[0] = var6 - Class33.clickY * 714823515;
+	   var2.anInt2579 = ((var2.yMovementSteps[0] << 7) + (var2.method3561(-804141590) << 6)) * 1421914369;
       Class116_Sub11.anInt1819 = (var2.anInt2906 = var7 * -1668953739) * -1941196453;
       if(null != aClass116_Sub14Array106[var1]) {
          var2.method3549(aClass116_Sub14Array106[var1], -186092350);
@@ -529,12 +532,12 @@ public class Class7 {
          } else if(client.playerIndex * 1467227105 == var1) {
             throw new RuntimeException();
          } else {
-            anIntArray111[var1] = (var2.anInt2906 * -1522270499 << 28) + (1426698711 * Class116_Sub17.anInt2105 + var2.xMovementSteps[0] >> 6 << 14) + (Class33.anInt456 * 714823515 + var2.yMovementSteps[0] >> 6);
-            if(-1 != var2.anInt2605 * -744366479) {
-               anIntArray103[var1] = var2.anInt2605 * -744366479;
-            } else {
-               anIntArray103[var1] = -2061229533 * var2.anInt2631;
-            }
+	         anIntArray111[var1] = (var2.anInt2906 * -1522270499 << 28) + (1426698711 * Class116_Sub17.clickX + var2.xMovementSteps[0] >> 6 << 14) + (Class33.clickY * 714823515 + var2.yMovementSteps[0] >> 6);
+	         if (-1 != var2.faceDirection * -744366479) {
+		         anIntArray103[var1] = var2.faceDirection * -744366479;
+	         } else {
+		         anIntArray103[var1] = -2061229533 * var2.faceDir1;
+	         }
 
             anIntArray102[var1] = var2.anInt2603 * 734924805;
             client.globalPlayers[var1] = null;
@@ -690,9 +693,9 @@ public class Class7 {
                var9 = var8 >> 28;
                var11 = var8 >> 14 & 16383;
                var10 = var8 & 16383;
-               var3 = (var11 + Class116_Sub17.anInt2105 * 1426698711 + var2.xMovementSteps[0] & 16383) - 1426698711 * Class116_Sub17.anInt2105;
-               var4 = (var10 + Class33.anInt456 * 714823515 + var2.yMovementSteps[0] & 16383) - 714823515 * Class33.anInt456;
-               if(1467227105 * client.playerIndex == var1 && (1272643751 * var2.anInt2609 < 1536 || -1801433343 * var2.anInt2579 < 1536 || 1272643751 * var2.anInt2609 >= 11776 || var2.anInt2579 * -1801433343 >= 11776)) {
+	            var3 = (var11 + Class116_Sub17.clickX * 1426698711 + var2.xMovementSteps[0] & 16383) - 1426698711 * Class116_Sub17.clickX;
+	            var4 = (var10 + Class33.clickY * 714823515 + var2.yMovementSteps[0] & 16383) - 714823515 * Class33.clickY;
+	            if(1467227105 * client.playerIndex == var1 && (1272643751 * var2.anInt2609 < 1536 || -1801433343 * var2.anInt2579 < 1536 || 1272643751 * var2.anInt2609 >= 11776 || var2.anInt2579 * -1801433343 >= 11776)) {
                   var2.method3551(var3, var4, 2071302157);
                   var2.aBool2901 = false;
                } else if(var6) {
@@ -728,12 +731,12 @@ public class Class7 {
          } else if(client.playerIndex * 1467227105 == var1) {
             throw new RuntimeException();
          } else {
-            anIntArray111[var1] = (var2.anInt2906 * -1522270499 << 28) + (1426698711 * Class116_Sub17.anInt2105 + var2.xMovementSteps[0] >> 6 << 14) + (Class33.anInt456 * 714823515 + var2.yMovementSteps[0] >> 6);
-            if(-1 != var2.anInt2605 * -744366479) {
-               anIntArray103[var1] = var2.anInt2605 * -744366479;
-            } else {
-               anIntArray103[var1] = -2061229533 * var2.anInt2631;
-            }
+	         anIntArray111[var1] = (var2.anInt2906 * -1522270499 << 28) + (1426698711 * Class116_Sub17.clickX + var2.xMovementSteps[0] >> 6 << 14) + (Class33.clickY * 714823515 + var2.yMovementSteps[0] >> 6);
+	         if (-1 != var2.faceDirection * -744366479) {
+		         anIntArray103[var1] = var2.faceDirection * -744366479;
+	         } else {
+		         anIntArray103[var1] = -2061229533 * var2.faceDir1;
+	         }
 
             anIntArray102[var1] = var2.anInt2603 * 734924805;
             client.globalPlayers[var1] = null;
@@ -889,9 +892,9 @@ public class Class7 {
                var7 = var9 >> 28;
                var10 = var9 >> 14 & 16383;
                var11 = var9 & 16383;
-               var3 = (var10 + Class116_Sub17.anInt2105 * 1426698711 + var2.xMovementSteps[0] & 16383) - 1426698711 * Class116_Sub17.anInt2105;
-               var4 = (var11 + Class33.anInt456 * 714823515 + var2.yMovementSteps[0] & 16383) - 714823515 * Class33.anInt456;
-               if(1467227105 * client.playerIndex == var1 && (1272643751 * var2.anInt2609 < 1536 || -1801433343 * var2.anInt2579 < 1536 || 1272643751 * var2.anInt2609 >= 11776 || var2.anInt2579 * -1801433343 >= 11776)) {
+	            var3 = (var10 + Class116_Sub17.clickX * 1426698711 + var2.xMovementSteps[0] & 16383) - 1426698711 * Class116_Sub17.clickX;
+	            var4 = (var11 + Class33.clickY * 714823515 + var2.yMovementSteps[0] & 16383) - 714823515 * Class33.clickY;
+	            if(1467227105 * client.playerIndex == var1 && (1272643751 * var2.anInt2609 < 1536 || -1801433343 * var2.anInt2579 < 1536 || 1272643751 * var2.anInt2609 >= 11776 || var2.anInt2579 * -1801433343 >= 11776)) {
                   var2.method3551(var3, var4, 1232004164);
                   var2.aBool2901 = false;
                } else if(var5) {
@@ -911,10 +914,6 @@ public class Class7 {
             }
          }
       }
-   }
-
-   Class7() throws Throwable {
-      throw new Error();
    }
 
    static boolean method107(BitBuffer var0, int var1) {
@@ -946,16 +945,16 @@ public class Class7 {
                var11.method3549(aClass116_Sub14Array106[var1], -617088917);
             }
 
-            var11.anInt2631 = anIntArray103[var1] * 176982288;
-            var11.anInt2603 = anIntArray102[var1] * 1611414733;
+	         var11.faceDir1 = anIntArray103[var1] * 176982288;
+	         var11.anInt2603 = anIntArray102[var1] * 1611414733;
             var6 = anIntArray111[var1];
             var9 = var6 >> 28;
             var3 = var6 >> 14 & 255;
             var7 = var6 & 255;
             var11.aByteArray2628[0] = aByteArray105[var1];
             var11.anInt2906 = 1038982070 * (byte)var9;
-            var11.method3551(var4 + (var3 << 6) - 1426698711 * Class116_Sub17.anInt2105, var8 + (var7 << 6) - 714823515 * Class33.anInt456, 572697079);
-            var11.aBool2901 = false;
+	         var11.method3551(var4 + (var3 << 6) - 1426698711 * Class116_Sub17.clickX, var8 + (var7 << 6) - 714823515 * Class33.clickY, 572697079);
+	         var11.aBool2901 = false;
             return true;
          }
       } else if(var2 == 1) {
@@ -1100,11 +1099,11 @@ public class Class7 {
       }
 
       if(0 != (var3 & 32)) {
-         var2.anInt2605 = var0.readShort(322837279) * -316267887;
-         if(0 == var2.anInt2578 * 632093179) {
-            var2.anInt2631 = 47518811 * var2.anInt2605;
-            var2.anInt2605 = 316267887;
-         }
+	      var2.faceDirection = var0.readShort(322837279) * -316267887;
+	      if(0 == var2.anInt2578 * 632093179) {
+	         var2.faceDir1 = 47518811 * var2.faceDirection;
+	         var2.faceDirection = 316267887;
+	      }
       }
 
       if((var3 & 8) != 0) {
@@ -1112,7 +1111,8 @@ public class Class7 {
          Speach[] var20 = new Speach[]{Speach.OFFLINE, Speach.PLAYER, Speach.MOD, Speach.ADMIN, Speach.ULT_IRONMAN};
          Speach var21 = (Speach)Class35.method646(var20, var0.readSignedByte(1708176767), (byte)-41);
          boolean var8 = var0.readSignedByte(1708176767) == 1;
-         int var9 = var0.readSignedByte(1708176767);
+
+	      int var9 = var0.readSignedByte(1708176767);
          int var10 = 314639891 * var0.position;
          if(null != var2.username && null != var2.aClass108_2881) {
             boolean var11 = false;

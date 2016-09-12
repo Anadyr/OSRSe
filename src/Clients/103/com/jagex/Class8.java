@@ -1,24 +1,29 @@
 package com.jagex;
-import java.awt.Font;
-import java.util.ArrayList;
 
 import com.applet.Launcher;
+
+import java.awt.*;
+import java.util.ArrayList;
 
 public class Class8 {
 
    public static final int anInt121 = 212;
-   public static int anInt122;
    public static final int anInt123 = 153;
+	static final int anInt128 = 37;
+	public static int anInt122;
    public static int[] anIntArray124;
    public static int[] anIntArray125;
    public static int[] anIntArray126;
-   static byte[][] aByteArrayArray127;
-   static final int anInt128 = 37;
+	public static int anInt132;
    protected static Font aFont129;
+	static byte[][] aByteArrayArray127;
    static int anInt130;
    static int anInt131;
-   public static int anInt132;
 
+
+	Class8() throws Throwable {
+		throw new Error();
+	}
 
    static final void decodeMapRegion(boolean dynamic, byte var1) {
       client.dynamicRegion = dynamic;
@@ -101,7 +106,7 @@ public class Class8 {
          client.bitBuffer.startBitAccess((byte) 76);
          Class116_Sub23_Sub17.anIntArrayArray2472 = new int[count][4];
 
-         
+
          for(idx = 0; idx < count; ++idx) {
             for(xCalc = 0; xCalc < 4; ++xCalc) {
                Class116_Sub23_Sub17.anIntArrayArray2472[idx][xCalc] = client.bitBuffer.readInt(-1935483859);
@@ -114,8 +119,8 @@ public class Class8 {
          aByteArrayArray127 = new byte[count][];
          Tile.aByteArrayArray1858 = new byte[count][];
          count = 0;
- 
-         for(idx = 0; idx < 4; ++idx) {
+
+	      for(idx = 0; idx < 4; ++idx) {
             for(xCalc = 0; xCalc < 13; ++xCalc) {
                for(var2 = 0; var2 < 13; ++var2) {
                   regionID = client.anIntArrayArrayArray2998[idx][xCalc][var2];
@@ -123,8 +128,8 @@ public class Class8 {
                      int var12 = regionID >> 14 & 1023;
                      int var13 = regionID >> 3 & 2047;
                      int var9 = (var12 / 8 << 8) + var13 / 8;
-                    
-                     int var5;
+
+	                  int var5;
                      for(var5 = 0; var5 < count; ++var5) {
                         if(client.anIntArray2995[var5] == var9) {
                            var9 = -1;
@@ -133,8 +138,8 @@ public class Class8 {
                      }
 
                      Launcher.dumpMap(regionID, anIntArray126);
-                     
-                     if(var9 != -1) {
+
+	                  if(var9 != -1) {
                         client.anIntArray2995[count] = var9;
                         var5 = var9 >> 8 & 255;
                         int var11 = var9 & 255;
@@ -149,10 +154,6 @@ public class Class8 {
          Class116_Sub12.method1979(chunkY, chunkX, (byte)11);
       }
 
-   }
-
-   Class8() throws Throwable {
-      throw new Error();
    }
 
    public static int method119(byte[] var0, int var1, CharSequence var2, int var3) {
@@ -303,7 +304,7 @@ public class Class8 {
             var12.definition = Class116_Sub23_Sub15.method2705(client.bitBuffer.readBits(14, (byte) -1), -1211850206);
             var4 = client.anIntArray2959[client.bitBuffer.readBits(3, (byte) -1)];
             if(var11) {
-               var12.anInt2631 = (var12.anInt2613 = var4 * 518992781) * -1253637257;
+	            var12.faceDir1 = (var12.anInt2613 = var4 * 518992781) * -1253637257;
             }
 
             var8 = client.bitBuffer.readBits(1, (byte) -1);

@@ -2,24 +2,21 @@ package com.jagex;
 
 public class GameType implements OrdinalInterface {
 
-   public String aString1028;
+	public static final int anInt1036 = 19136776;
+	static final int anInt1037 = 23;
+	public static GameType aClass88_1033 = new GameType("oldscape", "RuneScape 2007", 5);
    static GameType aClass88_1029 = new GameType("stellardawn", "Stellar Dawn", 1);
    static GameType aClass88_1030 = new GameType("game3", "Game 3", 2);
    static GameType aClass88_1031 = new GameType("game4", "Game 4", 3);
    static GameType aClass88_1032 = new GameType("game5", "Game 5", 4);
-   public static GameType aClass88_1033 = new GameType("oldscape", "RuneScape 2007", 5);
    static GameType aClass88_1034 = new GameType("runescape", "RuneScape", 0);
+	public String aString1028;
    int anInt1035;
-   public static final int anInt1036 = 19136776;
-   static final int anInt1037 = 23;
 
 
-   public int method34() {
-      return -2121406141 * this.anInt1035;
-   }
-
-   public int getDrawId(int var1) {
-      return 1118824193 * this.anInt1035;
+	GameType(String var1, String var2, int var3) {
+		this.aString1028 = var1;
+		this.anInt1035 = 1757485313 * var3;
    }
 
    static final void method1177(Class116_Sub15[] var0, int var1, byte var2) {
@@ -86,28 +83,11 @@ public class GameType implements OrdinalInterface {
 
    }
 
-   public int method30() {
-      return 1118824193 * this.anInt1035;
-   }
-
-   public int method33() {
-      return 1118824193 * this.anInt1035;
-   }
-
-   GameType(String var1, String var2, int var3) {
-      this.aString1028 = var1;
-      this.anInt1035 = 1757485313 * var3;
-   }
-
-   public int method32() {
-      return 1118824193 * this.anInt1035;
-   }
-
    static final void method1178(int var0) {
       client.anInt3151 = 0;
-      int var2 = (1272643751 * Class79.aPlayer_909.anInt2609 >> 7) + Class116_Sub17.anInt2105 * 1426698711;
-      int var1 = (Class79.aPlayer_909.anInt2579 * -1801433343 >> 7) + Class33.anInt456 * 714823515;
-      if(var2 >= 3053 && var2 <= 3156 && var1 >= 3056 && var1 <= 3136) {
+	   int var2 = (1272643751 * Class79.aPlayer_909.anInt2609 >> 7) + Class116_Sub17.clickX * 1426698711;
+	   int var1 = (Class79.aPlayer_909.anInt2579 * -1801433343 >> 7) + Class33.clickY * 714823515;
+	   if(var2 >= 3053 && var2 <= 3156 && var1 >= 3056 && var1 <= 3136) {
          client.anInt3151 = 450862527;
       }
 
@@ -119,5 +99,25 @@ public class GameType implements OrdinalInterface {
          client.anInt3151 = 0;
       }
 
+   }
+
+	public int method34() {
+		return -2121406141 * this.anInt1035;
+	}
+
+	public int getDrawId(int var1) {
+		return 1118824193 * this.anInt1035;
+	}
+
+	public int method30() {
+		return 1118824193 * this.anInt1035;
+	}
+
+	public int method33() {
+		return 1118824193 * this.anInt1035;
+	}
+
+	public int method32() {
+		return 1118824193 * this.anInt1035;
    }
 }

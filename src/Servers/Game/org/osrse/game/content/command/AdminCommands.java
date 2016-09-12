@@ -111,9 +111,19 @@ public class AdminCommands extends Commands {
         commandMap.put("tp", cmd);
         cmd = reloadscripts();
         commandMap.put("rls", cmd);
+        cmd = closeInter();
+        commandMap.put("cls", cmd);
 
     }
 
+    private Command closeInter() {
+        return new Command() {
+            @Override
+            public void handle(Player player, String[] args) {
+                player.getProtocol().sendCloseInterface(Integer.parseInt(args[0]), Integer.parseInt(args[1]));
+            }
+        };
+    }
 
     private Command reloadscripts() {
         return new Command() {

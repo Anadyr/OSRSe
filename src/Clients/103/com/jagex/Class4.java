@@ -2,14 +2,14 @@ package com.jagex;
 
 public class Class4 {
 
+	static int anInt49;
+	static int anInt50;
+	static int[] anIntArray52;
    int anInt45;
    int anInt46;
    int anInt47;
    String aString48;
-   static int anInt49;
-   static int anInt50;
    int anInt51;
-   static int[] anIntArray52;
 
    static boolean updateGlobalPlayer(BitBuffer var0, int var1, byte var2) {
       int var3 = var0.readBits(2, (byte) -1);
@@ -40,16 +40,16 @@ public class Class4 {
                var12.method3549(Class7.aClass116_Sub14Array106[var1], -112397156);
             }
 
-            var12.anInt2631 = Class7.anIntArray103[var1] * 736533899;
-            var12.anInt2603 = Class7.anIntArray102[var1] * 1611414733;
+	         var12.faceDir1 = Class7.anIntArray103[var1] * 736533899;
+	         var12.anInt2603 = Class7.anIntArray102[var1] * 1611414733;
             var11 = Class7.anIntArray111[var1];
             var4 = var11 >> 28;
             var7 = var11 >> 14 & 255;
             var9 = var11 & 255;
             var12.aByteArray2628[0] = Class7.aByteArray105[var1];
             var12.anInt2906 = -1668953739 * (byte)var4;
-            var12.method3551(var5 + (var7 << 6) - 1426698711 * Class116_Sub17.anInt2105, var8 + (var9 << 6) - 714823515 * Class33.anInt456, 512250771);
-            var12.aBool2901 = false;
+	         var12.method3551(var5 + (var7 << 6) - 1426698711 * Class116_Sub17.clickX, var8 + (var9 << 6) - 714823515 * Class33.clickY, 512250771);
+	         var12.aBool2901 = false;
             return true;
          }
       } else if(var3 == 1) {

@@ -41,8 +41,8 @@ public class Class80 {
             }
 
             var0.anInt2635 = 0;
-            var0.anInt2631 = -1269181295 * var0.anInt2625;
-            var0.anInt2613 = var0.anInt2631 * -2141141433;
+	         var0.faceDir1 = -1269181295 * var0.anInt2625;
+	         var0.anInt2613 = var0.faceDir1 * -2141141433;
          } else {
             var0.anInt2606 = var0.anInt2639 * 1277708751;
             if(0 == var0.anInt2578 * 632093179) {
@@ -68,30 +68,30 @@ public class Class80 {
                   var8 = -2013728192 * var0.anInt2582 + var0.yMovementSteps[632093179 * var0.anInt2578 - 1] * 128;
                   if(var3 < var7) {
                      if(var5 < var8) {
-                        var0.anInt2631 = -2129414400;
+	                     var0.faceDir1 = -2129414400;
                      } else if(var5 > var8) {
-                        var0.anInt2631 = 1313787136;
+	                     var0.faceDir1 = 1313787136;
                      } else {
-                        var0.anInt2631 = 1739670016;
+	                     var0.faceDir1 = 1739670016;
                      }
                   } else if(var3 > var7) {
                      if(var5 < var8) {
-                        var0.anInt2631 = -1277648640;
+	                     var0.faceDir1 = -1277648640;
                      } else if(var5 <= var8) {
-                        var0.anInt2631 = -851765760;
+	                     var0.faceDir1 = -851765760;
                      } else {
-                        var0.anInt2631 = -425882880;
+	                     var0.faceDir1 = -425882880;
                      }
                   } else if(var5 < var8) {
-                     var0.anInt2631 = -1703531520;
+	                  var0.faceDir1 = -1703531520;
                   } else if(var5 > var8) {
-                     var0.anInt2631 = 0;
+	                  var0.faceDir1 = 0;
                   }
 
                   byte var13 = var0.aByteArray2628[var0.anInt2578 * 632093179 - 1];
                   if(var7 - var3 <= 256 && var7 - var3 >= -256 && var8 - var5 <= 256 && var8 - var5 >= -256) {
-                     var6 = -2061229533 * var0.anInt2631 - -2031663291 * var0.anInt2613 & 2047;
-                     if(var6 > 1024) {
+	                  var6 = -2061229533 * var0.faceDir1 - -2031663291 * var0.anInt2613 & 2047;
+	                  if(var6 > 1024) {
                         var6 -= 2048;
                      }
 
@@ -116,8 +116,8 @@ public class Class80 {
                      }
 
                      if(var11) {
-                        if(-2061229533 * var0.anInt2631 != -2031663291 * var0.anInt2613 && -1 == var0.anInt2603 * 734924805 && 1361576967 * var0.anInt2630 != 0) {
-                           var9 = 2;
+	                     if (-2061229533 * var0.faceDir1 != -2031663291 * var0.anInt2613 && -1 == var0.anInt2603 * 734924805 && 1361576967 * var0.anInt2630 != 0) {
+		                     var9 = 2;
                         }
 
                         if(var0.anInt2578 * 632093179 > 2) {

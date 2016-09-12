@@ -3,10 +3,6 @@ import java.io.File;
 
 public abstract class Timer {
 
-   abstract void reset(int var1);
-
-   abstract int method1085(int var1, int var2, byte var3);
-
    static void forceFileCheck(File var0, int var1) {
       Class90.aFile1042 = var0;
       if(!Class90.aFile1042.exists()) {
@@ -71,11 +67,11 @@ public abstract class Timer {
       }
 
       if(0 != (mask & 32)) {
-         owner.anInt2605 = buffer.readShort(1868687810) * -316267887;
-         if(0 == owner.anInt2578 * 632093179) {
-            owner.anInt2631 = 47518811 * owner.anInt2605;
-            owner.anInt2605 = 316267887;
-         }
+	      owner.faceDirection = buffer.readShort(1868687810) * -316267887;
+	      if(0 == owner.anInt2578 * 632093179) {
+	         owner.faceDir1 = 47518811 * owner.faceDirection;
+	         owner.faceDirection = 316267887;
+	      }
       }
 
       if((mask & 8) != 0) { //chat
@@ -205,8 +201,8 @@ public abstract class Timer {
             System.out.println("MOVEMENT = "+movement+", "+owner.username);
       }
 
-      if(0 != (mask & 8192)) { //Multi force chat, Zanaris maybe?
-         for(i = 0; i < 3; ++i) {
+	   if (0 != (mask & 8192)) { //DEADMANshitnaming
+		   for(i = 0; i < 3; ++i) {
             owner.aStringArray2884[i] = buffer.readString(61376769);
          }
       }
@@ -263,5 +259,9 @@ public abstract class Timer {
       Class108.aClass99_Sub1_1471.method1364((byte)20);
       Class116_Sub23_Sub6.aClass99_Sub1_2279.method1364((byte)-66);
    }
+
+	abstract void reset(int var1);
+
+	abstract int method1085(int var1, int var2, byte var3);
 
 }

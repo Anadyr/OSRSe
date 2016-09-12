@@ -36,10 +36,6 @@ public abstract class Class63 {
       return var10;
    }
 
-   abstract byte[] method919(int var1);
-
-   abstract void method929(byte[] var1, int var2);
-
    public static void method933(Applet var0, String var1, byte var2) {
       Class81.anApplet924 = var0;
       Class81.aString922 = var1;
@@ -397,11 +393,7 @@ public abstract class Class63 {
                }
 
                boolean var47;
-               if(var10[var8] == 1) {
-                  var47 = true;
-               } else {
-                  var47 = false;
-               }
+	            var47 = var10[var8] == 1;
 
                Class116_Sub15 var16;
                Class116_Sub15 var18;
@@ -1086,7 +1078,7 @@ public abstract class Class63 {
                                                 if(1 == var34) {
                                                    client.rsaBuffer.startPacket(234, (byte) 92);
                                                    client.rsaBuffer.method2135(0, -788814040);
-                                                   client.rsaBuffer.method2102(var40[var21], -1648648956);
+	                                                client.rsaBuffer.writeShortA(var40[var21], -1648648956);
                                                 } else if(4 == var34) {
                                                    client.rsaBuffer.startPacket(83, (byte) 45);
                                                    client.rsaBuffer.writeByte(0, -1739045830);
@@ -1094,7 +1086,7 @@ public abstract class Class63 {
                                                 } else if(6 == var34) {
                                                    client.rsaBuffer.startPacket(4, (byte) 81);
                                                    client.rsaBuffer.writeByteC(0, 2006247516);
-                                                   client.rsaBuffer.method2102(var40[var21], 480613106);
+	                                                client.rsaBuffer.writeShortA(var40[var21], 480613106);
                                                 } else if(var34 == 7) {
                                                    client.rsaBuffer.startPacket(224, (byte) 21);
                                                    client.rsaBuffer.method2135(0, -1828445303);
@@ -1295,9 +1287,9 @@ public abstract class Class63 {
 
                                        if(3308 == var32) {
                                           var34 = Class116_Sub11.anInt1819 * -747958745;
-                                          var17 = 1426698711 * Class116_Sub17.anInt2105 + (1272643751 * Class79.aPlayer_909.anInt2609 >> 7);
-                                          var36 = (Class79.aPlayer_909.anInt2579 * -1801433343 >> 7) + Class33.anInt456 * 714823515;
-                                          Class3.anIntArray44[var6++] = (var17 << 14) + (var34 << 28) + var36;
+	                                       var17 = 1426698711 * Class116_Sub17.clickX + (1272643751 * Class79.aPlayer_909.anInt2609 >> 7);
+	                                       var36 = (Class79.aPlayer_909.anInt2579 * -1801433343 >> 7) + Class33.clickY * 714823515;
+	                                       Class3.anIntArray44[var6++] = (var17 << 14) + (var34 << 28) + var36;
                                           continue;
                                        }
 
@@ -1430,7 +1422,6 @@ public abstract class Class63 {
                                           var17 = Class3.anIntArray44[1 + var6];
                                           Class116_Sub23_Sub5 var54 = ObjectDefinition.method2437(var34, (byte) 92);
                                           if(var54.aChar2268 != 115) {
-                                             ;
                                           }
 
                                           for(var46 = 0; var46 < var54.anInt2265 * 557176427; ++var46) {
@@ -2377,11 +2368,8 @@ public abstract class Class63 {
                                                 var42 = true;
                                              } else if(var79 >= 160 && var79 <= 255) {
                                                 var42 = true;
-                                             } else if(var79 != 8364 && var79 != 338 && var79 != 8212 && 339 != var79 && var79 != 376) {
-                                                var42 = false;
-                                             } else {
-                                                var42 = true;
-                                             }
+                                             } else
+	                                             var42 = !(var79 != 8364 && var79 != 338 && var79 != 8212 && 339 != var79 && var79 != 376);
 
                                              var90[var36] = var42?1:0;
                                              continue;
@@ -3406,11 +3394,7 @@ public abstract class Class63 {
                      }
 
                      client.aLong2975 = 0L;
-                     if(var34 >= 2) {
-                        client.aBool3140 = true;
-                     } else {
-                        client.aBool3140 = false;
-                     }
+	                  client.aBool3140 = var34 >= 2;
 
                      Class116_Sub5.method1931(384444262);
                      if(client.loginStage * 846055547 >= 25) {
@@ -3701,5 +3685,9 @@ public abstract class Class63 {
          }
       }
    }
+
+	abstract byte[] method919(int var1);
+
+	abstract void method929(byte[] var1, int var2);
 
 }
