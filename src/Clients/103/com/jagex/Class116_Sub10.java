@@ -33,7 +33,7 @@ public class Class116_Sub10 extends Node {
 	   var3.anInt2609 = ((var3.xMovementSteps[0] << 7) + (var3.method3561(-1030060260) << 6)) * 1705682711;
 	   var3.yMovementSteps[0] = var7 - Class33.clickY * 714823515;
 	   var3.anInt2579 = ((var3.yMovementSteps[0] << 7) + (var3.method3561(1984644454) << 6)) * 1421914369;
-      Class116_Sub11.anInt1819 = (var3.anInt2906 = var8 * -1668953739) * -1941196453;
+	   Class116_Sub11.anInt1819 = (var3.anInt2906 = var8 * -1668953739) * -1941196453;
       if(null != Class7.aClass116_Sub14Array106[var2]) {
          var3.method3549(Class7.aClass116_Sub14Array106[var2], 2095903438);
       }

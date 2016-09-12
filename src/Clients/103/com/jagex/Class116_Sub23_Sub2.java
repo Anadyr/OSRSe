@@ -42,8 +42,8 @@ public class Class116_Sub23_Sub2 extends NodeContainer {
             var5 = client.bitBuffer.readShortA(-338860511);
 	         var7 = var4.anInt2609 * 1272643751 - (var6 - 1426698711 * Class116_Sub17.clickX - Class116_Sub17.clickX * 1426698711) * 64;
 	         int var8 = var4.anInt2579 * -1801433343 - (var5 - 714823515 * Class33.clickY - Class33.clickY * 714823515) * 64;
-	         if(0 != var7 || 0 != var8) {
-	            var4.faceDirection = ((int) (Math.atan2((double) var7, (double) var8) * 325.949D) & 2047) * -316267887;
+	         if (0 != var7 || 0 != var8) {
+		         var4.faceDirection = ((int) (Math.atan2((double) var7, (double) var8) * 325.949D) & 2047) * -316267887;
 	         }
          }
 

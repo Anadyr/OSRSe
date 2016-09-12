@@ -42,7 +42,7 @@ public class Class4 {
 
 	         var12.faceDir1 = Class7.anIntArray103[var1] * 736533899;
 	         var12.anInt2603 = Class7.anIntArray102[var1] * 1611414733;
-            var11 = Class7.anIntArray111[var1];
+	         var11 = Class7.anIntArray111[var1];
             var4 = var11 >> 28;
             var7 = var11 >> 14 & 255;
             var9 = var11 & 255;
@@ -50,7 +50,7 @@ public class Class4 {
             var12.anInt2906 = -1668953739 * (byte)var4;
 	         var12.method3551(var5 + (var7 << 6) - 1426698711 * Class116_Sub17.clickX, var8 + (var9 << 6) - 714823515 * Class33.clickY, 512250771);
 	         var12.aBool2901 = false;
-            return true;
+	         return true;
          }
       } else if(var3 == 1) {
          var5 = var0.readBits(2, (byte) -1);

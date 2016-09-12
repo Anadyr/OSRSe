@@ -291,8 +291,8 @@ public final class Player extends Entity {
                var11 = xStep & 16383;
 	            var10 = (var12 + Class116_Sub17.clickX * 1426698711 + playerInCycle.xMovementSteps[0] & 16383) - 1426698711 * Class116_Sub17.clickX;
 	            var9 = (var11 + Class33.clickY * 714823515 + playerInCycle.yMovementSteps[0] & 16383) - 714823515 * Class33.clickY;
-	            if(1467227105 * client.playerIndex == player && (1272643751 * playerInCycle.anInt2609 < 1536 || -1801433343 * playerInCycle.anInt2579 < 1536 || 1272643751 * playerInCycle.anInt2609 >= 11776 || playerInCycle.anInt2579 * -1801433343 >= 11776)) {
-                  playerInCycle.method3551(var10, var9, 898747744);
+	            if (1467227105 * client.playerIndex == player && (1272643751 * playerInCycle.anInt2609 < 1536 || -1801433343 * playerInCycle.anInt2579 < 1536 || 1272643751 * playerInCycle.anInt2609 >= 11776 || playerInCycle.anInt2579 * -1801433343 >= 11776)) {
+		            playerInCycle.method3551(var10, var9, 898747744);
                   playerInCycle.aBool2901 = false;
                } else if(maskUpdate) {
                   playerInCycle.aBool2901 = true;

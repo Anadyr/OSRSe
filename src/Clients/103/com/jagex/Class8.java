@@ -120,8 +120,8 @@ public class Class8 {
          Tile.aByteArrayArray1858 = new byte[count][];
          count = 0;
 
-	      for(idx = 0; idx < 4; ++idx) {
-            for(xCalc = 0; xCalc < 13; ++xCalc) {
+	      for (idx = 0; idx < 4; ++idx) {
+		      for(xCalc = 0; xCalc < 13; ++xCalc) {
                for(var2 = 0; var2 < 13; ++var2) {
                   regionID = client.anIntArrayArrayArray2998[idx][xCalc][var2];
                   if(-1 != regionID) {
@@ -130,7 +130,7 @@ public class Class8 {
                      int var9 = (var12 / 8 << 8) + var13 / 8;
 
 	                  int var5;
-                     for(var5 = 0; var5 < count; ++var5) {
+	                  for(var5 = 0; var5 < count; ++var5) {
                         if(client.anIntArray2995[var5] == var9) {
                            var9 = -1;
                            break;
@@ -139,8 +139,8 @@ public class Class8 {
 
                      Launcher.dumpMap(regionID, anIntArray126);
 
-	                  if(var9 != -1) {
-                        client.anIntArray2995[count] = var9;
+	                  if (var9 != -1) {
+		                  client.anIntArray2995[count] = var9;
                         var5 = var9 >> 8 & 255;
                         int var11 = var9 & 255;
                         Class80.anIntArray920[count] = Class59_Sub1.aClass99_Sub1_1828.method1366("m" + var5 + "_" + var11, -416918321);

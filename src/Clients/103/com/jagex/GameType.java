@@ -87,8 +87,8 @@ public class GameType implements OrdinalInterface {
       client.anInt3151 = 0;
 	   int var2 = (1272643751 * Class79.aPlayer_909.anInt2609 >> 7) + Class116_Sub17.clickX * 1426698711;
 	   int var1 = (Class79.aPlayer_909.anInt2579 * -1801433343 >> 7) + Class33.clickY * 714823515;
-	   if(var2 >= 3053 && var2 <= 3156 && var1 >= 3056 && var1 <= 3136) {
-         client.anInt3151 = 450862527;
+	   if (var2 >= 3053 && var2 <= 3156 && var1 >= 3056 && var1 <= 3136) {
+		   client.anInt3151 = 450862527;
       }
 
       if(var2 >= 3072 && var2 <= 3118 && var1 >= 9492 && var1 <= 9535) {

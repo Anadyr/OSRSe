@@ -1290,7 +1290,7 @@ public abstract class Class63 {
 	                                       var17 = 1426698711 * Class116_Sub17.clickX + (1272643751 * Class79.aPlayer_909.anInt2609 >> 7);
 	                                       var36 = (Class79.aPlayer_909.anInt2579 * -1801433343 >> 7) + Class33.clickY * 714823515;
 	                                       Class3.anIntArray44[var6++] = (var17 << 14) + (var34 << 28) + var36;
-                                          continue;
+	                                       continue;
                                        }
 
                                        if(3309 == var32) {

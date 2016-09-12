@@ -222,7 +222,7 @@ public final class Class116_Sub12 extends Node {
                if(314519437 * client.anInt3021 == 2) {
 	               var5 = 2 + (-751140636 * client.anInt2954 - 1411827548 * Class116_Sub17.clickX) - 1272643751 * Class79.aPlayer_909.anInt2609 / 32;
 	               var6 = 2 + (client.anInt2950 * 985346372 - Class33.clickY * -1435673236) - Class79.aPlayer_909.anInt2579 * -1801433343 / 32;
-	               Class8.method140(var1, var2, var5, var6, Class83.aClass116_Sub23_Sub19_Sub2Array970[1], var7, (short)1003);
+	               Class8.method140(var1, var2, var5, var6, Class83.aClass116_Sub23_Sub19_Sub2Array970[1], var7, (short) 1003);
                }
 
                if(client.anInt3021 * 314519437 == 10 && client.anInt3125 * 1613691605 >= 0 && client.anInt3125 * 1613691605 < client.globalPlayers.length) {

@@ -68,9 +68,9 @@ public abstract class Timer {
 
       if(0 != (mask & 32)) {
 	      owner.faceDirection = buffer.readShort(1868687810) * -316267887;
-	      if(0 == owner.anInt2578 * 632093179) {
-	         owner.faceDir1 = 47518811 * owner.faceDirection;
-	         owner.faceDirection = 316267887;
+	      if (0 == owner.anInt2578 * 632093179) {
+		      owner.faceDir1 = 47518811 * owner.faceDirection;
+		      owner.faceDirection = 316267887;
 	      }
       }
 
@@ -202,8 +202,8 @@ public abstract class Timer {
       }
 
 	   if (0 != (mask & 8192)) { //DEADMANshitnaming
-		   for(i = 0; i < 3; ++i) {
-            owner.aStringArray2884[i] = buffer.readString(61376769);
+		   for (i = 0; i < 3; ++i) {
+			   owner.aStringArray2884[i] = buffer.readString(61376769);
          }
       }
 

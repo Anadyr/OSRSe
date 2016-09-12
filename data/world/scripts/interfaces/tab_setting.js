@@ -15,7 +15,11 @@ function clientSetting(player, interfaceId, button, idx, idx2) {
                 player.setAttribute("chatbox", true)
             }
             player.getProtocol().sendConfig(1055, player.hasAttribute("chatbox") ? 800 : 0)//todo fix
-        };; else if (button == 15) {
+        }
+        ;
+        ;
+    else
+        if (button == 15) {
             if (player.getScreenDisplay().resizable()) {
                 if (player.hasAttribute("fixTab")) {
                     player.removeAttribute("fixTab");

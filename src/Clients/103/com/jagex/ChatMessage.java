@@ -75,8 +75,8 @@ public class ChatMessage extends NodeContainer {
 	      }
 
 	      int var6 = -2061229533 * var0.faceDir1 - var0.anInt2613 * -2031663291 & 2047;
-	      if(var6 == 0 && var0.aBool2604) {
-            var0.anInt2603 = -1611414733;
+	      if (var6 == 0 && var0.aBool2604) {
+		      var0.anInt2603 = -1611414733;
             var0.aBool2604 = false;
          }
 

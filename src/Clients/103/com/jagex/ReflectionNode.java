@@ -15,8 +15,8 @@ public class ReflectionNode extends Node {
 
 
 	static final void method2340(int var0, int var1, int var2, int objIndex, String var4, String var5, int var6, int var7, int var8) {
-		if(var2 >= 2000) {
-         var2 -= 2000;
+		if (var2 >= 2000) {
+			var2 -= 2000;
       }
 
       if(21 == var2) {
@@ -56,7 +56,7 @@ public class ReflectionNode extends Node {
          client.rsaBuffer.writeInt(var1, (byte)43);
 	      client.rsaBuffer.writeShortA(objIndex, 1471200376);
 	      client.rsaBuffer.writeShort(var0, -1881121516);
-         client.anInt3047 = 0;
+	      client.anInt3047 = 0;
          Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
          client.anInt3048 = var0 * -1119534041;
       }
@@ -66,7 +66,7 @@ public class ReflectionNode extends Node {
          client.rsaBuffer.writeLEShortA(var0, -1983290574);
 	      client.rsaBuffer.writeLEShortA(objIndex, -128120499);
 	      client.rsaBuffer.method2087(var1, 1582012970);
-         client.anInt3047 = 0;
+	      client.anInt3047 = 0;
          Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
          client.anInt3048 = var0 * -1119534041;
       }
@@ -75,7 +75,7 @@ public class ReflectionNode extends Node {
          client.rsaBuffer.startPacket(212, (byte) 65);
 	      client.rsaBuffer.writeShort(objIndex, -1717128077);
 	      client.rsaBuffer.writeLEShort(var0, 1026860661);
-         client.rsaBuffer.method2087(var1, 1078546451);
+	      client.rsaBuffer.method2087(var1, 1078546451);
          client.anInt3047 = 0;
          Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
          client.anInt3048 = -1119534041 * var0;
@@ -116,7 +116,7 @@ public class ReflectionNode extends Node {
                   var12.aClass116_Sub15_1736 = var11;
 	               var12.anInt1734 = objIndex * 1329208753;
 	               var12.aString1743 = var5;
-                  var12.anObjectArray1737 = var11.anObjectArray2023;
+	               var12.anObjectArray1737 = var11.anObjectArray2023;
                   Friend.method1840(var12, -2069888806);
                }
 
@@ -128,70 +128,70 @@ public class ReflectionNode extends Node {
 	            if (var17 && Class116_Sub17.method2314(Class35.method645(var11, (byte) 0), objIndex - 1, 1717977072)) {
 		            if (1 == objIndex) {
 			            client.rsaBuffer.startPacket(149, (byte) 67);
-                     client.rsaBuffer.writeInt(var1, (byte)121);
+			            client.rsaBuffer.writeInt(var1, (byte)121);
                      client.rsaBuffer.writeShort(var0, -2128928871);
                      client.rsaBuffer.writeShort(var14, -2130754846);
                   }
 
 		            if (2 == objIndex) {
 			            client.rsaBuffer.startPacket(209, (byte) 57);
-                     client.rsaBuffer.writeInt(var1, (byte)114);
+			            client.rsaBuffer.writeInt(var1, (byte)114);
                      client.rsaBuffer.writeShort(var0, -2142995689);
                      client.rsaBuffer.writeShort(var14, -2077709357);
                   }
 
 		            if (objIndex == 3) {
 			            client.rsaBuffer.startPacket(143, (byte) 50);
-                     client.rsaBuffer.writeInt(var1, (byte)122);
+			            client.rsaBuffer.writeInt(var1, (byte)122);
                      client.rsaBuffer.writeShort(var0, -1818890311);
                      client.rsaBuffer.writeShort(var14, -2010787626);
                   }
 
 		            if (4 == objIndex) {
 			            client.rsaBuffer.startPacket(68, (byte) 114);
-                     client.rsaBuffer.writeInt(var1, (byte)28);
+			            client.rsaBuffer.writeInt(var1, (byte)28);
                      client.rsaBuffer.writeShort(var0, -1940746840);
                      client.rsaBuffer.writeShort(var14, -1604755377);
                   }
 
 		            if (objIndex == 5) {
 			            client.rsaBuffer.startPacket(48, (byte) 77);
-                     client.rsaBuffer.writeInt(var1, (byte)22);
+			            client.rsaBuffer.writeInt(var1, (byte)22);
                      client.rsaBuffer.writeShort(var0, -1934993563);
                      client.rsaBuffer.writeShort(var14, -1983788035);
                   }
 
 		            if (objIndex == 6) {
 			            client.rsaBuffer.startPacket(148, (byte) 21);
-                     client.rsaBuffer.writeInt(var1, (byte)127);
+			            client.rsaBuffer.writeInt(var1, (byte)127);
                      client.rsaBuffer.writeShort(var0, -1757661173);
                      client.rsaBuffer.writeShort(var14, -1818038018);
                   }
 
 		            if (7 == objIndex) {
 			            client.rsaBuffer.startPacket(119, (byte) 80);
-                     client.rsaBuffer.writeInt(var1, (byte)65);
+			            client.rsaBuffer.writeInt(var1, (byte)65);
                      client.rsaBuffer.writeShort(var0, -2110541002);
                      client.rsaBuffer.writeShort(var14, -1958895445);
                   }
 
 		            if (8 == objIndex) {
 			            client.rsaBuffer.startPacket(31, (byte) 62);
-                     client.rsaBuffer.writeInt(var1, (byte)37);
+			            client.rsaBuffer.writeInt(var1, (byte)37);
                      client.rsaBuffer.writeShort(var0, -1648666295);
                      client.rsaBuffer.writeShort(var14, -1880935131);
                   }
 
 		            if (9 == objIndex) {
 			            client.rsaBuffer.startPacket(0, (byte) 121);
-                     client.rsaBuffer.writeInt(var1, (byte)9);
+			            client.rsaBuffer.writeInt(var1, (byte)9);
                      client.rsaBuffer.writeShort(var0, -2143188895);
                      client.rsaBuffer.writeShort(var14, -1693294529);
                   }
 
 		            if (10 == objIndex) {
 			            client.rsaBuffer.startPacket(108, (byte) 118);
-                     client.rsaBuffer.writeInt(var1, (byte)20);
+			            client.rsaBuffer.writeInt(var1, (byte)20);
                      client.rsaBuffer.writeShort(var0, -1848613675);
                      client.rsaBuffer.writeShort(var14, -2084319924);
                   }
@@ -230,8 +230,8 @@ public class ReflectionNode extends Node {
             client.rsaBuffer.writeLEShort(543565821 * Class49.anInt661, 289816766);
 	         client.rsaBuffer.writeLEShort(Class116_Sub17.clickX * 1426698711 + var0, 1699135091);
 	         client.rsaBuffer.writeLEShortA(objIndex, 1305424037);
-	         client.rsaBuffer.writeByte(KeyFocusListener.keysHeldDown[82]?1:0, 246658255);
-            client.rsaBuffer.writeShort(1905121485 * Class37.anInt493, -1813968628);
+	         client.rsaBuffer.writeByte(KeyFocusListener.keysHeldDown[82] ? 1 : 0, 246658255);
+	         client.rsaBuffer.writeShort(1905121485 * Class37.anInt493, -1813968628);
             client.rsaBuffer.method2100(Class26.anInt365 * -47339353, (byte)35);
 	         client.rsaBuffer.writeShort(Class33.clickY * 714823515 + var1, -1981734451);
          }
@@ -246,7 +246,7 @@ public class ReflectionNode extends Node {
             client.rsaBuffer.startPacket(49, (byte) 37);
 	         client.rsaBuffer.writeLEShortA(var0 + 1426698711 * Class116_Sub17.clickX, 108656654);
 	         client.rsaBuffer.writeLEShortA(1149825709 * client.anInt3089, 53525308);
-            client.rsaBuffer.method2135(KeyFocusListener.keysHeldDown[82]?1:0, -1982049967);
+	         client.rsaBuffer.method2135(KeyFocusListener.keysHeldDown[82]?1:0, -1982049967);
             client.rsaBuffer.writeInt(Class116_Sub23_Sub4.anInt2262 * -1195336111, (byte)9);
 	         client.rsaBuffer.writeLEShortA(objIndex >> 14 & 32767, -661136740);
 	         client.rsaBuffer.writeLEShortA(Class33.clickY * 714823515 + var1, 430079352);
@@ -261,7 +261,7 @@ public class ReflectionNode extends Node {
             client.anInt3208 = 317027045 * var1;
             client.rsaBuffer.startPacket(192, (byte) 38);
 	         client.rsaBuffer.writeShortA(1426698711 * Class116_Sub17.clickX + var0, -765867794);
-	         client.rsaBuffer.method2209(KeyFocusListener.keysHeldDown[82]?1:0, -1299110932);
+	         client.rsaBuffer.method2209(KeyFocusListener.keysHeldDown[82] ? 1 : 0, -1299110932);
 	         client.rsaBuffer.writeShort(var1 + Class33.clickY * 714823515, -1643474382);
 	         client.rsaBuffer.writeShortA(objIndex >> 14 & 32767, -1718492932);
          }
@@ -280,8 +280,8 @@ public class ReflectionNode extends Node {
          Mob var13;
          if(10 == var2) {
 	         var13 = client.aMobArray2972[objIndex];
-	         if(var13 != null) {
-               client.anInt3043 = var6 * 300629671;
+	         if (var13 != null) {
+		         client.anInt3043 = var6 * 300629671;
                client.anInt3044 = var7 * 91006015;
                client.anInt3046 = 922172934;
                client.anInt3045 = 0;
@@ -289,15 +289,15 @@ public class ReflectionNode extends Node {
                client.anInt3208 = 317027045 * var1;
                client.rsaBuffer.startPacket(133, (byte) 45);
                client.rsaBuffer.writeByteC(KeyFocusListener.keysHeldDown[82] ? 1 : 0, -851583013);
-	            client.rsaBuffer.writeShort(objIndex, -1811128142);
+		         client.rsaBuffer.writeShort(objIndex, -1811128142);
 	         }
          }
 
          if(35 == var2) {
             client.rsaBuffer.startPacket(6, (byte) 79);
 	         client.rsaBuffer.writeLEShort(objIndex, 1992323464);
-	         client.rsaBuffer.method2100(var1, (byte)64);
-            client.rsaBuffer.writeLEShort(var0, 1341634511);
+	         client.rsaBuffer.method2100(var1, (byte) 64);
+	         client.rsaBuffer.writeLEShort(var0, 1341634511);
             client.anInt3047 = 0;
             Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
             client.anInt3048 = var0 * -1119534041;
@@ -319,17 +319,17 @@ public class ReflectionNode extends Node {
 
          if(var2 == 8) {
 	         var13 = client.aMobArray2972[objIndex];
-	         if(null != var13) {
-               client.anInt3043 = 300629671 * var6;
+	         if (null != var13) {
+		         client.anInt3043 = 300629671 * var6;
                client.anInt3044 = var7 * 91006015;
                client.anInt3046 = 922172934;
                client.anInt3045 = 0;
                client.anInt3168 = var0 * -1943900347;
                client.anInt3208 = var1 * 317027045;
                client.rsaBuffer.startPacket(74, (byte) 29);
-	            client.rsaBuffer.writeLEShort(objIndex, 760060720);
-		         client.rsaBuffer.method2209(KeyFocusListener.keysHeldDown[82]?1:0, 414335590);
-               client.rsaBuffer.method2087(Class116_Sub23_Sub4.anInt2262 * -1195336111, 789222626);
+		         client.rsaBuffer.writeLEShort(objIndex, 760060720);
+		         client.rsaBuffer.method2209(KeyFocusListener.keysHeldDown[82] ? 1 : 0, 414335590);
+		         client.rsaBuffer.method2087(Class116_Sub23_Sub4.anInt2262 * -1195336111, 789222626);
                client.rsaBuffer.writeLEShortA(1149825709 * client.anInt3089, -35786081);
             }
          }
@@ -340,15 +340,15 @@ public class ReflectionNode extends Node {
             client.rsaBuffer.writeInt(var1, (byte)49);
 	         client.rsaBuffer.writeShortA(objIndex, -485273282);
 	         client.anInt3047 = 0;
-            Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
+	         Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
             client.anInt3048 = var0 * -1119534041;
          }
 
          Player var15;
          if(47 == var2) {
 	         var15 = client.globalPlayers[objIndex];
-	         if(null != var15) {
-               client.anInt3043 = var6 * 300629671;
+	         if (null != var15) {
+		         client.anInt3043 = var6 * 300629671;
                client.anInt3044 = 91006015 * var7;
                client.anInt3046 = 922172934;
                client.anInt3045 = 0;
@@ -356,7 +356,7 @@ public class ReflectionNode extends Node {
                client.anInt3208 = 317027045 * var1;
                client.rsaBuffer.startPacket(83, (byte) 57);
                client.rsaBuffer.writeByte(KeyFocusListener.keysHeldDown[82]?1:0, 779386186);
-	            client.rsaBuffer.writeShort(objIndex, -2061768506);
+		         client.rsaBuffer.writeShort(objIndex, -2061768506);
 	         }
          }
 
@@ -369,7 +369,7 @@ public class ReflectionNode extends Node {
             client.rsaBuffer.writeLEShortA(Class37.anInt493 * 1905121485, 146583481);
 	         client.rsaBuffer.writeShort(objIndex, -2108158210);
 	         client.anInt3047 = 0;
-            Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
+	         Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
             client.anInt3048 = var0 * -1119534041;
          }
 
@@ -384,14 +384,14 @@ public class ReflectionNode extends Node {
 	         client.rsaBuffer.writeShortA(var1 + 714823515 * Class33.clickY, 2006425519);
 	         client.rsaBuffer.writeLEShortA(1426698711 * Class116_Sub17.clickX + var0, -1470191244);
 	         client.rsaBuffer.writeShort(objIndex >> 14 & 32767, -2122903412);
-	         client.rsaBuffer.method2209(KeyFocusListener.keysHeldDown[82]?1:0, -474236872);
+	         client.rsaBuffer.method2209(KeyFocusListener.keysHeldDown[82] ? 1 : 0, -474236872);
          }
 
          if(var2 == 40) {
             client.rsaBuffer.startPacket(240, (byte) 19);
 	         client.rsaBuffer.writeLEShort(objIndex, 2000827503);
 	         client.rsaBuffer.writeLEShortA(var0, -2092765757);
-            client.rsaBuffer.method2046(var1, 363001979);
+	         client.rsaBuffer.method2046(var1, 363001979);
             client.anInt3047 = 0;
             Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
             client.anInt3048 = -1119534041 * var0;
@@ -407,8 +407,8 @@ public class ReflectionNode extends Node {
             client.rsaBuffer.startPacket(118, (byte) 113);
             client.rsaBuffer.method2087(-47339353 * Class26.anInt365, 1546447964);
 	         client.rsaBuffer.writeLEShortA(objIndex >> 14 & 32767, 158940329);
-	         client.rsaBuffer.method2209(KeyFocusListener.keysHeldDown[82]?1:0, 1618076834);
-            client.rsaBuffer.writeLEShortA(1905121485 * Class37.anInt493, -2121738406);
+	         client.rsaBuffer.method2209(KeyFocusListener.keysHeldDown[82] ? 1 : 0, 1618076834);
+	         client.rsaBuffer.writeLEShortA(1905121485 * Class37.anInt493, -2121738406);
 	         client.rsaBuffer.writeShortA(var1 + 714823515 * Class33.clickY, -1148026980);
 	         client.rsaBuffer.writeLEShortA(Class116_Sub17.clickX * 1426698711 + var0, -1621380409);
 	         client.rsaBuffer.writeLEShortA(Class49.anInt661 * 543565821, -1034876043);
@@ -422,25 +422,25 @@ public class ReflectionNode extends Node {
 
          if(48 == var2) {
 	         var15 = client.globalPlayers[objIndex];
-	         if(null != var15) {
-               client.anInt3043 = 300629671 * var6;
+	         if (null != var15) {
+		         client.anInt3043 = 300629671 * var6;
                client.anInt3044 = var7 * 91006015;
                client.anInt3046 = 922172934;
                client.anInt3045 = 0;
                client.anInt3168 = var0 * -1943900347;
                client.anInt3208 = 317027045 * var1;
                client.rsaBuffer.startPacket(247, (byte) 106);
-	            client.rsaBuffer.writeShortA(objIndex, 1477473383);
-		         client.rsaBuffer.method2135(KeyFocusListener.keysHeldDown[82]?1:0, -900245234);
-            }
+		         client.rsaBuffer.writeShortA(objIndex, 1477473383);
+		         client.rsaBuffer.method2135(KeyFocusListener.keysHeldDown[82] ? 1 : 0, -900245234);
+	         }
          }
 
          if(37 == var2) {
             client.rsaBuffer.startPacket(50, (byte) 40);
             client.rsaBuffer.writeShort(var0, -2048974417);
 	         client.rsaBuffer.writeShortA(objIndex, -1188884851);
-	         client.rsaBuffer.method2100(var1, (byte)94);
-            client.anInt3047 = 0;
+	         client.rsaBuffer.method2100(var1, (byte) 94);
+	         client.anInt3047 = 0;
             Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
             client.anInt3048 = var0 * -1119534041;
          }
@@ -451,14 +451,14 @@ public class ReflectionNode extends Node {
             client.rsaBuffer.writeLEShort(var0, 1581782405);
 	         client.rsaBuffer.writeShortA(objIndex, 1623103306);
 	         client.anInt3047 = 0;
-            Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
+	         Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
             client.anInt3048 = var0 * -1119534041;
          }
 
          if(7 == var2) {
 	         var13 = client.aMobArray2972[objIndex];
-	         if(null != var13) {
-               client.anInt3043 = var6 * 300629671;
+	         if (null != var13) {
+		         client.anInt3043 = var6 * 300629671;
                client.anInt3044 = 91006015 * var7;
                client.anInt3046 = 922172934;
                client.anInt3045 = 0;
@@ -468,27 +468,27 @@ public class ReflectionNode extends Node {
                client.rsaBuffer.method2209(KeyFocusListener.keysHeldDown[82]?1:0, 1448154050);
                client.rsaBuffer.writeShort(Class49.anInt661 * 543565821, -2144039464);
                client.rsaBuffer.method2046(-47339353 * Class26.anInt365, 363001979);
-	            client.rsaBuffer.writeShortA(objIndex, 334765820);
-	            client.rsaBuffer.writeShortA(Class37.anInt493 * 1905121485, -422941442);
+		         client.rsaBuffer.writeShortA(objIndex, 334765820);
+		         client.rsaBuffer.writeShortA(Class37.anInt493 * 1905121485, -422941442);
 	         }
          }
 
          if(32 == var2) {
             client.rsaBuffer.startPacket(30, (byte) 123);
 	         client.rsaBuffer.writeShortA(1149825709 * client.anInt3089, 125713052);
-	         client.rsaBuffer.writeInt(var1, (byte)28);
-            client.rsaBuffer.method2087(Class116_Sub23_Sub4.anInt2262 * -1195336111, -1774074017);
+	         client.rsaBuffer.writeInt(var1, (byte) 28);
+	         client.rsaBuffer.method2087(Class116_Sub23_Sub4.anInt2262 * -1195336111, -1774074017);
 	         client.rsaBuffer.writeShort(objIndex, -1761039396);
 	         client.rsaBuffer.writeShortA(var0, 556807237);
 	         client.anInt3047 = 0;
-            Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
+	         Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
             client.anInt3048 = var0 * -1119534041;
          }
 
          if(var2 == 9) {
 	         var13 = client.aMobArray2972[objIndex];
-	         if(var13 != null) {
-               client.anInt3043 = var6 * 300629671;
+	         if (var13 != null) {
+		         client.anInt3043 = var6 * 300629671;
                client.anInt3044 = 91006015 * var7;
                client.anInt3046 = 922172934;
                client.anInt3045 = 0;
@@ -496,7 +496,7 @@ public class ReflectionNode extends Node {
                client.anInt3208 = 317027045 * var1;
                client.rsaBuffer.startPacket(91, (byte) 42);
                client.rsaBuffer.method2135(KeyFocusListener.keysHeldDown[82]?1:0, -1316077667);
-	            client.rsaBuffer.writeShort(objIndex, -1661812998);
+		         client.rsaBuffer.writeShort(objIndex, -1661812998);
 	         }
          }
 
@@ -506,14 +506,14 @@ public class ReflectionNode extends Node {
             client.rsaBuffer.writeLEShort(var0, 1318713980);
 	         client.rsaBuffer.writeLEShortA(objIndex, -565903448);
 	         client.anInt3047 = 0;
-            Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
+	         Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
             client.anInt3048 = var0 * -1119534041;
          }
 
          if(var2 == 51) {
 	         var15 = client.globalPlayers[objIndex];
-	         if(var15 != null) {
-               client.anInt3043 = 300629671 * var6;
+	         if (var15 != null) {
+		         client.anInt3043 = 300629671 * var6;
                client.anInt3044 = var7 * 91006015;
                client.anInt3046 = 922172934;
                client.anInt3045 = 0;
@@ -521,7 +521,7 @@ public class ReflectionNode extends Node {
                client.anInt3208 = var1 * 317027045;
                client.rsaBuffer.startPacket(243, (byte) 124);
                client.rsaBuffer.method2209(KeyFocusListener.keysHeldDown[82]?1:0, -132873712);
-	            client.rsaBuffer.writeShort(objIndex, -1613704263);
+		         client.rsaBuffer.writeShort(objIndex, -1613704263);
 	         }
          }
 
@@ -531,7 +531,7 @@ public class ReflectionNode extends Node {
             client.rsaBuffer.method2046(var1, 363001979);
 	         client.rsaBuffer.writeLEShortA(objIndex, -1845818499);
 	         client.anInt3047 = 0;
-            Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
+	         Class35.aClass116_Sub15_473 = Class107.method1466(var1, 314639891);
             client.anInt3048 = var0 * -1119534041;
          }
 
@@ -544,8 +544,8 @@ public class ReflectionNode extends Node {
 	         Class37.anInt493 = 662033413 * objIndex;
 	         Class79.method1097(var9, -588000075);
 	         client.aString3201 = Class59_Sub1.method1978(16748608, (byte) 117) + Class50.method778(objIndex, (byte) 70).aString2361 + Class59_Sub1.method1978(16777215, (byte) 101);
-	         if(client.aString3201 == null) {
-               client.aString3201 = "null";
+	         if (client.aString3201 == null) {
+		         client.aString3201 = "null";
             }
 
          } else {
@@ -558,8 +558,8 @@ public class ReflectionNode extends Node {
                client.anInt3208 = var1 * 317027045;
                client.rsaBuffer.startPacket(7, (byte) 87);
 	            client.rsaBuffer.writeLEShortA(var0 + 1426698711 * Class116_Sub17.clickX, -965482817);
-	            client.rsaBuffer.writeByte(KeyFocusListener.keysHeldDown[82]?1:0, -2128732133);
-               client.rsaBuffer.method2087(-1195336111 * Class116_Sub23_Sub4.anInt2262, 1467474663);
+	            client.rsaBuffer.writeByte(KeyFocusListener.keysHeldDown[82] ? 1 : 0, -2128732133);
+	            client.rsaBuffer.method2087(-1195336111 * Class116_Sub23_Sub4.anInt2262, 1467474663);
 	            client.rsaBuffer.writeShortA(1149825709 * client.anInt3089, -596036941);
 	            client.rsaBuffer.writeShort(var1 + 714823515 * Class33.clickY, -1819686272);
 	            client.rsaBuffer.writeLEShortA(objIndex, 893491265);
@@ -567,8 +567,8 @@ public class ReflectionNode extends Node {
 
             if(49 == var2) {
 	            var15 = client.globalPlayers[objIndex];
-	            if(null != var15) {
-                  client.anInt3043 = var6 * 300629671;
+	            if (null != var15) {
+		            client.anInt3043 = var6 * 300629671;
                   client.anInt3044 = 91006015 * var7;
                   client.anInt3046 = 922172934;
                   client.anInt3045 = 0;
@@ -576,7 +576,7 @@ public class ReflectionNode extends Node {
                   client.anInt3208 = 317027045 * var1;
                   client.rsaBuffer.startPacket(4, (byte) 111);
                   client.rsaBuffer.writeByteC(KeyFocusListener.keysHeldDown[82] ? 1 : 0, 438340746);
-	               client.rsaBuffer.writeShortA(objIndex, 671868623);
+		            client.rsaBuffer.writeShortA(objIndex, 671868623);
 	            }
             }
 
@@ -600,8 +600,8 @@ public class ReflectionNode extends Node {
                client.anInt3046 = 922172934;
                client.anInt3045 = 0;
 	            var13 = client.aMobArray2972[objIndex];
-	            if(var13 != null) {
-                  MobDefinition var16 = var13.definition;
+	            if (var13 != null) {
+		            MobDefinition var16 = var13.definition;
                   if(var16.anIntArray2313 != null) {
                      var16 = var16.method2546(-572852130);
                   }
@@ -615,17 +615,17 @@ public class ReflectionNode extends Node {
 
             if(11 == var2) {
 	            var13 = client.aMobArray2972[objIndex];
-	            if(var13 != null) {
-                  client.anInt3043 = var6 * 300629671;
+	            if (var13 != null) {
+		            client.anInt3043 = var6 * 300629671;
                   client.anInt3044 = 91006015 * var7;
                   client.anInt3046 = 922172934;
                   client.anInt3045 = 0;
                   client.anInt3168 = -1943900347 * var0;
                   client.anInt3208 = var1 * 317027045;
                   client.rsaBuffer.startPacket(37, (byte) 97);
-	               client.rsaBuffer.writeShort(objIndex, -2067750672);
-		            client.rsaBuffer.method2209(KeyFocusListener.keysHeldDown[82]?1:0, 115954719);
-               }
+		            client.rsaBuffer.writeShort(objIndex, -2067750672);
+		            client.rsaBuffer.method2209(KeyFocusListener.keysHeldDown[82] ? 1 : 0, 115954719);
+	            }
             }
 
             if(1002 == var2) {
@@ -647,29 +647,29 @@ public class ReflectionNode extends Node {
                client.rsaBuffer.startPacket(109, (byte) 15);
 	            client.rsaBuffer.writeShortA(Class116_Sub17.clickX * 1426698711 + var0, 1513279588);
 	            client.rsaBuffer.writeLEShort(var1 + 714823515 * Class33.clickY, 523063957);
-	            client.rsaBuffer.writeByte(KeyFocusListener.keysHeldDown[82]?1:0, -400483938);
+	            client.rsaBuffer.writeByte(KeyFocusListener.keysHeldDown[82] ? 1 : 0, -400483938);
 	            client.rsaBuffer.writeShort(objIndex, -1821652962);
             }
 
             if(13 == var2) {
 	            var13 = client.aMobArray2972[objIndex];
-	            if(var13 != null) {
-                  client.anInt3043 = var6 * 300629671;
+	            if (var13 != null) {
+		            client.anInt3043 = var6 * 300629671;
                   client.anInt3044 = var7 * 91006015;
                   client.anInt3046 = 922172934;
                   client.anInt3045 = 0;
                   client.anInt3168 = -1943900347 * var0;
                   client.anInt3208 = 317027045 * var1;
                   client.rsaBuffer.startPacket(100, (byte) 51);
-	               client.rsaBuffer.writeShort(objIndex, -1687317991);
-		            client.rsaBuffer.method2209(KeyFocusListener.keysHeldDown[82]?1:0, 624168155);
-               }
+		            client.rsaBuffer.writeShort(objIndex, -1687317991);
+		            client.rsaBuffer.method2209(KeyFocusListener.keysHeldDown[82] ? 1 : 0, 624168155);
+	            }
             }
 
             if(44 == var2) {
 	            var15 = client.globalPlayers[objIndex];
-	            if(null != var15) {
-                  client.anInt3043 = var6 * 300629671;
+	            if (null != var15) {
+		            client.anInt3043 = var6 * 300629671;
                   client.anInt3044 = 91006015 * var7;
                   client.anInt3046 = 922172934;
                   client.anInt3045 = 0;
@@ -677,7 +677,7 @@ public class ReflectionNode extends Node {
                   client.anInt3208 = var1 * 317027045;
                   client.rsaBuffer.startPacket(234, (byte) 46);
                   client.rsaBuffer.method2135(KeyFocusListener.keysHeldDown[82]?1:0, -967568665);
-	               client.rsaBuffer.writeShortA(objIndex, 1002532582);
+		            client.rsaBuffer.writeShortA(objIndex, 1002532582);
 	            }
             }
 
@@ -691,14 +691,14 @@ public class ReflectionNode extends Node {
                client.rsaBuffer.startPacket(223, (byte) 80);
 	            client.rsaBuffer.writeLEShortA(objIndex, 1579835241);
 	            client.rsaBuffer.writeShortA(var0 + Class116_Sub17.clickX * 1426698711, -1750444947);
-	            client.rsaBuffer.method2209(KeyFocusListener.keysHeldDown[82]?1:0, 1625057630);
+	            client.rsaBuffer.method2209(KeyFocusListener.keysHeldDown[82] ? 1 : 0, 1625057630);
 	            client.rsaBuffer.writeLEShortA(714823515 * Class33.clickY + var1, -1309303305);
             }
 
             if(var2 == 45) {
 	            var15 = client.globalPlayers[objIndex];
-	            if(null != var15) {
-                  client.anInt3043 = 300629671 * var6;
+	            if (null != var15) {
+		            client.anInt3043 = 300629671 * var6;
                   client.anInt3044 = 91006015 * var7;
                   client.anInt3046 = 922172934;
                   client.anInt3045 = 0;
@@ -706,7 +706,7 @@ public class ReflectionNode extends Node {
                   client.anInt3208 = var1 * 317027045;
                   client.rsaBuffer.startPacket(35, (byte) 25);
                   client.rsaBuffer.method2209(KeyFocusListener.keysHeldDown[82]?1:0, -349131152);
-	               client.rsaBuffer.writeShort(objIndex, -1648357704);
+		            client.rsaBuffer.writeShort(objIndex, -1648357704);
 	            }
             }
 
@@ -725,8 +725,8 @@ public class ReflectionNode extends Node {
 
             if(15 == var2) {
 	            var15 = client.globalPlayers[objIndex];
-	            if(null != var15) {
-                  client.anInt3043 = 300629671 * var6;
+	            if (null != var15) {
+		            client.anInt3043 = 300629671 * var6;
                   client.anInt3044 = 91006015 * var7;
                   client.anInt3046 = 922172934;
                   client.anInt3045 = 0;
@@ -734,16 +734,16 @@ public class ReflectionNode extends Node {
                   client.anInt3208 = 317027045 * var1;
                   client.rsaBuffer.startPacket(8, (byte) 54);
                   client.rsaBuffer.writeByteC(KeyFocusListener.keysHeldDown[82] ? 1 : 0, 2041959658);
-	               client.rsaBuffer.writeShortA(client.anInt3089 * 1149825709, -1486645754);
-	               client.rsaBuffer.writeShort(objIndex, -1945052740);
-		            client.rsaBuffer.writeInt(Class116_Sub23_Sub4.anInt2262 * -1195336111, (byte)118);
-               }
+		            client.rsaBuffer.writeShortA(client.anInt3089 * 1149825709, -1486645754);
+		            client.rsaBuffer.writeShort(objIndex, -1945052740);
+		            client.rsaBuffer.writeInt(Class116_Sub23_Sub4.anInt2262 * -1195336111, (byte) 118);
+	            }
             }
 
             if(var2 == 50) {
 	            var15 = client.globalPlayers[objIndex];
-	            if(var15 != null) {
-                  client.anInt3043 = 300629671 * var6;
+	            if (var15 != null) {
+		            client.anInt3043 = 300629671 * var6;
                   client.anInt3044 = var7 * 91006015;
                   client.anInt3046 = 922172934;
                   client.anInt3045 = 0;
@@ -751,7 +751,7 @@ public class ReflectionNode extends Node {
                   client.anInt3208 = var1 * 317027045;
                   client.rsaBuffer.startPacket(224, (byte) 94);
                   client.rsaBuffer.method2135(KeyFocusListener.keysHeldDown[82]?1:0, -779094188);
-	               client.rsaBuffer.writeShort(objIndex, -2033136260);
+		            client.rsaBuffer.writeShort(objIndex, -2033136260);
 	            }
             }
 
@@ -779,13 +779,13 @@ public class ReflectionNode extends Node {
 	            client.rsaBuffer.writeShortA(var1 + Class33.clickY * 714823515, 308098680);
 	            client.rsaBuffer.writeShort(1426698711 * Class116_Sub17.clickX + var0, -1759266365);
 	            client.rsaBuffer.writeLEShortA(objIndex, -1798609708);
-	            client.rsaBuffer.writeByte(KeyFocusListener.keysHeldDown[82]?1:0, 317501006);
+	            client.rsaBuffer.writeByte(KeyFocusListener.keysHeldDown[82] ? 1 : 0, 317501006);
             }
 
             if(var2 == 14) {
 	            var15 = client.globalPlayers[objIndex];
-	            if(var15 != null) {
-                  client.anInt3043 = var6 * 300629671;
+	            if (var15 != null) {
+		            client.anInt3043 = var6 * 300629671;
                   client.anInt3044 = 91006015 * var7;
                   client.anInt3046 = 922172934;
                   client.anInt3045 = 0;
@@ -796,14 +796,14 @@ public class ReflectionNode extends Node {
                   client.rsaBuffer.method2087(-47339353 * Class26.anInt365, 846818795);
                   client.rsaBuffer.writeLEShortA(Class49.anInt661 * 543565821, 1821876216);
                   client.rsaBuffer.writeByte(KeyFocusListener.keysHeldDown[82]?1:0, -2105914978);
-	               client.rsaBuffer.writeLEShort(objIndex, 590184446);
+		            client.rsaBuffer.writeLEShort(objIndex, 590184446);
 	            }
             }
 
             if(var2 == 12) {
 	            var13 = client.aMobArray2972[objIndex];
-	            if(null != var13) {
-                  client.anInt3043 = var6 * 300629671;
+	            if (null != var13) {
+		            client.anInt3043 = var6 * 300629671;
                   client.anInt3044 = var7 * 91006015;
                   client.anInt3046 = 922172934;
                   client.anInt3045 = 0;
@@ -811,7 +811,7 @@ public class ReflectionNode extends Node {
                   client.anInt3208 = var1 * 317027045;
                   client.rsaBuffer.startPacket(218, (byte) 107);
                   client.rsaBuffer.method2209(KeyFocusListener.keysHeldDown[82]?1:0, -1579704096);
-	               client.rsaBuffer.writeShortA(objIndex, -837824662);
+		            client.rsaBuffer.writeShortA(objIndex, -837824662);
 	            }
             }
 
@@ -831,8 +831,8 @@ public class ReflectionNode extends Node {
 
             if(46 == var2) {
 	            var15 = client.globalPlayers[objIndex];
-	            if(null != var15) {
-                  client.anInt3043 = var6 * 300629671;
+	            if (null != var15) {
+		            client.anInt3043 = var6 * 300629671;
                   client.anInt3044 = 91006015 * var7;
                   client.anInt3046 = 922172934;
                   client.anInt3045 = 0;
@@ -840,7 +840,7 @@ public class ReflectionNode extends Node {
                   client.anInt3208 = var1 * 317027045;
                   client.rsaBuffer.startPacket(10, (byte) 68);
                   client.rsaBuffer.method2135(KeyFocusListener.keysHeldDown[82]?1:0, -911324825);
-	               client.rsaBuffer.writeShort(objIndex, -1814050772);
+		            client.rsaBuffer.writeShort(objIndex, -1814050772);
 	            }
             }
 

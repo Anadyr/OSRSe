@@ -470,8 +470,8 @@ public class Class64 {
 
                         if(314519437 * client.anInt3021 == 2) {
 	                        Class2.method39(client.anInt3070 * -1809686571 + (-1261526983 * client.anInt2954 - 1426698711 * Class116_Sub17.clickX << 7), (client.anInt2950 * -1901147055 - Class33.clickY * 714823515 << 7) + -1460280361 * client.anInt2958, 1818880718 * client.anInt2968, (byte) -10);
-	                        if(-94432357 * client.anInt3041 > -1 && client.anInt2943 * -1040073859 % 20 < 10) {
-                              Class47.aClass116_Sub23_Sub19_Sub2Array646[0].drawSprite(-94432357 * client.anInt3041 + var10 - 12, -770682383 * client.anInt3042 + var17 - 28);
+	                        if (-94432357 * client.anInt3041 > -1 && client.anInt2943 * -1040073859 % 20 < 10) {
+		                        Class47.aClass116_Sub23_Sub19_Sub2Array646[0].drawSprite(-94432357 * client.anInt3041 + var10 - 12, -770682383 * client.anInt3042 + var17 - 28);
                            }
                         }
 
@@ -738,7 +738,7 @@ public class Class64 {
                                  if(var16 == client.aClass116_Sub15_3097) {
 	                                 Class91 var10000 = null;
 	                                 var58 = Class91.aString1149;
-                                    var17 = var16.anInt1950 * 1384750979;
+	                                 var17 = var16.anInt1950 * 1384750979;
                                  }
 
                                  if(!var16.aBool1924) {
@@ -834,8 +834,8 @@ public class Class64 {
                                     }
                                  } else if(-1 == var17) {
 	                                 var53 = var16.method2256(null, -1, var50, Class79.aPlayer_909.aClass108_2881, -131892088);
-	                                 if(null == var53 && Class116_Sub15.aBool1923) {
-                                       Class79.method1097(var16, 1847164270);
+	                                 if (null == var53 && Class116_Sub15.aBool1923) {
+		                                 Class79.method1097(var16, 1847164270);
                                     }
                                  } else {
                                     Class116_Sub23_Sub4 var59 = Class116_Sub8.method1946(var17, -1992589394);
