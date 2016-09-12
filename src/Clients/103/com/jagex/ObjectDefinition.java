@@ -551,7 +551,7 @@ public class ObjectDefinition extends NodeContainer {
       if(-1 != this.anInt2231 * -560193431) {
          var2 = Class103.method1451(-560193431 * this.anInt2231, -584760962);
       } else if(-1 != this.anInt2232 * 560659955) {
-         var2 = Class107.anIntArray1459[560659955 * this.anInt2232];
+         var2 = Class107.varpData[560659955 * this.anInt2232];
       }
 
       return var2 >= 0 && var2 < this.anIntArray2206.length && -1 != this.anIntArray2206[var2]?Class45.method700(this.anIntArray2206[var2], 359750046):null;

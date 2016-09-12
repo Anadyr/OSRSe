@@ -4,18 +4,18 @@ import org.osrse.WorldModule;
 import org.osrse.game.logic.item.Item;
 import org.osrse.game.logic.item.SQLItem;
 import org.osrse.game.logic.masks.Appearance;
+import org.osrse.game.logic.masks.ForcedMovement;
 import org.osrse.game.logic.masks.Hit;
+import org.osrse.game.logic.masks.Masks.MaskType;
 import org.osrse.game.logic.mob.Mob;
 import org.osrse.game.logic.player.Player;
-import org.osrse.game.logic.utility.LogicConstants;
 import org.osrse.game.logic.protocol.ComplexUpdate;
-import org.osrse.update.r103.Proto103;
-import org.osrse.update.r103.Login103;
+import org.osrse.game.logic.utility.LogicConstants;
 import org.osrse.network.Packet;
 import org.osrse.network.PacketBuilder;
+import org.osrse.update.r103.Login103;
+import org.osrse.update.r103.Proto103;
 import org.osrse.utility.NameUtilities;
-
-import org.osrse.game.logic.masks.Masks.MaskType;
 
 /**
  * Created by Jonathan on 12/27/15.
@@ -129,12 +129,24 @@ public class Update103 extends ComplexUpdate {
     protected void doFaceDirection(Player player, PacketBuilder block) {
         int dX = player.getLocation().getX() - player.getMasks().getFaceDirection().getX();
         int dY = player.getLocation().getY() - player.getMasks().getFaceDirection().getY();
-        block.putShort(((int) (Math.atan2(dX, dY) * 2607.5945876176133)) & 0x3fff);
+	    block.putShort(((int) (Math.atan2(dX, dY) * 325.949D)) & 2047);
     }
 
     @Override
-    protected void doForceMovement(Player player, PacketBuilder block) {
-        block.putByte(player.getMasks().getFixedMovementMode());
+    protected void doForcedMovement(Player player, PacketBuilder blockTo) {
+	    ForcedMovement m = player.getMasks().getForcedMovement();
+	    blockTo.putByte(m.x2); // x2
+	    blockTo.putByte(m.y2); //y2
+	    blockTo.putByte(m.x1); // ?
+	    blockTo.putByte(m.y1); //?
+	    blockTo.putShort(m.delay1);
+	    blockTo.putShort(m.delay2);
+	    blockTo.putShort(m.faceDir);
+    }
+
+	@Override
+	protected void doResetMovementMode(Player player, PacketBuilder block) {
+		block.putByte(player.getMasks().getResetMovementMode());
     }
 
     @Override

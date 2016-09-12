@@ -2,8 +2,8 @@ package org.osrse.game.logic.player;
 
 import org.osrse.WorldModule;
 import org.osrse.model.commercial.Alias;
-import org.osrse.model.commercial.Communications;
 import org.osrse.model.commercial.Communicable;
+import org.osrse.model.commercial.Communications;
 import org.osrse.network.PacketBuilder;
 import org.osrse.slave.ReferencedPerson;
 import org.osrse.utility.NameUtilities;
@@ -18,21 +18,32 @@ import java.util.Random;
  */
 public class PlayerCommunication implements Serviceable {
     private static final Random r =  new Random();
-    private Communications communications;
     private final Player player;
-
     public String currentCCName;
+	private Communications communications;
+	private int clanIdentifier = 0;
 
-    public PlayerCommunication(Player player, String chatName, int joinReq, int kickReq) {
-        this.player = player;
+	public PlayerCommunication(Player player, String chatName, int joinReq, int kickReq, int talkReq) {
+		this.player = player;
         communications = WorldModule.getLogic().getClanData().get(player.getStaticIndex());
         if(communications == null) {
-            communications = new Communications(player.getStaticIndex(), player.getUsername(), chatName, joinReq, kickReq);
-            WorldModule.getLogic().getClanData().put(player.getStaticIndex(), communications);
+	        communications = new Communications(player.getStaticIndex(), player.getUsername(), chatName, joinReq, kickReq, talkReq);
+	        WorldModule.getLogic().getClanData().put(player.getStaticIndex(), communications);
         }
     }
 
     /**
+     * appends all player interactions with this dockedplayer
+     *
+     * @param p
+     */
+    public static void appendInteraction(Communicable p) {
+	    for (Player pl1 : WorldModule.getLogic().getPlayerMap().values()) {
+		    pl1.getCommunication().sendFriend(p.getStaticIndex(), p.getUsername());
+	    }
+    }
+
+	/**
      * used for player connecting, and disconnecting always sends true for update
      * @param uid
      */
@@ -54,8 +65,8 @@ public class PlayerCommunication implements Serviceable {
         }
         Communicable n = WorldModule.getLogic().getCommunicable(username); //checks all players online in all worlds
         if(n != null) {
-            communications.putFriend(username, n.getStaticIndex(), Communications.ClanRank.FRIEND.ordinal());
-            sendFriend(n.getStaticIndex(), username);
+	        communications.putFriend(username, n.getStaticIndex(), Communications.ClanRank.Friends.ordinal());
+	        sendFriend(n.getStaticIndex(), username);
         }
         if(WorldModule.isCommercial()) {
             WorldModule.getLogic().getLoginSession().requestDefinedFS(false, 0, player.getStaticIndex(), -1, username);
@@ -68,18 +79,17 @@ public class PlayerCommunication implements Serviceable {
         int friendId =  communications.removeFriend(username);
         if(WorldModule.isCommercial()) {
             WorldModule.getLogic().getLoginSession().requestDefinedFS(true, 0, player.getStaticIndex(), friendId, username);
-        } 
-        if(n != null) { 
-            if(n.getWorldId() == WorldModule.getLogic().getId()) {
+        }
+	    if (n != null) {
+		    if(n.getWorldId() == WorldModule.getLogic().getId()) {
                 ((Player)n).getCommunication().sendFriend(player.getStaticIndex(), player.getUsername());
             }
-        }   
+	    }
     }
 
     protected final void appendFriend(int uid, String username, int rank) {
         communications.putFriend(username,uid, rank);
     }
-
 
     public final int[] nextMessageId(int world) {
         return new int[] { r.nextInt()+(world >> 16), r.nextInt()};
@@ -146,18 +156,6 @@ public class PlayerCommunication implements Serviceable {
         return pb.toPacket().getBytes();
     }
 
-
-    /**
-     * appends all player interactions with this dockedplayer
-     *
-     * @param p
-     */
-    public static void appendInteraction(Communicable p) {
-        for(Player pl1 : WorldModule.getLogic().getPlayerMap().values()) {
-            pl1.getCommunication().sendFriend(p.getStaticIndex(), p.getUsername());
-        }
-    }
-
     /**
      * Updates everyone with this player accordingly
      * @param updateMaster used to send global change
@@ -175,8 +173,8 @@ public class PlayerCommunication implements Serviceable {
             player.getProtocol().sendMessage("Could not find player - "+usernameCCName);
         } else {
             if(type == 0) {
-                appendFriend(ccOwnerUID, usernameCCName, Communications.ClanRank.FRIEND.ordinal()); //for saving
-                sendFriend(ccOwnerUID, usernameCCName);
+	            appendFriend(ccOwnerUID, usernameCCName, Communications.ClanRank.Friends.ordinal()); //for saving
+	            sendFriend(ccOwnerUID, usernameCCName);
             } else if(type == 1) {
                     //appendignore
                     //sendignore
@@ -214,8 +212,9 @@ public class PlayerCommunication implements Serviceable {
         }
     }
 
-    public void leaveCC(Communications com) {
-        for(Map.Entry<String, Communicable> comm : com.getClanChat().getInChat().entrySet()) {
+	public void leaveCC() {
+		Communications com = WorldModule.getLogic().getClanData().get(getClanChat());
+		for(Map.Entry<String, Communicable> comm : com.getClanChat().getInChat().entrySet()) {
             if(comm.getValue().getWorldId() == WorldModule.getLogic().getId()) {
                 //later check if they are still in cc otherwise update shit
                 Player p1 = WorldModule.getLogic().getPlayerFromStaticIndex(comm.getValue().getStaticIndex());
@@ -234,7 +233,6 @@ public class PlayerCommunication implements Serviceable {
         WorldModule.getLogic().getLoginSession().requestDefinedFS(true, 2, com.uid, player.getStaticIndex(), com.username());
         com.getClanChat().remove(player.getUsername());
     }
-
 
     @Override
     public void release() {
@@ -262,8 +260,6 @@ public class PlayerCommunication implements Serviceable {
     public Communications basic() {
         return communications;
     }
-
-    private int clanIdentifier = 0;
 
     public boolean isInClanChat() {
         return clanIdentifier != 0;

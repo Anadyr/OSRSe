@@ -2,7 +2,6 @@ package org.osrse.slave.handler;
 
 import org.osrse.WorldModule;
 import org.osrse.game.logic.player.Player;
-import org.osrse.model.commercial.Communications;
 import org.osrse.network.Packet;
 import org.osrse.network.PacketHandler;
 import org.osrse.slave.LoginSession;
@@ -23,7 +22,7 @@ public class FCResponse extends PacketHandler<LoginSession> {
         if (player != null) {
             player.getCommunication().finishRequest(type, ownerIndex, name);
         } else {
-        	System.err.println("could not find player index="+playerStaticIndex);
+	        System.err.println("could not find player id=" + playerStaticIndex);
         }
 	}
 }

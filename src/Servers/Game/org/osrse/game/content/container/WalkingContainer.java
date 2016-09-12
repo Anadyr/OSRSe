@@ -22,7 +22,8 @@ public class WalkingContainer {
         if(player.getAttribute("cutScene") != null) {
                 return;
         }
-        if(player.basicSettings().isHomeTeleport()) {
+	    player.basicSettings().setFollowing(false);
+	    if(player.basicSettings().isHomeTeleport()) {
             player.getMagic().resetTeleFrom();
         }
         player.getPathProcessor().setCoordinateFuture(null);

@@ -6,8 +6,9 @@
 
 package org.osrse.game.logic.item;
 
-import org.osrse.model.utility.NodeCollection;
 import org.osrse.game.logic.player.Player;
+import org.osrse.model.utility.NodeCollection;
+
 import java.util.LinkedList;
 import java.util.List;
 /**
@@ -15,13 +16,9 @@ import java.util.List;
  * @author Jonathan
  */
 public class ItemCollection extends NodeCollection<Item> {
-    public enum Stack {
-        FORCE_STACK, STANDARD
-    }
     private List<ItemCollectionListener> listeners;
     private Player player;
     private Stack stack;
-
     public ItemCollection(Player player, int size) {
         this(player, size, Stack.STANDARD);
     }
@@ -47,8 +44,8 @@ public class ItemCollection extends NodeCollection<Item> {
                     int amount = item.getAmount();
                     while (amount > 0) {
                         if (super.add(new Item(item.getType(), 1), nextIndex())) { // the
-                            // index
-                            // specified
+	                        // id
+	                        // specified
                             // is
                             // voided.
                             // refresh(item.getIndex());
@@ -58,8 +55,8 @@ public class ItemCollection extends NodeCollection<Item> {
                     return true;
                 }
             } else {
-                if (super.add(item, index)) { 
-                    return true;
+	            if (super.add(item, index)) {
+		            return true;
                 }
             }
         } else {
@@ -147,8 +144,8 @@ public class ItemCollection extends NodeCollection<Item> {
 
     public boolean hasRoomFor(int itemId, int amount) {
         final Item item = new Item(itemId, amount);
-        final boolean stackable = item.isStackable(); 
-        if (stackable && contains(itemId))
+	    final boolean stackable = item.isStackable();
+	    if (stackable && contains(itemId))
             return true;
         else
             return remaining() >= (stackable ? 1 : amount);
@@ -167,9 +164,9 @@ public class ItemCollection extends NodeCollection<Item> {
     }
 
     /**
-     * Calls all the item listeners to refresh a certain index.
+     * Calls all the item listeners to refresh a certain id.
      *
-     * @param index The index to refresh.
+     * @param index The id to refresh.
      */
     private void refresh(int index) {
         synchronized (listeners) {
@@ -187,8 +184,8 @@ public class ItemCollection extends NodeCollection<Item> {
     @Override
     public Item remove(int index) {
         Item item = super.remove(index);
-        // refresh(index);
-        return item;
+	    // refresh(id);
+	    return item;
     }
 
     public int remove(int type, int amount) {
@@ -214,7 +211,7 @@ public class ItemCollection extends NodeCollection<Item> {
             }
         }
         return removed;
-    } 
+    }
 
     @Override
     public boolean remove(Item item) {
@@ -229,4 +226,8 @@ public class ItemCollection extends NodeCollection<Item> {
            */
         return false;
     }
+
+	public enum Stack {
+		FORCE_STACK, STANDARD
+	}
 }

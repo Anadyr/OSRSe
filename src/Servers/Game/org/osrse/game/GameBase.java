@@ -6,19 +6,6 @@ package org.osrse.game;
 
 import org.osrse.WorldModule;
 import org.osrse.game.content.combat.Combat;
-import org.osrse.game.logic.protocol.AbstractProtocol;
-import org.osrse.game.logic.protocol.Protocol;
-import org.osrse.game.network.LoginProtocol;
-import org.osrse.model.ModuleStore;
-import org.osrse.model.commercial.Communicable;
-import org.osrse.model.commercial.Communications;
-import org.osrse.model.utility.Response;
-import org.osrse.model.utility.NodeCollection;
-import org.osrse.network.PacketHandler;
-import org.osrse.network.Session;
-import org.osrse.slave.ReferencedPerson;
-import org.osrse.task.Engine;
-import org.osrse.utility.NameUtilities;
 import org.osrse.game.file.player.LoadableContext;
 import org.osrse.game.logic.Entity;
 import org.osrse.game.logic.Situated;
@@ -31,10 +18,23 @@ import org.osrse.game.logic.map.Tile;
 import org.osrse.game.logic.mob.Mob;
 import org.osrse.game.logic.player.Player;
 import org.osrse.game.logic.player.PlayerDefinition;
+import org.osrse.game.logic.protocol.AbstractProtocol;
+import org.osrse.game.logic.protocol.Protocol;
 import org.osrse.game.logic.utility.LogicConstants;
 import org.osrse.game.logic.utility.XteaLibrary;
+import org.osrse.game.network.LoginProtocol;
 import org.osrse.game.utility.WorldShutdownHook;
+import org.osrse.model.ModuleStore;
+import org.osrse.model.commercial.Communicable;
+import org.osrse.model.commercial.Communications;
+import org.osrse.model.utility.NodeCollection;
+import org.osrse.model.utility.Response;
+import org.osrse.network.PacketHandler;
+import org.osrse.network.Session;
 import org.osrse.slave.LoginSession;
+import org.osrse.slave.ReferencedPerson;
+import org.osrse.task.Engine;
+import org.osrse.utility.NameUtilities;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -49,7 +49,25 @@ import java.util.concurrent.CountDownLatch;
 public class GameBase extends ModuleStore {
 
     private final int worldId, revision;
-    protected boolean multiRevisional = false, updating = false;
+	private final NodeCollection<Player> worldPlayers;
+	private final NodeCollection<Mob> worldMobs;
+	private final Map<String, Player> players;
+	private final Map<Integer, Communications> clanData;
+	private final Map<String, Long> playerLeavings = new HashMap<String, Long>();
+	protected boolean multiRevisional = false, updating = false;
+	private XteaLibrary library;
+	private CountDownLatch clientUpdateLatch = null;
+	private CountDownLatch resetUpdateLatch = null;
+	private CountDownLatch maskUpdateLatch = null;
+	//private Map<Integer, Protocol> revisionMap;
+	private Protocol protocol;
+	private Combat combat;
+	private LoginSession loginSession;
+	/**
+	 * essential for kids trying to break the system.
+	 */
+	private Set<String> currentlyLogging = new HashSet<String>();
+	private CombatActivity worldActivity = CombatActivity.Deadman;
 
     public GameBase(int worldId, int revision) {
         this.worldId = worldId;
@@ -72,20 +90,6 @@ public class GameBase extends ModuleStore {
         return revision;
     }
 
-    private final NodeCollection<Player> worldPlayers;
-    private final NodeCollection<Mob> worldMobs;
-    private final Map<String, Player> players;
-    private final Map<Integer, Communications> clanData;
-
-    private XteaLibrary library;
-
-    private CountDownLatch clientUpdateLatch = null;
-    private CountDownLatch resetUpdateLatch = null;
-    private CountDownLatch maskUpdateLatch = null;
-    //private Map<Integer, Protocol> revisionMap;
-    private Protocol protocol;
-    private Combat combat;
-
     /**
      * Base definitions here, dialogues what have you..
      * @throws Exception
@@ -102,21 +106,8 @@ public class GameBase extends ModuleStore {
             combat = new Combat(this.worldActivity);
     }
 
-    public Protocol getProtocol() {
-        return protocol;
-    }
-    public final Combat getCombat() {
-        return combat;
-    }
-
-    private LoginSession loginSession;
-
-    public final LoginSession getLoginSession() {
-        return loginSession;
-    }
-
-    //<editor-fold desc="Logic Maps">
-    /*
+	//<editor-fold desc="Logic Maps">
+	/*
     public Protocol getUpdateContext(int revision) {
         return revisionMap.get(revision);
     }
@@ -124,6 +115,18 @@ public class GameBase extends ModuleStore {
     public Set<Integer> getAvailableRevisions() {
         return revisionMap.keySet();
     }*/
+
+    public Protocol getProtocol() {
+        return protocol;
+    }
+
+    public final Combat getCombat() {
+        return combat;
+    }
+
+    public final LoginSession getLoginSession() {
+        return loginSession;
+    }
 
     public Map<String, Player> getPlayerMap() {
         return players;
@@ -138,8 +141,7 @@ public class GameBase extends ModuleStore {
     public NodeCollection<Mob> getMobs() {
         return worldMobs;
     }
-
-    private final Map<String, Long> playerLeavings = new HashMap<String, Long>();
+	//</editor-fold>
 
     public XteaLibrary getLibrary() {
         return library;
@@ -152,7 +154,6 @@ public class GameBase extends ModuleStore {
         }
         return null;
     }
-    //</editor-fold>
 
     //<editor-fold desc="Update">
     public void run() {
@@ -252,6 +253,7 @@ public class GameBase extends ModuleStore {
     public CountDownLatch getResetUpdateLatch() {
         return resetUpdateLatch;
     }
+	//</editor-fold>
 
     public CountDownLatch getMaskUpdateLatch() {
         return maskUpdateLatch;
@@ -260,7 +262,6 @@ public class GameBase extends ModuleStore {
     public NodeCollection<Player> getPlayers() {
         return worldPlayers;
     }
-    //</editor-fold>
 
     //<editor-fold desc="Entity Register">
     public void removePlayer(Player player) {
@@ -270,7 +271,7 @@ public class GameBase extends ModuleStore {
         if(player.getCommunication().isInClanChat()) {
             Communications c = getClanData().get(player.getCommunication().getClanChat());
             if(c != null) {
-                player.getCommunication().leaveCC(c);
+	            player.getCommunication().leaveCC();
             } else {
                 System.err.println("Player CC coming null!");
             }
@@ -289,6 +290,7 @@ public class GameBase extends ModuleStore {
             worldMobs.remove(mob);
         }
     }
+	//</editor-fold>
 
     public boolean register(Mob mob) {
         boolean success;
@@ -306,8 +308,6 @@ public class GameBase extends ModuleStore {
             }
         }
     }
-    //</editor-fold>
-
 
     public boolean isUpdating() {
         return updating;
@@ -339,6 +339,7 @@ public class GameBase extends ModuleStore {
     public final void sendResponse(Session session) {
         Protocol.sendWorldList(session, loginSession, (int) session.getKey());
     }
+	//</editor-fold>
 
     @Override
     public int getReferencePort() {
@@ -354,8 +355,6 @@ public class GameBase extends ModuleStore {
         }
         return null;
     }
-    //</editor-fold>
-
 
     //<editor-fold desc="Player Login">
     public Response responseFor(LoginRequest login) {
@@ -382,11 +381,6 @@ public class GameBase extends ModuleStore {
         }
         return login.getResponse();
     }
-
-    /**
-     * essential for kids trying to break the system.
-     */
-    private Set<String> currentlyLogging = new HashSet<String>();
 
     public LoginProtocol getLoginHandler() {
         return protocol.getLoginProtocol();
@@ -443,6 +437,7 @@ public class GameBase extends ModuleStore {
         }
         return WorldModule.isCommercial();
     }
+	//</editor-fold>
 
     /**
      * The finishing method to a finished login module
@@ -476,26 +471,10 @@ public class GameBase extends ModuleStore {
         }
         currentlyLogging.remove(player.getUsername());
     }
-    //</editor-fold>
 
-
-    private CombatActivity worldActivity = CombatActivity.Deadman;
-
-    public enum CombatActivity { Deadman, Economy, Spawn;
-        public static CombatActivity forName(String name) {
-            for(CombatActivity cb : CombatActivity.values()) {
-                if(cb.toString().equalsIgnoreCase(name)) {
-                    return cb;
-                }
-            }
-            return Spawn;
-        }
-    };
-
-    public final CombatActivity getWorldActivity() {
-        return worldActivity;
+	public final CombatActivity getWorldActivity() {
+		return worldActivity;
     }
-
 
     //<editor-fold desc="Region Loaded information">
     public final Player[] getLocalPlayers(Tile tile) {
@@ -569,6 +548,19 @@ public class GameBase extends ModuleStore {
     public void submitPath(final PathFinder pathFinder, final Entity entity, final int x, final int y, Situated target, final int moveSpeed, boolean automated, Runnable r) {
         entity.getPathProcessor().pathRequest = new PathRequest(pathFinder, x, y, target, moveSpeed, automated, r);
     }
+
+	public enum CombatActivity {
+		Deadman, Economy, Spawn;
+
+		public static CombatActivity forName(String name) {
+			for (CombatActivity cb : CombatActivity.values()) {
+				if (cb.toString().equalsIgnoreCase(name)) {
+					return cb;
+				}
+			}
+			return Spawn;
+		}
+	}
     //</editor-fold>
 
 }

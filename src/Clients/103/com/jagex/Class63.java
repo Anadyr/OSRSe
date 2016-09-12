@@ -143,14 +143,14 @@ public abstract class Class63 {
 
                   if(1 == var32) {
                      var15 = var10[var8];
-                     Class3.anIntArray44[var6++] = Class107.anIntArray1459[var15];
+                     Class3.anIntArray44[var6++] = Class107.varpData[var15];
                      continue;
                   }
 
                   if(2 == var32) {
                      var15 = var10[var8];
                      --var6;
-                     Class107.anIntArray1459[var15] = Class3.anIntArray44[var6];
+                     Class107.varpData[var15] = Class3.anIntArray44[var6];
                      Class27.method567(var15, 2122167961);
                      continue;
                   }

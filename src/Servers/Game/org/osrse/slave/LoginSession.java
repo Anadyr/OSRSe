@@ -4,6 +4,7 @@ import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
 import org.osrse.WorldModule;
 import org.osrse.game.GameBase;
+import org.osrse.game.logic.player.Player;
 import org.osrse.game.logic.player.PlayerCommunication;
 import org.osrse.network.CommercialPackets;
 import org.osrse.network.Packet;
@@ -12,8 +13,6 @@ import org.osrse.network.Session;
 import org.osrse.utility.Configuration;
 import org.osrse.utility.NameUtilities;
 import org.osrse.utility.Serviceable;
-import org.osrse.game.logic.player.Player;
-import org.osrse.utility.TextUtilities;
 
 import java.math.BigInteger;
 import java.nio.ByteBuffer;
@@ -39,6 +38,10 @@ public class LoginSession implements Serviceable {
      * Map holding all worlds ordered by their Id
      */
     private final Map<Integer, ReferencedWorld> worldDock = new HashMap<Integer, ReferencedWorld>();
+	private final String address, activity;
+	private final int flag;
+	private boolean sync;
+	private Session session;
 
     /**
      * LoginSession(String serverAddress, int flag)
@@ -54,28 +57,26 @@ public class LoginSession implements Serviceable {
     public final Map<String, Integer> getNameToIndex() {
         return nameToIndex;
     }
+
     public final Map<Integer, String> getIndexToName() {
         return indexToName;
     }
+
     public final Map<Integer, ReferencedWorld> getWorldDock() {
         return worldDock;
     }
 
-    private boolean sync;
     public boolean isInSynch() {
         return sync;
     }
 
-    private Session session;
     public final Session getSession() {
         return session;
     }
+
     public final void setSession(Session session) {
         this.session = session;
     }
-
-    private final String address, activity;
-    private final int flag;
 
     public String getActivity() {
         return activity;
@@ -172,10 +173,10 @@ public class LoginSession implements Serviceable {
 
     /**
      * SyncGame
-     * Reads all players online by their static index, later addresses them as needed
+     * Reads all players online by their static id, later addresses them as needed
      * Static Indexes are the Id of players on the database, and do not change.
      * Getting the username is only needed when conflicted with a player in relations to
-     * As since the index and name are stored on friends data.
+     * As since the id and name are stored on friends data.
      *
      * @param packet
      */
@@ -296,8 +297,8 @@ public class LoginSession implements Serviceable {
      * We use a different approach, and add players to queue to re request friend server access.
      * Otherwise it will forcibly say "Friend server currently busy."
      *
-     * @param player short player static index
-     *               short player world index
+     * @param player short player static id
+     *               short player world id
      *               bit 3, kickReq
      *               bit 3, joinReq
      *               bit 2, privacy

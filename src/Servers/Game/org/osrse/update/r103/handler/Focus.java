@@ -15,8 +15,8 @@ public class Focus extends PacketHandler<Player> {
             int mode = packet.get();
             int width = packet.getShort();
             int height = packet.getShort();
-            player.setScreenDisplay(mode == 1 ? Player.Display.Fixed : (player.getAttribute("fixed_panel") != null ? Player.Display.Resizeable_Panel
-                    : Player.Display.Resizeable_FixedPanel));
+	        player.setScreenDisplay(mode == 1 ? Player.Display.Fixed : (player.hasAttribute("fixed_panel") ? Player.Display.Resizeable_Panel
+			        : Player.Display.Resizeable_FixedPanel));
             player.getProtocol().sendWindow(player.getScreenDisplay().getWindowId());
             player.getProtocol().sendTabs();
         }

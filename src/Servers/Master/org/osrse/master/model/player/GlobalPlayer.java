@@ -2,8 +2,8 @@ package org.osrse.master.model.player;
 
 import org.osrse.MasterModule;
 import org.osrse.model.Node;
-import org.osrse.model.commercial.Communications;
 import org.osrse.model.commercial.Communicable;
+import org.osrse.model.commercial.Communications;
 import org.osrse.network.Packet;
 
 /**
@@ -28,6 +28,9 @@ public class GlobalPlayer extends Node implements Communicable {
         return username;
     }
 
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
     public final int getWorldId() {
         return worldId;
@@ -75,10 +78,6 @@ public class GlobalPlayer extends Node implements Communicable {
         return "[Id=" + getStaticIndex() + ", name=" + username + ", w=" + worldId + ":" + getIndex() + (privacy == 3 ? "" : ", p=" + privacy) + "]";
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
     public void manageCommunications(Packet packet) {
         int id = packet.getShort();
         //System.out.println(id);
@@ -93,8 +92,8 @@ public class GlobalPlayer extends Node implements Communicable {
             if(hasClan) {
                 clan = packet.getString();
             }
-            communications = new Communications(getStaticIndex(), getUsername(), clan, joinReq, kickReq);
-            setStatus(status);
+	        communications = new Communications(getStaticIndex(), getUsername(), clan, joinReq, kickReq, 0);
+	        setStatus(status);
             MasterModule.getLogic().setInChat(getStaticIndex(), communications);
         }
     }

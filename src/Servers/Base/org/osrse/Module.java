@@ -8,9 +8,11 @@ import org.osrse.model.ModuleStore;
 import org.osrse.network.ServiceManager;
 import org.osrse.network.database.DatabaseManager;
 import org.osrse.task.Engine;
-import org.osrse.utility.OutputDisplay;
+import org.osrse.utility.JSManager;
 import org.osrse.utility.NameUtilities;
+import org.osrse.utility.OutputDisplay;
 
+import java.io.File;
 import java.util.Random;
 
 /**
@@ -18,50 +20,53 @@ import java.util.Random;
  */
 public abstract class Module {
     public static final Random random = new Random();
-    protected static ModuleStore moduleBase;
-    protected static Type type;
-    private static boolean databasePolicy = false;
-
     /**
      * Main module used
      */
     protected static final ServiceManager manager = new ServiceManager();
+	public static JSManager js;
+	protected static ModuleStore moduleBase;
+	protected static Type type;
+	private static boolean databasePolicy = false;
 
     protected Module(Type type, ModuleStore moduleBase) {
         Module.type = type;
         Module.moduleBase = moduleBase;
     }
 
-    /**
-     * Master - Loginserver
-     * World - solo world server connected to master
-     * Enterprise - world/lobby connected to master
-     */
-    public enum Type {
-        MASTER(0), WORLD(1), ENTERPRISE(2);
-        private final int id;
+	public static boolean hasDatabasePolicy() {
+		return databasePolicy;
+	}
 
-        private Type(int id) {
-            this.id = id;
-        }
+	public static boolean reloadScripts() {
+		try {
+			JSManager js2 = new JSManager(new File(getFile("scripts").substring(2)));
+			js = js2;
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
 
-        public int intValue() {
-            return id;
-        }
+	public static String getFile(String name) {
+		return "./data/" + type.getDirectory() + "/" + name;
+	}
 
-        public int cycleValue() {
-            return 600;
-        }
+	public static Type getModule() {
+		return type;
+	}
 
-        public String getDirectory() {
-            return id == 0 ? toString() : WORLD.toString();
-        }
+	public static ServiceManager getManager() {
+		return manager;
+	}
 
-        @Override
-        public String toString() {
-            return NameUtilities.displayFormat(super.toString()).toLowerCase();
-        }
-    }
+	public static int random(int x) {
+		return (int) (Math.random() * (x + 1));
+	}
+
+	public static int random(int x, int y) {
+		return (int) (x + Math.random() * (y - x));
+	}
 
     protected abstract void commenceNetworking();
 
@@ -75,10 +80,6 @@ public abstract class Module {
         OutputDisplay.decrement();
         System.out.println("Initializing environment.");
         Engine.start(moduleBase, type.cycleValue());
-    }
-
-    public static boolean hasDatabasePolicy() {
-        return databasePolicy;
     }
 
     /**
@@ -95,23 +96,34 @@ public abstract class Module {
         moduleBase.start();
     }
 
-    public static String getFile(String name) {
-        return "./data/" + type.getDirectory() + "/" + name;
-    }
+	/**
+	 * Master - Loginserver
+	 * World - solo world server connected to master
+	 * Enterprise - world/lobby connected to master
+	 */
+	public enum Type {
+		MASTER(0), WORLD(1), ENTERPRISE(2);
+		private final int id;
 
-    public static Type getModule() {
-        return type;
-    }
+		Type(int id) {
+			this.id = id;
+		}
 
-    public static ServiceManager getManager() {
-        return manager;
-    }
+		public int intValue() {
+			return id;
+		}
 
-    public static int random(int x) {
-        return (int) (Math.random() * (x + 1));
-    }
+		public int cycleValue() {
+			return 600;
+		}
 
-    public static int random(int x, int y) {
-        return (int) (x + Math.random() * (y - x));
-    }
+		public String getDirectory() {
+			return id == 0 ? toString() : WORLD.toString();
+		}
+
+		@Override
+		public String toString() {
+			return NameUtilities.displayFormat(super.toString()).toLowerCase();
+		}
+	}
 }

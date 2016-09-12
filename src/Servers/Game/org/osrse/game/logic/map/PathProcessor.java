@@ -4,10 +4,10 @@
 package org.osrse.game.logic.map;
 
 
-import org.osrse.task.Engine;
 import org.osrse.game.logic.Entity;
 import org.osrse.game.logic.mob.Mob;
 import org.osrse.game.logic.object.GameObject;
+import org.osrse.task.Engine;
 
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -21,15 +21,11 @@ public abstract class PathProcessor {
 
     public static final int MAX_SIZE = 255;
     public static final int MOVE_SPEED_ANY = 0, MOVE_SPEED_RUN = 1, MOVE_SPEED_WALK = 2;
-
-    private Entity entity;
-
+    public PathRequest pathRequest = null;
     protected PathBuffer buffer = new PathBuffer();
     protected CoordinateFuture coordinateFuture = null;
     protected int moveSpeed = MOVE_SPEED_ANY;
-
-    public PathRequest pathRequest = null;
-
+    private Entity entity;
     private Tile[] history = new Tile[16];
 
     private Set<Entity> hooked = new HashSet<Entity>();
@@ -258,6 +254,10 @@ public abstract class PathProcessor {
     protected abstract Directions.NormalDirection next();
 
     public abstract void process();
+
+    public void teleport() {
+
+    }
 
     public Set<Entity> getHookedEntities() {
         return hooked;

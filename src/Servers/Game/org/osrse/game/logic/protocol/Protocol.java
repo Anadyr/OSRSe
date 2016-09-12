@@ -28,14 +28,12 @@ import java.util.Map;
  * Created by Jonathan on 4/30/14.
  */
 public abstract class Protocol {
+    protected static int[] playerHashLoc = new int[2048];
     public final LinkedHashMap<MaskType, Integer> playerUpdateMap = new LinkedHashMap<MaskType, Integer>();
     public final LinkedHashMap<MaskType, Integer> mobUpdateMap = new LinkedHashMap<MaskType, Integer>();
     protected final int playerPacketId, npcPacketId;
-
-    private Class<? extends AbstractProtocol> interactionProtocol;
     private final LoginProtocol loginProtocol;
-
-    protected static int[] playerHashLoc = new int[2048];
+    private Class<? extends AbstractProtocol> interactionProtocol;
     private int version;
 
     public Protocol(LoginProtocol loginProtocol,
@@ -48,6 +46,75 @@ public abstract class Protocol {
 
     public static void setPlayerHashLoc(int index, int value) {
         playerHashLoc[index] = value;
+    }
+
+    //<editor-fold desc="Revisional Abstraction">
+    public static Protocol applyPatch(int revision) throws Exception {
+        Protocol update = (Protocol) Class.forName(new StringBuilder("org.osrse.update.Update").append(revision).toString()).newInstance();
+        update.setVersion(revision);
+        return update;
+    }
+
+    //<editor-fold desc="Shit that shouldn't be here">
+    @Deprecated
+    public static void sendWorldList(Session session, LoginSession loginsession, int revision) {
+        if (WorldModule.getLogic().hasSupportFor(revision)) {
+            PacketBuilder worldList = new PacketBuilder().putShort(loginsession.getWorldCount(1));
+            Protocol interactions = WorldModule.getLogic().getProtocol();
+            for (int i = 1; i < loginsession.getWorldCount(2); i++) {
+                if (i == WorldModule.getLogic().getId()) {
+                    //TODO custom ip, flag, and activity
+                    interactions.applyWorldToList(worldList, i, "127.0.0.1", WorldModule.getLogic().getLoginSession().getActivity(), 0, WorldModule.getLogic().getPlayers().size());
+                } else {
+                    ReferencedWorld w = loginsession.getWorldDock().get(i);
+                    interactions.applyWorldToList(worldList, w.getId(), w.getAddress(), w.getActivity(), w.getFlag(), w.getPlayers());
+                }
+            }
+            session.write(worldList.toPacket());
+        }
+    }
+
+    /**
+     * @param baseRevision most important revision
+     * @param f            file containing extra revisions
+     * @return map containing all revisions in their designated classes
+     * WARNING LOADING MULTIPLE REVISIONS AT ONCE IS POINTLESS
+     * TOO MUCH OVERHEAD IN CACHE HANDLING SO IT IS DISABLED THROUGH @param loadingMulti
+     * LOADING MAPS ITEMS/MAPS/DEFS/ANIMATIONS(OSRS ONLY) PER REVISION IS HEADACHE U DONT NEED
+     * @throws java.io.IOException
+     */
+    @Deprecated
+    public static Map<Integer, Protocol> handleProtocolLoad(int baseRevision, boolean loadingMulti, File f) throws Exception {
+        Map<Integer, Protocol> revisionMap = new HashMap<Integer, Protocol>();
+        int[] revs = new int[0];
+        if (loadingMulti && f != null && f.exists() && !f.isDirectory()) {
+            Configuration c = new Configuration(f);
+            revs = c.getIntArray("revisions");
+            for (int i : revs) {
+                if (revisionMap.get(i) == null) {
+                    revisionMap.put(i, Protocol.applyPatch(i));
+                }
+            }
+        }
+        //if we dont include our base revision
+        if (!revisionMap.containsKey(baseRevision)) {
+            revisionMap.put(baseRevision, Protocol.applyPatch(baseRevision));
+            int[] realrevs = new int[revs.length + 1];
+            for (int i = 0; i < revs.length; i++) {
+                realrevs[i] = revs[i];
+            }
+            realrevs[realrevs.length - 1] = baseRevision;
+            revs = realrevs;
+        }
+        //if file isnt there
+        if (revs == null) {
+            revs = new int[]{baseRevision};
+            revisionMap.put(baseRevision, Protocol.applyPatch(baseRevision));
+        }
+        revisionMap.put(baseRevision, Protocol.applyPatch(baseRevision));
+
+        OutputDisplay.printMultiple(revs, "Loaded revision");
+        return revisionMap;
     }
 
     /**
@@ -286,9 +353,11 @@ public abstract class Protocol {
                     } else if(curr == MaskType.CHAT) {
                         doChat(owner, blockTo);
                     } else if(curr == MaskType.RESET_MOVEMENT_MODE) {
-                        doForceMovement(owner, blockTo);
+                        doResetMovementMode(owner, blockTo);
                     } else if(curr == MaskType.MOVEMENT_MODE) {
                         doMovementMode(owner, blockTo);
+                    } else if (curr == MaskType.FORCE_MOVEMENT) {
+                        doForcedMovement(owner, blockTo);
                     }
                 }
             }
@@ -302,6 +371,7 @@ public abstract class Protocol {
 
     protected abstract void doMovementMode(Player player, PacketBuilder blockTo);
 
+    protected abstract void doResetMovementMode(Player player, PacketBuilder block);
 
     //<editor-fold desc="Player Masks">
     private Packet doPlayerMaskBlock(Player player, boolean force) {
@@ -347,6 +417,9 @@ public abstract class Protocol {
         player.basicSettings().setCachedMaskBlock(block.toPacket());
         return block.toPacket();
     }
+    //</editor-fold>
+
+    //<editor-fold desc="Specific update functions">
 
     protected void masks(Player player, PacketBuilder pb, boolean newPlayer) {
         if (!newPlayer) {
@@ -367,9 +440,6 @@ public abstract class Protocol {
         int offset = 1 + TextUtilities.huffmanCompress(unpacked, chatBuffer, 1);
         doChat(player, block, offset, chatBuffer);
     }
-    //</editor-fold>
-
-    //<editor-fold desc="Specific update functions">
 
     /**
      * Adds a newcache player.
@@ -390,6 +460,8 @@ public abstract class Protocol {
     }
 
     protected abstract void addPlayer(Player player, PacketBuilder block, int x, int y);
+
+    //</editor-fold>
 
     protected abstract void addMob(Mob mob, PacketBuilder block, int x, int y);
 
@@ -446,15 +518,7 @@ public abstract class Protocol {
             }
         }
     }
-
     //</editor-fold>
-
-    //<editor-fold desc="Revisional Abstraction">
-    public static Protocol applyPatch(int revision) throws Exception {
-        Protocol update = (Protocol) Class.forName(new StringBuilder("org.osrse.update.Update").append(revision).toString()).newInstance();
-        update.setVersion(revision);
-        return update;
-    }
 
     public LoginProtocol getLoginProtocol() {
         return loginProtocol;
@@ -475,7 +539,6 @@ public abstract class Protocol {
         }
         return player;
     }
-    //</editor-fold>
 
     //<editor-fold desc="Abstract Player Masks">
     protected abstract void doChat(Player player, PacketBuilder block, int offset, byte[] chatBuffer);
@@ -492,14 +555,14 @@ public abstract class Protocol {
 
     protected abstract void doFaceDirection(Player player, PacketBuilder block);
 
-    protected abstract void doForceMovement(Player player, PacketBuilder block);
+    protected abstract void doForcedMovement(Player player, PacketBuilder block);
 
     protected abstract void doFirstHit(Player player, PacketBuilder block, Hit primary);
+    //</editor-fold>
 
     protected abstract void doSecondHit(Player player, PacketBuilder block, Hit secondary);
 
     protected abstract void doSecondaryGraphics(Player player, PacketBuilder block);
-    //</editor-fold>
 
     //<editor-fold desc="Abstract Mob Masks">
     protected abstract void handleMovement(Mob mob, PacketBuilder block);
@@ -513,30 +576,11 @@ public abstract class Protocol {
     protected abstract void doFaceDirection(Mob mob, PacketBuilder block);
 
     protected abstract void doFirstHit(Mob mob, PacketBuilder block, Hit primary);
+    //</editor-fold>
 
     protected abstract void doSecondHit(Mob mob, PacketBuilder block, Hit secondary);
 
     protected abstract void doSecondaryGraphics(Mob mob, PacketBuilder block);
-    //</editor-fold>
-
-    //<editor-fold desc="Shit that shouldn't be here">
-    @Deprecated
-    public static void sendWorldList(Session session, LoginSession loginsession, int revision) {
-        if (WorldModule.getLogic().hasSupportFor(revision)) {
-            PacketBuilder worldList = new PacketBuilder().putShort(loginsession.getWorldCount(1));
-            Protocol interactions = WorldModule.getLogic().getProtocol();
-            for (int i = 1; i < loginsession.getWorldCount(2); i++) {
-                if (i == WorldModule.getLogic().getId()) {
-                    //TODO custom ip, flag, and activity
-                    interactions.applyWorldToList(worldList, i, "127.0.0.1", WorldModule.getLogic().getLoginSession().getActivity(), 0, WorldModule.getLogic().getPlayers().size());
-                } else {
-                    ReferencedWorld w = loginsession.getWorldDock().get(i);
-                    interactions.applyWorldToList(worldList, w.getId(), w.getAddress(), w.getActivity(), w.getFlag(), w.getPlayers());
-                }
-            }
-            session.write(worldList.toPacket());
-        }
-    }
 
     protected void applyWorldToList(PacketBuilder pb, int worldId, String address, String activity, int flag, int playerCount) {
         pb.putShort(worldId | 0x8000)
@@ -546,59 +590,16 @@ public abstract class Protocol {
                 .putShort(playerCount);
     }
 
-    /**
-     * @param baseRevision most important revision
-     * @param f            file containing extra revisions
-     * @return map containing all revisions in their designated classes
-     * WARNING LOADING MULTIPLE REVISIONS AT ONCE IS POINTLESS
-     * TOO MUCH OVERHEAD IN CACHE HANDLING SO IT IS DISABLED THROUGH @param loadingMulti
-     * LOADING MAPS ITEMS/MAPS/DEFS/ANIMATIONS(OSRS ONLY) PER REVISION IS HEADACHE U DONT NEED
-     * @throws java.io.IOException
-     */
-    @Deprecated
-    public static Map<Integer, Protocol> handleProtocolLoad(int baseRevision, boolean loadingMulti, File f) throws Exception {
-        Map<Integer, Protocol> revisionMap = new HashMap<Integer, Protocol>();
-        int[] revs = new int[0];
-        if (loadingMulti && f != null && f.exists() && !f.isDirectory()) {
-            Configuration c = new Configuration(f);
-            revs = c.getIntArray("revisions");
-            for (int i : revs) {
-                if (revisionMap.get(i) == null) {
-                    revisionMap.put(i, Protocol.applyPatch(i));
-                }
-            }
-        }
-        //if we dont include our base revision
-        if (!revisionMap.containsKey(baseRevision)) {
-            revisionMap.put(baseRevision, Protocol.applyPatch(baseRevision));
-            int[] realrevs = new int[revs.length + 1];
-            for (int i = 0; i < revs.length; i++) {
-                realrevs[i] = revs[i];
-            }
-            realrevs[realrevs.length - 1] = baseRevision;
-            revs = realrevs;
-        }
-        //if file isnt there
-        if (revs == null) {
-            revs = new int[]{baseRevision};
-            revisionMap.put(baseRevision, Protocol.applyPatch(baseRevision));
-        }
-        revisionMap.put(baseRevision, Protocol.applyPatch(baseRevision));
-
-        OutputDisplay.printMultiple(revs, "Loaded revision");
-        return revisionMap;
-    }
-
     public Packet doMaskBlock(Mob mob) {
         return null;
     }
 
-    public void setVersion(int version) {
-        this.version = version;
-    }
-
     public int getVersion() {
         return version;
+    }
+
+    public void setVersion(int version) {
+        this.version = version;
     }
     //</editor-fold>
 

@@ -10,11 +10,10 @@ import java.nio.channels.FileChannel;
  */
 public class RS2Index {
 
+	public byte[][][] archivedFiles = null;
 	private Library rs2Store;
 	private int id;
 	private FileChannel indexFileChannel;
-
-	public byte[][][] archivedFiles = null;
 
 	public RS2Index(Library rs2Store, int id, FileChannel indexFileChannel, RS2IndexedChart RS2IndexedChart) {
 		this.rs2Store = rs2Store;
@@ -73,7 +72,7 @@ public class RS2Index {
 					throw new IOException("Invalid file id read! [cache=" + id + ", file=" + fileId + ", block's file id=" + currentFileId + "]");
 				}
 				if (currentIndexId != id) {
-					throw new IOException("Invalid index id read! [cache=" + id + ", file=" + fileId + ", block's index id=" + currentIndexId + "]");
+					throw new IOException("Invalid id id read! [cache=" + id + ", file=" + fileId + ", block's id id=" + currentIndexId + "]");
 				}
 				offset++;
 			}
@@ -97,7 +96,7 @@ public class RS2Index {
 		if (RS2IndexedChart == null) {
 			return null;
 		}
-		RS2IndexedChartEntry entry = RS2IndexedChart.fileEntryMap.get(RS2IndexedChart.hashName(fileName));
+		RS2IndexedChartEntry entry = RS2IndexedChart.fileEntryMap.get(org.osrse.game.file.RS2IndexedChart.hashName(fileName));
 		if (entry == null) {
 			return null;
 		}

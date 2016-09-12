@@ -1,7 +1,7 @@
 package org.osrse.update.r103.handler;
 
-import org.osrse.game.content.container.ItemContainer;
 import org.osrse.game.logic.item.Item;
+import org.osrse.game.logic.item.ItemDefinition;
 import org.osrse.game.logic.player.Player;
 import org.osrse.network.Packet;
 import org.osrse.network.PacketHandler;
@@ -24,7 +24,7 @@ public class ItemHandler extends PacketHandler<Player> {
 	public void handle(Player player, Packet packet) {
 		player.sendMessage(""+packet.getOpcode());
 		if (packet.getOpcode() == EXAMINE) {
-			ItemContainer.handleExamine(player, (int) packet.getLEShortA());
+			player.sendMessage(ItemDefinition.get(packet.getLEShortA()).toString());
 		} else if(packet.getOpcode() == EQUIP) {
 			int inventorySlot = packet.getLEShortA();
 			int itemId = packet.getLEShortA();

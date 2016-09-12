@@ -37,16 +37,18 @@ public class ModeratorCommands extends Commands {
             @Override
             public void handle(Player player, String[] args) {
                 Player player1 = WorldModule.getLogic().getPlayerMap().get(NameUtilities.capitalizeFormat(args[0]));
-                if(player.getPrivilege().getValue() > player1.getPrivilege().getValue()) {
-                    player1.getProtocol().sendLogout();
-                } else {
-                    System.out.println(player.getAttributes().get("misuse"));
-                    if(player.getAttributes().get("misuse") == null) {
-                        player.getAttributes().set("misuse", true);
-                        player.sendMessage("Your account has been flagged for misuse.");
-                    } else {
-                        player.setRights(0);
-                        player.sendMessage("Your have been demoted. Talk to a staff member for help.");
+	            if (player1 != null && player1.isOnline()) {
+		            if (player.getPrivilege().getValue() > player1.getPrivilege().getValue() || player1.getStaticIndex() == player.getStaticIndex()) {
+			            player1.getProtocol().sendLogout();
+		            } else {
+			            System.out.println(player.getAttributes().get("misuse"));
+			            if (!player.hasAttribute("misuse")) {
+				            player.getAttributes().set("misuse", true);
+				            player.sendMessage("Your account has been flagged for misuse.");
+			            } else {
+				            player.setRights(0);
+				            player.sendMessage("Your have been demoted. Talk to a staff member for help.");
+			            }
                     }
                 }
             }

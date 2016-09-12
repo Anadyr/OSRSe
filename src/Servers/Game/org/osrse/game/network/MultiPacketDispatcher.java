@@ -4,17 +4,13 @@
  */
 
 package org.osrse.game.network;
+
+import org.osrse.Module;
 import org.osrse.WorldModule;
-import org.osrse.network.Packet;
-import org.osrse.network.Session;
-import org.osrse.utility.Configuration;
 import org.osrse.game.logic.player.Player;
 import org.osrse.network.AbstractPacketDispatcher;
+import org.osrse.network.Packet;
 import org.osrse.network.PacketHandler;
-
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  *
@@ -27,24 +23,17 @@ public class MultiPacketDispatcher extends AbstractPacketDispatcher<Player> {
         super(256);
     }
 
-    public final void loadHandlers() {
+	@Override
+	public final void loadHandlers() {
         try {
-            Configuration config = new Configuration(WorldModule.getProtocolDirectory("protocol.inf"));
-            String[] handlerNames = config.getStringArray("packet_handler");
-            for (int i = 0; i < handlerNames.length; i++) {
+	        String[] handlerNames = new String[256];
+	        Module.js.call("packets_" + WorldModule.getLogic().getRevision() + ".load", handlerNames, packetLength);
+	        for (int i = 0; i < handlerNames.length; i++) {
                 if (handlerNames[i] != null) {
                     packetHandlers[i] = getHandler(handlerNames[i].replaceAll(" ", ""));
                 }
             }
-            String[] lengths = config.getStringArray("packet_lengths");
-            if(lengths != null) {
-                for (int i = 0; i < lengths.length; i++) {
-                    if(lengths[i] != null) {
-                        packetLength[i] = Integer.parseInt(lengths[i]);
-                    }
-                }
-            }
-        } catch (IOException e) {
+        } catch (Exception e) {
             System.err.println("Error loading packet handlers!");
             e.printStackTrace();
         }

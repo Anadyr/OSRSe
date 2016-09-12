@@ -271,7 +271,7 @@ public class MobDefinition extends NodeContainer {
       if(-1 != this.anInt2309 * 1660103175) {
          var2 = Class103.method1451(this.anInt2309 * 1660103175, -584760962);
       } else if(-1 != -1519823779 * this.anInt2338) {
-         var2 = Class107.anIntArray1459[this.anInt2338 * -1519823779];
+         var2 = Class107.varpData[this.anInt2338 * -1519823779];
       }
 
       return var2 >= 0 && var2 < this.anIntArray2313.length && -1 != this.anIntArray2313[var2]?Class116_Sub23_Sub15.method2705(this.anIntArray2313[var2], 1382157122):null;
@@ -315,7 +315,7 @@ public class MobDefinition extends NodeContainer {
          if(this.anInt2309 * 1660103175 != -1) {
             var2 = Class103.method1451(1660103175 * this.anInt2309, -584760962);
          } else if(-1 != -1519823779 * this.anInt2338) {
-            var2 = Class107.anIntArray1459[-1519823779 * this.anInt2338];
+            var2 = Class107.varpData[-1519823779 * this.anInt2338];
          }
 
          return var2 >= 0 && var2 < this.anIntArray2313.length && this.anIntArray2313[var2] != -1;

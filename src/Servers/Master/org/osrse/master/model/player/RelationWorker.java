@@ -21,6 +21,11 @@ public class RelationWorker implements Runnable, ComQuery {
     private final Map<Integer, HashSet<GameRequest>> requestMap = new HashMap<Integer, HashSet<GameRequest>>();
 
     private final PriorityQueue<GameRequest> requests = new PriorityQueue<GameRequest>(25, new CompareRequest());
+	Connection c = null;
+	PreparedStatement s = null;
+	String last = "";
+	GameRequest request;
+	long next = 0L;
 
     public void dispatch(GameRequest request) {
          requests.offer(request.handle());
@@ -29,13 +34,6 @@ public class RelationWorker implements Runnable, ComQuery {
     public final boolean requiresUpdate() {
         return !requests.isEmpty();
     }
-
-    Connection c = null;
-    PreparedStatement s = null;
-    String last = "";
-    GameRequest request;
-
-    long next = 0L;
 
     public void setIntreval() {
         next = System.currentTimeMillis() + 60000;
@@ -74,14 +72,6 @@ public class RelationWorker implements Runnable, ComQuery {
         }
     }
 
-    private class CompareRequest implements Comparator<GameRequest> {
-
-        @Override
-        public int compare(GameRequest o1, GameRequest o2) {
-            return o2.compareTo(o1);
-        }
-    }
-
     private void loadIgnores(GameRequest request, Communications com) throws SQLException {
         PreparedStatement preparedStatement = c.prepareStatement(selectIgnores);
         preparedStatement.setInt(1, !request.join_clan ? request.player.getStaticIndex() : request.getIndex());
@@ -113,7 +103,7 @@ public class RelationWorker implements Runnable, ComQuery {
                 ResultSet rs = s.executeQuery();
                 Communications com = request.join_clan ? MasterModule.getLogic().getCommunications(request.getIndex()) : request.player.getCommunications();
                 if (com == null) {
-                    com = new Communications(request.getIndex(), request.name, request.clanname, request.clan_join, request.clan_kick);
+	                com = new Communications(request.getIndex(), request.name, request.clanname, request.clan_join, request.clan_kick, 0);
                 }
                 boolean ok = rs.next();
                 if (ok) {
@@ -249,5 +239,13 @@ public class RelationWorker implements Runnable, ComQuery {
             System.out.println("error ");
             e.printStackTrace();
         }
+    }
+
+	private class CompareRequest implements Comparator<GameRequest> {
+
+		@Override
+		public int compare(GameRequest o1, GameRequest o2) {
+			return o2.compareTo(o1);
+		}
     }
 }

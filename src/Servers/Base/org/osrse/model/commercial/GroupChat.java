@@ -1,5 +1,7 @@
 package org.osrse.model.commercial;
 
+import org.osrse.utility.NameUtilities;
+
 import java.util.TreeMap;
 
 /**
@@ -7,14 +9,13 @@ import java.util.TreeMap;
  */
 public class GroupChat {
 
-	public TreeMap<String, Communicable> inChat;
+	public TreeMap<String, Communicable> inChat; //change this to Alias
 	public TreeMap<Integer, Boolean> worldsHosted;
+	protected Communications.ClanRank joinReq, kickReq, talkReq;
+	private String ccname = "";
 
-	private String ccname = "FUCK";
-	protected Communications.ClanRank joinReq, kickReq;
-
-	public GroupChat(String chatName, int joinReq, int kickReq) {
-		this.ccname = chatName;
+	public GroupChat(String chatName, int joinReq, int kickReq, int talkReq) {
+		this.ccname = NameUtilities.capitalizeFormat(chatName);
 		this.joinReq = Communications.ClanRank.forId(joinReq);
 		this.kickReq = Communications.ClanRank.forId(kickReq);
 	}
@@ -38,7 +39,6 @@ public class GroupChat {
 	/**
 	 * Checks if room available, Owner always has a spot in his own CC
 	 * @param com
-	 * @param owner
 	 * @return
 	 */
 	public void add(Communicable com) {
@@ -50,14 +50,17 @@ public class GroupChat {
 		return ccname;
 	}
 
-	public void changeChat(String name, int joinReq, int kickReq) {
+	public void changeChat(String name, int joinReq, int kickReq, int talkReq) {
 		if (!name.isEmpty()) {
 			this.ccname = name;
 		}
 		if (joinReq != -1) {
-			//force kick those in chat without shit without timeout...
+			//force kick those in chat without timeout...
 		}
 		if (kickReq != -1) {
+
+		}
+		if (talkReq != -1) {
 
 		}
 	}
@@ -89,6 +92,10 @@ public class GroupChat {
 
 	public Communications.ClanRank getKickReq() {
 		return kickReq;
+	}
+
+	public Communications.ClanRank getTalkReq() {
+		return talkReq;
 	}
 
 }

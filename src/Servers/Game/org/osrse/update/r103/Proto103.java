@@ -16,7 +16,6 @@ import org.osrse.utility.NameUtilities;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import java.util.TreeMap;
 
 /**
  * Created by Jonathan on 10/29/15.
@@ -121,6 +120,64 @@ public class Proto103 extends AbstractProtocol {
     @Override
     public void sendTabs() {
         sendChatBox();
+        System.out.println(player.getScreenDisplay().getWindowId());
+        switch (player.getScreenDisplay()) {
+            case Fixed:
+                sendTab(593, 62); //cmb
+                sendTab(320, 63); //skills
+                sendTab(274, 64); //quest
+                sendTab(149, 65); //inv
+                sendTab(387, 66); //equip
+                sendTab(271, 67); //prayer
+                //sendTab(player.getMagic().type().getInterfaceId(), 93);
+                // PacketBuilder spb = new PacketBuilder(158).putShort(interfaceId).putLEInt(windowId << 16 | childId).putByteS(closeable);
+                sendTab(player.getMagic().type().getOldSchoolId(), 68);
+                sendTab(589, 69); //cc
+                sendTab(429, 70); //fl
+                sendTab(432, 71); //il
+                sendTab(182, 72); //logout
+                sendTab(261, 73); //settings
+                sendTab(216, 74); //emotes
+                sendTab(239, 75); //music
+                break;
+            case Resizeable_FixedPanel:
+                sendTab(593, 60); //cmb
+                sendTab(320, 61); //skills
+                sendTab(274, 62); //quest
+                sendTab(149, 63); //inv
+                sendTab(387, 64); //equip
+                sendTab(271, 65); //prayer
+                //sendTab(player.getMagic().type().getInterfaceId(), 93);
+                // PacketBuilder spb = new PacketBuilder(158).putShort(interfaceId).putLEInt(windowId << 16 | childId).putByteS(closeable);
+                sendTab(player.getMagic().type().getOldSchoolId(), 66);
+                sendTab(589, 67); //cc
+                sendTab(429, 68); //fl
+                sendTab(432, 69); //il
+                sendTab(182, 70); //logout
+                sendTab(261, 71); //settings
+                sendTab(216, 72); //emotes
+                sendTab(239, 73); //music
+                break;
+            case Resizeable_Panel:
+                //60 quest
+                sendTab(593, 58);
+                sendTab(320, 59);
+                sendTab(274, 60);
+                sendTab(149, 61);
+                sendTab(387, 62);
+                sendTab(271, 63);
+                sendTab(player.getMagic().type().getOldSchoolId(), 64);
+                sendTab(589, 65);
+                sendTab(429, 66);
+                sendTab(432, 67);
+                sendTab(182, 68);
+                sendTab(261, 69);
+                sendTab(216, 70);
+                sendTab(239, 71);
+                /**/
+                break;
+        }
+/*
         int modifier = player.getScreenDisplay() == Player.Display.Fixed ? 0 : 2;
         sendTab(593, player.getScreenDisplay() == Player.Display.Resizeable_Panel ? 7:(62-modifier));
         sendTab(320,  player.getScreenDisplay() == Player.Display.Resizeable_Panel ? 8:(63-modifier));
@@ -139,7 +196,8 @@ public class Proto103 extends AbstractProtocol {
         sendTab(216,  player.getScreenDisplay() == Player.Display.Resizeable_Panel ? 19:(74-modifier));
         sendTab(239,  player.getScreenDisplay() == Player.Display.Resizeable_Panel ? 20:(75-modifier));
 
-        //sendTab(224, 18); //neitiz travel map lol
+        //sendTab(224, 18); //neitiz travel map lol*/
+
 
     }
 
@@ -427,6 +485,22 @@ public class Proto103 extends AbstractProtocol {
         PacketBuilder spb = new PacketBuilder(158).putShort(interfaceId).putLEInt(windowId << 16 | childId).putByteS(closeable);
         player.getSession().write(spb.toPacket());
     }
+
+    @Override
+    public void sendInterface(boolean closeable, int interfaceId) {//11 164
+        sendInterface(closeable ? 1 : 0, player.getScreenDisplay().getWindowId(), interfaceId, player.getScreenDisplay() == Player.Display.Fixed ? 18 : 11);
+    }
+
+    @Override
+    public void sendCloseInterface(int interfaceId, int child) {
+        player.write(new PacketBuilder(244).putInt(interfaceId << 16 | child).toPacket());
+    }
+
+    @Override
+    public void sendCloseInterface(int child) {
+        sendCloseInterface(player.getScreenDisplay().getWindowId(), child);
+    }
+
 
     @Override
     public void sendInterfaceInventory(int inventoryInterfaceId) {

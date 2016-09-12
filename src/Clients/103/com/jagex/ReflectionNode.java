@@ -272,7 +272,7 @@ public class ReflectionNode extends Node {
             var9 = Class107.method1466(var1, 314639891);
             if(null != var9.anIntArrayArray2035 && 5 == var9.anIntArrayArray2035[0][0]) {
                var14 = var9.anIntArrayArray2035[0][1];
-               Class107.anIntArray1459[var14] = 1 - Class107.anIntArray1459[var14];
+               Class107.varpData[var14] = 1 - Class107.varpData[var14];
                Class27.method567(var14, 2104013615);
             }
          }
@@ -716,8 +716,8 @@ public class ReflectionNode extends Node {
                var9 = Class107.method1466(var1, 314639891);
                if(null != var9.anIntArrayArray2035 && var9.anIntArrayArray2035[0][0] == 5) {
                   var14 = var9.anIntArrayArray2035[0][1];
-                  if(Class107.anIntArray1459[var14] != var9.anIntArray2001[0]) {
-                     Class107.anIntArray1459[var14] = var9.anIntArray2001[0];
+                  if(Class107.varpData[var14] != var9.anIntArray2001[0]) {
+                     Class107.varpData[var14] = var9.anIntArray2001[0];
                      Class27.method567(var14, 1704661204);
                   }
                }

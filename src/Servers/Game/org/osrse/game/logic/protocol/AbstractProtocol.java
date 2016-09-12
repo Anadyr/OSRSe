@@ -6,11 +6,11 @@
 package org.osrse.game.logic.protocol;
 
 import org.jboss.netty.channel.ChannelFutureListener;
+import org.osrse.game.logic.login.LoginRequest;
+import org.osrse.game.logic.player.Player;
 import org.osrse.model.utility.Response;
 import org.osrse.network.PacketBuilder;
 import org.osrse.network.Session;
-import org.osrse.game.logic.login.LoginRequest;
-import org.osrse.game.logic.player.Player;
 
 /**
  * @author Jonathan
@@ -48,8 +48,8 @@ public abstract class AbstractProtocol implements RunescapeProtocol {
 
         bldr.putByte(player.getPrivilege().getClientReference());
         bldr.putByte(0);
-        bldr.putShort(player.getIndex()); //player index
-        bldr.putByte(0);
+	    bldr.putShort(player.getIndex()); //player id
+	    bldr.putByte(0);
     }
 
 

@@ -53,6 +53,6 @@ public class Class86 {
       }
 
       var5 <<= var6;
-      Class107.anIntArray1459[var7] = Class107.anIntArray1459[var7] & ~var5 | var1 << var6 & var5;
+      Class107.varpData[var7] = Class107.varpData[var7] & ~var5 | var1 << var6 & var5;
    }
 }

@@ -3,18 +3,17 @@
  */
 package org.osrse.game.logic;
 
+import org.osrse.game.content.combat.CombatSettings;
 import org.osrse.game.content.combat.Magic;
 import org.osrse.game.content.combat.magic.MagicBook;
-import org.osrse.game.logic.utility.BasicSettings;
-import org.osrse.game.logic.utility.CombatSettings;
-import org.osrse.task.Engine;
-import org.osrse.task.tick.Tick;
 import org.osrse.game.logic.map.Coverage;
 import org.osrse.game.logic.map.Directions;
 import org.osrse.game.logic.map.PathProcessor;
 import org.osrse.game.logic.map.Tile;
 import org.osrse.game.logic.masks.Masks;
-
+import org.osrse.game.logic.utility.BasicSettings;
+import org.osrse.task.Engine;
+import org.osrse.task.tick.Tick;
 
 import java.util.*;
 
@@ -22,27 +21,27 @@ import java.util.*;
  * @author Lazaro, Jonathan
  */
 public abstract class Entity extends Situated implements Runnable {
-    public static enum UpdateStage {
-        CLIENT_UPDATE, MASK_UPDATE, POST_UPDATE, PRE_UPDATE
-    }
-    protected final Masks masks = new Masks(this);
-    private final Map<String, Object> attributes = new HashMap<String, Object>();
-    public transient Magic magic = new Magic(this, Magic.Type.Standard);
-
     //3667, 2982
     //2800, 5166 pyramid scarab place
     public static final Tile DEFAULT_LOCATION = Tile.locate(3667, 2982, 0).randomize(5);
-
-
-    private Map<String, Tick> ticks = null;
+	private static long identifierCounter = 0;
+	protected final Masks masks = new Masks(this);
+	private final Map<String, Object> attributes = new HashMap<String, Object>();
+	/**
+	 * The settings.
+	 */
+	private final BasicSettings settings = new BasicSettings();
+	private final CombatSettings combat = new CombatSettings();
+	public transient Magic magic = new Magic(this, Magic.Type.Standard);
+	public Directions directions = null;
+	protected UpdateStage updateStage = null;
+	//<editor-fold desc="Ticks">
+	protected Deque<Runnable> specificProcesses = new ArrayDeque<Runnable>();
+	protected Coverage coverage;
+	private Map<String, Tick> ticks = null;
     private PathProcessor pathProcessor = null;
-    public Directions directions = null;
-
-
     private int tickIdentifierCounter = 0;
-    private static long identifierCounter = 0;
     private long identifier;
-
     public Entity() {
         identifier = identifierCounter++;
         directions = new Directions();
@@ -53,17 +52,9 @@ public abstract class Entity extends Situated implements Runnable {
         return DEFAULT_LOCATION.random(3);
     }
 
-
     public void goHome() {
         basicSettings().setTeleportDestination(getDefault());
     }
-
-    /**
-     * The settings.
-     */
-    private final BasicSettings settings = new BasicSettings();
-    private final CombatSettings combat = new CombatSettings();
-
 
     public abstract int getHealth();
 
@@ -76,6 +67,7 @@ public abstract class Entity extends Situated implements Runnable {
     public CombatSettings getCombat() {
         return combat;
     }
+
     /**
      * @return the settings
      */
@@ -113,8 +105,6 @@ public abstract class Entity extends Situated implements Runnable {
         return masks;
     }
 
-    protected UpdateStage updateStage = null;
-
     public UpdateStage getUpdateStage() {
         return updateStage;
     }
@@ -122,7 +112,6 @@ public abstract class Entity extends Situated implements Runnable {
     public void setUpdateStage(UpdateStage updateStage) {
         this.updateStage = updateStage;
     }
-
 
     public final void process() {
         processTicks();
@@ -133,12 +122,12 @@ public abstract class Entity extends Situated implements Runnable {
 
         masks.process();
 
-        if(pathProcessor != null) {
+	    basicSettings().process(this);
+	    if(pathProcessor != null) {
             pathProcessor.processPathRequest();
 
             pathProcessor.process();
         }
-        basicSettings().process(this);
         getCombat().tick();
     }
 
@@ -155,10 +144,6 @@ public abstract class Entity extends Situated implements Runnable {
     protected abstract void _process();
 
     protected abstract void _reset();
-
-
-    //<editor-fold desc="Ticks">
-    protected Deque<Runnable> specificProcesses = new ArrayDeque<Runnable>();
 
     /**
      * Using this method you can add specific entity behaviour
@@ -283,8 +268,6 @@ public abstract class Entity extends Situated implements Runnable {
     public abstract void removeType(Tile tile);
     public abstract int getSize();
 
-    protected Coverage coverage;
-
     @Override
     public void remove(Tile tile) {
         removeType(tile); //removes from old tile
@@ -316,7 +299,6 @@ public abstract class Entity extends Situated implements Runnable {
         this.pathProcessor = pathProcessor;
     }
 
-
     public void resetEvents() {
         resetEvents(true);
     }
@@ -337,7 +319,6 @@ public abstract class Entity extends Situated implements Runnable {
 
     public abstract void _resetEvents();
 
-
     public void setMagicBook(MagicBook magic) {
         this.magic.changeBook(magic);
     }
@@ -349,6 +330,10 @@ public abstract class Entity extends Situated implements Runnable {
     public final void faceDirection(Tile loc) {
         masks.setFaceDirection(loc);
     }
+
+	public enum UpdateStage {
+		CLIENT_UPDATE, MASK_UPDATE, POST_UPDATE, PRE_UPDATE
+	}
 
 
 

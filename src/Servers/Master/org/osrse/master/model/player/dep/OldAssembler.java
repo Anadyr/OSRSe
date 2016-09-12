@@ -13,7 +13,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 import java.util.HashSet;
 
 
@@ -22,9 +21,13 @@ import java.util.HashSet;
  */
 public class OldAssembler implements Runnable, ComQuery {
 
-    public enum Request {ADD_FRIEND, DEL_FRIEND, ADD_IGNORE, DEL_IGNORE, CLAN_EDIT, FIND}
-
-    private volatile long nextDBPush = 0L;
+	Connection c = null;
+	PreparedStatement s = null;
+	String last = "";
+	ResultSet rs = null;
+	GameRequest request;
+	boolean usedLast = false;
+	private volatile long nextDBPush = 0L;
     private boolean hasFIND = false;
 
     private boolean updateDB() {
@@ -83,15 +86,6 @@ public class OldAssembler implements Runnable, ComQuery {
             check(request, Request.ADD_FRIEND);
         }
     }
-
-
-    Connection c = null;
-    PreparedStatement s = null;
-    String last = "";
-    ResultSet rs = null;
-    GameRequest request;
-
-    boolean usedLast = false;
 
     @Override
     public void run() {
@@ -203,7 +197,6 @@ public class OldAssembler implements Runnable, ComQuery {
         }
     }
 
-
     void handleQuery(GameRequest request, Communications com) {
         try {
             secondStatement(request.type);
@@ -231,7 +224,7 @@ public class OldAssembler implements Runnable, ComQuery {
                 }
                 s.executeUpdate();
                 if (request.type == Request.ADD_FRIEND) {
-                    com.putFriend(request.name, request.getIndex(), Communications.ClanRank.FRIEND.ordinal());
+	                com.putFriend(request.name, request.getIndex(), Communications.ClanRank.Friends.ordinal());
                 }
             }
         } catch (SQLException e) {
@@ -272,4 +265,6 @@ public class OldAssembler implements Runnable, ComQuery {
     public final boolean update() {
         return !friendServerQueue.isEmpty() || !instantHandlingQueue.isEmpty() || updateDB();
     }
+
+	public enum Request {ADD_FRIEND, DEL_FRIEND, ADD_IGNORE, DEL_IGNORE, CLAN_EDIT, FIND}
 }

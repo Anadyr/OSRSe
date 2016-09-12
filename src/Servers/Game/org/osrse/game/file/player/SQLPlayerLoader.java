@@ -11,8 +11,12 @@ import org.osrse.utility.crypto.PasswordHash;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
-import java.sql.*;
-import java.util.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Iterator;
+import java.util.Set;
 
 import static org.osrse.utility.ArrayUtilities.primitive;
 
@@ -20,6 +24,14 @@ import static org.osrse.utility.ArrayUtilities.primitive;
  * Created by Jonathan on 12/27/13.
  */
 public class SQLPlayerLoader extends LoadableContext {
+
+	public static String convert(Set<Integer> list) {
+		String res = "";
+		for (Iterator<Integer> iterator = list.iterator(); iterator.hasNext(); ) {
+			res += iterator.next() + (iterator.hasNext() ? "," : "");
+		}
+		return res;
+	}
 
     @Override
     public void applySaveHeader(String table, StringBuilder query, PlayerDefinition player) {
@@ -96,6 +108,7 @@ public class SQLPlayerLoader extends LoadableContext {
             String chatName = rs.getString("clan");
             int join = rs.getInt("clan_join");
             int kick = rs.getInt("clan_kick");
+	        int talk = rs.getInt("clan_talk");
 
             DatabaseManager.closeResultSet(rs);
             Statement s = c.createStatement();
@@ -108,6 +121,7 @@ public class SQLPlayerLoader extends LoadableContext {
             def.clanName = chatName;
             def.clanJoin = join;
             def.clanKick = kick;
+	        def.clanTalk = talk;
 
             def.levels = primitive(ArrayUtilities.toArray(rs.getString("levels"), new Integer[0]));
             def.experiences = primitive(ArrayUtilities.toArray(rs.getString("exp"), new Double[0]));
@@ -175,14 +189,6 @@ public class SQLPlayerLoader extends LoadableContext {
             e.printStackTrace();
         }
         return def;
-    }
-
-    public static String convert(Set<Integer> list) {
-        String res = "";
-        for (Iterator<Integer> iterator = list.iterator(); iterator.hasNext();) {
-            res += iterator.next() + (iterator.hasNext() ? "," : "");
-        }
-        return res;
     }
 
 

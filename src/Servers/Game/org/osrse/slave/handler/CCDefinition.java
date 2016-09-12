@@ -1,17 +1,12 @@
 package org.osrse.slave.handler;
 
 import org.osrse.WorldModule;
-import org.osrse.game.logic.player.Player;
 import org.osrse.model.commercial.Communicable;
 import org.osrse.model.commercial.Communications;
 import org.osrse.network.Packet;
 import org.osrse.network.PacketHandler;
 import org.osrse.slave.LoginSession;
-import org.osrse.slave.ReferencedPerson;
 import org.osrse.utility.NameUtilities;
-
-import java.lang.ref.Reference;
-import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * Created by Jonathan on 12/21/13.
@@ -32,8 +27,8 @@ public class CCDefinition extends PacketHandler<LoginSession> {
             String ccname = packet.getString();
             session.getIndexToName().put(ccOwner, NameUtilities.capitalizeFormat(username));
             if(com == null) {
-                com = new Communications(ccOwner, username, ccname, joinreq, kickreq);
-                com.getClanChat().open();
+	            com = new Communications(ccOwner, username, ccname, joinreq, kickreq, 0);
+	            com.getClanChat().open();
                 WorldModule.getLogic().getClanData().put(ccOwner, com);
             }
         } else {
@@ -48,8 +43,8 @@ public class CCDefinition extends PacketHandler<LoginSession> {
                 //int worldId = packet.getShort();
                 int rank = packet.get();
                 Communicable ccc = WorldModule.getLogic().getCommunicableNode(id);
-                System.out.println("DEFINING" +(ccc == null) +"/"+ccc.getUsername()+"/"+rank+"/"+id);
-                //com.putFriend(ccc.getUsername(), id, rank);
+	            System.out.println("DEFINING" + ((ccc == null) ? ccc.getUsername() : "null") + "/" + rank + "/" + id);
+	            //com.putFriend(ccc.getUsername(), id, rank);
                 if(rank > -1) {
                     com.putRelation(ccc, rank);
                 }

@@ -1,5 +1,9 @@
 package org.osrse.game.file;
 
+import org.osrse.utility.StreamUtilities;
+import org.osrse.utility.bzip2.CBZip2InputStream;
+import org.osrse.utility.crypto.XTEA;
+
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -7,10 +11,6 @@ import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.util.zip.Inflater;
 import java.util.zip.InflaterInputStream;
-
-import org.osrse.utility.StreamUtilities;
-import org.osrse.utility.bzip2.CBZip2InputStream;
-import org.osrse.utility.crypto.XTEA;
 
 
 /**
@@ -156,8 +156,8 @@ public class RS2File {
             extracted = true;
             return true;
         } catch (Throwable e) {
-            System.err.println("Error extracting file [index=" + indexId + ", file="+ id + "], "+e.getLocalizedMessage());
-            return false;
+	        System.err.println("Error extracting file [id=" + indexId + ", file=" + id + "], " + e.getLocalizedMessage());
+	        return false;
         }
     }
 

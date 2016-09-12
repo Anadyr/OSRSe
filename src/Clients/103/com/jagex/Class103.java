@@ -45,7 +45,7 @@ public final class Class103 {
       int var4 = var2.anInt2427 * -585070571;
       int var3 = 984543857 * var2.anInt2436;
       int var6 = Class107.anIntArray1455[var3 - var4];
-      return Class107.anIntArray1459[var5] >> var4 & var6;
+      return Class107.varpData[var5] >> var4 & var6;
    }
 
    public static void method1453(int var0, Class99 var1, String var2, String var3, int var4, boolean var5, byte var6) {

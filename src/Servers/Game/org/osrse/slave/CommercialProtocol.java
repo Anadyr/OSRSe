@@ -26,7 +26,7 @@ public class CommercialProtocol extends AbstractPacketDispatcher<LoginSession> {
         //5 sendPm finalIndex, string msg, finalIndex To
         //6 create/edit communications 1 ?, indexWho
         //7 join communications/leaveClan, indexClan, indexWho
-        //8 promote, byte howmany, smartint index(s)Who
+        //8 promote, byte howmany, smartint id(s)Who
         //lol funny how ^ changed
     public CommercialProtocol() {
         super(50);

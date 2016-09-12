@@ -5,11 +5,10 @@
  */
 
 package org.osrse.master.network;
- 
+
 import org.osrse.master.model.World;
 import org.osrse.master.network.handler.*;
 import org.osrse.network.AbstractPacketDispatcher;
-import org.osrse.network.PacketHandler;
 
 /**
  *
@@ -23,7 +22,6 @@ public class WorldProtocolDispatcher extends AbstractPacketDispatcher<World> {
 
 
     public void loadHandlers() {
-        PacketHandler<World> p;
         packetHandlers[0]= new WSyncReq();
         packetHandlers[1]= new PLoginReq();
         packetHandlers[2]= new PFinishLogin();

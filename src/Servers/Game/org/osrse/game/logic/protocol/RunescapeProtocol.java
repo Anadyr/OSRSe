@@ -5,9 +5,9 @@
 
 package org.osrse.game.logic.protocol;
 
+import org.osrse.game.logic.item.ItemCollection;
 import org.osrse.model.commercial.Communications;
 import org.osrse.network.PacketBuilder;
-import org.osrse.game.logic.item.ItemCollection;
 
 import java.util.List;
 
@@ -16,71 +16,77 @@ import java.util.List;
  */
 public interface RunescapeProtocol {
 
-    public enum InterfaceUpdate {Magic, Combat, Prayer};
+    void applyLoginEssentials();
 
-    public void applyLoginEssentials();
+    void sendMapRegion();
 
-    public void sendMapRegion();
+    void sendWindow(int window);
 
-    public void sendWindow(int window);
+    void sendTab(int tabId, int childId);
 
-    public void sendTab(int tabId, int childId);
+    void sendTabs();
 
-    public void sendTabs();
+    void sendChatBox();
 
-    public void sendChatBox();
+    void sendSkill(int skill);
 
-    public void sendSkill(int skill);
+    void sendMessage(String message);
 
-    public void sendMessage(String message);
+    void sendRunEnergy();
 
-    public void sendRunEnergy();
+    void sendPlayerOption(String option, int slot, boolean top);
 
-    public void sendPlayerOption(String option, int slot, boolean top);
+    void sendString(int interfaceId, int child, String string);
 
-    public void sendString(int interfaceId, int child, String string);
+    void sendConfig(int configId, int value);
 
-    public void sendConfig(int configId, int value);
+    void sendInterfaceConfig(int interfaceId, int childId, boolean hidden);
 
-    public void sendInterfaceConfig(int interfaceId, int childId, boolean hidden);
+    void sendIgnoreList();
 
-    public void sendIgnoreList();
+    void sendFriendList();
 
-    public void sendFriendList();
+    void sendPrivatePreferences(int preference);
 
-    public void sendPrivatePreferences(int preference);
+    void sendSystemUpdate(int time);
 
-    public void sendSystemUpdate(int time);
+    void sendUpdateItems(int interfaceId, int childId, int type, ItemCollection items);
 
-    public void sendUpdateItems(int interfaceId, int childId, int type, ItemCollection items);
+    void sendUpdateItems(int interfaceId, int childId, int type, List<int[]> items);
 
-    public void sendUpdateItems(int interfaceId, int childId, int type, List<int[]> items);
+    void sendRunScript(int id, Object[] params, String types);
 
-    public void sendRunScript(int id, Object[] params, String types);
+    void sendClanChat(Communications communications);
 
-    public void sendClanChat(Communications communications);
+    void sendAccessMask(int interfaceId, int childId, int set, int offset, int length);
 
-    public void sendAccessMask(int interfaceId, int childId, int set, int offset, int length);
+    void sendInterface(int closeable, int windowId, int interfaceId, int childId);
 
-    public void sendInterface(int closeable, int windowId, int interfaceId, int childId);
+    void sendCloseInterface(int interfaceId, int child);
 
-    public void sendInterfaceInventory(int inventoryInterfaceId);
+    void sendCloseInterface(int child);
 
-    public void sendLogout();
+    void sendInterface(boolean closeable, int interfaceId);
 
-    public void sendRecievedPm(String sender, int[] uid, int rights, int length, byte[] message);
+    void sendInterfaceInventory(int inventoryInterfaceId);
 
-    public void sendSentPm(String sender, int length, byte[] message);
+    void sendLogout();
 
-    public void sendFriend(boolean warn, String username, int clanRank, int world);
+    void sendRecievedPm(String sender, int[] uid, int rights, int length, byte[] message);
 
-    public void putFriend(PacketBuilder buffer, boolean warn, String username, int clanRank, int world);
+    void sendSentPm(String sender, int length, byte[] message);
 
-    public void sendSong(int songId);
+    void sendFriend(boolean warn, String username, int clanRank, int world);
 
-    public void sendUpdateInterface(InterfaceUpdate type);
+    void putFriend(PacketBuilder buffer, boolean warn, String username, int clanRank, int world);
 
-    public void sendClanChatMsg(String playerName, String clanName, int rights, int length, byte[] huffmanMsg);
+    void sendSong(int songId);
+
+    void sendUpdateInterface(InterfaceUpdate type);
+
+    void sendClanChatMsg(String playerName, String clanName, int rights, int length, byte[] huffmanMsg);
 
     void editCCMember(String username, int world, int rank, boolean remove);
+
+    enum InterfaceUpdate {Magic, Combat, Prayer}
 }

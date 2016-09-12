@@ -130,6 +130,9 @@ public class PlayerPathProcessor extends PathProcessor {
                     direction = Directions.directionFor(new Point(oldLocation.getX(), oldLocation.getY()), new Point(player.getLocation().getX(), player.getLocation().getY()));
                 }
             }
+	        if (player.getMasks().getFaceDirection() != null) {
+		        player.getMasks().resetFace(player.basicSettings().isFollowing());
+	        }
             int newMovementMode = secondDirection != null ? 2 : 1;
             if (newMovementMode != player.getMovementMode()) {
                 player.setMovementMode(newMovementMode);
@@ -146,10 +149,10 @@ public class PlayerPathProcessor extends PathProcessor {
             player.setHeightUpdate(true);
         }
         if (player.basicSettings().getTeleportDestination() != null) {
-            if (!player.basicSettings().isForcedTeleporting()) {
-                reset(); // Reset the waypoint buffer.
-            }
-            teleport();
+	        reset(); // Reset the waypoint buffer.
+	        if (player.basicSettings().getTeleportTick() == 0) {
+		        teleport();
+	        }
         } else {
             updateCoordinateFuture();
         }
@@ -157,131 +160,15 @@ public class PlayerPathProcessor extends PathProcessor {
     }
 
 
-    @Deprecated
-    private void teleport() {
-
-        /*
-        if(player.teleportTick == -1) {
-            player.teleportTick = player.getMagic().hasTwoStepTeleport() ? 4 : 3;
-        }
-        if(player.getMagic().getSecondary() == Magic.Type.Home && player.teleportTick != 0) {
-            if(player.teleportTick == 12) {
-                player.getMasks().setAnimation(4850);
-            } else if(player.teleportTick == 10) {
-                player.getMasks().setAnimation(4853);
-                player.getMasks().setGraphics(Graphic.create(802));
-            } else if(player.teleportTick == 5) {
-                player.getMasks().setAnimation(4855);
-                player.getMasks().setGraphics(Graphic.create(803));
-            } else if(player.teleportTick == 2) {
-                player.getMasks().setAnimation(4857);
-                player.getMasks().setGraphics(Graphic.create(804));
-            }
-        } else {
-            if(player.teleportTick == 0) {
-                player.magic.finishTeleport();
-                player.getMasks().setFixedMovementMode(127);
-                Tile oldLocation = player.getLocation(); // Save the old location.
-                player.setLocation(player.getTeleportDestination()); // Set the newcache location.
-                player.updateCoverage(player.getTeleportDestination()); // Set the newcache tile coverage
-                player.setTeleportDestination(null); // Reset the teleport variables.
-                player.setTeleporting(true); // Flag the teleport.
-                player.setMapRegionUpdate(oldLocation.differentMap(player.getLocation())); // Flag if the map has changed.
-            } else if(player.teleportTick == 3) {
-                player.getMagic().startTeleport();
-            } else if(player.teleportTick == 4) {
-                player.getMagic().windAnimation();
-            }*/
-        }
-/*
-
-        if(player.teleportTick == -1) {
-            player.teleportTick = 4;
-            player.getMagic().windAnimation();
-        }
-        if(player.teleportTick == 0) {
-            System.out.println(player.getTeleportDestination()+"/"+player.getLocation().differentMap(player.getTeleportDestination()));
-            // teleporting.
-            player.setLocation(player.getTeleportDestination());
-            // location.
-            // variables.
-            player.setTeleporting(true);
-            player.setMapRegionUpdate(player.getLocation().differentMap(player.getTeleportDestination()));
-            player.setTeleportDestination(null);
-        }*/
-        /*
-
-        if(player.teleportTick == -1) {
-            player.teleportTick = 4;
-            player.getMagic().windAnimation();
-        } else if(player.teleportTick == 3) {
-            player.getMagic().startTeleport();
-        } else if(player.teleportTick == 2) {
-            // teleporting.
-            //player.getMasks().setFixedMovementMode(127);
-        } else if(player.teleportTick == 1) {
-            //player.getMasks().setFixedMovementMode(127);
-            player.setLocation(player.getTeleportDestination());
-            player.setTeleporting(true); // Flag the teleport.
-           // player.getMasks().setFixedMovementMode(127);
-        } else if(player.teleportTick == 0) {
-            player.magic.finishTeleport();
-           // player.getMasks().setFixedMovementMode(1);
-            player.setMapRegionUpdate(!player.isForcedTeleporting() && player.getOldLocation().differentMap(player.getLocation())); // Flag
-            player.setTeleportDestination(null); // Reset the teleport
-        }*/
-        /*
-        if(player.teleportTick == -1) {
-            player.teleportTick = 3;
-            player.getMagic().windAnimation();
-        }
-        if(player.teleportTick == 0) {
-            player.setTeleportDestination(null); // Reset the teleport variables.
-            player.setTeleporting(true); // Flag the teleport.
-            player.magic.finishTeleport();
-        } else if(player.teleportTick == 1) {
-            player.getMasks().setFixedMovementMode(0);
-            Tile oldLocation = player.getLocation(); // Save the old location.
-            player.setLocation(player.getTeleportDestination()); // Set the newcache location.
-            player.updateCoverage(player.getTeleportDestination()); // Set the newcache tile coverage
-            player.setTeleporting(true); // Flag the teleport.
-            player.setMapRegionUpdate(oldLocation.differentMap(player.getLocation())); // Flag if the map has changed.
-        } else if(player.teleportTick == 2) {
-            //player.getMasks().setFixedMovementMode(127);
-        } else if(player.teleportTick == 3) {
-            player.getMagic().startTeleport();
-            player.getMasks().setFixedMovementMode(127);
-            player.getMasks().setMovementType(1);
-            player.getMasks().setMovementMode(true);         }*/
-        /*
-        if(player.teleportTick >= 3 && player.teleportTick != -1) {
-            player.getMasks().setFixedMovementMode(127);
-            if(ancients) {
-                player.getMasks().setGraphics(Graphic.create(455));
-            } else
-                player.getMasks().setAnimation(715);
-            Tile oldLocation = player.getLocation(); // Save the old location.
-            player.setLocation(player.getTeleportDestination()); // Set the newcache location.
-            player.updateCoverage(player.getTeleportDestination()); // Set the newcache tile coverage
-            player.setTeleportDestination(null); // Reset the teleport variables.
-            player.setTeleporting(true); // Flag the teleport.
-            player.setMapRegionUpdate(oldLocation.differentMap(player.getLocation())); // Flag if the map has changed.
-
-            player.teleportTick = -1;
-        } else if(player.teleportTick == 1) {
-            player.getMasks().setFixedMovementMode(127);
-
-        } else if(player.teleportTick == -1) {
-            if(ancients) {
-                player.getMasks().setGraphics(Graphic.create(392));
-                player.getMasks().setAnimation(1979);
-            } else {
-                player.getMasks().setGraphics(Graphic.create(308, 50, 100));
-                player.getMasks().setAnimation(714);
-            }
-            player.setMovementMode(0);
-            //player.getMasks().setMovementType(false);
-            player.teleportTick = 0;
-        }*/
-    //}
+	@Override
+	public void teleport() {
+		player.getMasks().setResetMovementMode(127);
+		Tile oldLocation = player.getLocation(); // Save the old location.
+		player.setLocation(player.basicSettings().getTeleportDestination()); // Set the newcache location.
+		player.updateCoverage(player.basicSettings().getTeleportDestination()); // Set the newcache tile coverage
+		player.basicSettings().setTeleportDestination(null); // Reset the teleport variables.
+		player.basicSettings().setTeleporting(true); // Flag the teleport.
+		player.basicSettings().setForcedTeleporting(false);
+		player.basicSettings().setMapRegionUpdate(oldLocation.differentMap(player.getLocation())); // Flag if the map has changed.
+	}
 }

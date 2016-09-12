@@ -2,10 +2,10 @@ package com.jagex;
 
 public class Class107 {
 
-   public static int[] anIntArray1454;
+   public static int[] configArray;
    static int[] anIntArray1455 = new int[32];
    public static boolean aBool1456;
-   public static int[] anIntArray1459;
+   public static int[] varpData;
 
 
    static {
@@ -16,8 +16,8 @@ public class Class107 {
          var0 += var0;
       }
 
-      anIntArray1454 = new int[2000];
-      anIntArray1459 = new int[2000];
+      configArray = new int[2000];
+      varpData = new int[2000];
    }
 
    Class107() throws Throwable {

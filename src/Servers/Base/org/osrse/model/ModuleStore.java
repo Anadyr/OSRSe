@@ -9,8 +9,10 @@ import org.osrse.Module;
 import org.osrse.network.PacketHandler;
 import org.osrse.network.Session;
 import org.osrse.utility.Configuration;
+import org.osrse.utility.JSManager;
 import org.osrse.utility.OutputDisplay;
 
+import java.io.File;
 import java.math.BigInteger;
 
 
@@ -19,12 +21,11 @@ import java.math.BigInteger;
  */
 public abstract class ModuleStore implements Runnable {
 
-    /**
+	protected Configuration moduleConfig;
+	/**
      * used for server encryption Master <-> Game on login.
      */
     private BigInteger storeModulus, storeExponent;
-
-    protected Configuration moduleConfig;
 
     public final void start() throws Exception {
         moduleConfig = new Configuration(Module.getFile("config.inf"));
@@ -32,7 +33,8 @@ public abstract class ModuleStore implements Runnable {
         storeExponent = new BigInteger(moduleConfig.getString("RSA_EXPONENT"));
         System.out.println("Starting logic..");
         OutputDisplay.increment();
-        finishLogic();
+	    Module.js = new JSManager(new File(Module.getFile("scripts").substring(2)));
+	    finishLogic();
         OutputDisplay.decrement();
     }
 

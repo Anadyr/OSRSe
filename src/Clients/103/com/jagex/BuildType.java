@@ -85,8 +85,8 @@ public class BuildType {
       for(var1 = 0; var1 < -1248800389 * Class116_Sub23_Sub15.anInt2448; ++var1) {
          Class116_Sub23_Sub15 var4 = Class45.method702(var1, (short)-20488);
          if(var4 != null) {
-            Class107.anIntArray1454[var1] = 0;
-            Class107.anIntArray1459[var1] = 0;
+            Class107.configArray[var1] = 0;
+            Class107.varpData[var1] = 0;
          }
       }
 

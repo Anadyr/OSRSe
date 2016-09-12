@@ -5,13 +5,9 @@
 
 package org.osrse.utility;
 
-
-import org.apache.logging.log4j.core.util.Assert;
-
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -19,15 +15,14 @@ import java.util.logging.Logger;
  * @author Lazaro, Jonathan
  */
 public class OutputDisplay {
-    protected static int indentationLevel = 0;
     protected static final Object lock = new Object();
-    protected static boolean textOnLine = false;
-    private static boolean ready;
     /**
      * The logger for this class.
      */
     private static final Logger logger = Logger.getLogger(Logger.class.getName());
-
+	protected static int indentationLevel = 0;
+	protected static boolean textOnLine = false;
+	private static boolean ready;
 
     public static void decrement() {
         indentationLevel -= 2;

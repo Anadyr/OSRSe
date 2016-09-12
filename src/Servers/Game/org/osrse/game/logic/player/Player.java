@@ -8,14 +8,6 @@ package org.osrse.game.logic.player;
 import org.osrse.WorldModule;
 import org.osrse.game.content.combat.Magic;
 import org.osrse.game.content.combat.magic.MagicBook;
-import org.osrse.game.logic.protocol.AbstractProtocol;
-import org.osrse.game.logic.protocol.Protocol;
-import org.osrse.game.logic.protocol.RunescapeProtocol;
-import org.osrse.model.commercial.Communicable;
-import org.osrse.network.Packet;
-import org.osrse.network.Session;
-import org.osrse.utility.NameUtilities;
-import org.osrse.utility.Serviceable;
 import org.osrse.game.logic.Entity;
 import org.osrse.game.logic.item.ItemCollection;
 import org.osrse.game.logic.item.listener.AppearanceListener;
@@ -27,8 +19,15 @@ import org.osrse.game.logic.map.Tile;
 import org.osrse.game.logic.map.event.RegionLoader;
 import org.osrse.game.logic.masks.Appearance;
 import org.osrse.game.logic.mob.Mob;
+import org.osrse.game.logic.protocol.AbstractProtocol;
+import org.osrse.game.logic.protocol.Protocol;
+import org.osrse.game.logic.protocol.RunescapeProtocol;
 import org.osrse.game.logic.utility.LogicConstants;
-
+import org.osrse.model.commercial.Communicable;
+import org.osrse.network.Packet;
+import org.osrse.network.Session;
+import org.osrse.utility.NameUtilities;
+import org.osrse.utility.Serviceable;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -40,95 +39,47 @@ import java.util.List;
  */
 public class Player extends Entity implements Serviceable, Communicable {
 
-    public static enum Display { Fixed(548), Resizeable_FixedPanel(161), Resizeable_Panel(164);
-
-        private int windowId;
-
-        private Display(int windowId) {
-            this.windowId = windowId;
-        }
-        public final int getWindowId() {
-            return windowId;
-        }
-
-        public static Display forId(int displayMode) {
-            switch(displayMode) {
-                case 0:
-                    return Fixed;
-                case 1:
-                    return Resizeable_FixedPanel;
-                case 2:
-                    return Resizeable_Panel;
-                default:
-                    return Fixed;
-            }
-        }
-    }
-
-    public static enum Privilege {
-        ADMINISTRATOR(2), MODERATOR(1), PLAYER(0), IRONMAN(0, 3), ULTIMATE_IRONMAN(0, 4);
-
-        public static Privilege forValue(int value) {
-            switch (value) {
-                case 0:
-                    return PLAYER;
-                case 1:
-                    return MODERATOR;
-                case 2:
-                    return ADMINISTRATOR;
-                case 3:
-                    return IRONMAN;
-                case 4:
-                    return ULTIMATE_IRONMAN;
-
-            }
-            return PLAYER;
-        }
-
-        private int value, reference;
-
-        private Privilege(int value) {
-            this.value = value;
-            this.reference = value;
-        }
-
-        private Privilege(int value, int reference) {
-            this.value = value;
-            this.reference = reference;
-        }
-
-        public int getValue() {
-            return value;
-        }
-
-        public int getClientReference() {
-            return reference;
-        }
-    }
-
-    private Session session;
-    private final int clientRevision;
-    private AbstractProtocol protocol;
+	public static final int MAX_VIEWPORT_SIZE = 16;
+	private final int clientRevision;
+	private final Appearance appearance = new Appearance(this);
+	private final List<Player> localPlayerList = new ArrayList<Player>();
+	private final List<Mob> localMobs = new ArrayList<Mob>();
+	private final List<int[]> bank = new ArrayList<int[]>();
+	private final ItemCollection inventory = new ItemCollection(this, LogicConstants.INVENTORY_SIZE),
+			equipment = new ItemCollection(this, LogicConstants.EQUIPMENT_SIZE);
+	public int playerViewportSize = -1;
+	protected String password, username;
+	private Session session;
+	private AbstractProtocol protocol;
     private Display screenDisplay = Display.Fixed;
+	private PlayerCommunication communications;
+	private Privilege privilege = Privilege.PLAYER;
+	private boolean released = false;
+	private Skills skills = new Skills(this);
+	private PlayerSettings settings = new PlayerSettings();
+	private int privateSetting = 0;
+	private List<Mob> localNPCs = new LinkedList<Mob>();
+	private boolean running = false;
+	private int runningEnergy = 100;
+	private Directions.NormalDirection mapRegionDirection = null;
+	//<editor-fold desc="Viewport Flags">
+	private byte[] indexSettings = new byte[2048];
+	//</editor-fold>
+	private int movementMode = 1;
+	private boolean inCycle;
+	private boolean loggedInThisCycle = true;
+	private boolean heightUpdate = false;
+	private LinkedList<Integer> updateRequiredList = new LinkedList<Integer>();
 
-    protected Player(Session session, int clientRevision) {
+	protected Player(Session session, int clientRevision) {
         super();
         this.session = session;
         this.clientRevision = clientRevision;
         setPathProcessor(new PlayerPathProcessor(this));
     }
 
-
-    protected String password, username;
-    private PlayerCommunication communications;
-
     public void setCommunications(PlayerCommunication communications) {
         this.communications = communications;
-    }
-
-
-    public void setProtocol(AbstractProtocol protocol) {
-        this.protocol = protocol;
     }
 
     public Session getSession() {
@@ -137,11 +88,17 @@ public class Player extends Entity implements Serviceable, Communicable {
 
     public String getUsername() { return username; }
 
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
     public String getPassword() {
         return password;
     }
 
-    private Privilege privilege = Privilege.PLAYER;
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
     public final void setRights(int privilege) {
         this.privilege = Privilege.forValue(privilege);
@@ -151,42 +108,25 @@ public class Player extends Entity implements Serviceable, Communicable {
         return privilege;
     }
 
-    private boolean released = false;
-
     public boolean isReleased() {
         return released;
-    }
-
-    public void setScreenDisplay(Display d) {
-        this.screenDisplay = d;
     }
 
     public Display getScreenDisplay() {
         return screenDisplay;
     }
 
-
-    private final Appearance appearance = new Appearance(this);
-    private Skills skills = new Skills(this);
-
-    private final List<Player> localPlayerList = new ArrayList<Player>(); 
-    private final List<Mob> localMobs = new ArrayList<Mob>();
-
-    private final List<int[]> bank = new ArrayList<int[]>();
-    private final ItemCollection inventory = new ItemCollection(this, LogicConstants.INVENTORY_SIZE),
-                                 equipment = new ItemCollection(this, LogicConstants.EQUIPMENT_SIZE);
-    private PlayerSettings settings = new PlayerSettings();
-    public int playerViewportSize = -1;
-    public static final int MAX_VIEWPORT_SIZE = 16;
+	public void setScreenDisplay(Display d) {
+		this.screenDisplay = d;
+	}
 
     public PlayerSettings getSetting() {
         return settings;
     }
 
-
     public List<Player> getLocalPlayers() {
         return localPlayerList;
-    } 
+    }
 
     public List<Mob> getLocalMobs() {
         return localMobs;
@@ -295,6 +235,7 @@ public class Player extends Entity implements Serviceable, Communicable {
                 break;
         }
     }
+
     //</editor-fold>
     public void logout() {
         settings.loggedOut = true;
@@ -330,7 +271,7 @@ public class Player extends Entity implements Serviceable, Communicable {
 
     public ItemCollection getEquipment() {
         return equipment;
-    } 
+    }
 
     public String toString() {
         return toString(false);
@@ -339,7 +280,7 @@ public class Player extends Entity implements Serviceable, Communicable {
     public String toString(boolean ls) {
         if(ls)
             return "[name="+getUsername()+", password="+getPassword().replaceAll(".", "*")+"]";
-        return "[name="+getUsername()+", index="+getIndex()+", display="+screenDisplay+"]";
+	    return "[name=" + getUsername() + ", id=" + getIndex() + ", display=" + screenDisplay + "]";
     }
 
     public void sendMessage(String string) {
@@ -354,12 +295,13 @@ public class Player extends Entity implements Serviceable, Communicable {
         return protocol;
     }
 
+	public void setProtocol(AbstractProtocol protocol) {
+		this.protocol = protocol;
+	}
 
     public PlayerCommunication getCommunication() {
         return communications;
     }
-
-    private int privateSetting = 0;
 
     @Override
     public int getStatus() {
@@ -369,14 +311,6 @@ public class Player extends Entity implements Serviceable, Communicable {
     @Override
     public void setStatus(int status) {
         privateSetting = status;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     @Override
@@ -395,14 +329,9 @@ public class Player extends Entity implements Serviceable, Communicable {
         return 1;
     }
 
-    private List<Mob> localNPCs = new LinkedList<Mob>();
-
     public List<Mob> getMobList() {
         return localNPCs;
     }
-
-    private boolean running = false;
-    private int runningEnergy = 100;
 
     public boolean isRunning() {
         return running;
@@ -420,8 +349,6 @@ public class Player extends Entity implements Serviceable, Communicable {
         this.runningEnergy = runningEnergy;
     }
 
-    private Directions.NormalDirection mapRegionDirection = null;
-
     public Directions.NormalDirection getMapRegionDirection() {
         return mapRegionDirection;
     }
@@ -430,26 +357,8 @@ public class Player extends Entity implements Serviceable, Communicable {
         this.mapRegionDirection = mapRegionDirection;
     }
 
-
-
-
-    //<editor-fold desc="Viewport Flags">
-    private byte[] indexSettings = new byte[2048];
-
-    public enum Viewport { IN(0x1), JOINED(0x2), LEFT(0x4), SKIPPED_LAST(0x8), SKIPPED_THIS(0x10);
-        private final int hash;
-
-        private Viewport(int hash) {
-            this.hash = hash;
-        }
-
-         public final int getHash() {
-             return hash;
-         }
-    };
-
-    public boolean hasFlag(Viewport flag, int index) {
-        return (indexSettings[index] & flag.getHash()) != 0;
+	public boolean hasFlag(Viewport flag, int index) {
+		return (indexSettings[index] & flag.getHash()) != 0;
     }
 
     public void applyFlags(int playerIndex, boolean applyVal, Viewport... flags) {
@@ -468,9 +377,6 @@ public class Player extends Entity implements Serviceable, Communicable {
         }
     }
 
-    //</editor-fold>
-    private int movementMode = 1;
-
     public int getMovementMode() {
         return movementMode;
     }
@@ -478,9 +384,6 @@ public class Player extends Entity implements Serviceable, Communicable {
     public void setMovementMode(int movementMode) {
         this.movementMode = movementMode;
     }
-
-
-    private boolean inCycle;
 
     /**
      *
@@ -490,28 +393,21 @@ public class Player extends Entity implements Serviceable, Communicable {
         return inCycle;
     }
 
-    private boolean loggedInThisCycle = true;
-
     public boolean loggedInThisCycle() {
         return loggedInThisCycle;
-    }
-
-    private boolean heightUpdate = false;
-    public void setHeightUpdate(boolean heightUpdate) {
-        this.heightUpdate = heightUpdate;
     }
 
     public boolean isHeightUpdate() {
         return heightUpdate;
     }
 
-    private LinkedList<Integer> updateRequiredList = new LinkedList<Integer>();
+	public void setHeightUpdate(boolean heightUpdate) {
+		this.heightUpdate = heightUpdate;
+	}
 
     public LinkedList<Integer> getUpdateRequiredList() {
         return updateRequiredList;
     }
-
-    //</editor-fold>
 
     /**
      * Send login, then apply appearance and equipment
@@ -532,12 +428,13 @@ public class Player extends Entity implements Serviceable, Communicable {
         return clientRevision;
     }
 
-
     //region deprecated functions
     @Deprecated
     public int getWorldId() {
         return WorldModule.getLogic().getId();
     }
+
+	//</editor-fold>
 
     @Override
     public boolean hasFriend(int staticIndex) {
@@ -548,6 +445,92 @@ public class Player extends Entity implements Serviceable, Communicable {
     public boolean hasIgnore(int staticIndex) {
         return communications.hasIgnore(staticIndex);
     }
+
+
+	public enum Display {
+		Fixed(548), Resizeable_FixedPanel(161), Resizeable_Panel(164);
+
+		private int windowId;
+
+		Display(int windowId) {
+			this.windowId = windowId;
+		}
+
+		public static Display forId(int displayMode) {
+			switch (displayMode) {
+				case 0:
+					return Fixed;
+				case 1:
+					return Resizeable_FixedPanel;
+				case 2:
+					return Resizeable_Panel;
+				default:
+					return Fixed;
+			}
+		}
+
+		public final int getWindowId() {
+			return windowId;
+		}
+
+		public final boolean resizable() {
+			return windowId != 548;
+		}
+	}
+
+	public enum Privilege {
+		ADMINISTRATOR(2), MODERATOR(1), PLAYER(0), IRONMAN(0, 3), ULTIMATE_IRONMAN(0, 4);
+
+		private int value, reference;
+
+		Privilege(int value) {
+			this.value = value;
+			this.reference = value;
+		}
+
+		Privilege(int value, int reference) {
+			this.value = value;
+			this.reference = reference;
+		}
+
+		public static Privilege forValue(int value) {
+			switch (value) {
+				case 0:
+					return PLAYER;
+				case 1:
+					return MODERATOR;
+				case 2:
+					return ADMINISTRATOR;
+				case 3:
+					return IRONMAN;
+				case 4:
+					return ULTIMATE_IRONMAN;
+
+			}
+			return PLAYER;
+		}
+
+		public int getValue() {
+			return value;
+		}
+
+		public int getClientReference() {
+			return reference;
+		}
+	}
+
+	public enum Viewport {
+		IN(0x1), JOINED(0x2), LEFT(0x4), SKIPPED_LAST(0x8), SKIPPED_THIS(0x10);
+		private final int hash;
+
+		Viewport(int hash) {
+			this.hash = hash;
+		}
+
+		public final int getHash() {
+			return hash;
+		}
+	}
     //endregion
 
 

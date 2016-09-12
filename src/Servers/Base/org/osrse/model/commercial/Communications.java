@@ -1,55 +1,27 @@
 package org.osrse.model.commercial;
 
 
-import org.osrse.utility.NameUtilities;
-
-import java.util.*;
-import java.util.concurrent.LinkedBlockingQueue;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by Jonathan on 12/30/15.
  */
 public class Communications {
 
-	public enum Request {SERVE, FIND, FIND_CLAN, JOIN_CLAN, ADD, DEL, EDIT_CLAN}
-    public enum ClanRank { NONE(-1), FRIEND(0), RECRUIT(1), CORPORAL(2), SERGEANT(3),  LIEUTENANT(4), CAPTAIN(5), GENERAL(6), OWNER(7), ADMIN(127);
-        private int id;
-
-        ClanRank(int id) {
-            this.id = id;
-        }
-
-        public int getId() {
-            return id;
-        }
-
-        public static ClanRank forId(int id) {
-            if(id > values().length || id < 0) {
-               return NONE;
-            }
-            return values()[id];
-        }
-
-        public String toString() {
-            return NameUtilities.capitalizeFormat(name());
-        }
-    }
-
-    public Map<Integer, Alias> relationData;
+	private static final Object lock = new Object();
+	public final int uid;
+	private final GroupChat clanChat;
+	public Map<Integer, Alias> relationData;
     public Map<Integer, String> ignoreList;
-
-    public final int uid;
-    private String username;
     public String currentChat;
+	private String username;
 
-    private final GroupChat clanChat;
-    private static final Object lock = new Object();
-
-    public Communications(int uid, String owner, String clanName, int joinReq, int kickReq) {
-        this.uid = uid;
+	public Communications(int uid, String owner, String clanName, int joinReq, int kickReq, int talkReq) {
+		this.uid = uid;
         this.username = owner;
-        this.clanChat = new GroupChat(clanName, joinReq, kickReq);
-        if(clanChat.isValid() && !clanChat.isOpen()) {
+		this.clanChat = new GroupChat(clanName, joinReq, kickReq, talkReq);
+		if(clanChat.isValid() && !clanChat.isOpen()) {
             clanChat.open();
         }
     }
@@ -68,7 +40,7 @@ public class Communications {
                 if(ignore)
                     ignoreList.put(index, username);
                 else
-                    relationData.put(index, new Alias(username, ClanRank.FRIEND));
+	                relationData.put(index, new Alias(username, ClanRank.Friends));
             } else if(request.equals(Request.DEL)) {
                 if(ignore)
                     ignoreList.remove(index);
@@ -113,7 +85,6 @@ public class Communications {
             ignoreList.remove(staticIndex);
         }
     }
-
 
     /**
      * This is for if the player isn't online and is removed.
@@ -165,13 +136,13 @@ public class Communications {
     public ClanRank getRank(int staticIndex) {
         //todo find admin rank
         if(uid == staticIndex) {
-            return ClanRank.OWNER;
+	        return ClanRank.Owner;
         }
         if(staticIndex == 1) {
-            return ClanRank.ADMIN;
+	        return ClanRank.Admin;
         }
         synchronized (lock) {
-            return (relationData != null && relationData.containsKey(staticIndex)) ? relationData.get(staticIndex).getRank() : ClanRank.NONE;
+	        return (relationData != null && relationData.containsKey(staticIndex)) ? relationData.get(staticIndex).getRank() : ClanRank.None;
         }
     }
 
@@ -186,7 +157,6 @@ public class Communications {
             return this.ignoreList;
         }
     }
-
 
     /**
      *
@@ -207,7 +177,7 @@ public class Communications {
                 return 3;
             }
             /*
-            if(clanChat.joinReq != ClanRank.NONE) { //change this when you add FC and CC type rs versions
+            if(clanChat.joinReq != ClanRank.None) { //change this when you add FC and CC type rs versions
                 System.out.println("RANKS="+getRank(com.getStaticIndex()).getId() +"/"+ clanChat.joinReq.getId()+"/"+(getRank(com.getStaticIndex()).getId() < clanChat.joinReq.getId()));
                 if(getRank(com.getStaticIndex()).getId() < clanChat.joinReq.getId()) {
                     return 1;
@@ -246,6 +216,28 @@ public class Communications {
         }
         return -1;
     }
+
+	public enum Request {SERVE, FIND, FIND_CLAN, JOIN_CLAN, ADD, DEL, EDIT_CLAN}
+
+	public enum ClanRank {
+		None(-1), Friends(0), Recruit(1), Corporal(2), Sergeant(3), Lieutenant(4), Captain(5), General(6), Owner(7), Admin(127);
+		private int id;
+
+		ClanRank(int id) {
+			this.id = id;
+		}
+
+		public static ClanRank forId(int id) {
+			if (id > values().length || id < 0) {
+				return None;
+			}
+			return values()[id];
+		}
+
+		public int getId() {
+			return id;
+		}
+	}
 
 
 

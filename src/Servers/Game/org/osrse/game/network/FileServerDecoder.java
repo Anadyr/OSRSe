@@ -5,14 +5,15 @@
 
 package org.osrse.game.network;
 
-import org.osrse.task.Engine;
-import org.osrse.game.file.Library;
-import org.osrse.network.Packet;
-import java.util.LinkedList;
 import org.jboss.netty.buffer.ChannelBuffer;
 import org.jboss.netty.channel.Channel;
 import org.jboss.netty.channel.ChannelHandlerContext;
 import org.jboss.netty.handler.codec.frame.FrameDecoder;
+import org.osrse.game.file.Library;
+import org.osrse.network.Packet;
+import org.osrse.task.Engine;
+
+import java.util.LinkedList;
  
 public class FileServerDecoder extends FrameDecoder {
     
@@ -36,8 +37,8 @@ public class FileServerDecoder extends FrameDecoder {
                                     channel.write(filePacket);
                                 }
                             } catch (Exception e) {
-                                System.err.println("Error handling file [opcode=" + opcode + ", index=" + index + ", file=" + file + "]");
-                                e.printStackTrace();
+	                            System.err.println("Error handling file [opcode=" + opcode + ", id=" + index + ", file=" + file + "]");
+	                            e.printStackTrace();
                             }
                         }
                     };
@@ -64,8 +65,8 @@ public class FileServerDecoder extends FrameDecoder {
                                 channel.write(filePacket);
                             }
                         } catch (Exception e) {
-                            System.err.println("Error handling file [opcode=0, index=" + req[0] + ", file=" + req[1] + "]");
-                            e.printStackTrace();
+	                        System.err.println("Error handling file [opcode=0, id=" + req[0] + ", file=" + req[1] + "]");
+	                        e.printStackTrace();
                         }
                     }
                 }

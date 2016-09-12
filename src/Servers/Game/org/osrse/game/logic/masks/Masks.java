@@ -3,6 +3,7 @@ package org.osrse.game.logic.masks;
 import org.osrse.game.logic.Entity;
 import org.osrse.game.logic.map.Tile;
 import org.osrse.game.logic.player.Player;
+
 import java.util.ArrayDeque;
 import java.util.Deque;
  
@@ -10,41 +11,35 @@ import java.util.Deque;
 public class Masks {
 
 
-    public static enum MaskType {
-        ANIMATION, APPEARANCE, CHAT, FACE_DIRECTION, FACE_ENTITY, FORCED_CHAT, NAME_EDIT, RESET_MOVEMENT_MODE,
-        GRAPHICS, SECONDARY_GRAPHICS, HIT, SECOND_HIT, MOVEMENT_MODE, FORCE_MOVEMENT,
-        BYTE_OVERFLOW, SHORT_OVERFLOW
-    }
-
+    public Graphic[] graphicQueue = new Graphic[4];
     private Entity entity;
   
 	private Deque<Graphic> queuedGraphics = new ArrayDeque<Graphic>();
-	public Graphic[] graphicQueue = new Graphic[4];
     private int graphicsHeight2 = 0;
     private boolean appearance = false;
-
     private ChatMessage chat = null;
     private ForceText forcedChat = null;
     private NamingEdit nameEdit = null;
     private FaceEntity faceEntity = null;
-    private ForceMovement forceMovement = null;
-
+    private ForcedMovement forceMovement = null;
     private Hit[] hits = new Hit[2];
-
     private boolean initialDirectionSent = true, initialNameEditSend = true, sentSwitchId = true;
     private boolean movementMode = false;
-
     private Tile faceDirection = null;
-    private int fixedMovementMode = 1;
-
+    private int resetMovementMode = 0;
     private int animationId = -1;
     private int modelId = -1;
+    private int customCombatLevel = -1;
+    //<editor-fold desc="Animation">
+    private int animationDelay = 0;
+    private Graphic graphics, graphics2;
+    private int movementType = 1;
 
 
 	public Masks(Entity mob) {
 		this.entity = mob;
 	}
- 
+
 	public void process() {
 		for (int i = 0; i < graphicQueue.length; i++)
 			if (graphicQueue[i] == null)
@@ -54,13 +49,11 @@ public class Masks {
 
 	public Entity getPlayer() {
 		return entity;
-	} 
-
+    }
 
     public int getFaceEntity() {
         return faceEntity.getId();
     }
-
 
     public void setFaceEntity(FaceEntity faceEntity) {
         this.faceEntity = faceEntity;
@@ -73,11 +66,6 @@ public class Masks {
         faceDirection = null;
         initialDirectionSent = false;
 	}
-	
-	private int customCombatLevel = -1;
-
-    //<editor-fold desc="Animation">
-    private int animationDelay = 0;
 
     public int getAnimationDelay() {
         return animationDelay;
@@ -95,13 +83,12 @@ public class Masks {
     public void setAnimation(int id) {
         setAnimation(id, 0);
     }
+    //</editor-fold>
 
     public void setAnimation(Animation animation) {
         animationId = animation.getId();
         animationDelay = animation.getDelay();
     }
-    //</editor-fold>
-
 
     //<editor-fold desc="Graphics">
     public void setGraphics(int id, int delay) {
@@ -111,8 +98,6 @@ public class Masks {
     public void setGraphics(int id, int delay, int height) {
         setGraphics(Graphic.create(id, delay, height));
     }
-
-    private Graphic graphics, graphics2;
 
     public Graphic getGraphics() {
         return graphics;
@@ -174,7 +159,6 @@ public class Masks {
     public void setHit(int id, Hit hit) {
         hits[(id >= 0 && id < 2) ? id : 0] = hit;
     }
-    private int movementType = 1;
 
     public int getMovementType() {
         return movementType;
@@ -183,23 +167,24 @@ public class Masks {
     public void setMovementType(int movementType) {
         this.movementType = movementType;
     }
+
     public void setMovementMode(boolean movement) {
         this.movementMode = movement;
     }
 
-    public int getFixedMovementMode() {
-        return fixedMovementMode;
+    public int getResetMovementMode() {
+        return resetMovementMode;
     }
 
-    public void setFixedMovementMode(int fixedMovementMode) {
-        this.fixedMovementMode = fixedMovementMode;
+    public void setResetMovementMode(int fixedMovementMode) {
+        this.resetMovementMode = fixedMovementMode;
     }
 
-    public ForceMovement getForceMovement() {
+    public ForcedMovement getForcedMovement() {
         return forceMovement;
     }
 
-    public void setForceMovement(ForceMovement forceMovement) {
+    public void setForceMovement(ForcedMovement forceMovement) {
         this.forceMovement = forceMovement;
     }
 
@@ -221,7 +206,7 @@ public class Masks {
         }
         return (animationId != -1 || appearance || chat != null ||
                 forcedChat != null || graphics != null || graphics2 != null ||
-                hits[0] != null || hits[1] != null || movementMode || fixedMovementMode != 1 ||
+                hits[0] != null || hits[1] != null || movementMode || resetMovementMode != 0 ||
                  customCombatLevel != -1 || (!initialDirectionSent && (faceEntity != null || faceDirection != null)) );
     }
 
@@ -250,7 +235,7 @@ public class Masks {
             case MOVEMENT_MODE:
                 return movementMode || enteredView;
             case RESET_MOVEMENT_MODE:
-                return fixedMovementMode != 1 || enteredView && !movementMode;
+                return resetMovementMode != 0 || enteredView && !movementMode;
             case FORCE_MOVEMENT:
                 return forceMovement != null; //check if this has a enterview necessity
             case NAME_EDIT:
@@ -271,10 +256,23 @@ public class Masks {
         hits[0] = null;
                 hits[1] = null;
         movementMode = false;
-        fixedMovementMode = 1;
+        resetMovementMode = 0;
         initialDirectionSent = true;
                 initialNameEditSend = true;
         forceMovement = null;
     }
 
+    public void resetFace(boolean entity) {
+        if (entity) {
+            faceEntity = null;
+        }
+        faceDirection = null;
+    }
+
+
+    public enum MaskType {
+        ANIMATION, APPEARANCE, CHAT, FACE_DIRECTION, FACE_ENTITY, FORCED_CHAT, NAME_EDIT, RESET_MOVEMENT_MODE,
+        GRAPHICS, SECONDARY_GRAPHICS, HIT, SECOND_HIT, MOVEMENT_MODE, FORCE_MOVEMENT,
+        BYTE_OVERFLOW, SHORT_OVERFLOW
+    }
 }

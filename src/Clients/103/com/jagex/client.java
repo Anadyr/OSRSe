@@ -1664,26 +1664,23 @@ public final class client extends Applet_Sub1 {
 									byte var173 = bitBuffer.readByteA(-2111583012);
 									interfaceHash = bitBuffer.readShortA(-338860511);
                                     //System.out.println("Small configP201 "+var173+"/"+interfaceHash);
-									Class107.anIntArray1454[interfaceHash] = var173;
-									if (Class107.anIntArray1459[interfaceHash] != var173) {
-										Class107.anIntArray1459[interfaceHash] = var173;
+									Class107.configArray[interfaceHash] = var173;
+									if (Class107.varpData[interfaceHash] != var173) {
+										Class107.varpData[interfaceHash] = var173;
 									}
-
 									Class27.method567(interfaceHash, 1814638903);
 									anIntArray3119[(anInt3120 += 1551596873) * -729938695 - 1 & 31] = interfaceHash;
 									currentOpcode = -726667601;
 									var85 = true;
 									break label3092;
 								}
-
 								if (currentOpcode * 793368497 == 192) {
 									interfaceId = bitBuffer.readInt(-1927934378);
 									interfaceHash = bitBuffer.readLEShort((byte) -107);
-									Class107.anIntArray1454[interfaceHash] = interfaceId;
-									if (interfaceId != Class107.anIntArray1459[interfaceHash]) {
-										Class107.anIntArray1459[interfaceHash] = interfaceId;
+									Class107.configArray[interfaceHash] = interfaceId;
+									if (interfaceId != Class107.varpData[interfaceHash]) {
+										Class107.varpData[interfaceHash] = interfaceId;
 									}
-
 									Class27.method567(interfaceHash, 1714872839);
 									anIntArray3119[(anInt3120 += 1551596873) * -729938695 - 1 & 31] = interfaceHash;
 									currentOpcode = -726667601;
@@ -2599,8 +2596,8 @@ public final class client extends Applet_Sub1 {
 									for (interfaceId = 0; interfaceId < -1248800389 * Class116_Sub23_Sub15.anInt2448; ++interfaceId) {
 										Class116_Sub23_Sub15 var148 = Class45.method702(interfaceId, (short) -19370);
 										if (var148 != null) {
-											Class107.anIntArray1454[interfaceId] = 0;
-											Class107.anIntArray1459[interfaceId] = 0;
+											Class107.configArray[interfaceId] = 0;
+											Class107.varpData[interfaceId] = 0;
 										}
 									}
 
@@ -3030,9 +3027,9 @@ public final class client extends Applet_Sub1 {
 								}
 
 								if (currentOpcode * 793368497 == 19) {
-									for (interfaceId = 0; interfaceId < Class107.anIntArray1459.length; ++interfaceId) {
-										if (Class107.anIntArray1459[interfaceId] != Class107.anIntArray1454[interfaceId]) {
-											Class107.anIntArray1459[interfaceId] = Class107.anIntArray1454[interfaceId];
+									for (interfaceId = 0; interfaceId < Class107.varpData.length; ++interfaceId) {
+										if (Class107.varpData[interfaceId] != Class107.configArray[interfaceId]) {
+											Class107.varpData[interfaceId] = Class107.configArray[interfaceId];
 											Class27.method567(interfaceId, 1961008023);
 											anIntArray3119[(anInt3120 += 1551596873) * -729938695 - 1 & 31] = interfaceId;
 										}
@@ -5323,7 +5320,7 @@ public final class client extends Applet_Sub1 {
                     }
 
                     if(var7 == 5) {
-                        var8 = Class107.anIntArray1459[var3[var5++]];
+                        var8 = Class107.varpData[var3[var5++]];
                     }
 
                     if(var7 == 6) {
@@ -5331,7 +5328,7 @@ public final class client extends Applet_Sub1 {
                     }
 
                     if(7 == var7) {
-                        var8 = Class107.anIntArray1459[var3[var5++]] * 100 / '\ub71b';
+                        var8 = Class107.varpData[var3[var5++]] * 100 / '\ub71b';
                     }
 
                     if(8 == var7) {
@@ -5370,7 +5367,7 @@ public final class client extends Applet_Sub1 {
                     }
 
                     if(var7 == 13) {
-                        var10 = Class107.anIntArray1459[var3[var5++]];
+                        var10 = Class107.varpData[var3[var5++]];
                         int var15 = var3[var5++];
                         var8 = (var10 & 1 << var15) != 0?1:0;
                     }

@@ -1,7 +1,8 @@
-package org.osrse.game.logic.utility;
+package org.osrse.game.content.combat;
 
 import org.osrse.game.logic.Entity;
 import org.osrse.game.logic.masks.Animation;
+import org.osrse.game.logic.utility.WeaponInterface;
 
 /**
  * Created by Jonathan on 1/11/16.
@@ -13,8 +14,47 @@ public class CombatSettings {
      */
     private int combatLevel = 3;
     private int disconnect = -1;
+	private boolean frozen;
+	private Entity target = null, attacker = null;
+	private int combatTick, retaliateTick;
+	/**
+	 * The entity's stats.
+	 */
+	private int[] stats;
+	/**
+	 * The entity's cursed modifier.
+	 */
+	private double[] cursedModifiers;
+	/**
+	 * The attack speed.
+	 */
+	private int attackSpeed = 4;
+	/**
+	 * The entity's attack delay2.
+	 */
+	private Animation attackAnimation;
+	/**
+	 * The entity's defence delay2.
+	 */
+	private Animation defenceAnimation;
+	/**
+	 * The attack style used.
+	 */
+	private int attackStyle;
+	/**
+	 * The attack type used.
+	 */
+	private int attackType;
 
     /**
+     * Constructs a newcache {@code BasicSettings} {@code Object}.
+     */
+    public CombatSettings() {
+	    this.stats = new int[18];
+	    this.cursedModifiers = new double[7];
+    }
+
+	/**
      * @return the combatLevel
      */
     public int level() {
@@ -28,12 +68,12 @@ public class CombatSettings {
         this.combatLevel = combatLevel;
     }
 
-    private Entity target = null, attacker= null;
-    private int combatTick, retaliateTick;
-
     public void setTarget(Entity e) {
         this.target = e;
     }
+
+
+	//<editor-fold desc="Combat Animations">
 
     public void setAttacker(Entity e) {
         this.attacker = e;
@@ -72,53 +112,12 @@ public class CombatSettings {
         retaliateTick = -1;
     }
 
-
-
-
-    //<editor-fold desc="Combat Animations">
-
     /**
-     * Constructs a newcache {@code BasicSettings} {@code Object}.
+     * @return the attackAnimation
      */
-    public CombatSettings() {
-        this.stats = new int[18];
-        this.cursedModifiers = new double[7];
+    public Animation getAttackAnimation() {
+	    return attackAnimation;
     }
-
-    /**
-     * The entity's stats.
-     */
-    private int[] stats;
-
-    /**
-     * The entity's cursed modifier.
-     */
-    private double[] cursedModifiers;
-
-    /**
-     * The attack speed.
-     */
-    private int attackSpeed = 4;
-
-    /**
-     * The entity's attack animation.
-     */
-    private Animation attackAnimation;
-
-    /**
-     * The entity's defence animation.
-     */
-    private Animation defenceAnimation;
-
-    /**
-     * The attack style used.
-     */
-    private int attackStyle;
-
-    /**
-     * The attack type used.
-     */
-    private int attackType;
 
     /**
      * @param attackAnimation the attackAnimation to set
@@ -128,10 +127,10 @@ public class CombatSettings {
     }
 
     /**
-     * @return the attackAnimation
+     * @return the defenceAnimation
      */
-    public Animation getAttackAnimation() {
-        return attackAnimation;
+    public Animation getDefenceAnimation() {
+	    return defenceAnimation;
     }
 
     /**
@@ -139,13 +138,6 @@ public class CombatSettings {
      */
     public void setDefenceAnimation(Animation defenceAnimation) {
         this.defenceAnimation = defenceAnimation;
-    }
-
-    /**
-     * @return the defenceAnimation
-     */
-    public Animation getDefenceAnimation() {
-        return defenceAnimation;
     }
 
     /**
@@ -222,6 +214,14 @@ public class CombatSettings {
         }
 
     }
+
+	public boolean isFrozen() {
+		return frozen;
+	}
+
+	public void setFrozen(boolean frozen) {
+		this.frozen = frozen;
+	}
 
     //</editor-fold>
 }

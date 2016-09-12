@@ -1,5 +1,6 @@
 package org.osrse.game.content.command;
 
+import org.osrse.Module;
 import org.osrse.WorldModule;
 import org.osrse.game.content.Bank;
 import org.osrse.game.content.Commands;
@@ -49,7 +50,7 @@ public class AdminCommands extends Commands {
         commandMap.put("master", cmd);
         commandMap.put("max", cmd);
         cmd = bank();
-        commandMap.put("b", cmd);
+        commandMap.put("id", cmd);
         commandMap.put("bnk", cmd);
         commandMap.put("song", sendMusic());
         cmd = spawnItem();
@@ -108,17 +109,17 @@ public class AdminCommands extends Commands {
         commandMap.put("hide", cmd);
         cmd = testPacket();
         commandMap.put("tp", cmd);
-        cmd = editCC();
-        commandMap.put("kek", cmd);
+        cmd = reloadscripts();
+        commandMap.put("rls", cmd);
 
     }
 
 
-    private Command editCC() {
+    private Command reloadscripts() {
         return new Command() {
             @Override
             public void handle(Player player, String[] args) {
-                player.getProtocol().editCCMember(args[0], Integer.parseInt(args[1]), Integer.parseInt(args[2]), Boolean.parseBoolean(args[3]));
+                player.sendMessage("Scripts reloaded = " + Module.reloadScripts());
             }
         };
     }
@@ -135,7 +136,7 @@ public class AdminCommands extends Commands {
                     str = str.replaceAll("[^\\d.]", "");
                     int val = Integer.parseInt(str);
                     player.sendMessage(""+val);
-                    if(arg.contains("b")) {
+                    if (arg.contains("id")) {
                         if(arg.contains("a")) {
                             pb.putByteA(val);
                         } else if(arg.contains("c")) {
@@ -407,6 +408,7 @@ public class AdminCommands extends Commands {
         return new Command() {
             @Override
             public void handle(Player player, String[] command) {
+                player.basicSettings().setAnimatedTP(true);
                 player.basicSettings().setTeleportDestination(Tile.locate(Integer.parseInt(command[0]), Integer.parseInt(command[1]), (command.length > 2 ? Integer.parseInt(command[2]) : 0)));
             }
         };
